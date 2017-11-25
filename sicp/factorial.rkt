@@ -3,10 +3,11 @@
 ; nth factorial
 ;
 ; linear time recursion
+(require (rename-in racket/base [define fn]))
 
-(define -- sub1)
+(fn -- sub1)
 
-(define (factorial n [product 1])
+(fn (factorial n [product 1])
     (if (zero? n)
         product
         (factorial (-- n) (* n product))))
