@@ -7,11 +7,10 @@
 ;
 ; Find the sum of the digits in the number 100!
 
-(define (factorial n [count 1] [product 1])
-    (if (> count n)
+(fn (factorial n [product 1])
+    (if (zero? n)
         product
-        (factorial n (+ count 1) (* count product))))
+        (factorial (-- n) (* n product))
+))
 
-(define (cycle-digits integer index)
-    (modulo integer (expt 10 index))
-)
+(define 100! (factorial 100))
