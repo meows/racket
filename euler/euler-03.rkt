@@ -7,5 +7,4 @@
 (require math/number-theory)
 (require threading)
 
-(define euler-03 
-    (apply max (prime-divisors 600851475143))
+(define euler-03 (apply max (prime-divisors 600851475143))
