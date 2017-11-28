@@ -3,14 +3,21 @@
 (require (rename-in racket/base [define fn]))
 (require threading)
 
+;; -----------------------------------------------------------------------------
+;; Project Euler 14
+;;
+;; Which Collatz number under 1 million leads to the most numbers of recursions?
+
 (fn -- sub1)
 (fn ++ add1)
 (fn (one? x) (= x 1))
-(fn (Z+? c) (positive-integer? c))
+(fn (Z+? c) (exact-positive-integer? c))
 
-(fn (collatz [n 0] [i 0])
+(fn (collatz [n 0] #:index [i 0])
     (cond ((~> n Z+? not)  ("Input out of range: { n | n ∈ Z+ }"))
           ((one? n)        i)
-          ((even? n)       (collatz (/ n 2) (++ i)))
-          (else            (collatz (+ 1 (* 3 n)) (++ i)))
+          ((even? n)       (collatz (/ n 2)        #:index (++ i)))
+          (else            (collatz (+ 1 (* 3 n))  #:index (++ i)))
 ))
+
+(map collatz (range 1 10))

@@ -1,23 +1,27 @@
 #lang racket
 
-(require (rename-in racket/base [define fn])) ; renames define → fn
+(require (rename-in racket/base [define fn]))
+(require threading)
 
-; ------------------------------------------------------------------------------
-; Arithmetic
+;; -----------------------------------------------------------------------------
+;; Numerical
 
-(fn ++ add1)
+(define (Z+->list n #:result [r (list)] #:base [b 10])
+    (if (zero? n) 
+        (reverse r)
+        (Z+->list (quotient n b) 
+                  #:result (append r (list (modulo n b))))))
+
+;; ---------------------------------
+;; Boolean
+
+(fn (Z+? c) (exact-positive-integer? c))
+(fn (one? x) (= x 1))
+
+;; ---------------------------------
+;; Arithmetic
+
 (fn -- sub1)
-
-(fn (one? x)   (= x 1))
-(fn (two? x)   (= x 2))
-(fn (three? x) (= x 3))
-
-(fn (length-number x base) 
-
-)
-
-(fn (number->list x)
-
-)
-
-(fn (Z+? c) (positive-integer? c))
+(fn ++ add1)
+(fn (double x) (+ x x))
+(fn (half x) (/ x 2))

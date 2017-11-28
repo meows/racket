@@ -2,9 +2,9 @@
 
 (require (rename-in racket/base [define fn]))
 
-; Project Euler #2
-;
-; Find the sum of all even Fibonacci numbers under 4 million.
+;; Project Euler #2
+;;
+;; Find the sum of all even Fibonacci numbers under 4 million.
 
 ; a   - leading fib state tuple
 ; b   - trailing fib state tuple
