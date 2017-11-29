@@ -13,5 +13,6 @@
        (sqr (factorial n)))
 )
 
-(fn (euler-15) (grid 20))
-(euler-15)  ;; → 137846528820
+(fn euler-15 (grid 20))
+
+(time euler-15)  ;; → 137846528820

@@ -9,11 +9,11 @@
 ; a   - leading fib state tuple
 ; b   - trailing fib state tuple
 ; sum - running sum of even fibonacci numbers
-(fn (euler-2 [a 1] [b 0] [sum 0])
+(fn (euler-2 [a 1] [b 0] #:sum [s 0])
     (if (< 4000000 a)
-        sum
+        s
         (euler-2 (+ a b)
                  a
-                 (if (even? a) (+ sum a) sum))))
+                 #:sum (if (even? a) (+ s a) s))))
 
 (time (euler-2))
