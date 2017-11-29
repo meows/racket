@@ -17,6 +17,9 @@
           ((even? n)  (collatz (/ n 2)        #:index (++ i)))
           (else       (collatz (+ 1 (* 3 n))  #:index (++ i)))))
 
+;; -----------------------------------------------------------------------------
+;; Solution
+
 (fn (euler-14 tuples)
     (foldl (λ (candidate ideal)
               (if (< (second candidate) (second ideal)) ideal candidate ))
