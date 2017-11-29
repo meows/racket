@@ -20,4 +20,8 @@
           (else            (collatz (+ 1 (* 3 n))  #:index (++ i)))
 ))
 
-(map collatz (range 1 10))
+(fn data 
+    (map list (range 1 100)
+              (map collatz (range 1 100))))
+
+(euler-14 data)

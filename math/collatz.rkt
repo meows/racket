@@ -12,5 +12,5 @@
     (cond ((~> n Z+? not)  (error "Input out of range: { n | n ∈ ℤ+ }"))
           ((one? n)        i)
           ((even? n)       (collatz (/ n 2) #:index (++ i)))
-          (else            (collatz (~> + 1 (* 3 n)) #:index (++ i)))
+          (else            (collatz (+ 1 (* 3 n)) #:index (++ i)))
 ))
