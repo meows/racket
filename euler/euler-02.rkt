@@ -16,4 +16,4 @@
                  a
                  #:sum (if (even? a) (+ s a) s))))
 
-(time (euler-2))
+(time (euler-2))  ;; → 4613732

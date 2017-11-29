@@ -6,11 +6,11 @@
 ;; or 5.
 
 (define euler-01
-   (fold + 0
+   (foldl + 0
       (filter
          (λ (x)
             (or (zero? (modulo x 3))
                 (zero? (modulo x 5))))
          (range 1000))))
 
-(time euler-01)
+(time euler-01) ;; → 233168
