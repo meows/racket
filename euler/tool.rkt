@@ -24,17 +24,22 @@
 ;; ------------------------------------
 ;; Lists
 
-(fn (Z+->list n #:result [r (list)] #:base [b 10])
+; natural → list
+(fn (N->list n #:result [r (list)] #:base [b 10])
     (if (zero? n) 
         (reverse r)
         (Z+->list (quotient n b) 
-                  #:result (append r (list (modulo n b))))))
+                  #:result (append r (list (modulo n b))))
+    )
+)
 
+; list <number> → list <number>
 (fn (diff l)
-    (map - 
+    (map -
          (cdr l)
          (drop-right l 1)))
 
+; list → count <Z+>, history <list> 
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
         (values c (append h (list l)))
@@ -48,6 +53,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Test
 
+; natural → natural
 (fn (triangle n)
     (/ (+ (sqr n) n) 2))
 
