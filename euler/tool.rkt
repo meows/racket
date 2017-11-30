@@ -17,15 +17,13 @@
          (cdr l)
          (drop-right l 1)))
 
-(fn (diff-count l #:count c #:prior p)
-    (if (zero? (diff l))
-        
-    )
-)
+(fn (diff-count l #:count c)
+    (if (andmap zero? (diff l))
+        (list c l)
+        (diff-count (diff l) #:count (++ c))))
 
 (fn (triangle n)
-    (/ (+ (sqr n) n) 2)
-)
+    (/ (+ (sqr n) n) 2))
 
 ;; ---------------------------------
 ;; Boolean
