@@ -20,7 +20,9 @@
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
         (list c h)
-        (diff-count (diff l) #:count (++ c) #:history (append h '(l))
+        (diff-count (diff l) 
+                    #:count (++ c) 
+                    #:history (append h '(l))
     )
 )
 
