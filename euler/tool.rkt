@@ -28,7 +28,7 @@
 (fn (N->list n #:result [r (list)] #:base [b 10])
     (if (zero? n) 
         (reverse r)
-        (Z+->list (quotient n b) 
+        (N->list (quotient n b) 
                   #:result (append r (list (modulo n b))))
     )
 )
@@ -39,7 +39,7 @@
          (cdr l)
          (drop-right l 1)))
 
-; list → count <Z+>, history <list> 
+; list → count <natural>, history <list[number]> 
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
         (values c (append h (list l)))
