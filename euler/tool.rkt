@@ -6,6 +6,24 @@
 ;; -----------------------------------------------------------------------------
 ;; Numerical
 
+
+;; ------------------------------------
+;; Boolean
+
+(fn (Z+? c) (positive-integer? c))
+(fn (one? x) (= x 1))
+
+;; ------------------------------------
+;; Arithmetic
+
+(fn -- sub1)
+(fn ++ add1)
+(fn (double x) (+ x x))
+(fn (half x) (/ x 2))
+
+;; ------------------------------------
+;; Lists
+
 (fn (Z+->list n #:result [r (list)] #:base [b 10])
     (if (zero? n) 
         (reverse r)
@@ -19,26 +37,19 @@
 
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
-        (list c h)
+        (values c (append h (list l)))
         (diff-count (diff l) 
                     #:count (++ c) 
-                    #:history (append h '(l))
+                    #:history (append h (list l))
+        )
     )
 )
+
+;; -----------------------------------------------------------------------------
+;; Test
 
 (fn (triangle n)
     (/ (+ (sqr n) n) 2))
 
-;; ---------------------------------
-;; Boolean
-
-(fn (Z+? c) (positive-integer? c))
-(fn (one? x) (= x 1))
-
-;; ---------------------------------
-;; Arithmetic
-
-(fn -- sub1)
-(fn ++ add1)
-(fn (double x) (+ x x))
-(fn (half x) (/ x 2))
+(fn sample (map triangle (range 20)))
+(diff-count sample)
