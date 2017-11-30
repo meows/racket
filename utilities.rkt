@@ -36,3 +36,16 @@
           ((zero? n) i)
           ((Z+length (quotient n b) #:index (++ i)))
 ))
+
+;; -----------------------------------------------------------------------------
+;; Functions
+
+(fn (graph function
+           #:range [r '(0 100)]
+    )
+    (map list (range (first r) (second r))
+              (map )
+    )
+
+    )
+)

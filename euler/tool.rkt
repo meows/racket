@@ -6,11 +6,26 @@
 ;; -----------------------------------------------------------------------------
 ;; Numerical
 
-(define (Z+->list n #:result [r (list)] #:base [b 10])
+(fn (Z+->list n #:result [r (list)] #:base [b 10])
     (if (zero? n) 
         (reverse r)
         (Z+->list (quotient n b) 
                   #:result (append r (list (modulo n b))))))
+
+(fn (diff l)
+    (map - 
+         (cdr l)
+         (drop-right l 1)))
+
+(fn (diff-count l #:count c #:prior p)
+    (if (zero? (diff l))
+        
+    )
+)
+
+(fn (triangle n)
+    (/ (+ (sqr n) n) 2)
+)
 
 ;; ---------------------------------
 ;; Boolean
