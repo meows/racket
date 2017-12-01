@@ -13,18 +13,14 @@
 (fn (factorial n [product 1])
     (if (zero? n)
         product
-        (factorial (-- n) (* n product))
-))
+        (factorial (-- n) (* n product))))
 
 ; turns positive integer into list of digits
 (fn (counting->list n #:base [b 10] #:result [r (list)])
     (if (zero? n) 
         (reverse r)
         (counting->list (quotient n b) 
-                        #:result (append r (list (modulo n b)))
-        )
-    )
-)
+                        #:result (append r (list (modulo n b))))))
 
 ;; -----------------------------------------------------------------------------
 ;; Solution
