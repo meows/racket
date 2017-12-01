@@ -24,7 +24,7 @@
 ;; ------------------------------------
 ;; Lists
 
-; natural → list
+; natural → list <naturals>
 (fn (N->list n #:result [r (list)] #:base [b 10])
     (if (zero? n) 
         (reverse r)
@@ -33,13 +33,13 @@
     )
 )
 
-; list <number> → list <number>
+; list <number> → list <numbers>
 (fn (diff l)
     (map -
          (cdr l)
          (drop-right l 1)))
 
-; list → count <natural>, history <list[number]> 
+; list → count <natural>, history <list[numbers]> 
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
         (values c (append h (list l)))
