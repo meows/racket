@@ -29,9 +29,7 @@
     (if (zero? n) 
         (reverse r)
         (N->list (quotient n b) 
-                  #:result (append r (list (modulo n b))))
-    )
-)
+                 #:result (append r (list (modulo n b))))))
 
 ; list <number> → list <numbers>
 (fn (diff l)
@@ -45,10 +43,7 @@
         (values c (append h (list l)))
         (diff-count (diff l) 
                     #:count (++ c) 
-                    #:history (append h (list l))
-        )
-    )
-)
+                    #:history (append h (list l)))))
 
 ;; -----------------------------------------------------------------------------
 ;; Test
