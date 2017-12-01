@@ -16,15 +16,15 @@
         (factorial (-- n) (* n product))))
 
 ; turns positive integer into list of digits
-(fn (counting->list n #:base [b 10] #:result [r (list)])
-    (if (zero? n) 
+(fn (natural->list n #:base [b 10] #:result [r (list)])
+    (if (zero? n)
         (reverse r)
-        (counting->list (quotient n b) 
-                        #:result (append r (list (modulo n b))))))
+        (natural->list (quotient n b)
+                       #:result (append r (list (modulo n b))))))
 
 ;; -----------------------------------------------------------------------------
 ;; Solution
 
-(fn (euler-20) (apply + (counting->list (factorial 100))))
+(fn (euler-20) (apply + (natural->list (factorial 100))))
 
 (euler-20)  ;; → 648
