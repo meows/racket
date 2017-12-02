@@ -13,7 +13,7 @@
 ;; Boolean
 
 (fn (natural? c) (positive-integer? c))
-(fn (one? x) (= x 1))
+(fn (one? x)     (= x 1))
 
 ;; ------------------------------------
 ;; Arithmetic
@@ -21,8 +21,8 @@
 (fn -- sub1)
 (fn ++ add1)
 (fn (double x) (+ x x))
-(fn (half x) (/ x 2))
-(fn (power p) (cut expt <> p))
+(fn (half x)   (/ x 2))
+(fn (power p)  (cut expt <> p))
 
 ;; ------------------------------------
 ;; Lists
@@ -31,7 +31,7 @@
 (fn (N->list n #:result [r (list)] #:base [b 10])
     (if (zero? n) 
         (reverse r)
-        (N->list (quotient n b) 
+        (N->list (quotient n b)
                  #:result (append r (list (modulo n b))))))
 
 ; list <number> → list <numbers>
@@ -52,18 +52,10 @@
 ;; Functions
 
 ; natural → natural
-(fn (triangle n)
-    (/ (+ (sqr n) n) 2))
-
-(fn (line m b)
-    (λ (x)
-       (+ b (* m x))))
-
-(fn (b b)
-    (λ (x) (+ b x)))
-
-(fn (m m)
-    (λ (x) (* m x)))
+(fn (triangle n) (* 1/2 (+ n (sqr n))))
+(fn (line m b)   (λ (x) (+ b (* m x))))
+(fn (b b)        (λ (x) (+ b x)))
+(fn (m m)        (λ (x) (* m x)))
 
 ;; -----------------------------------------------------------------------------
 ;; Graphing
