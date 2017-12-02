@@ -2,6 +2,8 @@
 
 (require (rename-in racket/base [define fn]))
 (require threading)
+(require srfi/26)
+(require plot)
 
 ;; -----------------------------------------------------------------------------
 ;; Numerical
@@ -10,7 +12,7 @@
 ;; ------------------------------------
 ;; Boolean
 
-(fn (Z+? c) (positive-integer? c))
+(fn (natural? c) (positive-integer? c))
 (fn (one? x) (= x 1))
 
 ;; ------------------------------------
@@ -20,6 +22,7 @@
 (fn ++ add1)
 (fn (double x) (+ x x))
 (fn (half x) (/ x 2))
+(fn (power p) (cut expt <> p))
 
 ;; ------------------------------------
 ;; Lists
@@ -46,11 +49,34 @@
                     #:history (append h (list l)))))
 
 ;; -----------------------------------------------------------------------------
-;; Test
+;; Functions
 
 ; natural → natural
 (fn (triangle n)
     (/ (+ (sqr n) n) 2))
 
-(fn sample (map triangle (range 20)))
-(diff-count sample)
+(fn (line m b)
+    (λ (x)
+       (+ b (* m x))))
+
+(fn (b b)
+    (λ (x) (+ b x)))
+
+(fn (m m)
+    (λ (x) (* m x)))
+
+;; -----------------------------------------------------------------------------
+;; Graphing
+
+; graphs any function and compares it to f(x) = x
+; also accepts optional input for visual grid background
+(define (graph fn #:grid? [grid? false] #:min [min -10] #:max [max 10])
+    (plot (list (axes)
+                (if grid? (tick-grid) null)
+                (function fn)
+                (function (λ (x) x) #:style 'dot #:width 1.5 #:color 'gray))
+          #:x-min min
+          #:x-max max
+          #:y-min min
+          #:y-max max
+))
