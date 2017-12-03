@@ -8,15 +8,11 @@
 ;; -----------------------------------------------------------------------------
 ;; Numerical
 
-
 (fn (N->length n #:base [b 10])
-    (fn (answer [n n] #:index [i 0])
-        (if (zero? n)
-            i
-            (answer (quotient n b) #:index (++ i))))
-
-    (if (zero? n) 1 (answer n))
-)
+    (fn (result [n n] #:index [i 0])
+        (if (zero? n) i
+            (result (quotient n b) #:index (++ i))))
+    (if (zero? n) 1 (result n)))
 
 ;; ------------------------------------
 ;; Boolean
