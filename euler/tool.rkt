@@ -1,4 +1,4 @@
-#lang racket
+ 
 
 (require (rename-in racket/base [define fn]))
 (require threading)
@@ -8,6 +8,15 @@
 ;; -----------------------------------------------------------------------------
 ;; Numerical
 
+
+(fn (N->length n #:base [b 10])
+    (fn (answer [n n] #:index [i 0])
+        (if (zero? n)
+            i
+            (answer (quotient n b) #:index (++ i))))
+
+    (if (zero? n) 1 (answer n))
+)
 
 ;; ------------------------------------
 ;; Boolean
@@ -29,10 +38,9 @@
 
 ; natural → list <naturals>
 (fn (N->list n #:result [r (list)] #:base [b 10])
-    (if (zero? n) 
+    (if (zero? n)
         (reverse r)
-        (N->list (quotient n b)
-                 #:result (append r (list (modulo n b))))))
+        (N->list (quotient n b) #:result (append r (list (modulo n b))))))
 
 ; list <number> → list <numbers>
 (fn (diff l)
@@ -44,9 +52,7 @@
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
         (values c (append h (list l)))
-        (diff-count (diff l) 
-                    #:count (++ c) 
-                    #:history (append h (list l)))))
+        (diff-count (diff l) #:count (++ c) #:history (append h (list l)))))
 
 ;; -----------------------------------------------------------------------------
 ;; Functions
