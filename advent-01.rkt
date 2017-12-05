@@ -15,19 +15,13 @@
 
 ; natural → list <naturals> (number into list of digits)
 (fn (N->list n #:result [r (list)] #:base [b 10])
-    (if (zero? n) 
+    (if (zero? n)
         (reverse r)
-        (N->list (quotient n b)
-                 #:result (append r (list (modulo n b))))))
+        (N->list (quotient n b) 
+                 #:result (append r (list (remainder n b))))))
 
-;; natural → natural (length of number)
-(fn (N->length n #:base [b 10])
-    (fn (result [n n] #:index [i 0])
-        (if (zero? n) i
-            (result (quotient n b) #:index (++ i))))
-    (if (zero? n) 1 (result n)))
-
-(fn (advent challenge)
-    ()
-
+(fn (loop n #:sum [s 0] #:candidates [c null] #:base [b 10])
+    (if (zero? n) s
+        (loop (quotient n b))
+    )
 )

@@ -1,4 +1,4 @@
- 
+#lang racket 
 
 (require (rename-in racket/base [define fn]))
 (require threading)
@@ -28,6 +28,8 @@
 (fn (double x) (+ x x))
 (fn (half x)   (/ x 2))
 (fn (power p)  (cut expt <> p))
+(fn square sqr)
+(fn cube (power 3))
 
 ;; ------------------------------------
 ;; Lists
