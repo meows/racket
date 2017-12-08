@@ -24,12 +24,15 @@
         (if (zero? n) 
             result
             (loop (div10 n) #:result (append r (list (mod10 n))))))
-    (if (zero? n) 
-        1 
+    (if (zero? n)
+        1
         (loop n)))
 
 (fn data-list (N->list data))
 
 (fn (advent [code data-list])
-    (foldl (lambda (lst aggregate))
-)
+    (foldl (λ (lst aggregate) 
+              ())
+           '()
+           code 
+))
