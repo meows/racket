@@ -10,7 +10,8 @@
 
 (fn (N->length n #:base [b 10])
     (fn (result [n n] #:index [i 0])
-        (if (zero? n) i
+        (if (zero? n) 
+            i
             (result (quotient n b) #:index (++ i))))
     (if (zero? n) 1 (result n)))
 
