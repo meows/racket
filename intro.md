@@ -1,44 +1,53 @@
-#  A Segue into Programming
+## Making a Function in Racket
 
-Programming is a combined art, between the ability to control a computer to do
-what you want, and the ability to take information and do whatever you
-want to it. The former art is a little pragmatically focused, and the latter art
-is a little abstractly focused.
+## Define
 
-The two arts combined erects such experiences ranging from something world-class
-like the Google maps app, to something as small as a home automation program
-that turns off your lights under certain conditions.
+In the two examples below I have defined two very similar functions, `before` and `after`.
 
-Programming languages often give you two vital abilities, as discussed above:
-(1) the ability to control a computer, and (2) the ability to do anything with
-information.
+``` clojure
+(define (before n) 
+        (sub1 n))
 
-One of the favorite tools programmers use to transform information is called a
-function. Functions might be crudely divided into two categories *pure* and
-*impure*, based on whether they behave similarly to math functions.
+(define (after n) 
+        (add1 n))
 
-Let's look at a function `p` which can tell you the volume of a rectangular
-prism if you have its length `l`, width `w`, and height `h`:
-
-p(l, w, h) -> l * w * h
-
-Given:
-   l = 2 cm
-   w = 3 cm
-   h = 4 cm
-
-p(l, w, h) -> 2 * 3 * 4
-p(2, 3, 4) -> 12
-
-#  A look at Lisp
-
-Lisp is a computer programming language that is quite concerned with information
-and transformation. It's considered a little odd by many because of an
-overabundance of parentheses. Here's a little Lisp expression which calculates
-the sum of a list of numbers:
-
-``` Clojure
-(+ 1 2 3 4 5)
+(before (after 3))  ; → 3
 ```
 
-The first item in the parenthesis is special.
+## Map
+
+`map` is a function that consumes a list and returns a list the same size.
+
+``` clojure
+(map function list)
+(map square (range 10))  ; → '(0 1 4 9 16 25 36 49 64 81)
+(map add1   (range 10))  ; → '(1 2 3 4 5 6 7 8 9 10)
+(map sub1   (range 10))  ; → '(-1 0 1 2 3 4 5 6 7 8)
+```
+
+## Range
+
+`(range start end skip)` is a function which returns a list of integers.
+
+``` clojure
+;; range with only 1 argument
+(range 0)   ; → '()
+(range 1)   ; → '(0)
+(range 2)   ; → '(0 1)
+(range 3)   ; → '(0 1 2)
+(range 4)   ; → '(0 1 2 3)
+(range 10)  ; → '(0 1 2 3 4 5 6 7 8 9)
+```
+
+``` clojure
+;; range with 2 arguments, start and stop
+(range 0 5)    ; → '(0 1 2 3 4)
+(range -5 5)   ; → '(-5 -4 -3 -2 -1 0 1 2 3 4)
+(range 5 10)   ; → '(5 6 7 8 9)
+```
+
+``` clojure
+;; range with 3 arguments: (1) start, (2) stop, (3) skip
+(range 0 10 2)  ; → '(0, 2, 4, 6, 8)
+(range -5 5 2)  ; → '(-5, -3, -1, 1, 3)
+```
