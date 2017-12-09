@@ -42,11 +42,11 @@
 
 ; natural → list <naturals>
 (fn (N->list n #:base [b 10])
-    (fn (loop n #:result [result (list)])
+    (fn (loop n #:result [result '()])
         (if (zero? n)
             result
             (loop (quotient n b) #:result (cons (remainder n b) result))))
-    (if (zero? n) (list 0) (loop n)))
+    (if (zero? n) '(0) (loop n)))
 
 ; list <number> → list <numbers>
 (fn (diff l)
@@ -55,10 +55,12 @@
          (drop-right l 1)))
 
 ; list <number> → count <natural>, history <list[numbers]>
-(fn (diff-count l #:count [c 0] #:history [h null])
-    (if (andmap zero? (diff l))
-        (values c (append h (list l)))
-        (diff-count (diff l) #:count (++ c) #:history (append h (list l)))))
+(fn (diff-loop lst)
+    (fn (loop l #:count [c 0] #:history [h '()])
+        (if (andmap zero? (diff l))
+            (append h (list l))
+            (loop (diff l) #:count (++ c) #:history (append h (list l)))))
+    (loop lst))
 
 ;; -----------------------------------------------------------------------------
 ;; Functions
