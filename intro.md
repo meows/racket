@@ -25,6 +25,22 @@ In the two examples below I have defined two very similar functions, `before` an
 (map sub1   (range 10))  ; → '(-1 0 1 2 3 4 5 6 7 8)
 ```
 
+## Filter
+
+`filter` is a function that consumes a list and returns a list of equal or smaller size.
+
+``` clojure
+(define (over3? n)
+        (< 3 n))
+
+(filter function list)
+(filter even?      (range 11))  ; → '(0 2 4 6 8 10)
+(filter odd?       (range 11))  ; → '(1 3 5 7 9)
+(filter over3?     (range 11))  ; → '(4 5 6 7 8 9 10)
+(filter prime?     (range 11))  ; → '(2 3 5 7)
+(filter composite? (range 11))  ; → '(2 4 6 8 9 10)
+```
+
 ## Range
 
 `(range start end skip)` is a function which returns a list of integers.
