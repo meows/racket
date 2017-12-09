@@ -39,10 +39,13 @@
 ;; Lists
 
 ; natural → list <naturals>
-(fn (N->list n #:result [r (list)] #:base [b 10])
-    (if (zero? n)
-        (reverse r)
-        (N->list (quotient n b) #:result (append r (list (modulo n b))))))
+(fn (N->list n #:base [b 10])
+    (fn (loop n #:result [result (list)])
+        (if (zero? n)
+            result
+            (loop (quotient n b) 
+                  #:result (cons (remainder n b) result))))
+    (if (zero? n) 1 (loop n)))
 
 ; list <number> → list <numbers>
 (fn (diff l)
