@@ -1,6 +1,8 @@
-#lang racket 
+#lang racket
 
 (require (rename-in racket/base [define fn]))
+(require (rename-in racket/math [sqr square]))
+(require math/number-theory)
 (require threading)
 (require srfi/26)
 (require plot)
@@ -8,6 +10,7 @@
 ;; -----------------------------------------------------------------------------
 ;; Numerical
 
+; natural → natural (length of number)
 (fn (N->length n #:base [b 10])
     (fn (result [n n] #:index [i 0])
         (if (zero? n) 
@@ -18,18 +21,17 @@
 ;; ------------------------------------
 ;; Boolean
 
-(fn (natural? c) (positive-integer? c))
-(fn (one? x)     (= x 1))
+(fn (natural? n) (positive-integer? n))
+(fn (one? n)     (= 1 n))
 
 ;; ------------------------------------
 ;; Arithmetic
 
 (fn -- sub1)
 (fn ++ add1)
-(fn (double x) (+ x x))
-(fn (half x)   (/ x 2))
-(fn (power p)  (cut expt <> p))
-(fn square sqr)
+(fn (double n) (+ n n))
+(fn (half n) (/ n 2))
+(fn (power p) (cut expt <> p))
 (fn cube (power 3))
 
 (fn mod10 (cut remainder <> 10))
@@ -43,7 +45,7 @@
     (fn (loop n #:result [result (list)])
         (if (zero? n)
             result
-            (loop (quotient n b) 
+            (loop (quotient n b)
                   #:result (cons (remainder n b) result))))
     (if (zero? n) 1 (loop n)))
 
@@ -53,7 +55,7 @@
          (cdr l)
          (drop-right l 1)))
 
-; list → count <natural>, history <list[numbers]> 
+; list <number> → count <natural>, history <list[numbers]>
 (fn (diff-count l #:count [c 0] #:history [h null])
     (if (andmap zero? (diff l))
         (values c (append h (list l)))
@@ -68,15 +70,32 @@
 (fn (b b)        (λ (x) (+ b x)))
 (fn (m m)        (λ (x) (* m x)))
 
+; function → list <any> (outputs)
+(fn (table fn/1 #:min [min 0] #:max [max 15]) 
+    (map fn/1 (range min max)))
+
+; natural → natural (nth fibonacci number)
+(fn (fib n) (if (<= n 2) 1 (+ (fib (- n 1)) (fib (- n 2)))))
+
+; natural → natural (cycles of collatz)
+(fn (collatz n)
+    (fn (loop n #:i [i 0])
+        (cond ((one? n)   i)
+              ((even? n)  (loop (* 1/2 n)      #:i (++ i)))
+              (else       (loop (+ 1 (* 3 n))  #:i (++ i))) ))
+    (cond ((not (natural? n)) (error "Input out of range: { n | n ∈ Z+ }"))
+          ((one? n) 0)
+          (else (loop n))))
+
 ;; -----------------------------------------------------------------------------
 ;; Graphing
 
 ; graphs any function and compares it to f(x) = x
 ; also accepts optional input for visual grid background
-(define (graph fn #:grid? [grid? false] #:min [min -10] #:max [max 10])
+(fn (graph fn/1 #:grid? [grid? false] #:min [min -10] #:max [max 10])
     (plot (list (axes)
                 (if grid? (tick-grid) null)
-                (function fn)
+                (function fn/1)
                 (function (λ (x) x) #:style 'dot #:width 1.5 #:color 'gray))
           #:x-min min
           #:x-max max

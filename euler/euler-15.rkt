@@ -1,6 +1,7 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
+(require (rename-in racket/math [sqr square]))
 (require math/number-theory)
 
 ;; -----------------------------------------------------------------------------
@@ -10,8 +11,7 @@
 
 (fn (grid n)
     (/ (factorial (+ n n))
-       (sqr (factorial n)))
-)
+       (square (factorial n))))
 
 (fn euler-15 (grid 20))
 

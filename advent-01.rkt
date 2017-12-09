@@ -21,16 +21,16 @@
 ; natural → list <naturals> (number into list of digits)
 (fn (N->list n)
     (fn (loop n #:result [result (list)])
-        (if (zero? n) 
+        (if (zero? n)
             result
-            (loop (div10 n) 
-                  #:result (cons (mod10 n) r))))
+            (loop (div10 n)
+                  #:result (cons (mod10 n) result))))
     (if (zero? n) 1 (loop n)))
 
 (fn data-list (N->list data))
 
 (fn (advent [code data-list])
-    (foldl (λ (lst aggregate) 
+    (foldl (λ (lst aggregate)
               ())
            '(last data-list)
            code
