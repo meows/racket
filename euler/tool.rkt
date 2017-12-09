@@ -35,7 +35,7 @@
 (fn cube       (power 3))
 
 (fn mod10 (cut remainder <> 10))
-(fn div10 (cut quotient  <> 10))
+(fn div10 (cut quotient <> 10))
 
 ;; ------------------------------------
 ;; Lists
