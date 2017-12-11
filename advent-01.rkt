@@ -29,9 +29,17 @@
 
 (fn data-list (N->list data))
 
-(fn (advent [code data-list])
-    (foldl (λ (lst aggregate)
-              ())
-           '(last data-list)
-           code
+(fn (advent integers)
+    (fn (loop lst #:sum [sum 0])
+        (if (null? lst)
+            sum
+            (loop (rest lst) 
+                  #:sum (if (equal? (first a) (second a))
+                            (+ sum (first a))
+                            sum
+                        )
+                        
+            )
+        )
+    (loop integers)
 ))
