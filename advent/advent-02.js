@@ -1,10 +1,6 @@
 // -----------------------------------------------------------------------------
 // Advent of Code
 
-//
-// Problem 2
-//
-
 const raw_str =
 `798	1976	1866	1862	559	1797	1129	747	85	1108	104	2000	248	131	87	95
 201	419	336	65	208	57	74	433	68	360	390	412	355	209	330	135
@@ -25,5 +21,20 @@ const raw_str =
 
 const lists_nats = raw_str.split('\n')
    .map(x => x.split('\t').map(Number))
-;
 
+//
+// Problem 2 <Part A>
+//
+
+const diff        = (a, b) => Math.abs(a - b)
+const rowDiff     = arr    => diff(Math.max(...arr), Math.min(...arr))
+const advent_02_A = lists  => lists.map(rowDiff).reduce((a, b) => a + b)
+
+//
+// Problem 2 <Part B>
+//
+
+const rowDivisor  = arr   => 
+const advent_02_B = lists => {
+
+}
