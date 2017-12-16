@@ -25,6 +25,6 @@
 ;; -----------------------------------------------------------------------------
 ;; Solution
 
-(fn (euler-20) (apply + (natural->list (factorial 100))))
+(fn euler-20 (apply + (natural->list (factorial 100))))
 
-(euler-20)  ;; → 648
+euler-20  ;; → 648
