@@ -22,20 +22,24 @@ const raw_str =
 const lists_nats = raw_str.split('\n')
    .map(x => x.split('\t').map(Number))
 
-//
+// ----------------------------------------------
 // Problem 2 <Part A>
-//
 
 const diff        = (a, b) => Math.abs(a - b)
 const rowDiff     = ints   => diff(Math.max(...ints), Math.min(...ints))
 const advent_02_A = lists  => lists.map(rowDiff).reduce((a, b) => a + b)
 
-//
+// ----------------------------------------------
 // Problem 2 <Part B>
-//
 
 const ordered = lists_nats.map(arr => arr.sort((a, b) => a - b))
 
-const advent_02_B = lists => {
+// advent :: [][]natural → natural
+function advent_02_B(lists) {
+   const rowDivisor = nats => nats.reduce(
+      (state, item, i, arr) =>
+   )
 
 }
+
+advent_02_B(ordered)
