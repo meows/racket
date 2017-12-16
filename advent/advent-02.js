@@ -33,13 +33,20 @@ const advent_02_A = lists  => lists.map(rowDiff).reduce((a, b) => a + b)
 // Problem 2 <Part B>
 
 const ordered = lists_nats.map(arr => arr.sort((a, b) => a - b))
+const divisor = (big, small) => big % small === 0
+
+function median(nats) {
+   const sorted = nats.slice().sort((a, b) => a - b);
+   const middle = Math.floor(numbers.length / 2);
+   const isEven = numbers.length % 2 === 0;
+
+   return isEven ? (numbers[middle] + numbers[middle - 1]) / 2 : numbers[middle];
+ }
 
 // advent :: [][]natural → natural
 function advent_02_B(lists) {
-   const rowDivisor = nats => nats.reduce(
-      (state, item, i, arr) =>
-   )
-
+   const
+   
 }
 
 advent_02_B(ordered)
