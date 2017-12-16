@@ -27,14 +27,15 @@ const lists_nats = raw_str.split('\n')
 //
 
 const diff        = (a, b) => Math.abs(a - b)
-const rowDiff     = arr    => diff(Math.max(...arr), Math.min(...arr))
+const rowDiff     = ints   => diff(Math.max(...ints), Math.min(...ints))
 const advent_02_A = lists  => lists.map(rowDiff).reduce((a, b) => a + b)
 
 //
 // Problem 2 <Part B>
 //
 
-const rowDivisor  = arr   => 
+const ordered = lists_nats.map(arr => arr.sort((a, b) => a - b))
+
 const advent_02_B = lists => {
 
 }
