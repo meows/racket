@@ -39,7 +39,7 @@ function advent_1A(list) {
    const circular = (position, vector, mod) => (position + vector) % mod
 
    return list.reduce(
-      (sum, item, i, arr) => item === arr[circular(i, 1, max)] ? sum + item : sum,
+      (sum, item, i, arr) => (item === arr[circular(i, 1, max)]) ? sum + item : sum,
       0
    )
 }
