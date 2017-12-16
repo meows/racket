@@ -31,9 +31,8 @@ const raw_data = `93842744946836323593516414113745734662731646873375367697794874
 
 const naturals = raw_data.split('').map(Number)
 
-//
-// Problem 1 <Part 1>
-//
+// ----------------------------------------------
+// Problem 1 <Part A>
 
 function advent_1A(list) {
    const max      = list.length
@@ -47,9 +46,8 @@ function advent_1A(list) {
 
 advent_1A(naturals)
 
-//
-// Problem 1 <Part 2>
-//
+// ----------------------------------------------
+// Problem 1 <Part B>
 
 function advent_1B(list) {
    const half     = list.length * 0.5
