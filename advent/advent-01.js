@@ -35,11 +35,11 @@ const naturals = raw_data.split('').map(Number)
 // Problem 1 <Part A>
 
 function advent_1A(list) {
-   const max      = list.length
-   const circular = (position, vector, mod) => (position + vector) % mod
+   const max    = list.length
+   const modAdd = (s, v, mod) => (s + v) % mod
 
    return list.reduce(
-      (sum, item, i, arr) => (item === arr[circular(i, 1, max)]) ? sum + item : sum,
+      (sum, item, i, arr) => (item === arr[modAdd(i, 1, max)]) ? sum + item : sum,
       0
    )
 }
@@ -50,12 +50,12 @@ advent_1A(naturals)
 // Problem 1 <Part B>
 
 function advent_1B(list) {
-   const half    = list.length * 0.5
-   const max     = list.length
-   const modPlus = (s, v, mod) => (s + v) % mod
+   const half   = list.length * 0.5
+   const max    = list.length
+   const modAdd = (s, v, mod) => (s + v) % mod
 
    return list.reduce(
-      (sum, item, i, arr) => item === arr[modPlus(i, half, max)] ? sum + item : sum,
+      (sum, item, i, arr) => item === arr[modAdd(i, half, max)] ? sum + item : sum,
       0
    )
 }
