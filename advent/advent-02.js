@@ -19,10 +19,8 @@ const raw_str =
 3591	1843	3448	1775	3564	2632	1002	3065	77	3579	78	99	1668	98	2963	3553
 2155	225	2856	3061	105	204	1269	171	2505	2852	977	1377	181	1856	2952	2262`;
 
-const lists_nats = raw_str.split('\n')
-   .map(x => x.split('\t').map(Number))
-
-const ordered = lists_nats.map(arr => sort((a, b) => a - b), arr)
+const list_nats = raw_str.split('\n').map(x => x.split('\t').map(Number))
+const ordered   = list_nats.map(arr => sort((a, b) => a - b), arr)
 
 // ----------------------------------------------
 // Problem 2 <Part A>
@@ -35,10 +33,11 @@ const advent_02_A = lists  => lists.map(rowDiff).reduce((a, b) => a + b)
 // Problem 2 <Part B>
 
 const is_divisor = (big, small) => big % small === 0
-const sort       = (fn, arr) => arr.slice().sort(fn)
+const sort       = (fn, arr)    => arr.slice().sort(fn)
 
 // advent :: []natural → natural
 function advent_row(nats) {
+
 }
 
 advent_02_B(ordered)
