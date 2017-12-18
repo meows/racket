@@ -513,6 +513,47 @@ jwfm ptjwrbl hhuv uolz adyweh qpj wxyogp igvnojq jmfw pqs fsnirby`
 
 const space   = ' '
 const process = raw.split('\n').map(x => x.split(space))
+2
+  3
+  5
+  7
+  11
+  13
+  17
+  19
+  23
+  29
+  31
+  37
+  41
+  43
+  47
+  53
+  59
+  61
+  67
+  71
+  73
+  79
+  83
+  89
+  97
+  101
+const charToPrime => {
+    a: 2,
+    b
+    c
+    d
+    e
+    f
+    g
+    h
+    i
+    j
+    k
+    l
+    m
+}
 
 const has_repeat = (strings) => strings.length === new Set(strings).size
 const checked    = process.map(has_repeat)
