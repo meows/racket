@@ -41,11 +41,12 @@
 ;; Lists
 
 ; natural → list <naturals>
-(fn (N->list n #:base [b 10])
+(fn (N->list n #:base [base 10])
     (fn (loop n #:result [result '()])
         (if (zero? n)
             result
-            (loop (quotient n b) #:result (cons (remainder n b) result))))
+            (let-values ([(q r) (quotient/remainder n base)])
+                        (loop q #:result (cons r result)))))
     (if (zero? n) '(0) (loop n)))
 
 ; list <number> → list <numbers>
@@ -55,12 +56,12 @@
          (drop-right l 1)))
 
 ; list <number> → count <natural>, history <list[numbers]>
-(fn (diff-loop lst)
-    (fn (loop l #:count [c 0] #:history [h '()])
-        (if (andmap zero? (diff l))
+(fn (diff-loop ints)
+    (fn (loop l #:count [c 0] #:history [h (list)])
+        (if (all zero? (diff l))
             (append h (list l))
             (loop (diff l) #:count (++ c) #:history (append h (list l)))))
-    (loop lst))
+    (loop ints))
 
 ;; -----------------------------------------------------------------------------
 ;; Functions
@@ -74,6 +75,12 @@
 ; function → list <any> (outputs)
 (fn (table fn/1 #:min [min 0] #:max [max 15]) 
     (map fn/1 (range min max)))
+
+(fn all andmap)
+(fn any ormap)
+
+;; -----------------------------------------------
+;; Numerical Series
 
 ; natural → natural (nth fibonacci number)
 (fn (fib n) (if (<= n 2) 1 (+ (fib (- n 1)) (fib (- n 2)))))
