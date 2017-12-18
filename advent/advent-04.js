@@ -512,48 +512,43 @@ hwcy ujdun bjjuvd jbdvju onnk xeyy mmp onkn qyzl
 jwfm ptjwrbl hhuv uolz adyweh qpj wxyogp igvnojq jmfw pqs fsnirby`
 
 const space   = ' '
-const process = raw.split('\n').map(x => x.split(space))
-2
-  3
-  5
-  7
-  11
-  13
-  17
-  19
-  23
-  29
-  31
-  37
-  41
-  43
-  47
-  53
-  59
-  61
-  67
-  71
-  73
-  79
-  83
-  89
-  97
-  101
-const charToPrime => {
+const character = ''
+const listStrings = raw.split('\n').map(x => x.split(space))
+
+const charToPrime = char => ({
     a: 2,
-    b
-    c
-    d
-    e
-    f
-    g
-    h
-    i
-    j
-    k
-    l
-    m
-}
+    b: 3,
+    c: 5,
+    d: 7,
+    e: 11,
+    f: 13,
+    g: 17,
+    h: 19,
+    i: 23,
+    j: 29,
+    k: 31,
+    l: 37,
+    m: 41,
+    n: 43,
+    o: 47,
+    p: 53,
+    q: 59,
+    r: 61,
+    s: 67,
+    t: 71,
+    u: 73,
+    v: 79,
+    w: 83,
+    x: 89,
+    y: 97,
+    z: 101,
+}[char])
 
 const has_repeat = (strings) => strings.length === new Set(strings).size
 const checked    = process.map(has_repeat)
+
+const strToPrimeProduct = (str) => str.split(character)
+   .map(charToPrime)
+   .reduce((a, b) => a * b)
+
+const rowCheck = (strings) => 
