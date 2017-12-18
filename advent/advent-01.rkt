@@ -26,16 +26,18 @@
             (loop (div10 n) #:result (cons (mod10 n) result))))
     (if (zero? n) 1 (loop n)))
 
-(fn (mod+ position vector mod)
-    (modulo (+ position vector) mod))
+; modular addition
+(fn (mod+ p v mod) (modulo (+ p v) mod))
 
 ; list <natural> → natural
-(fn (advent lst)
-    (for/fold ([sum 0]) ([i lst])
-              (if (= i (list-ref lst (mod+ i 1 (length lst))))
-                  (+ sum i)
-                  sum
-)))
+(fn (advent nats)
+    (fn (loop lst #:sum [sum 0])
+        (if (empty? (rest lst))
+            sum
+            (loop (rest lst) 
+                  #:sum (if (equal? (first lst) (second lst)) (+ sum (first lst)) sum))))
+    (loop nats)
+)
 
 
 (advent (N->list data))
