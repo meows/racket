@@ -36,8 +36,10 @@ const is_divisor = (big, small) => big % small === 0
 const sort       = (fn, arr)    => arr.slice().sort(fn)
 
 // advent :: []natural → natural
-function advent_row(nats) {
-
-}
+const advent_row = (nats) => nats.reduce(
+    (state, n, i, arr) => {
+        arr.slice(i).filter(is_divisor)
+    }
+)
 
 advent_02_B(ordered)
