@@ -15,12 +15,14 @@
         product
         (factorial (-- n) (* n product))))
 
-; turns positive integer into list of digits
-(fn (natural->list n #:base [b 10] #:result [r (list)])
-    (if (zero? n)
-        (reverse r)
-        (natural->list (quotient n b)
-                       #:result (append r (list (modulo n b))))))
+; natural → list <digits>
+(fn (N->list nat #:base [base 10])
+    (fn (loop nat #:result [result '()])
+        (if (zero? nat)
+            result
+            (let-values ([(quo rem) (quotient/remainder nat base)])
+                        (loop quo #:result (cons rem result)))))
+    (if (zero? nat) '(0) (loop nat)))
 
 ;; -----------------------------------------------------------------------------
 ;; Solution
