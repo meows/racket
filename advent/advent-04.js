@@ -544,11 +544,12 @@ const charToPrime = char => ({
     z: 101,
 }[char])
 
-const has_repeat = (strings) => strings.length === new Set(strings).size
-const checked    = process.map(has_repeat)
+const has_repeat = (arr) => arr.length === new Set(arr).size
 
-const strToPrimeProduct = (str) => str.split(character)
+const strToNatural = (str) => str.split(character)
    .map(charToPrime)
    .reduce((a, b) => a * b)
 
-const rowCheck = (strings) => 
+const identities = listStrings.map(strings => strings.map(strToNatural))
+
+const advent_04_B = identities.map(has_repeat).filter(x => x).length
