@@ -45,8 +45,8 @@
     (fn (loop n #:result [result '()])
         (if (zero? n)
             result
-            (let-values ([(q r) (quotient/remainder n base)])
-                        (loop q #:result (cons r result)))))
+            (let-values ([(quo rem) (quotient/remainder n base)])
+                        (loop quo #:result (cons rem result)))))
     (if (zero? n) '(0) (loop n)))
 
 ; list <integer> → list <integer>
