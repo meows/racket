@@ -10,10 +10,10 @@
 (fn -- sub1)
 
 ; finds the nth factorial
-(fn (factorial n [product 1])
+(fn (factorial n #:product [p 1])
     (if (zero? n)
-        product
-        (factorial (-- n) (* n product))))
+        p
+        (factorial (-- n) #:product (* n p))))
 
 ; natural → list <digits>
 (fn (N->list nat #:base [base 10])

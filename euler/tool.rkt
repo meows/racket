@@ -40,7 +40,7 @@
 ;; ------------------------------------
 ;; Lists
 
-; natural → list <naturals>
+; natural → list <natural>
 (fn (N->list n #:base [base 10])
     (fn (loop n #:result [result '()])
         (if (zero? n)
@@ -49,19 +49,19 @@
                         (loop q #:result (cons r result)))))
     (if (zero? n) '(0) (loop n)))
 
-; list <number> → list <numbers>
-(fn (diff l)
+; list <integer> → list <integer>
+(fn (diff ints)
     (map -
-         (cdr l)
-         (drop-right l 1)))
+         (rest ints)
+         (drop-right ints 1)))
 
-; list <number> → count <natural>, history <list[numbers]>
-(fn (diff-loop ints)
-    (fn (loop l #:count [c 0] #:history [h (list)])
-        (if (all zero? (diff l))
-            (append h (list l))
-            (loop (diff l) #:count (++ c) #:history (append h (list l)))))
-    (loop ints))
+; list <natural> → history <list[natural]>
+(fn (diff-loop nats)
+    (fn (loop lst #:count [c 0] #:history [h (list)])
+        (if (all zero? (diff lst))
+            (append h (list lst))
+            (loop (diff lst) #:count (++ c) #:history (append h (list lst)))))
+    (loop nats))
 
 ;; -----------------------------------------------------------------------------
 ;; Functions
