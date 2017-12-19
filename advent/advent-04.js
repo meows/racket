@@ -1,3 +1,6 @@
+// -----------------------------------------------------------------------------
+// Advent of Code
+
 const raw = `bdwdjjo avricm cjbmj ran lmfsom ivsof
 mxonybc fndyzzi gmdp gdfyoi inrvhr kpuueel wdpga vkq
 bneh ylltsc vhryov lsd hmruxy ebnh pdln vdprrky
@@ -511,8 +514,8 @@ gyw xzgbi efus uuy
 hwcy ujdun bjjuvd jbdvju onnk xeyy mmp onkn qyzl
 jwfm ptjwrbl hhuv uolz adyweh qpj wxyogp igvnojq jmfw pqs fsnirby`
 
-const space   = ' '
-const character = ''
+const space       = ' '
+const character   = ''
 const listStrings = raw.split('\n').map(x => x.split(space))
 
 const charToPrime = char => ({
@@ -546,10 +549,11 @@ const charToPrime = char => ({
 
 const has_repeat = (arr) => arr.length === new Set(arr).size
 
-const strToNatural = (str) => str.split(character)
+const strToPrimeProduct = (str) => str.split(character)
    .map(charToPrime)
    .reduce((a, b) => a * b)
 
-const identities = listStrings.map(strings => strings.map(strToNatural))
+const identities = listStrings.map(strings => strings.map(strToPrimeProduct))
 
+const advent_04_A = listStrings.map(has_repeat).filter(x => x).length
 const advent_04_B = identities.map(has_repeat).filter(x => x).length
