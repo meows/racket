@@ -555,5 +555,5 @@ const strToPrimeProduct = (str) => str.split(character)
 
 const identities = listStrings.map(strings => strings.map(strToPrimeProduct))
 
-const advent_04_A = listStrings.map(has_repeat).filter(x => x).length
-const advent_04_B = identities.map(has_repeat).filter(x => x).length
+const advent_04_A = listStrings.map(has_repeat).filter(Boolean).length
+const advent_04_B = identities.map(has_repeat).filter(Boolean).length
