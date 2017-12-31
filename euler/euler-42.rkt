@@ -1,6 +1,7 @@
 #lang racket
 
 (require math/number-theory)
+(require threading)
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 
@@ -15,7 +16,17 @@
                     [natural (range 1 27)]) 
                    (values letter natural)))
 
-(fn (letter->natural letter) (hash-ref uid (symbol->string letter)))
 
+(fn (letter->natural letter) (hash-ref uid (string->symbol letter)))
+(fn (letters->naturals letters) (map letter->natural letters))
 (fn (word->letters word) (map string (string->list word)))
 
+(fn (euler-42 words)
+    (~> words
+        (map string-downcase _)
+        (map word->letters _)
+        (map letters->naturals _)
+        (map (curry apply +) _)
+        (count triangle-number? _)))
+
+(euler-42 input)
