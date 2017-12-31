@@ -29,4 +29,4 @@
         (map (curry apply +) _)
         (count triangle-number? _)))
 
-(euler-42 input)
+(time (euler-42 input))  ;; → 162
