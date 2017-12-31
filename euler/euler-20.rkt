@@ -17,7 +17,7 @@
 
 ; natural → list <digits>
 (fn (N->list nat #:base [base 10])
-    (fn (loop nat #:result [result '()])
+    (fn (loop nat #:result [result null])
         (if (zero? nat)
             result
             (let-values ([(quo rem) (quotient/remainder nat base)])
