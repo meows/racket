@@ -12,14 +12,19 @@
 (def source "data/euler-42.txt")
 (def input  (file->list source))
 
+
 (def uid (for/hash ([letter '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
                     [natural (range 1 27)]) 
-                   (values letter natural)))
+                    (values (symbol->string letter) natural)))
 
+(fn (letter->natural letter) 
+    (hash-ref uid letter))
 
-(fn (letter->natural letter) (hash-ref uid (string->symbol letter)))
-(fn (letters->naturals letters) (map letter->natural letters))
+(fn letters->naturals (curry map letter->natural))
 (fn (word->letters word) (map string (string->list word)))
+
+;; ---------------------------------------------
+;; Solve
 
 (fn (euler-42 words)
     (~> words
