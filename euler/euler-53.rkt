@@ -2,11 +2,16 @@
 
 (require math/number-theory)
 (require srfi/26)
+(require (rename-in racket/base [define fn]))
+(require (rename-in racket/base [define def]))
 
-(define n 23)
-(define valid-input (range 23 101))
-(define b (cut binomial n <>))
-(define l (map b (range (add1 n))))
+;; -----------------------------------------------------------------------------
+;; Project Euler
+;; Problem 53
 
-(define (big? n) (< 1000000 n))
-(count big? l)
+(def valid-input (range 23 101))
+(def binom (cut binomial n <>))
+(def table (map binom (range (add1 n))))
+(fn (big? n) (< 1000000 n))
+
+(count big? table)
