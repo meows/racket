@@ -23,4 +23,4 @@
               [else (loop #:index (++ i) #:state null)]))
     (loop #:index 100))
 
-(time (euler)) ;; -> '(134046 134045 134044 134043)
+(time (euler)) ;; → '(134046 134045 134044 134043)

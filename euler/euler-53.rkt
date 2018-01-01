@@ -9,9 +9,20 @@
 ;; Project Euler
 ;; Problem 53
 
-(def valid-input (range 23 101))
-(def binom (cut binomial n <>))
-(def table (map binom (range (add1 n))))
+(def valid-inputs (range 23 101))
+(fn ++ add1)
 (fn (big? n) (< 1000000 n))
 
-(count big? table)
+;; --------------------------------------------------------
+;; Solve
+
+(def advent 
+     (for*/fold
+        ([i 0])
+        ([n valid-inputs] [r (range 1 n)])
+        (if (big? (binomial n r))
+            (++ i)
+            i
+)))
+
+(time euler)  ;; → 4075
