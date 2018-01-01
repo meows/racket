@@ -17,8 +17,7 @@
                     [natural (range 1 27)]) 
                     (values (symbol->string letter) natural)))
 
-(fn (letter->natural letter) 
-    (hash-ref uid letter))
+(fn (letter->natural letter) (hash-ref uid letter))
 
 (fn letters->naturals (curry map letter->natural))
 (fn (word->letters word) (map string (string->list word)))
