@@ -28,10 +28,10 @@
 
 (fn (euler-42 words)
     (~> words
-        (map string-downcase _)
-        (map word->letters _)
-        (map letters->naturals _)
-        (map sum _)
-        (count triangle-number? _)))
+        (map string-downcase _ )
+        (map word->letters _ )
+        (map letters->naturals _ )
+        (map sum _ )
+        (count triangle-number? _ )))
 
 (time (euler-42 input))  ;; → 162
