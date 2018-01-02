@@ -1,6 +1,7 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
+(require (rename-in racket/base [define def]))
 (require math/number-theory)
 (require threading)
 (require srfi/26)
@@ -20,6 +21,7 @@
 ;; ------------------------------------
 ;; Boolean
 
+(fn unequal? (compose not equal?))
 (fn (natural? n) (positive-integer? n))
 (fn (one? n)     (= n 1))
 
@@ -78,6 +80,8 @@
 
 (fn all andmap)
 (fn any ormap)
+
+(fn sum (curry apply +))
 
 ;; -----------------------------------------------
 ;; Numerical Series
