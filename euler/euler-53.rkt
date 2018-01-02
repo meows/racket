@@ -16,13 +16,13 @@
 ;; --------------------------------------------------------
 ;; Solve
 
-(def advent 
+(def euler
      (for*/fold
-        ([i 0])
-        ([n valid-inputs] [r (range 1 n)])
-        (if (big? (binomial n r))
-            (++ i)
-            i
+         ([i 0])
+         ([n valid-inputs] [r (range 1 n)])
+         (if (big? (binomial n r))
+             (++ i)
+             i
 )))
 
 (time euler)  ;; → 4075
