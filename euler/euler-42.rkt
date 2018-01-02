@@ -21,6 +21,7 @@
 
 (fn letters->naturals (curry map letter->natural))
 (fn (word->letters word) (map string (string->list word)))
+(fn sum (curry apply +))
 
 ;; ---------------------------------------------
 ;; Solve
@@ -30,7 +31,7 @@
         (map string-downcase _)
         (map word->letters _)
         (map letters->naturals _)
-        (map (curry apply +) _)
+        (map sum _)
         (count triangle-number? _)))
 
 (time (euler-42 input))  ;; → 162

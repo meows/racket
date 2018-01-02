@@ -30,3 +30,4 @@
 (fn data (map list (range 1 1000001) (map collatz (range 1 1000001))))
 
 (time (euler-14 data))  ;; → '(837799 524)
+
