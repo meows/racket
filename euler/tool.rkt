@@ -78,6 +78,12 @@
 (fn (table fn/1 #:min [min 0] #:max [max 15]) 
     (map fn/1 (range min max)))
 
+; consumes a function with input <seed>, and collect its repeated outputs to list
+; function → list <any> (outputs)
+(fn (repeat/list fn/v #:seed [seed 1])
+
+)
+
 (fn all andmap)
 (fn any ormap)
 
