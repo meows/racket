@@ -16,9 +16,23 @@ niceties.
 
 ## Racket has some upsides and downsides to usability as a language
 
+### Pros:
+
 * There is very little syntactically priviledged symbols, meaning there are very
   few symbols with meaning to memorize or learn.
 * Lisp has a lot of parentheses, which can get in the way of reading.
 * The library and software ecosystem is extensive, and the "official" libraries
   have good focus on math.
-* Racket comes with a plotting library
+* Racket comes with a plotting library.
+* Racket comes with a lot of the math operations and constants that young 
+  students would be interested in.
+
+### Cons:
+
+* Community can be a bit small, and a lot of knowledge discussion goes
+  undocumented over now-popular chat solutions, so finding help can be hard.
+  Fortunately the community makes up for this by being very active, but I'm not
+  sure how considerate it is to poll the attention of important core 
+  contributors.
+* Documentation can be quite sparse on examples.
+* Few official books for Racket.
