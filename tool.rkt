@@ -75,14 +75,8 @@
 (fn (m m)        (λ (x) (* m x)))
 
 ; function → list <any> (outputs)
-(fn (table fn/1 #:min [min 0] #:max [max 15]) 
+(fn (table fn/1 #:min [min 0] #:max [max 21]) 
     (map fn/1 (range min max)))
-
-; consumes a function with input <seed>, and collect its repeated outputs to list
-; function → list <any> (outputs)
-(fn (repeat/list fn/v #:seed [seed 1])
-
-)
 
 (fn all andmap)
 (fn any ormap)
@@ -114,7 +108,7 @@
     (plot (list (axes)
                 (if grid? (tick-grid) null)
                 (function fn/1)
-                (function (λ (x) x) #:style 'dot #:width 1.5 #:color 'gray))
+                (function identity #:style 'dot #:width 1.5 #:color 'gray))
           #:x-min min
           #:x-max max
           #:y-min min

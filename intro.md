@@ -14,6 +14,8 @@ In the two examples below I have defined two very similar functions, `before` an
 (before (after 3))  ; → 3
 ```
 
+# Working with Sequences
+
 ## Map
 
 `map` is a function that consumes a list and returns a list the same size.
