@@ -104,7 +104,7 @@
 
 ; graphs any function and compares it to f(x) = x
 ; also accepts optional input for visual grid background
-(fn (graph fn/1 #:grid? [grid? false] #:min [min -10] #:max [max 10])
+(fn (graph fn/1 #:grid? [grid? false] #:min [min 0] #:max [max 20])
     (plot (list (axes)
                 (if grid? (tick-grid) null)
                 (function fn/1)
@@ -114,3 +114,10 @@
           #:y-min min
           #:y-max max
 ))
+
+; (a:real, b:real, c:real) -> f(x) -> ax^2 + bx + c
+(fn (quadratic #:a [a 1] #:b [b 1] #:c [c 0])
+    (λ (x) (+ (* a x x)
+              (* b x)
+              c
+)))
