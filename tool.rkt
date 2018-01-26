@@ -116,12 +116,12 @@
 ))
 
 ; (a:real, b:real, c:real) -> f(x) -> ax^2 + bx + c
-(fn (quadratic #:a [a 1] #:b [b 1] #:c [c 0])
+(fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
     (λ (x) (+ (* a x x)
               (* b x) 
               c )))
 
-(fn (cubic #:a [a 1] #:b [b 1] #:c [c 1] #:d [d 0])
+(fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
     (λ (x)
        (+ (* a x x x)
           (* b x x)
