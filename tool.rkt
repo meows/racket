@@ -122,8 +122,7 @@
               c )))
 
 (fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
-    (λ (x)
-       (+ (* a x x x)
-          (* b x x)
-          (* c x)
-          d )))
+    (λ (x) (+ (* a x x x)
+              (* b x x)
+              (* c x)
+              d )))
