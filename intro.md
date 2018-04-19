@@ -2,13 +2,20 @@
 
 ## Define
 
-In the two examples below I have defined two very similar functions, `before` and `after`.
+In the two examples below I have defined two very similar functions, `before`
+and `after`. Notice that:
+
+* the first list has three items inside: (1) `define`, (2) `(before n)`, and (3) `(after n)`.
+* `define` is a keyword that lets you define a function
+* `(before n)` is called the function head, and the first item is the name of the function, and any following items are function parameters.
 
 ``` clojure
-(define (before n) 
+; * Notice that this is a list with 3 items: define, (before n), and (after n).
+; * (before n) is called the head of the function
+(define (before n)
         (sub1 n))
 
-(define (after n) 
+(define (after n)
         (add1 n))
 
 (before (after 3))  ; → 3

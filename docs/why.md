@@ -4,8 +4,8 @@
 
 Racket uses arbitrary precision integers and rationals by default. In exchange
 for the performance penalty, early students can focus more on math and less on
-the peculiarities of their underlying software tool. Most languages do the 
-reverse -- by default they sacrifice mathematical ergonomics in exchange for 
+the peculiarities of their underlying software tool. Most languages do the
+reverse -- by default they sacrifice mathematical ergonomics in exchange for
 speed.
 
 ## Racket comes with a decent IDE
@@ -24,7 +24,7 @@ niceties.
 * The library and software ecosystem is extensive, and the "official" libraries
   have good focus on math.
 * Racket comes with a plotting library.
-* Racket comes with a lot of the math operations and constants that young 
+* Racket comes with a lot of the math operations and constants that young
   students would be interested in.
 
 ### Cons:
@@ -32,7 +32,7 @@ niceties.
 * Community can be a bit small, and a lot of knowledge discussion goes
   undocumented over now-popular chat solutions, so finding help can be hard.
   Fortunately the community makes up for this by being very active, but I'm not
-  sure how considerate it is to poll the attention of important core 
+  sure how considerate it is to poll the attention of important core
   contributors.
 * Documentation can be quite sparse on examples.
 * Few official books for Racket.

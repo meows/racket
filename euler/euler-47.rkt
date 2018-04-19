@@ -17,10 +17,10 @@
 (fn (list-full? lst) (equal? (length lst) 4))
 
 (fn (euler)
-    (fn (loop #:index [i 100] #:state [state null])
+    (fn (loop #:index [i 100] #:state [state empty])
         (cond [(list-full? state) state]
               [(four-distinct-factors? i) (loop #:index (++ i) #:state (cons i state))]
-              [else (loop #:index (++ i) #:state null)]))
+              [else (loop #:index (++ i) #:state empty)]))
     (loop #:index 100))
 
 (time (euler))  ;; → '(134046 134045 134044 134043)
