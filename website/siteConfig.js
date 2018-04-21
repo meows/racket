@@ -19,10 +19,10 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
-  tagline: 'A website for testing',
-  url: 'https://your-docusaurus-test-site.com' /* your website url */,
-  baseUrl: '/' /* base url for your project */,
+  title: 'Racket Companion' /* title for your website */,
+  tagline: 'A little look into programming.',
+  url: 'https://shiba-sama.github.io' /* your website url */,
+  baseUrl: '/kartik/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -36,9 +36,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
+    {doc: 'intro', label: 'Guide'},
+    {doc: 'intro', label: 'Exercises'},
+   //  {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
 
@@ -69,13 +69,10 @@ const siteConfig = {
   },*/
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright:
-    'Copyright © ' +
-    new Date().getFullYear() +
-    ' Your Name or Your Company Name',
+  copyright: 'Copyright © ' + new Date().getFullYear() + ' Sir Meow Meow',
 
+  // Highlight.js theme to use for syntax highlighting in code blocks
   highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
   },
 
