@@ -17,22 +17,22 @@ probably already familiar with. See if you can understand what they do.
 
 ``` clojure
 ;; Addition
-(+ 5 5)       ; →  10
-(+ 5 -5)      ; →   0
+(+ 5 5)       ; → 10
+(+ 5 -5)      ; → 0
 (+ -5 -5)     ; → -10
-(+ 1 2 3 4 5) ; →  15
+(+ 1 2 3 4 5) ; → 15
 
 ;; Subtraction
-(- 5 5)          ; →   0
-(- 5 -5)         ; →  10
+(- 5 5)          ; → 0
+(- 5 -5)         ; → 10
 (- -5 5)         ; → -10
-(- 15 5 4 3 2 1) ; →   0
+(- 15 5 4 3 2 1) ; → 0
 
 ;; Multiplication
 (* 10 10)     ; → 100
-(* 10 0)      ; →   0
-(* 0 10)      ; →   0
-(* 10 1/2)    ; →   5
+(* 10 0)      ; → 0
+(* 0 10)      ; → 0
+(* 10 1/2)    ; → 5
 (* 5 4 3 2 1) ; → 120
 
 ;; Division
@@ -45,9 +45,9 @@ probably already familiar with. See if you can understand what they do.
 (/ 27 3 3)  ; → 3
 
 ;; Exponentiation by power of 2
-(expt 1 2)  ; →  1
-(expt 2 2)  ; →  4
-(expt 3 2)  ; →  9
+(expt 1 2)  ; → 1
+(expt 2 2)  ; → 4
+(expt 3 2)  ; → 9
 (expt 4 2)  ; → 16
 (expt 5 2)  ; → 25
 
@@ -59,10 +59,10 @@ probably already familiar with. See if you can understand what they do.
 (expt 25 1/2)  ; → 5
 
 ;; Exponentiation by power of 3
-(expt 1 3)  ; →   1
-(expt 2 3)  ; →   8
-(expt 3 3)  ; →  27
-(expt 4 3)  ; →  64
+(expt 1 3)  ; → 1
+(expt 2 3)  ; → 8
+(expt 3 3)  ; → 27
+(expt 4 3)  ; → 64
 (expt 5 3)  ; → 125
 
 ;; Exponentiation by power of 1/3

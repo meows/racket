@@ -6,6 +6,8 @@ hide_title: true
 
 # `define`
 
+> Reading time: 15-20 minutes.
+
 ## Saving information behind a name
 
 When your computer saves information, whether in RAM or in the hard drive, it
@@ -19,8 +21,6 @@ _variable_. The act of saving information behind a variable is called
 _variable assignment_.
 
 Let's look at some examples below:
-
-### Examples
 
 ``` clojure
 (define a 5)
@@ -43,18 +43,28 @@ better at communicating what you want to say to another human. It's sometimes
 forgotten that computer languages are for people to read too, so you want to
 practice writing kindly for others.
 
+### Kind variable names
+
+Below you can see two identical examples of calculating how much you owe due to
+taxes. To the computer they are the same, but to a human, the first example
+looks like you're multiplying random numbers together. If you didn't have extra
+explanation, would you guess why someone is multiplying `a` and `b`?
+
 ``` clojure
-(define (sales-tax price) (* price 1.0725))
-(define (f x) (* x 1.0725))
+;; Example #1
+(define a 1.0725)
+(define b 4.99)
+(define total (* a b))
+
+;; Example #2
+(define sales-tax 1.0725)
+(define price 4.99)
+(define total (* sales-tax price))
 ```
 
-In the example above, both of these functions do exactly the same thing, and
-your computer doesn't know the difference, but many humans would find the first
-one far easier to understand, otherwise one just sees `x` multipled by a random 
-decimal number. And what's `x` supposed to be?
-
-Other times it makes sense to be brief because people know what you mean.
-Writing kindly takes practice and social judgment.
+Now that we've learned a little about how to save information, there's actually
+another power of `define` that I haven't told you about yet, and that's the
+power to define a function, which we'll read about next.
 
 ## Functions
 
@@ -63,8 +73,10 @@ and `after`. Let's look at just the first list:
 
 * the first list has three items inside: `define`, `(before n)`, and `(sub1 n)`.
 * `define` is a keyword that lets you define a function
-* `(before n)` is the head of the function
-* `(sub1 n)` is the body of the function
+* `(before n)` is the head of the function; `before` is the name of the 
+  function, and `n` is the name of the input
+* `(sub1 n)` is the body of the function; whatever this evaluates to is the
+  final value of the function
 
 ``` clojure
 (define (before n) (sub1 n))
@@ -76,12 +88,14 @@ and `after`. Let's look at just the first list:
 ```
 
 These are examples we've seen before, but they all involve functions that can
-only take on input. But you know there are useful functions that take more, for
-example, the volume of a 3D rectangle can be found with `length`, `width`, and
-`height`.
+only take one input. But you know there are useful functions that take more, for
+example, the volume of a rectangular prism can be found with `length`, `width`, 
+and `height`. One might say that a function that tells you the volume of a 
+rectangular prism requires exactly three inputs, no more and no less.
 
 I'm going to use the same rules from above for defining a function, but instead
-this time I'm going to adapt the rule to work with 3 inputs or *parameters*.
+this time I'm going to adapt the rule to work with 3 inputs or *parameters*, and
+I'm going to use extra long names for everything just for show.
 
 ``` clojure
 (define (prism-volume length width height) (* length width height))
@@ -93,5 +107,13 @@ Now let's use the function:
 (prism-volume 3 4 5)  ;; => 60
 (prism-volume 1 2 5)  ;; => 10
 (prism-volume 3 3 3)  ;; => 27
+(prism-volume 5 (+ 1 4) (+ 3 2))  ;; => 125
 ```
 
+## Trying out what you know
+
+> Exercise time: 15 minutes
+
+* Define a function called `triangle-area` which tells me the area of a triangle
+  if you know `base` and `height`.
+* 

@@ -6,7 +6,8 @@
          "atom",
          "arithmetic",
          "list",
-         "function-intro", 
+         "function-intro",
+         "conditionals",
          "define"
       ]
    }

@@ -4,11 +4,11 @@ sidebar_label: list
 hide_title: true
 ---
 
-#   Expression
+##   Expression
 
-An expression means either a (1) list or an (2) atom. But what's a list?
+An expression means either a list or an [atom](atom.md). But what's a list?
 
-#   List
+##  List
 
 A list is a sequence of zero or more expressions which are (1) separated by 
 spaces and (2) completely surrounded by parenthesis, like below:
@@ -27,7 +27,7 @@ Is this a list?
 (() a () b ())  ; yes - this is a list of 5 items, some of which are lists
 ```
 
-##  Lists have Length
+###  Lists have Length
 
 Because a list can be counted, that means we have an idea of where things are, 
 including the first or last thing, and it also means that lists have a length, 
@@ -41,7 +41,7 @@ which is a number telling us how many things are inside a list:
 (null? ())                                ; 2 things in this list
 ```
 
-##  Things to remember about lists:
+###  Things to remember about lists:
 
 - a list is sequential because you can count the things inside of it
 - a list can have zero or more expressions inside of it

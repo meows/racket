@@ -1,9 +1,10 @@
 ---
 id: sequence
-sidebar_label: sequence
+sidebar_label: Sequences
+hide_title: true
 ---
 
-##   Sequence
+##   Sequences
 
 A sequence means a "line" of separate things positioned one after another, which 
 you can count using the counting numbers (0, 1, 2, 3, 4...). So of course, the 
