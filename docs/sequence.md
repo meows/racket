@@ -5,7 +5,9 @@ sidebar_label: sequence
 
 ##   Sequence
 
-A sequence means a "line" of separate things positioned one after another, which you can count using the counting numbers (0, 1, 2, 3, 4...). So of course, the counting numbers themselves form a sequence:
+A sequence means a "line" of separate things positioned one after another, which 
+you can count using the counting numbers (0, 1, 2, 3, 4...). So of course, the 
+counting numbers themselves form a sequence:
 
 `0` → `1` → `2` → `...` → `8` → `9` → `10`
 
@@ -17,7 +19,10 @@ Days of the week form a sequence:
 
 `Monday` → `Tuesday` → `Wednesday` → `Thursday` → `Friday` → `Saturday` → `Sunday`
 
-But only anything you can count is a sequence! Some things in life don't naturally form a sequence, but if you can find a way to count them, then you can turn them into a sequence; for example, people waiting in line, or players on a basketball team:
+But only anything you can count is a sequence! Some things in life don't 
+naturally form a sequence, but if you can find a way to count them, then you can 
+turn them into a sequence; for example, people waiting in line, or players on a 
+basketball team:
 
 ### Golden State Warriors - Roster 2017
 
@@ -54,4 +59,6 @@ Even a list of words surrounded by parenthesis:
 | 5             | by
 | 6             | parenthesis
 
-> Note that by coincidence we start counting from 0 here. Sometimes it's easier to count from 0, and sometimes it's easier to count from 1, but mathematicians, physicists, and engineers typically count from 0.
+> Note that by coincidence we start counting from 0 here. Sometimes it's easier 
+> to count from 0, and sometimes it's easier to count from 1, but 
+> mathematicians, physicists, and engineers typically count from 0.

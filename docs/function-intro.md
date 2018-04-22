@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Using Functions
 ---
 
-# Using Functions
+## Using Functions
 
 In Racket, everything consists of lists of symbols, and the first symbol is
 assumed by default to be a function, even if it's a single-item list. (It's
@@ -17,22 +17,22 @@ probably already familiar with. See if you can understand what they do.
 
 ``` clojure
 ;; Addition
-(+ 5 5)       ; → 10
-(+ 5 -5)      ; → 0
+(+ 5 5)       ; →  10
+(+ 5 -5)      ; →   0
 (+ -5 -5)     ; → -10
-(+ 1 2 3 4 5) ; → 15
+(+ 1 2 3 4 5) ; →  15
 
 ;; Subtraction
-(- 5 5)          ; → 0
-(- 5 -5)         ; → 10
+(- 5 5)          ; →   0
+(- 5 -5)         ; →  10
 (- -5 5)         ; → -10
-(- 15 5 4 3 2 1) ; → 0
+(- 15 5 4 3 2 1) ; →   0
 
 ;; Multiplication
 (* 10 10)     ; → 100
-(* 10 0)      ; → 0
-(* 0 10)      ; → 0
-(* 10 1/2)    ; → 5
+(* 10 0)      ; →   0
+(* 0 10)      ; →   0
+(* 10 1/2)    ; →   5
 (* 5 4 3 2 1) ; → 120
 
 ;; Division
@@ -40,7 +40,7 @@ probably already familiar with. See if you can understand what they do.
 (/ 10 5)    ; → 2
 (/ 5 10)    ; → 1/2
 (/ 0 10)    ; → 0
-(/ 10 0)    ; Error! Division by 0 has no meaning!
+(/ 10 0)    ; Error: division by 0 has no meaning.
 (/ 8 2 2)   ; → 2
 (/ 27 3 3)  ; → 3
 
@@ -73,8 +73,19 @@ probably already familiar with. See if you can understand what they do.
 (expt 125 1/3)  ; → 5
 ```
 
-### In Review
+## Extra Tricky Examples
+``` clojure
+;; This will evaluate to 40
+(+ 10
+   (* 2 5)
+   (- 20 (+ 5 5)) 
+   (/ 100 10))
 
+;; What will this evaluate to?
+(/ (* 1 2 (+ 2 1) (+ 2 2) (+ 2 3)) 5 4 3 2 1)
+```
+
+## In Review
 * `+` addition
 * `-` subtraction
 * `*` multiplication
