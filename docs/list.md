@@ -21,10 +21,10 @@ spaces and (2) completely surrounded by parenthesis, like below:
 Is this a list?
 
 ``` clojure
-)()(            ; no  - it's not fully contained by parenthesis
-())             ; no  - it's not fully contained by parenthesis
-()              ; yes - this is called an empty list
-(() a () b ())  ; yes - this is a list of 5 items, some of which are lists
+)()(           ;; no  - it's not fully contained by parenthesis
+())            ;; no  - it's not fully contained by parenthesis
+()             ;; yes - this is called an empty list
+(() a () b ()) ;; yes - this is a list of 5 items, some of which are lists
 ```
 
 ###  Lists have Length
@@ -34,17 +34,17 @@ including the first or last thing, and it also means that lists have a length,
 which is a number telling us how many things are inside a list:
 
 ``` clojure
-(+ 1 2 3 4 5)                             ; 6 things in this list
-(square 3)                                ; 2 things in this list
-(+ 1 2 3 4 5 (* 3 2))                     ; 7 things in this list
-((1 2 3) jungle cat (4 5 6) eats people)  ; 6 things in this list
-(null? ())                                ; 2 things in this list
+(+ 1 2 3 4 5)                            ;; 6 things in this list
+(square 3)                               ;; 2 things in this list
+(+ 1 2 3 4 5 (* 3 2))                    ;; 7 things in this list
+((1 2 3) jungle cat (4 5 6) eats people) ;; 6 things in this list
+(empty? ())                              ;; 2 things in this list
 ```
 
 ###  Things to remember about lists:
 
-- a list is sequential because you can count the things inside of it
+- a list is sequential meaning the things inside are lined up one after another
+- a list can also be counted, so you know the number of things inside
 - a list can have zero or more expressions inside of it
 - the expressions inside a list are separated by spaces
 - the list with zero expressions is called an *empty list*
-- a list has a length, which represents the number of things inside it

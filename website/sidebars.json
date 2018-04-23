@@ -6,9 +6,10 @@
          "alphabet",
          "atom",
          "list",
+         "function-intro",
          "arithmetic",
          "define",
-         "function-intro",
+         "lambda",
          "conditionals",
          "values"
       ]

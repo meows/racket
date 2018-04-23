@@ -86,8 +86,9 @@ or `false`.
 #### `expt` Exponentiation
 
 The exponentiation function `expt` requires two inputs, the first one being the 
-*base*, the second one being the *exponent* or *power*. Therefore, `(expt 3 4)` 
-should be interpreted as $3^4$, and `(expt 4 3)` should be interpreted as $4^3$.
+*base*, the second one being the exponent (or power). Therefore, `(expt 3 4)` 
+should be interpreted as _3 to the power of 4_, and `(expt 4 3)` should be 
+interpreted as _4 to the power of 3_.
 
 ``` clojure
 (expt 2 1)  ;; → (* 2)
