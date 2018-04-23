@@ -11,7 +11,7 @@ There's actually another way to define a function in Racket, and it's called
 scientists love Greek and Latin things), and it looks like `λ` when it's
 lower-cased, which is how it's often written.
 
-Also, mathematicians and computer scientists sometimes use it as a name for a 
+Mathematicians and computer scientists sometimes use it as a name for a 
 function, and it's actually the picture logo of the language you're using if you
 look really closely.
 

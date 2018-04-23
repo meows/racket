@@ -18,8 +18,11 @@ do use this notation to access memory) just to look at the first item. That's
 very exhausting.
 
 Instead we can save the information behind a human-friendly name, known as a
-_variable_. The act of saving information behind a variable is called 
+_variable_, and the act of saving information behind a variable is called 
 _variable assignment_.
+
+It's important to note that a variable doesn't have to refer to any single
+number or value. It refers to a *place* where you can put values.
 
 Let's look at some examples below:
 
