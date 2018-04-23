@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>sequence · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="sequence · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://meows.github.io/racket/index.html"/><meta property="og:description" content="##   Sequences"/><meta property="og:image" content="https://meows.github.io/racket/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://meows.github.io/racket/img/docusaurus.png"/><link rel="shortcut icon" href="/racket/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://meows.github.io/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://meows.github.io/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/racket/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/racket/"><img class="logo" src="/racket/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitle">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/racket/docs/intro.html" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/racket/docs/intro.html" target="_self">Exercises</a></li><li class=""><a href="/racket/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Language Guide</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Language Guide</h3><ul><li class="navListItem"><a class="navItem" href="/racket/docs/intro.html">A Journey</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/racket/docs/sequence.html">Sequences</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/alphabet.html">Alphabet</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/atom.html">Atom</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/list.html">List</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/function-intro.html">Using Functions</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/arithmetic.html">More Arithmetic</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/define.html">define</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/lambda.html">lambda</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/conditionals.html">conditionals</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/values.html">Values</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="sequences"></a><a href="#sequences" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sequences</h2>
+<p>A sequence means a &quot;line&quot; of separate things positioned one after another, which
+you can count using the natural numbers (0, 1, 2, 3, 4...). So of course, the
+natural numbers themselves form a sequence:</p>
+<p><code>0</code> → <code>1</code> → <code>2</code> → <code>...</code> → <code>8</code> → <code>9</code> → <code>10</code></p>
+<p>People often recite the English alphabet as a sequence:</p>
+<p><code>a</code> → <code>b</code> → <code>c</code> → <code>...</code> → <code>x</code> → <code>y</code> → <code>z</code></p>
+<p>Days of the week form a sequence:</p>
+<p><code>Monday</code> → <code>Tuesday</code> → <code>Wednesday</code> → <code>Thursday</code> → <code>Friday</code> → <code>Saturday</code> → <code>Sunday</code></p>
+<p>But only anything you can count is a sequence! Some things in life don't
+naturally form a sequence, but if you can find a way to count them, then you can
+turn them into a sequence; for example, people waiting in line, or players on a
+basketball team:</p>
+<h3><a class="anchor" aria-hidden="true" id="golden-state-warriors-roster-2017"></a><a href="#golden-state-warriors-roster-2017" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Golden State Warriors - Roster 2017</h3>
+<table>
+<thead>
+<tr><th>sequence number</th><th>original</th><th>player</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0</td><td>Patrick McCaw</td></tr>
+<tr><td>1</td><td>1</td><td>JaVale McGee</td></tr>
+<tr><td>2</td><td>2</td><td>Jordan Bell</td></tr>
+<tr><td>3</td><td>3</td><td>David West</td></tr>
+<tr><td>4</td><td>4</td><td>Quinn Cook</td></tr>
+<tr><td>5</td><td>5</td><td>Kevon Looney</td></tr>
+<tr><td>6</td><td>6</td><td>Nick Young</td></tr>
+<tr><td>7</td><td>11</td><td>Klay Thompson</td></tr>
+<tr><td>8</td><td>15</td><td>Damian Jones</td></tr>
+<tr><td>9</td><td>18</td><td>Omri Casspi</td></tr>
+<tr><td>10</td><td>23</td><td>Draymond Green</td></tr>
+<tr><td>11</td><td>25</td><td>Chris Boucher</td></tr>
+<tr><td>12</td><td>27</td><td>Zaza Pachulia</td></tr>
+<tr><td>13</td><td>30</td><td>Stephen Curry</td></tr>
+<tr><td>14</td><td>34</td><td>Shaun Livingston</td></tr>
+<tr><td>15</td><td>35</td><td>Kevin Durant</td></tr>
+</tbody>
+</table>
+<p>Even a list of words surrounded by parenthesis:</p>
+<p><code>(hello there i am surrounded by parenthesis)</code></p>
+<table>
+<thead>
+<tr><th>list position</th><th>word / atom</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>hello</td></tr>
+<tr><td>1</td><td>there</td></tr>
+<tr><td>2</td><td>i</td></tr>
+<tr><td>3</td><td>am</td></tr>
+<tr><td>4</td><td>surrounded</td></tr>
+<tr><td>5</td><td>by</td></tr>
+<tr><td>6</td><td>parenthesis</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note that by coincidence we start counting from 0 here. Sometimes it's easier
+to count from 0, and sometimes it's easier to count from 1, although the
+physical sciences and engineering tend to count from 0. I would advise you to
+choose whichever makes your current problem easier.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="intro.html">← intro</a><a class="docs-next button" href="alphabet.html">Alphabet →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sequences">Sequences</a><ul class="toc-headings"><li><a href="#golden-state-warriors-roster-2017">Golden State Warriors - Roster 2017</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/racket/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>

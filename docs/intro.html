@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>intro · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="intro · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://meows.github.io/racket/index.html"/><meta property="og:description" content="# A little journey into Racket"/><meta property="og:image" content="https://meows.github.io/racket/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://meows.github.io/racket/img/docusaurus.png"/><link rel="shortcut icon" href="/racket/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://meows.github.io/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://meows.github.io/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/racket/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/racket/"><img class="logo" src="/racket/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitle">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/racket/docs/intro.html" target="_self">Guide</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/racket/docs/intro.html" target="_self">Exercises</a></li><li class=""><a href="/racket/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Language Guide</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Language Guide</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/racket/docs/intro.html">A Journey</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/sequence.html">Sequences</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/alphabet.html">Alphabet</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/atom.html">Atom</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/list.html">List</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/function-intro.html">Using Functions</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/arithmetic.html">More Arithmetic</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/define.html">define</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/lambda.html">lambda</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/conditionals.html">conditionals</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/values.html">Values</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="a-little-journey-into-racket"></a><a href="#a-little-journey-into-racket" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A little journey into Racket</h1>
+<p>We're about to embark on a journey into a language called Racket. Racket is an
+extremely simple language, and it likely won't be your last programming language
+if you continue onward in math or science. Many people who continue on in
+software may learn many languages.</p>
+<p>What people do later with programming is often not about software or programming
+itself, but rather what you can do with it.</p>
+<ul>
+<li><p>A statistician is a kind of mathematician who studies data and uses
+mathematical techniques to understand and perhaps even justify a prediction
+about the future. Programming allows a statistician to pull data from so many
+places, and then run quick and private experiments that normally would've cost
+a fortune.</p></li>
+<li><p>People are exploring whether software and hardware can successfully copy bits
+of human learning, or just thinking in general -- also known as artificial
+intelligence. Google recently held a competitive match in a board game called
+Go, famous for the fact that despite its simplicity, humans could still beat
+the best computers.</p>
+<p>Google's program, AlphaGo, was famous for the fact that it wasn't actually
+taught any strategies, or even the rules of the game, instead learning all by
+playing itself billions of times over. Last year in 2017, Google's team beat
+the world's best player, Ke Jie.</p></li>
+<li><p>Although the activity is considered controversial, it's also well known that
+much of the stocks (ways to buy parts of companies to make more money later)
+being traded today are done automatically by computers, at dizzyingly inhuman
+speeds. Sometimes, companies write programs that battle other programs when
+buying stocks.</p></li>
+<li><p>A mathematician normally does his or her work by absolute proofs, and not by
+experiments. When a mathematician says &quot;proof&quot;, they mean something far more
+strict than what a scientist means. A mathematician means that if you follow
+their rules, their conclusion will be 100% perfect.</p>
+<p>But mathematicians are finding that quick and nearly-free experiments in math,
+even though not nearly as powerful as a mathematical proof, can provide new
+ideas or insights they might not have ordinarily obtained.</p></li>
+<li><p>Some mathematicians are also exploring the world of using computer languages
+to describe their mathematical theories so that the computer can prove ideas
+for them! This is called Automated Theorem Proving.</p></li>
+</ul>
+<p>This is just a very small piece of what people are accomplishing with math and
+computing together. People don't just do software. They combine it with things
+to make it alive, sometimes quite literally, like a car that drives without a
+driver. We used to call cars &quot;horseless carriages&quot;. Maybe soon you'll be calling
+them &quot;driverless cars&quot;.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="sequence.html">sequence →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/racket/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>

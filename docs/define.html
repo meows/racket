@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>define · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="define · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://meows.github.io/racket/index.html"/><meta property="og:description" content="# `define`"/><meta property="og:image" content="https://meows.github.io/racket/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://meows.github.io/racket/img/docusaurus.png"/><link rel="shortcut icon" href="/racket/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://meows.github.io/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://meows.github.io/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/racket/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/racket/"><img class="logo" src="/racket/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitle">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/racket/docs/intro.html" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/racket/docs/intro.html" target="_self">Exercises</a></li><li class=""><a href="/racket/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Language Guide</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Language Guide</h3><ul><li class="navListItem"><a class="navItem" href="/racket/docs/intro.html">A Journey</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/sequence.html">Sequences</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/alphabet.html">Alphabet</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/atom.html">Atom</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/list.html">List</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/function-intro.html">Using Functions</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/arithmetic.html">More Arithmetic</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/racket/docs/define.html">define</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/lambda.html">lambda</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/conditionals.html">conditionals</a></li><li class="navListItem"><a class="navItem" href="/racket/docs/values.html">Values</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="define"></a><a href="#define" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>define</code></h1>
+<blockquote>
+<p>Reading time: 15-20 minutes.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="saving-information-behind-a-name"></a><a href="#saving-information-behind-a-name" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Saving information behind a name</h2>
+<p>When your computer saves information, whether in RAM or in the hard drive, it
+saves it at a location with an address that isn't human-friendly. You might wish
+to save a number to remember later, but you wouldn't want to individually look
+to memory location <code>0x9FFF0</code> (which is a way of saying 633,359, and some people
+do use this notation to access memory) just to look at the first item. That's
+very exhausting.</p>
+<p>Instead we can save the information behind a human-friendly name, known as a
+<em>variable</em>, and the act of saving information behind a variable is called
+<em>variable assignment</em>.</p>
+<p>It's important to note that a variable doesn't have to refer to any single
+number or value. It refers to a <em>place</em> where you can put values.</p>
+<p>Let's look at some examples below:</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> a <span class="hljs-number">5</span>)
+(<span class="hljs-name">define</span> b <span class="hljs-number">10</span>)
+(<span class="hljs-name">define</span> c <span class="hljs-number">15</span>)
+
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b)    <span class="hljs-comment">;; →  15</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> b a)    <span class="hljs-comment">;; →  15</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> a b)    <span class="hljs-comment">;; →  -5</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> b a)    <span class="hljs-comment">;; →   5</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b c)  <span class="hljs-comment">;; →  30</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> c a b)  <span class="hljs-comment">;; →  30</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> a b c)  <span class="hljs-comment">;; → -20</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> b a c)  <span class="hljs-comment">;; → -10</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> c a b)  <span class="hljs-comment">;; →   0</span>
+</code></pre>
+<p>Of course you can also use longer names too, and sometimes a longer name is
+better at communicating what you want to say to another human. It's sometimes
+forgotten that computer languages are for people to read too, so you want to
+practice writing kindly for others.</p>
+<h3><a class="anchor" aria-hidden="true" id="kind-variable-names"></a><a href="#kind-variable-names" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kind variable names</h3>
+<p>Below you can see two identical examples of calculating how much you owe due to
+taxes. To the computer they are the same, but to a human, the first example
+looks like you're multiplying random numbers together. If you didn't have extra
+explanation, would you guess why someone is multiplying <code>a</code> and <code>b</code>?</p>
+<pre><code class="hljs css clojure"><span class="hljs-comment">;; Example #1</span>
+(<span class="hljs-name">define</span> a <span class="hljs-number">1.0725</span>)
+(<span class="hljs-name">define</span> b <span class="hljs-number">4.99</span>)
+(<span class="hljs-name">define</span> total (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> a b))
+
+<span class="hljs-comment">;; Example #2</span>
+(<span class="hljs-name">define</span> sales-tax <span class="hljs-number">1.0725</span>)
+(<span class="hljs-name">define</span> price <span class="hljs-number">4.99</span>)
+(<span class="hljs-name">define</span> total (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> sales-tax price))
+</code></pre>
+<p>Now that we've learned a little about how to save information, there's actually
+another power of <code>define</code> that I haven't told you about yet, and that's the
+power to define a function, which we'll read about next.</p>
+<h2><a class="anchor" aria-hidden="true" id="functions"></a><a href="#functions" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h2>
+<p>In the two examples below I have defined two very similar functions, <code>before</code>
+and <code>after</code>. Let's look at just the first list:</p>
+<ul>
+<li>the first list has three items inside: <code>define</code>, <code>(before n)</code>, and <code>(sub1 n)</code>.</li>
+<li><code>define</code> is a keyword that lets you define a function</li>
+<li><code>(before n)</code> is the head of the function; <code>before</code> is the name of the
+function, and <code>n</code> is the name of the input</li>
+<li><code>(sub1 n)</code> is the body of the function; whatever this evaluates to is the
+final value of the function</li>
+</ul>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">before</span> n) (<span class="hljs-name">sub1</span> n))
+(<span class="hljs-name">define</span> (<span class="hljs-name">after</span> n) (<span class="hljs-name">add1</span> n))
+
+(<span class="hljs-name">after</span> <span class="hljs-number">3</span>)           <span class="hljs-comment">;; → 4</span>
+(<span class="hljs-name">after</span> (<span class="hljs-name">after</span> <span class="hljs-number">3</span>))   <span class="hljs-comment">;; → 5</span>
+(<span class="hljs-name">before</span> (<span class="hljs-name">after</span> <span class="hljs-number">3</span>))  <span class="hljs-comment">;; → 3</span>
+</code></pre>
+<p>These are examples we've seen before, but they all involve functions that can
+only take one input. But you know there are useful functions that take more, for
+example, the volume of a rectangular prism can be found with <code>length</code>, <code>width</code>,
+and <code>height</code>. One might say that a function that tells you the volume of a
+rectangular prism requires exactly three inputs, no more and no less.</p>
+<p>I'm going to use the same rules from above for defining a function, but instead
+this time I'm going to adapt the rule to work with 3 inputs or <em>parameters</em>, and
+I'm going to use extra long names for everything just for show.</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> length width height) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> length width height))
+</code></pre>
+<p>Now let's use the function:</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)  <span class="hljs-comment">;; → 60</span>
+(<span class="hljs-name">prism-volume</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">5</span>)  <span class="hljs-comment">;; → 10</span>
+(<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span>)  <span class="hljs-comment">;; → 27</span>
+(<span class="hljs-name">prism-volume</span> <span class="hljs-number">5</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> <span class="hljs-number">1</span> <span class="hljs-number">4</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>))  <span class="hljs-comment">;; → 125</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="trying-out-what-you-know"></a><a href="#trying-out-what-you-know" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trying out what you know</h2>
+<ul>
+<li><p>Define a function that can generate the sequence: <code>5, 3, 1, -1, -3, -5...</code>.</p></li>
+<li><p>Define a function that can generate the sequence: <code>0, 1, 8, 27, 64, 128...</code>.</p></li>
+<li><p>Define a function called <code>triangle-area</code> which tells me the area of a triangle
+if you know <code>base</code> and <code>height</code>. This function will have two <em>parameters</em> (or
+inputs) that the function can take.</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="arithmetic.html">← arithmetic</a><a class="docs-next button" href="lambda.html">lambda →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#saving-information-behind-a-name">Saving information behind a name</a><ul class="toc-headings"><li><a href="#kind-variable-names">Kind variable names</a></li></ul></li><li><a href="#functions">Functions</a></li><li><a href="#trying-out-what-you-know">Trying out what you know</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/racket/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
