@@ -1,6 +1,6 @@
 ---
 id: list
-sidebar_label: list
+sidebar_label: List
 hide_title: true
 ---
 

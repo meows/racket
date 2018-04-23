@@ -7,8 +7,8 @@ hide_title: true
 ##   Sequences
 
 A sequence means a "line" of separate things positioned one after another, which 
-you can count using the counting numbers (0, 1, 2, 3, 4...). So of course, the 
-counting numbers themselves form a sequence:
+you can count using the natural numbers (0, 1, 2, 3, 4...). So of course, the 
+natural numbers themselves form a sequence:
 
 `0` → `1` → `2` → `...` → `8` → `9` → `10`
 
@@ -61,5 +61,6 @@ Even a list of words surrounded by parenthesis:
 | 6             | parenthesis
 
 > Note that by coincidence we start counting from 0 here. Sometimes it's easier 
-> to count from 0, and sometimes it's easier to count from 1, but 
-> mathematicians, physicists, and engineers typically count from 0.
+> to count from 0, and sometimes it's easier to count from 1, although the
+> physical sciences and engineering tend to count from 0. I would advise you to
+> choose whichever makes your current problem easier.

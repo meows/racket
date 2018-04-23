@@ -8,12 +8,11 @@ sidebar_label: Using Functions
 ## Using Functions
 
 In Racket, everything consists of lists of symbols, and the first symbol is
-assumed by default to be a function, even if it's a single-item list. (It's
-possible to have lists with only data inside without Racket thinking there are
-any functions, but we'll talk more on that later.)
+assumed by default to be a function, even if it's a single-item list.
 
 Here are some examples of *applying* or using a function, with functions you're 
-probably already familiar with. See if you can understand what they do.
+probably already familiar with. See if you can understand what they do. Notice
+that the first [atom](atom.md) inside a list is assumed to be a function.
 
 ``` clojure
 ;; Addition

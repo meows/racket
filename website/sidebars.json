@@ -3,12 +3,14 @@
       "Language Guide": [
          "intro",
          "sequence",
+         "alphabet",
          "atom",
-         "arithmetic",
          "list",
+         "arithmetic",
+         "define",
          "function-intro",
          "conditionals",
-         "define"
+         "values"
       ]
    }
 }

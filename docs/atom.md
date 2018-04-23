@@ -1,29 +1,37 @@
 ---
 id: atom
-sidebar_label: atom
+sidebar_label: Atom
 hide_title: true
 ---
 
 # Atom
 
-An atom means a *sequence* of any symbols from your alphabet (some people call
-this a "string", but we will save that word for later). In a sense they are like
-words. For example, let's say that our alphabet only allows the letters `a...z`. 
-Here are some example atoms using our rule:
-
-  * `a`
-  * `b`
-  * `c`
-  * `dog`
-  * `eagle`
-  * `zzzfrancezzz`
+An atom means a [sequence](sequence.md) of any symbols from your [alphabet](alphabet.md). 
+In a sense atoms are like *potential* words, or words that we're allowed to make
+up using our alphabet. For example, let's say that our alphabet only allows the 
+letters `a...z`. Here are some example atoms using our rule:
+ * `a`
+ * `b`
+ * `c`
+ * `dog`
+ * `eagle`
+ * `zzzfrancezzz`
 
 Or, if we are allowed to use other symbols like `$ # @ $ © = -`, we might create
 atoms like:
+ * `===-===`
+ * `#el@lo$`
+ * `©@$#`
 
-  * `===-===`
-  * `#el@lo$`
-  * `©@$#`
+However, as a special rule, I need to make a few complicating exceptions:
 
-However, as a special rule, parenthesis like `( )` can't be freely used *yet*. 
-That's because we use this as a special symbol to create lists.
+ * Brackets and parenthesis like `( )` can't be freely used *yet*, because we 
+   use this as a special symbol to create lists.
+ * `"` is used to create strings, like `"hello there"`
+ * `#` is special and I'll talk about later.
+ * `'` is special and I'll talk about later.
+ * There will a be a few more exceptions I'll make to you later down the line.
+
+Other than that, feel free to make up new names, words, or *atoms*, as you
+please. `is-this-a-prime-number?` is a valid name in Racket if you want to use 
+that, although that's probably a little long.

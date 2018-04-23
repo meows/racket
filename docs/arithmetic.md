@@ -1,6 +1,6 @@
 ---
 id: arithmetic
-sidebar_label: arithmetic
+sidebar_label: More Arithmetic
 hide_title: true
 ---
 

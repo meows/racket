@@ -1,6 +1,6 @@
 ---
 id: intro
-sidebar_label: intro
+sidebar_label: A Journey
 hide_title: true
 ---
 

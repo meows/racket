@@ -8,22 +8,14 @@ hide_title: true
 ## Values
 
 Just about all programming languages allow you to take information in some way, 
-save it, find it again, and perhaps later change it in some useful way. If
-computers were only allowed to save information, that would merely make them
-excellent alternatives to paper.
+save it, find it again, and perhaps later change it in some useful way. Any bit
+of information that you're allowed to write down is called a value. `23` is a
+value which happens to be a number. `"Meow Mix is too delicious."` is a value
+which happens to be a *string*.
 
-But first, let's talk about information. Information means anything you know to
-be true about the world. Unfortunately, the information in your head stays
-locked up until you can find a way to get it out, either by telling somebody, or
-by writing it down.
+### Booleans
 
-When you write things down in English, you might scribble a bunch of things that
-look like:
+### Numbers
 
-> Man tror att algebra och datorer är djupt anslutna.
-
-Oh oops, that's Swedish. Even if you don't know all the words in English, you
-can still spot that at least one of the letters aren't normal: `ä`. Just like
-English has acceptable letters you're allowed to use to make up new words, so to
-do programming languages have acceptable symbols you're allowed to use.
+### Strings
 

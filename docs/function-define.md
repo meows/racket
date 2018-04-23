@@ -112,8 +112,6 @@ Now let's use the function:
 
 ## Trying out what you know
 
-> Exercise time: 15 minutes
-
 * Define a function called `triangle-area` which tells me the area of a triangle
   if you know `base` and `height`.
-* 
+
