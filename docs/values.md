@@ -19,14 +19,16 @@ number you want with the limitation that your computer can run out of memory.
 Therefore, you can't really store all the digits of pi on your computer even 
 though pi is also a real number.
 
-Another thing to note is that sometimes Racket prefers to give you answers in
-the form of a fraction. Well, fractions are also real numbers too, so you can
-ask Racket to give you answers in decimal form if you prefer.
+If you're in DrRacket, you might notice that sometimes you get numbers back in
+the form of fractions. If you prefer, you can right-click the number and choose
+a different repesentation, such as reduced fraction, mixed fraction, or decimal.
 
 ## Strings
 
 A string is a sequence of any valid symbols in your language, but surrounded by
-a pair of quotation marks, like `"hello .==.-. there"`.
+a pair of quotation marks, like `"hello .==.-. there"`. One common use of
+strings is to store English-like information, or information written in our
+natural language.
 
 ## Booleans
 

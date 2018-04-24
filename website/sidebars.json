@@ -7,7 +7,7 @@
          "atom",
          "expression",
          "function-intro",
-         "arithmetic",
+         "comparisons",
          "define",
          "lambda",
          "conditionals",
