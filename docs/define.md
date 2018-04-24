@@ -117,9 +117,7 @@ Now let's use the function:
 ## Trying out what you know
 
 * Define a function that can generate the sequence: `5, 3, 1, -1, -3, -5...`.
-
 * Define a function that can generate the sequence: `0, 1, 8, 27, 64, 128...`.
-
 * Define a function called `triangle-area` which tells me the area of a triangle
   if you know `base` and `height`. This function will have two _parameters_ (or
   inputs) that the function can take.

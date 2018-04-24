@@ -32,5 +32,12 @@ natural language.
 
 ## Booleans
 
-A boolean is value that can only be either `true` or `false`. As a shorthand or
-alternative way, Racket also allows you to write `#t` and `#f`.
+A boolean is value that can only be either `true` or `false`. Racket also allows
+you to write it as `#t` or `#f`.
+
+``` clojure
+(= #t true)   ;; → true
+(= #f false)  ;; → true
+(= #t false)  ;; → false
+(= #f true)   ;; → false
+```

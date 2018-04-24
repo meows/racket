@@ -38,3 +38,5 @@ If you're feeling that this is lacking in a strong reason in science or nature
 point people have to agree on an alphabet in order to communicate easily, or 
 else we'd be disagreeing on the *small* things, such as what words to use, 
 instead of talking about the *big* things, like interesting ideas.
+
+After all, a good idea is good whether it's in English or German.
