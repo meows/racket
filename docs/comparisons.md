@@ -1,19 +1,20 @@
 ---
 id: comparisons
-sidebar_label: comparisons
+sidebar_label: Comparisons
 hide_title: true
 ---
 
-# Number Comparisons
+# Comparing Numbers
 
 Below are some comparison functions that you may have encountered before in 
 math. All comparison functions listed here always take two or more inputs and 
-returns one output: either `true` or `false`.
+returns one output: either `true` or `false`. Make sure you've read the section
+on [values and types](values.md) before proceeding.
 
 Most or all of the comparison functions below will look very similar to things
 you've encountered in math before.
 
-#### `=` Equal
+## `=` Equal
 
 The equals operator `=` takes two (or more) numbers, sees if they are equal, and 
 returns either `true` or `false`.
@@ -43,7 +44,7 @@ Here are some examples with many inputs:
 (= false #false #f) ;; → true
 ```
 
-#### `<` Lesser-than
+## `<` Lesser-than
 
 The less-than operator `<` takes two numbers, sees if the *first* number is 
 smaller than the *second* one, and then returns `true` or `false`.
@@ -56,7 +57,7 @@ smaller than the *second* one, and then returns `true` or `false`.
 (< 30 15)  ;; → false
 ```
 
-#### `<=` Lesser-than or equal to
+## `<=` Lesser-than or equal to
 
 The lesser-than or equal-to operator `<=` takes two numbers, sees if the *first*
 number is smaller-than **or** equal to the *second* one, and then returns `true` 
@@ -69,7 +70,7 @@ or `false`.
 (<= 10 10)  ;; → true
 ```
 
-#### `>=` Greater-than or equal to
+## `>=` Greater-than or equal to
 
 ``` clojure
 (>= 1 10)   ;; → false

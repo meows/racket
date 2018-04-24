@@ -7,11 +7,11 @@
          "atom",
          "expression",
          "function-intro",
-         "comparisons",
          "define",
          "lambda",
-         "conditionals",
-         "values"
+         "values",
+         "comparisons",
+         "conditionals"
       ]
    }
 }

@@ -1,6 +1,6 @@
 ---
 id: conditionals
-sidebar_label: conditionals
+sidebar_label: Conditionals
 hide_title: true
 ---
 

@@ -4,7 +4,7 @@ sidebar_label: lambda
 hide_title: true
 ---
 
-# Lambda
+# `lambda`
 
 There's actually another way to define a function in Racket, and it's called
 `lambda`. Lambda is the 11th letter in the Greek alphabet (mathematicians and 
