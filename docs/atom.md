@@ -7,9 +7,10 @@ hide_title: true
 # Atom
 
 An atom means a [sequence](sequence.md) of any symbols from your [alphabet](alphabet.md). 
-In a sense atoms are like *potential* words, or words that we're allowed to make
-up using our alphabet. For example, let's say that our alphabet only allows the 
-letters `a...z`. Here are some example atoms using our rule:
+In a sense atoms are like words, or words that we're allowed to make up using 
+our alphabet. For example, let's say that our alphabet only allows the letters 
+`a...z`. Here are some example atoms using our rule:
+
  * `a`
  * `b`
  * `c`

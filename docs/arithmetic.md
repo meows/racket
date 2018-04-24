@@ -111,6 +111,7 @@ number is the *divisor*.
 (modulo 81 3)  ;; → 0
 (modulo 82 3)  ;; → 1
 ```
+
 Some people use the `modulo` function to find whether a number is even by seeing 
 if `(modulo x 2)` is zero, in other words, whether dividing a number by 2 leaves 
 any remainder.

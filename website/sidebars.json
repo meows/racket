@@ -5,7 +5,7 @@
          "sequence",
          "alphabet",
          "atom",
-         "list",
+         "expression",
          "function-intro",
          "arithmetic",
          "define",
