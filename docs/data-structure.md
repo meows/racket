@@ -28,11 +28,8 @@ how might you do so? Would you store every single name in a variable?
 
 As you can see, this gets exhausting pretty quickly, because what if you wanted
 to store over 1000 items? As it happens, Racket has a way for you to store any
-amount of information you want in a sequence (familiar limitation that your
-computer has to have enuogh memory).
-
-You can also access any item in the list based on its sequence number, more
-commonly known as its *index*, starting from 0.
+amount of information you want in a sequence (with the familiar limitation that
+your computer has to have enough memory).
 
 ## Lists
 
