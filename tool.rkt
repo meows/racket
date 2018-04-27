@@ -90,10 +90,9 @@
 
 (fn sum (curry apply +))
 
-;; cosine in degrees
-(fn cos-deg (compose cos degrees->radians))
-;; sine in degrees
-(fn sin-deg (compose sin degrees->radians))
+(fn tan-deg (compose tan degrees->radians)) ;; tangent in degrees
+(fn cos-deg (compose cos degrees->radians)) ;; cosine in degrees
+(fn sin-deg (compose sin degrees->radians)) ;; sine in degrees
 
 ;; -----------------------------------------------
 ;; Numerical Series
