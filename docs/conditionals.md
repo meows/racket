@@ -32,20 +32,32 @@ hide_title: true
 
 ## `cond`
 
-``` clojure
-(define x 123.45)
-(define (sign num)
-        (cond (((compose not number?) num) "Error, sign requires a real number.")
-              ((negative? num) "Negative")
-              ((positive? num) "Positive")
-              (else 0)))   ;; this else statement is optional
+`cond` is a function which takes zero or more length-2 expressions. Each 
+length-2 expression has: 
+   1. a boolean expression as the first item
+   2. a second expression return conditional true
 
-(sign -23)
+``` clojure
+(define (sign num)
+        ;; notice every expression inside cond has two things:
+        ;; 1. the first is a boolean expression
+        ;; 2. the second is an expression that would be used as the result for
+        ;;    for this cond function if the boolean expression were true
+        (cond (((compose not number?) num) "error")
+              ((negative? num) "negative")
+              ((positive? num) "positive")
+              (else "zero")))                 ;; this else statement is optional
+
+(sign 0)   ;; → "zero"
+(sign -0)  ;; → "zero"
+(sign 1)   ;; → "positive"
+(sign -1)  ;; → "negative"
+(sign #t)  ;; → "error"
 ```
 
 ## `and`
 
-`and` takes a list of 0 or more boolean expressions and evaluates to `false` iff
+`and` takes a list of 0 or more boolean expressions and evaluates to `false` _iff_
 a single expression evaluates as false.
 
 ``` clojure
@@ -58,7 +70,7 @@ a single expression evaluates as false.
 
 ## `or`
 
-`or` takes a list of 0 or more boolean expressions and evaluates to `true` iff
+`or` takes a list of 0 or more boolean expressions and evaluates to `true` _iff_
 a single expression evaluates as true.
 
 ``` clojure
