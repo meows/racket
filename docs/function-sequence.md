@@ -1,34 +1,16 @@
-# Working with Sequences
+---
+id: function-sequence
+sidebar_label: Over Lists
+hide_title: true
+---
 
-## Map
+# Functions over Lists and Sequences
 
-`map` is a function that consumes a list and returns a list the same size.
+## `range`
 
-``` clojure
-(map function list)
-(map square (range 10))  ;; → '(0 1 4 9 16 25 36 49 64 81)
-(map add1   (range 10))  ;; → '(1 2 3 4 5 6 7 8 9 10)
-(map sub1   (range 10))  ;; → '(-1 0 1 2 3 4 5 6 7 8)
-```
+`range` is a function which returns a list of integers.
 
-## Filter
-
-`filter` is a function that consumes a list and returns a list of equal or smaller size.
-
-``` clojure
-(define (over3? n) (< 3 n))
-
-(filter function list)
-(filter even?      (range 11))  ;; → '(0 2 4 6 8 10)
-(filter odd?       (range 11))  ;; → '(1 3 5 7 9)
-(filter over3?     (range 11))  ;; → '(4 5 6 7 8 9 10)
-(filter prime?     (range 11))  ;; → '(2 3 5 7)
-(filter composite? (range 11))  ;; → '(2 4 6 8 9 10)
-```
-
-## Range
-
-`(range start end skip)` is a function which returns a list of integers.
+`(range start end skip)`
 
 ``` clojure
 ;; range with only 1 argument
@@ -51,4 +33,48 @@
 ;; range with 3 arguments: (1) start, (2) stop, (3) skip
 (range 0 10 2)  ;; → '(0, 2, 4, 6, 8)
 (range -5 5 2)  ;; → '(-5, -3, -1, 1, 3)
+```
+
+## `map`
+
+`map` is a function that consumes a list and returns a list the same size.
+
+``` clojure
+(map function list)
+(map square (range 10))  ;; → '(0 1 4 9 16 25 36 49 64 81)
+(map add1   (range 10))  ;; → '(1 2 3 4 5 6 7 8 9 10)
+(map sub1   (range 10))  ;; → '(-1 0 1 2 3 4 5 6 7 8)
+```
+
+## `filter`
+
+`filter` is a function that consumes a list and returns a list of equal or smaller size.
+
+``` clojure
+(define (over3? n) (< 3 n))
+
+(filter function list)
+(filter even?      (range 11))  ;; → '(0 2 4 6 8 10)
+(filter odd?       (range 11))  ;; → '(1 3 5 7 9)
+(filter over3?     (range 11))  ;; → '(4 5 6 7 8 9 10)
+(filter prime?     (range 11))  ;; → '(2 3 5 7)
+(filter composite? (range 11))  ;; → '(2 4 6 8 9 10)
+```
+
+## `foldl`
+
+`foldl` takes a function, an intial value, and a list.
+
+``` clojure
+(define initial-value 0)
+(define list-to-fold (range 1 6))
+(define (diff p0 p1) (- p1 p0))
+
+;; Example #1
+(foldl +    initial-value list-to-fold) ;; → 15
+(foldl diff initial-value list-to-fold) ;; → -15
+
+;; Example #2
+(foldl (λ (n state) (+ state n)) 0 '(1 2 3 4 5)) ;; → 15
+(foldl (λ (n state) (- state n)) 0 '(1 2 3 4 5)) ;; → -15
 ```

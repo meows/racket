@@ -11,7 +11,9 @@
          "lambda",
          "values",
          "comparisons",
-         "conditionals"
+         "conditionals",
+         "data-structures",
+         "function-sequence"
       ]
    }
 }

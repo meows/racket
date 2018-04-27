@@ -6,19 +6,14 @@ hide_title: true
 
 ##   Expression
 
-An expression means either a list or an [atom](atom.md). But what's a list?
-
-##  List
-
-A list is a sequence of zero or more expressions which are (1) separated by 
-spaces and (2) completely surrounded by parenthesis, like below:
+An expression means either an atom, or a sequence of one or more expressions.
 
   * `(we are all atoms surrounded by parenthesis and separated by spaces)`
   * `(+ 1 2 3 4 5)`
   * `(we are a list () even though () there are lists () inside of us)`
   * `(square 3)`
 
-Is this a list?
+Is this an expression?
 
 ``` clojure
 )()(           ;; no  - it's not fully contained by parenthesis

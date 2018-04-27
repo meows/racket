@@ -34,7 +34,7 @@ learned before:
 (div10 20)   ;; → 2
 ```
 
-In fact, this is just a convenient shortcut for writing the top `lambda` 
+In fact, this is just a convenient shortcut for writing the top `lambda`
 example, and to Racket the two examples do exactly the same thing.
 
 Just to get used to how `lambda` works, here's a familiar example with multiple
@@ -44,4 +44,18 @@ parameters:
 (define prism-volume 
         (lambda (length width height) 
                 (* length width height))
+
+(prism-volume 3 5 8)  ;; → 120
 ```
+
+Which would be complete identical to the familiar way of doing it:
+
+``` clojure
+(define (prism-volume length width height) (* length width height))
+(prism-volume 3 5 8)  ;; → 120
+```
+
+### Advanced reference
+* [Racket Documentation][1]
+
+[1]: https://docs.racket-lang.org/guide/lambda.html
