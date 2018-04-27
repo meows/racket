@@ -6,7 +6,8 @@ hide_title: true
 
 ##   Expression
 
-An expression means either an atom, or a sequence of one or more expressions.
+An expression means either (1) an atom, or (2) a list of one or more expressions,
+separated by spaces and surrounded by parenthesis.
 
   * `(we are all atoms surrounded by parenthesis and separated by spaces)`
   * `(+ 1 2 3 4 5)`
@@ -16,10 +17,12 @@ An expression means either an atom, or a sequence of one or more expressions.
 Is this an expression?
 
 ``` clojure
-)()(           ;; no  - it's not fully contained by parenthesis
-())            ;; no  - it's not fully contained by parenthesis
-()             ;; yes - this is called an empty list
-(() a () b ()) ;; yes - this is a list of 5 items, some of which are also lists
+)()(          ;; no  - it's not fully contained by parenthesis
+())           ;; no  - it's not fully contained by parenthesis
+()            ;; yes - this is called an empty list
+(+ a () b ()) ;; yes - this is a list of 5 items, some of which are also lists
+123           ;; yes - atoms count as expressions
+true          ;; yes - atoms count as expressions
 ```
 
 ###  Lists have Length

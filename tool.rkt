@@ -4,7 +4,8 @@
 (require (rename-in racket/base [define def]))
 (require math/number-theory)
 (require threading)
-(require srfi/26)
+(require (only-in srfi/26 cut))
+(require (only-in srfi/1 unfold-right))
 (require plot)
 
 ;; -----------------------------------------------------------------------------
@@ -51,6 +52,12 @@
                         (loop quo #:result (cons rem result)))))
     (if (zero? n) '(0) (loop n)))
 
+(fn (nat->digits num [base 10])
+    (unfold-right zero?
+                  (cut remainder <> base)
+                  (cut quotient <> base)
+                  num ))
+
 ; list <integer> → list <integer>
 (fn (diff ints)
     (map -
@@ -75,13 +82,18 @@
 (fn (m m)        (λ (x) (* m x)))
 
 ; function → list <any> (outputs)
-(fn (table fn/1 #:min [min 0] #:max [max 21]) 
+(fn (table fn/1 #:min [min 0] #:max [max 21])
     (map fn/1 (range min max)))
 
 (fn all andmap)
 (fn any ormap)
 
 (fn sum (curry apply +))
+
+;; cosine in degrees
+(fn cos-deg (compose cos degrees->radians))
+;; sine in degrees
+(fn sin-deg (compose sin degrees->radians))
 
 ;; -----------------------------------------------
 ;; Numerical Series
@@ -118,7 +130,7 @@
 ; (a:real, b:real, c:real) -> f(x) -> ax^2 + bx + c
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
     (λ (x) (+ (* a x x)
-              (* b x) 
+              (* b x)
               c )))
 
 (fn (physics-quad a v [s 0]) (λ (x) (+ (* 0.5 a (square x))

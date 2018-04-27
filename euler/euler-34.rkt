@@ -4,7 +4,8 @@
 (require (rename-in racket/base [define def]))
 (require math/number-theory)
 (require threading)
-(require srfi/26)
+(require (only-in srfi/26 cut))
+(require (only-in srfi/1 unfold-right))
 
 ;; -----------------------------------------------------------------------------
 ;; Project Euler 34
@@ -15,20 +16,12 @@
 ;; their digits.
 
 ; natural → list <natural>
-(fn (N->list n #:base [base 10])
-    (fn (loop n #:result [result '()])
-        (if (zero? n)
-            result
-            (let-values ([(quo rem) (quotient/remainder n base)])
-                        (loop quo #:result (cons rem result)))))
-    (if (zero? n) '(0) (loop n)))
+(fn (N->list num [base 10])
+    (unfold-right zero?                   ;; stop conditional to run on every iteration
+                  (cut remainder <> base) ;; add to list of results on every iteration
+                  (cut quotient <> base)  ;; generate next seed value
+                  num ))                  ;; initial seed
 
-;;; (fn (digits->list num [base 10])
-;;;     (unfold-right zero? (cut remainder <> base) 
-;;;                         (cut quotient <> base) 
-;;;                         num))
-
-(define a 901231231401)
-(define b 204914019415)
-
-(time N->list a)
+(fn (digit-factorial nat)
+    ()
+)
