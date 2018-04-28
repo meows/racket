@@ -23,8 +23,8 @@
 ;; Boolean
 
 (fn unequal? (compose not equal?))
-(fn (natural? n) (positive-integer? n))
-(fn (one? n)     (= n 1))
+(fn (natural? n) (or (zero? n) (positive-integer? n))
+(fn (one? n) (= n 1))
 
 ;; ------------------------------------
 ;; Arithmetic
@@ -33,9 +33,9 @@
 (fn ++ add1)
 (fn square sqr)
 (fn (double n) (+ n n))
-(fn (half n)   (/ n 2))
-(fn (power p)  (cut expt <> p))
-(fn cube       (power 3))
+(fn (half n) (/ n 2))
+(fn (power p) (cut expt <> p))
+(fn cube (power 3))
 
 (fn mod10 (cut remainder <> 10))
 (fn div10 (cut quotient <> 10))
@@ -126,7 +126,7 @@
           #:y-max max
 ))
 
-; (a:real, b:real, c:real) -> f(x) -> ax^2 + bx + c
+; (a:real b:real c:real) -> f(x) -> ax^2 + bx + c
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
     (λ (x) (+ (* a x x)
               (* b x)

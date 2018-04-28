@@ -10,7 +10,6 @@ An atom means a [sequence](sequence.md) of any symbols from your [alphabet](alph
 In a sense atoms are like words, or words that we're allowed to make up using 
 our alphabet. For example, let's say that our alphabet only allows the letters 
 `a...z`. Here are some example atoms using our rule:
-
  * `a`
  * `b`
  * `c`
@@ -25,7 +24,6 @@ atoms like:
  * `©@$#`
 
 However, as a special rule, I need to make a few complicating exceptions:
-
  * Brackets and parenthesis like `( )` can't be freely used *yet*, because we 
    use this as a special symbol to create lists.
  * `"` is used to create strings, like `"hello there"`
