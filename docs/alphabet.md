@@ -36,7 +36,7 @@ If it's a symbol you're allowed to write down, then it's a part of our alphabet.
 If you're feeling that this is lacking in a strong reason in science or nature 
 -- it's true. Something is in our alphabet just because we say so. But at some 
 point people have to agree on an alphabet in order to communicate easily, or 
-else we'd be disagreeing on the *small* things, such as what words to use, 
-instead of talking about the *big* things, like interesting ideas.
+else we'd be disagreeing on the small things, such as what words to use, instead 
+of talking about the big things, like interesting ideas.
 
 After all, a good idea is good whether it's in English or German.

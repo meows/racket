@@ -24,18 +24,28 @@ itself, but rather what you can do with it.
   of human learning, or just thinking in general -- also known as artificial
   intelligence. Google recently held a competitive match in a board game called 
   Go, famous for the fact that despite its simplicity, humans could still beat
-  the best computers. 
-  
+  the best computers. Even though Go's rules are so simple, it's thought that
+  there are over 10 to the power of 300 possible games, which makes made it
+  unreasonable for even the best computers to solve or calculate through an 
+  entire game.
+
   Google's program, AlphaGo, was famous for the fact that it wasn't actually 
   taught any strategies, or even the rules of the game, instead learning all by 
   playing itself billions of times over. Last year in 2017, Google's team beat 
   the world's best player, Ke Jie.
 
+  This kind of technology no longer requires the world's best scientists. Some
+  people are using this technology in simple ways to see, for example, whether
+  lighter or darker backgrounds and colors make it easier for your eyes to read,
+  just by having people vote, and then learning to adjust slowly over time.
+  Imagine a website that learns from its visitors to slowly adjust itself over
+  time to become more readable!
+
 * Although the activity is considered controversial, it's also well known that
   much of the stocks (ways to buy parts of companies to make more money later) 
   being traded today are done automatically by computers, at dizzyingly inhuman 
-  speeds. Sometimes, companies write programs that battle other programs when
-  buying stocks.
+  speeds. Sometimes, companies write programs that battle other rival programs 
+  when buying stocks.
 
 * A mathematician normally does his or her work by absolute proofs, and not by
   experiments. When a mathematician says "proof", they mean something far more
@@ -49,6 +59,13 @@ itself, but rather what you can do with it.
 * Some mathematicians are also exploring the world of using computer languages
   to describe their mathematical theories so that the computer can prove ideas 
   for them! This is called Automated Theorem Proving.
+
+* One interesting aspect of programming is working with other people, some like
+  yourself who have started early, and some in high school, and some in
+  college, and many beyond. You get to trade ideas with smart people you've
+  never met, and you get to build things together that are new and powerful,
+  things that other people will want to use and build upon. There is a world of 
+  software where people build cities upon each other.
 
 This is just a very small piece of what people are accomplishing with math and
 computing together. People don't just do software. They combine it with things

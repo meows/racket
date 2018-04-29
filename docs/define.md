@@ -21,8 +21,9 @@ Instead we can save the information behind a human-friendly name, known as a
 _variable_, and the act of saving information behind a variable is called 
 _variable assignment_.
 
-It's important to note that a variable doesn't have to refer to any single
-number or value. It refers to a *place* where you can put values.
+It's important to note that a variable doesn't need to refer to any single
+number or value. It refers to a *place* where you can put things, such as 
+values.
 
 Let's look at some examples below:
 

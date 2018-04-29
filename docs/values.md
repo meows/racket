@@ -10,14 +10,15 @@ hide_title: true
 Just about all programming languages allow you to take information in some way, 
 save it, find it again, and perhaps later change it in some useful way. A piece
 of information that's actually saved on your computer can be called a _value_,
-and values can be grouped into different _types_.
+and values can be grouped into different _types_. Let's look at some examples of
+types:
 
 ## Numbers
 
-All numbers in Racket are real numbers, meaning they can be any kind of decimal
-number you want, with the limitation that your computer can run out of memory.
-Therefore, you can't really store all the digits of pi on your computer even 
-though pi is also a real number.
+All numbers in Racket are _real_ numbers, meaning they can be any kind of 
+decimal number you want, with the limitation that your computer can run out of 
+memory. Therefore, you can't really store all the digits of pi on your computer 
+even though pi is also a real number.
 
 Here are some examples of numbers:
 
