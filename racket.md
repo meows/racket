@@ -1,11 +1,11 @@
-# clojure Language (untyped)
+# Racket Language (untyped)
 
 ## Expressions and sub-expressions
 
-clojure consists of symbols surrounded by parenthesis. These parenthesis may
-contain a value, or if it's not a value, then it's either a (1) *redex*, or
-reducible expression, or (2) it's a *continuation*, which is the evaluation
-context surrounding an expression.
+A Racket expression consists of a sequence of symbols and sub-expressions
+separated by spaces and surrounded by parenthesis. This expression contains one
+or more atoms, or if it's not an atom, then it's a sub-expression.
+
 
 Observe the expression below:
 
