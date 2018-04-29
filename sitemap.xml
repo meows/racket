@@ -13,14 +13,15 @@
 <url> <loc>https://meows.github.io/docs/atom.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/atom.html" /> </url>
 <url> <loc>https://meows.github.io/docs/comparisons.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/comparisons.html" /> </url>
 <url> <loc>https://meows.github.io/docs/conditionals.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/conditionals.html" /> </url>
-<url> <loc>https://meows.github.io/docs/data-structures.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/data-structures.html" /> </url>
 <url> <loc>https://meows.github.io/docs/define.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/define.html" /> </url>
 <url> <loc>https://meows.github.io/docs/expression.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/expression.html" /> </url>
 <url> <loc>https://meows.github.io/docs/function-intro.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/function-intro.html" /> </url>
 <url> <loc>https://meows.github.io/docs/function-sequence.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/function-sequence.html" /> </url>
 <url> <loc>https://meows.github.io/docs/intro.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/intro.html" /> </url>
 <url> <loc>https://meows.github.io/docs/lambda.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/lambda.html" /> </url>
+<url> <loc>https://meows.github.io/docs/lists.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/lists.html" /> </url>
 <url> <loc>https://meows.github.io/docs/reversal.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/reversal.html" /> </url>
 <url> <loc>https://meows.github.io/docs/sequence.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/sequence.html" /> </url>
+<url> <loc>https://meows.github.io/docs/setup.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/setup.html" /> </url>
 <url> <loc>https://meows.github.io/docs/values.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/values.html" /> </url>
 </urlset>
