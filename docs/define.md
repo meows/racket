@@ -28,9 +28,9 @@ values.
 Let's look at some examples below:
 
 ``` clojure
-(define a 5)
-(define b 10)
-(define c 15)
+(define a 5)       ;; → 5
+(define b (+ a a)) ;; → 10
+(define c (+ a b)) ;; → 15
 
 (+ a b)    ;; →  15
 (+ b a)    ;; →  15

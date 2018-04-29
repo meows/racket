@@ -1,6 +1,6 @@
 ---
-id: list
-sidebar_label: `list`
+id: lists
+sidebar_label: Lists
 hide_title: true
 ---
 

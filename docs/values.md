@@ -29,11 +29,11 @@ Here are some examples of numbers:
 (define d "hi")
 (define e #t)
 
-(number? a)  ;; → true
-(number? b)  ;; → true
-(number? c)  ;; → true
-(number? d)  ;; → false -- this is a string.
-(number? e)  ;; → false -- this is a boolean.
+(number? a) ;; → true
+(number? b) ;; → true
+(number? c) ;; → true
+(number? d) ;; → false -- this is a string.
+(number? e) ;; → false -- this is a boolean.
 ```
 
 > If you're in DrRacket, you might notice that sometimes you get numbers back in
@@ -81,10 +81,10 @@ you to write it as `#t` or `#f`.
 (boolean? "true") ;; → false -- this is a string.
 (boolean? "#t")   ;; → false -- this is a string.
 
-(= #t true)   ;; → true
-(= #f false)  ;; → true
-(= #t false)  ;; → false
-(= #f true)   ;; → false
-(= #t "hi")   ;; → false
-(= #f "hi")   ;; → false
+(= #t true)  ;; → true
+(= #f false) ;; → true
+(= #t false) ;; → false
+(= #f true)  ;; → false
+(= #t "hi")  ;; → false
+(= #f "hi")  ;; → false
 ```
