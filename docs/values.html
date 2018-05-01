@@ -5,11 +5,52 @@
             nav.classList.toggle('docsSliderActive');
           };
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="values-and-types"></a><a href="#values-and-types" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Values and Types</h1>
+<blockquote>
+<p>Reading time: 10 to 15 minutes.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="grouping-values"></a><a href="#grouping-values" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Grouping values</h2>
 <p>Just about all programming languages allow you to take information in some way,
 save it, find it again, and perhaps later change it in some useful way. A piece
 of information that's actually saved on your computer can be called a <em>value</em>,
-and values can be grouped into different <em>types</em>. Let's look at some examples of
-types:</p>
+and different kinds of values can be grouped into different <em>types</em>.</p>
+<p>Let's look at some example values below:</p>
+<pre><code class="hljs css clojure">3.14
+355/113  ;; approximation of π accurate to 7 digits
+128
+256
+512
+"Alex"
+"Frank"
+"Lucy"
+"fish"
+"bird"
+"dog"
+</code></pre>
+<p>Even without knowing exactly what the above values are, we can see that some are
+different from the others, and that we can group alike things together if we
+wish:</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> numbers (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">3.14</span> <span class="hljs-number">355</span>/<span class="hljs-number">113</span> <span class="hljs-number">128</span> <span class="hljs-number">256</span> <span class="hljs-number">512</span>))
+(<span class="hljs-name">define</span> strings (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-string">"Alex"</span> <span class="hljs-string">"Frank"</span> <span class="hljs-string">"Lucy"</span> <span class="hljs-string">"fish"</span> <span class="hljs-string">"bird"</span> <span class="hljs-string">"dog"</span>))
+</code></pre>
+<p>We can even further divide things up if we wish:</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> rationals (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">3.14</span> <span class="hljs-number">335</span>/<span class="hljs-number">114</span>))
+(<span class="hljs-name">define</span> base2     (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">128</span> <span class="hljs-number">256</span> <span class="hljs-number">512</span>)
+(<span class="hljs-name">define</span> names     (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-string">"Alex"</span> <span class="hljs-string">"Frank"</span> <span class="hljs-string">"Lucy"</span>))
+(<span class="hljs-name">define</span> animals   (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-string">"fish"</span> <span class="hljs-string">"bird"</span> <span class="hljs-string">"dog"</span>))
+
+(<span class="hljs-name">define</span> numbers (<span class="hljs-name">append</span> rationals base2))
+(<span class="hljs-name">define</span> strings (<span class="hljs-name">append</span> names animals))
+</code></pre>
+<p>As you can see, a <em>type</em> is just a way of grouping a bunch of values together
+because we think we're similar. Some of the types will be part of the language
+we use, and some of the types we can create ourselves. After all, nothing can
+stop us from saying that we think <code>(list &quot;Alex&quot; &quot;Frank&quot; &quot;Lucy&quot;)</code> look like
+names, and <code>(list &quot;fish&quot; &quot;bird&quot; &quot;dog&quot;)</code> look like animals.</p>
+<p>Thinking about types becomes more useful later when we want to use the right
+function on the right type, as opposed to trying <code>(- fish dog)</code>, because as we
+all know, the dog will get very angry. Now that we know about values and how we
+organize or group them into types, let's read about some of the types that
+Racket has provided for us:</p>
 <h2><a class="anchor" aria-hidden="true" id="numbers"></a><a href="#numbers" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numbers</h2>
 <p>All numbers in Racket are <em>real</em> numbers, meaning they can be any kind of
 decimal number you want, with the limitation that your computer can run out of
@@ -73,4 +114,4 @@ you to write it as <code>#t</code> or <code>#f</code>.</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> #t <span class="hljs-string">"hi"</span>)  <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> #f <span class="hljs-string">"hi"</span>)  <span class="hljs-comment">;; → false</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="lambda.html">← lambda</a><a class="docs-next button" href="comparisons.html">comparisons →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#numbers">Numbers</a></li><li><a href="#strings">Strings</a></li><li><a href="#booleans">Booleans</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/racket/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="lambda.html">← lambda</a><a class="docs-next button" href="comparisons.html">comparisons →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#grouping-values">Grouping values</a></li><li><a href="#numbers">Numbers</a></li><li><a href="#strings">Strings</a></li><li><a href="#booleans">Booleans</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/racket/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
