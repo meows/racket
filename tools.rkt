@@ -7,6 +7,7 @@
 (require (only-in srfi/26 cut))
 (require (only-in srfi/1 unfold-right unfold))
 (require plot)
+(require data/collection)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Numerical
@@ -30,10 +31,10 @@
 
 (fn -- sub1)
 (fn ++ add1)
-(fn square sqr)
-(fn (double n) (+ n n))
 (fn (half n) (/ n 2))
+(fn (double n) (+ n n))
 (fn (power p) (cut expt <> p))
+(fn square sqr)
 (fn cube (power 3))
 
 (fn mod10 (cut remainder <> 10))
@@ -81,7 +82,7 @@
 (fn (m m)        (λ (x) (* m x)))
 
 ; function → list <any> (outputs)
-(fn (table fn/1 #:min [min 0] #:max [max 21])
+(fn (series fn/1 #:min [min 0] #:max [max 21])
     (map fn/1 (range min max)))
 
 (fn all andmap)
@@ -115,9 +116,10 @@
 ; graphs any function and compares it to f(x) = x
 ; also accepts optional input for visual grid background
 (fn (graph fn/1
-           #:grid? [grid? true] 
-           #:min [min -20] 
-           #:max [max 20] . fns)
+           #:grid? [grid? true]
+           #:min [min -20]
+           #:max [max 20]
+           . fns)
     (def plot-input
          (list* (axes)
                 (if grid? (tick-grid) empty)
