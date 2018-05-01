@@ -7,7 +7,6 @@
 (require (only-in srfi/26 cut))
 (require (only-in srfi/1 unfold-right unfold))
 (require plot)
-(require data/collection)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Numerical
@@ -72,6 +71,8 @@
             (loop (diff lst) #:count (++ c) #:history (append h (list lst)))))
     (loop nats))
 
+(fn nth sequence-ref)
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Functions
 
@@ -135,23 +136,23 @@
           #:height 600))
 
 ; quadratic :: (a b c) → ((x) → ax^2 + bx + c)
-(fn (quadratic #:a [a 1] 
-               #:b [b 0] 
+(fn (quadratic #:a [a 1]
+               #:b [b 0]
                #:c [c 0])
-    (λ (x) (+ (* a x x) 
-              (* b x) 
+    (λ (x) (+ (* a x x)
+              (* b x)
               c)))
 
-(fn (cubic #:a [a 1] 
-           #:b [b 0] 
-           #:c [c 0] 
+(fn (cubic #:a [a 1]
+           #:b [b 0]
+           #:c [c 0]
            #:d [d 0])
     (λ (x) (+ (* a x x x)
               (* b x x)
               (* c x)
               d )))
 
-(fn (physics-quad a v [p 0]) 
+(fn (physics-quad a v [p 0])
     (λ (t) (+ (* 1/2 a t t)
               (* v t)
               p )))
