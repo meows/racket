@@ -114,16 +114,22 @@
 
 ; graphs any function and compares it to f(x) = x
 ; also accepts optional input for visual grid background
-(fn (graph fn/1 #:grid? [grid? false] #:min [min -20] #:max [max 20])
-    (plot (list (axes)
-                (if grid? (tick-grid) null)
+(fn (graph fn/1
+           #:grid? [grid? false] 
+           #:min [min -20] 
+           #:max [max 20]
+           . fns)
+    (def plot-input (list (axes)
+                (if grid? (tick-grid) empty)
                 (function fn/1)
-                (function identity #:style 'dot #:width 1.5 #:color 'gray))
+                (function identity #:style 'dot #:width 1.5 #:color 'gray)
+                (if (empty? fns) empty (function fns))))
+    (plot plot-input
           #:x-min min
           #:x-max max
           #:y-min min
-          #:y-max max
-))
+          #:y-max max)
+)
 
 ; (a:real b:real c:real) → f(x) → ax^2 + bx + c
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
@@ -131,12 +137,14 @@
               (* b x)
               c )))
 
-(fn (physics-quad a v [s 0]) (λ (x) (+ (* 0.5 a x x)
-                                       (* v x)
-                                       s )))
-
 (fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
     (λ (x) (+ (* a x x x)
               (* b x x)
               (* c x)
               d )))
+
+(fn (physics-quad a v [s 0]) 
+    (λ (x) (+ (* 1/2 a x x)
+              (* v x)
+              s )))
+

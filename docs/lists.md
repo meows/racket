@@ -31,6 +31,16 @@ to store over 1000 items? As it happens, Racket has a way for you to store any
 amount of information you want in a sequence (with the familiar limitation that
 your computer has to have enough memory).
 
+## A little warning:
+
+Previously in Racket, whenever you had a sequence of things in parentheses,
+which we called [*expressions*](expression.md), Racket would assume that the 
+first atom is a function and that the rest of the items were inputs. Like this:
+
+``` clojure
+(* 10 10 10 0)
+```
+
 ## Lists
 
 A list is a way for you to store zero to `n` things as a sequence, which you can

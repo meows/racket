@@ -14,7 +14,7 @@
 (fn (four-distinct-factors? n) 
     (~> n factorize length (equal? 4)))
 
-(fn (list-full? lst) (equal? (length lst) 4))
+(fn (list-full? lst) (equal? 4 (length lst)))
 
 (fn (euler)
     (fn (loop #:index [i 100] #:state [state empty])

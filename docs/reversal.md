@@ -37,13 +37,13 @@ How about undoing a function?
 ## Addition and Subtraction
 
 ``` clojure
-(define )
+(define (add11 x) (+ x 11))
+(define (add12 x) (+ x 12))
+(define (sub13 x) (+ x -13))
+(define (sub14 x) (- x 14))
 ```
 
 ## Multiplication and Division
-
-For each problem write a function called `undo` that reverses what each of these
-functions do.
 
 ``` clojure
 (define (λa x) (* 13 x))
