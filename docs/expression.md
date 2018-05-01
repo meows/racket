@@ -25,7 +25,7 @@ Is this an expression?
 true          ;; yes - atoms count as expressions
 ```
 
-###  Lists have Length
+###  Expressions have Length
 
 Because a list can be counted, that means we have an idea of where things are, 
 including the first or last thing, and it also means that lists have a length, 
@@ -39,10 +39,10 @@ which is a number telling us how many things are inside a list:
 (empty? ())                              ;; 2 things in this list
 ```
 
-###  Things to remember about lists:
+###  Things to remember about expressions:
 
-- a list is sequential meaning the things inside are lined up one after another
+- an expression can have zero or more expressions inside of it
+- a list is sequential, meaning the things inside are lined up one after another
 - a list can also be counted, so you know the number of things inside
-- a list can have zero or more expressions inside of it, called an empty or null list
 - the expressions inside a list are separated by spaces
 - the list with zero expressions is called an *empty list*

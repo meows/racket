@@ -6,7 +6,7 @@ hide_title: true
 
 # `define`
 
-> Reading time: 15-20 minutes.
+> Reading time: 15 to 20 minutes.
 
 ## Saving information behind a name
 

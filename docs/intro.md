@@ -25,9 +25,9 @@ itself, but rather what you can do with it.
   artificial intelligence. Google recently held a competitive match in a board
   game called Go, famous for the fact that despite its simplicity, humans could
   still beat the best computers. Even though Go's rules are so simple, it's
-  thought that there are over 10 to the power of 300 possible games, which makes
-  made it unreasonable for even the best computers to solve or calculate through
-  an entire game.
+  thought that there are over 10 to the power of 300 possible games, which made 
+  it unreasonable for even the best computers to solve or calculate through an 
+  entire game.
 
   Google's program, AlphaGo, was famous for the fact that it wasn't actually
   taught any strategies at all, or even the rules of the game, instead learning 

@@ -7,17 +7,69 @@ hide_title: true
 
 # Values and Types
 
-Just about all programming languages allow you to take information in some way, 
+> Reading time: 10 to 15 minutes.
+
+## Grouping values
+
+Just about all programming languages allow you to take information in some way,
 save it, find it again, and perhaps later change it in some useful way. A piece
 of information that's actually saved on your computer can be called a _value_,
-and values can be grouped into different _types_. Let's look at some examples of
-types:
+and different kinds of values can be grouped into different _types_.
+
+Let's look at some example values below:
+
+``` clojure
+3.14
+355/113  ;; approximation of π accurate to 7 digits
+128
+256
+512
+"Alex"
+"Frank"
+"Lucy"
+"fish"
+"bird"
+"dog"
+```
+
+Even without knowing exactly what the above values are, we can see that some are
+different from the others, and that we can group alike things together if we
+wish:
+
+``` clojure
+(define numbers (list 3.14 355/113 128 256 512))
+(define strings (list "Alex" "Frank" "Lucy" "fish" "bird" "dog"))
+```
+
+We can even further divide things up if we wish:
+
+``` clojure
+(define rationals (list 3.14 335/114))
+(define base2     (list 128 256 512)
+(define names     (list "Alex" "Frank" "Lucy"))
+(define animals   (list "fish" "bird" "dog"))
+
+(define numbers (append rationals base2))
+(define strings (append names animals))
+```
+
+As you can see, a _type_ is just a way of grouping a bunch of values together
+because we think we're similar. Some of the types will be part of the language
+we use, and some of the types we can create ourselves. After all, nothing can
+stop us from saying that we think `(list "Alex" "Frank" "Lucy")` look like 
+names, and `(list "fish" "bird" "dog")` look like animals.
+
+Thinking about types becomes more useful later when we want to use the right 
+function on the right type, as opposed to trying `(- fish dog)`, because as we 
+all know, the dog will get very angry. Now that we know about values and how we
+organize or group them into types, let's read about some of the types that 
+Racket has provided for us:
 
 ## Numbers
 
-All numbers in Racket are _real_ numbers, meaning they can be any kind of 
-decimal number you want, with the limitation that your computer can run out of 
-memory. Therefore, you can't really store all the digits of pi on your computer 
+All numbers in Racket are _real_ numbers, meaning they can be any kind of
+decimal number you want, with the limitation that your computer can run out of
+memory. Therefore, you can't really store all the digits of pi on your computer
 even though pi is also a real number.
 
 Here are some examples of numbers:
@@ -37,8 +89,8 @@ Here are some examples of numbers:
 ```
 
 > If you're in DrRacket, you might notice that sometimes you get numbers back in
-> the form of fractions. If you prefer, you can right-click the number and 
-> choose a different repesentation, such as reduced fraction, mixed fraction, or 
+> the form of fractions. If you prefer, you can right-click the number and
+> choose a different repesentation, such as reduced fraction, mixed fraction, or
 > decimal.
 
 ## Strings
