@@ -5,7 +5,7 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 
-;; -----------------------------------------------------------------------------
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
 ;; Problem 74
 
@@ -27,7 +27,7 @@
 ; next Digit Factorial Chain
 (fn (next-chain n) (apply + (map (curry vector-ref table-factorial) (N->list n))))
 
-;; -------------------------------------------------
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
 (fn (n->chain nat)

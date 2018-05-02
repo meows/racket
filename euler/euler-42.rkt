@@ -5,7 +5,7 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 
-;; -----------------------------------------------------------------------------
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
 ;; Problem 42
 
@@ -23,7 +23,7 @@
 (fn (word->letters word) (map string (string->list word)))
 (fn sum (curry apply +))
 
-;; ---------------------------------------------
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
 (fn (euler-42 words)

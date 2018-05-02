@@ -6,10 +6,11 @@
 (fn -- sub1)
 (fn (half x) (/ x 2))
 
-;; -----------------------------------------------------------------------------
-;; Project Euler 12
-;;
-;; What's the first triangle number with over 500 divisors?
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Project Euler
+;; Problem 12
+
+; What's the first triangle number with over 500 divisors?
 
 (fn (triangle n) (* 1/2 (+ n (sqr n))))
 

@@ -7,13 +7,14 @@
 (require (only-in srfi/26 cut))
 (require (only-in srfi/1 unfold-right))
 
-;; -----------------------------------------------------------------------------
-;; Project Euler 34
-;;
-;; 145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
-;;
-;; Find the sum of all numbers which are equal to the sum of the factorial of
-;; their digits.
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Project Euler
+;; Problem 34
+
+; 145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.
+;
+; Find the sum of all numbers which are equal to the sum of the factorial of
+; their digits.
 
 ; natural → list <natural>
 (fn (N->list num [base 10])

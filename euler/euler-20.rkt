@@ -2,10 +2,11 @@
 
 (require (rename-in racket/base [define fn]))
 
-;; -----------------------------------------------------------------------------
-;; Project Euler 20
-;;
-;; Find the sum of the digits in the number 100!
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Project Euler
+;; Problem 20
+
+; Find the sum of the digits in the number 100!
 
 (fn -- sub1)
 
@@ -22,7 +23,7 @@
                   (cut quotient <> base)
                   num ))
 
-;; -----------------------------------------------------------------------------
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solution
 
 (fn euler-20 (apply + (natural->list (factorial 100))))

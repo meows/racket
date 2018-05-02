@@ -4,7 +4,7 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 
-;; -----------------------------------------------------------------------------
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
 ;; Problem 11
 

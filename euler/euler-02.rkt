@@ -7,8 +7,10 @@
 (require (only-in srfi/26 cut))
 (require (only-in srfi/1 unfold-right))
 
-;; Project Euler #2
-;;
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Project Euler
+;; Problem 2
+
 ;; Find the sum of all even Fibonacci numbers under 4 million.
 
 ; a   - leading fib state tuple

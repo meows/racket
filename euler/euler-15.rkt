@@ -4,10 +4,12 @@
 (require (rename-in racket/math [sqr square]))
 (require math/number-theory)
 
-;; -----------------------------------------------------------------------------
-;; Project Euler 15
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Project Euler
+;; Problem 15
 
-;; Pathways through a 2-dimensional square grid from one corner to its opposite diagonal corner.
+; Pathways through a 2-dimensional square grid from one corner to its opposite 
+; diagonal corner.
 
 (fn (grid n)
     (/ (factorial (+ n n))
