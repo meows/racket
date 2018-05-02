@@ -17,21 +17,22 @@
                     [natural (range 1 27)])
                    (values (symbol->string letter) natural)))
 
-(fn (letter->natural letter) (hash-ref uid letter))
+(fn letters->naturals (curry map (curry hash-ref uid)))
 
-(fn letters->naturals (curry map letter->natural))
 (fn (word->letters word) (map string (string->list word)))
 (fn sum (curry apply +))
+(fn transform 
+    (λ~> string-downcase 
+         word->letters 
+         letters->naturals 
+         sum))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
+
 (fn (euler-42 words)
-    (~> words
-        (map string-downcase _ )
-        (map word->letters _ )
-        (map letters->naturals _ )
-        (map sum _ )
-        (count triangle-number? _ )))
+    (count triangle-number? 
+           (map transform words)))
 
 (time (euler-42 input))  ;; → 162

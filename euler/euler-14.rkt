@@ -22,7 +22,8 @@
 ;; Solve
 
 (fn (euler-14 tuples)
-    (foldl (λ (candidate ideal) (if (< (second candidate) (second ideal)) ideal candidate ))
+    (foldl (λ (candidate ideal) 
+              (if (< (second candidate) (second ideal)) ideal candidate ))
            '(0 0)
            tuples
 ))

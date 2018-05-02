@@ -25,9 +25,9 @@
 
 (def file "data/euler-18.txt")
 (def input (map split-by-space (file->lines file)))
-(def euler-18
-     (map (λ (strings) (map string->number strings)) 
-          input
-     )
-)
+
+(fn strings->numbers (curry map string->number))
+
+(def euler-18 (map strings->numbers input))
+
 euler-18

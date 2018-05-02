@@ -16,3 +16,11 @@
          (range 1000))))
 
 (time euler-01) ;; → 233168
+
+(define alt
+   (stream-fold + 0
+      (stream-filter
+         (λ (x)
+            (or (zero? (modulo x 3)) 
+                (zero? (modulo x 5))))
+         (in-range 1000))))
