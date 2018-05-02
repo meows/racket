@@ -5,10 +5,14 @@ hide_title: true
 sidebar_label: Using Functions
 ---
 
-## Using Functions
+# Functions
 
 In Racket, everything consists of lists of symbols, and the first symbol is
-assumed by default to be a function, even if it's a single-item list.
+assumed by default to be a function, even if it's a single-item list. To get
+used to how they work, let's look at how they're used first, and then we'll look
+at how to create our own functions.
+
+## Using Functions
 
 Here are some examples of *applying* or using a function, with functions you're 
 probably already familiar with. See if you can understand what they do. Notice

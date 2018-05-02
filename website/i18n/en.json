@@ -9,6 +9,10 @@
     "arithmetic-advanced": "arithmetic-advanced",
     "atom": "atom",
     "Atom": "Atom",
+    "challenge-1": "challenge-1",
+    "Challenge #1": "Challenge #1",
+    "challenge-2": "challenge-2",
+    "Challenge #2": "Challenge #2",
     "comparisons": "comparisons",
     "Comparisons": "Comparisons",
     "conditionals": "conditionals",
@@ -36,7 +40,8 @@
     "Guide": "Guide",
     "Exercises": "Exercises",
     "Blog": "Blog",
-    "Language Guide": "Language Guide"
+    "Language Guide": "Language Guide",
+    "Racket": "Racket"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

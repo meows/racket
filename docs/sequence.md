@@ -4,7 +4,7 @@ sidebar_label: Sequences
 hide_title: true
 ---
 
-##  Sequences
+#  Sequences
 
 A sequence means a "line" of separate things positioned one after another, which 
 you can count using the natural numbers (0, 1, 2, 3, 4...). So of course, the 

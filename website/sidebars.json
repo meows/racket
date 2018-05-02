@@ -5,15 +5,19 @@
          "sequence",
          "alphabet",
          "atom",
-         "expression",
          "function-intro",
          "define",
          "lambda",
          "values",
          "comparisons",
          "conditionals",
-         "lists",
          "function-sequence"
+      ]
+   },
+   "exercises": {
+      "Racket": [
+         "challenge-1",
+         "challenge-2"
       ]
    }
 }

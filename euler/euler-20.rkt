@@ -16,13 +16,11 @@
         (factorial (-- n) #:product (* n p))))
 
 ; natural → list <digits>
-(fn (N->list nat #:base [base 10])
-    (fn (loop nat #:result [result null])
-        (if (zero? nat)
-            result
-            (let-values ([(quo rem) (quotient/remainder nat base)])
-                        (loop quo #:result (cons rem result)))))
-    (if (zero? nat) '(0) (loop nat)))
+(fn (N->list num [base 10])
+    (unfold-right zero?
+                  (cut remainder <> base)
+                  (cut quotient <> base)
+                  num ))
 
 ;; -----------------------------------------------------------------------------
 ;; Solution

@@ -7,8 +7,6 @@
 ;; -----------------------------------------------------------------------------
 
 ;; nth factorial
-;;
-;; linear time recursion
 (fn (factorial n #:product [p 1])
     (if (zero? n)
         p
