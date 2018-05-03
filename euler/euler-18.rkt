@@ -21,13 +21,17 @@
 ;
 ; Example max sum: 23.
 
-(fn split-by-space (cut string-split <> " "))
-
 (def file "data/euler-18.txt")
-(def input (map split-by-space (file->lines file)))
+(def input (map (cut string-split <> " ") (file->lines file)))
+(def pyramid (reverse (map (curry map string->number) input)))
+(fn ref list-ref)
 
-(fn strings->numbers (curry map string->number))
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
 
-(def euler-18 (map strings->numbers input))
-
-euler-18
+(foldl (λ (line state) 
+          ()
+       )
+       (first pyramid)
+       (rest pyramid)
+)

@@ -20,8 +20,8 @@
     (fn (loop [a 1] [b 0] #:sum [sum 0])
         (if (< max a)
             sum
-            (loop (+ a b) 
-                  a 
+            (loop (+ a b)
+                  a
                   #:sum (if (even? a) (+ sum a) sum)))
 ))
 

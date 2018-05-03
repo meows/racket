@@ -13,4 +13,4 @@
 ;; proper fractions for d ≤ 12,000?
 
 (fn (farey-check num) (and (< 1/3 num) (< num 1/2)))
-(count farey-check (farey-sequence 12000))
+(time (count farey-check (farey-sequence 12000)))
