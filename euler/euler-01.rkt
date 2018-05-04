@@ -10,12 +10,11 @@
 ;; Give the sum of all integers between 1 to 1000 that's divisible by either 3 
 ;; or 5.
 
-(fn (euler-01 max)
-    (apply +
-       (filter
-          (λ (x)
-             (or (zero? (modulo x 3))
-                 (zero? (modulo x 5))))
-          (range max))))
+(fn (okay? x)
+    (or (zero? (modulo x 3))
+        (zero? (modulo x 5))))
 
-(time (euler-01 1000)) ;; → 233168
+(fn (euler-01 max)
+    (for/sum ([n (range max)] #:when (okay? n)) n))
+
+(time (euler-01 1000))  ;; → 233168
