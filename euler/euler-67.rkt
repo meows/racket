@@ -7,7 +7,7 @@
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 18
+;; Problem 67
 
 ; Given a bifuricating tree of random digits from 00..99, find the maximum sum
 ; pathway from one end to end.
@@ -19,7 +19,7 @@
 ;
 ; Example max sum: 23.
 
-(def raw (map (cut string-split <> " ") (file->lines "data/euler-18.txt")))
+(def raw (map (cut string-split <> " ") (file->lines "data/euler-67.txt")))
 (def data (reverse (map (curry map string->number) raw)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
