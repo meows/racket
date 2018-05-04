@@ -13,10 +13,8 @@
 
 (fn (euler-7 [max 10001])
     (for/fold ([seen 0] [current 0] #:result current)
-              ([n (range 2 +inf.0)] #:break (= seen max))
-              (if (prime? n)
-                  (values (add1 seen) n)
-                  (values seen n)))
+              ([n (range 2 +inf.0)] #:when (prime? n) #:break (= seen max))
+              (values (add1 seen) n))
 )
 
 (time (euler-7))
