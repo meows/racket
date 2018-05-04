@@ -34,7 +34,6 @@ const from20to99 = tens.reduce(
 
 const from1to99 = [...from1to19, ...from20to99]
 
-
 const from100to999 = hundreds.reduce(
    (state_hundreds, n_hundred) => state_hundreds.concat(from1to99.reduce(
       (state_1to99, n_ten) => state_1to99.concat(`${n_hundred} and ${n_ten}`),
