@@ -1,5 +1,6 @@
 #lang racket
 
+(require (rename-in racket/base [define def]))
 (require (rename-in racket/base [define fn]))
 (require threading)
 
@@ -11,23 +12,23 @@
 
 (fn ++ add1)
 (fn (one? x) (= x 1))
-(fn (Z+? c) (exact-positive-integer? c))
 
 (fn (collatz [n 0] #:index [i 0])
-    (cond ((one? n) i)
-          ((even? n) (collatz (/ n 2) #:index (++ i)))
-          (else (collatz (+ 1 (* 3 n)) #:index (++ i)))))
+    (cond [(one? n) i]
+          [(even? n) (collatz (/ n 2) #:index (++ i))]
+          [else (collatz (+ 1 (* 3 n)) #:index (++ i))]
+))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (euler-14 tuples)
-    (foldl (λ (candidate ideal) 
-              (if (< (second candidate) (second ideal)) ideal candidate ))
-           '(0 0)
-           tuples
+(fn (euler-14 #:max [max 1000000])
+    (for/fold ([best 0] [seen-at 0] #:result seen-at)
+              ([n (range 1 max)])
+              (let ([cycles (collatz n)])
+                   (if (< best cycles)
+                       (values cycles n)
+                       (values best seen-at)))
 ))
 
-(fn data (map list (range 1 1000001) (map collatz (range 1 1000001))))
-
-(time (euler-14 data))  ;; → '(837799 524)
+(time (euler-14))

@@ -2,10 +2,10 @@
 
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
+(require (only-in srfi/1 unfold-right unfold))
+(require (only-in srfi/26 cut))
 (require math/number-theory)
 (require threading)
-(require (only-in srfi/26 cut))
-(require (only-in srfi/1 unfold-right unfold))
 (require plot)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -43,7 +43,7 @@
 ;; Lists
 
 ; natural → list <natural>
-(fn (N->list n #:base [base 10])
+(fn (N->digits n #:base [base 10])
     (fn (loop n #:result [result '()])
         (if (zero? n)
             result
@@ -51,7 +51,8 @@
                         (loop quo #:result (cons rem result)))))
     (if (zero? n) '(0) (loop n)))
 
-(fn (nat->digits num [base 10])
+; natural → list <natural>
+(fn (N->list num [base 10])
     (unfold-right zero?
                   (cut remainder <> base)
                   (cut quotient <> base)
