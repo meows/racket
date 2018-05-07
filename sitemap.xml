@@ -3,7 +3,7 @@
 <url> <loc>https://meows.github.io/help.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/en/help.html" /> </url>
 <url> <loc>https://meows.github.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/en/index.html" /> </url>
 <url> <loc>https://meows.github.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/en/users.html" /> </url>
-<url> <loc>https://meows.github.io/blog/2017/10/24/new-version-1.0.0.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://meows.github.io/blog/2018/05/07/A-Racket-Guide-to-Programming.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://meows.github.io/docs/alphabet.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/alphabet.html" /> </url>
 <url> <loc>https://meows.github.io/docs/arithmetic-advanced.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/arithmetic-advanced.html" /> </url>
 <url> <loc>https://meows.github.io/docs/atom.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://meows.github.io/docs/atom.html" /> </url>
