@@ -5,6 +5,13 @@
             nav.classList.toggle('docsSliderActive');
           };
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="conditionals"></a><a href="#conditionals" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditionals</h1>
+<p>If someone has ever told you that you can only play <em>if</em> you've done your work,
+then you have been given a condition. That is, you can play, but only if a rule
+has been met.</p>
+<p>Conditions are also useful in software because we don't always know what kind of
+information we're going to get, so in order to make sure we run the right
+functions or operations, we often need to first check <em>if</em> some of our
+conditions have been met.</p>
 <h2><a class="anchor" aria-hidden="true" id="if"></a><a href="#if" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>if</code></h2>
 <p><code>if</code> is a function which takes 3 inputs.</p>
 <ul>
@@ -23,36 +30,18 @@
 <span class="hljs-comment">;; This evaluates as "Orange".</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> x <span class="hljs-number">12</span>) <span class="hljs-string">"Lemon"</span>  <span class="hljs-string">"Orange"</span>)
 
-<span class="hljs-comment">;; What will this evaluate to?</span>
+<span class="hljs-comment">;; What will these evaluate to?</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="cond"></a><a href="#cond" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cond</code></h2>
-<p><code>cond</code> is a function which takes zero or more length-2 expressions. Each
-length-2 expression has:</p>
-<ol>
-<li>a boolean expression as the first item</li>
-<li>a second expression return conditional true</li>
-</ol>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">sign</span> num)
-        <span class="hljs-comment">;; notice every expression inside cond has two things:</span>
-        <span class="hljs-comment">;; 1. the first is a boolean expression</span>
-        <span class="hljs-comment">;; 2. the second is an expression that would be used as the result for</span>
-        <span class="hljs-comment">;;    for this cond function if the boolean expression were true</span>
-        (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> (((<span class="hljs-name">compose</span> not number?) num) <span class="hljs-string">"error"</span>)
-              ((<span class="hljs-name">negative?</span> num) <span class="hljs-string">"negative"</span>)
-              ((<span class="hljs-name">positive?</span> num) <span class="hljs-string">"positive"</span>)
-              (<span class="hljs-name">else</span> <span class="hljs-string">"zero"</span>)))                 <span class="hljs-comment">;; this else statement is optional</span>
 
-(<span class="hljs-name">sign</span> <span class="hljs-number">0</span>)   <span class="hljs-comment">;; → "zero"</span>
-(<span class="hljs-name">sign</span> <span class="hljs-number">-0</span>)  <span class="hljs-comment">;; → "zero"</span>
-(<span class="hljs-name">sign</span> <span class="hljs-number">1</span>)   <span class="hljs-comment">;; → "positive"</span>
-(<span class="hljs-name">sign</span> <span class="hljs-number">-1</span>)  <span class="hljs-comment">;; → "negative"</span>
-(<span class="hljs-name">sign</span> #t)  <span class="hljs-comment">;; → "error"</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">expt</span> x <span class="hljs-number">2</span>) 
+    (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x x)
+    (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> x x))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="and"></a><a href="#and" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>and</code></h2>
-<p><code>and</code> takes a list of 0 or more boolean expressions and evaluates to <code>false</code> <em>iff</em>
-a single expression evaluates as false.</p>
+<p><code>and</code> takes a list of 0 or more boolean expressions and will evaluate to <code>true</code>
+<em>unless</em> it encounters one or more <code>false</code> values. If <code>and</code> encounters even one
+<code>false</code>, then it will always be <code>false</code>.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)                    <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → false</span>
@@ -60,12 +49,30 @@ a single expression evaluates as false.</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>)   <span class="hljs-comment">;; → true</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="or"></a><a href="#or" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>or</code></h2>
-<p><code>or</code> takes a list of 0 or more boolean expressions and evaluates to <code>true</code> <em>iff</em>
-a single expression evaluates as true.</p>
+<p><code>or</code> takes a list of 0 or more boolean expressions and evaluates to <code>false</code>
+<em>unless</em> it encounters at least one <code>true</code>. If <code>or</code> encounters even one <code>true</code>,
+then it will always be <code>true</code>.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>)                    <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>)   <span class="hljs-comment">;; → true</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="comparisons.html">← comparisons</a><a class="docs-next button" href="function-sequence.html">function-sequence →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#if"><code>if</code></a></li><li><a href="#cond"><code>cond</code></a></li><li><a href="#and"><code>and</code></a></li><li><a href="#or"><code>or</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="a-quick-review"></a><a href="#a-quick-review" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A quick review</h2>
+<p>What will these expressions evaluate to?</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)
+
+(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span> <span class="hljs-literal">false</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span> <span class="hljs-literal">false</span>)
+
+(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>) (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>))
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>) (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span> <span class="hljs-literal">true</span>)
+    (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span> <span class="hljs-literal">false</span>)
+    (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span> <span class="hljs-literal">false</span>))
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="comparisons.html">← comparisons</a><a class="docs-next button" href="function-sequence.html">function-sequence →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#if"><code>if</code></a></li><li><a href="#and"><code>and</code></a></li><li><a href="#or"><code>or</code></a></li><li><a href="#a-quick-review">A quick review</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
