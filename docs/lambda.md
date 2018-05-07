@@ -55,7 +55,3 @@ Which would be complete identical to the familiar way of doing it:
 (prism-volume 3 5 8)  ;; → 120
 ```
 
-### Advanced reference
-* [Racket Documentation][1]
-
-[1]: https://docs.racket-lang.org/guide/lambda.html

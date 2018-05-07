@@ -7,8 +7,13 @@ hide_title: true
 # Conditionals
 
 If someone has ever told you that you can only play _if_ you've done your work,
-then you have been given a condition. That is, you can play, but only _if_
-something else.
+then you have been given a condition. That is, you can play, but only if a rule
+has been met.
+
+Conditions are also useful in software because we don't always know what kind of
+information we're going to get, so in order to make sure we run the right 
+functions or operations, we often need to first check _if_ some of our 
+conditions have been met.
 
 ## `if`
 
@@ -41,7 +46,8 @@ something else.
 ## `and`
 
 `and` takes a list of 0 or more boolean expressions and will evaluate to `true`
-_unless_ it encounters one or more `false` values.
+_unless_ it encounters one or more `false` values. If `and` encounters even one
+`false`, then it will always be `false`.
 
 ``` clojure
 (and)                    ;; → true
@@ -54,7 +60,8 @@ _unless_ it encounters one or more `false` values.
 ## `or`
 
 `or` takes a list of 0 or more boolean expressions and evaluates to `false`
-_unless_ it encounters at least one `true`.
+_unless_ it encounters at least one `true`. If `or` encounters even one `true`,
+then it will always be `true`.
 
 ``` clojure
 (or)                    ;; → false
@@ -62,4 +69,25 @@ _unless_ it encounters at least one `true`.
 (or true  false false)  ;; → true
 (or true  true  false)  ;; → true
 (or true  true  true)   ;; → true
+```
+
+## A quick review
+
+What will these expressions evaluate to?
+
+``` clojure
+(or)
+(and)
+
+(or true false)
+(and true false)
+
+(or (and) (or))
+(and (and) (or))
+
+(or (and true true)
+    (or false false))
+
+(or (and true false)
+    (or true false))
 ```
