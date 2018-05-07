@@ -62,19 +62,24 @@ power to define a function, which we'll read about next.</p>
 <p>In the two examples below I have defined two very similar functions, <code>before</code>
 and <code>after</code>. Let's look at just the first list:</p>
 <ul>
-<li>the first list has three items inside: <code>define</code>, <code>(before n)</code>, and <code>(sub1 n)</code>.</li>
+<li>the first list has three items inside: <code>define</code>, <code>(before n)</code>, and <code>(- n 1)</code>.</li>
 <li><code>define</code> is a keyword that lets you define a function</li>
 <li><code>(before n)</code> is the head of the function; <code>before</code> is the name of the
 function, and <code>n</code> is the name of the input</li>
-<li><code>(sub1 n)</code> is the body of the function; whatever this evaluates to is the
+<li><code>(+ n -1)</code> is the body of the function; whatever this evaluates to is the
 final value of the function</li>
 </ul>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">before</span> n) (<span class="hljs-name">sub1</span> n))
-(<span class="hljs-name">define</span> (<span class="hljs-name">after</span> n) (<span class="hljs-name">add1</span> n))
+<pre><code class="hljs css clojure"><span class="hljs-comment">;; Why might this be named before?</span>
+(<span class="hljs-name">define</span> (<span class="hljs-name">before</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))
 
+<span class="hljs-comment">;; Why might this be named after?</span>
+(<span class="hljs-name">define</span> (<span class="hljs-name">after</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>))
+
+(<span class="hljs-name">before</span> (<span class="hljs-name">before</span> <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 1</span>
+(<span class="hljs-name">before</span> <span class="hljs-number">3</span>)          <span class="hljs-comment">;; → 2</span>
+(<span class="hljs-name">before</span> (<span class="hljs-name">after</span> <span class="hljs-number">3</span>))  <span class="hljs-comment">;; → 3</span>
 (<span class="hljs-name">after</span> <span class="hljs-number">3</span>)           <span class="hljs-comment">;; → 4</span>
 (<span class="hljs-name">after</span> (<span class="hljs-name">after</span> <span class="hljs-number">3</span>))   <span class="hljs-comment">;; → 5</span>
-(<span class="hljs-name">before</span> (<span class="hljs-name">after</span> <span class="hljs-number">3</span>))  <span class="hljs-comment">;; → 3</span>
 </code></pre>
 <p>These are examples we've seen before, but they all involve functions that can
 only take one input. But you know there are useful functions that take more, for
@@ -84,7 +89,9 @@ rectangular prism requires exactly three inputs, no more and no less.</p>
 <p>I'm going to use the same rules from above for defining a function, but instead
 this time I'm going to adapt the rule to work with 3 inputs or <em>parameters</em>, and
 I'm going to use extra long names for everything just for show.</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> length width height) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> length width height))
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> length width height) 
+        (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> length width height)
+)
 </code></pre>
 <p>Now let's use the function:</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)  <span class="hljs-comment">;; → 60</span>
@@ -94,10 +101,12 @@ I'm going to use extra long names for everything just for show.</p>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="trying-out-what-you-know"></a><a href="#trying-out-what-you-know" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trying out what you know</h2>
 <ul>
-<li>Define a function that can generate the sequence: <code>5, 3, 1, -1, -3, -5...</code>.</li>
-<li>Define a function that can generate the sequence: <code>0, 1, 8, 27, 64, 128...</code>.</li>
+<li>Define a function that can generate the sequence: <code>5, 3, 1, -1, -3, -5...</code></li>
+<li>Define a function that can generate the sequence: <code>0, 1, 8, 27, 64, 128...</code></li>
 <li>Define a function called <code>triangle-area</code> which tells me the area of a triangle
-if you know <code>base</code> and <code>height</code>. This function will have two <em>parameters</em> (or
+if you know <code>base</code> and <code>height</code>. This function will have two parameters (or
 inputs) that the function can take.</li>
+<li>What is a <em>variable</em>, and what is <em>variable assignment</em>?</li>
+<li>What is a function <em>parameter</em>?</li>
 </ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="function-intro.html">← Using Functions</a><a class="docs-next button" href="lambda.html">lambda →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#saving-information-behind-a-name">Saving information behind a name</a><ul class="toc-headings"><li><a href="#kind-variable-names">Kind variable names</a></li></ul></li><li><a href="#functions">Functions</a></li><li><a href="#trying-out-what-you-know">Trying out what you know</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/racket/" class="nav-home"><img src="/racket/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/racket/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/racket/docs/en/doc2.html">Guides (or other categories)</a><a href="/racket/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/racket/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/racket/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
