@@ -3,7 +3,6 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 (require (only-in srfi/26 cut))
-(require racket/trace)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler

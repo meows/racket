@@ -9,7 +9,7 @@
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 8
+;; Problem 99
 
 (def raw-strings (file->lines "data/euler-99.txt"))
 (def tuples (map (λ (strings) (map string->number strings)) 

@@ -8,25 +8,11 @@
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 41
+;; Problem 31
 
-; What is the largest n-digit pandigital prime that exists?
+; How many ways can you make £2 with coins?
+
+(def denominations '(1 2 5 10 20 50 100 200))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
-
-(fn ++ add1)
-(fn all-unique? (compose not check-duplicates))
-
-(fn (lists->naturals lst-of-digits)
-    (map (λ (digits)
-            (string->number (string-append* (map number->string digits))))
-         lst-of-digits))
-
-(def lst-of-permutations (permutations (range 1 8)))
-
-(~> lst-of-permutations
-    lists->naturals
-    (filter prime? _)
-    (apply max _)
-)
