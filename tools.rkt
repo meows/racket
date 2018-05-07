@@ -39,6 +39,8 @@
 (fn mod10 (cut remainder <> 10))
 (fn div10 (cut quotient <> 10))
 
+(fn (log-identity base exp) (* exp (log base)))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Lists
 
@@ -73,6 +75,8 @@
     (loop nats))
 
 (fn nth sequence-ref)
+
+(fn all-unique? (compose not check-duplicates))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Functions

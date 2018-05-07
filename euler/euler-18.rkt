@@ -29,7 +29,6 @@
     (for/list ([i before] [j (rest before)] [k now])
               (+ (max i j) k)))
 
-(fn (euler)
-    (foldl next-line (first data) (rest data)))
+(fn (euler) (foldl next-line (first data) (rest data)))
 
 (time (euler))

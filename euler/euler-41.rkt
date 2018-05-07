@@ -2,28 +2,28 @@
 
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
-(require math/number-theory)
 (require (only-in srfi/26 cut))
-(require (only-in srfi/1 unfold-right unfold))
+(require threading)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 8
+;; Problem 41
 
-(def raw-string (apply string-append (file->lines "data/euler-08.txt")))
+; What is the largest n-digit pandigital prime that exists?
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (N->list num [base 10])
-    (unfold-right zero?
-                  (cut remainder <> base)
-                  (cut quotient <> base)
-                  num ))
+(fn ++ add1)
+(fn all-unique? (compose not check-duplicates))
 
-(def nats (N->list (string->number raw-string)))
+(fn (lists->naturals lst-of-digits)
+    (map (λ (digits)
+            (string->number (string-append* (map number->string digits))))
+         lst-of-digits))
 
-(for/fold ([best 0] [array] #:result best)
-          ([n nats])
-          ()
-)
+(def lst-of-permutations (permutations (range 10)))
+(time (~> lst-of-permutations
+    lists->naturals
+    length
+))

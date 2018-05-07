@@ -16,7 +16,7 @@
 (fn (collatz [n 0] #:index [i 0])
     (cond [(one? n) i]
           [(even? n) (collatz (/ n 2) #:index (++ i))]
-          [else (collatz (+ 1 (* 3 n)) #:index (++ i))]
+          [ else (collatz (+ 1 (* 3 n)) #:index (++ i))]
 ))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -24,7 +24,7 @@
 
 (fn (euler-14 #:max [max 1000000])
     (for/fold ([best 0] [seen-at 0] #:result seen-at)
-              ([n (range 1 max)])
+              ([n (range (++ max))] #:break (< max n))
               (let ([cycles (collatz n)])
                    (if (< best cycles)
                        (values cycles n)

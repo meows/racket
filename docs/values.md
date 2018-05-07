@@ -20,7 +20,7 @@ Let's look at some example values below:
 
 ``` clojure
 3.14
-355/113  ;; approximation of π accurate to 7 digits
+355/113
 128
 256
 512

@@ -7,10 +7,10 @@ sidebar_label: Using Functions
 
 # Functions
 
-In Racket, everything consists of lists of symbols, and the first symbol is
-assumed by default to be a function, even if it's a single-item list. To get
-used to how they work, let's look at how they're used first, and then we'll look
-at how to create our own functions.
+In Racket, everything consists of expressions, or lists of _one or more_ atoms, 
+and the first symbol is assumed by default to be a function, even if it's a 
+single-item list. To get used to how they work, let's look at how they're used 
+first, and then we'll look at how to create our own functions.
 
 ## Using Functions
 
