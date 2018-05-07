@@ -13,4 +13,5 @@ Give a list of numbers between 1 to 1000 but with all odd numbers removed.
 * `range`
 * `modulo`
 * `odd?`
+* `even?`
 * `lambda`

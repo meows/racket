@@ -6,6 +6,10 @@ hide_title: true
 
 # Conditionals
 
+If someone has ever told you that you can only play _if_ you've done your work,
+then you have been given a condition. That is, you can play, but only _if_
+something else.
+
 ## `if`
 
 `if` is a function which takes 3 inputs.
@@ -25,40 +29,19 @@ hide_title: true
 ;; This evaluates as "Orange".
 (if (= x 12) "Lemon"  "Orange")
 
-;; What will this evaluate to?
+;; What will these evaluate to?
 (if (<= x 10) 1 0)
 (if (>= x 10) 1 0)
-```
 
-## `cond`
-
-`cond` is a function which takes zero or more length-2 expressions. Each 
-length-2 expression has: 
-   1. a boolean expression as the first item
-   2. a second expression return conditional true
-
-``` clojure
-(define (sign num)
-        ;; notice every expression inside cond has two things:
-        ;; 1. the first is a boolean expression
-        ;; 2. the second is an expression that would be used as the result for
-        ;;    for this cond function if the boolean expression were true
-        (cond (((compose not number?) num) "error")
-              ((negative? num) "negative")
-              ((positive? num) "positive")
-              (else "zero")))                 ;; this else statement is optional
-
-(sign 0)   ;; → "zero"
-(sign -0)  ;; → "zero"
-(sign 1)   ;; → "positive"
-(sign -1)  ;; → "negative"
-(sign #t)  ;; → "error"
+(if (= 100 (expt x 2) 
+    (+ x x)
+    (- x x))
 ```
 
 ## `and`
 
-`and` takes a list of 0 or more boolean expressions and evaluates to `false` _iff_
-a single expression evaluates as false.
+`and` takes a list of 0 or more boolean expressions and will evaluate to `true`
+_unless_ it encounters one or more `false` values.
 
 ``` clojure
 (and)                    ;; → true
@@ -70,8 +53,8 @@ a single expression evaluates as false.
 
 ## `or`
 
-`or` takes a list of 0 or more boolean expressions and evaluates to `true` _iff_
-a single expression evaluates as true.
+`or` takes a list of 0 or more boolean expressions and evaluates to `false`
+_unless_ it encounters at least one `true`.
 
 ``` clojure
 (or)                    ;; → false
