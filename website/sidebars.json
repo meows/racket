@@ -1,10 +1,12 @@
 {
    "docs": {
-      "Language Guide": [
+      "Concepts": [
          "intro",
          "sequence",
          "alphabet",
-         "atom",
+         "atom"
+      ],
+      "Language Guide": [
          "function-intro",
          "define",
          "lambda",
@@ -15,7 +17,7 @@
       ]
    },
    "exercises": {
-      "Racket": [
+      "Getting Started": [
          "challenge-1",
          "challenge-2",
          "challenge-3",

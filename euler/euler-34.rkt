@@ -29,4 +29,5 @@
 (fn (euler-check nat) (= nat (digit-factorial-sum nat)))
 
 (def euler (filter euler-check (range 5 10000000)))
+
 euler

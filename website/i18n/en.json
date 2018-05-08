@@ -35,6 +35,8 @@
     "lambda": "lambda",
     "lists": "lists",
     "Lists": "Lists",
+    "note-on-reading": "note-on-reading",
+    "On reading": "On reading",
     "reversal": "reversal",
     "Undoing what you did": "Undoing what you did",
     "sequence": "sequence",
@@ -46,8 +48,9 @@
     "Guide": "Guide",
     "Exercises": "Exercises",
     "Blog": "Blog",
+    "Concepts": "Concepts",
     "Language Guide": "Language Guide",
-    "Racket": "Racket"
+    "Getting Started": "Getting Started"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

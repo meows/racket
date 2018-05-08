@@ -54,11 +54,11 @@
     (if (zero? n) '(0) (loop n)))
 
 ; natural → list <natural>
-(fn (N->list num [base 10])
+(fn (N->list num #:base [base 10])
     (unfold-right zero?
                   (cut remainder <> base)
                   (cut quotient <> base)
-                  num ))
+                  num))
 
 ; list <integer> → list <integer>
 (fn (diff ints)
@@ -67,12 +67,8 @@
          (drop-right ints 1)))
 
 ; list <natural> → history <list[natural]>
-(fn (diff-loop nats)
-    (fn (loop lst #:count [c 0] #:history [h (list)])
-        (if (all zero? (diff lst))
-            (append h (list lst))
-            (loop (diff lst) #:count (++ c) #:history (append h (list lst)))))
-    (loop nats))
+(fn (differ nats)
+    (unfold-right (cut all zero? <>) identity diff nats))
 
 (fn nth sequence-ref)
 
@@ -116,6 +112,13 @@
           [(one? n) 0]
           [else (loop n)]))
 
+(fn (collatz-list n)
+    (fn (next n)
+        (if (even? n) 
+            (* 1/2 n)
+            (+ 1 (* 3 n))))
+    (unfold one? identity next n list))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Graphing
 
@@ -155,9 +158,9 @@
     (λ (x) (+ (* a x x x)
               (* b x x)
               (* c x)
-              d )))
+              d)))
 
 (fn (physics-quad a v [p 0])
     (λ (t) (+ (* 1/2 a t t)
               (* v t)
-              p )))
+              p)))
