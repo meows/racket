@@ -3,7 +3,6 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 (require math/number-theory)
-(require srfi/43)
 (require (only-in srfi/26 cut))
 (require (only-in srfi/1 unfold-right unfold))
 
@@ -20,13 +19,6 @@
     (unfold-right zero?
                   (cut remainder <> base)
                   (cut quotient <> base)
-                  num ))
+                  num))
 
-(def nats (N->list (string->number raw-string)))
-
-;;; (for/list ([best 0] [tuple-13] #:result best)
-;;;           ([n nats])
-;;;           ()
-;;; )
-
-nats
+(def nats (list->vector (N->list (string->number raw-string))))

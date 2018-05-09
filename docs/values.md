@@ -54,7 +54,7 @@ We can even further divide things up if we wish:
 ```
 
 As you can see, a _type_ is just a way of grouping a bunch of values together
-because we think we're similar. Some of the types will be part of the language
+because we think they're similar. Some of the types will be part of the language
 we use, and some of the types we can create ourselves. After all, nothing can
 stop us from saying that we think `(list "Alex" "Frank" "Lucy")` look like 
 names, and `(list "fish" "bird" "dog")` look like animals.
