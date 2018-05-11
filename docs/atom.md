@@ -13,7 +13,7 @@ like English words, we're allowed to have atoms which are a sequence of merely
 one letter or symbol long. For example, let's say that our alphabet only allows
 the letters `a...z`. Here are some example atoms using our rule:
  * `a`
- * `I`
+ * `i`
  * `dog`
  * `eagle`
  * `dogeagle`

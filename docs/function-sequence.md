@@ -37,11 +37,10 @@ hide_title: true
 
 ## `map`
 
-`map` is a function that takes two inputs, a function and a list, and it always 
+`map` is a function that takes two inputs, a lambda and a list, and it always 
 returns another list of equal size.
 
 ``` clojure
-(map function list)
 (map square (range 10))  ;; → '(0 1 4 9 16 25 36 49 64 81)
 (map add1   (range 10))  ;; → '(1 2 3 4 5 6 7 8 9 10)
 (map sub1   (range 10))  ;; → '(-1 0 1 2 3 4 5 6 7 8)
@@ -49,13 +48,12 @@ returns another list of equal size.
 
 ## `filter`
 
-`filter` is a function that takes two inputs, a function and a list, and it 
-always returns a list of equal or smaller size.
+`filter` is a function that takes two inputs, a lambda and a list, and it always 
+returns a list of equal or lesser size.
 
 ``` clojure
 (define (over3? n) (< 3 n))
 
-(filter function list)
 (filter even?      (range 11))  ;; → '(0 2 4 6 8 10)
 (filter odd?       (range 11))  ;; → '(1 3 5 7 9)
 (filter over3?     (range 11))  ;; → '(4 5 6 7 8 9 10)

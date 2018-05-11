@@ -4,13 +4,14 @@
          "intro",
          "sequence",
          "alphabet",
-         "atom"
+         "atom",
+         "expressions",
+         "values"
       ],
       "Language Guide": [
          "function-intro",
          "define",
          "lambda",
-         "values",
          "comparisons",
          "conditionals",
          "function-sequence"

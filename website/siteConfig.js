@@ -13,7 +13,7 @@ const users = [
   {
     caption: 'User1',
     image: '/test-site/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    infoLink: 'https://www.rid.pw',
     pinned: true,
   },
 ];
@@ -22,7 +22,7 @@ const siteConfig = {
   title: 'Racket Companion' /* title for your website */,
   tagline: 'A little look into programming.',
   url: 'https://meows.github.io' /* your website url */,
-  baseUrl: '/racket/' /* base url for your project */,
+  baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
