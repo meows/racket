@@ -13,7 +13,7 @@ hide_title: true
 `(range start end skip)`
 
 ``` clojure
-;; range with only 1 argument
+;; range with only 1 input
 (range 0)   ;; → '()
 (range 1)   ;; → '(0)
 (range 2)   ;; → '(0 1)
@@ -23,21 +23,22 @@ hide_title: true
 ```
 
 ``` clojure
-;; range with 2 arguments, start and stop
+;; range with 2 inputs, start and stop
 (range 0 5)    ;; → '(0 1 2 3 4)
 (range -5 5)   ;; → '(-5 -4 -3 -2 -1 0 1 2 3 4)
 (range 5 10)   ;; → '(5 6 7 8 9)
 ```
 
 ``` clojure
-;; range with 3 arguments: (1) start, (2) stop, (3) skip
+;; range with 3 inputs: (1) start, (2) stop, (3) skip
 (range 0 10 2)  ;; → '(0, 2, 4, 6, 8)
 (range -5 5 2)  ;; → '(-5, -3, -1, 1, 3)
 ```
 
 ## `map`
 
-`map` is a function that consumes a list and returns a list the same size.
+`map` is a function that takes two inputs, a function and a list, and it always 
+returns another list of equal size.
 
 ``` clojure
 (map function list)
@@ -48,7 +49,8 @@ hide_title: true
 
 ## `filter`
 
-`filter` is a function that consumes a list and returns a list of equal or smaller size.
+`filter` is a function that takes two inputs, a function and a list, and it 
+always returns a list of equal or smaller size.
 
 ``` clojure
 (define (over3? n) (< 3 n))
@@ -61,20 +63,11 @@ hide_title: true
 (filter composite? (range 11))  ;; → '(2 4 6 8 9 10)
 ```
 
-## `foldl`
-
-`foldl` takes a function, an intial value, and a list.
+## `apply`
 
 ``` clojure
-(define initial-value 0)
-(define list-to-fold (range 1 6))
-(define (diff p0 p1) (- p1 p0))
-
-;; Example #1
-(foldl +    initial-value list-to-fold) ;; → 15
-(foldl diff initial-value list-to-fold) ;; → -15
-
-;; Example #2
-(foldl (λ (n state) (+ state n)) 0 '(1 2 3 4 5)) ;; → 15
-(foldl (λ (n state) (- state n)) 0 '(1 2 3 4 5)) ;; → -15
+(apply + '(3 2 1)) ;; → (+ 3 2 1) → 6
+(apply - '(3 2 1)) ;; → (- 3 2 1) → 0
+(apply * '(3 2 1)) ;; → (* 3 2 1) → 6
+(apply / '(3 2 1)) ;; → (/ 3 2 1) → 3/2
 ```

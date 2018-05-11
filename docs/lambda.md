@@ -54,4 +54,3 @@ Which would be complete identical to the familiar way of doing it:
 (define (prism-volume length width height) (* length width height))
 (prism-volume 3 5 8)  ;; → 120
 ```
-
