@@ -12,17 +12,17 @@ hide_title: true
 
 When your computer saves information, whether in RAM or in the hard drive, it
 saves it at a location with an address that isn't human-friendly. You might wish
-to save a number to remember later, but you wouldn't want to individually look 
+to save a number to remember later, but you wouldn't want to individually look
 to memory location `0x9FFF0` (which is a way of saying 633,359, and some people
-do use this notation to access memory) just to look at the first item. That's 
+do use this notation to access memory) just to look at the first item. That's
 very exhausting.
 
 Instead we can save the information behind a human-friendly name, known as a
-_variable_, and the act of saving information behind a variable is called 
+_variable_, and the act of saving information behind a variable is called
 _variable assignment_.
 
 It's important to note that a variable doesn't need to refer to any single
-number or value. It refers to a *place* where you can put things, such as 
+number or value. It refers to a *place* where you can put things, such as
 values.
 
 Let's look at some examples below:
@@ -78,9 +78,9 @@ and `after`. Let's look at just the first list:
 
 * the first list has three items inside: `define`, `(before n)`, and `(- n 1)`.
 * `define` is a keyword that lets you define a function
-* `(before n)` is the head of the function; `before` is the name of the 
+* `(before n)` is the head of the function; `before` is the name of the
   function, and `n` is the name of the input
-* `(+ n -1)` is the body of the function; whatever this evaluates to is the
+* `(- n 1)` is the body of the function; whatever this evaluates to is the
   final value of the function
 
 ``` clojure
@@ -99,16 +99,16 @@ and `after`. Let's look at just the first list:
 
 These are examples we've seen before, but they all involve functions that can
 only take one input. But you know there are useful functions that take more, for
-example, the volume of a rectangular prism can be found with `length`, `width`, 
-and `height`. One might say that a function that tells you the volume of a 
-rectangular prism requires exactly three inputs, no more and no less.
+example, the volume of a rectangular prism can be found with length `l`, width
+`w`, and height `h`. One might say that a function that tells you the volume of
+a rectangular prism requires exactly three inputs, no more and no less.
 
 I'm going to use the same rules from above for defining a function, but instead
 this time I'm going to adapt the rule to work with 3 inputs or _parameters_, and
 I'm going to use extra long names for everything just for show.
 
 ``` clojure
-(define (prism-volume length width height) 
+(define (prism-volume length width height)
         (* length width height)
 )
 ```
