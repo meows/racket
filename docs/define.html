@@ -66,7 +66,7 @@ and <code>after</code>. Let's look at just the first list:</p>
 <li><code>define</code> is a keyword that lets you define a function</li>
 <li><code>(before n)</code> is the head of the function; <code>before</code> is the name of the
 function, and <code>n</code> is the name of the input</li>
-<li><code>(+ n -1)</code> is the body of the function; whatever this evaluates to is the
+<li><code>(- n 1)</code> is the body of the function; whatever this evaluates to is the
 final value of the function</li>
 </ul>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Why might this be named before?</span>
@@ -83,13 +83,13 @@ final value of the function</li>
 </code></pre>
 <p>These are examples we've seen before, but they all involve functions that can
 only take one input. But you know there are useful functions that take more, for
-example, the volume of a rectangular prism can be found with <code>length</code>, <code>width</code>,
-and <code>height</code>. One might say that a function that tells you the volume of a
-rectangular prism requires exactly three inputs, no more and no less.</p>
+example, the volume of a rectangular prism can be found with length <code>l</code>, width
+<code>w</code>, and height <code>h</code>. One might say that a function that tells you the volume of
+a rectangular prism requires exactly three inputs, no more and no less.</p>
 <p>I'm going to use the same rules from above for defining a function, but instead
 this time I'm going to adapt the rule to work with 3 inputs or <em>parameters</em>, and
 I'm going to use extra long names for everything just for show.</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> length width height) 
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> length width height)
         (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> length width height)
 )
 </code></pre>
