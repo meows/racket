@@ -19,6 +19,9 @@
             (loop (quotient n b) #:index (++ i))))
     (if (zero? n) 1 (loop n)))
 
+(fn (number-length num)
+    (~> num number->string string-length))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Boolean
 

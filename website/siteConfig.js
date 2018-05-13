@@ -21,8 +21,9 @@ const users = [
 const siteConfig = {
   title: 'Racket Companion' /* title for your website */,
   tagline: 'A little look into programming.',
-  url: 'https://meows.github.io' /* your website url */,
+  url: 'https://rid.pw' /* your website url */,
   baseUrl: '/' /* base url for your project */,
+  cname: 'https://rid.pw',
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',

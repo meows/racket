@@ -21,7 +21,17 @@ class Footer extends React.Component {
   render() {
     const currentYear = new Date().getFullYear();
     return (
-      <footer className="nav-footer" id="footer">
+       <footer className="nav-footer" id="footer">
+       {/*
+         <a
+           href="https://twitter.com/"
+           target="_blank"
+           rel="noreferrer noopener">
+           Twitter
+         </a>
+       
+       
+       */}
         <section className="sitemap">
           <a href={this.props.config.baseUrl} className="nav-home">
             {this.props.config.footerIcon && (
@@ -57,12 +67,6 @@ class Footer extends React.Component {
               Stack Overflow
             </a>
             <a href="https://discordapp.com/">Project Chat</a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
           </div>
           <div>
             <h5>More</h5>

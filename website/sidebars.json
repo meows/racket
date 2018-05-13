@@ -5,8 +5,9 @@
          "sequence",
          "alphabet",
          "atom",
-         "expressions",
-         "values"
+         "expression",
+         "values",
+         "recursion"
       ],
       "Language Guide": [
          "function-intro",
@@ -17,7 +18,7 @@
          "function-sequence"
       ]
    },
-   "exercises": {
+   "challenge": {
       "Getting Started": [
          "challenge-1",
          "challenge-2",

@@ -84,6 +84,9 @@ class HomeSplash extends React.Component {
             <Button href={docUrl('challenge-1.html', language)}>Exercises</Button>
           </PromoSection>
         </div>
+        <div style={{textAlign: 'left' }} padding={['left', 'right']}>
+           <MarkdownBlock>{racketExample}</MarkdownBlock>
+        </div>
       </SplashContainer>
     );
   }
@@ -117,12 +120,22 @@ const Features = props => (
   </Block>
 );
 
+const pre = "```"
+const racketExample = `${pre}clojure
+(define a (+ 1 2 3 4 5)) ; 15
+(define b (- 1 2 3 4 5)) ; -15
+(define c (* 1 2 3 4 5)) ; 120
+(define d (/ 1 2 3 4 5)) ; 1/120
+(+ a b) ; 0
+(* c d) ; 1
+${pre}`
+
 const FeatureCallout = props => (
   <div
     className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
+    style={{textAlign: 'left'}}>
+    <h2>Racket looks like:</h2>
+    <MarkdownBlock>{racketExample}</MarkdownBlock>
   </div>
 );
 
@@ -130,7 +143,7 @@ const LearnHow = props => (
   <Block background="light">
     {[
       {
-        content: 'Talk about learning how to use this',
+        content: 'hi',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'right',
         title: 'Learn How',
@@ -196,27 +209,26 @@ const Showcase = props => {
 };
 
 class Index extends React.Component {
-  render() {
-    let language = this.props.language || '';
+   render() {
+      let language = this.props.language || '';
 
-    return (
-      <div>
-        <HomeSplash language={language} />
-        <div className="mainContainer">
-          <Features />
-          <Showcase language={language} />
-          
-          {/*
-            <FeatureCallout />
-            <LearnHow />
-            <TryOut />
-            <Description />
-
-          */}
-        </div>
-      </div>
-    );
-  }
+      return (
+         <div>
+            <HomeSplash language={language} />
+            <div className="mainContainer">
+               <Showcase language={language} />
+               
+               {/*
+                  <FeatureCallout />
+                  <LearnHow />
+                  <Features />
+                  <TryOut />
+                  <Description />
+               */}
+            </div>
+         </div>
+      );
+   }
 }
 
 module.exports = Index;
