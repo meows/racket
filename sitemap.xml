@@ -15,6 +15,7 @@
 <url> <loc>https://rid.pw/docs/comparisons.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/comparisons.html" /> </url>
 <url> <loc>https://rid.pw/docs/conditionals.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/conditionals.html" /> </url>
 <url> <loc>https://rid.pw/docs/define.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/define.html" /> </url>
+<url> <loc>https://rid.pw/docs/exam.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/exam.html" /> </url>
 <url> <loc>https://rid.pw/docs/expression.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/expression.html" /> </url>
 <url> <loc>https://rid.pw/docs/foldl.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/foldl.html" /> </url>
 <url> <loc>https://rid.pw/docs/function-intro.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/function-intro.html" /> </url>
@@ -26,5 +27,6 @@
 <url> <loc>https://rid.pw/docs/reversal.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/reversal.html" /> </url>
 <url> <loc>https://rid.pw/docs/sequence.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence.html" /> </url>
 <url> <loc>https://rid.pw/docs/setup.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/setup.html" /> </url>
+<url> <loc>https://rid.pw/docs/trigonometry.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/trigonometry.html" /> </url>
 <url> <loc>https://rid.pw/docs/values.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/values.html" /> </url>
 </urlset>
