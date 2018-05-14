@@ -22,6 +22,8 @@
 (fn (number-length num)
     (~> num number->string string-length))
 
+(fn char->number (λ~> char->integer (+ -48)))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Boolean
 

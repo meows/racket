@@ -11,24 +11,22 @@
 ;; Project Euler
 ;; Problem 8
 
-(def raw-string (apply string-append (file->lines "data/euler-08.txt")))
+(def raw (apply string-append (file->lines "/home/meow/Projects/racket/euler/data/euler-08.txt")))
+(def data (for/vector ([n raw]) (char->number n)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn nth string-ref)
-(fn (N->list num [base 10])
-    (unfold-right zero?
-                  (cut remainder <> base)
-                  (cut quotient <> base)
-                  num))
+(fn char->number (λ~> char->integer (+ -48)))
 
-; (def data 
-;      (~> raw-string
-;          (string-split "0" #:repeat? true)
-;          (filter (λ (str) (< 13 (string-length str))) _)
-;          (map string->number _)
-;          (map N->list _)
-; ))
+(fn (product-range start)
+    (for/fold ([product 1])
+              ([n (in-vector data start (+ 13 start))])
+              (* product n)))
 
-raw-string
+(for/fold ([best 0])
+          ([n (range 0 (+ -13 (vector-length data)))])
+          (if (< best (product-range n))
+              (product-range n)
+              best
+))

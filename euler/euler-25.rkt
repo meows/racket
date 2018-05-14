@@ -16,8 +16,7 @@
 ; What is the index of the first term in the Fibonacci sequence to contain 1000
 ; digits?
 
-(fn (number-length num)
-    (~> num number->string string-length))
+(fn number-length (λ~> number->string string-length))
 
 (fn (many-digits? n)
     (= 1000 (number-length n)))

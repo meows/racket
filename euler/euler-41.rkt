@@ -19,9 +19,9 @@
 (fn all-unique? (compose not check-duplicates))
 
 (fn (lists->naturals lst-of-digits)
-    (map (λ (digits)
-            (string->number (string-append* (map number->string digits))))
+    (map (λ~> (map number->string _) string-append* string->number)
          lst-of-digits))
+         ;;; (λ (digits) (string->number (string-append* (map number->string digits))))
 
 (def lst-of-permutations (permutations (range 1 8)))
 

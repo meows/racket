@@ -108,8 +108,8 @@ this time I'm going to adapt the rule to work with 3 inputs or _parameters_, and
 I'm going to use extra long names for everything just for show.
 
 ``` clojure
-(define (prism-volume length width height)
-        (* length width height)
+(define (prism-volume l w h)
+        (* l w h)
 )
 ```
 
