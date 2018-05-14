@@ -11,7 +11,7 @@
 ;; Project Euler
 ;; Problem 8
 
-(def raw (apply string-append (file->lines "/home/meow/Projects/racket/euler/data/euler-08.txt")))
+(def raw (apply string-append (file->lines "data/euler-08.txt")))
 (def data (for/vector ([n raw]) (char->number n)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
