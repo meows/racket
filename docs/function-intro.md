@@ -12,7 +12,7 @@ and the first symbol is assumed by default to be a function, even if it's a
 single-item expression. To get used to how they work, let's look at how they're
 used first, and then we'll look at how to create our own functions.
 
-## Using Functions
+## Using Arithemtic Functions
 
 Here are some examples of *applying* or using a function, with functions you're
 probably already familiar with. See if you can understand what they do. Notice
@@ -46,34 +46,6 @@ that the first [atom](atom.md) inside a list is assumed to be a function.
 (/ 10 0)   ;; Error: division by 0 has no meaning.
 (/ 8 2 2)  ;; → 2
 (/ 27 3 3) ;; → 3
-
-;; Exponentiation by power of 2
-(expt 1 2) ;; → 1
-(expt 2 2) ;; → 4
-(expt 3 2) ;; → 9
-(expt 4 2) ;; → 16
-(expt 5 2) ;; → 25
-
-;; Exponentiation by power of 1/2
-(expt  1 1/2) ;; → 1
-(expt  4 1/2) ;; → 2
-(expt  9 1/2) ;; → 3
-(expt 16 1/2) ;; → 4
-(expt 25 1/2) ;; → 5
-
-;; Exponentiation by power of 3
-(expt 1 3) ;; → 1
-(expt 2 3) ;; → 8
-(expt 3 3) ;; → 27
-(expt 4 3) ;; → 64
-(expt 5 3) ;; → 125
-
-;; Exponentiation by power of 1/3
-(expt   1 1/3) ;; → 1
-(expt   8 1/3) ;; → 2
-(expt  27 1/3) ;; → 3
-(expt  64 1/3) ;; → 4
-(expt 125 1/3) ;; → 5
 ```
 
 ## Extra Tricky Examples

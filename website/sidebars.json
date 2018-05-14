@@ -11,6 +11,7 @@
       ],
       "Language Guide": [
          "function-intro",
+         "arithmetic-advanced",
          "define",
          "lambda",
          "comparisons",
