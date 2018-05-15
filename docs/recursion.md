@@ -8,9 +8,7 @@ hide_title: true
 
 > WIP: Do not use yet.
 
-Mathematicians and scientists can sometimes be pretty lazy, and because they use
-functions so frequently, one of the lazy tricks they use is to define a function
-with _itself_.
+Recursion is when you use a function to define itself.
 
 ## Factorial `!`
 
@@ -18,52 +16,57 @@ The factorial operator is written like `!`, and when used on a number like `5!`,
 it means `5 * 4 * 3 * 2 * 1`, which happens to equal `120`. Here are a few more
 examples to get familiar with:
 
-row    | term | result
------- | ---- | ------
-0      |  0!  | 1
-1      |  1!  | 1
-2      |  2!  | 2
-3      |  3!  | 6
-4      |  4!  | 24
-5      |  5!  | 120
-6      |  6!  | 720
-7      |  7!  | 5040
-8      |  8!  | 40,320
-9      |  9!  | 362,880
-10     | 10!  | 3,628,800
+input | function | result
+----- | -------- | ------
+0     | !        | 1
+1     | !        | 1
+2     | !        | 2
+3     | !        | 6
+4     | !        | 24
+5     | !        | 120
+6     | !        | 720
+7     | !        | 5040
+8     | !        | 40,320
+9     | !        | 362,880
+10    | !        | 3,628,800
 
 One thing you might've noticed in the above table is that the results of any row
-equals the previous row result multiplied by the current row number. For
-example, look at the difference between `9!` and `10!`, which differs by `10`.
-This pattern is in every row except for the 0th row.
+equals the previous row result multiplied by the current input number. For
+example, observe that `10!` is the same as `10 * 9!`. You can also check whether
+`9!` is the same as `9 * 8!`, and whether this pattern repeats everywhere.
 
 ### Writing our own factorial
 
-* below is a function named `factorial`
-* `factorial` takes two inputs
-   - one is `n`
-   - the other is `result`, with a default input of `1`
-* if the input `n` is zero, then we get back `1`
-* if the input is anything else, curiously, we give back the same function, but
-  with different inputs inside
-* at each step, we check if `n` is zero, and if not, we subtract `n` by one and
-  multiply the `result` by `n`
+* `factorial` takes for input a natural number `n`
+* if `n` is zero, we get back `1`
+* if `n` is anything else we give back `factorial` with `n - 1`
 
 ``` clojure
-(define (factorial n [result 1])
+(define (factorial n)
         (if (zero? n)
-            result
-            (factorial (- n 1) (* n result))
+            1
+            (* n (factorial (sub1 n)))
 ))
 
 ; if the steps for (factorial 5) were written out:
-(factorial 5 1)
-(factorial 4 5)
-(factorial 3 20)
-(factorial 2 60)
-(factorial 1 120)
-(factorial 0 120) ; we stop when n is zero
+(factorial 5)
+(* 5 (factorial 4))
+(* 5 (* 4 (factorial 3)))
+(* 5 (* 4 (* 3 (factorial 2))))
+(* 5 (* 4 (* 3 (* 2 (factorial 1)))))
+(* 5 (* 4 (* 3 (* 2 (* 1 (factorial 0))))))
+(* 5 (* 4 (* 3 (* 2 (* 1 1)))))
+(* 5 (* 4 (* 3 (* 2 1))))
+(* 5 (* 4 (* 3 2)))
+(* 5 (* 4 6))
+(* 5 24)
+120
 ```
+
+> DrRacket has a tool to let you walk through each step of the evaluation of an
+> expression. The tool is located under a button called `debug`, and when you
+> are there, you can click `Step` to repeatedly to walk through each step of
+> evaluation.
 
 ### A little aside about `0!`
 

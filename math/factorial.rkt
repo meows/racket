@@ -13,8 +13,8 @@
         (factorial (-- n) #:product (* n p))))
 
 (fn (fact n) 
-    (if (one? n) 
-        1 
+    (if (zero? n) 
+        1
         (* n (factorial (-- n)))))
 
 (time (factorial 100000))

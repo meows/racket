@@ -43,6 +43,10 @@ From here we can see that `π` is merely the ratio of the circumference to the
 diameter, or `C` divided by `D`. As it happens, the ratio of `C:D` is the 
 _same for all circles ever_, which is what makes `π` so useful.
 
+## Triangles
+
+![triangle](/img/circle-1.svg)
+
 ## Questions to review
 
 * What's the definition of a circle?

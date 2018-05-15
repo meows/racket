@@ -13,16 +13,13 @@
 
 ;; Find the sum of all even Fibonacci numbers under 4 million.
 
+(def max 4000000)
+
 ; a   - leading fib state tuple
 ; b   - trailing fib state tuple
 ; sum - running sum of even fibonacci numbers
-(fn (euler-2 [max 4000000])
-    (fn (loop [a 1] [b 0] #:sum [sum 0])
-        (if (< max a)
-            sum
-            (loop (+ a b)
-                  a
-                  #:sum (if (even? a) (+ sum a) sum)))
-))
+(fn (euler-2 [a 1] [b 0] #:sum [sum 0])
+    (cond [(< max a) sum]
+          [else (euler-2 (+ a b) a #:sum (if (odd? a) sum (+ sum a)))]))
 
 (time (euler-2))  ;; → 4613732
