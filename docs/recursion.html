@@ -101,7 +101,7 @@ evaluation.</p>
 that now it takes two inputs, <code>n</code> and <code>p</code>. Also notice that <code>p</code> is surrounded by
 square brackets and paired with <code>1</code>. This is called a default input, and just
 means that whenever you don't give anything for <code>p</code>, then <code>1</code> will be secretly
-given to your function.</p>
+given to your function in place of <code>p</code>.</p>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example #2</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n [p <span class="hljs-number">1</span>])
         (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
