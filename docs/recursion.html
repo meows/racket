@@ -20,7 +20,7 @@ it means <code>5 * 4 * 3 * 2 * 1</code>, which happens to equal <code>120</code>
 examples to get familiar with:</p>
 <table>
 <thead>
-<tr><th><code>n</code></th><th>function</th><th>result</th></tr>
+<tr><th>n</th><th>function</th><th>result</th></tr>
 </thead>
 <tbody>
 <tr><td>0</td><td>!</td><td>1</td></tr>
@@ -37,19 +37,20 @@ examples to get familiar with:</p>
 </tbody>
 </table>
 <p>One thing you might've noticed in the above table is that the result of any row
-equals the previous row result multiplied by the current input number. For
-example, observe that <code>10!</code> is the same as <code>10 * 9!</code>. You can also check whether
-<code>9!</code> is the same as <code>9 * 8!</code>, and whether this pattern repeats everywhere.</p>
+equals the previous row result multiplied by the current <code>n</code>. For example,
+observe that <code>10!</code> is the same as <code>10 * 9!</code>. You can also check whether <code>9!</code> is
+the same as <code>9 * 8!</code>, and whether this pattern repeats everywhere.</p>
 <p>Using <em>recursion</em>, we can define the factorial function in just two simple
 rules, assuming <code>n</code> is a natural number:</p>
 <ol>
 <li>The <code>factorial(0)</code> is equal to <code>1</code></li>
 <li>The <code>factorial(n)</code> is equal to <code>n * factorial(n - 1)</code></li>
 </ol>
-<p>The first rule is simple, but the second rule is incredibly elegant because
-while the first rule tells you what <code>factorial(0)</code> literally is, the second rule
-tells you the factorial of any and all other <code>n</code>. And in just two rules we have
-defined the <code>factorial</code> function for all the natural numbers. Lazy or elegant?</p>
+<p>The first rule is simple because it just tells you what <code>factorial(0)</code> literally
+is, but the second rule is incredibly elegant because it tells you the factorial
+of any and all other <code>n</code>. It's the second rule that we call recursive because it
+uses <code>factorial</code> to define itself. And in just two rules we have defined the
+<code>factorial</code> function for all the natural numbers. Lazy or elegant?</p>
 <p>Now that we have explored the mathematical definition of <code>factorial</code>, let's see
 how it looks when we write it in Racket.</p>
 <h2><a class="anchor" aria-hidden="true" id="writing-our-own-factorial"></a><a href="#writing-our-own-factorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Writing our own factorial</h2>
