@@ -39,4 +39,3 @@ Racket, the language that we're going to be using:
 Other than that, feel free to make up new names, words, or *atoms*, as you
 please. `is-this-a-prime-number?` is a valid name in Racket if you want to use
 that, although that's probably a little long.
-

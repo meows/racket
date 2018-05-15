@@ -65,4 +65,3 @@ that the first [atom](atom.md) inside a list is assumed to be a function.
 * `-` subtraction
 * `*` multiplication
 * `/` division
-* `expt` exponentiation

@@ -1,6 +1,12 @@
-## Number Operations
+---
+id: arithmetic-advanced
+sidebar_label: Advanced Arithmetic
+hide_title: true
+---
 
-### `expt` Exponentiation
+# Number Operations
+
+## `expt` Exponentiation
 
 The exponentiation function `expt` requires two inputs, the first one being the 
 *base*, the second one being the exponent (or power). Therefore, `(expt 3 4)` 
@@ -43,7 +49,7 @@ interpreted as _4 to the power of 3_.
 (expt 125 1/3) ;; → 5
 ```
 
-### `modulo` Modulo
+## `modulo` Modulo
 
 The modulo function `modulo` helps you find the remainder of a division between 
 two numbers, where the first number is the *dividend*, and the second number is 
