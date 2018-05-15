@@ -7,8 +7,6 @@ hide_title: true
 
 # Values and Types
 
-> Reading time: 10 to 15 minutes.
-
 ## Grouping values
 
 Just about all programming languages allow you to take information in some way,

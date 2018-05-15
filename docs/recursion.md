@@ -19,9 +19,10 @@ which we can exploit with recursion.
 
 ## Factorial `!`
 
-The factorial operator is written like `!`, and when used on a number like `5!`,
-it means `5 * 4 * 3 * 2 * 1`, which happens to equal `120`. Here are a few more
-examples to get familiar with:
+The factorial is a function which operates on a natural number `n` to give you
+the product of all positive naturals less than or equal to `n`, and it looks
+like `!`. When used on a number like `5!`, it means `5 * 4 * 3 * 2 * 1`, which 
+equals `120`. Here are a few more examples to get familiar with:
 
 n     | function | result
 ----- | -------- | ------

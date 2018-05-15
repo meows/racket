@@ -6,8 +6,6 @@ hide_title: true
 
 # `define`
 
-> Reading time: 15 to 20 minutes.
-
 ## Saving information behind a name
 
 When your computer saves information, whether in RAM or in the hard drive, it

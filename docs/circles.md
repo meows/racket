@@ -1,11 +1,11 @@
 ---
-id: trigonometry
-title: Triangles
+id: circles
+title: Circles
 hide_title: true
-sidebar_label: Triangles
+sidebar_label: Circles
 ---
 
-# Circles and Triangles
+# Circles
 
 > WIP. Do not use.
 
@@ -32,10 +32,9 @@ famous number in our society which many know simply as `3.14`; some are aware
 that more numbers come after, but what is `π`? Is it just a bunch of numbers
 that people memorize?
 
-As it happens, many people are also already aware of how to calculate the 
-circumference of a circle, which is just `π` multiplied by the diameter. If you
-take the formula `C = π * D`, and you divide both sides by `D`, you'll end up
-with:
+You may already be aware of how to calculate the circumference of a circle, 
+which is just `π` multiplied by the diameter. If you take the formula 
+`C = π * D`, and you divide both sides by `D`, you'll end up with:
 
 `π = C / D`
 
@@ -43,9 +42,24 @@ From here we can see that `π` is merely the ratio of the circumference to the
 diameter, or `C` divided by `D`. As it happens, the ratio of `C:D` is the 
 _same for all circles ever_, which is what makes `π` so useful.
 
-## Triangles
+## Radians
 
-![triangle](/img/circle-1.svg)
+If the circumference of a circle can be calculated by `π * diameter`, and the
+radius of the circle is `1`, then the circumference is `2π`. A **radian** is a
+unit of measurement that makes use of `π` to describe angles. If a full circle
+is `2π`, then a half circle is `π`, and 90° is `π/2`.
+
+Mathematicians and
+physicists frequently, or almost entirely use radians instead of degrees to 
+measure angles.
+
+Part of the reason for this preference is because while `π` has a lot of deep 
+connections in math, nobody really knows why we chose to divide a circle into 
+360 degrees. 
+
+One theory is that the Persian calendar used to have 360 days in a year. Another
+possibility is that 360 works nicely in a base 60 number system, which was used 
+by the Babylonians. Unfortunately the reason has long been lost in history.
 
 ## Questions to review
 
@@ -53,4 +67,6 @@ _same for all circles ever_, which is what makes `π` so useful.
 * What's _radius_?
 * What's _diameter_?
 * What's _circumference_?
-* What's the definition of `π`?
+* What's the definition of `π` in terms of diameter and circumference?
+* What's a 30° angle in radians?
+* What's a 180° angle in radians?
