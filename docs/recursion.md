@@ -79,7 +79,7 @@ how it looks when we write it in Racket.
 (* 5 (* 4 (factorial 3)))
 (* 5 (* 4 (* 3 (factorial 2))))
 (* 5 (* 4 (* 3 (* 2 (factorial 1)))))
-(* 5 (* 4 (* 3 (* 2 (* 1 1      )))))
+(* 5 (* 4 (* 3 (* 2 (* 1 1)))))
 (* 5 (* 4 (* 3 (* 2 1))))
 (* 5 (* 4 (* 3 2)))
 (* 5 (* 4 6))
@@ -95,8 +95,9 @@ computational "cost" of any strategy, program, or function you use to solve a
 problem -- by reducing or simplifying the problem down to a matter of counting
 steps.
 
-Also, how many steps would we add if we evaluated `(factorial 6)` instead?
-How about `(factorial 7)`?
+If we don't count the very first line of `(factorial 5)`, we should arrive to
+the count of 10 lines. Also, how many steps would we add if we evaluated 
+`(factorial 6)` instead? How about `(factorial 7)`?
 
 > DrRacket has a tool to let you walk through each step of the evaluation of an
 > expression. The tool is located under a button called `debug`, and when you
@@ -115,7 +116,7 @@ given to your function.
 ;; Example #2
 (define (factorial n [p 1])
         (if (zero? n)
-            1
+            p
             (factorial (- n 1) (* n p))
 ))
 
@@ -125,14 +126,14 @@ given to your function.
 (factorial 3 20)
 (factorial 2 60)
 (factorial 1 120)
-(factorial 0 120)
 120
 ```
 
 ### Observations
 
-How many steps would we add if we evaluated `(factorial 6)` instead? How about
-`(factorial 7)`?
+If we don't count the very first line, we should find that `(factorial 5)` runs
+for five times before finding the answer. How many more lines would we add if we 
+evaluated `(factorial 6)` instead? How about `(factorial 7)`?
 
 Also, do you notice how the shape of Example #1 looks like a sideways pyramid 
 pointing to our right, while the shape of Example #2 looks like a straight line?
