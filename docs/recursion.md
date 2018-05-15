@@ -110,7 +110,7 @@ Below we have a very similar `factorial` function from the one above, except
 that now it takes two inputs, `n` and `p`. Also notice that `p` is surrounded by
 square brackets and paired with `1`. This is called a default input, and just
 means that whenever you don't give anything for `p`, then `1` will be secretly
-given to your function.
+given to your function in place of `p`.
 
 ``` clojure
 ;; Example #2

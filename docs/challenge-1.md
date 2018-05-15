@@ -1,6 +1,7 @@
 ---
 id: challenge-1
 sidebar_label: Challenge #1
+title: Challenge #1
 hide_title: true
 ---
 
