@@ -9,8 +9,8 @@ hide_title: true
 Mathematicians, more than anyone else, love to be lazy (or "elegant") when they 
 write. When mathematicians notice a repeating pattern, they like to find a way 
 to easily describe this pattern so they don't have to write as much. One 
-particular tool they use is called _recursion_, which is the use of a function 
-to define itself.
+particular tool they use is called _recursion_, which is the use of a function
+or rule to define itself.
 
 This definition might confuse some, so it may be easier to dive straight into an
 example, but in order to do so, we must first read a little bit about the
@@ -22,7 +22,8 @@ which we can exploit with recursion.
 The factorial is a function which operates on a natural number `n` to give you
 the product of all positive naturals less than or equal to `n`, and it looks
 like `!`. When used on a number like `5!`, it means `5 * 4 * 3 * 2 * 1`, which 
-equals `120`. Here are a few more examples to get familiar with:
+equals `120`. If we evaluated `6!`, we'd get `6 * 5 * 4 * 3 * 2 * 1`, which is
+`720`. Here are a few more examples to get familiar with:
 
 n     | function | result
 ----- | -------- | ------
@@ -65,20 +66,20 @@ how it looks when we write it in Racket.
 * if `n` is anything else we give back `(* n (factorial (- n 1)))`
 
 ``` clojure
+;; Example #1
 (define (factorial n)
         (if (zero? n)
             1
             (* n (factorial (- n 1)))
 ))
 
-; if the steps for (factorial 5) were written out:
+; if the "steps" for (factorial 5) were written out:
 (factorial 5)
 (* 5 (factorial 4))
 (* 5 (* 4 (factorial 3)))
 (* 5 (* 4 (* 3 (factorial 2))))
 (* 5 (* 4 (* 3 (* 2 (factorial 1)))))
-(* 5 (* 4 (* 3 (* 2 (* 1 (factorial 0))))))
-(* 5 (* 4 (* 3 (* 2 (* 1 1)))))
+(* 5 (* 4 (* 3 (* 2 (* 1 1      )))))
 (* 5 (* 4 (* 3 (* 2 1))))
 (* 5 (* 4 (* 3 2)))
 (* 5 (* 4 6))
@@ -86,14 +87,16 @@ how it looks when we write it in Racket.
 120
 ```
 
-Notice in the above example how many steps it takes to get to the answer,
-because that's one major way that computer scientists and engineers count the
-computational "cost" of any strategy, program, or function you use to solve a 
-problem.
+### Observations
 
-Even though I only showed you `(factorial 5)`, you can imagine that if you tried
-`(factorial 100)` or any other large number, it will always still have the same 
-pyramid-looking shape.
+Notice in the above example how many "steps" it takes to get to the answer.
+This is one major way that computer scientists and engineers count the
+computational "cost" of any strategy, program, or function you use to solve a 
+problem -- by reducing or simplifying the problem down to a matter of counting
+steps.
+
+Also, how many steps would we add if we evaluated `(factorial 6)` instead?
+How about `(factorial 7)`?
 
 > DrRacket has a tool to let you walk through each step of the evaluation of an
 > expression. The tool is located under a button called `debug`, and when you
@@ -109,12 +112,14 @@ means that whenever you don't give anything for `p`, then `1` will be secretly
 given to your function.
 
 ``` clojure
+;; Example #2
 (define (factorial n [p 1])
         (if (zero? n)
             1
             (factorial (- n 1) (* n p))
 ))
 
+; if the "steps" for (factorial 5) were written out:
 (factorial 5 1) ; 1 is given as a default input
 (factorial 4 5)
 (factorial 3 20)
@@ -124,16 +129,27 @@ given to your function.
 120
 ```
 
-You can imagine that even for higher inputs, such as `(factorial 100)`, you
-would still get back this same "flat line" shape, with fewer steps than the 
-first example of `factorial`.
+### Observations
+
+How many steps would we add if we evaluated `(factorial 6)` instead? How about
+`(factorial 7)`?
+
+Also, do you notice how the shape of Example #1 looks like a sideways pyramid 
+pointing to our right, while the shape of Example #2 looks like a straight line?
+If you evaluated a large input like `(factorial 100)`, do you expect the shape
+to change for either example?
 
 ## A little aside about `0!`
 
 Of all the examples of factorials, the one that is probably most remarkable to
-you is `0!`. Why might that equal `1`? One way of thinking about it is that for
-addition, a way to do nothing is to add by zero, and that for multiplication,
-a way to do nothing is to multiply by one.
+you is `0!`. Why might that equal `1`? For now I'm going to give you a rough
+intuitive reason. One way of thinking about it is that for addition, a way to do 
+nothing is to add by zero, and that for multiplication, a way to do nothing is 
+to multiply by one.
+
+So if the factorial function is capable of multiplying your natural number `n`
+with all the _positive_ naturals equal to or lesser than `n`, and you chose `0`,
+then in a way that's like saying you want `(*)`.
 
 ``` clojure
 (+)         ;; →  0
@@ -145,3 +161,13 @@ a way to do nothing is to multiply by one.
 (+ (+) 5 5) ;; → 10
 (* (*) 5 5) ;; → 25
 ```
+
+## Review
+
+* What is recursion?
+* Define the factorial function on the natural numbers `n` using only two rules.
+* Why might `10!` be the same as `10 * 9!`?
+* What is `10!` divided by `10`?
+* What is `10!` divided by `9!`?
+* What is the factorial of `0`?  What's a rough reason why `0!` is `1` and not `0`?
+* What is one way that computer scientists measure the cost of your function?
