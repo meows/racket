@@ -5,10 +5,11 @@
             nav.classList.toggle('docsSliderActive');
           };
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="recursion"></a><a href="#recursion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recursion</h1>
-<blockquote>
-<p>WIP: Do not use yet.</p>
-</blockquote>
-<p>Recursion is when you use a function to define itself.</p>
+<p>Mathematicians, more than anyone else, love to be lazy (or &quot;elegant&quot;) when they
+write. When mathematicians notice a repeating pattern, they like to find a way
+to easily describe this pattern so they don't have to write as much. One
+particular tool they use is called <em>recursion</em>, which is the use of a function
+to define itself.</p>
 <h2><a class="anchor" aria-hidden="true" id="factorial"></a><a href="#factorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Factorial <code>!</code></h2>
 <p>The factorial operator is written like <code>!</code>, and when used on a number like <code>5!</code>,
 it means <code>5 * 4 * 3 * 2 * 1</code>, which happens to equal <code>120</code>. Here are a few more
@@ -35,9 +36,21 @@ examples to get familiar with:</p>
 equals the previous row result multiplied by the current input number. For
 example, observe that <code>10!</code> is the same as <code>10 * 9!</code>. You can also check whether
 <code>9!</code> is the same as <code>9 * 8!</code>, and whether this pattern repeats everywhere.</p>
-<h3><a class="anchor" aria-hidden="true" id="writing-our-own-factorial"></a><a href="#writing-our-own-factorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Writing our own factorial</h3>
+<p>Using <em>recursion</em>, we can define the factorial function in just two simple
+rules, assuming <code>n</code> is a natural number:</p>
+<ol>
+<li>The <code>factorial(0)</code> is equal to <code>1</code></li>
+<li>The <code>factorial(n)</code> is equal to <code>n * factorial(n - 1)</code></li>
+</ol>
+<p>The first rule is simple, but the second rule is incredibly elegant because
+while the first rule tells you what <code>factorial(0)</code> literally is, the second rule
+tells you the factorial of any and all other <code>n</code>. And in just two rules we have
+defined the <code>factorial</code> function for all the natural numbers. Lazy or elegant?</p>
+<p>Now that we have explored the mathematical definition of <code>factorial</code>, let's see
+how it looks when we write it in Racket.</p>
+<h2><a class="anchor" aria-hidden="true" id="writing-our-own-factorial"></a><a href="#writing-our-own-factorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Writing our own factorial</h2>
 <ul>
-<li><code>factorial</code> takes an input <code>n</code></li>
+<li><code>factorial</code> takes for input a natural number <code>n</code></li>
 <li>if <code>n</code> is zero, we get back <code>1</code></li>
 <li>if <code>n</code> is anything else we give back <code>factorial</code> with <code>n - 1</code></li>
 </ul>
@@ -67,7 +80,7 @@ expression. The tool is located under a button called <code>debug</code>, and wh
 are there, you can click <code>Step</code> to repeatedly to walk through each step of
 evaluation.</p>
 </blockquote>
-<h3><a class="anchor" aria-hidden="true" id="a-little-aside-about-0"></a><a href="#a-little-aside-about-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A little aside about <code>0!</code></h3>
+<h2><a class="anchor" aria-hidden="true" id="a-little-aside-about-0"></a><a href="#a-little-aside-about-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A little aside about <code>0!</code></h2>
 <p>Of all the examples of factorials, the one that is probably most remarkable to
 you is <code>0!</code>. Why might that equal <code>1</code>? One way of thinking about it is that for
 addition, a way to do nothing is to add by zero, and that for multiplication,
@@ -81,4 +94,4 @@ a way to do nothing is to multiply by one.</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span>) <span class="hljs-number">5</span> <span class="hljs-number">5</span>) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>) <span class="hljs-number">5</span> <span class="hljs-number">5</span>) <span class="hljs-comment">;; → 25</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="values.html">← Values</a><a class="docs-next button" href="trigonometry.html">Triangles →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#factorial">Factorial <code>!</code></a><ul class="toc-headings"><li><a href="#writing-our-own-factorial">Writing our own factorial</a></li><li><a href="#a-little-aside-about-0">A little aside about <code>0!</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="values.html">← Values</a><a class="docs-next button" href="trigonometry.html">Triangles →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#factorial">Factorial <code>!</code></a></li><li><a href="#writing-our-own-factorial">Writing our own factorial</a></li><li><a href="#a-little-aside-about-0">A little aside about <code>0!</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
