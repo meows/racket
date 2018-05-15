@@ -80,12 +80,43 @@ how it looks when we write it in Racket.</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> <span class="hljs-number">24</span>)
 <span class="hljs-number">120</span>
 </code></pre>
+<p>Notice in the above example how many steps it takes to get to the answer,
+because that's one major way that computer scientists and engineers count the
+computational &quot;cost&quot; of any strategy, program, or function you use to solve a
+problem.</p>
+<p>Even though I only showed you <code>(factorial 5)</code>, you can imagine that if you tried
+<code>(factorial 100)</code> or any other large number, it would still have the same
+pyramid-looking shape with about double the number of steps as the input <code>n</code>,
+because each rung of the pyramid is made by counting down from <code>n</code> to <code>0</code>.</p>
 <blockquote>
 <p>DrRacket has a tool to let you walk through each step of the evaluation of an
 expression. The tool is located under a button called <code>debug</code>, and when you
 are there, you can click <code>Step</code> to repeatedly to walk through each step of
 evaluation.</p>
 </blockquote>
+<h2><a class="anchor" aria-hidden="true" id="one-more-try-at-factorials"></a><a href="#one-more-try-at-factorials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>One more try at factorials</h2>
+<p>Below we have a very similar <code>factorial</code> function from the one above, except
+that now it takes two inputs, <code>n</code> and <code>p</code>. Also notice that <code>p</code> is surrounded by
+square brackets and paired with <code>1</code>. This is called a default input, and just
+means that whenever you don't give anything for <code>p</code>, then <code>1</code> will be secretly
+given to your function.</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n [p <span class="hljs-number">1</span>])
+        (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+            <span class="hljs-number">1</span>
+            (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
+))
+
+(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span> <span class="hljs-number">1</span>) <span class="hljs-comment">; 1 is given as a default input</span>
+(<span class="hljs-name">factorial</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)
+(<span class="hljs-name">factorial</span> <span class="hljs-number">3</span> <span class="hljs-number">20</span>)
+(<span class="hljs-name">factorial</span> <span class="hljs-number">2</span> <span class="hljs-number">60</span>)
+(<span class="hljs-name">factorial</span> <span class="hljs-number">1</span> <span class="hljs-number">120</span>)
+(<span class="hljs-name">factorial</span> <span class="hljs-number">0</span> <span class="hljs-number">120</span>)
+<span class="hljs-number">120</span>
+</code></pre>
+<p>You can imagine that even for higher inputs, such as <code>(factorial 100)</code>, you
+would still get back this same &quot;flat line&quot; shape, with fewer steps than the
+first example of <code>factorial</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="a-little-aside-about-0"></a><a href="#a-little-aside-about-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A little aside about <code>0!</code></h2>
 <p>Of all the examples of factorials, the one that is probably most remarkable to
 you is <code>0!</code>. Why might that equal <code>1</code>? One way of thinking about it is that for
@@ -100,4 +131,4 @@ a way to do nothing is to multiply by one.</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span>) <span class="hljs-number">5</span> <span class="hljs-number">5</span>) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>) <span class="hljs-number">5</span> <span class="hljs-number">5</span>) <span class="hljs-comment">;; → 25</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="values.html">← Values</a><a class="docs-next button" href="circles.html">Circles →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#factorial">Factorial <code>!</code></a></li><li><a href="#writing-our-own-factorial">Writing our own factorial</a></li><li><a href="#a-little-aside-about-0">A little aside about <code>0!</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="values.html">← Values</a><a class="docs-next button" href="circles.html">Circles →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#factorial">Factorial <code>!</code></a></li><li><a href="#writing-our-own-factorial">Writing our own factorial</a></li><li><a href="#one-more-try-at-factorials">One more try at factorials</a></li><li><a href="#a-little-aside-about-0">A little aside about <code>0!</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
