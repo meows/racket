@@ -6,9 +6,11 @@ hide_title: true
 
 # Recursion
 
-> WIP: Do not use yet.
-
-Recursion is when you use a function to define itself.
+Mathematicians, more than anyone else, love to be lazy (or "elegant") when they 
+write. When mathematicians notice a repeating pattern, they like to find a way 
+to easily describe this pattern so they don't have to write as much. One 
+particular tool they use is called _recursion_, which is the use of a function 
+to define itself.
 
 ## Factorial `!`
 
@@ -35,7 +37,21 @@ equals the previous row result multiplied by the current input number. For
 example, observe that `10!` is the same as `10 * 9!`. You can also check whether
 `9!` is the same as `9 * 8!`, and whether this pattern repeats everywhere.
 
-### Writing our own factorial
+Using _recursion_, we can define the factorial function in just two simple 
+rules, assuming `n` is a natural number:
+
+1. The `factorial(0)` is equal to `1`
+2. The `factorial(n)` is equal to `n * factorial(n - 1)`
+
+The first rule is simple, but the second rule is incredibly elegant because
+while the first rule tells you what `factorial(0)` literally is, the second rule
+tells you the factorial of any and all other `n`. And in just two rules we have
+defined the `factorial` function for all the natural numbers. Lazy or elegant?
+
+Now that we have explored the mathematical definition of `factorial`, let's see
+how it looks when we write it in Racket.
+
+## Writing our own factorial
 
 * `factorial` takes for input a natural number `n`
 * if `n` is zero, we get back `1`
@@ -68,7 +84,7 @@ example, observe that `10!` is the same as `10 * 9!`. You can also check whether
 > are there, you can click `Step` to repeatedly to walk through each step of
 > evaluation.
 
-### A little aside about `0!`
+## A little aside about `0!`
 
 Of all the examples of factorials, the one that is probably most remarkable to
 you is `0!`. Why might that equal `1`? One way of thinking about it is that for
