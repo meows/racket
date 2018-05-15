@@ -104,7 +104,7 @@ given to your function.</p>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example #2</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n [p <span class="hljs-number">1</span>])
         (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-            <span class="hljs-number">1</span>
+            p
             (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
 ))
 
