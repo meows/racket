@@ -36,12 +36,12 @@ examples to get familiar with:</p>
 <tr><td>10</td><td>!</td><td>3,628,800</td></tr>
 </tbody>
 </table>
-<p>One thing you might've noticed in the above table is that the result of any row
-equals the previous row result multiplied by the current <code>n</code>. For example,
-observe that <code>10!</code> is the same as <code>10 * 9!</code>. You can also check whether <code>9!</code> is
-the same as <code>9 * 8!</code>, and whether this pattern repeats everywhere.</p>
-<p>Using <em>recursion</em>, we can define the factorial function in just two simple
-rules, assuming <code>n</code> is a natural number:</p>
+<p>One thing you might've noticed in the above table is that the result of any
+current row equals the previous row's result multiplied by the current <code>n</code>. For
+example, observe that <code>10!</code> is the same as <code>10 * 9!</code>. You can also check whether
+<code>9!</code> is the same as <code>9 * 8!</code>, and whether this pattern repeats everywhere.</p>
+<p>Using recursion, we can define the factorial function in just two simple rules,
+assuming <code>n</code> is a natural number:</p>
 <ol>
 <li>The <code>factorial(0)</code> is equal to <code>1</code></li>
 <li>The <code>factorial(n)</code> is equal to <code>n * factorial(n - 1)</code></li>
@@ -57,12 +57,12 @@ how it looks when we write it in Racket.</p>
 <ul>
 <li><code>factorial</code> takes for input a natural number <code>n</code></li>
 <li>if <code>n</code> is zero, we get back <code>1</code></li>
-<li>if <code>n</code> is anything else we give back <code>factorial</code> with <code>n - 1</code></li>
+<li>if <code>n</code> is anything else we give back <code>(* n (factorial (- n 1)))</code></li>
 </ul>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n)
         (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
             <span class="hljs-number">1</span>
-            (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n)))
+            (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))
 ))
 
 <span class="hljs-comment">; if the steps for (factorial 5) were written out:</span>
