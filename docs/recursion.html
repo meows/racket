@@ -87,8 +87,9 @@ This is one major way that computer scientists and engineers count the
 computational &quot;cost&quot; of any strategy, program, or function you use to solve a
 problem -- by reducing or simplifying the problem down to a matter of counting
 steps.</p>
-<p>Also, how many steps would we add if we evaluated <code>(factorial 6)</code> instead?
-How about <code>(factorial 7)</code>?</p>
+<p>If we don't count the very first line of <code>(factorial 5)</code>, we should arrive to
+the count of 10 lines. Also, how many steps would we add if we evaluated
+<code>(factorial 6)</code> instead? How about <code>(factorial 7)</code>?</p>
 <blockquote>
 <p>DrRacket has a tool to let you walk through each step of the evaluation of an
 expression. The tool is located under a button called <code>debug</code>, and when you
@@ -114,12 +115,12 @@ given to your function.</p>
 (<span class="hljs-name">factorial</span> <span class="hljs-number">3</span> <span class="hljs-number">20</span>)
 (<span class="hljs-name">factorial</span> <span class="hljs-number">2</span> <span class="hljs-number">60</span>)
 (<span class="hljs-name">factorial</span> <span class="hljs-number">1</span> <span class="hljs-number">120</span>)
-(<span class="hljs-name">factorial</span> <span class="hljs-number">0</span> <span class="hljs-number">120</span>)
 <span class="hljs-number">120</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="observations-1"></a><a href="#observations-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h3>
-<p>How many steps would we add if we evaluated <code>(factorial 6)</code> instead? How about
-<code>(factorial 7)</code>?</p>
+<p>If we don't count the very first line, we should find that <code>(factorial 5)</code> runs
+for five times before finding the answer. How many more lines would we add if we
+evaluated <code>(factorial 6)</code> instead? How about <code>(factorial 7)</code>?</p>
 <p>Also, do you notice how the shape of Example #1 looks like a sideways pyramid
 pointing to our right, while the shape of Example #2 looks like a straight line?
 If you evaluated a large input like <code>(factorial 100)</code>, do you expect the shape
