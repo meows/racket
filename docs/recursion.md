@@ -86,10 +86,47 @@ how it looks when we write it in Racket.
 120
 ```
 
+Notice in the above example how many steps it takes to get to the answer,
+because that's one major way that computer scientists and engineers count the
+computational "cost" of any strategy, program, or function you use to solve a 
+problem.
+
+Even though I only showed you `(factorial 5)`, you can imagine that if you tried
+`(factorial 100)` or any other large number, it will always still have the same 
+pyramid-looking shape.
+
 > DrRacket has a tool to let you walk through each step of the evaluation of an
 > expression. The tool is located under a button called `debug`, and when you
 > are there, you can click `Step` to repeatedly to walk through each step of
 > evaluation.
+
+## One more try at factorials
+
+Below we have a very similar `factorial` function from the one above, except
+that now it takes two inputs, `n` and `p`. Also notice that `p` is surrounded by
+square brackets and paired with `1`. This is called a default input, and just
+means that whenever you don't give anything for `p`, then `1` will be secretly
+given to your function.
+
+``` clojure
+(define (factorial n [p 1])
+        (if (zero? n)
+            1
+            (factorial (- n 1) (* n p))
+))
+
+(factorial 5 1) ; 1 is given as a default input
+(factorial 4 5)
+(factorial 3 20)
+(factorial 2 60)
+(factorial 1 120)
+(factorial 0 120)
+120
+```
+
+You can imagine that even for higher inputs, such as `(factorial 100)`, you
+would still get back this same "flat line" shape, with fewer steps than the 
+first example of `factorial`.
 
 ## A little aside about `0!`
 
