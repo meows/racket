@@ -80,4 +80,4 @@ by the Babylonians. Unfortunately the reason has long been lost in history.
 * What's _circumference_?
 * What's the definition of `π` in terms of diameter and circumference?
 * What's a 270° angle in radians?
-* What's `3π` in degrees?
+* What's `3π` radians in degrees?
