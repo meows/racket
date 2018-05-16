@@ -42,12 +42,13 @@ like <code>!</code>.</p>
 <tr><td>10</td><td>!</td><td>3,628,800</td></tr>
 </tbody>
 </table>
-<p>One thing you might've noticed in the above table is that the result of any
-current row equals the previous row's result multiplied by the current <code>n</code>. For
-example, observe that <code>10!</code> is the same as <code>10 * 9!</code>. You can also check whether
-<code>9!</code> is the same as <code>9 * 8!</code>, and whether this pattern repeats everywhere.</p>
-<p>Using recursion, we can define the factorial function in just two simple rules,
-assuming <code>n</code> is a natural number:</p>
+<p>One thing you might've noticed in the above table is that to get from one result
+to the next, you just multiply by the current result with the next <code>n</code>. For
+example, if we look at row 9's result number, <code>362,880</code>, and we multiply it by
+the next <code>n</code>, which is <code>10</code>, then we get <code>3,628,800</code>. In other words,
+<code>10! = 10 * 9!</code>.</p>
+<p>The <code>factorial</code> function can be defined in just two simple rules, assuming <code>n</code>
+is a natural number:</p>
 <ol>
 <li>The <code>factorial(0)</code> is equal to <code>1</code></li>
 <li>The <code>factorial(n)</code> is equal to <code>n * factorial(n - 1)</code></li>
