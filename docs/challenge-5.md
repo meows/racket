@@ -9,10 +9,12 @@ hide_title: true
 
 > Make sure you've read the section on [recursion](recursion.md) before progressing.
 
-The `triangle` function takes a natural input `n` and sums up all the naturals
-less than or equal to `n`. So for example, the `triangle(5)` is the same as
-`5 + 4 + 3 + 2 + 1 + 0`, which is `15`, and the `triangle(6)` is the same as
-`6 + 5 + 4 + 3 + 2 + 1 + 0`, which is `21`.
+The `triangle` function takes a natural number `n` for input and sums up all the 
+naturals less than or equal to `n`.
+
+* `triangle(4)` is the same as         `4 + 3 + 2 + 1 + 0`, which is `10`.
+* `triangle(5)` is the same as     `5 + 4 + 3 + 2 + 1 + 0`, which is `15`. 
+* `triangle(6)` is the same as `6 + 5 + 4 + 3 + 2 + 1 + 0`, which is `21`.
 
 Here are a few more examples:
 
