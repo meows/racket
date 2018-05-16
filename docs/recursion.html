@@ -15,11 +15,15 @@ example, but in order to do so, we must first read a little bit about the
 <em>factorial</em>, a function that happens to have an interesting repeating pattern
 which we can exploit with recursion.</p>
 <h2><a class="anchor" aria-hidden="true" id="factorial"></a><a href="#factorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Factorial <code>!</code></h2>
-<p>The factorial is a function which operates on a natural number <code>n</code> to give you
-the product of all positive naturals less than or equal to <code>n</code>, and it looks
-like <code>!</code>. When used on a number like <code>5!</code>, it means <code>5 * 4 * 3 * 2 * 1</code>, which
-equals <code>120</code>. If we evaluated <code>6!</code>, we'd get <code>6 * 5 * 4 * 3 * 2 * 1</code>, which is
-<code>720</code>. Here are a few more examples to get familiar with:</p>
+<p>The <code>factorial</code> is a function which operates on a natural number <code>n</code> to give you
+the product of all <em>positive</em> naturals less than or equal to <code>n</code>, and it looks
+like <code>!</code>.</p>
+<ul>
+<li><code>4!</code> means <code>4 * 3 * 2 * 1</code>, which equals <code>24</code>.</li>
+<li><code>5!</code> means <code>5 * 4 * 3 * 2 * 1</code>, which equals <code>120</code>.</li>
+<li><code>6!</code> means <code>6 * 5 * 4 * 3 * 2 * 1</code>, which equals <code>720</code>.</li>
+</ul>
+<p>Here are a few more examples to get familiar with:</p>
 <table>
 <thead>
 <tr><th>n</th><th>function</th><th>result</th></tr>
@@ -56,10 +60,10 @@ uses <code>factorial</code> to define itself. And in just two rules we have defi
 <p>Now that we have explored the mathematical definition of <code>factorial</code>, let's see
 how it looks when we write it in Racket.</p>
 <h2><a class="anchor" aria-hidden="true" id="writing-our-own-factorial"></a><a href="#writing-our-own-factorial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Writing our own factorial</h2>
+<p>Assume that our <code>factorial</code> function will receive a natural number <code>n</code> for input:</p>
 <ul>
-<li><code>factorial</code> takes for input a natural number <code>n</code></li>
-<li>if <code>n</code> is zero, we get back <code>1</code></li>
-<li>if <code>n</code> is anything else we give back <code>(* n (factorial (- n 1)))</code></li>
+<li>If <code>n</code> is zero, then we return <code>1</code></li>
+<li>If <code>n</code> is anything else, then we return <code>(* n (factorial (- n 1)))</code></li>
 </ul>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example #1</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n)
@@ -67,9 +71,9 @@ how it looks when we write it in Racket.</p>
             <span class="hljs-number">1</span>
             (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))
 ))
-
-<span class="hljs-comment">; if the "steps" for (factorial 5) were written out:</span>
-(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span>)
+</code></pre>
+<p>If the &quot;steps&quot; for <code>(factorial 5)</code> were written out:</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span>)
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> (<span class="hljs-name">factorial</span> <span class="hljs-number">4</span>))
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">4</span> (<span class="hljs-name">factorial</span> <span class="hljs-number">3</span>)))
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">4</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span> (<span class="hljs-name">factorial</span> <span class="hljs-number">2</span>))))
@@ -108,9 +112,9 @@ given to your function in place of <code>p</code>.</p>
             p
             (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
 ))
-
-<span class="hljs-comment">; if the "steps" for (factorial 5) were written out:</span>
-(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span> <span class="hljs-number">1</span>) <span class="hljs-comment">; 1 is given as a default input</span>
+</code></pre>
+<p>If the &quot;steps&quot; for <code>(factorial 5)</code> were written out:</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span> <span class="hljs-number">1</span>) <span class="hljs-comment">; 1 is given as a default input</span>
 (<span class="hljs-name">factorial</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)
 (<span class="hljs-name">factorial</span> <span class="hljs-number">3</span> <span class="hljs-number">20</span>)
 (<span class="hljs-name">factorial</span> <span class="hljs-number">2</span> <span class="hljs-number">60</span>)
