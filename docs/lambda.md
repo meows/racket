@@ -38,12 +38,11 @@ In fact, this is just a convenient shortcut for writing the top `lambda`
 example, and to Racket the two examples do exactly the same thing.
 
 Just to get used to how `lambda` works, here's a familiar example with multiple
-parameters:
+parameters, length `l`, width `w`, and height `h`:
 
 ``` clojure
 (define prism-volume 
-        (lambda (length width height) 
-                (* length width height))
+        (lambda (l w h) (* l w h))
 
 (prism-volume 3 5 8)  ;; → 120
 ```
@@ -51,6 +50,6 @@ parameters:
 Which would be complete identical to the familiar way of doing it:
 
 ``` clojure
-(define (prism-volume length width height) (* length width height))
+(define (prism-volume l w h) (* l w h))
 (prism-volume 3 5 8)  ;; → 120
 ```

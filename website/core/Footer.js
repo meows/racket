@@ -45,11 +45,11 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <a href="https://docs.racket-lang.org/guide/">
+              Racket Official Guide
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href="https://docs.racket-lang.org/reference/">
+              Racket Official Reference
             </a>
             <a href={this.docUrl('doc3.html', this.props.language)}>
               API Reference (or other categories)
@@ -57,9 +57,7 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
+            <a href="https://racket-slack.herokuapp.com/">Racket Slack</a>
             <a
               href="http://stackoverflow.com/questions/tagged/racket"
               target="_blank"
