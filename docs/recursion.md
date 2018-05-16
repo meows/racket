@@ -19,11 +19,15 @@ which we can exploit with recursion.
 
 ## Factorial `!`
 
-The factorial is a function which operates on a natural number `n` to give you
-the product of all positive naturals less than or equal to `n`, and it looks
-like `!`. When used on a number like `5!`, it means `5 * 4 * 3 * 2 * 1`, which 
-equals `120`. If we evaluated `6!`, we'd get `6 * 5 * 4 * 3 * 2 * 1`, which is
-`720`. Here are a few more examples to get familiar with:
+The `factorial` is a function which operates on a natural number `n` to give you
+the product of all _positive_ naturals less than or equal to `n`, and it looks
+like `!`.
+
+* `4!` means `4 * 3 * 2 * 1`, which equals `24`.
+* `5!` means `5 * 4 * 3 * 2 * 1`, which equals `120`. 
+* `6!` means `6 * 5 * 4 * 3 * 2 * 1`, which equals `720`. 
+
+Here are a few more examples to get familiar with:
 
 n     | function | result
 ----- | -------- | ------
@@ -39,13 +43,14 @@ n     | function | result
 9     | !        | 362,880
 10    | !        | 3,628,800
 
-One thing you might've noticed in the above table is that the result of any 
-current row equals the previous row's result multiplied by the current `n`. For 
-example, observe that `10!` is the same as `10 * 9!`. You can also check whether 
-`9!` is the same as `9 * 8!`, and whether this pattern repeats everywhere.
+One thing you might've noticed in the above table is that to get from one result
+to the next, you just multiply by the current result with the next `n`. For 
+example, if we look at row 9's result number, `362,880`, and we multiply it by 
+the next `n`, which is `10`, then we get `3,628,800`. In other words,
+`10! = 10 * 9!`.
 
-Using recursion, we can define the factorial function in just two simple rules, 
-assuming `n` is a natural number:
+The `factorial` function can be defined in just two simple rules, assuming `n` 
+is a natural number:
 
 1. The `factorial(0)` is equal to `1`
 2. The `factorial(n)` is equal to `n * factorial(n - 1)`
@@ -61,9 +66,9 @@ how it looks when we write it in Racket.
 
 ## Writing our own factorial
 
-* `factorial` takes for input a natural number `n`
-* if `n` is zero, we get back `1`
-* if `n` is anything else we give back `(* n (factorial (- n 1)))`
+Assume that our `factorial` function will receive a natural number `n` for input:
+* If `n` is zero, then we return `1`
+* If `n` is anything else, then we return `(* n (factorial (- n 1)))`
 
 ``` clojure
 ;; Example #1
@@ -72,8 +77,11 @@ how it looks when we write it in Racket.
             1
             (* n (factorial (- n 1)))
 ))
+```
 
-; if the "steps" for (factorial 5) were written out:
+If the "steps" for `(factorial 5)` were written out:
+
+``` clojure
 (factorial 5)
 (* 5 (factorial 4))
 (* 5 (* 4 (factorial 3)))
@@ -96,7 +104,7 @@ problem -- by reducing or simplifying the problem down to a matter of counting
 steps.
 
 If we don't count the very first line of `(factorial 5)`, we should arrive to
-the count of 10 lines. Also, how many steps would we add if we evaluated 
+the count of 10 lines. Also, how many more lines would we add if we evaluated 
 `(factorial 6)` instead? How about `(factorial 7)`?
 
 > DrRacket has a tool to let you walk through each step of the evaluation of an
@@ -119,8 +127,11 @@ given to your function in place of `p`.
             p
             (factorial (- n 1) (* n p))
 ))
+```
 
-; if the "steps" for (factorial 5) were written out:
+If the "steps" for `(factorial 5)` were written out:
+
+``` clojure
 (factorial 5 1) ; 1 is given as a default input
 (factorial 4 5)
 (factorial 3 20)
