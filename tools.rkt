@@ -19,16 +19,14 @@
             (loop (quotient n b) #:index (++ i))))
     (if (zero? n) 1 (loop n)))
 
-(fn (number-length num)
-    (~> num number->string string-length))
-
+(fn number-length (λ~> number->string string-length))
 (fn char->number (λ~> char->integer (+ -48)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Boolean
 
 (fn unequal? (compose not equal?))
-(fn (one? n) (= n 1))
+(fn one? (curry = 1))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Arithmetic
@@ -42,7 +40,7 @@
 (fn cube (power 3))
 
 (fn mod10 (cut remainder <> 10))
-(fn div10 (cut quotient <> 10))
+(fn div10 (cut quotient  <> 10))
 
 (fn (log-identity base exp) (* exp (log base)))
 

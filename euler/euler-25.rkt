@@ -22,7 +22,8 @@
     (= 1000 (number-length n)))
 
 (fn (euler-25 n)
-    (cond [(many-digits? (fibonacci n)) n]
-          [else (euler-25 (++ n))]))
+    (if (many-digits? (fibonacci n))
+        n
+        (euler-25 (++ n))))
 
 (time (euler-25 0))

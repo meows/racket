@@ -26,19 +26,19 @@ Observe the expression below:
 
 ``` clojure
 (define (name arg-1 arg-2 arg-3 arg-n)
-  (body "that is reducible to a value")
+   (body "that is reducible to a value")
 )
 
 ; more realistically,
 (define (volume-of-prism x y z)
-  (* x y z)
+   (* x y z)
 )
 
 (volume-of-prism 3 4 5) ; -> 60
 
 ; or with an anonymous function / lambda:
-(define (volume-of-prism x y z)
-   (λ ([x x] [y y] [z z]) (* x y z))
+(define volume-of-prism 
+   (λ (x y z) (* x y z))
 )
 ```
 
