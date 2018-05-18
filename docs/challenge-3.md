@@ -8,7 +8,7 @@ hide_title: true
 # Racket Challenge #3
 
 Give a list of integers from `0..1000` but with all the numbers divisible by 
-either 3 or 5 removed.
+either `3` or `5` removed.
 
 ## Possibly Clues
 
