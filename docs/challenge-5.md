@@ -34,3 +34,6 @@ Define the values `sum-of-squares` and `square-of-sum` for the naturals
 
 * [`map`](function-sequence.md)
 * [`apply`](function-sequence.md)
+* `sqr`
+* [`expt`](arithmetic-advanced.md)
+* [`range`](function-sequence.md)
