@@ -62,11 +62,9 @@ radians | factor  | degrees
 `π/180` | 1/180   | 1°
 
 Mathematicians and physicists frequently, or almost entirely use radians instead
-of degrees to measure angles.
-
-Part of the reason for this preference is because while `π` has a lot of deep
-connections in math, nobody really knows why we chose to divide a circle into
-360 degrees.
+of degrees to measure angles. Part of the reason for this preference is because 
+while `π` has a lot of deep connections in math, nobody really knows why we 
+chose to divide a circle into 360 degrees.
 
 One theory is that the Persian calendar used to have 360 days in a year. Another
 possibility is that 360 works nicely in a base 60 number system, which was used
