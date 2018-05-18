@@ -2,10 +2,6 @@
 id: trigonometry
 title: Trigonometry
 hide_title: true
-sidebar_label: Trigonometry
+sidebar_label: trigonometry
 ---
-
-# Trigonometry
-
-## A refresher on ratios
 

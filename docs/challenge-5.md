@@ -9,6 +9,8 @@ hide_title: true
 
 > Make sure you've read the section on [recursion](recursion.md) before progressing.
 
+## Description
+
 The `triangle` function takes a natural number `n` for input and sums up all the 
 naturals less than or equal to `n`.
 
