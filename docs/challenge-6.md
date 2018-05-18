@@ -5,31 +5,41 @@ title: Challenge #6
 hide_title: true
 ---
 
-# Greatest Common Divisor
+# Racket Challenge #6
 
-The _greatest common divisor_ of two integers finds the greatest divisor (or
-factor) which is shared among them. For example,
+> Make sure you've read the section on [recursion](recursion.md) before progressing.
 
-* The factors to `12` are `{ 1, 2, 3, 4, 6, 12 }`.
-* The factors to `8` are `{ 1, 2, 4, 8 }`.
-* The `gcd(8, 12)` will equal `4`.
+## Description
 
-Impressively, one of the most efficient ways to solve this problem was devised 
-by a Greek mathematician who lived around 400 to 300 BC, named Euclid 
-(or Eukleides) of Alexandria, in a historically acclaimed text called _The Elements_.
+The `triangle` function takes a natural number `n` for input and sums up all the 
+naturals less than or equal to `n`.
 
-Euclid's algorithm, as it has come to be known, describes a function 
-`gcd(n1, n2)` which consumes two integers `n1` and `n2` as inputs, and returns 
-their greatest common divisor with the following two rules:
+* `triangle(4)` is the same as         `4 + 3 + 2 + 1 + 0`, which is `10`.
+* `triangle(5)` is the same as     `5 + 4 + 3 + 2 + 1 + 0`, which is `15`. 
+* `triangle(6)` is the same as `6 + 5 + 4 + 3 + 2 + 1 + 0`, which is `21`.
 
-1. If `n2` equals `0`, return `n1`
-2. Otherwise, return `gcd(n2, n1 % n2)`
+Here are a few more examples:
 
-Given these rules, write a similar recursive function in Racket named `gcd`
-which expects two integer inputs, `n1` and `n2`:
+n     | function   | result
+----- | ---------- | ------
+0     | `triangle` | 0
+1     | `triangle` | 1
+2     | `triangle` | 3
+3     | `triangle` | 6
+4     | `triangle` | 10
+5     | `triangle` | 15
+6     | `triangle` | 21
+7     | `triangle` | 28
+8     | `triangle` | 36
+9     | `triangle` | 45
+10    | `triangle` | 55
 
-``` clojure
-(define (gcd n1 n2)
-        (code goes here)
-)
-```
+## Problem
+
+Given that the `triangle` function can be defined for any natural number `n` in 
+two simple rules:
+
+1. `triangle(0)` is equal to `0`
+2. `triangle(n)` is equal to `n + triangle(n - 1)`
+
+...write a _recursive_ definition for `triangle` in Racket.

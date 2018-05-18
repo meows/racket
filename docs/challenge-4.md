@@ -10,7 +10,7 @@ hide_title: true
 It's time to put everything you've done so far together into one puzzle. Give
 the sum of all integers in `0..1000` that's divisible by either `3` or `5`.
 
-## Possibly Clues
+## Possible Clues
 
 * `filter`
 * `range`
