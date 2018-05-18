@@ -19,8 +19,8 @@ which we can exploit with recursion.</p>
 the product of all <em>positive</em> naturals less than or equal to <code>n</code>, and it looks
 like <code>!</code>.</p>
 <ul>
-<li><code>4!</code> means <code>4 * 3 * 2 * 1</code>, which equals <code>24</code>.</li>
-<li><code>5!</code> means <code>5 * 4 * 3 * 2 * 1</code>, which equals <code>120</code>.</li>
+<li><code>4!</code> means         <code>4 * 3 * 2 * 1</code>, which equals <code>24</code>.</li>
+<li><code>5!</code> means     <code>5 * 4 * 3 * 2 * 1</code>, which equals <code>120</code>.</li>
 <li><code>6!</code> means <code>6 * 5 * 4 * 3 * 2 * 1</code>, which equals <code>720</code>.</li>
 </ul>
 <p>Here are a few more examples to get familiar with:</p>
@@ -45,10 +45,14 @@ like <code>!</code>.</p>
 <p>One thing you might've noticed in the above table is that to get from one result
 to the next, you just multiply by the current result with the next <code>n</code>. For
 example, if we look at row 9's result number, <code>362,880</code>, and we multiply it by
-the next <code>n</code>, which is <code>10</code>, then we get <code>3,628,800</code>. In other words,
-<code>10! = 10 * 9!</code>.</p>
-<p>The <code>factorial</code> function can be defined in just two simple rules, assuming <code>n</code>
-is a natural number:</p>
+the next <code>n</code>, which is <code>10</code>, then we get <code>3,628,800</code>. In other words:</p>
+<ul>
+<li><code>10! = 10 * 9!</code></li>
+<li><code>9! = 9 * 8!</code></li>
+<li><code>8! = 8 * 7!</code></li>
+</ul>
+<p>Using this repeating pattern, the <code>factorial</code> function can be defined in just
+two simple rules, assuming <code>n</code> is a natural number:</p>
 <ol>
 <li>The <code>factorial(0)</code> is equal to <code>1</code></li>
 <li>The <code>factorial(n)</code> is equal to <code>n * factorial(n - 1)</code></li>
@@ -87,14 +91,14 @@ how it looks when we write it in Racket.</p>
 <span class="hljs-number">120</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="observations"></a><a href="#observations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h3>
-<p>Notice in the above example how many &quot;steps&quot; it takes to get to the answer.
-This is one major way that computer scientists and engineers count the
+<p>Notice in the above example how many &quot;steps&quot; it takes to get to the answer. If
+we don't count the very first line of <code>(factorial 5)</code>, then we should arrive to
+the count of 10 lines. Also, how many more lines would we add if we evaluated
+<code>(factorial 6)</code> instead? How about <code>(factorial 7)</code>? How about <code>(factorial 100)</code>?</p>
+<p>This is one major way that computer scientists and engineers count the
 computational &quot;cost&quot; of any strategy, program, or function you use to solve a
 problem -- by reducing or simplifying the problem down to a matter of counting
 steps.</p>
-<p>If we don't count the very first line of <code>(factorial 5)</code>, we should arrive to
-the count of 10 lines. Also, how many more lines would we add if we evaluated
-<code>(factorial 6)</code> instead? How about <code>(factorial 7)</code>?</p>
 <blockquote>
 <p>DrRacket has a tool to let you walk through each step of the evaluation of an
 expression. The tool is located under a button called <code>debug</code>, and when you
