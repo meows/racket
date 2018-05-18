@@ -17,4 +17,4 @@
             (zero? (modulo x 5))))
     (for/sum ([n (range max)] #:when (okay? n)) n))
 
-(time (euler-01 1000))  ;; → 233168
+(time (euler-01 1000))

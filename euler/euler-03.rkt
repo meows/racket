@@ -11,4 +11,4 @@
 
 (define euler-03 (apply max (prime-divisors 600851475143)))
 
-(time euler-03)  ;; → 6857
+(time euler-03)

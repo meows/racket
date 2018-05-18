@@ -22,4 +22,4 @@
     (cond [(< max a) sum]
           [else (euler-2 (+ a b) a #:sum (if (odd? a) sum (+ sum a)))]))
 
-(time (euler-2))  ;; → 4613732
+(time (euler-2))
