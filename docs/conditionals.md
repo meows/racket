@@ -6,6 +6,9 @@ hide_title: true
 
 # Conditionals
 
+> You may want to read the Boolean section for [Values and Types](values.md)
+> before proceeding.
+
 If someone has ever told you that you can only play _if_ you've done your work,
 then you have been given a condition. That is, you can play, but only if a rule
 has been met.
@@ -18,9 +21,10 @@ conditions have been met.
 ## `if`
 
 `if` is a function which takes 3 inputs.
- * the first is a boolean expression
- * the second is an expression that will be returned if true
- * the third is an expression that will be returned if false
+ * the first is a _condition_, which means a boolean expression that is used
+   to determine how a function will work
+ * the second is an expression that will be returned if the condition is `true`
+ * the third is an expression that will be returned if the condition is `false`
 
 ``` clojure
 (define x 10)
@@ -38,9 +42,10 @@ conditions have been met.
 (if (<= x 10) 1 0)
 (if (>= x 10) 1 0)
 
-(if (= 100 (expt x 2) 
+(if (= 100 (expt x 2)) 
     (+ x x)
-    (- x x))
+    (- x x)
+)
 ```
 
 ## `and`

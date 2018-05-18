@@ -12,10 +12,11 @@ the sum of all integers in `0..1000` that's divisible by either `3` or `5`.
 
 ## Possible Clues
 
-* `filter`
-* `range`
-* `and`
-* `or`
-* `if`
-* `+`
-* `apply`
+* [`modulo`](arithmetic-advanced.md)
+* [`filter`](function-sequence.md)
+* [`range`](function-sequence.md)
+* [`and`](conditionals.md)
+* [`or`](conditionals.md)
+* [`if`](conditionals.md)
+* [`apply`](function-sequence.md)
+* [`lambda`](lambda.md)
