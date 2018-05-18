@@ -6,9 +6,9 @@ hide_title: true
 
 # Recursion
 
-Mathematicians, more than anyone else, love to be lazy (or "elegant") when they 
-write. When mathematicians notice a repeating pattern, they like to find a way 
-to easily describe this pattern so they don't have to write as much. One 
+Mathematicians, more than anyone else, love to be lazy (or "elegant") when they
+write. When mathematicians notice a repeating pattern, they like to find a way
+to easily describe this pattern so they don't have to write as much. One
 particular tool they use is called _recursion_, which is the use of a function
 or rule to define itself.
 
@@ -19,13 +19,13 @@ which we can exploit with recursion.
 
 ## Factorial `!`
 
-The `factorial` is a function which operates on a natural number `n` to give you
-the product of all _positive_ naturals less than or equal to `n`, and it looks
-like `!`.
+The `factorial` is a function which takes a natural number `n` as input, and
+then returns the product of all _positive_ naturals less than or equal to `n`, 
+and it looks like `!`.
 
-* `4!` means `4 * 3 * 2 * 1`, which equals `24`.
-* `5!` means `5 * 4 * 3 * 2 * 1`, which equals `120`. 
-* `6!` means `6 * 5 * 4 * 3 * 2 * 1`, which equals `720`. 
+* `4!` means         `4 * 3 * 2 * 1`, which equals `24`.
+* `5!` means     `5 * 4 * 3 * 2 * 1`, which equals `120`.
+* `6!` means `6 * 5 * 4 * 3 * 2 * 1`, which equals `720`.
 
 Here are a few more examples to get familiar with:
 
@@ -44,21 +44,24 @@ n     | function | result
 10    | !        | 3,628,800
 
 One thing you might've noticed in the above table is that to get from one result
-to the next, you just multiply by the current result with the next `n`. For 
-example, if we look at row 9's result number, `362,880`, and we multiply it by 
-the next `n`, which is `10`, then we get `3,628,800`. In other words,
-`10! = 10 * 9!`.
+to the next, you just multiply by the current result with the next `n`. For
+example, if we look at row 9's result number, `362,880`, and we multiply it by
+the next `n`, which is `10`, then we get `3,628,800`. In other words:
 
-The `factorial` function can be defined in just two simple rules, assuming `n` 
-is a natural number:
+* `10! = 10 * 9!`
+* `9! = 9 * 8!`
+* `8! = 8 * 7!`
+
+Using this repeating pattern, the `factorial` function can be defined in just
+two simple rules, assuming `n` is a natural number:
 
 1. The `factorial(0)` is equal to `1`
 2. The `factorial(n)` is equal to `n * factorial(n - 1)`
 
-The first rule is simple because it just tells you what `factorial(0)` literally 
-is, but the second rule is incredibly elegant because it tells you the factorial 
+The first rule is simple because it just tells you what `factorial(0)` literally
+is, but the second rule is incredibly elegant because it tells you the factorial
 of any and all other `n`. It's the second rule that we call recursive because it
-uses `factorial` to define itself. And in just two rules we have defined the 
+uses `factorial` to define itself. And in just two rules we have defined the
 `factorial` function for all the natural numbers. Lazy or elegant?
 
 Now that we have explored the mathematical definition of `factorial`, let's see
@@ -97,15 +100,15 @@ If the "steps" for `(factorial 5)` were written out:
 
 ### Observations
 
-Notice in the above example how many "steps" it takes to get to the answer.
+Notice in the above example how many "steps" it takes to get to the answer. If
+we don't count the very first line of `(factorial 5)`, then we should arrive to
+the count of 10 lines. Also, how many more lines would we add if we evaluated
+`(factorial 6)` instead? How about `(factorial 7)`? How about `(factorial 100)`?
+
 This is one major way that computer scientists and engineers count the
-computational "cost" of any strategy, program, or function you use to solve a 
+computational "cost" of any strategy, program, or function you use to solve a
 problem -- by reducing or simplifying the problem down to a matter of counting
 steps.
-
-If we don't count the very first line of `(factorial 5)`, we should arrive to
-the count of 10 lines. Also, how many more lines would we add if we evaluated 
-`(factorial 6)` instead? How about `(factorial 7)`?
 
 > DrRacket has a tool to let you walk through each step of the evaluation of an
 > expression. The tool is located under a button called `debug`, and when you
@@ -143,10 +146,10 @@ If the "steps" for `(factorial 5)` were written out:
 ### Observations
 
 If we don't count the very first line, we should find that `(factorial 5)` runs
-for five times before finding the answer. How many more lines would we add if we 
+for five times before finding the answer. How many more lines would we add if we
 evaluated `(factorial 6)` instead? How about `(factorial 7)`?
 
-Also, do you notice how the shape of Example #1 looks like a sideways pyramid 
+Also, do you notice how the shape of Example #1 looks like a sideways pyramid
 pointing to our right, while the shape of Example #2 looks like a straight line?
 If you evaluated a large input like `(factorial 100)`, do you expect the shape
 to change for either example?
@@ -155,8 +158,8 @@ to change for either example?
 
 Of all the examples of factorials, the one that is probably most remarkable to
 you is `0!`. Why might that equal `1`? For now I'm going to give you a rough
-intuitive reason. One way of thinking about it is that for addition, a way to do 
-nothing is to add by zero, and that for multiplication, a way to do nothing is 
+intuitive reason. One way of thinking about it is that for addition, a way to do
+nothing is to add by zero, and that for multiplication, a way to do nothing is
 to multiply by one.
 
 So if the factorial function is capable of multiplying your natural number `n`
