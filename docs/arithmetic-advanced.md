@@ -63,6 +63,12 @@ the *divisor*.
 (modulo 82 3)  ;; → 1
 ```
 
-Some people use the `modulo` function to find whether a number is even by seeing 
-if `(modulo x 2)` is zero, in other words, whether dividing a number by 2 leaves 
-no remainder, which is in fact the definition of an even number.
+Some people use the `modulo` function to find whether a number `n` is even by 
+seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by 
+`2` leaves no remainder, which is in fact the definition of an even number:
+
+``` clojure
+(define (even? n) 
+        (zero? (modulo n 2))
+)
+```

@@ -8,16 +8,16 @@ hide_title: true
 
 Below are some comparison functions that you may have encountered before in 
 math. All comparison functions listed here always take two or more inputs and 
-returns one output: either `true` or `false`. Make sure you've read the section
-on [values and types](values.md) before proceeding.
+returns a boolean output: either `true` or `false`. Make sure you've read the 
+Boolean section on [values and types](values.md) before proceeding.
 
 Most or all of the comparison functions below will look very similar to things
 you've encountered in math before.
 
 ## `=` Equal
 
-The equals operator `=` takes two (or more) numbers, sees if they are equal, and 
-returns either `true` or `false`.
+In Racket, `=` is a function which takes two (or more) numbers, sees if they are 
+equal, and then returns either `true` or `false`.
 
 ``` clojure
 (= 42 42)  ;; → true
@@ -50,11 +50,13 @@ The less-than operator `<` takes two numbers, sees if the *first* number is
 smaller than the *second* one, and then returns `true` or `false`.
 
 ``` clojure
-(< 1 1)    ;; → false
-(< 1 10)   ;; → true
-(< 10 1)   ;; → false
-(< 15 30)  ;; → true
-(< 30 15)  ;; → false
+(< 1 1)     ;; → false
+(< 1 10)    ;; → true
+(< 10 1)    ;; → false
+(< 15 30)   ;; → true
+(< 30 15)   ;; → false
+(< 1 2 3 4) ;; → true
+(< 1 5 3 4) ;; → false
 ```
 
 ## `<=` Lesser-than or equal to
@@ -64,10 +66,10 @@ number is smaller-than **or** equal to the *second* one, and then returns `true`
 or `false`.
 
 ``` clojure
-(<= 1 10)   ;; → true
-(<= 10 1)   ;; → false
-(<= 1 1)    ;; → true
-(<= 10 10)  ;; → true
+(<= 1 10)     ;; → true
+(<= 10 1)     ;; → false
+(<= 1 1 1 10) ;; → true
+(<= 1 1 2 2)  ;; → true
 ```
 
 ## `>=` Greater-than or equal to

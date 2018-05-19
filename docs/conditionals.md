@@ -95,4 +95,8 @@ What will these expressions evaluate to?
 
 (or (and true false)
     (or true false))
+
+(and (or true false)
+     (and true true)
+)
 ```
