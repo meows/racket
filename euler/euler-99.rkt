@@ -15,10 +15,10 @@
 
 (def raw-strings (file->lines "data/euler-99.txt"))
 
-(def tuples (~> raw-strings 
-                (map (λ (string) (string-split string  ",")) _)
-                (map (λ (strings) (map string->number strings)) _))
-)
+(def tuples 
+     (~> raw-strings 
+         (map (λ (string) (string-split string  ",")) _)
+         (map (λ (strings) (map string->number strings)) _)))
 
 (fn (log-identity base exponent) (* exponent (log base)))
 
@@ -27,5 +27,4 @@
           (let ([log-id (log-identity (first t) (second t))])
                (if (< best log-id)
                    (values log-id (++ index) (++ index))
-                   (values best seen-at (++ index)))
-))
+                   (values best seen-at (++ index)))))
