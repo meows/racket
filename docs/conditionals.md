@@ -20,11 +20,13 @@ conditions have been met.
 
 ## `if`
 
-`if` is a function which takes 3 inputs.
- * the first is a _condition_, which means a boolean expression that is used
-   to determine how a function will work
+`if` is a function which takes 3 inputs:
+ * the first is a _condition_, which means a boolean expression that's used to 
+   determine how a function will work
  * the second is an expression that will be returned if the condition is `true`
  * the third is an expression that will be returned if the condition is `false`
+
+The definition is a bit hard to understand, so let's go into an example:
 
 ``` clojure
 (define x 10)
@@ -40,18 +42,18 @@ conditions have been met.
 
 ;; What will these evaluate to?
 (if (<= x 10) 1 0)
+
 (if (>= x 10) 1 0)
 
-(if (= 100 (expt x 2)) 
+(if (= 100 (expt x 2))
     (+ x x)
-    (- x x)
-)
+    (- x x))
 ```
 
 ## `and`
 
 `and` takes a list of 0 or more boolean expressions and will evaluate to `true`
-_unless_ it encounters one or more `false` values. If `and` encounters even one
+_unless_ it encounters at least one `false` value. If `and` encounters even one
 `false`, then it will always be `false`.
 
 ``` clojure
@@ -65,8 +67,8 @@ _unless_ it encounters one or more `false` values. If `and` encounters even one
 ## `or`
 
 `or` takes a list of 0 or more boolean expressions and evaluates to `false`
-_unless_ it encounters at least one `true`. If `or` encounters even one `true`,
-then it will always be `true`.
+_unless_ it encounters at least one `true` value. If `or` encounters even one 
+`true`, then it will always be `true`.
 
 ``` clojure
 (or)                    ;; → false
@@ -97,6 +99,5 @@ What will these expressions evaluate to?
     (or true false))
 
 (and (or true false)
-     (and true true)
-)
+     (and true true))
 ```

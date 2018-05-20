@@ -41,9 +41,9 @@ hide_title: true
 returns another list of equal size.
 
 ``` clojure
-(map square (range 10))  ;; → '(0 1 4 9 16 25 36 49 64 81)
-(map add1   (range 10))  ;; → '(1 2 3 4 5 6 7 8 9 10)
-(map sub1   (range 10))  ;; → '(-1 0 1 2 3 4 5 6 7 8)
+(map sqr  (range 10))  ;; → '(0 1 4 9 16 25 36 49 64 81)
+(map add1 (range 10))  ;; → '(1 2 3 4 5 6 7 8 9 10)
+(map sub1 (range 10))  ;; → '(-1 0 1 2 3 4 5 6 7 8)
 ```
 
 ## `filter`

@@ -1,6 +1,7 @@
 ---
 id: arithmetic-advanced
 sidebar_label: Advanced Arithmetic
+title: Advanced Arithmetic
 hide_title: true
 ---
 
@@ -52,8 +53,8 @@ interpreted as _4 to the power of 3_.
 ## `modulo` Modulo
 
 The modulo function `modulo` helps you find the remainder of a division between 
-two numbers, where the first number is the *dividend*, and the second number is 
-the *divisor*.
+two natural numbers, where the first number is the *dividend*, and the second 
+number is the *divisor*.
 
 ``` clojure
 (modulo 10 2)  ;; → 0
@@ -70,5 +71,9 @@ seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by
 ``` clojure
 (define (even? n) 
         (zero? (modulo n 2))
+)
+
+(define (odd? n) 
+        (not (even? n))
 )
 ```
