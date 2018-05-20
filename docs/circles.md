@@ -37,17 +37,20 @@ which is just `π` multiplied by the diameter. If you take the formula
 `π = C / D`
 
 From here we can see that `π` is merely the ratio of the circumference to the
-diameter, or `C` divided by `D`. As it happens, the ratio of `C:D` is the
-_same for all circles ever_, which is what makes `π` so useful.
+diameter, or `C` divided by `D`. As it happens, the ratio of `C:D` is the _same
+for all circles ever_, which is what makes `π` so useful.
 
 ## Radians
 
 If the circumference of a circle can be calculated by `π * diameter`, and the
 radius of the circle is `1`, then the diameter will be `2`, and the
-circumference will be `2π`. A **radian** is a unit of measurement that makes use
-of `π` to describe angles. If a full circle is `2π` or 360°, then a half circle
-is `π` or 180°, and a quarter-circle is `π/2` or 90°. Here are some more
-examples below:
+circumference will be `2π`.
+
+![pi-unroll](/img/pi-unroll.gif)
+
+A **radian** is a unit of measurement that makes use of `π` to describe angles.
+If a full circle is `2π` or 360°, then a half circle is `π` or 180°, and
+a quarter-circle is `π/2` or 90°. Here are some more examples below:
 
 radians | factor  | degrees
 ------- | ------- | -------
@@ -62,8 +65,8 @@ radians | factor  | degrees
 `π/180` | 1/180   | 1°
 
 Mathematicians and physicists frequently, or almost entirely use radians instead
-of degrees to measure angles. Part of the reason for this preference is because 
-while `π` has a lot of deep connections in math, nobody really knows why we 
+of degrees to measure angles. Part of the reason for this preference is because
+while `π` has a lot of deep connections in math, nobody really knows why we
 chose to divide a circle into 360 degrees.
 
 One theory is that the Persian calendar used to have 360 days in a year. Another

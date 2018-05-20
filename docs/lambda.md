@@ -40,7 +40,7 @@ In fact, this is just a convenient shortcut for writing the top `lambda`
 example, and to Racket the two examples do exactly the same thing.
 
 Just to get used to how `lambda` works, here's a familiar example with multiple
-parameters, length `l`, width `w`, and height `h`:
+inputs or _parameters_, length `l`, width `w`, and height `h`:
 
 ``` clojure
 ;; Example A

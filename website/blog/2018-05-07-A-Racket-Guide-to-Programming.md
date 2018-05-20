@@ -17,11 +17,9 @@ most certainly not meant to conceptually or attitudinally exclude it in any way.
 As the language on this website is a bit advanced and technical, it's advised 
 that an adult guide the reading comprehension experience. I believe that 
 wrestling with difficult language is unavoidable if a child is to progress 
-towards self-sufficiency for technical learning, and eventually the adult must
-exit the picture.
-
-This also includes disciplined web usage, which I believe must be faciliated
-through the gradual relaxation of web controls.
+towards self-sufficiency for technical learning, as there exists a tremendous
+gulf of knowledge between texts written with adult prose and texts written for
+younger audiences.
 
 ## Why Racket?
 
