@@ -49,14 +49,13 @@ determine how a function will work</li>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">true</span> <span class="hljs-string">"Lemon"</span> <span class="hljs-string">"Orange"</span>)
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">false</span> <span class="hljs-string">"Orange"</span> <span class="hljs-string">"Lemon"</span>)
 
-<span class="hljs-comment">;; What will these evaluate to?</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 1</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 1</span>
 
-(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">true</span>  <span class="hljs-number">1</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 1</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">false</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>) <span class="hljs-comment">;; → 1</span>
 
-(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">true</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
-(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">false</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
-
+<span class="hljs-comment">;; → (+ 10 10) → 20</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">expt</span> x <span class="hljs-number">2</span>))
     (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x x)
     (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> x x))
