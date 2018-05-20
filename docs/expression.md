@@ -8,21 +8,24 @@ hide_title: true
 
 ##   Expression
 
-An expression means either (1) an atom, or (2) a list of one or more expressions,
-separated by spaces and surrounded by parenthesis.
+An expression means either:
+   1. An atom, or 
+   2. An expression-list, which is of one or more expressions, separated by 
+      spaces and surrounded by parenthesis.
 
   * `(we are all atoms surrounded by parenthesis and separated by spaces)`
   * `(+ 1 2 3 4 5)`
-  * `(we are a list () even though () there are lists () inside of us)`
+  * `(we are a list (+) even though (+) there are expression-lists (+) inside of us)`
   * `(square 3)`
 
 Is this an expression?
 
 ``` clojure
-)()(          ;; no  - it's not fully contained by parenthesis
-())           ;; no  - it's not fully contained by parenthesis
-()            ;; yes - this is called an empty list
-(+ a () b ()) ;; yes - this is a list of 5 items, some of which are also lists
+)()(          ;; no  - the parentheses aren't contained
+())           ;; no  - the parentheses aren't contained
+()            ;; no  - the first item in an expression-list must be a function
+(+ a b (+ c)) ;; yes - this is a list of 4 items
+(() + a b c)  ;; no  - the first item isn't an expression-list
 123           ;; yes - atoms count as expressions
 true          ;; yes - atoms count as expressions
 ```

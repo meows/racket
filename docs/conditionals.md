@@ -29,22 +29,34 @@ conditions have been met.
 The definition is a bit hard to understand, so let's go into an example:
 
 ``` clojure
+;; We define x to be 10.
 (define x 10)
 
-;; This evaluates as "x is 10".
+;; These evaluate as "x is 10".
 (if (= x 10) "x is 10"  "x not 10")
+(if true     "x is 10"  "x not 10")
 
-;; This evaluates as "x not 11".
+;; These evaluate as "x not 11".
 (if (= x 11) "x is 11"  "x not 11")
+(if false    "x is 11"  "x not 11")
 
-;; This evaluates as "Orange".
+;; These evaluate as "Orange".
 (if (= x 12) "Lemon"  "Orange")
+(if true "Lemon" "Orange")
+(if false "Orange" "Lemon")
 
-;; What will these evaluate to?
-(if (<= x 10) 1 0)
+(if (<= x 10) 1 0) ;; → 1
+(if (>= x 10) 1 0) ;; → 1
 
-(if (>= x 10) 1 0)
+(if (<= x 11) 1 0) ;; → 1
+(if (>= x 11) 1 0) ;; → 0
 
+(if true  1 0) ;; → 1
+(if true  0 1) ;; → 0
+(if false 1 0) ;; → 0
+(if false 0 1) ;; → 1
+
+;; → (+ 10 10) → 20
 (if (= 100 (expt x 2))
     (+ x x)
     (- x x))
