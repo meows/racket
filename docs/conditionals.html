@@ -33,21 +33,29 @@ determine how a function will work</li>
 <li>the third is an expression that will be returned if the condition is <code>false</code></li>
 </ul>
 <p>The definition is a bit hard to understand, so let's go into an example:</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> x <span class="hljs-number">10</span>)
+<pre><code class="hljs css clojure"><span class="hljs-comment">;; We define x to be 10.</span>
+(<span class="hljs-name">define</span> x <span class="hljs-number">10</span>)
 
 <span class="hljs-comment">;; This evaluates as "x is 10".</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-string">"x is 10"</span>  <span class="hljs-string">"x not 10"</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">true</span>     <span class="hljs-string">"x is 10"</span>  <span class="hljs-string">"x not 10"</span>)
 
 <span class="hljs-comment">;; This evaluates as "x not 11".</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> x <span class="hljs-number">11</span>) <span class="hljs-string">"x is 11"</span>  <span class="hljs-string">"x not 11"</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">false</span>    <span class="hljs-string">"x is 11"</span>  <span class="hljs-string">"x not 11"</span>)
 
 <span class="hljs-comment">;; This evaluates as "Orange".</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> x <span class="hljs-number">12</span>) <span class="hljs-string">"Lemon"</span>  <span class="hljs-string">"Orange"</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">true</span> <span class="hljs-string">"Lemon"</span> <span class="hljs-string">"Orange"</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">false</span> <span class="hljs-string">"Orange"</span> <span class="hljs-string">"Lemon"</span>)
 
 <span class="hljs-comment">;; What will these evaluate to?</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
 
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> x <span class="hljs-number">10</span>) <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
+
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">true</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)
+(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> <span class="hljs-literal">false</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
 
 (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">expt</span> x <span class="hljs-number">2</span>))
     (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x x)
