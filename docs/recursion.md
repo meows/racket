@@ -14,7 +14,7 @@ or rule to define itself.
 
 This definition might confuse some, so it may be easier to dive straight into an
 example, but in order to do so, we must first read a little bit about the
-_factorial_, a function that happens to have an interesting repeating pattern
+factorial, a function that happens to have an interesting repeating pattern
 which we can exploit with recursion.
 
 ## Factorial `!`
@@ -164,7 +164,8 @@ to multiply by one.
 
 So if the factorial function is capable of multiplying your natural number `n`
 with all the _positive_ naturals equal to or lesser than `n`, and you chose `0`,
-then in a way that's like saying you want by multiply by nothing `(*)`.
+then in a way that's like saying you want by multiply by nothing `(*)`. 
+Similarly, anything to the power of `0` is also `1`.
 
 ``` clojure
 (+)         ;; →  0
