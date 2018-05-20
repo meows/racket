@@ -14,15 +14,17 @@ then you have been given a condition. That is, you can play, but only if a rule
 has been met.
 
 Conditions are also useful in software because we don't always know what kind of
-information we're going to get, so in order to make sure we run the right 
-functions or operations, we often need to first check some of our conditions. To
-be more precise, for Racket, a **condition** is an expression that always 
-evaluates to a boolean value, and is used to control how a function works.
+information we're going to get, so in order to make sure we run the right
+functions or operations, we often need to first check some of our conditions.
+
+To be more precise, a condition (sometimes called a predicate), is an expression
+that always evaluates to a boolean value, and it's used to control how
+a function works.
 
 ## `if`
 
 `if` is a function which takes 3 inputs:
- * the first is a _condition_, which means a boolean expression that's used to 
+ * the first is a _condition_, which means a boolean expression that's used to
    determine how a function will work
  * the second is an expression that will be returned if the condition is `true`
  * the third is an expression that will be returned if the condition is `false`
@@ -80,7 +82,7 @@ _unless_ it encounters at least one `false` value. If `and` encounters even one
 ## `or`
 
 `or` takes a list of 0 or more boolean expressions and evaluates to `false`
-_unless_ it encounters at least one `true` value. If `or` encounters even one 
+_unless_ it encounters at least one `true` value. If `or` encounters even one
 `true`, then it will always be `true`.
 
 ``` clojure
