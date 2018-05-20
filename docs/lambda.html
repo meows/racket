@@ -20,6 +20,7 @@ lower-cased, which is how it's often written.</p>
 <p>Mathematicians and computer scientists sometimes use it as a name for a
 function, and it's actually the picture logo of the language you're using if you
 look really closely.</p>
+<h2><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
 <p>Here's an example of <code>lambda</code> in action:</p>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example 1</span>
 (<span class="hljs-name">define</span> div10 (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (/ x <span class="hljs-number">10</span>)))
@@ -38,26 +39,49 @@ example, and to Racket the two examples do exactly the same thing.</p>
 <p>Just to get used to how <code>lambda</code> works, here's a familiar example with multiple
 parameters, length <code>l</code>, width <code>w</code>, and height <code>h</code>:</p>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example A</span>
-(<span class="hljs-name">define</span> prism-volume 
+(<span class="hljs-name">define</span> prism-volume
         (<span class="hljs-name">lambda</span> (<span class="hljs-name">l</span> w h) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
 
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">8</span>)  <span class="hljs-comment">;; → 120</span>
 </code></pre>
 <p>Which would be complete identical to the familiar way of doing it:</p>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example B</span>
-(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h) 
+(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h)
         (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
 
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">8</span>)  <span class="hljs-comment">;; → 120</span>
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="why-do-people-use-lambda"></a><a href="#why-do-people-use-lambda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why do people use Lambda?</h2>
+<p>When we show examples of functions like <code>filter</code> that consume other functions as
+inputs, for example,</p>
+<pre><code class="hljs css clojure"><span class="hljs-comment">;; Example 1</span>
+(<span class="hljs-name">define</span> (<span class="hljs-name">big?</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> n))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> big?  (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(4 5)</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> even? (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(0 2 4)</span>
+</code></pre>
+<p>You might've noticed that <code>big?</code> is a function we had to write out ahead of
+time, or that you've had to rely on functions that Racket already gave you, such
+as <code>even?</code>. But what if you felt like you didn't want to define a new function
+before using it? That's what <code>lambda</code> allows you to do:</p>
+<pre><code class="hljs css clojure"><span class="hljs-comment">;; Example 2</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> x)) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> x <span class="hljs-number">2</span>))) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))
+</code></pre>
+<p>I don't blame you if you think the above examples look harder to read; a lot of
+people would agree. On the other hand, you saved the one extra step of defining
+your own function before using it. It's up to your taste if you want to use it.</p>
 <h2><a class="anchor" aria-hidden="true" id="side-note"></a><a href="#side-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Side Note</h2>
 <p>Because there's a historical tradition around the lambda symbol, and because the
 creators of your language also have a special love for it, I will note that
 <code>lambda</code> and <code>λ</code> mean the same thing in Racket, and so you're allowed to use
 either one.</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> prism-volume 
-        (λ (<span class="hljs-name">l</span> w h) 
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> prism-volume
+        (λ (<span class="hljs-name">l</span> w h)
            (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (λ (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> x)) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (λ (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> x <span class="hljs-number">2</span>))) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))
 </code></pre>
 <p>In DrRacket, you can type the <code>λ</code> symbol with <code>ctrl</code> + <code>\</code>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="define.html">← define</a><a class="docs-next button" href="comparisons.html">comparisons →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#side-note">Side Note</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="define.html">← define</a><a class="docs-next button" href="comparisons.html">comparisons →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#examples">Examples</a></li><li><a href="#why-do-people-use-lambda">Why do people use Lambda?</a></li><li><a href="#side-note">Side Note</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
