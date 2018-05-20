@@ -86,6 +86,7 @@ const siteConfig = {
   /* Open Graph and Twitter card images */
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
+  gaTrackingId: 'UA-119533557-1',
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
