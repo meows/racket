@@ -64,10 +64,14 @@
                   num))
 
 ; list <integer> → list <integer>
+;(fn (diff ints)
+;    (map -
+;        (rest ints)
+;        (drop-right ints 1)))
+
 (fn (diff ints)
-    (map -
-         (rest ints)
-         (drop-right ints 1)))
+    (for/list ([i1 ints] [i2 (rest ints)])
+              (- t2 t1)))
 
 ; list <natural> → history <list[natural]>
 (fn (differ nats)

@@ -9,17 +9,18 @@ hide_title: true
 
 ## `expt` Exponentiation
 
-The exponentiation function `expt` requires two inputs, the first one being the 
-*base*, the second one being the exponent (or power). Therefore, `(expt 3 4)` 
-should be interpreted as _3 to the power of 4_, and `(expt 4 3)` should be 
-interpreted as _4 to the power of 3_.
+The exponentiation function `expt` requires two inputs, (1) the first one is the
+base, and (2) the second one is the exponent or power. Therefore: 
+* `(expt 3 4)` should be interpreted as _3 to the power of 4_.
+* `(expt 4 3)` should be interpreted as _4 to the power of 3_.
+* `(expt 5 2)` should be interpreted as _5 to the power of 2_.
 
 ``` clojure
-(expt 2 1)  ;; → (* 2)
-(expt 3 2)  ;; → (* 3 3)
-(expt 4 3)  ;; → (* 4 4 4)
-(expt 5 4)  ;; → (* 5 5 5 5)
-(expt 6 5)  ;; → (* 6 6 6 6 6)
+(expt 1 0) ;; → (*)         → 1
+(expt 2 1) ;; → (* 2)       → 2
+(expt 3 2) ;; → (* 3 3)     → 9
+(expt 4 3) ;; → (* 4 4 4)   → 64
+(expt 5 4) ;; → (* 5 5 5 5) → 625
 
 ;; Exponentiation by power of 2
 (expt 1 2) ;; → 1
@@ -52,28 +53,26 @@ interpreted as _4 to the power of 3_.
 
 ## `modulo` Modulo
 
-The modulo function `modulo` helps you find the remainder of a division between 
-two natural numbers, where the first number is the *dividend*, and the second 
+The modulo function `modulo` helps you find the remainder of a division between
+two natural numbers, where the first number is the *dividend*, and the second
 number is the *divisor*.
 
 ``` clojure
-(modulo 10 2)  ;; → 0
-(modulo 2 10)  ;; → 2
-(modulo 80 3)  ;; → 2
-(modulo 81 3)  ;; → 0
-(modulo 82 3)  ;; → 1
+(modulo 10 2) ;; → 0
+(modulo 2 10) ;; → 2
+(modulo 80 3) ;; → 2
+(modulo 81 3) ;; → 0
+(modulo 82 3) ;; → 1
 ```
 
-Some people use the `modulo` function to find whether a number `n` is even by 
-seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by 
+Some people use the `modulo` function to find whether a number `n` is even by
+seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by
 `2` leaves no remainder, which is in fact the definition of an even number:
 
 ``` clojure
-(define (even? n) 
-        (zero? (modulo n 2))
-)
+(define (even? n)
+        (zero? (modulo n 2)))
 
-(define (odd? n) 
-        (not (even? n))
-)
+(define (odd? n)
+        (not (even? n)))
 ```
