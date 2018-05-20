@@ -180,10 +180,10 @@ Similarly, anything to the power of `0` is also `1`.
 
 ## Review
 
-* What is recursion?
+* What's recursion?
 * Define the factorial function on the natural numbers `n` using only two rules.
 * Why might `10!` be the same as `10 * 9!`?
-* What is `10!` divided by `10`?
-* What is `10!` divided by `9!`?
-* What is the factorial of `0`?  What's a rough reason why `0!` is `1` and not `0`?
-* What is one way that computer scientists measure the cost of your function?
+* What's `10!` divided by `10`?
+* What's `10!` divided by `9!`?
+* What's the factorial of `0`?
+* What's one way that computer scientists measure the cost of your function?
