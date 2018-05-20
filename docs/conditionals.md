@@ -15,8 +15,9 @@ has been met.
 
 Conditions are also useful in software because we don't always know what kind of
 information we're going to get, so in order to make sure we run the right 
-functions or operations, we often need to first check _if_ some of our 
-conditions have been met.
+functions or operations, we often need to first check some of our conditions. To
+be more precise, for Racket, a **condition** is an expression that always 
+evaluates to a boolean value, and is used to control how a function works.
 
 ## `if`
 
@@ -26,7 +27,7 @@ conditions have been met.
  * the second is an expression that will be returned if the condition is `true`
  * the third is an expression that will be returned if the condition is `false`
 
-The definition is a bit hard to understand, so let's go into an example:
+The definition is a bit hard to understand, so let's go into some examples:
 
 ``` clojure
 ;; We define x to be 10.
@@ -42,8 +43,8 @@ The definition is a bit hard to understand, so let's go into an example:
 
 ;; These evaluate as "Orange".
 (if (= x 12) "Lemon"  "Orange")
-(if true "Lemon" "Orange")
-(if false "Orange" "Lemon")
+(if false    "Lemon"  "Orange")
+(if true     "Orange" "Lemon")
 
 (if (<= x 10) 1 0) ;; → 1
 (if (>= x 10) 1 0) ;; → 1
