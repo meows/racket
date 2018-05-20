@@ -92,7 +92,7 @@ your own function before using it. It's up to your taste if you want to use it.
 
 Because there's a historical tradition around the lambda symbol, and because the
 creators of your language also have a special love for it, I will note that
-`lambda` and `λ` mean the same thing in Racket, and so you're allowed to use
+`lambda` and `λ` mean the same thing in Racket and so you're allowed to use
 either one.
 
 ``` clojure

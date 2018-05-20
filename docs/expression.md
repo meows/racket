@@ -9,14 +9,19 @@ hide_title: true
 ##   Expression
 
 An expression means either:
-   1. An atom, or 
-   2. An expression-list, which is of one or more expressions, separated by 
-      spaces and surrounded by parenthesis.
+  1. An atom. 
+  2. A list of one or more expressions, separated by spaces and surrounded by 
+     parenthesis, where the first item in a list must be a function.
 
-  * `(we are all atoms surrounded by parenthesis and separated by spaces)`
-  * `(+ 1 2 3 4 5)`
-  * `(we are a list (+) even though (+) there are expression-lists (+) inside of us)`
-  * `(square 3)`
+For example,
+
+``` clojure
+(we are all atoms surrounded by parenthesis and separated by spaces)
+(+ 1 2 3 4 5)
+(this is an expression (+) even though (+) there are expressions (+) inside of us)
+(square 3)
+(() + 1 2) ; this isn't an expression because the first atom isn't a function
+```
 
 Is this an expression?
 
@@ -30,24 +35,21 @@ Is this an expression?
 true          ;; yes - atoms count as expressions
 ```
 
-###  Expressions have Length
+###  Lists have Length
 
-Because a list can be counted, that means we have an idea of where things are, 
-including the first or last thing, and it also means that lists have a length, 
-which is a number telling us how many things are inside a list:
+An expression that's also a list is can be counted for the number of things 
+inside.
 
 ``` clojure
 (+ 1 2 3 4 5)                            ;; 6 things in this list
 (square 3)                               ;; 2 things in this list
 (+ 1 2 3 4 5 (* 3 2))                    ;; 7 things in this list
-((1 2 3) jungle cat (4 5 6) eats people) ;; 6 things in this list
+((strange) jungle cat (will) eat people) ;; 6 things in this list
 (empty? ())                              ;; 2 things in this list
 ```
 
 ###  Things to remember about expressions:
 
-- an expression can have zero or more expressions inside of it
-- a list is sequential, meaning the things inside are lined up one after another
-- a list can also be counted, so you know the number of things inside
-- the expressions inside a list are separated by spaces
-- the list with zero expressions is called an *empty list*
+- an expression is either an atom or a list of expressions
+- an expression that's a list must have one or more atoms
+- the first atom in an expression list must be a function
