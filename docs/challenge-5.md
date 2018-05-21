@@ -7,13 +7,18 @@ hide_title: true
 
 # Racket Challenge #5
 
-The _sum of the squares_ of the naturals `1..5` is:
+The _sum of the squares_ for the naturals `1..5` is:
 
 ``` clojure
-(+ (sqr 1) (sqr 2) (sqr 3) (sqr 4) (sqr 5))
+(+ (sqr 1)
+   (sqr 2)
+   (sqr 3)
+   (sqr 4)
+   (sqr 5)
+)
 ```
 
-The _square of the sum_ of the naturals `1..5` is:
+The _square of the sum_ for the naturals `1..5` is:
 
 ``` clojure
 (sqr (+ 1 2 3 4 5))

@@ -24,7 +24,8 @@
     (λ~> string-downcase 
          word->letters 
          letters->naturals 
-         sum))
+         sum
+))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve

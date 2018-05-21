@@ -22,11 +22,12 @@
 (fn (product-range start)
     (for/fold ([product 1])
               ([n (in-vector data start (+ 13 start))])
-              (* product n)))
+              (* product n))
+)
 
 (for/fold ([best 0])
           ([n (range 0 (+ -13 (vector-length data)))])
-          (if (< best (product-range n))
-              (product-range n)
+          (if (< (product-range n) best)
               best
-))
+              (product-range n))
+)

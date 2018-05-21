@@ -5,6 +5,7 @@
 (require threading)
 (fn square sqr)
 (fn (half x) (/ x 2))
+(fn ++ add1)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
@@ -21,7 +22,7 @@
 (fn (euler-12 [i 0])
     (let* ([current (triangle i)] 
            [okay? (~> current divisor-count (< 500 _))])
-          (if okay? current (~> i add1 euler-12))
-))
+          (if okay? current (~> i ++ euler-12)))
+)
 
 (euler-12)

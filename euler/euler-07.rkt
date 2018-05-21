@@ -11,10 +11,12 @@
 
 ; What is the 10,001st prime number?
 
+(fn ++ add1)
+
 (fn (euler-7 [max 10001])
     (for/fold ([seen 0] [current 0] #:result current)
               ([n (in-naturals)] #:when (prime? n) #:break (= seen max))
-              (values (add1 seen) n))
-)
+              (values (++ seen) n)
+))
 
 (time (euler-7))
