@@ -7,6 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro.html" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1.html" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><p><code>sin</code></p>
+<p>The sine function consumes an angle for a right triangle and will tell</p>
 <pre><code class="hljs css clojure"><span class="hljs-comment">; π/6 is 30°, and in a 30-60-90 triangle, the hypotenuse is double the length of</span>
 <span class="hljs-comment">; one of the sides.</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">6</span> pi)) <span class="hljs-comment">;; → 1/2</span>
@@ -14,10 +15,8 @@
 
 (<span class="hljs-name">define</span> π pi)
 
-(<span class="hljs-name">define</span> id
-   (λ (Θ) 
-      (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">square</span> (<span class="hljs-name">sin</span> Θ))
-         (<span class="hljs-name">square</span> (<span class="hljs-name">cos</span> Θ))))
+(<span class="hljs-name">define</span> (<span class="hljs-name">id</span> Θ)
+        (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">sqr</span> (<span class="hljs-name">sin</span> Θ)) (<span class="hljs-name">sqr</span> (<span class="hljs-name">cos</span> Θ)))
 )
 </code></pre>
 <p><code>cos</code></p>
