@@ -86,12 +86,12 @@ right function to use.
    "Henry" "Jen" "Mike" "Patricia" "Roy" "Joseph" "Patrick"))
 
 (empty? names)      ;; → false -- list is not empty
-(list? names)       ;; → true
+(list?  names)      ;; → true
 (length names)      ;; → 23
 
 (first names)       ;; → "Ryan"
-(last names)        ;; → "Patrick"
-(rest names)        ;; returns the list in names but with the first item removed.
+(last  names)       ;; → "Patrick"
+(rest  names)       ;; returns the list in names but with the first item removed.
 
 (list-ref names 0)  ;; → "Ryan"
 (list-ref names 1)  ;; → "Oliver"

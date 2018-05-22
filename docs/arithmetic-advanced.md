@@ -76,3 +76,13 @@ seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by
 (define (odd? n)
         (not (even? n)))
 ```
+
+## `abs` Absolute Value
+
+The absolute value function `abs` takes a number and always makes it positive.
+
+``` clojure
+(abs -10)       ;; 10
+(abs  10)       ;; 10
+(abs (abs -10)) ;; 10
+```

@@ -74,7 +74,7 @@ power to define a function, which we'll read about next.
 In the two examples below I have defined two very similar functions, `before`
 and `after`. Let's look at just the first list:
 
-* the first list has three items inside: `define`, `(before n)`, and `(- n 1)`.
+* the first expression has three items inside: `define`, `(before n)`, and `(- n 1)`.
 * `define` is a keyword that lets you define a function
 * `(before n)` is the head of the function; `before` is the name of the
   function, and `n` is the name of the input
@@ -107,8 +107,7 @@ I'm going to use extra long names for everything just for show.
 
 ``` clojure
 (define (prism-volume l w h)
-        (* l w h)
-)
+        (* l w h))
 ```
 
 Now let's use the function:
@@ -123,7 +122,7 @@ Now let's use the function:
 ## Trying out what you know
 
 * Define a function that can generate the sequence: `5, 3, 1, -1, -3, -5...`
-* Define a function that can generate the sequence: `0, 1, 8, 27, 64, 128...`
+* Define a function that can generate the sequence: `0, 1, 8, 27, 64, 125...`
 * Define a function called `triangle-area` which tells me the area of a triangle
   if you know `base` and `height`. This function will have two parameters (or
   inputs) that the function can take.

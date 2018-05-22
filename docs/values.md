@@ -43,7 +43,7 @@ We can even further divide things up if we wish:
 
 ``` clojure
 (define rationals (list 3.14 22/7 355/113))
-(define base2     (list 128 256 512)
+(define base2     (list 128 256 512))
 (define names     (list "Alex" "Frank" "Lucy"))
 (define animals   (list "fish" "bird" "dog"))
 
