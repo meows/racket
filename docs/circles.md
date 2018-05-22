@@ -12,9 +12,9 @@ times people know what you mean, but in math and science, it's important to get
 your definitions very accurate, and so we will begin by re-defining what a
 circle means.
 
-* A circle is defined first by finding a single center point **`O`** on a flat
-  plane or surface, and then finding all the points which are exactly some
-  _radius_ or distance **`R`** away from that center point.
+* A circle is defined by finding a single center point **`O`** on a flat plane 
+  or surface, and then finding all the points which are exactly some _radius_ or 
+  distance **`R`** away from that center point.
 
 * The longest straight line across the center of the circle is **`D`**, for
   _diameter_, and it happens to be double the radius.
