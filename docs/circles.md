@@ -49,8 +49,8 @@ circumference will be `2π`.
 ![pi-unroll](/img/pi-unroll.gif)
 
 A **radian** is a unit of measurement that makes use of `π` to describe angles.
-If a full circle is `2π` or 360°, then a half circle is `π` or 180°, and
-a quarter-circle is `π/2` or 90°. Here are some more examples below:
+If a full circle is `2π` radians or 360°, then a half circle is `π` radians or 
+180°. Here are some more examples below:
 
 radians | factor  | degrees
 ------- | ------- | -------
@@ -63,6 +63,10 @@ radians | factor  | degrees
 `π/12`  | 1/12    | 15°
 `π/36`  | 1/36    | 5°
 `π/180` | 1/180   | 1°
+
+> Don't memorize the radians, as we'll learn a trick about them later.
+
+## Why Radians? Or Degrees?
 
 Mathematicians and physicists frequently, or almost entirely use radians instead
 of degrees to measure angles. Part of the reason for this preference is because

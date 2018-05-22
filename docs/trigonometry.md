@@ -1,21 +1,14 @@
----
-id: trigonometry
-title: Trigonometry
-hide_title: true
-sidebar_label: trigonometry
----
-
-# A Right Triangle
-
-## Ratios
-
 ## `sin`
 
-The sine function consumes an angle `Θ` for a right triangle and will tell you 
+> People sometimes use `θ` to represent an angle because they want to avoid
+> using English letters. Theta is the 8th letter in the Greek alphabet, and it's
+> often written in the lowercase as `θ`.
+
+The sine function consumes an angle `θ` for a right triangle and will tell you 
 the ratio of the length of the hypotenuse `h` divided by length of the opposite 
 side `o`.
 
-`sine(Θ) = o / h`
+`sine(θ) = o / h`
 
 ``` clojure
 ; π/6 is 30°, and in a 30-60-90 triangle, the hypotenuse is double the length of
