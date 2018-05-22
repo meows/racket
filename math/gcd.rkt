@@ -5,5 +5,5 @@
 (fn (gcd n1 n2)
     (if (zero? n2)
         n1
-        (gcd n2 (mod n1 n2))
-))
+        (gcd n2 (mod n1 n2)))
+)

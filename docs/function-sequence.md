@@ -1,6 +1,7 @@
 ---
 id: function-sequence
 sidebar_label: Over Lists
+title: Over Lists
 hide_title: true
 ---
 
