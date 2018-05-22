@@ -6,13 +6,19 @@ hide_title: true
 
 # Comparing Numbers
 
-Below are some comparison functions that you may have encountered before in 
-math. All comparison functions listed here always take two or more inputs and 
-returns a boolean output: either `true` or `false`. Make sure you've read the 
-Boolean section on [values and types](values.md) before proceeding.
+Comparison functions look very similar to the ones you've seen in math before,
+and what they do is they compare two or more numbers with each other. Some
+comparison functions ask if two or more numbers are equal, and others ask if the 
+numbers are bigger or smaller.
 
-Most or all of the comparison functions below will look very similar to things
-you've encountered in math before.
+In a way `0 = 1` is like a question or an argument, to which we would answer 
+`false`. And so for the question or argument of whether `1 = 1`, we would 
+answer `true`.
+
+All comparison functions here require two or more numbers to compare, and they
+always return a boolean output, either `true` or `false`. Make sure you've read 
+the Boolean section on [values and types](values.md) before proceeding.
+
 
 ## `=` Equal
 
@@ -44,19 +50,36 @@ Here are some examples with many inputs:
 (= false #false #f) ;; → true
 ```
 
-## `<` Lesser-than
+## `<` Less-than
 
-The less-than operator `<` takes two numbers, sees if the *first* number is 
-smaller than the *second* one, and then returns `true` or `false`.
+The less-than operator `<` takes two numbers, sees if the _first_ number is 
+smaller than the _second_ number, and then returns either `true` or `false`. An
+interesting thing you might note is that when you compare multiple numbers, you
+can easily tell the result by visually checking the order.
+
+There's actually no difference between comparing order and size.
 
 ``` clojure
 (< 1 1)     ;; → false
-(< 1 10)    ;; → true
-(< 10 1)    ;; → false
+(< 0 1)     ;; → true
+(< 1 0)     ;; → false
 (< 15 30)   ;; → true
 (< 30 15)   ;; → false
 (< 1 2 3 4) ;; → true
 (< 1 5 3 4) ;; → false
+```
+
+## `>` Greater-than
+
+The greater-than operator `>` takes two numbers and sees if the _first_ number
+is greater than the _second_ number, and then returns `true` or `false`.
+
+``` clojure
+(> 1 1)     ;; → false
+(> 1 0)     ;; → true
+(> 0 1)     ;; → false
+(> 4 3 2 1) ;; → true
+(> 4 3 2 4) ;; → false
 ```
 
 ## `<=` Lesser-than or equal to

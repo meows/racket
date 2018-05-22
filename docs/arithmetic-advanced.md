@@ -10,10 +10,10 @@ hide_title: true
 ## `expt` Exponentiation
 
 The exponentiation function `expt` requires two inputs, (1) the first one is the
-base, and (2) the second one is the exponent or power. Therefore: 
-* `(expt 3 4)` should be interpreted as _3 to the power of 4_.
-* `(expt 4 3)` should be interpreted as _4 to the power of 3_.
-* `(expt 5 2)` should be interpreted as _5 to the power of 2_.
+base, and (2) the second one is the exponent or power. Therefore:
+  * `(expt 3 4)` should be interpreted as _3 to the power of 4_.
+  * `(expt 4 3)` should be interpreted as _4 to the power of 3_.
+  * `(expt 5 2)` should be interpreted as _5 to the power of 2_.
 
 ``` clojure
 (expt 1 0) ;; → (*)         → 1

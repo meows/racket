@@ -1,5 +1,5 @@
 ---
-id: challenge-n
+id: challenge-7
 sidebar_label: Challenge #7
 title: Challenge #7
 hide_title: true
@@ -8,6 +8,8 @@ hide_title: true
 # Greatest Common Divisor
 
 > Work in Progress. Don't use yet.
+
+## Description
 
 The _greatest common divisor_ of two integers finds the greatest divisor (or
 factor) which is shared among them. For example,
@@ -18,23 +20,25 @@ factor) which is shared among them. For example,
 
 Impressively, one of the most efficient ways to solve this problem was devised 
 by a Greek mathematician who lived around 400 to 300 BC, named Euclid 
-(or Eukleides) of Alexandria, in a historically acclaimed text called _The Elements_.
+(or Eukleides) of Alexandria, in a famous text known as the _The Elements_.
 
 Euclid's algorithm, as it has come to be known, describes a function 
 `gcd(n1, n2)` which consumes two naturals `n1` and `n2` as inputs, and returns 
 their greatest common divisor by using the following two rules:
 
-1. `gcd(n1, 0) = 0` 
+1. If `gcd(n1, 0) = n1` 
 2. Otherwise, return `gcd(n2, n1 % n2)`
 
 > Assume that % is the `remainder` operator, which gives you the remainder 
 > after the division of two numbers. For positive numbers, this is also 
 > sometimes called `modulo`.
 
+## Problem
+
 Given these rules, write a similar recursive function in Racket named `gcd`
 which expects two natural inputs, `n1` and `n2`:
 
-1. If `n2` equals `0`, then return `n2`
+1. If `n2` equals `0`, then return `n1`
 2. Otherwise, return `(gcd n2 (modulo n1 n2))`
 
 ``` clojure
