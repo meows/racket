@@ -80,23 +80,36 @@ function using itself.
             (* n (factorial (sub1 n)))
 ))
 
-;; if the steps of (factorial 3) were written out
-(factorial 3)
-(* 3 (factorial 2))
-(* 3 (* 2 (factorial 1)))
-(* 3 (* 2 1))
-(* 3 2)
-6
+;; if the steps of (factorial 4) were written out
+(factorial 4)
+(* 4 (factorial 3))
+(* 4 (* 3 (factorial 2)))
+(* 4 (* 3 (* 2 (factorial 1))))
+(* 4 (* 3 (* 2 1)))
+(* 4 (* 3 2))
+(* 4 6)
+24
 ```
 
 ## Default Parameters
+
+A default parameter provides an input if you don't provide one.
 
 ``` racket
 (define (factorial n [result 1])
         (if (zero? n)
             result
-            (* result (factorial (sub1 n)))
+            (factorial (sub1 n) 
+                       (* n result))
 ))
+
+;; if the steps of (factorial 4) were written out
+(factorial 4 1)
+(factorial 3 4)
+(factorial 2 12)
+(factorial 1 24)
+(factorial 0 24)
+24
 ```
 
 ## Named Parameters
@@ -107,4 +120,12 @@ function using itself.
             p
             (factorial (sub1 n) #:result (* n p))
 ))
+
+;; if the steps of (factorial 4) were written out
+(factorial 4 #:result 1)
+(factorial 3 #:result (* 3 4))
+(factorial 2 #:result (* 2 12))
+(factorial 1 #:result (* 1 24))
+(factorial 0 #:result 24)
+24
 ```
