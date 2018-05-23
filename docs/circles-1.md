@@ -45,7 +45,8 @@ following questions using only your mind for both radians and degrees.
 
 * Go forward `1/3` of the way around a circle.
 * Go forward `1/6` of the way around a circle.
+* Go forward `1/12` of the way around a circle.
 * Go forward `1/360` of the way around a circle.
 * Go backward `1/4` of the way around a circle.
 * Go backward `2/4` of the way around a circle.
-* Go backward `4/4` of the way around a circle.
+* Go backward `5/4` of the way around a circle.
