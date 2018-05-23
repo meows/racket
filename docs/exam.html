@@ -12,11 +12,37 @@
 <li>What is variable assignment?</li>
 <li>What is a function?</li>
 </ol>
-<h2><a class="anchor" aria-hidden="true" id="triangle"></a><a href="#triangle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Triangle</h2>
-<p>Define a function called <code>gravity-angle</code> which tells you how much gravitational
-force is at any angle <code>θ</code> of direction.</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">gravity-angle</span> θ)
-        (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">9.8</span> (<span class="hljs-name">cos</span> θ))
+<h2><a class="anchor" aria-hidden="true" id="function"></a><a href="#function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Function</h2>
+<p>Define a function in terms of input and output.</p>
+<h2><a class="anchor" aria-hidden="true" id="line"></a><a href="#line" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Line</h2>
+<p>Define a function for each of these sequences, but before you do, identify
+(1) the initial starting point and (2) the velocity.</p>
+<ul>
+<li><code>0, 1, 2, 3, 4, 5...</code></li>
+<li><code>0, 2, 4, 6, 8...</code></li>
+<li><code>0, 3, 6, 9, 12...</code></li>
+<li><code>3, 6, 9, 12, 15...</code></li>
+<li><code>-6, -1, 4, 9, 14...</code></li>
+<li><code>14, 9, 4, -1, -6...</code></li>
+</ul>
+<p>Define a function in Racket called <code>line</code> which can take two parameters,
+starting position <code>p0</code> and velocity <code>v</code>, and return a lambda which would give
+that sequence.</p>
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">line</span> p0 v)
+        (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x v)))
 )
+
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">0</span> <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">10</span>))
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#terms">Terms</a></li><li><a href="#triangle">Triangle</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="circle"></a><a href="#circle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Circle</h2>
+<ul>
+<li><p>Define a circle using terms such as <em>center point</em> and <em>radius</em>.</p></li>
+<li><p>Define pi or <code>π</code> using the term <em>ratio</em>.</p></li>
+<li><p>If the radius of a circle is <code>1</code>, then what's the circumference?</p></li>
+<li><p>What's an angle?</p></li>
+<li><p>If I want to walk backward <code>1/3</code> of the way around a circle, what is that in
+both degrees and radians?</p></li>
+<li><p>If I want to walk forward <code>5/4</code> of the way around a circle, what is that in
+both degrees and radians?</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#terms">Terms</a></li><li><a href="#function">Function</a></li><li><a href="#line">Line</a></li><li><a href="#circle">Circle</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
