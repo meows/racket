@@ -70,8 +70,8 @@
 ;        (drop-right ints 1)))
 
 (fn (diff ints)
-    (for/list ([n0 ints] [n1 (rest ints)])
-              (- n1 n0)))
+    (for/list ([i1 ints] [i2 (rest ints)])
+              (- t2 t1)))
 
 ; list <natural> → history <list[natural]>
 (fn (differ nats)
@@ -139,9 +139,9 @@
     (def plot-input
          (list* (axes)
                 (if grid? (tick-grid) empty)
-                (function fn/1 #:width 1.3)
-                (function identity #:style 'dot #:width 1.3 #:color 'gray)
-                (map (curry function #:color 'blue #:width 1.3) fns)))
+                (function fn/1)
+                (function identity #:style 'dot #:width 1.5 #:color 'gray)
+                (map (curry function 'blue) fns)))
     (plot plot-input
           #:x-min min
           #:x-max max

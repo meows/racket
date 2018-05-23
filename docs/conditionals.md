@@ -79,6 +79,19 @@ _unless_ it encounters at least one `false` value. If `and` encounters even one
 (and true  true  true)   ;; → true
 ```
 
+One good use of `and` is when you have multiple rules or conditions that you
+need to be all `true` at the same time. In the example below, we check if a 
+number is both even and negative at the same time.
+
+``` clojure
+(define (even-and-negative? n)
+        (and (even? n) 
+             (negative? n)))
+
+(even-and-negative? -10) ;; → true
+(even-and-negative?  10) ;; → false
+```
+
 ## `or`
 
 `or` takes a list of 0 or more boolean expressions and evaluates to `false`
@@ -86,11 +99,27 @@ _unless_ it encounters at least one `true` value. If `or` encounters even one
 `true`, then it will always be `true`.
 
 ``` clojure
-(or)                    ;; → false
-(or false false false)  ;; → false
-(or true  false false)  ;; → true
-(or true  true  false)  ;; → true
-(or true  true  true)   ;; → true
+(or)                   ;; → false
+(or false false false) ;; → false
+(or true  false false) ;; → true
+(or true  true  false) ;; → true
+(or true  true  true)  ;; → true
+```
+
+A good place to use `or` is when you only need to know if any one of your rules
+or conditions is `true`. In the example below, we check if a number is divisible
+by `2`, `7`, or `9`.
+
+``` clojure
+(define (div-by-2-7-9? n)
+        (or (zero? (modulo n 2))
+            (zero? (modulo n 7))
+            (zero? (modulo n 9)))
+)
+
+(div-by-2-7-9? 4)  ;; → true
+(div-by-2-7-9? 14) ;; → true
+(div-by-2-7-9? 15) ;; → false
 ```
 
 ## A quick review
