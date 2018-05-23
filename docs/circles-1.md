@@ -22,15 +22,15 @@ is negative, that just means to walk in the opposite direction.
 
 radians  | degrees | direction | walk around a circle | factor
 -------  | ------- | --------- | -------------------- | ------
-`4π`     |  720°   | forward   | twice                | 2
-`2π`     |  360°   | forward   | once                 | 1
-`π`      |  180°   | forward   | halfway              | 1/2
-`π/2`    |  90°    | forward   | quarterway           | 1/4
+`4π`     |  720°   | positive  | twice                | 2
+`2π`     |  360°   | positive  | once                 | 1
+`π`      |  180°   | positive  | halfway              | 1/2
+`π/2`    |  90°    | positive  | quarterway           | 1/4
 `0π`     |  0°     | none      | no walking           | 0
-`-π/2`   | -90°    | backward  | quarterway           | -1/4
-`-π`     | -180°   | backward  | halfway              | -1/2
-`-2π`    | -360°   | backward  | once                 | -1
-`-4π`    | -720°   | backward  | twice                | -2
+`-π/2`   | -90°    | negative  | quarterway           | -1/4
+`-π`     | -180°   | negative  | halfway              | -1/2
+`-2π`    | -360°   | negative  | once                 | -1
+`-4π`    | -720°   | negative  | twice                | -2
 
 The `factor` column represents how many times you want to walk around the
 circle, but in numerical form, where a factor of `1` means to walk around the
@@ -41,11 +41,11 @@ around the world still memorizing the radians!
 ## Review
 
 Without referring to the table or calculating very much, try to answer the
-following questions using only your mind.
+following questions using only your mind for both radians and degrees.
 
-* If I want to go forward `1/3` of the way around a circle, how many radians and degrees is that?
-* If I want to go forward `1/6` of the way around a circle, how many radians and degrees is that?
-* If I want to go forward `1/360` of the way around a circle, how many radians and degrees is that?
-* If I want to go backward `1/4` of the way around a circle, how many radians and degrees is that?
-* If I want to go backward `2/4` of the way around a circle, how many radians and degrees is that?
-* If I want to go backward `4/4` of the way around a circle, how many radians and degrees is that?
+* Go forward `1/3` of the way around a circle.
+* Go forward `1/6` of the way around a circle.
+* Go forward `1/360` of the way around a circle.
+* Go backward `1/4` of the way around a circle.
+* Go backward `2/4` of the way around a circle.
+* Go backward `4/4` of the way around a circle.
