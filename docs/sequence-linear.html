@@ -25,9 +25,10 @@
 <li><code>30, 20, 10, 0, -10, -20...</code></li>
 <li><code>-33, -35, -37, -39, -41, -43...</code></li>
 </ul>
-<p>These sequence all have something in common in that their <em>velocity</em> never
-changes. We call these <em>linear</em> sequences because if we were to graph these
-points and connect them, they would look like a straight line.</p>
+<p>These sequence all have something in common in that the difference from one
+number to the next never changes. We call these <em>linear</em> sequences because if we
+were to graph these points and connect them, they would look like a straight
+line.</p>
 <p><code>f(n) -&gt; v*n + p0</code></p>
 <p>These linear sequences can be described entirely by 3 factors. A velocity <code>v</code>,
 a starting position <code>p0</code>, and a variable <code>n</code>, indicating the sequence number
@@ -37,8 +38,7 @@ that you want.</p>
 <span class="hljs-comment">; v  -- velocity of linear sequence</span>
 <span class="hljs-comment">; n  -- the nth sequence item desired</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">line</span> p0 v)
-        (λ (<span class="hljs-name">n</span>) 
-           (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n v)))
+        (λ (<span class="hljs-name">n</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n v)))
 )
 
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(2 5 8 11 14 17)</span>
