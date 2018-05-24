@@ -58,12 +58,13 @@ factors:</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">2</span> <span class="hljs-number">-3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(2 -1 -4 -7 -10 -13)</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="differentiating"></a><a href="#differentiating" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Differentiating</h2>
-<p>We have seen before that one way to get information on a sequence is to subtract
-every value of <code>s(n)</code> with <code>s(n-1)</code>. If the difference converges right away to a
-number, then that is the velocity of the sequence. If it doesn't converge right
-away, then the function isn't linear, meaning that its velocity changes.</p>
+<p>We have seen before that one way to get information on a number sequence <code>s</code> is
+to subtract every value of <code>s(n)</code> with <code>s(n-1)</code>. If the difference converges
+right away to a number, then that is the velocity of the sequence. If it doesn't
+converge right away, then the function isn't linear, meaning that its velocity
+changes.</p>
 <p>Getting a new sequence by finding the difference between the current number and
-the previous number is called a difference or delta, and it's normally denoted
+the previous number is called a difference or <em>delta</em>, and it's normally denoted
 using the lower-cased delta <strong>Δ</strong>, the 4th letter of the Greek alphabet.</p>
 <p>This sequence converges right away to <code>2</code>, so we conclude the velocity is <code>2</code>.</p>
 <table>
