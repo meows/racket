@@ -27,6 +27,7 @@
 
 (fn unequal? (compose not equal?))
 (fn one? (curry = 1))
+(fn unnatural? (compose not natural?))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Arithmetic

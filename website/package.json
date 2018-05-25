@@ -9,6 +9,7 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "*"
+    "docusaurus": "*",
+    "remarkable-katex": "*"
   }
 }

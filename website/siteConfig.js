@@ -82,6 +82,10 @@ const siteConfig = {
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
+  
+   // markdownPlugins: [function (md) {
+   //    md.use(require('remarkable-katex'));
+   // }],
 
   /* Open Graph and Twitter card images */
   ogImage: 'img/docusaurus.png',

@@ -9,7 +9,8 @@
          "values",
          "recursion",
          "circles",
-         "angle"
+         "angle",
+         "sequence-linear"
       ],
       "Language Guide": [
          "function-intro",
@@ -19,8 +20,7 @@
          "comparisons",
          "conditionals",
          "function-sequence",
-         "function-advanced",
-         "graphing"
+         "function-advanced"
       ]
    },
    "challenge": {
