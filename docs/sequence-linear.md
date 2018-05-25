@@ -120,16 +120,20 @@ n | value | formula   | Δ0    | Δ1    | Δ2
 
 ## Review Questions
 
-* What two things do we need to know to define a function for _any_ linear
-  sequence?
-  - Answer: (1) starting position and (2) velocity.
+**Q**. What's a linear sequence?
+- A sequence of numbers where the velocity of the sequence never changes. In 
+  other words, if the difference from one number in the sequence to the next is 
+  always the same.
 
-* What is delta or `Δ`?
-  - Answer: It's a symbol that often stands for a function or operation that gets 
-    the difference of a number sequence.
+**Q**. What two things do we need to know to define a function for _any_ linear sequence?
+- (1) starting position and (2) velocity.
 
-* If your sequence is finite, why can't you repeatedly delta it forever?
-  - Answer: Because your sequence gets shorter by one number every time you delta a sequence.
+**Q**. What is delta or `Δ`?
+- It's a symbol that often stands for a function or operation that gets the 
+  difference of a number sequence.
 
-* How do you tell if your sequence is linear?
-  - Answer: If the sequence converges to a number with exactly one delta.
+**Q**. If your sequence is finite, why can't you repeatedly delta it forever?
+- Because your sequence gets shorter by one number every time you delta a sequence.
+
+**Q**. How do you tell if your sequence is linear?
+- If the sequence converges to a number with exactly one delta.
