@@ -35,8 +35,8 @@ line.</p>
 <p>These linear sequences can be described entirely by 3 factors. A velocity <code>v</code>,
 a starting position <code>p0</code>, and a variable <code>n</code>, indicating the sequence number
 that you want.</p>
-<p>To create a function representing any linear sequence, you need merely know two
-factors:</p>
+<p>To create a function representing any linear sequence, you need only know
+exactly two factors:</p>
 <ol>
 <li>A starting position <code>p0</code>.</li>
 <li>A velocity <code>v</code>.</li>
@@ -51,8 +51,8 @@ factors:</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(2 5 8 11 14 17)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(3 5 7 9 11 13)</span>
 
-(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(0 3 6 9 12 15)</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">0</span> <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(3 3 3 3 3 3)</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">0</span> <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(0 3 6 9 12 15)</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">3</span> <span class="hljs-number">0</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(3 3 3 3 3 3)</span>
 
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">-3</span> <span class="hljs-number">2</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(-3 -1 1 3 5 7)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">2</span> <span class="hljs-number">-3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(2 -1 -4 -7 -10 -13)</span>
@@ -86,7 +86,7 @@ using the lower-cased delta <strong>Δ</strong>, the 4th letter of the Greek alp
 </table>
 <blockquote>
 <p><code>Δn</code> is used to indicate a delta of a sequence. Since we can delta a sequence
-more than once, I label them from <code>Δ0...Δn</code>.</p>
+more than once, I label them <code>Δ0, Δ1, Δ2...</code>.</p>
 </blockquote>
 <p>This sequence converges eventually but not right away, so we can conclude that
 its velocity is changing. The sequence is therefore non-linear.</p>
