@@ -82,7 +82,8 @@ need to be all <code>true</code> at the same time. In the example below, we chec
 number is both even and negative at the same time.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">even-and-negative?</span> n)
         (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n) 
-             (<span class="hljs-name">negative?</span> n)))
+             (<span class="hljs-name">negative?</span> n))
+)
 
 (<span class="hljs-name">even-and-negative?</span> <span class="hljs-number">-10</span>) <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name">even-and-negative?</span>  <span class="hljs-number">10</span>) <span class="hljs-comment">;; → false</span>
@@ -98,8 +99,8 @@ number is both even and negative at the same time.</p>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>)  <span class="hljs-comment">;; → true</span>
 </code></pre>
 <p>A good place to use <code>or</code> is when you only need to know if any one of your rules
-or conditions is <code>true</code>. In the example below, we check if a number is divisible
-by <code>2</code>, <code>7</code>, or <code>9</code>.</p>
+or conditions is <code>true</code>. In the example below, we check if a number <code>n</code> is
+divisible by <code>2</code>, <code>7</code>, or <code>9</code>.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">div-by-2-7-9?</span> n)
         (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> n <span class="hljs-number">2</span>))
             (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> n <span class="hljs-number">7</span>))
