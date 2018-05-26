@@ -20,8 +20,8 @@ _variable_, and the act of saving information behind a variable is called
 _variable assignment_.
 
 It's important to note that a variable doesn't need to refer to any single
-number or value. It refers to a *place* where you can put things, such as
-values.
+number or value -- it refers to the place where you can put values. A variable
+is just a name for a place.
 
 Let's look at some examples below:
 
@@ -30,15 +30,15 @@ Let's look at some examples below:
 (define b (+ a a)) ;; → 10
 (define c (+ a b)) ;; → 15
 
-(+ a b)    ;; →  15
-(+ b a)    ;; →  15
-(- a b)    ;; →  -5
-(- b a)    ;; →   5
-(+ a b c)  ;; →  30
-(+ c a b)  ;; →  30
-(- a b c)  ;; → -20
-(- b a c)  ;; → -10
-(- c a b)  ;; →   0
+(+ a b)   ;; →  15
+(+ b a)   ;; →  15
+(- a b)   ;; →  -5
+(- b a)   ;; →   5
+(+ a b c) ;; →  30
+(+ c a b) ;; →  30
+(- a b c) ;; → -20
+(- b a c) ;; → -10
+(- c a b) ;; →   0
 ```
 
 Of course you can also use longer names too, and sometimes a longer name is

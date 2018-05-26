@@ -38,7 +38,7 @@ circle once. You might observe from this table that you need merely
 _double the factor to get the radians_. Strangely, there are countless students
 around the world still memorizing the radians!
 
-## Review
+## Practice
 
 Without referring to the table or calculating very much, try to answer the
 following questions using only your mind for both radians and degrees.

@@ -136,4 +136,5 @@ n | value | formula   | Δ0    | Δ1    | Δ2
 - Because your sequence gets shorter by one number every time you delta a sequence.
 
 **Q**. How do you tell if your sequence is linear?
-- If the sequence converges to a number with exactly one delta.
+- If the sequence converges to a number with exactly one delta; another way of
+  saying this is if the speed never changes.
