@@ -20,7 +20,8 @@
          "comparisons",
          "conditionals",
          "function-sequence",
-         "function-advanced"
+         "function-advanced",
+         "fold"
       ]
    },
    "challenge": {

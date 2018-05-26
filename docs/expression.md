@@ -10,9 +10,8 @@ hide_title: true
 
 An expression means either:
   1. An atom. 
-  2. A list of one or more atoms or sub-expressions, separated by spaces and 
-     surrounded by parentheses, where the first sub-expression in a list must be 
-     a function.
+  2. A list of one or more expressions, separated by spaces and surrounded by
+     parentheses.
 
 For example,
 ``` clojure

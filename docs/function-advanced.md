@@ -86,8 +86,7 @@ A default parameter provides an input if you don't provide one.
 (define (factorial n [result 1])
         (if (zero? n)
             result
-            (factorial (sub1 n) 
-                       (* n result))
+            (factorial (sub1 n) (* n result))
 ))
 
 ;; if the steps of (factorial 4) were written out

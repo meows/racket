@@ -86,7 +86,8 @@ number is both even and negative at the same time.
 ``` clojure
 (define (even-and-negative? n)
         (and (even? n) 
-             (negative? n)))
+             (negative? n))
+)
 
 (even-and-negative? -10) ;; → true
 (even-and-negative?  10) ;; → false
@@ -107,8 +108,8 @@ _unless_ it encounters at least one `true` value. If `or` encounters even one
 ```
 
 A good place to use `or` is when you only need to know if any one of your rules
-or conditions is `true`. In the example below, we check if a number is divisible
-by `2`, `7`, or `9`.
+or conditions is `true`. In the example below, we check if a number `n` is 
+divisible by `2`, `7`, or `9`.
 
 ``` clojure
 (define (div-by-2-7-9? n)
