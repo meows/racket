@@ -29,18 +29,14 @@
 number to the next never changes. We call these <em>linear</em> sequences because if we
 were to graph these points and connect them, they would look like a straight
 line.</p>
-<ul>
-<li><code>f(n) -&gt; v*n + p0</code></li>
-</ul>
-<p>These linear sequences can be described entirely by 3 factors. A velocity <code>v</code>,
-a starting position <code>p0</code>, and a variable <code>n</code>, indicating the sequence number
-that you want.</p>
-<p>To create a function representing any linear sequence, you need only know
-exactly two factors:</p>
+<p>A function for any linear sequence can be defined with just two facts:</p>
 <ol>
 <li>A starting position <code>p0</code>.</li>
 <li>A velocity <code>v</code>.</li>
 </ol>
+<ul>
+<li><code>f(n) -&gt; v*n + p0</code></li>
+</ul>
 <p>In Racket, it would look like:</p>
 <pre><code class="hljs css Clojure"><span class="hljs-comment">; p0 -- value of position 0</span>
 <span class="hljs-comment">; v  -- velocity of linear sequence</span>

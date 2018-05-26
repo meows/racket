@@ -24,22 +24,22 @@ very exhausting.</p>
 <em>variable</em>, and the act of saving information behind a variable is called
 <em>variable assignment</em>.</p>
 <p>It's important to note that a variable doesn't need to refer to any single
-number or value. It refers to a <em>place</em> where you can put things, such as
-values.</p>
+number or value -- it refers to the place where you can put values. A variable
+is just a name for a place.</p>
 <p>Let's look at some examples below:</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> a <span class="hljs-number">5</span>)       <span class="hljs-comment">;; → 5</span>
 (<span class="hljs-name">define</span> b (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a a)) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">define</span> c (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b)) <span class="hljs-comment">;; → 15</span>
 
-(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b)    <span class="hljs-comment">;; →  15</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> b a)    <span class="hljs-comment">;; →  15</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> a b)    <span class="hljs-comment">;; →  -5</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> b a)    <span class="hljs-comment">;; →   5</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b c)  <span class="hljs-comment">;; →  30</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> c a b)  <span class="hljs-comment">;; →  30</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> a b c)  <span class="hljs-comment">;; → -20</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> b a c)  <span class="hljs-comment">;; → -10</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> c a b)  <span class="hljs-comment">;; →   0</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b)   <span class="hljs-comment">;; →  15</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> b a)   <span class="hljs-comment">;; →  15</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> a b)   <span class="hljs-comment">;; →  -5</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> b a)   <span class="hljs-comment">;; →   5</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b c) <span class="hljs-comment">;; →  30</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> c a b) <span class="hljs-comment">;; →  30</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> a b c) <span class="hljs-comment">;; → -20</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> b a c) <span class="hljs-comment">;; → -10</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> c a b) <span class="hljs-comment">;; →   0</span>
 </code></pre>
 <p>Of course you can also use longer names too, and sometimes a longer name is
 better at communicating what you want to say to another human. It's sometimes
@@ -67,12 +67,13 @@ power to define a function, which we'll read about next.</p>
 <p>In the two examples below I have defined two very similar functions, <code>before</code>
 and <code>after</code>. Let's look at just the first list:</p>
 <ul>
-<li>the first expression has three items inside: <code>define</code>, <code>(before n)</code>, and <code>(- n 1)</code>.</li>
-<li><code>define</code> is a keyword that lets you define a function</li>
+<li>the first expression has three items inside: <code>define</code>, <code>(before n)</code>, and
+<code>(- n 1)</code>.</li>
+<li><code>define</code> is a keyword that lets you define a function.</li>
 <li><code>(before n)</code> is the head of the function; <code>before</code> is the name of the
-function, and <code>n</code> is the name of the input</li>
+function, and <code>n</code> is the name of the input.</li>
 <li><code>(- n 1)</code> is the body of the function; whatever this evaluates to is the
-final value of the function</li>
+final value of the function.</li>
 </ul>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Why might this be named before?</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">before</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))

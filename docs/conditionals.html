@@ -71,11 +71,11 @@ determine how a function will work</li>
 <p><code>and</code> takes a list of 0 or more boolean expressions and will evaluate to <code>true</code>
 <em>unless</em> it encounters at least one <code>false</code> value. If <code>and</code> encounters even one
 <code>false</code>, then it will always be <code>false</code>.</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)                    <span class="hljs-comment">;; → true</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → false</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → false</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span>)  <span class="hljs-comment">;; → false</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>)   <span class="hljs-comment">;; → true</span>
+<pre><code class="hljs css clojure">(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)                   <span class="hljs-comment">;; → true</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>)  <span class="hljs-comment">;; → true</span>
 </code></pre>
 <p>One good use of <code>and</code> is when you have multiple rules or conditions that you
 need to be all <code>true</code> at the same time. In the example below, we check if a
