@@ -23,16 +23,11 @@ number to the next never changes. We call these *linear* sequences because if we
 were to graph these points and connect them, they would look like a straight
 line.
 
-* `f(n) -> v*n + p0`
-
-These linear sequences can be described entirely by 3 factors. A velocity `v`,
-a starting position `p0`, and a variable `n`, indicating the sequence number
-that you want.
-
-To create a function representing any linear sequence, you need only know 
-exactly two factors:
-   1. A starting position `p0`.
+A function for any linear sequence can be defined with just two facts:
+   1. A starting value for the position `p0`.
    2. A velocity `v`.
+
+* `f(n) ↦ v*n + p0`
 
 In Racket, it would look like:
 
@@ -41,7 +36,7 @@ In Racket, it would look like:
 ; v  -- velocity of linear sequence
 ; n  -- the nth sequence item desired
 (define (line p0 v)
-    (λ (n) (+ p0 (* n v))))
+        (λ (n) (+ p0 (* n v))))
 
 (map (line 2 3) (range 6)) ;; → '(2 5 8 11 14 17)
 (map (line 3 2) (range 6)) ;; → '(3 5 7 9 11 13)
@@ -83,8 +78,9 @@ n | value | formula   | Δ0
 > `Δn` is used to indicate a delta of a sequence. Since we can delta a sequence
 > more than once, I label them `Δ0, Δ1, Δ2...`.
 
-This sequence converges eventually but not right away, so we can conclude that
-its velocity is changing. The sequence is therefore non-linear.
+This sequence of squared numbers converges eventually but not right away, so we 
+can conclude that its velocity is changing. The sequence is therefore 
+non-linear.
 
 n | value | formula   | Δ0    | Δ1
 - | ----- | --------- | ----- | -----
@@ -99,8 +95,9 @@ n | value | formula   | Δ0    | Δ1
 8 |  64   | `n9 - n8` | 17    | `...`
 9 |  81   | `...`     | `...` | `...`
 
-This sequence converges eventually but not right away, so we can conclude that
-its velocity is changing. The sequence is therefore non-linear.
+This sequence of cubed numbers converges eventually but not right away, so we 
+can conclude that its velocity is changing. The sequence is therefore 
+non-linear.
 
 n | value | formula   | Δ0    | Δ1    | Δ2
 - | ----- | --------- | ----- | ----- | -----

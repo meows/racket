@@ -10,9 +10,10 @@ hide_title: true
 Give a list of integers from `0..1000` but with all odd numbers removed.
 
 ## Possible Clues
-* `filter`
-* `range`
-* `modulo`
+* [`filter`](function-sequence.md)
+* [`range`](function-sequence.md)
+* [`modulo`](arithmetic-advanced.md)
 * `odd?`
 * `even?`
-* `lambda`
+* [`lambda`](lambda.md)
+

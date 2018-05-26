@@ -72,11 +72,11 @@ _unless_ it encounters at least one `false` value. If `and` encounters even one
 `false`, then it will always be `false`.
 
 ``` clojure
-(and)                    ;; → true
-(and false false false)  ;; → false
-(and true  false false)  ;; → false
-(and true  true  false)  ;; → false
-(and true  true  true)   ;; → true
+(and)                   ;; → true
+(and false false false) ;; → false
+(and true  false false) ;; → false
+(and true  true  false) ;; → false
+(and true  true  true)  ;; → true
 ```
 
 One good use of `and` is when you have multiple rules or conditions that you

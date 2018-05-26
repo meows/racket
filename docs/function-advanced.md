@@ -19,7 +19,7 @@ that, let's briefly review what we've learned so far.
 By now we should be quite familiar with how to define a function which takes in
 a single input or _parameter_.
 
-``` racket
+``` clojure
 (define (half x) (* 1/2 x))
 (define (cube x) (* x x x))
 
@@ -43,7 +43,7 @@ or _parameters_, such as the `prism-volume` function below, which can find the
 volume of any 3-dimensional rectangular prism given length `l`, width `w`, and
 height `h`:
 
-``` racket
+``` clojure
 (define (prism-volume l w h)
         (* l w h))
 
@@ -56,7 +56,7 @@ height `h`:
 
 Which we know to be a shorthand for either:
 
-``` racket
+``` clojure
 (define prism-volume
         (lambda (l w h)
                 (* l w h)

@@ -98,8 +98,8 @@ or `false`.
 ## `>=` Greater-than or equal to
 
 ``` clojure
-(>= 1 10)   ;; → false
-(>= 10 1)   ;; → true
-(>= 1 1)    ;; → true
-(>= 10 10)  ;; → true
+(>= 1 10)  ;; → false
+(>= 10 1)  ;; → true
+(>= 1 1)   ;; → true
+(>= 10 10) ;; → true
 ```

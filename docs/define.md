@@ -74,12 +74,13 @@ power to define a function, which we'll read about next.
 In the two examples below I have defined two very similar functions, `before`
 and `after`. Let's look at just the first list:
 
-* the first expression has three items inside: `define`, `(before n)`, and `(- n 1)`.
-* `define` is a keyword that lets you define a function
+* the first expression has three items inside: `define`, `(before n)`, and 
+  `(- n 1)`.
+* `define` is a keyword that lets you define a function.
 * `(before n)` is the head of the function; `before` is the name of the
-  function, and `n` is the name of the input
+  function, and `n` is the name of the input.
 * `(- n 1)` is the body of the function; whatever this evaluates to is the
-  final value of the function
+  final value of the function.
 
 ``` clojure
 ;; Why might this be named before?
