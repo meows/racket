@@ -23,17 +23,8 @@ a single input or _parameter_.
 (define (half x) (* 1/2 x))
 (define (cube x) (* x x x))
 
-;; if the steps of (half 10) were written out
-(half 10)
-(* 1/2 10)
-5
-
-;; if the steps of (cube 10) were written out
-(cube 10)
-(* 10 10 10)
-(* 100 10)
-1000
-
+(half 10) ;; → (* 1/2 10)   → 5
+(cube 10) ;; → (* 10 10 10) → 1000
 ```
 
 ### Multiple Parameters
@@ -47,11 +38,7 @@ height `h`:
 (define (prism-volume l w h)
         (* l w h))
 
-;; if the steps of (prism-volume 10) were written out
-(prism-volume 3 5 7)
-(* 3 5 7)
-(* 15 7)
-105
+(prism-volume 3 5 7) ;; → (* 3 5 7) → 105
 ```
 
 Which we know to be a shorthand for either:
