@@ -66,8 +66,8 @@ What happens if we write a function where everything is `true`?
 
 ``` clojure
 (define (always-true n) true)
-(filter always-true (range 6)) ;; → '(0 1 2 3 4 5)
-(filter always-true '(a b c))  ;; → '(a b c)
+(filter always-true (range 6))     ;; → '(0 1 2 3 4 5)
+(filter always-true '("hi" 42 #f)) ;; → '("hi" 42 #f)
 ```
 
 Then `filter` will just give back the original list, cutting nothing out. The
