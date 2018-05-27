@@ -14,6 +14,7 @@ An expression means either:
      parentheses.
 
 For example,
+
 ``` clojure
 (we are all atoms surrounded by parenthesis and separated by spaces)
 (+ 1 2 3 4 5)

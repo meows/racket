@@ -22,6 +22,7 @@ Here's an example of `lambda` in action:
 ``` clojure
 ;; Example 1
 (define div10 (lambda (x) (/ x 10)))
+
 (div10 100)  ;; → 10
 (div10 20)   ;; → 2
 ```
@@ -32,6 +33,7 @@ learned before:
 ``` clojure
 ;; Example 2
 (define (div10 x) (/ x 10))
+
 (div10 100)  ;; → 10
 (div10 20)   ;; → 2
 ```
@@ -80,8 +82,11 @@ before using it? That's what `lambda` allows you to do:
 
 ``` clojure
 ;; Example 2
-(filter (lambda (x) (< 3 x)) (range 6))
-(filter (lambda (x) (zero? (modulo x 2))) (range 6))
+(filter (lambda (x) (< 3 x)) 
+        (range 6))
+
+(filter (lambda (x) (zero? (modulo x 2))) 
+        (range 6))
 ```
 
 I don't blame you if you think the above examples look harder to read; a lot of
@@ -95,13 +100,16 @@ creators of your language also have a special love for it, I will note that
 `lambda` and `λ` mean the same thing in Racket and so you're allowed to use
 either one.
 
-``` clojure
+``` racket
 (define prism-volume
         (λ (l w h)
            (* l w h)))
 
-(filter (λ (x) (< 3 x)) (range 6))
-(filter (λ (x) (zero? (modulo x 2))) (range 6))
+(filter (λ (x) (< 3 x)) 
+        (range 6))
+
+(filter (λ (x) (zero? (modulo x 2))) 
+        (range 6))
 ```
 
 In DrRacket, you can type the `λ` symbol with `ctrl` + `\`.
