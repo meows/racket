@@ -7,24 +7,27 @@
 (require (only-in srfi/26 cut))
 (require (only-in srfi/1 unfold-right))
 
+(fn -- sub1)
+
 (fn (fib n)
     (fn (loop a b u v count)
-        (cond ([= count 0] b)
-              ([even? count] (loop a 
+        (cond [(= count 0) b]
+              [(even? count) (loop a 
                                    b
                                    (+ (square u) (square v))
                                    (+ (square v) (* 2 u v))
-                                   (/ count 2)))
-              (else (loop (+ (* b v) (* a v) (* a u))
+                                   (* 1/2 count))]
+              [else (loop (+ (* b v) (* a v) (* a u))
                           (+ (* b u) (* a v))
                           u
                           v
-                          (- count 1)))))
+                          (-- count))]))
     (loop 1 0 0 1 n))
 
 (fn (fib n)
     (cond [(zero? n) 0]
           [(one? n)  1]
-          [else (+ (fib (- n 1)) 
-                   (fib (- n 2)))])
+          [else (+ (fib (+ n -1)) 
+                   (fib (+ n -2)))]
+    )
 )

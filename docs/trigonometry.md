@@ -24,21 +24,21 @@ like:
 (sin (* 2   pi))
 ```
 
-| function | input      | output
-| -------- | ---------- | ------
-| `sin`    | `0π`       | 0
-| `sin`    | `1/2π`     | 1
-| `sin`    | `1π`       | 0
-| `sin`    | `3/2π`     | -1
-| `sin`    | `2π`       | 0 
+| function | input  | output
+| -------- | ------ | ------
+| `sin`    | `0π`   | 0
+| `sin`    | `1/2π` | 1
+| `sin`    | `1π`   | 0
+| `sin`    | `3/2π` | -1
+| `sin`    | `2π`   | 0 
 
-| function | input      | output
-| -------- | ---------- | ------
-| `cos`    | `0π`       | 1
-| `cos`    | `1/2π`     | 0
-| `cos`    | `1π`       | -1
-| `cos`    | `3/2π`     | 0
-| `cos`    | `2π`       | 1
+| function | input  | output
+| -------- | ------ | ------
+| `cos`    | `0π`   | 1
+| `cos`    | `1/2π` | 0
+| `cos`    | `1π`   | -1
+| `cos`    | `3/2π` | 0
+| `cos`    | `2π`   | 1
 
 ``` clojure
 ; π/6 is 30°, and in a 30-60-90 triangle, the hypotenuse is double the length of
