@@ -60,4 +60,6 @@ Here's a graph of the sequence:
 
 As we look from any one second to the next, we can see that the distance always 
 changes every time by 3 meters, so we say that the velocity of the car is 3 
-meters per second, or `3 m/s`.
+meters per second, or `3 m/s`. This means that for every second you go, we 
+expect you to move 3 meters, and therefore 20 seconds means 60 meters of travel.
+

@@ -22,9 +22,9 @@ sequences, so I'm going to show you examples first:
 
 ``` scheme
 (fn (factorial n)
-    (for/fold ([product 1])             ;; current product
-              ([i (range 1 (add1 n))])  ;; the sequence you are running over
-              (* product i)             ;; the next product
+    (for/fold ([product 1])            ;; current product
+              ([i (range 1 (add1 n))]) ;; the sequence you are running over
+              (* product i)            ;; the next product
     )
 )
 ```

@@ -6,7 +6,7 @@ hide_title: true
 
 > Work in progress. Do not use yet.
 
-##   Expression
+# `(expressions)`
 
 An expression means either:
   1. An atom. 
@@ -35,7 +35,7 @@ Is this an expression?
 true          ;; yes - atoms count as expressions
 ```
 
-###  Lists have Length
+## Lists of expressions have Length
 
 An expression that's also a list is can be counted for the number of things 
 inside.
@@ -48,7 +48,7 @@ inside.
 (empty? (+))                             ;; 2 atoms or sub-expressions
 ```
 
-###  Things to remember about expressions:
+## Things to remember about expressions:
 
 - an expression is either an atom or a list of expressions
 - an expression that's a list must have one or more atoms
