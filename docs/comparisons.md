@@ -45,9 +45,6 @@ Here are some examples with many inputs:
 (= 0 0 0 0)  ;; → true
 (= 1 1 1 0)  ;; → false
 (= 0 0 0 1)  ;; → false
-
-(= true #true #t)   ;; → true
-(= false #false #f) ;; → true
 ```
 
 ## `<` Less-than

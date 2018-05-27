@@ -7,6 +7,8 @@ sidebar_label: Velocity
 
 # Angles and Velocity
 
+> WIP: Don't use.
+
 We previously learned that an angle is like asking how far you want to walk 
 along a circle. You may have also heard before that an angle is what happens 
 when two lines intersect.
@@ -30,11 +32,13 @@ the intersecting lines definition is a little less complete.
 
 ## Velocity
 
-Let's say we're looking at a sequence of numbers which we've collected on a 
-moving car, using a device that detects how far away things are. The `seconds`
-column represents the time of my records according to my stopwatch, with `0` 
-meaning the start of my records. The meters represents the readings on my 
-distance device, with `0` meaning the car started right where I was.
+Let's say we're looking at a sequence of numbers which I've collected on a 
+moving car, using a device that detects how far things are from me. The 
+`seconds` column represents the time in seconds according to my stopwatch, with 
+`0` meaning the start of my records. The `meters` column represents the readings 
+on my distance device, with `0` meaning the car was zero meters away from me.
+
+Therefore, at 5 seconds the car was 15 meters away.
 
 seconds | meters
 ------- | ------
@@ -54,3 +58,6 @@ Here's a graph of the sequence:
 
 ![(line-0-3)](/img/(line-0-3).png)
 
+As we look from any one second to the next, we can see that the distance always 
+changes every time by 3 meters, so we say that the velocity of the car is 3 
+meters per second, or `3 m/s`.
