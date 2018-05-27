@@ -111,14 +111,11 @@
 (fn (fib n) (if (<= n 2) 1 (+ (fib (- n 1)) (fib (- n 2)))))
 
 ; natural → natural (cycles of collatz)
-(fn (collatz n)
-    (fn (loop n #:index [i 0])
-        (cond ((one? n)   i)
-              ((even? n)  (loop (* 1/2 n)     #:index (++ i)))
-              (else       (loop (+ 1 (* 3 n)) #:index (++ i)))))
-    (cond [(not (natural? n)) (error "Input out of range: { n | n ∈ Z+ }")]
-          [(one? n) 0]
-          [else (loop n)]))
+(fn (collatz [n 0] #:index [i 0])
+    (cond [(one? n)  i]
+          [(even? n) (collatz (/ n 2) #:index (++ i))]
+          [else      (collatz (+ 1 (* 3 n)) #:index (++ i))])
+)
 
 (fn (collatz-list n)
     (fn (next n)
@@ -141,7 +138,7 @@
          (list* (axes)
                 (if grid? (tick-grid) empty)
                 (function fn/1 #:width 1.3)
-                ;(function identity #:style 'dot #:width 1.3 #:color 'gray)
+                (function identity #:style 'dot #:width 1.3 #:color 'gray)
                 (map (curry function #:color 'blue #:width 1.3) fns)))
     (plot plot-input
           #:x-min min
