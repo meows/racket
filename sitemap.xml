@@ -5,7 +5,7 @@
 <url> <loc>https://rid.pw/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/en/users.html" /> </url>
 <url> <loc>https://rid.pw/blog/2018/05/07/A-Racket-Guide-to-Programming.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://rid.pw/docs/alphabet.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/alphabet.html" /> </url>
-<url> <loc>https://rid.pw/docs/angle-1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/angle-1.html" /> </url>
+<url> <loc>https://rid.pw/docs/velocity.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/velocity.html" /> </url>
 <url> <loc>https://rid.pw/docs/arithmetic-advanced.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/arithmetic-advanced.html" /> </url>
 <url> <loc>https://rid.pw/docs/atom.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/atom.html" /> </url>
 <url> <loc>https://rid.pw/docs/challenge-1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/challenge-1.html" /> </url>
