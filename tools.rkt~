@@ -87,7 +87,7 @@
 
 ; natural → natural
 (fn (triangle n) (* 1/2 (+ n (sqr n))))
-(fn (line b m)   (λ (x) (+ b (* m x))))
+(fn (line m b)   (λ (x) (+ b (* m x))))
 (fn (b b)        (λ (x) (+ b x)))
 (fn (m m)        (λ (x) (* m x)))
 
@@ -141,7 +141,7 @@
          (list* (axes)
                 (if grid? (tick-grid) empty)
                 (function fn/1 #:width 1.3)
-                ;(function identity #:style 'dot #:width 1.3 #:color 'gray)
+                (function identity #:style 'dot #:width 1.3 #:color 'gray)
                 (map (curry function #:color 'blue #:width 1.3) fns)))
     (plot plot-input
           #:x-min min
@@ -149,8 +149,7 @@
           #:y-min min
           #:y-max max
           #:width 600
-          #:height 600)
-)
+          #:height 600))
 
 ; quadratic :: (a b c) → ((x) → ax^2 + bx + c)
 (fn (quadratic #:a [a 1]
@@ -158,8 +157,7 @@
                #:c [c 0])
     (λ (x) (+ (* a x x)
               (* b x)
-              c))
-)
+              c)))
 
 (fn (cubic #:a [a 1]
            #:b [b 0]
@@ -168,11 +166,9 @@
     (λ (x) (+ (* a x x x)
               (* b x x)
               (* c x)
-              d))
-)
+              d)))
 
 (fn (physics-quad a v [p 0])
     (λ (t) (+ (* 1/2 a t t)
               (* v t)
-              p))
-)
+              p)))

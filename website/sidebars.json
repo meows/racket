@@ -10,7 +10,8 @@
          "recursion",
          "circles",
          "angle",
-         "sequence-linear"
+         "sequence-linear",
+         "velocity"
       ],
       "Language Guide": [
          "function-intro",
