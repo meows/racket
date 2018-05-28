@@ -23,8 +23,8 @@ Here's an example of `lambda` in action:
 ;; Example 1
 (define div10 (lambda (x) (/ x 10)))
 
-(div10 100)  ;; → 10
-(div10 20)   ;; → 2
+(div10 100) ;; → 10
+(div10 20)  ;; → 2
 ```
 
 You've probably noticed that you could do the exact same thing with the way you
@@ -34,8 +34,8 @@ learned before:
 ;; Example 2
 (define (div10 x) (/ x 10))
 
-(div10 100)  ;; → 10
-(div10 20)   ;; → 2
+(div10 100) ;; → 10
+(div10 20)  ;; → 2
 ```
 
 In fact, this is just a convenient shortcut for writing the top `lambda`
@@ -49,7 +49,7 @@ inputs or _parameters_, length `l`, width `w`, and height `h`:
 (define prism-volume
         (lambda (l w h) (* l w h))
 
-(prism-volume 3 5 8)  ;; → 120
+(prism-volume 3 5 8) ;; → 120
 ```
 
 Which would be complete identical to the familiar way of doing it:
@@ -59,7 +59,7 @@ Which would be complete identical to the familiar way of doing it:
 (define (prism-volume l w h)
         (* l w h))
 
-(prism-volume 3 5 8)  ;; → 120
+(prism-volume 3 5 8) ;; → 120
 ```
 
 ## Why do people use Lambda?
