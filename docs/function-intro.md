@@ -54,7 +54,8 @@ that the first atom inside an expression is assumed to be a function.
 (+ 10
    (* 2 5)
    (- 20 (+ 5 5))
-   (/ 100 10))
+   (/ 100 10)
+)
 
 ;; What will this evaluate to?
 (/ (* 1 2 (+ 2 1) (+ 2 2) (+ 2 3)) 5 4 3 2 1)

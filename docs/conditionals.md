@@ -113,9 +113,9 @@ divisible by `2`, `7`, or `9`.
 
 ``` clojure
 (define (div-by-2-7-9? n)
-        (or (zero? (modulo n 2))
-            (zero? (modulo n 7))
-            (zero? (modulo n 9)))
+        (or (zero? (remainder n 2))
+            (zero? (remainder n 7))
+            (zero? (remainder n 9)))
 )
 
 (div-by-2-7-9? 4)  ;; → true
