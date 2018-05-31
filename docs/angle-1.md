@@ -40,19 +40,19 @@ on my distance device, with `0` meaning the car was zero meters away from me.
 
 Therefore, at 5 seconds the car was 15 meters away.
 
-seconds | meters
-------- | ------
-0       | 0
-1       | 3
-2       | 6
-3       | 9
-4       | 12
-5       | 15
-6       | 18
-7       | 21
-8       | 24
-9       | 27
-10      | 30
+seconds | meters | ratio
+------- | ------ | --------------
+0       | 0      | undefined
+1       | 3      | 3:1
+2       | 6      | 6:2
+3       | 9      | 9:3
+4       | 12     | 12:4
+5       | 15     | 15:5
+6       | 18     | 18:6
+7       | 21     | 21:7
+8       | 24     | 24:8
+9       | 27     | 27:9
+10      | 30     | 30:10
 
 Here's a graph of the sequence:
 

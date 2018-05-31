@@ -129,3 +129,14 @@ Now let's use the function:
   inputs) that the function can take.
 * What is a _variable_, and what is _variable assignment_?
 * What is a function _parameter_?
+
+Look at this example below:
+
+``` clojure
+(define (triangle-area base height)
+        (* 1/2 base height))
+```
+
+* What's the name of the above function?
+* How many parameters does this function take, and what are they?
+* What's `(triangle 10 2)`?

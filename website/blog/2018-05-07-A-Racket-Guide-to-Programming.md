@@ -1,6 +1,7 @@
 ---
 title: A Racket Guide to Programming
 author: Meow
+hide_title: true
 ---
 
 # About this site

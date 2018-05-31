@@ -1,3 +1,0 @@
-Words
-* lambda
-* commutative

@@ -51,27 +51,27 @@ base, and (2) the second one is the exponent or power. Therefore:
 (expt 125 1/3) ;; → 5
 ```
 
-## `modulo` Modulo
+## `remainder`
 
-The modulo function `modulo` helps you find the remainder of a division between
-two natural numbers, where the first number is the *dividend*, and the second
-number is the *divisor*.
+The `remainder` function helps you find the remainder of a division between two 
+natural numbers, where the first number is the *dividend*, and the second number 
+is the *divisor*.
 
 ``` clojure
-(modulo 10 2) ;; → 0
-(modulo 2 10) ;; → 2
-(modulo 80 3) ;; → 2
-(modulo 81 3) ;; → 0
-(modulo 82 3) ;; → 1
+(remainder 10 2) ;; → 0
+(remainder 2 10) ;; → 2
+(remainder 80 3) ;; → 2
+(remainder 81 3) ;; → 0
+(remainder 82 3) ;; → 1
 ```
 
-Some people use the `modulo` function to find whether a number `n` is even by
-seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by
-`2` leaves no remainder, which is in fact the definition of an even number:
+Some people use the `remainder` function to find whether a number `n` is even by
+seeing if `(remainder n 2)` is zero, in other words, whether dividing a number 
+by `2` leaves no remainder, which is in fact the definition of an even number:
 
 ``` clojure
 (define (even? n)
-        (zero? (modulo n 2)))
+        (zero? (remainder n 2)))
 
 (define (odd? n)
         (not (even? n)))
@@ -82,7 +82,7 @@ seeing if `(modulo n 2)` is zero, in other words, whether dividing a number by
 The absolute value function `abs` takes a number and always makes it positive.
 
 ``` clojure
-(abs -10)       ;; 10
-(abs  10)       ;; 10
-(abs (abs -10)) ;; 10
+(abs -10)       ;; → 10
+(abs  10)       ;; → 10
+(abs (abs -10)) ;; → 10
 ```
