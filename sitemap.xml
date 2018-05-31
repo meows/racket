@@ -34,6 +34,7 @@
 <url> <loc>https://rid.pw/docs/intro.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/intro.html" /> </url>
 <url> <loc>https://rid.pw/docs/lambda.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lambda.html" /> </url>
 <url> <loc>https://rid.pw/docs/lists.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lists.html" /> </url>
+<url> <loc>https://rid.pw/docs/racket-intro.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/racket-intro.html" /> </url>
 <url> <loc>https://rid.pw/docs/recursion.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/recursion.html" /> </url>
 <url> <loc>https://rid.pw/docs/Renaming.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/Renaming.html" /> </url>
 <url> <loc>https://rid.pw/docs/reversal.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/reversal.html" /> </url>
