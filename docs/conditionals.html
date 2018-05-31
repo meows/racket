@@ -102,9 +102,9 @@ number is both even and negative at the same time.</p>
 or conditions is <code>true</code>. In the example below, we check if a number <code>n</code> is
 divisible by <code>2</code>, <code>7</code>, or <code>9</code>.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">div-by-2-7-9?</span> n)
-        (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> n <span class="hljs-number">2</span>))
-            (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> n <span class="hljs-number">7</span>))
-            (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> n <span class="hljs-number">9</span>)))
+        (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">2</span>))
+            (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">7</span>))
+            (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">9</span>)))
 )
 
 (<span class="hljs-name">div-by-2-7-9?</span> <span class="hljs-number">4</span>)  <span class="hljs-comment">;; → true</span>
