@@ -66,11 +66,11 @@ inputs, for example,</p>
 time, or that you've had to rely on functions that Racket already gave you, such
 as <code>even?</code>. But what if you felt like you didn't want to define a new function
 before using it? That's what <code>lambda</code> allows you to do:</p>
-<pre><code class="hljs css clojure"><span class="hljs-comment">;; Example 2</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> x)) 
+<pre><code class="hljs css racket"><span class="hljs-comment">;; Example 2</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">lambda</span></span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> x)) 
         (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))
 
-(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">modulo</span> x <span class="hljs-number">2</span>))) 
+(<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">lambda</span></span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> x <span class="hljs-number">2</span>))) 
         (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))
 </code></pre>
 <p>I don't blame you if you think the above examples look harder to read; a lot of
@@ -88,7 +88,7 @@ either one.</p>
 (<span class="hljs-name">filter</span> (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> x)) 
         (<span class="hljs-name">range</span> <span class="hljs-number">6</span>))
 
-(<span class="hljs-name">filter</span> (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">modulo</span></span> x <span class="hljs-number">2</span>))) 
+(<span class="hljs-name">filter</span> (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">remainder</span></span> x <span class="hljs-number">2</span>))) 
         (<span class="hljs-name">range</span> <span class="hljs-number">6</span>))
 </code></pre>
 <p>In DrRacket, you can type the <code>λ</code> symbol with <code>ctrl</code> + <code>\</code>.</p>
