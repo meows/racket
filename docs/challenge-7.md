@@ -29,9 +29,8 @@ their greatest common divisor by using the following two rules:
 1. If `gcd(n1, 0) = n1`
 2. Otherwise, return `gcd(n2, n1 % n2)`
 
-> Assume that % is the `remainder` operator, which gives you the remainder
-> after the division of two numbers. For positive numbers, this is also
-> sometimes called `modulo`.
+> Assume that % is the `remainder` operator, which gives you the remainder after 
+> the division of two numbers.
 
 ## Problem
 
@@ -39,7 +38,7 @@ Given these rules, write a similar recursive function in Racket named `gcd`
 which expects two natural inputs, `n1` and `n2`:
 
 1. If `n2` equals `0`, then return `n1`
-2. Otherwise, return `(gcd n2 (modulo n1 n2))`
+2. Otherwise, return `(gcd n2 (remainder n1 n2))`
 
 ``` clojure
 (define (gcd n1 n2)

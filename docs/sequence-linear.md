@@ -127,11 +127,13 @@ n | value | formula   | Δ0    | Δ1    | Δ2
 
 **Q**. What is delta or `Δ`?
 - It's a symbol that often stands for a function or operation that gets the 
-  difference of a number sequence.
+  difference or "delta" of a numeric sequence.
 
 **Q**. If your sequence is finite, why can't you repeatedly delta it forever?
 - Because your sequence gets shorter by one number every time you delta a sequence.
 
 **Q**. How do you tell if your sequence is linear?
-- If the sequence converges to a number with exactly one delta; another way of
-  saying this is if the speed never changes.
+1. If the sequence converges to a number with exactly one delta.
+2. If the difference from one sequence number to the next never changes.
+3. If you can draw a perfectly straight line through all the numbers of your
+   sequence on a graph.

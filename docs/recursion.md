@@ -55,8 +55,8 @@ the next `n`, which is `10`, then we get `3,628,800`. In other words:
 Using this repeating pattern, the `factorial` function can be defined in just
 two simple rules, assuming `n` is a natural number:
 
-1. The `factorial(0)` is equal to `1`
-2. The `factorial(n)` is equal to `n * factorial(n - 1)`
+1. The `factorial(0)` is equal to `1`.
+2. The `factorial(n)` is equal to `n * factorial(n - 1)`.
 
 The first rule is simple because it just tells you what `factorial(0)` literally
 is, but the second rule is incredibly elegant because it tells you the factorial

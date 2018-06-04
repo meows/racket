@@ -20,13 +20,24 @@
 
 (fn (word->letters word) (map string (string->list word)))
 (fn sum (curry apply +))
-(fn transform 
+(fn name->value
     (λ~> string-downcase 
          word->letters 
          letters->naturals 
          sum))
 
+(fn ++ add1)
+(fn unequal? (compose not equal?))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(map string-replace (string-split data ",") '(" ") '(""))
+(def names 
+     (sort (filter (cut unequal? <> ",")) (string-split data "\"")) string<?))
+
+(def euler 
+     (for/fold ([i 1] [sum 0] #:result sum)
+               ([n names])
+               (values (++ i)
+                       (+ sum (* i (name->value n))))
+))

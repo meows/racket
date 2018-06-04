@@ -80,12 +80,12 @@ time, or that you've had to rely on functions that Racket already gave you, such
 as `even?`. But what if you felt like you didn't want to define a new function 
 before using it? That's what `lambda` allows you to do:
 
-``` clojure
+``` racket
 ;; Example 2
 (filter (lambda (x) (< 3 x)) 
         (range 6))
 
-(filter (lambda (x) (zero? (modulo x 2))) 
+(filter (lambda (x) (zero? (remainder x 2))) 
         (range 6))
 ```
 
@@ -108,7 +108,7 @@ either one.
 (filter (λ (x) (< 3 x)) 
         (range 6))
 
-(filter (λ (x) (zero? (modulo x 2))) 
+(filter (λ (x) (zero? (remainder x 2))) 
         (range 6))
 ```
 
