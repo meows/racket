@@ -7,8 +7,6 @@ hide_title: true
 
 # Greatest Common Divisor
 
-> Work in Progress. Don't use yet.
-
 ## Description
 
 The _greatest common divisor_ of two integers finds the greatest divisor (or
@@ -29,8 +27,8 @@ their greatest common divisor by using the following two rules:
 1. If `gcd(n1, 0) = n1`
 2. Otherwise, return `gcd(n2, n1 % n2)`
 
-> Assume that % is the `remainder` operator, which gives you the remainder after 
-> the division of two numbers.
+> Assume that % is the [`remainder`](arithmetic-advanced.md) operator, which 
+> gives you the remainder after the division of two numbers.
 
 ## Problem
 
@@ -55,8 +53,9 @@ integers `a` and `b` is the absolute value of `a * b` divided by the
 
 ![Mathematical formula for Least Common Multiple.](/img/lcm-0.svg)
 
-If `abs` is the function for absolute value in Racket, define the `lcm`
-function below, assuming that `n1` and `n2` will be natural inputs.
+If [`abs`](arithmetic-advanced.md) is the function for absolute value in Racket, 
+define the `lcm` function below, assuming that `n1` and `n2` will be natural 
+inputs.
 
 ``` clojure
 (define (lcm n1 n2)

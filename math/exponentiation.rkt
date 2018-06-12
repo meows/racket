@@ -13,8 +13,10 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Exponentiation
 
+;; integer exponentiation
 (fn (exp base power)
     (cond [(one? power) base]
+          [(zero? power) 1]
           [(even? power) (exp (* base base) (* 1/2 power))]
           [else (* base (exp base (-- power)))]
     )

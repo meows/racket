@@ -1,6 +1,7 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
+(require (rename-in racket/base [define def]))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
@@ -26,7 +27,8 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solution
 
-(fn euler-20 
-    (apply + (natural->list (factorial 100))))
+(def euler-20 
+     (apply + (natural->list (factorial 100)))
+)
 
 euler-20  ;; → 648
