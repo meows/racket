@@ -14,7 +14,7 @@ factor) which is shared among them. For example,
 
 * The factors to `12` are `{ 1, 2, 3, 4, 6, 12 }`.
 * The factors to `8` are `{ 1, 2, 4, 8 }`.
-* The `gcd(8, 12)` will equal `4`.
+* Therefore `gcd(8, 12)` will equal `4`, because that's the biggest shared factor.
 
 Impressively, one of the most efficient ways to solve this problem was devised
 by a Greek mathematician who lived around 400 to 300 BC, named Euclid

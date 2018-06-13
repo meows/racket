@@ -16,7 +16,7 @@ The strongly educated belief, or _conjecture_, is that if you keep doing this,
 all numbers will eventually reach `1`.
 
 ``` clojure
-(fn (collatz [n 0] #:count [c 0])
+(define (collatz [n 0] #:count [c 0])
     (cond [(one? n) c]
           [(even? n) (collatz (* 1/2 n) #:count (++ c))]
           [else (collatz (+ 1 (* 3 n)) #:count (++ c))]
