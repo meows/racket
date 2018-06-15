@@ -33,11 +33,10 @@
 ;; Solve
 
 (def names 
-     (sort (filter (cut unequal? <> ",")) (string-split data "\"")) string<?))
+    (sort (filter (cut unequal? <> ",")) (string-split data "\"")) string<?))
 
 (def euler 
-     (for/fold ([i 1] [sum 0] #:result sum)
-               ([n names])
-               (values (++ i)
-                       (+ sum (* i (name->value n))))
+    (for/fold ([i 1] [sum 0] #:result sum)
+              ([n names])
+              (values (++ i) (+ sum (* i (name->value n))))
 ))

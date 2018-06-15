@@ -115,3 +115,29 @@ A default parameter provides an input if you don't provide one.
 (factorial 0 #:result 24)
 24
 ```
+
+## Rest Parameters
+
+``` clojure
+(require (rename-in racket/base [define fn]))
+(require (rename-in racket/base [define def]))
+(require (only-in srfi/1 unfold-right unfold))
+(require (only-in srfi/26 cut))
+
+(fn (gcd n1 n2 . rest)
+    (fn (gcd/2 n1 n2)
+        (if (zero? n2)
+            n1
+            (gcd n2 (modulo n1 n2))))
+
+    (if (empty? rest)
+        (gcd/2 n1 n2)
+        (for/fold ([divisor 0])
+                  ([n (list* n1 n2 rest)])
+                  (gcd/2 divisor n)))
+)
+
+(fn (lcm n1 n2 . rest)
+    ()
+)
+```
