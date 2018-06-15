@@ -122,15 +122,4 @@ function using itself.</p>
               (<span class="hljs-name">lcm/2</span> multiple n))
 )
 </code></pre>
-<pre><code class="hljs css typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">gcd</span>(<span class="hljs-params">n1, n2, ...rest</span>) </span>{
-    <span class="hljs-keyword">const</span> gcd2 = <span class="hljs-function">(<span class="hljs-params">n1, n2</span>) =&gt;</span> n2 === <span class="hljs-number">0</span> 
-        ? n1 
-        : gcd2(n2, n1 % n2)
-
-    <span class="hljs-keyword">return</span> [n1, n2, ...rest].reduce(
-        <span class="hljs-function">(<span class="hljs-params">state, n, i, arr</span>) =&gt;</span> gcd2(state, n),
-        <span class="hljs-number">0</span>
-    )
-}
-</code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="function-sequence.html">← Over Lists</a><a class="docs-next button" href="fold.html">fold →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#function-review">Function Review</a><ul class="toc-headings"><li><a href="#single-parameter">Single Parameter</a></li><li><a href="#multiple-parameters">Multiple Parameters</a></li><li><a href="#recursion">Recursion</a></li></ul></li><li><a href="#default-parameters">Default Parameters</a></li><li><a href="#named-parameters">Named Parameters</a></li><li><a href="#rest-parameters">Rest Parameters</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
