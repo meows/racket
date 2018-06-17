@@ -28,6 +28,7 @@
 <p>Define a function in Racket called <code>line</code> which can take two parameters, a
 starting position <code>p0</code> and a velocity <code>v</code>, and return a function or lambda which
 would give that sequence.</p>
+<p>Then use the function to generate the first 10 items in the sequence.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">line</span> p0 v)
         (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x v))))
 
