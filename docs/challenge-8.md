@@ -20,7 +20,20 @@ to 20?
 )
 ```
 
+## Note
+
+Although I had you write your own [`lcm`](arithmetic-advanced.md) and 
+[`gcd`](arithmetic-advanced.md) function, Racket actually provides them for you.
+You can click on the links here to check out the new examples I've written,
+although you can probably already guess how to use the functions.
+
+The reason I had you write these functions even though Racket provides them for 
+you is because they're important to know about in _math_, and also because many 
+languages don't provide you these things.
+
 ## Possible Clues
 
 * [`apply`](function-sequence.md)
 * [`range`](function-sequence.md)
+* [`lcm`](arithmetic-advanced.md)
+* [`gcd`](arithmetic-advanced.md)

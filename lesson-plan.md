@@ -1,11 +1,8 @@
-## Devise an alias
-* kartiklambda?
+## Review types
 
-## Register for accounts
-* Github
-* Project Euler
+1. Number
+2. Boolean
+3. String
 
-## Setup Git
-* Download Git
-* Download GitHub Client
+## Lists
 

@@ -30,6 +30,8 @@ Define a function in Racket called `line` which can take two parameters, a
 starting position `p0` and a velocity `v`, and return a function or lambda which 
 would give that sequence.
 
+Then use the function to generate the first 10 items in the sequence.
+
 ``` clojure
 (define (line p0 v)
         (lambda (x) (+ p0 (* x v))))

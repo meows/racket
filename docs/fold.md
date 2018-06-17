@@ -21,7 +21,7 @@ sequences, so I'm going to show you examples first:
 ```
 
 ``` scheme
-(fn (factorial n)
+(define (factorial n)
     (for/fold ([product 1])            ;; current product
               ([i (range 1 (add1 n))]) ;; the sequence you are running over
               (* product i)            ;; the next product
@@ -30,10 +30,15 @@ sequences, so I'm going to show you examples first:
 ```
 
 ``` scheme
-(fn (triangle n)
+(define (triangle n)
     (for/fold ([sum 0])              ;; current sum
               ([i (range (add1 n))]) ;; the sequence you are running over
               (+ sum i)              ;; the next sum
     )
 )
 ```
+
+In all of these examples `for/fold` always takes in 3 inputs: 
+  1. a name-value pair such as `[sum 0]` or `[product 1]`,
+  2. a sequences you want to "run" over,
+  3. the expression that will become the next value for your name-value pair.
