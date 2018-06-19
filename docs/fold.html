@@ -50,15 +50,15 @@ are sequential, strings are sequential, and you'll learn about more sequential
 things later on.</p>
 <p><code>for/fold</code> is so flexible that if you wanted, you could replicate the power of
 <code>map</code> or <code>filter</code>.</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">myMap</span> fn seq)
-    (<span class="hljs-name">for/fold</span> ([lst (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])     <span class="hljs-comment">;; current list</span>
-              ([i seq])          <span class="hljs-comment">;; the sequence we're running over</span>
-              (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> i) lst)) <span class="hljs-comment">;; the new list</span>
+<pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">myMap</span> fn seq)
+    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])     <span class="hljs-comment">;; current list</span>
+              ([<span class="hljs-name">i</span> seq])          <span class="hljs-comment">;; the sequence we're running over</span>
+              (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name">fn</span> i) lst)) <span class="hljs-comment">;; the new list</span>
 )
 
-(<span class="hljs-name">define</span> (<span class="hljs-name">myFilter</span> okay? seq)
-    (<span class="hljs-name">for/fold</span> ([lst (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])     <span class="hljs-comment">;; current list</span>
-              ([i seq])          <span class="hljs-comment">;; the sequence we're running over</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">myFilter</span> okay? seq)
+    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])     <span class="hljs-comment">;; current list</span>
+              ([<span class="hljs-name">i</span> seq])          <span class="hljs-comment">;; the sequence we're running over</span>
               (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">okay?</span> i)      <span class="hljs-comment">;; we check if every (okay? i) is true or false</span>
                   (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> i lst)   <span class="hljs-comment">;; the new list if true</span>
                   lst            <span class="hljs-comment">;; give back the old list if false (do nothing)</span>

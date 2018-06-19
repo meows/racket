@@ -12,10 +12,9 @@ numbers including <code>0</code>. If we have two numbers, <code>n1</code> and <c
 together like <code>(+ n1 n2)</code>, is there a possibility that the answer will ever
 <em>not</em> be a natural?</p>
 <p>No matter how big or small <code>n1</code> and <code>n2</code>?</p>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">add</span> n1 n2)
-    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name">natural?</span> n1) (<span class="hljs-name">natural?</span> n2))
-            
-    )
-)
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">add</span> n1 n2) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n1 n2))
+
+(<span class="hljs-name">natural?</span> (<span class="hljs-name">add</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>))     <span class="hljs-comment">;; true</span>
+(<span class="hljs-name">natural?</span> (<span class="hljs-name">add</span> <span class="hljs-number">123</span> <span class="hljs-number">456</span>)) <span class="hljs-comment">;; true</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
