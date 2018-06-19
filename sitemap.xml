@@ -50,4 +50,5 @@
 <url> <loc>https://rid.pw/docs/terms.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/terms.html" /> </url>
 <url> <loc>https://rid.pw/docs/trigonometry.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/trigonometry.html" /> </url>
 <url> <loc>https://rid.pw/docs/values.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/values.html" /> </url>
+<url> <loc>https://rid.pw/docs/websites-0.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/websites-0.html" /> </url>
 </urlset>
