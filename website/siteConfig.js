@@ -82,7 +82,7 @@ const siteConfig = {
 
    /* On page navigation for the current documentation page */
    onPageNav: 'separate',
-   
+
     // markdownPlugins: [function (md) {
     //    md.use(require('remarkable-katex'));
     // }],

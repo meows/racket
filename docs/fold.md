@@ -24,7 +24,7 @@ sequences, so I'm going to show you examples first:
 (define (factorial n)
     (for/fold ([product 1])            ;; current product
               ([i (range 1 (add1 n))]) ;; the sequence you are running over
-              (* product i)            ;; the next product
+              (* product i)            ;; the new product
     )
 )
 ```
@@ -33,12 +33,39 @@ sequences, so I'm going to show you examples first:
 (define (triangle n)
     (for/fold ([sum 0])              ;; current sum
               ([i (range (add1 n))]) ;; the sequence you are running over
-              (+ sum i)              ;; the next sum
+              (+ sum i)              ;; the new sum
     )
 )
 ```
 
-In all of these examples `for/fold` always takes in 3 inputs: 
+In all of these examples `for/fold` always takes in 3 inputs:
   1. a name-value pair such as `[sum 0]` or `[product 1]`,
   2. a sequences you want to "run" over,
   3. the expression that will become the next value for your name-value pair.
+
+## Why use `for/fold`?
+
+`for/fold` is a tool for doing just about anything you want to a sequence. Lists
+are sequential, strings are sequential, and you'll learn about more sequential
+things later on.
+
+`for/fold` is so flexible that if you wanted, you could replicate the power of
+`map` or `filter`.
+
+``` scheme
+(define (myMap fn seq)
+    (for/fold ([lst (list)])     ;; current list
+              ([i seq])          ;; the sequence we're running over
+              (cons (fn i) lst)) ;; the new list
+)
+
+(define (myFilter okay? seq)
+    (for/fold ([lst (list)])     ;; current list
+              ([i seq])          ;; the sequence we're running over
+              (if (okay? i)      ;; we check if every (okay? i) is true or false
+                  (cons i lst)   ;; the new list if true
+                  lst            ;; give back the old list if false (do nothing)
+              )
+    )
+)
+```

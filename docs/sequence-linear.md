@@ -27,9 +27,8 @@ A function for any linear sequence can be defined with just two facts:
    1. A starting value for the position `p0`.
    2. A velocity `v`.
 
-* `f(n) ↦ v*n + p0`
-
-In Racket, it would look like:
+In math, it might be written like: `f(n) = v * n + p0`, while In Racket, it 
+would look like:
 
 ``` Clojure
 ; p0 -- value of position 0

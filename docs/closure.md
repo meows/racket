@@ -15,9 +15,8 @@ _not_ be a natural?
 No matter how big or small `n1` and `n2`?
 
 ``` clojure
-(define (add n1 n2)
-    (if (and (natural? n1) (natural? n2))
-            
-    )
-)
+(define (add n1 n2) (+ n1 n2))
+
+(natural? (add 2 3))     ;; true
+(natural? (add 123 456)) ;; true
 ```

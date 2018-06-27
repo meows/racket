@@ -1,11 +1,15 @@
 ---
-id: challenge-n
+id: challenge-9
 sidebar_label: Challenge #9
 title: Challenge #9
 hide_title: true
 ---
 
+> You might want to review [`cond`](cond.md) before going on.
+
 # Fibonacci
+
+## Description
 
 The Fibonacci sequence looks like this:
 
@@ -28,11 +32,23 @@ n  | fibonacci
 9  | 34
 10 | 55
 
+The function `fib` which tells you the `n`-th fibonacci number based on `n` can 
+be defined with just three simple rules in math:
+
+1. `fib(0) = 0`
+2. `fib(1) = 1`
+3. `fib(n) = fib(n - 1) + fib(n - 2)`
+
+## Problem
+
+Write a function in Racket called `fib` which accepts a natural `n` for input, 
+and will return the `n`-th Fibonacci number. For example, `(fib 6)` should
+evaluate to `8`.
+
 ``` clojure
-(fn (fibonacci n)
+(define (fib n)
     (cond [(zero? n) n]
-          [(one?  n) n]
-          [else (+ (fibonacci (- n 1)) 
-                   (fibonacci (- n 2)))]
-))
+          [...]
+    )
+)
 ```
