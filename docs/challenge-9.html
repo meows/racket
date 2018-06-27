@@ -17,10 +17,12 @@
 <p>You might want to review <a href="/docs/cond.html"><code>cond</code></a> before going on.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="the-fibonacci-sequence"></a><a href="#the-fibonacci-sequence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Fibonacci Sequence</h2>
-<p>The Fibonacci sequence looks like this:</p>
+<p>The Fibonacci sequence is a well known series of numbers named after an Italian
+mathematician nammed Leonard Fibonacci, and it looks like:</p>
 <p><code>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...</code></p>
-<p>The next number of any Fibonacci number can be found by adding up the previous
-two numbers.</p>
+<p>It's a famous series of numbers because it has been independently discovered by
+many people throughout time, but it also continues to surprise scientists
+because the Fibonacci sequence also finds its way into nature.</p>
 <table>
 <thead>
 <tr><th>n</th><th>fibonacci</th></tr>
@@ -39,12 +41,22 @@ two numbers.</p>
 <tr><td>10</td><td>55</td></tr>
 </tbody>
 </table>
-<p>The function <code>fib</code> which tells you the <code>n</code>-th fibonacci number based on <code>n</code> can
+<p>The function <code>fib</code> which tells you the <code>n</code>-th Fibonacci number based on <code>n</code> can
 be defined with just three simple rules in math:</p>
 <ol>
 <li><code>fib(0) = 0</code></li>
 <li><code>fib(1) = 1</code></li>
 <li><code>fib(n) = fib(n - 1) + fib(n - 2)</code></li>
+</ol>
+<p>So aside from <code>fib(0)</code> and <code>fib(1)</code>, any Fibonacci number can be found by adding
+up the previous two numbers in the sequence.</p>
+<p>So for example, if we were to evaluate <code>fib(4)</code> in math:</p>
+<ol>
+<li><code>fib(4) = fib(3) + fib(2)</code></li>
+<li><code>fib(4) = fib(3) + (1 + 0)</code></li>
+<li><code>fib(4) = (fib(2) + 1) + 1</code></li>
+<li><code>fib(4) = (1 + 0 + 1) + 1</code></li>
+<li><code>fib(4) = 3</code></li>
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="problem"></a><a href="#problem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Problem</h2>
 <p>Write a function in Racket called <code>fib</code> which accepts a natural number <code>n</code> for
