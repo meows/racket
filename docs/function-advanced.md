@@ -36,23 +36,24 @@ height `h`:
 
 ``` clojure
 (define (prism-volume l w h)
-        (* l w h))
+    (* l w h)
+)
 
 (prism-volume 3 5 7) ;; → (* 3 5 7) → 105
 ```
 
 Which we know to be a shorthand for either:
 
-``` clojure
+``` racket
 (define prism-volume
-        (lambda (l w h)
-                (* l w h)
-))
+    (lambda (l w h)
+            (* l w h))
+)
 
 (define prism-volume
-        (λ (l w h)
-           (* l w h)
-))
+    (λ (l w h)
+       (* l w h))
+)
 ```
 
 ### Recursion
@@ -62,10 +63,11 @@ function using itself.
 
 ``` racket
 (define (factorial n)
-        (if (zero? n)
-            1
-            (* n (factorial (sub1 n)))
-))
+    (if (zero? n)
+        1
+        (* n (factorial (sub1 n)))
+    )
+)
 
 ;; if the steps of (factorial 4) were written out
 (factorial 4)
@@ -84,10 +86,11 @@ A default parameter provides an input if you don't provide one.
 
 ``` racket
 (define (factorial n [result 1])
-        (if (zero? n)
-            result
-            (factorial (sub1 n) (* n result))
-))
+    (if (zero? n)
+        result
+        (factorial (sub1 n) (* n result))
+    )
+)
 
 ;; if the steps of (factorial 4) were written out
 (factorial 4 1)
@@ -100,12 +103,17 @@ A default parameter provides an input if you don't provide one.
 
 ## Named Parameters
 
+Named parameters are used to make sure you can't even input the value for the
+parameter unless you know the name. In this case, we set it to `#:result`. That
+way there's no mistake, and it's also visually clearer.
+
 ``` racket
 (define (factorial n #:result [p 1])
-        (if (zero? n)
-            p
-            (factorial (sub1 n) #:result (* n p))
-))
+    (if (zero? n)
+        p
+        (factorial (sub1 n) #:result (* n p))
+    )
+)
 
 ;; if the steps of (factorial 4) were written out
 (factorial 4 #:result 1)
@@ -119,21 +127,21 @@ A default parameter provides an input if you don't provide one.
 ## Rest Parameters
 
 ``` racket
-(require (rename-in racket/base [define fn]))
-
-(fn (gcd n1 n2 . rest)
-    (fn (gcd/2 n1 n2)
+(define (gcd n1 n2 . rest)
+    (define (gcd/2 n1 n2)
         (if (zero? n2)
             n1
-            (gcd/2 n2 (modulo n1 n2))))
+            (gcd/2 n2 (modulo n1 n2))
+        )
+    )
 
     (for/fold ([divisor 0])
               ([n (list* n1 n2 rest)])
               (gcd/2 n divisor))
 )
 
-(fn (lcm n1 n2 . rest)
-    (fn (lcm/2 n1 n2)
+(define (lcm n1 n2 . rest)
+    (define (lcm/2 n1 n2)
         (/ (abs (* n1 n2)) (gcd n1 n2)))
 
     (for/fold ([multiple 1])

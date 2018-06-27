@@ -5,8 +5,6 @@ hide_title: true
 sidebar_label: cond
 ---
 
-> Work in progress: Don't use yet!
-
 # `cond` -- one of the ultimate conditionals
 
 ``` scheme

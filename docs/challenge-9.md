@@ -5,7 +5,6 @@ title: Challenge #9
 hide_title: true
 ---
 
-
 # Racket Challenge #9
 
 > You might want to review [`cond`](cond.md) before going on.
@@ -13,7 +12,7 @@ hide_title: true
 ## The Fibonacci Sequence
 
 The Fibonacci sequence is a well known series of numbers named after an Italian
-mathematician nammed Leonard Fibonacci, and it looks like:
+mathematician named after Leonard Fibonacci, and it looks like:
 
 `0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...`
 
@@ -30,10 +29,6 @@ n   | fib
 8   | 21
 9   | 34
 10  | 55
-
-It's a famous series of numbers because it has been independently discovered by
-many people throughout time, but it also continues to surprise scientists 
-because the Fibonacci sequence also finds its way into nature.
 
 The function `fib` which tells you the `n`-th Fibonacci number based on `n` can 
 be defined with just three simple rules in math:
@@ -61,8 +56,18 @@ input, and will return the `n`-th Fibonacci number. For example:
 
 ``` scheme
 (define (fib n)
-    (cond [(= n 0) 0]
+    (cond [(= n 0) 0]  ;; if n is zero, then return 0
           [...]
     )
 )
 ```
+
+## Fibonacci in Nature
+
+The Fibonacci series is one of the simplest recursive sequences that one can
+think of, but it often surprises scientists by finding its way into nature in
+all sorts of places:
+
+![fib-geometry](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/FibonacciSpiral.svg/640px-FibonacciSpiral.svg.png)
+
+![nautilus-shell](https://upload.wikimedia.org/wikipedia/commons/0/08/NautilusCutawayLogarithmicSpiral.jpg)
