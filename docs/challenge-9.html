@@ -51,7 +51,7 @@ be defined with just three simple rules in math:</p>
 and will return the <code>n</code>-th Fibonacci number. For example, <code>(fib 6)</code> should
 evaluate to <code>8</code>.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">fib</span> n)
-    (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n) n]
+    (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">0</span>) n]
           [...]
     )
 )
