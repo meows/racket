@@ -40,22 +40,22 @@ height <code>h</code>:</p>
 </code></pre>
 <p>Which we know to be a shorthand for either:</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> prism-volume
-        (<span class="hljs-name">lambda</span> (<span class="hljs-name">l</span> w h)
-                (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h)
-))
+    (<span class="hljs-name">lambda</span> (<span class="hljs-name">l</span> w h)
+            (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
+)
 
 (<span class="hljs-name">define</span> prism-volume
-        (λ (<span class="hljs-name">l</span> w h)
-           (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h)
-))
+    (λ (<span class="hljs-name">l</span> w h)
+       (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
+)
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="recursion"></a><a href="#recursion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recursion</h3>
 <p>And we should be familiar with the fact that you're allowed to define part of a
 function using itself.</p>
 <pre><code class="hljs css racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n)
-        (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-            <span class="hljs-number">1</span>
-            (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n)))
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+        <span class="hljs-number">1</span>
+        (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n)))
 ))
 
 <span class="hljs-comment">;; if the steps of (factorial 4) were written out</span>
@@ -71,9 +71,9 @@ function using itself.</p>
 <h2><a class="anchor" aria-hidden="true" id="default-parameters"></a><a href="#default-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default Parameters</h2>
 <p>A default parameter provides an input if you don't provide one.</p>
 <pre><code class="hljs css racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n [<span class="hljs-name">result</span> <span class="hljs-number">1</span>])
-        (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-            result
-            (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n result))
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+        result
+        (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n result))
 ))
 
 <span class="hljs-comment">;; if the steps of (factorial 4) were written out</span>
@@ -86,9 +86,9 @@ function using itself.</p>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="named-parameters"></a><a href="#named-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Named Parameters</h2>
 <pre><code class="hljs css racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n #:result [<span class="hljs-name">p</span> <span class="hljs-number">1</span>])
-        (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-            p
-            (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) #:result (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+        p
+        (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) #:result (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
 ))
 
 <span class="hljs-comment">;; if the steps of (factorial 4) were written out</span>
@@ -100,10 +100,8 @@ function using itself.</p>
 <span class="hljs-number">24</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="rest-parameters"></a><a href="#rest-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rest Parameters</h2>
-<pre><code class="hljs css racket">(<span class="hljs-name"><span class="hljs-builtin-name">require</span></span> (<span class="hljs-name">rename-in</span> racket/base [<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> fn]))
-
-(<span class="hljs-name">fn</span> (<span class="hljs-name"><span class="hljs-builtin-name">gcd</span></span> n1 n2 . rest)
-    (<span class="hljs-name">fn</span> (<span class="hljs-name">gcd/2</span> n1 n2)
+<pre><code class="hljs css racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">gcd</span></span> n1 n2 . rest)
+    (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">gcd/2</span> n1 n2)
         (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n2)
             n1
             (<span class="hljs-name">gcd/2</span> n2 (<span class="hljs-name"><span class="hljs-builtin-name">modulo</span></span> n1 n2))))
@@ -113,8 +111,8 @@ function using itself.</p>
               (<span class="hljs-name">gcd/2</span> n divisor))
 )
 
-(<span class="hljs-name">fn</span> (<span class="hljs-name"><span class="hljs-builtin-name">lcm</span></span> n1 n2 . rest)
-    (<span class="hljs-name">fn</span> (<span class="hljs-name">lcm/2</span> n1 n2)
+(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">lcm</span></span> n1 n2 . rest)
+    (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">lcm/2</span> n1 n2)
         (<span class="hljs-name"><span class="hljs-builtin-name">/</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">abs</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n1 n2)) (<span class="hljs-name"><span class="hljs-builtin-name">gcd</span></span> n1 n2)))
 
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">multiple</span> <span class="hljs-number">1</span>])
