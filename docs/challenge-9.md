@@ -5,29 +5,64 @@ title: Challenge #9
 hide_title: true
 ---
 
-# Challenge 9
 
-The Collatz Conjecture is a very interesting, old, and still unproven belief in
-mathematics. The Collatz function takes a natural number `n`, and checks if `n` 
-is even or odd. If it's even, you divide `n` by `2`. If it's odd, you triple `n` 
-and add `1`.
+# Racket Challenge #9
 
-The strongly educated belief, or _conjecture_, is that if you keep doing this,
-all numbers will eventually reach `1`.
+> You might want to review [`cond`](cond.md) before going on.
+
+## The Fibonacci Sequence
+
+The Fibonacci sequence is a well known series of numbers named after an Italian
+mathematician nammed Leonard Fibonacci, and it looks like:
+
+`0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...`
+
+n   | fib
+--- | ---------
+0   | 0
+1   | 1
+2   | 1
+3   | 2
+4   | 3
+5   | 5
+6   | 8
+7   | 13
+8   | 21
+9   | 34
+10  | 55
+
+It's a famous series of numbers because it has been independently discovered by
+many people throughout time, but it also continues to surprise scientists 
+because the Fibonacci sequence also finds its way into nature.
+
+The function `fib` which tells you the `n`-th Fibonacci number based on `n` can 
+be defined with just three simple rules in math:
+  1. `fib(0) = 0`
+  2. `fib(1) = 1`
+  3. `fib(n) = fib(n - 1) + fib(n - 2)`
+
+Aside from `fib(0)` and `fib(1)`, any Fibonacci number can be found by adding up 
+the previous two numbers in the sequence.
+
+For example, if we were to evaluate `fib(4)` in math:
+  1. `fib(4) = fib(3) + fib(2)`
+  2. `fib(4) = fib(3) + (1 + 0)`
+  3. `fib(4) = (fib(2) + 1) + 1`
+  4. `fib(4) = (1 + 0 + 1) + 1`
+  5. `fib(4) = 3`
 
 ## Problem
 
-This `collatz` function below takes two inputs, `n` and `count`, but `count` has
-a default input of `0`. The `collatz` of `n` should tell you how many steps it
-takes to get to 0.
+Write a function in Racket called `fib` which accepts a natural number `n` for 
+input, and will return the `n`-th Fibonacci number. For example: 
+  * `(fib 6)` should evaluate to `8`
+  * `(fib 7)` should evaluate to `13`
+  * `(fib 8)` should evaluate to `21`
 
-``` clojure
-(define (collatz n [count 0])
-    (...)
+``` scheme
+(define (fib n)
+    (cond [(= n 0) 0]
+          [...]
+    )
 )
 ```
-
-## Possible Clues
-
-* [`cond`](cond.md)
-* [`even?`](https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29)
