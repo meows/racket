@@ -30,11 +30,12 @@ n   | fib
 9   | 34
 10  | 55
 
-The function `fib` which tells you the `n`-th Fibonacci number based on `n` can 
-be defined with just three simple rules in math:
+The function `fib` takes a natural number `n` and tells you the `n`-_th_ 
+Fibonacci number. It can be mathematically defined using 3 simple rules:
+
   1. `fib(0) = 0`
   2. `fib(1) = 1`
-  3. `fib(n) = fib(n - 1) + fib(n - 2)`
+  3. `fib(n) = fib(n-1) + fib(n-2)`
 
 Aside from `fib(0)` and `fib(1)`, any Fibonacci number can be found by adding up 
 the previous two numbers in the sequence.
@@ -50,11 +51,11 @@ For example, if we were to evaluate `fib(4)` in math:
 
 Write a function in Racket called `fib` which accepts a natural number `n` for 
 input, and will return the `n`-th Fibonacci number. For example: 
-  * `(fib 6)` should evaluate to `8`
-  * `(fib 7)` should evaluate to `13`
-  * `(fib 8)` should evaluate to `21`
+  * `(fib 6)` should evaluate to `8`.
+  * `(fib 7)` should evaluate to `13`.
+  * `(fib 8)` should evaluate to `21`.
 
-``` scheme
+``` racket
 (define (fib n)
     (cond [(= n 0) 0]  ;; if n is zero, then return 0
           [...]
@@ -66,7 +67,7 @@ input, and will return the `n`-th Fibonacci number. For example:
 
 The Fibonacci series is one of the simplest recursive sequences that one can
 think of, but it often surprises scientists by finding its way into nature in
-all sorts of places:
+all sorts of places.
 
 ![fib-geometry](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/FibonacciSpiral.svg/640px-FibonacciSpiral.svg.png)
 
