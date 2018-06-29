@@ -44,27 +44,33 @@ well.
 
 > You may want to review [`lambda`](lambda.md) before going on.
 
-``` scheme
-(define (add amount)
-    (λ (x)
-       (+ x amount)))
+This function `move` takes a natural input `amount` and returns a function.
 
-(define (scale amount)
-    (λ (x)
-       (* x amount)))
+``` scheme
+(define (move amount)
+    (λ (x) (+ x amount)))
 ```
 
-Let's use these the example functions `add` and `scale`:
+This function `scale` takes a natural input `amount` and returns a function.
+
+``` scheme
+(define (scale amount)
+    (λ (x) (* x amount)))
+```
+
+Let's see how we might use functions `move` and `scale`:
 
 ``` clojure
-((add   5) 5)             ;; → 10
+((move  5) 5)             ;; → 10
 ((scale 5) 5)             ;; → 25
-((add   5) ((add   4) 3)) ;; → 12
+((move  5) ((move  4) 3)) ;; → 12
 ((scale 5) ((scale 4) 3)) ;; → 60
-((scale 5) ((add   4) 3)) ;; → 35
+((scale 5) ((move  4) 3)) ;; → 35
 
-(map (add    3) (range 6)) ;; → '(3 4 5 6 7 8)
-(map (add   -3) (range 6)) ;; → '(-3 -2 -1 0 1 2)
-(map (scale -1) (range 6)) ;; → '(0 -1 -2 -3 -4 -5)
-(map (scale  1) (range 6)) ;; → '(0 1 2 3 4 5)
+(map (move   3) (range 6)) ;; → '( 3  4  5  6  7  8)
+(map (move  -3) (range 6)) ;; → '(-3 -2 -1  0  1  2)
+(map (scale  1) (range 6)) ;; → '( 0  1  2  3  4  5)
+(map (scale -1) (range 6)) ;; → '( 0 -1 -2 -3 -4 -5)
+(map (move   0) (range 6)) ;; → '( 0  1  2  3  4  5)
+(map (scale  0) (range 6)) ;; → '( 0  0  0  0  0  0)
 ```
