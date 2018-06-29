@@ -46,12 +46,12 @@ well.</p>
 <p>You may want to review <a href="/docs/lambda.html"><code>lambda</code></a> before going on.</p>
 </blockquote>
 <pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">add</span> amount)
-    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>)
-       (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x amount)))
+    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x amount))
+)
 
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">scale</span> amount)
-    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>)
-       (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x amount)))
+    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x amount))
+)
 </code></pre>
 <p>Let's use these the example functions <code>add</code> and <code>scale</code>:</p>
 <pre><code class="hljs css clojure">((<span class="hljs-name">add</span>   <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 10</span>
