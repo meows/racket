@@ -52,14 +52,14 @@ values don't exceed 30:</p>
 )
 
 <span class="hljs-comment">;; finds the sum of all triangle numbers from n to 99</span>
-(<span class="hljs-name">define</span> (<span class="hljs-name">challenge</span> n [sum <span class="hljs-number">0</span>])
+(<span class="hljs-name">define</span> (<span class="hljs-name">challenge</span> n sum)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">triangle</span> n))
         sum
         (<span class="hljs-name">challenge</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n sum))
     )
 )
 
-(<span class="hljs-name">challenge</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 91</span>
+(<span class="hljs-name">challenge</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 91</span>
 </code></pre>
 <ul>
 <li><a href="https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29"><code>even?</code></a></li>
