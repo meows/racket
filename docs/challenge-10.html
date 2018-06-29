@@ -47,16 +47,14 @@ values don't exceed 30:</p>
 (<span class="hljs-name">define</span> (<span class="hljs-name">triangle</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
         <span class="hljs-number">0</span>
-        (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n (<span class="hljs-name">triangle</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))
-    )
+        (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n (<span class="hljs-name">triangle</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))))
 )
 
 <span class="hljs-comment">;; finds the sum of all triangle numbers from n to 99</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">challenge</span> n sum)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">triangle</span> n))
         sum
-        (<span class="hljs-name">challenge</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum (<span class="hljs-name">triangle</span> n)))
-    )
+        (<span class="hljs-name">challenge</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum (<span class="hljs-name">triangle</span> n))))
 )
 
 (<span class="hljs-name">challenge</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 91</span>
