@@ -34,11 +34,11 @@ itself, but rather what you can do with it.
   all by playing itself billions of times over. Last year in 2017, AlphaGo beat 
   the world's best player, Ke Jie.
 
-  ![Ke Jie vs AlphaGo](/img/ke-kie-crying.jpg)
+  ![Ke Jie vs AlphaGo](/img/ke-jie-crying.jpg)
 
   > Ke Jie, crying after losing to AlphaGo, possibly because this confirmed to 
-  > the world that a computer system could convincingly beat the world's best Go
-  > player.
+  > the world that a computer system could convincingly beat the world's best Go 
+  > player (May 27, 1997).
 
 * This kind of technology no longer requires the world's best scientists. Some
   people are using this technology in simple ways, for example, to test whether
