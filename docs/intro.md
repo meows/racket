@@ -34,7 +34,13 @@ itself, but rather what you can do with it.
   all by playing itself billions of times over. Last year in 2017, AlphaGo beat 
   the world's best player, Ke Jie.
 
-  This kind of technology no longer requires the world's best scientists. Some
+  ![Ke Jie vs AlphaGo](/img/ke-kie-crying.jpg)
+
+  > Ke Jie, crying after losing to AlphaGo, possibly because this confirmed to 
+  > the world that a computer system could convincingly beat the world's best Go
+  > player.
+
+* This kind of technology no longer requires the world's best scientists. Some
   people are using this technology in simple ways, for example, to test whether
   lighter or darker colors with text make it easier for your eyes to read on
   websites. This can allow engineers to make websites that automatically adapt
