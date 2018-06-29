@@ -53,7 +53,7 @@ Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
 (define (challenge n sum)
     (if (< 100 (triangle n))
         sum
-        (challenge (+ n 1) (+ n sum))
+        (challenge (+ n 1) (+ sum (triangle n)))
     )
 )
 
