@@ -24,6 +24,7 @@
          "cond",
          "function-sequence",
          "function-advanced",
+         "function-higher",
          "fold"
       ]
    },
