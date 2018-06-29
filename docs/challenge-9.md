@@ -69,9 +69,9 @@ The Fibonacci series is one of the simplest recursive sequences that one can
 think of, but it often surprises scientists by finding its way into nature in
 all sorts of places.
 
-One possible reason is if you're a plant or animal part that wants to have this 
-shape which efficiently turns upon itself, and you're trying to figure out how 
-big the next part should be...
+One possible reason we find Fibonacci in nature is if you're a plant or animal 
+part that wants to have this shape which efficiently turns upon itself, and 
+you're trying to figure out how big the next part should be...
 
 ![fib-geometry](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/FibonacciSpiral.svg/640px-FibonacciSpiral.svg.png)
 
