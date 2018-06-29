@@ -7,6 +7,8 @@ hide_title: true
 
 # Challenge 9
 
+## Description
+
 The Collatz Conjecture is a very interesting, old, and still unproven belief in
 mathematics. The Collatz function takes a natural number `n`, and checks if `n` 
 is even or odd. If it's even, you divide `n` by `2`. If it's odd, you triple `n` 
@@ -14,6 +16,8 @@ and add `1`.
 
 The strongly educated belief, or _conjecture_, is that if you keep doing this,
 all natural inputs to Collatz will eventually reach `1`.
+
+## Problem
 
 This `collatz` function below takes two inputs, `n` and `count`, but `count` has
 a default input of `0`. The `collatz` of `n` should tell you how many steps it
@@ -31,7 +35,7 @@ If we were to write out the steps for `(collatz 3)`:
 
 ``` clojure
 ;; this should find the number of steps it takes to get to n = 1
-(collatz 3) ;; 0 is a default argument
+(collatz 3   ) ;; 0 is a default input
 (collatz 10 1)
 (collatz 5  2)
 (collatz 16 3)

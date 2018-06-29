@@ -10,7 +10,6 @@ hide_title: true
 > Time to use the [`fib`](challenge-9.md) function you wrote from the previous
 > challenge.
 
-Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
 
 ## Description
 
@@ -33,6 +32,10 @@ values don't exceed 30:
 
 `0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21`
 
+## Problem
+
+Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
+
 ## Hint
 
 ``` clojure
@@ -42,7 +45,7 @@ values don't exceed 30:
         0
         (+ n (triangle (- n 1)))))
 
-;; finds the sum of all odd triangles under 100
+;; finds the sum of all odd triangle numbers under 100
 (define (challenge n sum)
     (if (< 100 (triangle n))
         sum
