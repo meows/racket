@@ -24,20 +24,23 @@ well.
 
 ## Returning a function
 
+> You may want to review [`lambda`](lambda.md) before going on.
+
 ``` scheme
 (define (add amount)
-   (λ (x)
-      (+ x amount)
-   )
+    (λ (x)
+       (+ x amount))
 )
 
 (define (scale amount)
-   (λ (x)
-      (* x amount)
-   )
+    (λ (x)
+       (* x amount))
 )
+```
 
-;; using our new function
+Let's use these the example functions `add` and `scale`:
+
+``` clojure
 ((add   5) 5)             ;; → 10
 ((scale 5) 5)             ;; → 25
 ((add   5) ((add   4) 3)) ;; → 12
@@ -45,5 +48,7 @@ well.
 ((scale 4) ((add   3) 2)) ;; → 20
 
 (map (add    3) (range 6)) ;; → '(3 4 5 6 7 8)
+(map (add   -3) (range 6)) ;; → '(-3 -2 -1 0 1 2)
 (map (scale -1) (range 6)) ;; → '(0 -1 -2 -3 -4 -5)
+(map (scale  1) (range 6)) ;; → '(0 1 2 3 4 5)
 ```
