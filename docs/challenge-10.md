@@ -50,14 +50,14 @@ Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
 )
 
 ;; finds the sum of all triangle numbers from n to 99
-(define (challenge n [sum 0])
+(define (challenge n sum)
     (if (< 100 (triangle n))
         sum
         (challenge (+ n 1) (+ n sum))
     )
 )
 
-(challenge 0) ;; → 91
+(challenge 0 0) ;; → 91
 ```
 
 * [`even?`](https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29)
