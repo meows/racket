@@ -49,12 +49,12 @@ values don't exceed 30:</p>
     )
 )
 
-<span class="hljs-comment">;; finds the sum of all triangles under 100</span>
+<span class="hljs-comment">;; finds the sum of all odd triangles under 100</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">challenge</span> n sum)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">triangle</span> n))
         sum
         (<span class="hljs-name">challenge</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>) 
-                   (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> (<span class="hljs-name">triangle</span> n)) 
+                   (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">odd?</span></span> (<span class="hljs-name">triangle</span> n)) 
                        (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n sum)
                        sum))
     )
