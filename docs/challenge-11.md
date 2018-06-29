@@ -1,7 +1,7 @@
 ---
-id: challenge-n
-sidebar_label: Challenge #n
-title: Challenge #n
+id: challenge-11
+sidebar_label: Challenge #11
+title: Challenge #11
 hide_title: true
 ---
 
@@ -13,13 +13,11 @@ is even or odd. If it's even, you divide `n` by `2`. If it's odd, you triple `n`
 and add `1`.
 
 The strongly educated belief, or _conjecture_, is that if you keep doing this,
-all numbers will eventually reach `1`.
-
-## Problem
+all natural inputs to Collatz will eventually reach `1`.
 
 This `collatz` function below takes two inputs, `n` and `count`, but `count` has
 a default input of `0`. The `collatz` of `n` should tell you how many steps it
-takes to get to 0.
+takes to get to `1`.
 
 ``` clojure
 (define (collatz n [count 0])

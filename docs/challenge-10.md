@@ -7,7 +7,7 @@ hide_title: true
 
 # Racket Challenge #10
 
-> Time to use the [`fib`](challenge-9.md) function you wrote from the previous 
+> Time to use the [`fib`](challenge-9.md) function you wrote from the previous
 > challenge.
 
 Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
@@ -15,7 +15,7 @@ Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
 ## Description
 
 n   | fib
---- | ---------
+--- | ---
 0   | 0
 1   | 1
 2   | 1
@@ -28,11 +28,30 @@ n   | fib
 9   | 34
 10  | 55
 
-According to the table above, here's the sum of even Fibonacci numbers whose 
-values don't exceed 30: 
+According to the table above, here's the sum of even Fibonacci numbers whose
+values don't exceed 30:
 
 `0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21`
 
 ## Hint
 
-* `even?`
+``` clojure
+;; finds the nth triangle number based on n
+(define (triangle n)
+    (if (zero? n)
+        0
+        (+ n (triangle (- n 1)))))
+
+;; finds the sum of all odd triangles under 100
+(define (challenge n sum)
+    (if (< 100 (triangle n))
+        sum
+        (challenge (+ n 1)
+                   (if (odd? (triangle n))
+                       (+ n sum)
+                       sum))))
+
+(challenge 0 0)
+```
+
+* [`even?`](https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29)

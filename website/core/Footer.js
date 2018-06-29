@@ -29,8 +29,6 @@ class Footer extends React.Component {
            rel="noreferrer noopener">
            Twitter
          </a>
-       
-       
        */}
         <section className="sitemap">
           <a href={this.props.config.baseUrl} className="nav-home">

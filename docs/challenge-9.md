@@ -51,9 +51,9 @@ For example, if we were to evaluate `fib(4)` in math:
 
 Write a function in Racket called `fib` which accepts a natural number `n` for 
 input, and will return the `n`-th Fibonacci number. For example: 
-  * `(fib 6)` should evaluate to `8`.
-  * `(fib 7)` should evaluate to `13`.
-  * `(fib 8)` should evaluate to `21`.
+  * `(fib 6)` should evaluate to `8`
+  * `(fib 7)` should evaluate to `13`
+  * `(fib 8)` should evaluate to `21`
 
 ``` racket
 (define (fib n)
@@ -68,6 +68,10 @@ input, and will return the `n`-th Fibonacci number. For example:
 The Fibonacci series is one of the simplest recursive sequences that one can
 think of, but it often surprises scientists by finding its way into nature in
 all sorts of places.
+
+One possible reason is if you're a plant or animal part that wants to have this 
+shape which efficiently turns upon itself, and you're trying to figure out how 
+big the next part should be...
 
 ![fib-geometry](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/FibonacciSpiral.svg/640px-FibonacciSpiral.svg.png)
 
