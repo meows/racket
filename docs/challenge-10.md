@@ -27,10 +27,12 @@ n   | fib
 9   | 34
 10  | 55
 
-According to the table above, here's the sum of even Fibonacci numbers whose
+According to the table above, here's the sum of all odd Fibonacci numbers whose
 values don't exceed 30:
 
-`0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21`
+``` clojure
+(+ 1 1 3 5 13 21) ;; 44
+```
 
 ## Problem
 
