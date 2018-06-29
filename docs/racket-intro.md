@@ -65,7 +65,7 @@ evaluate first before we know how to add them up.
 )
 ```
 
-> Aside: Notice that as long as we have a space between each atom or 
+> **Aside:** Notice that as long as we have a space between each atom or 
 > sub-expression, having any more extra spaces or blank lines is okay.
 
 ## Running a Racket program means simplifying expressions

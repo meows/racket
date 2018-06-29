@@ -47,13 +47,11 @@ well.
 ``` scheme
 (define (add amount)
     (λ (x)
-       (+ x amount))
-)
+       (+ x amount)))
 
 (define (scale amount)
     (λ (x)
-       (* x amount))
-)
+       (* x amount)))
 ```
 
 Let's use these the example functions `add` and `scale`:
@@ -63,7 +61,7 @@ Let's use these the example functions `add` and `scale`:
 ((scale 5) 5)             ;; → 25
 ((add   5) ((add   4) 3)) ;; → 12
 ((scale 5) ((scale 4) 3)) ;; → 60
-((scale 4) ((add   3) 2)) ;; → 20
+((scale 5) ((add   4) 3)) ;; → 35
 
 (map (add    3) (range 6)) ;; → '(3 4 5 6 7 8)
 (map (add   -3) (range 6)) ;; → '(-3 -2 -1 0 1 2)
