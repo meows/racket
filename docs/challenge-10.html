@@ -53,10 +53,16 @@ values don't exceed 30:</p>
 (<span class="hljs-name">define</span> (<span class="hljs-name">challenge</span> n sum)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">100</span> (<span class="hljs-name">triangle</span> n))
         sum
-        (<span class="hljs-name">challenge</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n sum))
+        (<span class="hljs-name">challenge</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n <span class="hljs-number">1</span>) 
+                   (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> (<span class="hljs-name">triangle</span> n)) 
+                       (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n sum)
+                       sum))
     )
 )
 
 (<span class="hljs-name">challenge</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>)
 </code></pre>
+<ul>
+<li><a href="https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29"><code>even?</code></a></li>
+</ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="challenge-9.html">← Challenge #9</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#hint">Hint</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
