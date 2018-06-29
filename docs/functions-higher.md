@@ -24,7 +24,7 @@ well.
 
 ## Returning a function
 
-``` clojure
+``` racket
 (define (up-by amount)
    (λ (x) 
       (+ x amount))
@@ -35,5 +35,7 @@ well.
       (* x amount))
 )
 
-((up-by 5) 5) ;; 10
+;; using our new function
+((up-by 5) 5) ;; → 10
+((up-by 5) ((up-by 4) 3)) ;; → 12
 ```

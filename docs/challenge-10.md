@@ -31,7 +31,7 @@ According to the table above, here's the sum of all odd Fibonacci numbers whose
 values don't exceed 30:
 
 ``` clojure
-(+ 1 1 3 5 13 21) ;; 44
+(+ 1 1 3 5 13 21) ;; → 44
 ```
 
 ## Problem
