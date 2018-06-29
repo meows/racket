@@ -47,16 +47,13 @@ Find the sum of all even Fibonacci numbers whose values don't exceed 4 million.
         0
         (+ n (triangle (- n 1)))))
 
-;; finds the sum of all odd triangle numbers under 100
-(define (challenge n sum)
+;; finds the sum of all triangle numbers under 100
+(define (challenge n [sum 0])
     (if (< 100 (triangle n))
         sum
-        (challenge (+ n 1)
-                   (if (odd? (triangle n))
-                       (+ n sum)
-                       sum))))
+        (challenge (+ n 1) (+ n sum))))
 
-(challenge 0 0)
+(challenge 0)
 ```
 
 * [`even?`](https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29)
