@@ -22,6 +22,24 @@ well.
 (define (remove-odds lst) (filter even? lst))
 ```
 
+## Returning things we already know about
+
+``` clojure
+(define (what-do-you-want? type)
+    (cond [(equal? type "string") "You wanted a string."]
+          [(equal? type "list") '("you" "wanted" "a" "list")]
+          [(equal? type "boolean") true]
+          [(equal? type "number") 42]
+          [else "I don't know what you want."]
+    )
+)
+
+(what-do-you-want? "string")
+(what-do-you-want? "list")
+(what-do-you-want? "boolean")
+(what-do-you-want? "number")
+```
+
 ## Returning a function
 
 > You may want to review [`lambda`](lambda.md) before going on.

@@ -58,7 +58,7 @@ input, and will return the `n`-th Fibonacci number. For example:
 ``` racket
 (define (fib n)
     (cond [(= n 0) 0]  ;; if n is zero, then return 0
-          [...]
+          [...]        ;; write more conditions
     )
 )
 ```
