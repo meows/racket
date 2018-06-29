@@ -47,15 +47,13 @@ well.</p>
 </blockquote>
 <p>This function <code>add</code> takes a natural <code>amount</code> and returns a function.</p>
 <pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">add</span> amount)
-    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x amount))
-)
+    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x amount)))
 </code></pre>
 <p>This function <code>scale</code> takes a natural <code>amount</code> and returns a function.</p>
 <pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">scale</span> amount)
-    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x amount))
-)
+    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x amount)))
 </code></pre>
-<p>Let's see how we might use the functions <code>add</code> and <code>scale</code>:</p>
+<p>Let's see how we might use functions <code>add</code> and <code>scale</code>:</p>
 <pre><code class="hljs css clojure">((<span class="hljs-name">add</span>   <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 10</span>
 ((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 25</span>
 ((<span class="hljs-name">add</span>   <span class="hljs-number">5</span>) ((<span class="hljs-name">add</span>   <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 12</span>
