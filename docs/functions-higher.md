@@ -40,10 +40,10 @@ well.
 ;; using our new function
 ((add   5) 5)             ;; → 10
 ((scale 5) 5)             ;; → 25
-((add   5) ((add 4)   3)) ;; → 12
+((add   5) ((add   4) 3)) ;; → 12
 ((scale 5) ((scale 4) 3)) ;; → 60
-((scale 4) ((add 3)   2)) ;; → 20
+((scale 4) ((add   3) 2)) ;; → 20
 
-(map (add 3)    (range 6)) ;; → '(3 4 5 6 7 8)
+(map (add    3) (range 6)) ;; → '(3 4 5 6 7 8)
 (map (scale -1) (range 6)) ;; → '(0 -1 -2 -3 -4 -5)
 ```
