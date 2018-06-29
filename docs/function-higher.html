@@ -45,23 +45,23 @@ well.</p>
 <blockquote>
 <p>You may want to review <a href="/docs/lambda.html"><code>lambda</code></a> before going on.</p>
 </blockquote>
-<p>This function <code>add</code> takes a natural <code>amount</code> and returns a function.</p>
-<pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">add</span> amount)
+<p>This function <code>move</code> takes a natural <code>amount</code> and returns a function.</p>
+<pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">move</span> amount)
     (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x amount)))
 </code></pre>
 <p>This function <code>scale</code> takes a natural <code>amount</code> and returns a function.</p>
 <pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">scale</span> amount)
     (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x amount)))
 </code></pre>
-<p>Let's see how we might use functions <code>add</code> and <code>scale</code>:</p>
-<pre><code class="hljs css clojure">((<span class="hljs-name">add</span>   <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 10</span>
+<p>Let's see how we might use functions <code>move</code> and <code>scale</code>:</p>
+<pre><code class="hljs css clojure">((<span class="hljs-name">move</span>  <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 10</span>
 ((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 25</span>
-((<span class="hljs-name">add</span>   <span class="hljs-number">5</span>) ((<span class="hljs-name">add</span>   <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 12</span>
+((<span class="hljs-name">move</span>  <span class="hljs-number">5</span>) ((<span class="hljs-name">move</span>  <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 12</span>
 ((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) ((<span class="hljs-name">scale</span> <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 60</span>
-((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) ((<span class="hljs-name">add</span>   <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 35</span>
+((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) ((<span class="hljs-name">move</span>  <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 35</span>
 
-(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">add</span>    <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '( 3  4  5  6  7  8)</span>
-(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">add</span>   <span class="hljs-number">-3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(-3 -2 -1  0  1  2)</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">move</span>   <span class="hljs-number">3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '( 3  4  5  6  7  8)</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">move</span>  <span class="hljs-number">-3</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(-3 -2 -1  0  1  2)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">scale</span> <span class="hljs-number">-1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '( 0 -1 -2 -3 -4 -5)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">scale</span>  <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '( 0  1  2  3  4  5)</span>
 </code></pre>
