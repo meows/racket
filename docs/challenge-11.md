@@ -7,7 +7,7 @@ hide_title: true
 
 # Challenge 9
 
-## Description
+## The Collatz Conjecture
 
 The Collatz Conjecture is a very interesting, old, and still unproven belief in
 mathematics. The Collatz function takes a natural number `n`, and checks if `n` 
