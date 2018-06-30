@@ -19,13 +19,13 @@ all natural inputs to Collatz will eventually reach `1`.
 
 ## Problem
 
-This `collatz` function below takes two natural inputs, `n` and `count`, but 
-`count` has a default input of `0`. Complete the function so that it can tell me
+This `collatz` function below takes two natural inputs, `n` and `steps`, but 
+`steps` has a default input of `0`. Complete the function so that it can tell me
 how many steps it takes to reach `1` from any Collatz number.
 
 ``` clojure
-(define (collatz n [count 0])
-    (cond [(= n 1) count] ;; return the count if n is 1
+(define (collatz n [steps 0])
+    (cond [(= n 1) steps] ;; return the count if n is 1
           [...]
     )
 )
