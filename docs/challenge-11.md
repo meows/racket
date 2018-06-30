@@ -25,7 +25,7 @@ how many steps it takes to reach `1` from any Collatz number.
 
 ``` clojure
 (define (collatz n [count 0])
-    (cond [(= n 1) count]  ;; return the count if n is 1
+    (cond [(= n 1) count] ;; return the count if n is 1
           [...]
     )
 )
@@ -35,8 +35,6 @@ For example, if we were to try `(collatz 3)` by hand, we should find it takes
 `7` steps, not including the first number:
 
 `3 → 10 → 5 → 16 → 8 → 4 → 2 → 1`
-
-Therefore, `(collatz 3)` should return `7` based on the number of steps it took.
 
 ## Possible Clues
 
