@@ -13,7 +13,7 @@ sidebar_label: cond
           [(string? n) "A string!"]
           [(boolean? n) "A boolean!"]
           [(list? n) "A list!"]
-          [else "I'm not sure."]
+          [else "I'm not sure."] ;; else is optional, but safer to have
     )
 )
 

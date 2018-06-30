@@ -40,7 +40,7 @@ which expects two natural inputs, `n1` and `n2`:
 
 ``` clojure
 (define (gcd n1 n2)
-        (...)
+    (...)
 )
 ```
 
@@ -59,6 +59,6 @@ inputs.
 
 ``` clojure
 (define (lcm n1 n2)
-        (...)
+    (...)
 )
 ```

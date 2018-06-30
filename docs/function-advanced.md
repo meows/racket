@@ -36,8 +36,7 @@ height `h`:
 
 ``` clojure
 (define (prism-volume l w h)
-    (* l w h)
-)
+    (* l w h))
 
 (prism-volume 3 5 7) ;; → (* 3 5 7) → 105
 ```
@@ -46,14 +45,12 @@ Which we know to be a shorthand for either:
 
 ``` racket
 (define prism-volume
-    (lambda (l w h)
-            (* l w h))
-)
+    (lambda (l w h) 
+            (* l w h)))
 
 (define prism-volume
     (λ (l w h)
-       (* l w h))
-)
+       (* l w h)))
 ```
 
 ### Recursion
@@ -65,9 +62,7 @@ function using itself.
 (define (factorial n)
     (if (zero? n)
         1
-        (* n (factorial (sub1 n)))
-    )
-)
+        (* n (factorial (sub1 n)))))
 
 ;; if the steps of (factorial 4) were written out
 (factorial 4)
@@ -88,9 +83,7 @@ A default parameter provides an input if you don't provide one.
 (define (factorial n [result 1])
     (if (zero? n)
         result
-        (factorial (sub1 n) (* n result))
-    )
-)
+        (factorial (sub1 n) (* n result))))
 
 ;; if the steps of (factorial 4) were written out
 (factorial 4 1)
@@ -111,9 +104,7 @@ way there's no mistake, and it's also visually clearer.
 (define (factorial n #:result [p 1])
     (if (zero? n)
         p
-        (factorial (sub1 n) #:result (* n p))
-    )
-)
+        (factorial (sub1 n) #:result (* n p))))
 
 ;; if the steps of (factorial 4) were written out
 (factorial 4 #:result 1)
@@ -131,9 +122,7 @@ way there's no mistake, and it's also visually clearer.
     (define (gcd/2 n1 n2)
         (if (zero? n2)
             n1
-            (gcd/2 n2 (modulo n1 n2))
-        )
-    )
+            (gcd/2 n2 (modulo n1 n2))))
 
     (for/fold ([divisor 0])
               ([n (list* n1 n2 rest)])
