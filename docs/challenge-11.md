@@ -10,41 +10,33 @@ hide_title: true
 ## The Collatz Conjecture
 
 The Collatz Conjecture is a very interesting, old, and still unproven belief in
-mathematics. The Collatz function takes a natural number `n`, and checks if `n` 
-is even or odd. If it's even, you divide `n` by `2`. If it's odd, you triple `n` 
-and add `1`.
+mathematics. The Collatz function takes a natural input `n` and checks if it's
+odd or even. If it's odd, you triple `n` and add `1`. If it's even, you divide
+`n` by `2`.
 
 The strongly educated belief, or _conjecture_, is that if you keep doing this,
 all natural inputs to Collatz will eventually reach `1`.
 
 ## Problem
 
-This `collatz` function below takes two inputs, `n` and `count`, but `count` has
-a default input of `0`. The `collatz` of `n` should tell you how many steps it
-takes to get to `1`.
+This `collatz` function below takes two natural inputs, `n` and `count`, but 
+`count` has a default input of `0`. Complete the function so that it can tell me
+how many steps it takes to reach `1` from any Collatz number.
 
 ``` clojure
 (define (collatz n [count 0])
-    (cond [(= n 1) count]  ;; return the count if n is 1 
+    (cond [(= n 1) count]  ;; return the count if n is 1
           [...]
     )
 )
 ```
 
-If we were to write out the steps for `(collatz 3)`:
+For example, if we were to try `(collatz 3)` by hand, we should find it takes
+`7` steps, not including the first number:
 
-``` clojure
-;; this should find the number of steps it takes to get to n = 1
-(collatz 3   ) ;; 0 is a default input
-(collatz 10 1)
-(collatz 5  2)
-(collatz 16 3)
-(collatz 8  4)
-(collatz 4  5)
-(collatz 2  6)
-(collatz 1  7)
-7 ;; it takes 7 steps to reach 1 with (collatz 3) 
-```
+`3 → 10 → 5 → 16 → 8 → 4 → 2 → 1`
+
+Therefore, `(collatz 3)` should return `7` based on the number of steps it took.
 
 ## Possible Clues
 

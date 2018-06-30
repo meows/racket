@@ -1,4 +1,4 @@
----
+--- 
 id: challenge-10
 sidebar_label: Challenge #10
 title: Challenge #10
