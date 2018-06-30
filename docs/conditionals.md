@@ -86,8 +86,7 @@ number is both even and negative at the same time.
 ``` clojure
 (define (even-and-negative? n)
     (and (even? n) 
-         (negative? n))
-)
+         (negative? n)))
 
 (even-and-negative? -10) ;; → true
 (even-and-negative?  10) ;; → false
@@ -115,8 +114,7 @@ divisible by `2`, `7`, or `9`.
 (define (div-by-2-7-9? n)
     (or (zero? (remainder n 2))
         (zero? (remainder n 7))
-        (zero? (remainder n 9)))
-)
+        (zero? (remainder n 9))))
 
 (div-by-2-7-9? 4)  ;; → true
 (div-by-2-7-9? 14) ;; → true
