@@ -47,18 +47,14 @@ This is but one way to approach the problem.
 (define (triangle n)
     (if (zero? n)
         0
-        (+ n (triangle (- n 1)))
-    )
-)
+        (+ n (triangle (- n 1)))))
 
 ;; finds the sum of all triangle numbers from n to 99
 (define (challenge n sum)
     (if (< 100 (triangle n))
         sum
-        (challenge (+ n 1) 
-                   (+ sum (triangle n)))
-    )
-)
+        (challenge (+ n 1)
+                   (+ sum (triangle n)))))
 
 (challenge 0 0) ;; → 455
 ```
