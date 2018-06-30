@@ -111,9 +111,7 @@ way there's no mistake, and it's also visually clearer.</p>
     (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">gcd/2</span> n1 n2)
         (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n2)
             n1
-            (<span class="hljs-name">gcd/2</span> n2 (<span class="hljs-name"><span class="hljs-builtin-name">modulo</span></span> n1 n2))
-        )
-    )
+            (<span class="hljs-name">gcd/2</span> n2 (<span class="hljs-name"><span class="hljs-builtin-name">modulo</span></span> n1 n2))))
 
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">divisor</span> <span class="hljs-number">0</span>])
               ([<span class="hljs-name">n</span> (<span class="hljs-name">list*</span> n1 n2 rest)])
