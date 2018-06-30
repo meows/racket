@@ -81,8 +81,8 @@ determine how a function will work</li>
 need to be all <code>true</code> at the same time. In the example below, we check if a
 number is both even and negative at the same time.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">even-and-negative?</span> n)
-    (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n) (<span class="hljs-name">negative?</span> n))
-)
+    (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n) 
+         (<span class="hljs-name">negative?</span> n)))
 
 (<span class="hljs-name">even-and-negative?</span> <span class="hljs-number">-10</span>) <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name">even-and-negative?</span>  <span class="hljs-number">10</span>) <span class="hljs-comment">;; → false</span>
