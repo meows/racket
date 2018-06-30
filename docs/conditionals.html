@@ -81,8 +81,7 @@ determine how a function will work</li>
 need to be all <code>true</code> at the same time. In the example below, we check if a
 number is both even and negative at the same time.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">even-and-negative?</span> n)
-    (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n) 
-         (<span class="hljs-name">negative?</span> n))
+    (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n) (<span class="hljs-name">negative?</span> n))
 )
 
 (<span class="hljs-name">even-and-negative?</span> <span class="hljs-number">-10</span>) <span class="hljs-comment">;; → true</span>
@@ -104,7 +103,8 @@ divisible by <code>2</code>, <code>7</code>, or <code>9</code>.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">div-by-2-7-9?</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">2</span>))
         (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">7</span>))
-        (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">9</span>)))
+        (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">9</span>))
+    )
 )
 
 (<span class="hljs-name">div-by-2-7-9?</span> <span class="hljs-number">4</span>)  <span class="hljs-comment">;; → true</span>
