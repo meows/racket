@@ -75,9 +75,7 @@ function using itself.</p>
 <pre><code class="hljs css racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n [<span class="hljs-name">result</span> <span class="hljs-number">1</span>])
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
         result
-        (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n result))
-    )
-)
+        (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n result))))
 
 <span class="hljs-comment">;; if the steps of (factorial 4) were written out</span>
 (<span class="hljs-name">factorial</span> <span class="hljs-number">4</span> <span class="hljs-number">1</span>)
