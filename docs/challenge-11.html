@@ -25,7 +25,7 @@ all natural inputs to Collatz will eventually reach <code>1</code>.</p>
 <code>count</code> has a default input of <code>0</code>. Complete the function so that it can tell me
 how many steps it takes to reach <code>1</code> from any Collatz number.</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">collatz</span> n [count <span class="hljs-number">0</span>])
-    (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">1</span>) count]  <span class="hljs-comment">;; return the count if n is 1</span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">1</span>) count] <span class="hljs-comment">;; return the count if n is 1</span>
           [...]
     )
 )
