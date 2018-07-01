@@ -63,10 +63,15 @@ Let's see how we might use functions `move` and `scale`:
 ((scale 5) ((scale 4) 3)) ;; → 60
 ((scale 5) ((move  4) 3)) ;; → 35
 
+;; keep an eye out for the starting position and velocity of a sequence
 (map (move   0) (range 6)) ;; → '( 0  1  2  3  4  5)
 (map (scale  0) (range 6)) ;; → '( 0  0  0  0  0  0)
+(map (move   1) (range 6)) ;; → '( 1  2  3  4  5  6)
+(map (move  -1) (range 6)) ;; → '(-1  0  1  2  3  4)
 (map (scale  1) (range 6)) ;; → '( 0  1  2  3  4  5)
 (map (scale -1) (range 6)) ;; → '( 0 -1 -2 -3 -4 -5)
 (map (move   3) (range 6)) ;; → '( 3  4  5  6  7  8)
 (map (move  -3) (range 6)) ;; → '(-3 -2 -1  0  1  2)
+(map (scale  3) (range 6)) ;; → '(0  3  6  9  12  15)
+(map (scale -3) (range 6)) ;; → '(0 -3 -6 -9 -12 -15)
 ```
