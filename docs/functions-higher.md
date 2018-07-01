@@ -22,17 +22,18 @@ well.
 
 ## Returning things we already know about
 
-``` clojure
+``` scheme
 (define (what-do-you-want? type)
     (cond [(equal? type "string") "You wanted a string."]
           [(equal? type "list") '("you" "wanted" "a" "list")]
-          [(equal? type "boolean") true]
+          [(equal? type "boolean") #f]
           [(equal? type "number") 42]
-          [else "I don't know what you want."]))
+          [else "I don't know what you want."]
+))
 
 (what-do-you-want? "string")  ;; → "You wanted a string."
 (what-do-you-want? "list")    ;; → '("you" "wanted" "a" "list")
-(what-do-you-want? "boolean") ;; → true
+(what-do-you-want? "boolean") ;; → #f
 (what-do-you-want? "number")  ;; → 42
 ```
 
@@ -43,15 +44,17 @@ well.
 This function `move` takes a natural input `amount` and returns a function.
 
 ``` scheme
-(define (move amount)
-    (λ (x) (+ x amount)))
+(define (move amount) 
+    (λ (x) (+ x amount))
+)
 ```
 
 This function `scale` takes a natural input `amount` and returns a function.
 
 ``` scheme
-(define (scale amount)
-    (λ (x) (* x amount)))
+(define (scale amount) 
+    (λ (x) (* x amount))
+)
 ```
 
 Let's see how we might use functions `move` and `scale`:

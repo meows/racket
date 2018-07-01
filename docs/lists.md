@@ -81,9 +81,12 @@ right function to use.
 | ► Return  | the value found on `lst` at `pos`
 
 ``` clojure
-(define names (list "Ryan" "Oliver" "Norman" "Lee" "Iris" "George" "Ellen" "Bob"
-   "Dennis" "Allen" "Charity" "Irene" "Jonathan" "Calvin" "Alice" "Frank"
-   "Henry" "Jen" "Mike" "Patricia" "Roy" "Joseph" "Patrick"))
+(define names 
+   (list "Ryan" "Oliver" "Norman" "Lee" "Iris" "George" "Ellen" "Bob" "Dennis" 
+      "Allen" "Charity" "Irene" "Jonathan" "Calvin" "Alice" "Frank" "Henry" 
+      "Jen" "Mike" "Patricia" "Roy" "Joseph" "Patrick"
+   )
+)
 
 (empty? names)      ;; → false -- list is not empty
 (list?  names)      ;; → true

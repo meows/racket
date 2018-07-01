@@ -11,6 +11,8 @@ In Racket you're allowed to rename anything, even the way you `define` variables
 and functions:
 
 ``` racket
+#lang racket
+
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 
