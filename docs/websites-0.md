@@ -32,7 +32,7 @@ running out of IPv4 addresses!
 
 An IPv4 address looks like: 
 
-107.130.102.149
+`107.130.102.149`
 
 And it can range from `0.0.0.0` to `255.255.255.255`.
 

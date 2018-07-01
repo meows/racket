@@ -10,7 +10,6 @@ hide_title: true
 > Time to use the [`fib`](challenge-9.md) function you wrote from the previous
 > challenge.
 
-
 ## Description
 
 n   | fib
@@ -48,15 +47,18 @@ This is but one way to approach the problem.
     (if (zero? n)
         0
         (+ n (triangle (- n 1)))
-))
+    )
+)
 
 ;; finds the sum of all triangle numbers from n to 99
 (define (challenge n sum)
     (if (< 100 (triangle n))
         sum
         (challenge (+ n 1)
-                   (+ sum (triangle n)))
-))
+                   (+ sum (triangle n))
+        )
+    )
+)
 
 (challenge 0 0) ;; → 455
 ```
