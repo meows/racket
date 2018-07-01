@@ -28,15 +28,13 @@ sequences, so I'm going to show you examples first:</p>
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">product</span> <span class="hljs-number">1</span>])            <span class="hljs-comment">;; current product</span>
               ([<span class="hljs-name">i</span> (<span class="hljs-name">range</span> <span class="hljs-number">1</span> (<span class="hljs-name">add1</span> n))]) <span class="hljs-comment">;; the sequence you are running over</span>
               (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> product i)            <span class="hljs-comment">;; the new product</span>
-    )
-)
+))
 </code></pre>
 <pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">triangle</span> n)
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">sum</span> <span class="hljs-number">0</span>])              <span class="hljs-comment">;; current sum</span>
               ([<span class="hljs-name">i</span> (<span class="hljs-name">range</span> (<span class="hljs-name">add1</span> n))]) <span class="hljs-comment">;; the sequence you are running over</span>
               (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum i)              <span class="hljs-comment">;; the new sum</span>
-    )
-)
+))
 </code></pre>
 <p>In all of these examples <code>for/fold</code> always takes in 3 inputs:</p>
 <ol>
