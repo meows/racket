@@ -72,6 +72,6 @@ Let's see how we might use functions `move` and `scale`:
 (map (scale -1) (range 6)) ;; → '( 0 -1 -2 -3 -4 -5)
 (map (move   3) (range 6)) ;; → '( 3  4  5  6  7  8)
 (map (move  -3) (range 6)) ;; → '(-3 -2 -1  0  1  2)
-(map (scale  3) (range 6)) ;; → '(0  3  6  9  12  15)
-(map (scale -3) (range 6)) ;; → '(0 -3 -6 -9 -12 -15)
+(map (scale  3) (range 6)) ;; → '( 0  3  6  9  12  15)
+(map (scale -3) (range 6)) ;; → '( 0 -3 -6 -9 -12 -15)
 ```

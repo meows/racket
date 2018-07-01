@@ -25,8 +25,7 @@ sequences, so I'm going to show you examples first:
     (for/fold ([product 1])            ;; current product
               ([i (range 1 (add1 n))]) ;; the sequence you are running over
               (* product i)            ;; the new product
-    )
-)
+))
 ```
 
 ``` scheme
@@ -34,8 +33,7 @@ sequences, so I'm going to show you examples first:
     (for/fold ([sum 0])              ;; current sum
               ([i (range (add1 n))]) ;; the sequence you are running over
               (+ sum i)              ;; the new sum
-    )
-)
+))
 ```
 
 In all of these examples `for/fold` always takes in 3 inputs:
@@ -54,18 +52,16 @@ things later on.
 
 ``` scheme
 (define (myMap fn seq)
-    (for/fold ([lst (list)])     ;; current list
-              ([i seq])          ;; the sequence we're running over
-              (cons (fn i) lst)) ;; the new list
-)
+    (for/fold ([lst (list)])    ;; current list
+              ([i seq])         ;; the sequence we're running over
+              (cons (fn i) lst) ;; the new list
+))
 
 (define (myFilter okay? seq)
-    (for/fold ([lst (list)])     ;; current list
-              ([i seq])          ;; the sequence we're running over
-              (if (okay? i)      ;; we check if every (okay? i) is true or false
-                  (cons i lst)   ;; the new list if true
-                  lst            ;; give back the old list if false (do nothing)
-              )
-    )
-)
+    (for/fold ([lst (list)])   ;; current list
+              ([i seq])        ;; the sequence we're running over
+              (if (okay? i)    ;; we check if every (okay? i) is true or false
+                  (cons i lst) ;; the new list if true
+                  lst          ;; the old list if false (do nothing)
+)))
 ```
