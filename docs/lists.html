@@ -68,9 +68,12 @@ right function to use.</p>
 <tr><td>► Return</td><td>the value found on <code>lst</code> at <code>pos</code></td></tr>
 </tbody>
 </table>
-<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> names (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-string">"Ryan"</span> <span class="hljs-string">"Oliver"</span> <span class="hljs-string">"Norman"</span> <span class="hljs-string">"Lee"</span> <span class="hljs-string">"Iris"</span> <span class="hljs-string">"George"</span> <span class="hljs-string">"Ellen"</span> <span class="hljs-string">"Bob"</span>
-   <span class="hljs-string">"Dennis"</span> <span class="hljs-string">"Allen"</span> <span class="hljs-string">"Charity"</span> <span class="hljs-string">"Irene"</span> <span class="hljs-string">"Jonathan"</span> <span class="hljs-string">"Calvin"</span> <span class="hljs-string">"Alice"</span> <span class="hljs-string">"Frank"</span>
-   <span class="hljs-string">"Henry"</span> <span class="hljs-string">"Jen"</span> <span class="hljs-string">"Mike"</span> <span class="hljs-string">"Patricia"</span> <span class="hljs-string">"Roy"</span> <span class="hljs-string">"Joseph"</span> <span class="hljs-string">"Patrick"</span>))
+<pre><code class="hljs css clojure">(<span class="hljs-name">define</span> names 
+   (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-string">"Ryan"</span> <span class="hljs-string">"Oliver"</span> <span class="hljs-string">"Norman"</span> <span class="hljs-string">"Lee"</span> <span class="hljs-string">"Iris"</span> <span class="hljs-string">"George"</span> <span class="hljs-string">"Ellen"</span> <span class="hljs-string">"Bob"</span> <span class="hljs-string">"Dennis"</span> 
+      <span class="hljs-string">"Allen"</span> <span class="hljs-string">"Charity"</span> <span class="hljs-string">"Irene"</span> <span class="hljs-string">"Jonathan"</span> <span class="hljs-string">"Calvin"</span> <span class="hljs-string">"Alice"</span> <span class="hljs-string">"Frank"</span> <span class="hljs-string">"Henry"</span> 
+      <span class="hljs-string">"Jen"</span> <span class="hljs-string">"Mike"</span> <span class="hljs-string">"Patricia"</span> <span class="hljs-string">"Roy"</span> <span class="hljs-string">"Joseph"</span> <span class="hljs-string">"Patrick"</span>
+   )
+)
 
 (<span class="hljs-name"><span class="hljs-builtin-name">empty?</span></span> names)      <span class="hljs-comment">;; → false -- list is not empty</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">list?</span></span>  names)      <span class="hljs-comment">;; → true</span>
