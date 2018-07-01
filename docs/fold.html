@@ -51,19 +51,17 @@ things later on.</p>
 <p><code>for/fold</code> is so flexible that if you wanted, you could replicate the power of
 <code>map</code> or <code>filter</code>.</p>
 <pre><code class="hljs css scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">myMap</span> fn seq)
-    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])     <span class="hljs-comment">;; current list</span>
-              ([<span class="hljs-name">i</span> seq])          <span class="hljs-comment">;; the sequence we're running over</span>
-              (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name">fn</span> i) lst)) <span class="hljs-comment">;; the new list</span>
-)
+    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])    <span class="hljs-comment">;; current list</span>
+              ([<span class="hljs-name">i</span> seq])         <span class="hljs-comment">;; the sequence we're running over</span>
+              (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name">fn</span> i) lst) <span class="hljs-comment">;; the new list</span>
+))
 
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">myFilter</span> okay? seq)
-    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])     <span class="hljs-comment">;; current list</span>
-              ([<span class="hljs-name">i</span> seq])          <span class="hljs-comment">;; the sequence we're running over</span>
-              (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">okay?</span> i)      <span class="hljs-comment">;; we check if every (okay? i) is true or false</span>
-                  (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> i lst)   <span class="hljs-comment">;; the new list if true</span>
-                  lst            <span class="hljs-comment">;; give back the old list if false (do nothing)</span>
-              )
-    )
-)
+    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])   <span class="hljs-comment">;; current list</span>
+              ([<span class="hljs-name">i</span> seq])        <span class="hljs-comment">;; the sequence we're running over</span>
+              (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">okay?</span> i)    <span class="hljs-comment">;; we check if every (okay? i) is true or false</span>
+                  (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> i lst) <span class="hljs-comment">;; the new list if true</span>
+                  lst          <span class="hljs-comment">;; the old list if false (do nothing)</span>
+)))
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="function-higher.html">← Making Many Functions</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#why-use-for-fold">Why use <code>for/fold</code>?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
