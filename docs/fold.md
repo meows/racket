@@ -38,7 +38,7 @@ sequences, so I'm going to show you examples first:
 
 In all of these examples `for/fold` always takes in 3 inputs:
   1. a name-value pair such as `[sum 0]` or `[product 1]`,
-  2. a sequences you want to "run" over,
+  2. a name-sequence pair such as `[i (range 5)]`, which you wish to "run" over,
   3. the expression that will become the next value for your name-value pair.
 
 ## Why use `for/fold`?
