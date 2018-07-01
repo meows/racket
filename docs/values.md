@@ -58,7 +58,7 @@ stop us from saying that we think `(list "Alex" "Frank" "Lucy")` look like
 names, and `(list "fish" "bird" "dog")` look like animals.
 
 Thinking about types becomes more useful later when we want to use the right 
-function on the right type, as opposed to trying `(- fish dog)`, because as we 
+function on the right type, as opposed to trying `(- dog fish)`, because as we 
 all know, the dog will get very angry. Now that we know about values and how we
 organize or group them into types, let's read about some of the types that 
 Racket has provided for us:

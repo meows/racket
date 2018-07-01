@@ -7,18 +7,16 @@ hide_title: true
 
 # Making Many Functions
 
-> WIP: Don't use yet!
-
 We've learned before that a function takes an input and transforms it into an
 output. We've also learned that in math, we are required to specify what is the
 _type_ of the input and output. As it happens, that's true in programming as
 well.
 
 ``` clojure
-;; real -> real
+;; number → number
 (define (prism l w h) (* l w h))
 
-;; list -> list
+;; list → list
 (define (remove-odds lst) (filter even? lst))
 ```
 
@@ -30,14 +28,12 @@ well.
           [(equal? type "list") '("you" "wanted" "a" "list")]
           [(equal? type "boolean") true]
           [(equal? type "number") 42]
-          [else "I don't know what you want."]
-    )
-)
+          [else "I don't know what you want."]))
 
-(what-do-you-want? "string")
-(what-do-you-want? "list")
-(what-do-you-want? "boolean")
-(what-do-you-want? "number")
+(what-do-you-want? "string")  ;; → "You wanted a string."
+(what-do-you-want? "list")    ;; → '("you" "wanted" "a" "list")
+(what-do-you-want? "boolean") ;; → true
+(what-do-you-want? "number")  ;; → 42
 ```
 
 ## Returning a function
