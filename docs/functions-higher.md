@@ -46,7 +46,7 @@ well.
 
 ``` racket
 (define (say-hi? answer)
-    (if (equal? answer true)
+    (if (equal? answer #true)
         "Hi!"
         "No hello for you."
     )
