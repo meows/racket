@@ -14,10 +14,14 @@ well.
 
 ``` clojure
 ;; number → number
-(define (prism l w h) (* l w h))
+(define (cube n) 
+    (* n n n)
+)
 
 ;; list → list
-(define (remove-odds lst) (filter even? lst))
+(define (remove-odds lst) 
+    (filter even? lst)
+)
 ```
 
 ## Returning things we already know about
@@ -46,7 +50,7 @@ well.
 
 ``` racket
 (define (say-hi? answer)
-    (if (equal? answer #true)
+    (if (equal? answer #t)
         "Hi!"
         "No hello for you."
     )
@@ -93,4 +97,25 @@ Let's see how we might use functions `move` and `scale`:
 (map (move  -3) (range 6)) ;; → '(-3 -2 -1  0  1  2)
 (map (scale  3) (range 6)) ;; → '( 0  3  6  9  12  15)
 (map (scale -3) (range 6)) ;; → '( 0 -3 -6 -9 -12 -15)
+```
+
+## Exercise
+
+Write a function called `line` which takes two natural inputs, a velocity `v`
+and a starting position `p0`, and returns a new function which can generate a
+linear sequence based the velocity and starting position of my choice.
+
+``` scheme
+(define (line p0 v)
+    (λ ...)
+)
+```
+
+For example, this is how I would like to use your `line` function:
+
+``` clojure
+(map (line  7 -1) (range 5)) ;; → 7, 6, 5, 4, 3
+(map (line  7  1) (range 5)) ;; → 7, 8, 9, 10, 11
+(map (line -4  2) (range 5)) ;; → -4, -2, 0, 2, 4
+(map (line -4 -2) (range 5)) ;; → -4, -6, -8, -10, -12
 ```
