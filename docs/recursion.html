@@ -80,10 +80,11 @@ how it looks when we write it in Racket.</p>
 </ul>
 <pre><code class="hljs css clojure"><span class="hljs-comment">;; Example #1</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n)
-        (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-            <span class="hljs-number">1</span>
-            (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))
-))
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+        <span class="hljs-number">1</span>
+        (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))
+    )
+)
 </code></pre>
 <p>If the &quot;steps&quot; for <code>(factorial 5)</code> were written out:</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span>)
@@ -121,10 +122,11 @@ means that whenever you don't give anything for <code>p</code>, then <code>1</co
 given to your function in place of <code>p</code>.</p>
 <pre><code class="hljs css racket"><span class="hljs-comment">;; Example #2</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n [<span class="hljs-name">p</span> <span class="hljs-number">1</span>])
-        (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-            p
-            (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
-))
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+        p
+        (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))
+    )
+)
 </code></pre>
 <p>If the &quot;steps&quot; for <code>(factorial 5)</code> were written out:</p>
 <pre><code class="hljs css clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span> <span class="hljs-number">1</span>) <span class="hljs-comment">; 1 is given as a default input</span>
