@@ -69,6 +69,9 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 
 > You may want to review [`lambda`](lambda.md) before going on.
 
+Now let's try returning something we haven't done before, which is a whole new
+function that we can later use.
+
 This function `move` takes a natural input `amount` and returns a function.
 
 ``` scheme
