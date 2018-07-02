@@ -46,8 +46,7 @@ This is but one way to approach the problem.
 (define (triangle n)
     (if (zero? n)
         0
-        (+ n (triangle (- n 1)))
-    )
+        (+ n (triangle (- n 1))))
 )
 
 (define (odd-or-0 n)
@@ -59,8 +58,7 @@ This is but one way to approach the problem.
     (if (< 100 (triangle n)) ;; check if the current triangle number is over 100
         sum
         (challenge (+ n 1)
-                   (+ sum (odd-or-0 (triangle n))))
-    )
+                   (+ sum (odd-or-0 (triangle n)))))
 )
 
 (challenge 0 0) ;; → 231

@@ -5,7 +5,7 @@ title: Challenge #11
 hide_title: true
 ---
 
-# Challenge 9
+# Challenge 11
 
 ## The Collatz Conjecture
 

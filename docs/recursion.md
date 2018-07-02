@@ -76,10 +76,11 @@ Assume that our `factorial` function will receive a natural number `n` for input
 ``` clojure
 ;; Example #1
 (define (factorial n)
-        (if (zero? n)
-            1
-            (* n (factorial (- n 1)))
-))
+    (if (zero? n)
+        1
+        (* n (factorial (- n 1)))
+    )
+)
 ```
 
 If the "steps" for `(factorial 5)` were written out:
@@ -126,10 +127,11 @@ given to your function in place of `p`.
 ``` racket
 ;; Example #2
 (define (factorial n [p 1])
-        (if (zero? n)
-            p
-            (factorial (- n 1) (* n p))
-))
+    (if (zero? n)
+        p
+        (factorial (- n 1) (* n p))
+    )
+)
 ```
 
 If the "steps" for `(factorial 5)` were written out:
