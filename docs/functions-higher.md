@@ -12,12 +12,18 @@ output. We've also learned that in math, we are required to specify what is the
 _type_ of the input and output. As it happens, that's true in programming as
 well.
 
+This `cube` function takes a number `n` and returns a number.
+
 ``` clojure
 ;; number → number
 (define (cube n) 
     (* n n n)
 )
+```
 
+This list function `remove-odds` takes a list `lst` and returns a list.
+
+``` scheme
 ;; list → list
 (define (remove-odds lst) 
     (filter even? lst)
@@ -25,6 +31,8 @@ well.
 ```
 
 ## Returning things we already know about
+
+Let's focus a bit more one the kinds of things we've learned to return so far.
 
 ### Returning numbers
 
