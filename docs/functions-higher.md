@@ -40,8 +40,8 @@ well.
 
 ``` scheme
 (define (div-by-3-or-5? n)
-    (and (zero? (remainder n 3))
-         (zero? (remainder n 5))
+    (or (zero? (remainder n 3))
+        (zero? (remainder n 5))
     )
 )
 ```
