@@ -50,12 +50,16 @@ This is but one way to approach the problem.
     )
 )
 
-;; finds the sum of all triangle numbers from n to 99
+(define (odd-or-0 n)
+    (if (odd n) n 0)
+)
+
+;; finds the sum of all odd triangle numbers from n to 99
 (define (challenge n sum)
-    (if (< 100 (triangle n))
+    (if (< 100 (triangle n)) ;; check if the current triangle number is over 100
         sum
         (challenge (+ n 1)
-                   (+ sum (triangle n))
+                   (+ sum (odd-or-0 (triangle n)))
         )
     )
 )

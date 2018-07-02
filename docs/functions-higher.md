@@ -22,19 +22,35 @@ well.
 
 ## Returning things we already know about
 
-``` scheme
-(define (what-do-you-want? type)
-    (cond [(equal? type "string") "You wanted a string."]
-          [(equal? type "list") '("you" "wanted" "a" "list")]
-          [(equal? type "boolean") #f]
-          [(equal? type "number") 42]
-          [else "I don't know what you want."]
-))
+### Returning numbers
 
-(what-do-you-want? "string")  ;; → "You wanted a string."
-(what-do-you-want? "list")    ;; → '("you" "wanted" "a" "list")
-(what-do-you-want? "boolean") ;; → #f
-(what-do-you-want? "number")  ;; → 42
+``` scheme
+(define (total-bill price)
+    (+ (* price 1.0725) ;; California sales tax 
+       (* price 1.15)   ;; common tip amount
+    )
+)
+```
+
+### Returning booleans
+
+``` scheme
+(define (div-by-3-or-5? n)
+    (and (zero? (remainder n 3))
+         (zero? (remainder n 5))
+    )
+)
+```
+
+### Returning strings
+
+``` racket
+(define (say-hi? answer)
+    (if (equal? answer true)
+        "Hi!"
+        "No hello for you."
+    )
+)
 ```
 
 ## Returning a function
