@@ -73,9 +73,11 @@ seconds passed | meters away
 3. Do the sequence of values for the car's distance have a constant or changing
    velocity or acceleration?
 
-4. Write a function called `meters` to represent this table, and let it take
-   _seconds passed_ `s` for input, and let it output the same sequence of values
-   as _meters away_.
+4. Write a function called `meters` which could generate the same sequence as
+   the table, and let it take _seconds passed_ `s` for input, and let it output 
+   the same sequence of values as _meters away_.
+
+   `meters(s) = distance traveled in meters due to seconds traveled`
 
 ## Abstract Mastery
 
