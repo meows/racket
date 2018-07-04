@@ -50,9 +50,9 @@ order of operations.
 
 ### From a Table of Values
 
-Below is a table of values containing measurements that somebody took on a 
-moving car, where _seconds passed_ represents how many seconds have passed from 
-the start of measurement, and _meters away_ represents how far the car was at 
+Below is a table of values containing measurements that somebody took on a
+moving car, where _seconds passed_ represents how many seconds have passed from
+the start of measurement, and _meters away_ represents how far the car was at
 every second of measurement.
 
 seconds passed | meters away
@@ -74,17 +74,19 @@ seconds passed | meters away
    velocity or acceleration?
 
 4. Write a function called `meters` which could generate the same sequence as
-   the table, and let it take _seconds passed_ `s` for input, and let it output 
+   the table, and let it take _seconds passed_ `s` for input, and let it output
    the same sequence of values as _meters away_.
 
    `meters(s) = distance traveled in meters due to seconds traveled`
 
 ### From a Graph
 
-Below is a graph of values containing measurements that somebody took on a 
+Below is a graph of values containing measurements that somebody took on a
 moving car, where `seconds` represents the time passed since we started
 measuring, and `meters` represents the distance the car traveled based on the
 time.
+
+Write a function which can represent the graph.
 
 ## Abstract Mastery
 
@@ -98,5 +100,5 @@ is `f(n) = ax + b`, where `a` and `b` are constants that I've hidden from you.
 
 3. What would happen to the graph as I make `b` bigger or smaller?
 
-4. If I wanted to keep the graph of the function the same, but move it to the 
+4. If I wanted to keep the graph of the function the same, but move it to the
    right or left, as well as up or down, then how should I change the function?
