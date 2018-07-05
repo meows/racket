@@ -70,6 +70,8 @@
     "lambda": "lambda",
     "lists": "lists",
     "Lists": "Lists",
+    "math-test": "Linear Sequences",
+    "Linear Sequences": "Linear Sequences",
     "Operators": "Operators",
     "racket-intro": "Dive into Racket",
     "Intro": "Intro",
@@ -79,7 +81,6 @@
     "reversal": "reversal",
     "Undoing what you did": "Undoing what you did",
     "sequence-linear": "Linear Sequences",
-    "Linear Sequences": "Linear Sequences",
     "sequence": "sequence",
     "Sequences": "Sequences",
     "setup": "setup",
@@ -97,7 +98,8 @@
     "Concepts": "Concepts",
     "Language Guide": "Language Guide",
     "Getting Started": "Getting Started",
-    "Getting Warmer": "Getting Warmer"
+    "Getting Warmer": "Getting Warmer",
+    "Test": "Test"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

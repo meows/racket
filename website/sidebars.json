@@ -44,6 +44,9 @@
          "challenge-10",
          "challenge-11",
          "challenge-12"
+      ],
+      "Test": [
+         "math-test"
       ]
    }
 }
