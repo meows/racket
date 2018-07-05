@@ -162,10 +162,14 @@ is `f(n) = an + b`, where `a` and `b` are constants that I've hidden from you.
 2. What would happen to the graph as I make `a` bigger or smaller? What happens
    when `a` is positive vs negative?
 
-3. What would happen to the graph as I make `b` bigger or smaller?
+3. If I were to create a sequence of numbers from `f` starting from `f(0)`, what
+   do you expect to happen as you make `a` bigger or smaller? What happens when
+   `a` is negative?
+
+4. What would happen to the graph as I make `b` bigger or smaller?
+
+5. If I were to create a sequence of numbers from `f` starting from `f(0)`, what
+   do you expect to happen as you make `b` bigger or smaller?
 
 4. If I wanted to keep the graph of the function the same, but move it to the
    right or left, as well as up or down, then how should I change the function?
-
-5. Can you give an argument or some evidence about why you expect `b` to do what
-   it does?
