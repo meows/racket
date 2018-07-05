@@ -115,7 +115,8 @@ moving car, where `seconds` represents the time passed since we started
 measuring, and `meters` represents the distance the car traveled based on the
 time.
 
-Write a function which can represent the graph.
+Write a function called `meters` to represent this graph, and let it take a
+natural input `s` for seconds.
 
 ![test-2.png](/img/test-2.png)
 
@@ -124,7 +125,8 @@ moving car, where `seconds` represents the time passed since we started
 measuring, and `meters` represents the distance the car traveled based on the
 time.
 
-Write a function which can represent the graph.
+Write a function called `meters` to represent this graph, and let it take a
+natural input `s` for seconds.
 
 ![test-1.png](/img/test-1.png)
 
