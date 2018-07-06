@@ -105,7 +105,12 @@
 ;; Numerical Series
 
 ; natural → natural (nth fibonacci number)
-(fn (fib n) (if (<= n 2) 1 (+ (fib (- n 1)) (fib (- n 2)))))
+(fn (fib n) 
+    (if (or (zero? n) (one? n))
+        n
+        (+ (fib (- n 1))
+           (fib (- n 2))))
+)
 
 ; natural → natural (cycles of collatz)
 (fn (collatz [n 0] #:index [i 0])
