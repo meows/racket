@@ -17,7 +17,8 @@
         (if (zero? n)
             i
             (loop (quotient n b) #:index (++ i))))
-    (if (zero? n) 1 (loop n)))
+    (if (zero? n) 1 (loop n))
+)
 
 (fn number-length (λ~> number->string string-length))
 (fn char->number  (λ~> char->integer (+ -48)))
@@ -55,7 +56,8 @@
             result
             (let-values ([(quo rem) (quotient/remainder n base)])
                         (loop quo #:result (cons rem result)))))
-    (if (zero? n) '(0) (loop n)))
+    (if (zero? n) '(0) (loop n))
+)
 
 ; natural → list <natural>
 (fn (N->list num #:base [base 10])
