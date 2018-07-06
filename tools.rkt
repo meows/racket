@@ -107,9 +107,9 @@
 
 ; natural → natural (cycles of collatz)
 (fn (collatz [n 0] #:index [i 0])
-    (cond [(one? n)  i]
+    (cond [(one? n) i]
           [(even? n) (collatz (/ n 2) #:index (++ i))]
-          [else      (collatz (+ 1 (* 3 n)) #:index (++ i))])
+          [else (collatz (+ 1 (* 3 n)) #:index (++ i))])
 )
 
 (fn (collatz-list n)
@@ -117,7 +117,8 @@
         (if (even? n) 
             (* 1/2 n)
             (+ 1 (* 3 n))))
-    (unfold one? identity next n list))
+    (unfold one? identity next n list)
+)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Graphing
@@ -165,11 +166,11 @@
           #:y-label "meters"))
 
 ; quadratic :: (a b c) → ((x) → ax^2 + bx + c)
-(fn (quadratic #:a [a 1]
-               #:b [b 0]
+(fn (quadratic #:a [a 1] 
+               #:b [b 0] 
                #:c [c 0])
-    (λ (x) (+ (* a x x)
-              (* b x)
+    (λ (x) (+ (* a x x) 
+              (* b x) 
               c))
 )
 
