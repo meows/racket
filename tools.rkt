@@ -69,10 +69,9 @@
 ;    (map -
 ;        (rest ints)
 ;        (drop-right ints 1)))
-
 (fn (diff ints)
-    (for/list ([n0 ints] [n1 (rest ints)])
-              (- n1 n0)))
+    (for/list ([s ints] [s++ (rest ints)])
+              (- s++ s)))
 
 ; list <natural> → history <list[natural]>
 (fn (differ nats)
