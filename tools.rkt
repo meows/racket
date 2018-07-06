@@ -20,13 +20,13 @@
     (if (zero? n) 1 (loop n)))
 
 (fn number-length (λ~> number->string string-length))
-(fn char->number (λ~> char->integer (+ -48)))
+(fn char->number  (λ~> char->integer (+ -48)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Boolean
 
-(fn unequal? (compose not equal?))
-(fn one? (curry = 1))
+(fn unequal?   (compose not equal?))
+(fn one?       (curry = 1))
 (fn unnatural? (compose not natural?))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -65,10 +65,6 @@
                   num))
 
 ; list <integer> → list <integer>
-;(fn (diff ints)
-;    (map -
-;        (rest ints)
-;        (drop-right ints 1)))
 (fn (diff ints)
     (for/list ([s ints] [s++ (rest ints)])
               (- s++ s)))
