@@ -63,3 +63,6 @@ changes, and it's written as `3 m/s`, or 3 meters per second.
 * at 5 seconds the car was 15 meters away
 * at 6 seconds the car was 18 meters away
 * at 7 seconds the car was 21 meters away
+
+## Lines, Angles, and Velocity
+
