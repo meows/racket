@@ -38,8 +38,6 @@ moving car, using a device that detects how far things are from me. The
 `0` meaning the start of my records. The `meters` column represents the readings 
 on my distance device, with `0` meaning the car was zero meters away from me.
 
-Therefore, at 5 seconds the car was 15 meters away.
-
 seconds | meters | ratio
 ------- | ------ | --------------
 0       | 0      | undefined
@@ -59,7 +57,9 @@ Here's a graph of the sequence:
 ![(line-0-3)](/img/(line-0-3).png)
 
 As we look from any one second to the next, we can see that the distance always 
-changes every time by 3 meters, so we say that the velocity of the car is 3 
-meters per second, or `3 m/s`. This means that for every second you go, we 
-expect you to move 3 meters, and therefore 20 seconds means 60 meters of travel.
+changes every time by 3 meters, so in this case we know that the velocity never
+changes, and it's written as `3 m/s`, or 3 meters per second.
 
+* at 5 seconds the car was 15 meters away
+* at 6 seconds the car was 18 meters away
+* at 7 seconds the car was 21 meters away
