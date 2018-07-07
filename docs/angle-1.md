@@ -52,17 +52,40 @@ seconds | meters | ratio
 9       | 27     | 27:9
 10      | 30     | 30:10
 
-Here's a graph of the sequence:
-
 ![(line-0-3)](/img/(line-0-3).png)
 
-As we look from any one second to the next, we can see that the distance always 
-changes every time by 3 meters, so in this case we know that the velocity never
-changes, and it's written as `3 m/s`, or 3 meters per second.
-
-* at 5 seconds the car was 15 meters away
-* at 6 seconds the car was 18 meters away
-* at 7 seconds the car was 21 meters away
+As we look from any one second to the next we can see that the distance always 
+changes every time by 3 meters. We can also say that the ratio of `meters` to
+`seconds` always stays at `3`, and that's why we can summarize the velocity of a
+car by saying something like `3 m/s`, or 3 meters per second.
 
 ## Lines, Angles, and Velocity
 
+By now we should be comfortable with the idea that:
+
+* the function `f(x) = ax + b` can be used to represent any linear sequence. 
+* linear sequences can be defined entirely by two things, a starting position 
+  and a velocity. 
+* for the function `f`, we should recognize that `a` controls velocity and that 
+  `b` controls starting position `f(0)`.
+* when you graph `f`, velocity `a` controls the tilt of the line, and starting
+  position `b` keeps the graph the same but moves it up or down.
+
+Visually or geometrically speaking, the tilt of a line is another way of saying
+how big the angle is between that line and the `x` axis, and therefore we can
+represent any velocity as an angle.
+
+For example, the `same` function can be defined as `same(x) = x`, and visually
+speaking it cuts a 90°-degree corner of a graph in half, and half of 90° is 45°.
+Thus the `same` function has a velocity of 45° degrees, or 1/4 π radians.
+
+What about the `negative` function, which can be defined as `negative(x) = -x`?
+Well that's the same as -1/4 π, or -45°.
+
+Normally when we measure angles, we measure counterclockwise. 45° degrees or
+1/4 π radians means to rotate a line counterclockwise by that much, which in 
+this case is 1/8 of a full circle. A negative sign on an angle would just mean
+to rotate by the same amount _but clockwise_.
+
+Note that rotating a line by a half circle forward is the same as rotating it by
+a half circle backward.
