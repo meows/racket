@@ -60,7 +60,6 @@ moving car, using a device that detects how far things are from me. The
 <code>seconds</code> column represents the time in seconds according to my stopwatch, with
 <code>0</code> meaning the start of my records. The <code>meters</code> column represents the readings
 on my distance device, with <code>0</code> meaning the car was zero meters away from me.</p>
-<p>Therefore, at 5 seconds the car was 15 meters away.</p>
 <table>
 <thead>
 <tr><th>seconds</th><th>meters</th><th>ratio</th></tr>
@@ -79,10 +78,20 @@ on my distance device, with <code>0</code> meaning the car was zero meters away 
 <tr><td>10</td><td>30</td><td>30:10</td></tr>
 </tbody>
 </table>
-<p>Here's a graph of the sequence:</p>
 <p><img src="/img/(line-0-3).png" alt="(line-0-3)"></p>
-<p>As we look from any one second to the next, we can see that the distance always
-changes every time by 3 meters, so we say that the velocity of the car is 3
-meters per second, or <code>3 m/s</code>. This means that for every second you go, we
-expect you to move 3 meters, and therefore 20 seconds means 60 meters of travel.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sequence-linear">← Linear Sequences</a><a class="docs-next button" href="/docs/racket-intro">Dive into Racket →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#why-define-angle-with-circles">Why define angle with circles?</a></li><li><a href="#velocity">Velocity</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<p>As we look from any one second to the next we can see that the distance always
+changes every time by 3 meters. We can also say that the ratio of <code>meters</code> to
+<code>seconds</code> always stays at <code>3</code>, and that's why we can summarize the velocity of a
+car by saying something like <code>3 m/s</code>, or 3 meters per second.</p>
+<h2><a class="anchor" aria-hidden="true" id="lines-angles-and-velocity"></a><a href="#lines-angles-and-velocity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lines, Angles, and Velocity</h2>
+<p>By now we should be comfortable with the idea that:</p>
+<ul>
+<li>the function <code>f(x) = ax + b</code> can be used to represent any linear sequence.</li>
+<li>linear sequences can be defined entirely by two things, a starting position
+and a velocity.</li>
+<li>for the function <code>f</code>, we should recognize that <code>a</code> controls velocity and that
+<code>b</code> controls starting position <code>f(0)</code>.</li>
+<li>when you graph <code>f</code>, velocity <code>a</code> controls the tilt of the line, and starting
+position <code>b</code> keeps the graph the same but moves it up or down.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sequence-linear">← Linear Sequences</a><a class="docs-next button" href="/docs/racket-intro">Dive into Racket →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#why-define-angle-with-circles">Why define angle with circles?</a></li><li><a href="#velocity">Velocity</a></li><li><a href="#lines-angles-and-velocity">Lines, Angles, and Velocity</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
