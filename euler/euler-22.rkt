@@ -5,6 +5,10 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 
+(fn sum (curry apply +))
+(fn ++ add1)
+(fn unequal? (compose not equal?))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
 ;; Problem 22
@@ -19,24 +23,24 @@
 (fn letters->naturals (curry map (curry hash-ref uid)))
 
 (fn (word->letters word) (map string (string->list word)))
-(fn sum (curry apply +))
-(fn name->value
-    (λ~> string-downcase 
-         word->letters 
-         letters->naturals 
-         sum))
 
-(fn ++ add1)
-(fn unequal? (compose not equal?))
+(fn name->value
+    (λ~> string-downcase
+         word->letters
+         letters->naturals
+         sum)
+)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(def names 
-    (sort (filter (cut unequal? <> ",")) (string-split data "\"")) string<?))
+(def names
+    (sort (filter (cut unequal? <> ",") (string-split data "\""))
+          string<?)
+)
 
-(def euler 
+(def euler
     (for/fold ([i 1] [sum 0] #:result sum)
               ([n names])
-              (values (++ i) (+ sum (* i (name->value n))))
-))
+              (values (++ i) (+ sum (* i (name->value n)))))
+)

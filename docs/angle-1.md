@@ -7,8 +7,6 @@ sidebar_label: Velocity
 
 # Angles and Velocity
 
-> WIP: Don't use.
-
 We previously learned that an angle is like asking how far you want to walk 
 along a circle. You may have also heard before that an angle is what happens 
 when two lines intersect.

@@ -5,8 +5,6 @@ title: Linear Sequences
 hide_title: true
 ---
 
-> WIP: Don't use.
-
 # Linear Sequences
 
 We have seen sequences before like these:
@@ -24,11 +22,11 @@ were to graph these points and connect them, they would look like a straight
 line.
 
 A function for any linear sequence can be defined with just two facts:
-   1. A starting value for the position `p0`.
+   1. A starting value for the position `p`.
    2. A velocity `v`.
 
-In math, it might be written like: `f(n) = v*n + p0`, while In Racket, it 
-would look like:
+In math, it might be written like: `f(x) = vx + p`, while In Racket, it would 
+look like:
 
 ``` scheme
 ; p0 -- value of position 0
@@ -36,7 +34,8 @@ would look like:
 ; n  -- the nth sequence item desired
 (define (line p0 v)
     (λ (n) 
-       (+ p0 (* n v)))
+       (+ p0 (* n v))
+    )
 )
 
 (map (line 2 3) (range 6)) ;; → '(2 5 8 11 14 17)
