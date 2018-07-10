@@ -68,21 +68,17 @@ sequences, so I'm going to show you examples first:</p>
 <li>the expression that will become the next value for your name-value pair.</li>
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="more-examples"></a><a href="#more-examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>More Examples</h2>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Finds if a number is divisible by 3 or 5, leaving no remainder.</span>
-(<span class="hljs-name">define</span> (<span class="hljs-name">div-by-3-or-5?</span> n)
-    (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">3</span>))
-        (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">5</span>))
+<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; Finds if a number is divisible by 3 or 5, leaving no remainder.</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">div-by-3-or-5?</span> n)
+    (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">remainder</span></span> n <span class="hljs-number">3</span>))
+        (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">remainder</span></span> n <span class="hljs-number">5</span>))
     )
 )
 
 <span class="hljs-comment">;; Find the sum of all numbers under 1000 that's divisible by either 3 or 5.</span>
-(<span class="hljs-name">for/fold</span> ([sum <span class="hljs-number">0</span>])                             <span class="hljs-comment">;; the sum or answer I'm slowly updating, step by step</span>
-          ([n (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">1000</span>)])                    <span class="hljs-comment">;; the sequence I'm running over, step by step</span>
+(<span class="hljs-name">for/fold</span> ([<span class="hljs-name">sum</span> <span class="hljs-number">0</span>])                             <span class="hljs-comment">;; the sum or answer I'm slowly updating, step by step</span>
+          ([<span class="hljs-name">n</span> (<span class="hljs-name">range</span> <span class="hljs-number">1000</span>)])                    <span class="hljs-comment">;; the sequence I'm running over, step by step</span>
           (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">div-by-3-or-5?</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum n) sum) <span class="hljs-comment">;; the next step of the sum or answer</span>
-)
-</code></pre>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">for/fold</span> ([sum <span class="hljs-number">0</span>])
-          (<span class="hljs-name">n</span> [range ])
 )
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="why-use-for-fold"></a><a href="#why-use-for-fold" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why use <code>for/fold</code>?</h2>
