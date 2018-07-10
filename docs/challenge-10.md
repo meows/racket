@@ -65,3 +65,4 @@ This is but one way to approach the problem.
 ```
 
 * [`even?`](https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29)
+* [recursion](recursion.md)

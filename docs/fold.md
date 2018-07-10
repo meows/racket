@@ -7,14 +7,12 @@ hide_title: true
 
 # `for/fold`
 
-> WIP: Don't use.
+## A few examples first
 
 `for/fold` is one of the hardest but most powerful functions there are over
 sequences, so I'm going to show you examples first.
 
-## A few examples
-
-### Example 1
+### Adding numbers
 
 This example of `for/fold` has 3 inputs inside:
   1. `([sum 0])`
@@ -29,7 +27,7 @@ This example of `for/fold` has 3 inputs inside:
 )
 ```
 
-#### In Plain English
+Now let's look inside the `for/fold`:
 
   1. Let there be a variable called `sum`, which we will initially set to `0`.
   2. For every nth sequence item `n` in the naturals `0..10`, update the current
@@ -38,7 +36,7 @@ This example of `for/fold` has 3 inputs inside:
 
 ---
 
-### Example 2
+### Factorial
 
 First we define a function `factorial` which accepts a natural `n`. Then we
 return whatever is the result of `for/fold`.
@@ -52,7 +50,7 @@ return whatever is the result of `for/fold`.
 )
 ```
 
-#### In Plain English
+Now let's look inside the `for/fold`:
 
   1. Let there be a variable called `product` initially set to `1`.
   2. For every nth sequence item `i` in the naturals `0..n`, update the current
@@ -62,7 +60,7 @@ return whatever is the result of `for/fold`.
 
 ---
 
-### Example 3
+### Triangle
 
 We first define a function `triangle` which accepts a natural `n` and returns 
 the result of `for/fold`.
@@ -76,16 +74,15 @@ the result of `for/fold`.
 )
 ```
 
-#### In Plain English
-
 Now let's look inside the `for/fold`:
+
   1. Let there be a variable called `sum` and let it be initially set to `0`.
   2. Let us assign the variable `i` at every step for every nth item in `0..n`.
   3. As we step through `0..n`, let the value of the next `sum` be `sum + i`.
 
 ---
 
-### Example 4
+### An old example
 
 This example should be very familiar to you, as it's one of the Project Euler
 problems you completed early on, but now we're trying to solve it with
@@ -112,7 +109,7 @@ divisible by either `3` or `5`.
 )
 ```
 
-#### In Plain English
+Now let's look inside the `for/fold`:
 
 1. Let there be a variable `sum` and let it be initially set to `0`.
 2. Let us walk, step by step over the sequence `0..999`, assigning the name `n`
@@ -124,6 +121,8 @@ divisible by either `3` or `5`.
      nothing to it.
 4. When we've stepped through every sequence item in `0..999`, we give back the
    updated `sum`.
+
+---
 
 ## Why use `for/fold`?
 
@@ -159,6 +158,7 @@ Now let's examine what happens inside `for/fold`:
    value of an empty list `(list)`.
 2. Let us step through every item `i` in the sequence `seq`.
 3. For every `i` in `seq`, add the result of `(fn i)` to `lst`.
+4. When we're done stepping through everything, return the updated `lst`.
 
 > Where did `fn` and `seq` come from? It came from when we defined our function
 > `myMap` and we accepted two inputs called `fn` and `seq`.
@@ -177,21 +177,4 @@ Now let's examine what happens inside `for/fold`:
 (myMap (line 3 0)  (range 5)) ;; → '(0 0 0 0 0)
 (myMap (line -3 3) (range 5)) ;; → '(-3 0 3 6 9)
 (myMap (line 3 -3) (range 5)) ;; → '(3 0 -3 -6 -9)
-```
-
-### `myFilter`
-
-We define a function `myFilter` which accepts two inputs, a boolean function
-`okay?` and a sequence `seq`.
-
-``` clojure
-(define (myFilter okay? seq)
-    (for/fold ([lst (list)])   ;; current list
-              ([i seq])        ;; the sequence we're running over
-              (if (okay? i)    ;; we check if every (okay? i) is true or false
-                  (cons i lst) ;; the new list if true
-                  lst          ;; the old list if false (do nothing)
-              )
-    )
-)
 ```
