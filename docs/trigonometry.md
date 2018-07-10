@@ -57,7 +57,7 @@ climbed for 10 miles. How much was his horizontal climb?
 
 ``` clojure
 ;; (* 10 0.5) → 5 miles
-(define height-of-ascent
+(define vertical-distance
    (* 10
       (sin (* 1/6 pi))
    )
@@ -89,7 +89,22 @@ laser, how much change would I find?
 2. `cosine(π/6) = adjacent / 10`
 3. `10 * cosine(π/6) = adjacent`
 
+``` clojure
+(define horizontal-distance
+   (* 10
+      (cos (* 1/6 pi))
+   )
+)
+```
+
 ## `tan` Tangent
 
 Finally we get to tangent, which is defined as the ratio of the opposite side
-`o` to the adjacent side `a`.
+`o` to the adjacent side `a`. 
+
+Let's consider the line segment below. Given this example, it can be visually
+easy to see how if you form a 
+
+![triangle](/img/test-2.png)
+
+You might say that the velocity of this line is 2.

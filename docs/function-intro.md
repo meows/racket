@@ -12,7 +12,7 @@ or a list of _one or more_ atoms with the first symbol as a function. To get
 used to how they work, let's look at how they're used first, and then we'll look
 at how to create our own functions.
 
-## Using Arithemtic Functions
+## Using Arithmetic Functions
 
 Here are some examples of *applying* or using a function, with functions you're
 probably already familiar with. See if you can understand what they do. Notice
