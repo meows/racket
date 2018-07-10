@@ -37,6 +37,7 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 ### Returning numbers
 
 ``` scheme
+;; number → number
 (define (total-bill price)
     (+ (* price 1.0725) ;; California sales tax 
        (* price 1.15)   ;; common tip amount
@@ -47,6 +48,7 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 ### Returning booleans
 
 ``` scheme
+;; number → boolean
 (define (div-by-3-or-5? n)
     (or (zero? (remainder n 3))
         (zero? (remainder n 5))
@@ -57,6 +59,7 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 ### Returning strings
 
 ``` racket
+;; boolean → string
 (define (say-hi? answer)
     (if (equal? answer #t)
         "Hi!"
@@ -75,6 +78,7 @@ function that we can later use.
 This function `move` takes a natural input `amount` and returns a function.
 
 ``` scheme
+;; number → function (number → number)
 (define (move amount) 
     (λ (x) (+ x amount))
 )
@@ -83,6 +87,7 @@ This function `move` takes a natural input `amount` and returns a function.
 This function `scale` takes a natural input `amount` and returns a function.
 
 ``` scheme
+;; number → function (number → number)
 (define (scale amount) 
     (λ (x) (* x amount))
 )
@@ -117,6 +122,7 @@ and a starting position `p0`, and returns a new function which can generate a
 linear sequence based the velocity and starting position of my choice.
 
 ``` scheme
+;; (number number) → function (number → number)
 (define (line p0 v)
     (λ ...)
 )

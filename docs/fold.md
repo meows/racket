@@ -82,7 +82,7 @@ Now let's look inside the `for/fold`:
 
 ---
 
-### An old example
+### Euler 1
 
 This example should be very familiar to you, as it's one of the Project Euler
 problems you completed early on, but now we're trying to solve it with
