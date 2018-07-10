@@ -62,7 +62,10 @@ sequences, so I'm going to show you examples first.</p>
 <code>sum</code> to be <code>sum + n</code>.</li>
 <li>When we bump into the end of the sequence, we give back the updated <code>sum</code>.</li>
 </ol>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h3>
+<p>First we define a function <code>factorial</code> which accepts a natural <code>n</code>. Then we
+return whatever is the result of <code>for/fold</code>.</p>
 <pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n)
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">product</span> <span class="hljs-number">1</span>])            <span class="hljs-comment">;; the current product</span>
               ([<span class="hljs-name">i</span> (<span class="hljs-name">range</span> <span class="hljs-number">1</span> (<span class="hljs-name">add1</span> n))]) <span class="hljs-comment">;; the sequence we're stepping over</span>
@@ -78,7 +81,10 @@ sequences, so I'm going to show you examples first.</p>
 <li>When we bump into the end of the sequence, we give back the updated
 <code>product</code>.</li>
 </ol>
+<hr>
 <h3><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h3>
+<p>We first define a function <code>triangle</code> which accepts a natural <code>n</code> and returns
+the result of <code>for/fold</code>.</p>
 <pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">triangle</span> n)
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">sum</span> <span class="hljs-number">0</span>])              <span class="hljs-comment">;; current sum</span>
               ([<span class="hljs-name">i</span> (<span class="hljs-name">range</span> (<span class="hljs-name">add1</span> n))]) <span class="hljs-comment">;; the sequence we're stepping over</span>
@@ -86,12 +92,12 @@ sequences, so I'm going to show you examples first.</p>
     )
 )
 </code></pre>
-<p>In all of these examples <code>for/fold</code> always takes in 3 inputs:</p>
+<h4><a class="anchor" aria-hidden="true" id="in-plain-english"></a><a href="#in-plain-english" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>In Plain English</h4>
+<p>Now let's look inside the <code>for/fold</code>:</p>
 <ol>
-<li>A variable name paired with an initial value, like <code>([sum 0])</code> or
-<code>([product 1])</code>.</li>
-<li>A variable name for every nth item in the sequence, such as <code>i</code> in <code>([i (range 5)])</code>.</li>
-<li>The expression that will update the next value of your variable.</li>
+<li>Let there be a variable called <code>sum</code> and let it be initially set to <code>0</code>.</li>
+<li>Let us assign the variable <code>i</code> at every step for every nth item in <code>0..n</code>.</li>
+<li>As we step through <code>0..n</code>, let the value of the next <code>sum</code> be <code>sum + i</code>.</li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 4</h3>
 <p>This example should be very familiar to you, as it's one of the Project Euler
@@ -107,6 +113,13 @@ divisible by either <code>3</code> or <code>5</code>.</p>
     )
 )
 </code></pre>
+<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Find the sum of all numbers under 1000 that's divisible by either 3 or 5.</span>
+(<span class="hljs-name">for/fold</span> ([sum <span class="hljs-number">0</span>])                             <span class="hljs-comment">;; the sum, updated step by step</span>
+          ([n (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">1000</span>)])                    <span class="hljs-comment">;; the sequence to run over</span>
+          (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">div-by-3-or-5?</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum n) sum) <span class="hljs-comment">;; the next step of the sum</span>
+)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="in-plain-english-1"></a><a href="#in-plain-english-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>In Plain English</h4>
 <ol>
 <li>Let there be a variable <code>sum</code> and let it be initially set to <code>0</code>.</li>
 <li>Let us walk, step by step over the sequence <code>0..999</code>, assigning the name <code>n</code>
@@ -121,28 +134,55 @@ nothing to it.</li>
 <li>When we've stepped through every sequence item in <code>0..999</code>, we give back the
 updated <code>sum</code>.</li>
 </ol>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Find the sum of all numbers under 1000 that's divisible by either 3 or 5.</span>
-(<span class="hljs-name">for/fold</span> ([sum <span class="hljs-number">0</span>])                             <span class="hljs-comment">;; the sum, updated step by step</span>
-          ([n (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">1000</span>)])                    <span class="hljs-comment">;; the sequence to run over</span>
-          (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">div-by-3-or-5?</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum n) sum) <span class="hljs-comment">;; the next step of the sum</span>
-)
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="why-use-for-fold"></a><a href="#why-use-for-fold" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why use <code>for/fold</code>?</h2>
 <p><code>for/fold</code> is a tool for doing just about <em>anything</em> you want to a sequence.
 Lists are sequential, strings are sequential, and you'll learn about more
 sequential things later on.</p>
 <p><code>for/fold</code> is so flexible that if you wanted, you could replicate the power of
 <code>map</code> or <code>filter</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="mymap"></a><a href="#mymap" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>myMap</code></h3>
+<p><code>map</code> is a function which consumes two inputs, a function and a list, so if we
+were to write our own <code>myMap</code>, our function should also take two inputs, a
+function <code>fn</code> and a sequence <code>seq</code>.</p>
 <pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">myMap</span> fn seq)
     (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])    <span class="hljs-comment">;; current list</span>
               ([<span class="hljs-name">i</span> seq])         <span class="hljs-comment">;; the sequence we're running over</span>
-              (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name">fn</span> i) lst) <span class="hljs-comment">;; the new list</span>
+              (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> (<span class="hljs-name">fn</span> i) lst) <span class="hljs-comment">;; the next list</span>
+    )
+)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="in-plain-english-2"></a><a href="#in-plain-english-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>In Plain English</h4>
+<p>First we define a function <code>myMap</code> which takes for input a function <code>fn</code> and a
+sequence <code>seq</code>. This function will return whatever is the result of <code>for/fold</code>.
+Now let's examine what happens inside <code>for/fold</code>:</p>
+<ol>
+<li>Let there be a variable called <code>lst</code>, and let it be initially set to the
+value of an empty list <code>(list)</code>.</li>
+<li>Let us step through every item <code>i</code> in the sequence <code>seq</code>.</li>
+<li>For every <code>i</code> in <code>seq</code>, add the result of <code>(fn i)</code> to <code>lst</code>.</li>
+</ol>
+<blockquote>
+<p>Where did <code>fn</code> and <code>seq</code> come from? It came from when we defined our function
+<code>myMap</code> and we accepted two inputs called <code>fn</code> and <code>seq</code>.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="using-mymap"></a><a href="#using-mymap" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using <code>myMap</code></h4>
+<pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">line</span> p0 v)
+    (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>)
+       (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x v))
     )
 )
 
-(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">myFilter</span> okay? seq)
-    (<span class="hljs-name">for/fold</span> ([<span class="hljs-name">lst</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])   <span class="hljs-comment">;; current list</span>
-              ([<span class="hljs-name">i</span> seq])        <span class="hljs-comment">;; the sequence we're running over</span>
+(<span class="hljs-name">myMap</span> sqr         (<span class="hljs-name">range</span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → '(0 1 4 9 16)</span>
+(<span class="hljs-name">myMap</span> add1        (<span class="hljs-name">range</span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → '(1 2 3 4 5)</span>
+(<span class="hljs-name">myMap</span> (<span class="hljs-name">line</span> <span class="hljs-number">-3</span> <span class="hljs-number">3</span>) (<span class="hljs-name">range</span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → '(-3 0  3  6  9)</span>
+(<span class="hljs-name">myMap</span> (<span class="hljs-name">line</span> <span class="hljs-number">3</span> <span class="hljs-number">-3</span>) (<span class="hljs-name">range</span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → '( 3 0 -3 -6 -9)</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="myfilter"></a><a href="#myfilter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>myFilter</code></h3>
+<p>We define a function <code>myFilter</code> which accepts two inputs, a boolean function
+<code>okay?</code> and a sequence <code>seq</code>.</p>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">myFilter</span> okay? seq)
+    (<span class="hljs-name">for/fold</span> ([lst (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)])   <span class="hljs-comment">;; current list</span>
+              ([i seq])        <span class="hljs-comment">;; the sequence we're running over</span>
               (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">okay?</span> i)    <span class="hljs-comment">;; we check if every (okay? i) is true or false</span>
                   (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> i lst) <span class="hljs-comment">;; the new list if true</span>
                   lst          <span class="hljs-comment">;; the old list if false (do nothing)</span>
@@ -150,4 +190,4 @@ sequential things later on.</p>
     )
 )
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/function-higher">← Making Many Functions</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-few-examples">A few examples</a><ul class="toc-headings"><li><a href="#example-1">Example 1</a></li><li><a href="#example-2">Example 2</a></li><li><a href="#example-3">Example 3</a></li><li><a href="#example-4">Example 4</a></li></ul></li><li><a href="#why-use-for-fold">Why use <code>for/fold</code>?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/function-higher">← Making Many Functions</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-few-examples">A few examples</a><ul class="toc-headings"><li><a href="#example-1">Example 1</a></li><li><a href="#example-2">Example 2</a></li><li><a href="#example-3">Example 3</a></li><li><a href="#example-4">Example 4</a></li></ul></li><li><a href="#why-use-for-fold">Why use <code>for/fold</code>?</a><ul class="toc-headings"><li><a href="#mymap"><code>myMap</code></a></li><li><a href="#myfilter"><code>myFilter</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
