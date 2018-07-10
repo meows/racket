@@ -174,6 +174,10 @@ is `f(n) = an + b`, where `a` and `b` are constants that I've hidden from you.
 6. If I wanted to keep the graph of the function the same, but move it to the
    right or left, as well as up or down, then how should I change the function?
 
+---
+
 Let's say I have a graph on a function where the horizontal axis represents the
 inputs, and the veritcal axis represents the outputs. Would you ever expect a
 vertical line? How would you interpret that?
+
+How might ratio and velocity be related?

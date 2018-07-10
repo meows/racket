@@ -42,10 +42,19 @@ like:
 
 ``` clojure
 ; π/6 is 30°, and in a 30-60-90 triangle, the hypotenuse is double the length of
-; one of the sides.
+; the shortest side.
 (sin (* 1/6 pi)) ;; → 1/2
 
 (define π pi)
+```
+
+### Example Problem
+
+Jeff walked up a steep slope with an average of 30 degrees in incline, and he 
+climbed for 10 miles. How far up did he go in miles?
+
+``` clojure
+(sin (* 1/6 pi)) ;; 30 degrees is the same as 1/6 pi
 ```
 
 ## `cos` Cosine
@@ -55,3 +64,5 @@ of an angle can tell you its "length".
 
 ## `tan` Tangent
 
+Finally we get to tangent, which is defined as the ratio of the opposite side 
+`o` to the adjacent side `a`.
