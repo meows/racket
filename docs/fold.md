@@ -165,6 +165,9 @@ Now let's examine what happens inside `for/fold`:
 
 #### Using `myMap`
 
+If you're feeling a little rusty about the idea of returning functions, you 
+might want to check out the section on [Making Many Functions](function-higher.md).
+
 ``` scheme
 (define (line p0 v)
     (λ (x)
