@@ -39,6 +39,7 @@ There's a function `f` which accepts for input a natural `n`, and its definition
 is:   
    1. `f(0) = 4`
    2. `f(n) = f(n-1) + 3`
+
 - List the values of this function from `f(0)` to `f(5)`.
 - What is `f(100)`?
 - Does this sequence have a constant or changing velocity?

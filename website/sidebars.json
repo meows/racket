@@ -11,7 +11,8 @@
          "circles",
          "angle",
          "sequence-linear",
-         "velocity"
+         "velocity",
+         "trigonometry"
       ],
       "Language Guide": [
          "racket-intro",
