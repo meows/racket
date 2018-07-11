@@ -52,6 +52,7 @@
 <url> <loc>https://rid.pw/docs/setup</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/setup" /> </url>
 <url> <loc>https://rid.pw/docs/skills</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/skills" /> </url>
 <url> <loc>https://rid.pw/docs/terms</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/terms" /> </url>
+<url> <loc>https://rid.pw/docs/vocab-test</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/vocab-test" /> </url>
 <url> <loc>https://rid.pw/docs/trigonometry</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/trigonometry" /> </url>
 <url> <loc>https://rid.pw/docs/values</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/values" /> </url>
 <url> <loc>https://rid.pw/docs/websites-0</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/websites-0" /> </url>
