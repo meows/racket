@@ -12,12 +12,17 @@ hide_title: true
 The Collatz Conjecture is a very interesting, old, and still unproven belief in
 mathematics. The Collatz function takes a natural input `n` and checks if it's
 odd or even. If it's odd, you triple `n` and add `1`. If it's even, you divide
-`n` by `2`.
+`n` by `2`:
 
 The strongly educated belief, or _conjecture_, is that if you keep doing this,
 all natural inputs to Collatz will eventually reach `1`.
 
 ## Problem
+
+Since we suspect all any input to the Collatz function to eventually reach `1`,
+it would be silly to ask you to simply write the function. So instead, we must
+write a version of the Collatz that counts the number of steps it takes to get
+to `1`.
 
 This `collatz` function below takes two natural inputs, `n` and `steps`, but 
 `steps` has a default input of `0`. Complete the function so that it can tell me

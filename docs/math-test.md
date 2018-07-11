@@ -172,9 +172,8 @@ is `f(n) = an + b`, where `a` and `b` are constants that I've hidden from you.
 5. If I were to create a sequence of numbers from `f` starting from `f(0)`, what
    do you expect to happen as you make `b` bigger or smaller?
 
-6. If I wanted to keep the graph of the function the same, but move it to the
-   right or left, as well as up or down, then how should I change the function?
-
+6. If I wanted to keep the velocity of the graph the same, but move it down 5
+   units, how would I do so?
 ---
 
 Let's say I have a graph on a function where the horizontal axis represents the

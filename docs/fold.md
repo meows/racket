@@ -101,7 +101,7 @@ divisible by either `3` or `5`.
 )
 ```
 
-``` clojure
+``` scheme
 ;; Find the sum of all numbers under 1000 that's divisible by either 3 or 5.
 (for/fold ([sum 0])                             ;; the sum, updated step by step
           ([n (range 1000)])                    ;; the sequence to run over
