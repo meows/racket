@@ -27,4 +27,5 @@
           (let ([log-id (log-identity (first t) (second t))])
                (if (< best log-id)
                    (values log-id (++ index) (++ index))
-                   (values best seen-at (++ index)))))
+                   (values best seen-at (++ index))))
+)
