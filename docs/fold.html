@@ -110,9 +110,9 @@ divisible by either <code>3</code> or <code>5</code>.</p>
     )
 )
 </code></pre>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Find the sum of all numbers under 1000 that's divisible by either 3 or 5.</span>
-(<span class="hljs-name">for/fold</span> ([sum <span class="hljs-number">0</span>])                             <span class="hljs-comment">;; the sum, updated step by step</span>
-          ([n (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">1000</span>)])                    <span class="hljs-comment">;; the sequence to run over</span>
+<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; Find the sum of all numbers under 1000 that's divisible by either 3 or 5.</span>
+(<span class="hljs-name">for/fold</span> ([<span class="hljs-name">sum</span> <span class="hljs-number">0</span>])                             <span class="hljs-comment">;; the sum, updated step by step</span>
+          ([<span class="hljs-name">n</span> (<span class="hljs-name">range</span> <span class="hljs-number">1000</span>)])                    <span class="hljs-comment">;; the sequence to run over</span>
           (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">div-by-3-or-5?</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> sum n) sum) <span class="hljs-comment">;; the next step of the sum</span>
 )
 </code></pre>
