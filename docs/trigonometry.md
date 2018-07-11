@@ -31,23 +31,29 @@ sine for special degrees, like:
 
 | function | input  | output
 | -------- | ------ | ------
-| `sin`    | `0π`   | 0
-| `sin`    | `1/2π` | 1
-| `sin`    | `1π`   | 0
+| `sin`    | `0π`   |  0
+| `sin`    | `1/2π` |  1
+| `sin`    | `1π`   |  0
 | `sin`    | `3/2π` | -1
-| `sin`    | `2π`   | 0
+| `sin`    | `2π`   |  0
 
-``` clojure
-; π/6 is 30°, and in a 30-60-90 triangle, the hypotenuse is double the length of
-; the shortest side.
-(sin (* 1/6 pi)) ;; → 1/2
+To predict these outputs, we need merely think about where the line would be on
+a circle for any given angle. For example, for 1/2 π radians, we might ask how
+far along the circle we are, and to do that we merely multiply any angle in
+radians by 1/2, which should get us 1/4. That means we're a quarterway around
+the circle.
 
-(define π pi)
-```
+If you can picture this in your head with the unit circle, then it should be
+easy to know that 1/2 π should give you 1, because we're at the very top of the
+unit circle, and `sin` can only tell you how high versus low you are.
+
+> A perhaps silly way to remember what the sine function does is to imagine that 
+> its abbreviation, `sin`, refers to a concept of evil behavior, and some people 
+> believe that sin makes you lower.
 
 ### Example Problem
 
-Jeff walked up a steep slope with an average of 30 degrees in incline, and he
+Jeff walked up a steep slope with an average of 30° degrees in incline, and he
 climbed for 10 miles. How much was his horizontal climb?
 
 1. `sine(θ) = opposite / hypotenuse`
@@ -66,7 +72,7 @@ climbed for 10 miles. How much was his horizontal climb?
 ## `cos` Cosine
 
 While the sine of an angle can tell you the "height" of a triangle, the cosine
-of an angle can tell you its "length".
+of an angle can tell you its "length" or horizontal distance.
 
 | function | input  | output
 | -------- | ------ | ------
@@ -78,7 +84,7 @@ of an angle can tell you its "length".
 
 ### Example Problem
 
-Jeff walked up a steep slope with an average of 30 degrees in incline, and he
+Jeff walked up a steep slope with an average of 30° degrees in incline, and he
 climbed for 10 miles. When he got there, he looked over a cliff and he shot a
 light beam straight down to the ground. If I were to measure the difference on 
 the ground between Jeff's original position and the new position of Jeff's 
@@ -113,7 +119,8 @@ the `tangent` function finds the ratio between the `vertical` side and the
 `horizontal` side, then `tangent(θ)` will tell you the velocity as a rational
 number.
 
-This graph below is about 63.43 degrees, which is about 1.107 radians. If you
-try the values with the `tan` function, it should return approximately 2.
+This graph below is about `63.43°` degrees, which is about `1.107 π` radians. 
+If you try the values with the `tan` function, it should return approximately 
+`2`.
 
 ![triangle](/img/test-2.png)

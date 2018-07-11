@@ -58,6 +58,10 @@ Now let's look inside the `for/fold`:
   3. When we bump into the end of the sequence, we give back the updated
      `product`.
 
+> Notice that in Step 2, we start from 1 and not 0 like most ranges. That's 
+> because we're trying to find a product, and multiplying by 0 destroys 
+> everything.
+
 ---
 
 ### Triangle
