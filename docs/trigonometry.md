@@ -12,11 +12,10 @@ hide_title: true
 > using English letters. Theta is the 8th letter in the Greek alphabet, and it's
 > often written in the lowercase as `θ`.
 
-The sine function consumes an angle `θ` for a right triangle and will tell you
-the ratio of the length of the hypotenuse `h` divided by length of the opposite
-side `o`.
+The function `sine` consumes an angle `θ` and will tell you the ratio of the 
+length of the hypotenuse divided by length of the opposite side.
 
-`sine(θ) = o / h`
+`sine(θ) = opposite / hypotenuse`
 
 If you consider that the sine or cosine of any `θ` has to be a point on the 
 circle, and you know that sine represents the "height", that allows you predict 
@@ -103,8 +102,18 @@ Finally we get to tangent, which is defined as the ratio of the opposite side
 `o` to the adjacent side `a`. 
 
 Let's consider the line segment below. Given this example, it can be visually
-easy to see how if you form a 
+easy to see how if we stop at any point in the line, say at `seconds(2)`,
+`seconds(4)`, or `seconds(10)`, we can then draw a perfectly straight vertical 
+line down to make a right angle with the `seconds` axis. We should now end up
+with a new right triangle.
+
+We should also be able to see that no matter where you draw that triangle, the
+ratio of the vertical side to the horizontal side should always be `2:1`. Since
+the `tangent` function finds the ratio between the `vertical` side and the
+`horizontal` side, then `tangent(θ)` will tell you the velocity as a rational
+number.
+
+This graph below is about 63.43 degrees, which is about 1.107 radians. If you
+try the values with the `tan` function, it should return approximately 2.
 
 ![triangle](/img/test-2.png)
-
-You might say that the velocity of this line is 2.

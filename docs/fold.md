@@ -53,7 +53,7 @@ return whatever is the result of `for/fold`.
 Now let's look inside the `for/fold`:
 
   1. Let there be a variable called `product` initially set to `1`.
-  2. For every nth sequence item `i` in the naturals `0..n`, update the current
+  2. For every nth sequence item `i` in the naturals `1..n`, update the current
      `product` to be `product * n`.
   3. When we bump into the end of the sequence, we give back the updated
      `product`.
