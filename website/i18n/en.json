@@ -67,6 +67,10 @@
     "Graphing": "Graphing",
     "intro": "intro",
     "A Journey": "A Journey",
+    "javascript-0": "javascript-0",
+    "JavaScript 0": "JavaScript 0",
+    "javascript-1": "javascript-1",
+    "JavaScript 1": "JavaScript 1",
     "lambda": "lambda",
     "lists": "lists",
     "Lists": "Lists",
@@ -102,6 +106,7 @@
     "Blog": "Blog",
     "Concepts": "Concepts",
     "Language Guide": "Language Guide",
+    "JavaScript": "JavaScript",
     "Getting Started": "Getting Started",
     "Getting Warmer": "Getting Warmer",
     "Test": "Test"
