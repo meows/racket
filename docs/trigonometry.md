@@ -6,8 +6,6 @@ hide_title: true
 
 ## `sin` Sine
 
-> WIP: Don't use yet!
-
 > People sometimes use `θ` to represent an angle because they want to avoid
 > using English letters. Theta is the 8th letter in the Greek alphabet, and it's
 > often written in the lowercase as `θ`.
@@ -74,13 +72,13 @@ climbed for 10 miles. How much was his horizontal climb?
 While the sine of an angle can tell you the "height" of a triangle, the cosine
 of an angle can tell you its "length" or horizontal distance.
 
-| function | input  | output
-| -------- | ------ | ------
-| `cos`    | `0π`   | 1
-| `cos`    | `1/2π` | 0
-| `cos`    | `1π`   | -1
-| `cos`    | `3/2π` | 0
-| `cos`    | `2π`   | 1
+function | input  | output
+-------- | ------ | ------
+`cos`    | `0π`   |  1
+`cos`    | `1/2π` |  0
+`cos`    | `1π`   | -1
+`cos`    | `3/2π` |  0
+`cos`    | `2π`   |  1
 
 ### Example Problem
 
