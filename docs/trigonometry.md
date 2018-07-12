@@ -29,13 +29,13 @@ sine for special degrees, like:
 (sin (* 2   pi))
 ```
 
-| function | input  | output
-| -------- | ------ | ------
-| `sin`    | `0π`   |  0
-| `sin`    | `1/2π` |  1
-| `sin`    | `1π`   |  0
-| `sin`    | `3/2π` | -1
-| `sin`    | `2π`   |  0
+function | input  | output
+-------- | ------ | ------
+`sin`    | `0π`   |  0
+`sin`    | `1/2π` |  1
+`sin`    | `1π`   |  0
+`sin`    | `3/2π` | -1
+`sin`    | `2π`   |  0
 
 To predict these outputs, we need merely think about where the line would be on
 a circle for any given angle. For example, for 1/2 π radians, we might ask how
