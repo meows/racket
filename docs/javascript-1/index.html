@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>javascript-1 · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# The types of information in JavaScript"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="javascript-1 · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="# The types of information in JavaScript"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-119533557-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function(){
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="the-types-of-information-in-javascript"></a><a href="#the-types-of-information-in-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The types of information in JavaScript</h1>
+<h2><a class="anchor" aria-hidden="true" id="defining-a-variable"></a><a href="#defining-a-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a variable</h2>
+<h3><a class="anchor" aria-hidden="true" id="let"></a><a href="#let" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>let</code></h3>
+<p><code>let</code> allows you to save information behind a variable name.</p>
+<pre><code class="hljs css languages- javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">10</span>
+<span class="hljs-keyword">let</span> y = -x
+
+x + y === <span class="hljs-number">0</span>  <span class="hljs-comment">// → true</span>
+y = <span class="hljs-number">10</span>       <span class="hljs-comment">// We can change the value behind a variable.</span>
+x + y === <span class="hljs-number">0</span>  <span class="hljs-comment">// → false</span>
+</code></pre>
+<blockquote>
+<p><code>===</code> allows you to compare whether two values are equal in JavaScript.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="const"></a><a href="#const" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>const</code></h3>
+<p><code>const</code> also allows you to define a constant, which means a variable that never
+changes. Once you assign a value with <code>const</code>, your program will encounter an
+error if you try to reassign another value to your constant.</p>
+<pre><code class="hljs css languages- javascript"><span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>
+<span class="hljs-keyword">const</span> y = -x
+
+x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → true</span>
+x = <span class="hljs-number">3</span>       <span class="hljs-comment">// → Error: Cannot re-assign a constant variable.</span>
+x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → true</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="defining-a-function"></a><a href="#defining-a-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a function</h2>
+<pre><code class="hljs css languages- javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">same</span>(<span class="hljs-params">x</span>) </span>{
+   <span class="hljs-keyword">return</span> x
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add1</span>(<span class="hljs-params">x</span>) </span>{
+   <span class="hljs-keyword">return</span> x + <span class="hljs-number">1</span>
+}
+
+<span class="hljs-comment">// An advanced example with a taste of what's ahead.</span>
+[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].map(same)  <span class="hljs-comment">// → [0, 1, 2, 3] </span>
+[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].map(add1)  <span class="hljs-comment">// → [1, 2, 3, 4]</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="using-functions"></a><a href="#using-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using functions</h3>
+<pre><code class="hljs css languages- javascript">same(<span class="hljs-number">3</span>)       <span class="hljs-comment">// → 3</span>
+add1(<span class="hljs-number">3</span>)       <span class="hljs-comment">// → 4</span>
+add1(add1(<span class="hljs-number">3</span>)) <span class="hljs-comment">// → 5</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="some-familiar-examples"></a><a href="#some-familiar-examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Some familiar examples</h3>
+<pre><code class="hljs css languages- javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fib</span>(<span class="hljs-params">n</span>) </span>{
+   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
+   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
+
+   <span class="hljs-keyword">return</span> fib(n<span class="hljs-number">-1</span>) + fib(n<span class="hljs-number">-2</span>)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factorial</span>(<span class="hljs-params">n</span>) </span>{
+   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
+   
+   <span class="hljs-keyword">return</span> n * factorial(n<span class="hljs-number">-1</span>)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">triangle</span>(<span class="hljs-params">n</span>) </span>{
+   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
+
+   <span class="hljs-keyword">return</span> n * triangle(n<span class="hljs-number">-1</span>)
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#defining-a-variable">Defining a variable</a><ul class="toc-headings"><li><a href="#let"><code>let</code></a></li><li><a href="#const"><code>const</code></a></li></ul></li><li><a href="#defining-a-function">Defining a function</a><ul class="toc-headings"><li><a href="#using-functions">Using functions</a></li><li><a href="#some-familiar-examples">Some familiar examples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>

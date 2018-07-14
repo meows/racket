@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>javascript-0 · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Introduction to JavaScript"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="javascript-0 · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="# Introduction to JavaScript"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-119533557-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function(){
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="introduction-to-javascript"></a><a href="#introduction-to-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction to JavaScript</h1>
+<p>JavaScript is one of the world's most popular languages, and it's what allows
+companies like Google to make interesting websites like Google Maps, Gmail,
+and other web &quot;apps&quot;. JavaScript is also showing up as phone apps, and on just
+about anything that's connected to the web.</p>
+<h2><a class="anchor" aria-hidden="true" id="there-s-a-hiccup"></a><a href="#there-s-a-hiccup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>There's a hiccup</h2>
+<p>Although JavaScript is a powerful programming language, just as powerful as any
+other, when JavaScript is run over the browser, such as when you visit a
+website, you are also required to learn 2 other very small languages, namely
+HTML and CSS. That may sound scary, but I assure you that those languages are
+very small, and that you only need to learn a small amount to get up and going.
+Most people don't learn these languages fully, and instead invest more time into
+JavaScript.</p>
+<h2><a class="anchor" aria-hidden="true" id="the-first-hiccup-is-html"></a><a href="#the-first-hiccup-is-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The first hiccup is HTML</h2>
+<p>When you visit a website, such as this one, you might see some different things,
+such as information delivered as:</p>
+<ul>
+<li>text</li>
+<li>pictures</li>
+<li>sound</li>
+<li>video</li>
+</ul>
+<p>All information on a website is contained in HTML (with very few and silly
+exceptions). I'm going to show you a very long sample of HTML, but I think
+you'll somehow find it familiar.</p>
+<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+   <span class="hljs-comment">&lt;!-- HTML Comment: This text doesn't count as code, and is for
+         communicating with other humans. --&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript is one of the world's most popular languages, and it's
+         what allows companies like Google to make interesting websites like
+         Google Maps, Gmail, and other web "apps". JavaScript is also showing
+         up as phone apps, and on just about anything that's connected to the
+         web.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>There's a hiccup<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Although JavaScript is a powerful programming language, just as
+         powerful as any other, when JavaScript is run over the browser, such 
+         as when you visit a website, you are also required to learn 2 other 
+         very small languages, namely HTML and CSS. That may sound scary, but
+         I assure you that those languages are very small, and that you only
+         need to learn a small amount to get up and going. Most people don't
+         learn these languages fully, and instead invest more time into
+         JavaScript.
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>The first hiccup is HTML<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>When you visit a website, such as this one, you might see some 
+         different things, such as information delivered as:
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><span class="hljs-comment">&lt;!-- an unordered list --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>pictures<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>sound<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>video<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>All information on a website is contained in HTML. I'm going to show 
+         you a very long sample of HTML, but I think you'll somehow find it 
+         familiar:
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span><span class="hljs-comment">&lt;!-- To be brief, I won't include everything! --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#there-s-a-hiccup">There's a hiccup</a></li><li><a href="#the-first-hiccup-is-html">The first hiccup is HTML</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>

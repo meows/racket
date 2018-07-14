@@ -39,6 +39,8 @@
 <url> <loc>https://rid.pw/docs/geometric-0</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/geometric-0" /> </url>
 <url> <loc>https://rid.pw/docs/graphing</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/graphing" /> </url>
 <url> <loc>https://rid.pw/docs/intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/intro" /> </url>
+<url> <loc>https://rid.pw/docs/javascript-0</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/javascript-0" /> </url>
+<url> <loc>https://rid.pw/docs/javascript-1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/javascript-1" /> </url>
 <url> <loc>https://rid.pw/docs/lambda</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lambda" /> </url>
 <url> <loc>https://rid.pw/docs/lists</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lists" /> </url>
 <url> <loc>https://rid.pw/docs/math-test</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/math-test" /> </url>
