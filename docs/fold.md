@@ -181,7 +181,7 @@ might want to check out the section on [Making Many Functions](function-higher.m
 
 (myMap sqr         (range 5)) ;; → '(0 1 4 9 16)
 (myMap add1        (range 5)) ;; → '(1 2 3 4 5)
-(myMap (line 3 0)  (range 5)) ;; → '(0 0 0 0 0)
+(myMap (line 3 0)  (range 5)) ;; → '(3 3 3 3 3)
 (myMap (line -3 3) (range 5)) ;; → '(-3 0 3 6 9)
 (myMap (line 3 -3) (range 5)) ;; → '(3 0 -3 -6 -9)
 ```
