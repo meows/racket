@@ -49,7 +49,6 @@ another easy pattern we might be able to take advantage of?
 If we look carefully, we can see that except for the first item, every member in
 this sequence is the double of the previous number.
 
-
 * `f(0) = 2`
 * `f(n) = f(n - 1) * 2`
 
