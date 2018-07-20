@@ -12,7 +12,30 @@
             {"zIndex":100}
           )
         });
-        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="introduction-to-javascript"></a><a href="#introduction-to-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction to JavaScript</h1>
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>JavaScript</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul><li class="navListItem"><a class="navItem" href="/docs/intro">A Journey</a></li><li class="navListItem"><a class="navItem" href="/docs/sequence">Sequences</a></li><li class="navListItem"><a class="navItem" href="/docs/alphabet">Alphabet</a></li><li class="navListItem"><a class="navItem" href="/docs/atom">Atom</a></li><li class="navListItem"><a class="navItem" href="/docs/expression">Expression</a></li><li class="navListItem"><a class="navItem" href="/docs/values">Values</a></li><li class="navListItem"><a class="navItem" href="/docs/recursion">Recursion</a></li><li class="navListItem"><a class="navItem" href="/docs/circles">Circles</a></li><li class="navListItem"><a class="navItem" href="/docs/angle">Angles</a></li><li class="navListItem"><a class="navItem" href="/docs/sequence-linear">Linear Sequences</a></li><li class="navListItem"><a class="navItem" href="/docs/velocity">Velocity</a></li><li class="navListItem"><a class="navItem" href="/docs/trigonometry">Trigonometry</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Language Guide</h3><ul><li class="navListItem"><a class="navItem" href="/docs/racket-intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/function-intro">Using Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/arithmetic-advanced">Advanced Arithmetic</a></li><li class="navListItem"><a class="navItem" href="/docs/define">define</a></li><li class="navListItem"><a class="navItem" href="/docs/lambda">lambda</a></li><li class="navListItem"><a class="navItem" href="/docs/comparisons">Comparisons</a></li><li class="navListItem"><a class="navItem" href="/docs/conditionals">Conditionals</a></li><li class="navListItem"><a class="navItem" href="/docs/cond">cond</a></li><li class="navListItem"><a class="navItem" href="/docs/function-sequence">Functions on Lists</a></li><li class="navListItem"><a class="navItem" href="/docs/function-advanced">Advanced Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/function-higher">Making Many Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/fold">fold</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">JavaScript</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/javascript-0">JavaScript 0</a></li><li class="navListItem"><a class="navItem" href="/docs/javascript-1">JavaScript 1</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="introduction-to-javascript"></a><a href="#introduction-to-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction to JavaScript</h1>
 <p>JavaScript is one of the world's most popular languages, and it's what allows
 companies like Google to make interesting websites like Google Maps, Gmail,
 and other web &quot;apps&quot;. JavaScript is also showing up as phone apps, and on just
@@ -26,64 +49,141 @@ very small, and that you only need to learn a small amount to get up and going.
 Most people don't learn these languages fully, and instead invest more time into
 JavaScript.</p>
 <h2><a class="anchor" aria-hidden="true" id="the-first-hiccup-is-html"></a><a href="#the-first-hiccup-is-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The first hiccup is HTML</h2>
-<p>When you visit a website, such as this one, you might see some different things,
-such as information delivered as:</p>
+<p>When you visit a website such as this one, you might find all sorts of
+information delivered as:</p>
 <ul>
 <li>text</li>
 <li>pictures</li>
 <li>sound</li>
 <li>video</li>
 </ul>
-<p>All information on a website is contained in HTML (with very few and silly
-exceptions). I'm going to show you a very long sample of HTML, but I think
-you'll somehow find it familiar.</p>
+<h3><a class="anchor" aria-hidden="true" id="html-contains-with-tags"></a><a href="#html-contains-with-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML contains with tags</h3>
+<p>All information on a website is contained in HTML, and HTML uses pairs of tags
+to contain all information, like this:</p>
+<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+    Hi there, this text counts as information,
+    and everything is always contained by a pair of tags.
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre>
+<p>I'm going to show you a very long sample of HTML, but I think you'll somehow
+find it familiar. Don't worry if you don't understand everything, because we're
+just looking at it to get a feeling for it.</p>
 <pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-   <span class="hljs-comment">&lt;!-- HTML Comment: This text doesn't count as code, and is for
-         communicating with other humans. --&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript is one of the world's most popular languages, and it's
-         what allows companies like Google to make interesting websites like
-         Google Maps, Gmail, and other web "apps". JavaScript is also showing
-         up as phone apps, and on just about anything that's connected to the
-         web.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>There's a hiccup<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Although JavaScript is a powerful programming language, just as
-         powerful as any other, when JavaScript is run over the browser, such 
-         as when you visit a website, you are also required to learn 2 other 
-         very small languages, namely HTML and CSS. That may sound scary, but
-         I assure you that those languages are very small, and that you only
-         need to learn a small amount to get up and going. Most people don't
-         learn these languages fully, and instead invest more time into
-         JavaScript.
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>The first hiccup is HTML<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>When you visit a website, such as this one, you might see some 
-         different things, such as information delivered as:
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><span class="hljs-comment">&lt;!-- an unordered list --&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>pictures<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>sound<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>video<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>All information on a website is contained in HTML. I'm going to show 
-         you a very long sample of HTML, but I think you'll somehow find it 
-         familiar:
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span><span class="hljs-comment">&lt;!-- To be brief, I won't include everything! --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
-   <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+       <span class="hljs-comment">&lt;!-- HTML Comment: This text doesn't count as code, and is for
+             communicating with other humans. --&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript is one of the world's most popular languages, and it's
+             what allows companies like Google to make interesting websites like
+             Google Maps, Gmail, and other web "apps". JavaScript is also showing
+             up as phone apps, and on just about anything that's connected to the
+             web.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+       <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>There's a hiccup<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Although JavaScript is a powerful programming language, just as
+             powerful as any other, when JavaScript is run over the browser, such
+             as when you visit a website, you are also required to learn 2 other
+             very small languages, namely HTML and CSS. That may sound scary, but
+             I assure you that those languages are very small, and that you only
+             need to learn a small amount to get up and going. Most people don't
+             learn these languages fully, and instead invest more time into
+             JavaScript.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+       <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>The first hiccup is HTML<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>When you visit a website, such as this one, you might see some
+             different things, such as information delivered as:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><span class="hljs-comment">&lt;!-- an unordered list --&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>text<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>pictures<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>sound<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>video<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>All information on a website is contained in HTML. I'm going to show
+             you a very long sample of HTML, but I think you'll somehow find it
+             familiar:<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span><span class="hljs-comment">&lt;!-- To be brief, I won't include everything! --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span>
+       <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#there-s-a-hiccup">There's a hiccup</a></li><li><a href="#the-first-hiccup-is-html">The first hiccup is HTML</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="the-second-hiccup-is-css"></a><a href="#the-second-hiccup-is-css" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The second hiccup is CSS</h2>
+<p>When you look at some of the things on a website, even something as plain as the
+text, you might notice that it might look nice and perhaps even colorful. This
+has nothing to do with HTML, as HTML is only responsible for containing all the
+information on your website between enlosing brackets.</p>
+<p>I won't be showing you too much CSS for now, but here's a little bit just to see
+how it looks like:</p>
+<pre><code class="hljs css languages- css"><span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">font</span>: sans-serif;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.3em</span>;
+}
+<span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">font</span>: serif;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+}
+</code></pre>
+<p>CSS code cannot work by itself. Instead, when your browser downloads this CSS
+code, your browser looks for which bits of HTML to visually change. If we look
+at the first example we can see <code>article h1</code>, followed by some brackets with
+things inside.</p>
+<h3><a class="anchor" aria-hidden="true" id="selecting-what-you-want"></a><a href="#selecting-what-you-want" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selecting what you want</h3>
+<p>The <code>article h1</code> is how your browser knows what bit of HTML to change. In this
+case, your browser will try to find any bit of HTML that has an <code>article</code> tag
+with another <code>h1</code> tag inside of it.</p>
+<p>In our case, there's only one situation where we can find an <code>article</code> tag with
+another <code>h1</code> tag inside of it, and so these are the only parts of HTML that our
+browser will visually change using our CSS rules.</p>
+<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript is one of the world's most popular languages, and it's
+        what allows companies like Google to make interesting websites like
+        Google Maps, Gmail, and other web "apps". JavaScript is also showing
+        up as phone apps, and on just about anything that's connected to the
+        web.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="the-third-hiccup-is-javascript"></a><a href="#the-third-hiccup-is-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The third hiccup is JavaScript</h2>
+<p>Finally we get to the power of JavaScript, which is the most powerful piece of
+the puzzle by far. JavaScript has the power to change the HTML and CSS on a
+website, and it can also save things on your computer (with permission).</p>
+<p>Here are some sample bits of JavaScript:</p>
+<pre><code class="hljs css languages- javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fibonacci</span>(<span class="hljs-params">n</span>) </span>{
+    <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
+    <span class="hljs-keyword">if</span> (n === <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
+    <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> fibonacci(n - <span class="hljs-number">1</span>) + fibonacci(n - <span class="hljs-number">2</span>)
+    }
+}
+
+fibonacci(<span class="hljs-number">10</span>) <span class="hljs-comment">// → 55</span>
+</code></pre>
+<p>Which should be familiar to us from our prior challenge problems:</p>
+<pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">fibonacci</span> n)
+    (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">0</span>) <span class="hljs-number">0</span>]
+          [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">1</span>) <span class="hljs-number">1</span>]
+          [<span class="hljs-name"><span class="hljs-builtin-name">else</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">fibonacci</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))
+                   (<span class="hljs-name">fibonacci</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">2</span>)))]
+    )
+)
+
+(<span class="hljs-name">fibonacci</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → 55</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
+<ul>
+<li><p>JavaScript is a powerful language that can run in many places, but when it's
+on the web, it uses HTML and CSS together to make a website.</p></li>
+<li><p>HTML is a language that is used to contain and organize all the information on
+your website into &quot;tags&quot; that look like this: <code>&lt;html&gt;information&lt;/html&gt;</code>.</p></li>
+<li><p>CSS is a language that can change how HTML looks on your website by targetting
+pieces of your HTML.</p></li>
+<li><p>JavaScript can change anything on your website, including the HTML and CSS,
+making it extra powerful.</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fold">← fold</a><a class="docs-next button" href="/docs/javascript-1">javascript-1 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#there-s-a-hiccup">There's a hiccup</a></li><li><a href="#the-first-hiccup-is-html">The first hiccup is HTML</a><ul class="toc-headings"><li><a href="#html-contains-with-tags">HTML contains with tags</a></li></ul></li><li><a href="#the-second-hiccup-is-css">The second hiccup is CSS</a><ul class="toc-headings"><li><a href="#selecting-what-you-want">Selecting what you want</a></li></ul></li><li><a href="#the-third-hiccup-is-javascript">The third hiccup is JavaScript</a></li><li><a href="#summary">Summary</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
