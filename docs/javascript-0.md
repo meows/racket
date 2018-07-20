@@ -153,3 +153,13 @@ and anything you can do on computers you can do on algebra. That's not generally
 the case with HTML and CSS, which is why most people don't consider these to be
 programming languges.
 
+## Summary
+
+* JavaScript is a powerful language that can run in many places, but when it's
+  on the web, it uses HTML and CSS together to make a website.
+
+* HTML is a language that is used to contain and organize all the information on
+  your website into "tags" that look like `<html>random information</html>`.
+
+* CSS is a language that can change how HTML looks on your website by targetting
+  pieces of your HTML
