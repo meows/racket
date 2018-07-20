@@ -143,15 +143,36 @@ browser will visually change using our CSS rules.
 ## The third hiccup is JavaScript
 
 Finally we get to the power of JavaScript, which is the most powerful piece of
-the puzzle by far. I will tell you this, but you shouldn't repeat it too much
-because people consider it mean, but many software engineers and computer 
-scientists don't consider HTML or CSS to be programming languages.
+the puzzle by far. JavaScript has the power to change the HTML and CSS on a 
+website, and it can also save things on your computer (with permission).
 
-I've mentioned before to you that all programming languages are equivalent to
-algebra, implying that anything you can do in algebra you can do on computers,
-and anything you can do on computers you can do on algebra. That's not generally
-the case with HTML and CSS, which is why most people don't consider these to be
-programming languges.
+Here are some sample bits of JavaScript:
+
+``` javascript
+function fibonacci(n) {
+    if (n === 0) { return 0 }
+    if (n === 1) { return 1 }
+    else {
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+
+fibonacci(5)
+```
+
+Which should be familiar to us from our prior challenge problems:
+
+``` clojure
+(define (fibonacci n)
+    (cond [(= n 0) 0]
+          [(= n 1) 1]
+          [else (+ (fibonacci (- n 1) 
+                   (fibonacci (- n 2))))]
+    )
+)
+
+(fibonacci 5)
+```
 
 ## Summary
 
@@ -159,7 +180,10 @@ programming languges.
   on the web, it uses HTML and CSS together to make a website.
 
 * HTML is a language that is used to contain and organize all the information on
-  your website into "tags" that look like `<html>random information</html>`.
+  your website into "tags" that look like this: `<html>information</html>`.
 
 * CSS is a language that can change how HTML looks on your website by targetting
-  pieces of your HTML
+  pieces of your HTML.
+
+* JavaScript can change anything on your website, including the HTML and CSS,
+  making it extra powerful.
