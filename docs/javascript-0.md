@@ -157,7 +157,7 @@ function fibonacci(n) {
     }
 }
 
-fibonacci(5)
+fibonacci(10) // → 55
 ```
 
 Which should be familiar to us from our prior challenge problems:
@@ -171,7 +171,7 @@ Which should be familiar to us from our prior challenge problems:
     )
 )
 
-(fibonacci 5)
+(fibonacci 10) ;; → 55
 ```
 
 ## Summary
