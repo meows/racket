@@ -12,9 +12,7 @@
          "angle",
          "sequence-linear",
          "velocity",
-         "trigonometry",
-         "javascript-0",
-         "javascript-1"
+         "trigonometry"
       ],
       "Language Guide": [
          "racket-intro",
@@ -29,6 +27,10 @@
          "function-advanced",
          "function-higher",
          "fold"
+      ],
+      "JavaScript": [
+         "javascript-0",
+         "javascript-1"
       ]
    },
    "challenge": {
@@ -46,7 +48,9 @@
          "challenge-9",
          "challenge-10",
          "challenge-11",
-         "challenge-12"
+         "challenge-12",
+         "challenge-13",
+         "challenge-14"
       ],
       "Test": [
          "math-test"

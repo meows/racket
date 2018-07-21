@@ -80,8 +80,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('intro.html', language)}>Racket Guide</Button>
-            <Button href={docUrl('challenge-1.html', language)}>Exercises</Button>
+            <Button href={docUrl('intro', language)}>Racket Guide</Button>
+            <Button href={docUrl('challenge-1', language)}>Exercises</Button>
           </PromoSection>
         </div>
         <div style={{textAlign: 'left' }} padding={['left', 'right']}>

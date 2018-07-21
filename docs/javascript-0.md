@@ -23,7 +23,7 @@ JavaScript.
 
 ## The first hiccup is HTML
 
-When you visit a website such as this one, you might find all sorts of 
+When you visit a website such as this one, you might find all sorts of
 information delivered as:
  - text
  - pictures
@@ -32,17 +32,17 @@ information delivered as:
 
 ### HTML contains with tags
 
-All information on a website is contained in HTML, and HTML uses pairs of tags 
+All information on a website is contained in HTML, and HTML uses pairs of tags
 to contain all information, like this:
 
 ``` html
 <article>
-    Hi there, this text counts as information, 
+    Hi there, this text counts as information,
     and everything is always contained by a pair of tags.
 </article>
 ```
 
-I'm going to show you a very long sample of HTML, but I think you'll somehow 
+I'm going to show you a very long sample of HTML, but I think you'll somehow
 find it familiar. Don't worry if you don't understand everything, because we're
 just looking at it to get a feeling for it.
 
@@ -143,7 +143,7 @@ browser will visually change using our CSS rules.
 ## The third hiccup is JavaScript
 
 Finally we get to the power of JavaScript, which is the most powerful piece of
-the puzzle by far. JavaScript has the power to change the HTML and CSS on a 
+the puzzle by far. JavaScript has the power to change the HTML and CSS on a
 website, and it can also save things on your computer (with permission).
 
 Here are some sample bits of JavaScript:
@@ -162,12 +162,12 @@ fibonacci(10) // → 55
 
 Which should be familiar to us from our prior challenge problems:
 
-``` clojure
+``` scheme
 (define (fibonacci n)
     (cond [(= n 0) 0]
           [(= n 1) 1]
-          [else (+ (fibonacci (- n 1) 
-                   (fibonacci (- n 2))))]
+          [else (+ (fibonacci (- n 1))
+                   (fibonacci (- n 2)))]
     )
 )
 
