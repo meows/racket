@@ -54,6 +54,19 @@ function add1(x) {
 [0, 1, 2, 3].map(add1)  // → [1, 2, 3, 4]
 ```
 
+Another familiar example:
+
+``` javascript
+// These don't exist in JavaScript.
+// You must learn to write it yourself.
+function even(n) { return n % 2 === 0 }
+function odd(n)  { return n % 2 !== 0 }
+
+// Another advanced example
+[0, 1, 2, 3].filter(even) // → [0, 2] 
+[0, 1, 2, 3].filter(odd)  // → [1, 3]
+```
+
 ### Using functions
 
 ``` javascript
@@ -69,18 +82,18 @@ function fib(n) {
    if (n === 0) { return 0 }
    if (n === 1) { return 1 }
 
-   return fib(n-1) + fib(n-2)
+   return fib(n - 1) + fib(n - 2)
 }
 
 function factorial(n) {
    if (n === 0) { return 1 }
    
-   return n * factorial(n-1)
+   return n * factorial(n - 1)
 }
 
 function triangle(n) {
    if (n === 0) { return 0 }
 
-   return n + triangle(n-1)
+   return n + triangle(n - 1)
 }
 ```
