@@ -88,24 +88,12 @@ x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → t
 add1(<span class="hljs-number">3</span>)       <span class="hljs-comment">// → 4</span>
 add1(add1(<span class="hljs-number">3</span>)) <span class="hljs-comment">// → 5</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="some-familiar-examples"></a><a href="#some-familiar-examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Some familiar examples</h3>
+<h3><a class="anchor" aria-hidden="true" id="a-familiar-example"></a><a href="#a-familiar-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A familiar example</h3>
 <pre><code class="hljs css languages- javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fib</span>(<span class="hljs-params">n</span>) </span>{
    <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
    <span class="hljs-keyword">if</span> (n === <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
 
    <span class="hljs-keyword">return</span> fib(n - <span class="hljs-number">1</span>) + fib(n - <span class="hljs-number">2</span>)
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factorial</span>(<span class="hljs-params">n</span>) </span>{
-   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
-   
-   <span class="hljs-keyword">return</span> n * factorial(n - <span class="hljs-number">1</span>)
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">triangle</span>(<span class="hljs-params">n</span>) </span>{
-   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
-
-   <span class="hljs-keyword">return</span> n + triangle(n - <span class="hljs-number">1</span>)
 }
 </code></pre>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">fib</span> n)
@@ -113,15 +101,5 @@ add1(add1(<span class="hljs-number">3</span>)) <span class="hljs-comment">// →
          [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">1</span>) <span class="hljs-number">1</span>]
          [else (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">fib</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))
                   (<span class="hljs-name">fib</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">2</span>)))]))
-
-(<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n)
-   (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n) 
-       <span class="hljs-number">1</span> 
-       (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))))
-
-(<span class="hljs-name">define</span> (<span class="hljs-name">triangle</span> n)
-    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
-        <span class="hljs-number">0</span>
-        (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n (<span class="hljs-name">triangle</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))))
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/javascript-0">← javascript-0</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#defining-a-variable">Defining a variable</a><ul class="toc-headings"><li><a href="#let"><code>let</code></a></li><li><a href="#const"><code>const</code></a></li></ul></li><li><a href="#defining-a-function">Defining a function</a><ul class="toc-headings"><li><a href="#using-functions">Using functions</a></li><li><a href="#some-familiar-examples">Some familiar examples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/javascript-0">← javascript-0</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#defining-a-variable">Defining a variable</a><ul class="toc-headings"><li><a href="#let"><code>let</code></a></li><li><a href="#const"><code>const</code></a></li></ul></li><li><a href="#defining-a-function">Defining a function</a><ul class="toc-headings"><li><a href="#using-functions">Using functions</a></li><li><a href="#a-familiar-example">A familiar example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
