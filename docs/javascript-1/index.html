@@ -74,8 +74,10 @@ x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → t
 [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].map(add1)  <span class="hljs-comment">// → [1, 2, 3, 4]</span>
 </code></pre>
 <p>Another familiar example:</p>
-<pre><code class="hljs css languages- javascript"><span class="hljs-keyword">const</span> even = <span class="hljs-function">(<span class="hljs-params">n</span>) =&gt;</span> n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>
-<span class="hljs-keyword">const</span> odd  = <span class="hljs-function">(<span class="hljs-params">n</span>) =&gt;</span> n % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>
+<pre><code class="hljs css languages- javascript"><span class="hljs-comment">// These don't exist in JavaScript.</span>
+<span class="hljs-comment">// You must learn to write it yourself.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">even</span>(<span class="hljs-params">n</span>) </span>{ <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> }
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">odd</span>(<span class="hljs-params">n</span>)  </span>{ <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span> }
 
 <span class="hljs-comment">// Another advanced example</span>
 [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].filter(even) <span class="hljs-comment">// → [0, 2] </span>
