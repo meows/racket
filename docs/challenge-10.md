@@ -54,14 +54,14 @@ This is but one way to approach the problem.
 )
 
 ;; finds the sum of all odd triangle numbers from n to 99
-(define (challenge n sum)
+(define (challenge n [sum 0])
     (if (< 100 (triangle n)) ;; check if the current triangle number is over 100
         sum
         (challenge (+ n 1)
                    (+ sum (odd-or-0 (triangle n)))))
 )
 
-(challenge 0 0) ;; → 231
+(challenge 0) ;; → 231
 ```
 
 * [`even?`](https://docs.racket-lang.org/reference/number-types.html#%28def._%28%28quote._~23~25kernel%29._even~3f%29%29)

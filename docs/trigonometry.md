@@ -20,11 +20,12 @@ circle, and you know that sine represents the "height", that allows you predict
 sine for special degrees, like:
 
 ``` clojure
-(sin (* 0   pi))
-(sin (* 1/2 pi))
-(sin (* 1   pi))
-(sin (* 3/2 pi))
-(sin (* 2   pi))
+(sin (* 0   pi)) ;; →  0
+(sin (* 1/2 pi)) ;; →  1
+(sin (* 1   pi)) ;; →  0
+(sin (* 3/2 pi)) ;; → -1
+(sin (* 2   pi)) ;; →  0
+(sin (* 5/2 pi)) ;; →  1
 ```
 
 function | input  | output
@@ -36,10 +37,11 @@ function | input  | output
 `sin`    | `2π`   |  0
 
 To predict these outputs, we need merely think about where the line would be on
-a circle for any given angle. For example, for 1/2 π radians, we might ask how
-far along the circle we are, and to do that we merely multiply any angle in
-radians by 1/2, which should get us 1/4. That means we're a quarterway around
-the circle.
+a unit circle for any given angle. 
+
+For example, for 1/2 π radians, we might ask how far along the circle we are, 
+and to do that we merely multiply any angle in radians by 1/2, which should get 
+us 1/4. That means we're a quarterway around the circle.
 
 If you can picture this in your head with the unit circle, then it should be
 easy to know that 1/2 π should give you 1, because we're at the very top of the
