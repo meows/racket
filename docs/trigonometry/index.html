@@ -47,11 +47,12 @@ length of the hypotenuse divided by length of the opposite side.</p>
 <p>If you consider that the sine or cosine of any <code>θ</code> has to be a point on the
 circle, and you know that sine represents the &quot;height&quot;, that allows you predict
 sine for special degrees, like:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi))
-(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> pi))
-(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>   pi))
-(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span>/<span class="hljs-number">2</span> pi))
-(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>   pi))
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →  0</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  1</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>   pi)) <span class="hljs-comment">;; →  0</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; → -1</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>   pi)) <span class="hljs-comment">;; →  0</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  1</span>
 </code></pre>
 <table>
 <thead>
@@ -66,10 +67,10 @@ sine for special degrees, like:</p>
 </tbody>
 </table>
 <p>To predict these outputs, we need merely think about where the line would be on
-a circle for any given angle. For example, for 1/2 π radians, we might ask how
-far along the circle we are, and to do that we merely multiply any angle in
-radians by 1/2, which should get us 1/4. That means we're a quarterway around
-the circle.</p>
+a unit circle for any given angle.</p>
+<p>For example, for 1/2 π radians, we might ask how far along the circle we are,
+and to do that we merely multiply any angle in radians by 1/2, which should get
+us 1/4. That means we're a quarterway around the circle.</p>
 <p>If you can picture this in your head with the unit circle, then it should be
 easy to know that 1/2 π should give you 1, because we're at the very top of the
 unit circle, and <code>sin</code> can only tell you how high versus low you are.</p>
