@@ -39,6 +39,9 @@ to contain all information, like this:
 <article>
     Hi there, this text counts as information,
     and everything is always contained by a pair of tags.
+
+    Notice that all information is "contained" by a pair of tags, in this case
+    called "article".
 </article>
 ```
 
@@ -140,13 +143,20 @@ browser will visually change using our CSS rules.
 </article>
 ```
 
+> Just to let you know, the sample code I showed you doesn't contain the full
+> HTML, CSS, and JS of this website, because that would be a lot of code. But,
+> if you wanted to see everything, most browsers have the ability to let you see
+> the code that you downloaded from the internet.
+
 ## The third hiccup is JavaScript
 
 Finally we get to the power of JavaScript, which is the most powerful piece of
 the puzzle by far. JavaScript has the power to change the HTML and CSS on a
 website, and it can also save things on your computer (with permission).
 
-Here are some sample bits of JavaScript:
+Here's a sample bit of JavaScript which we aren't expected to understand yet,
+but I think you might be able to guess bits and pieces of how things work just
+by looking:
 
 ``` javascript
 function fibonacci(n) {

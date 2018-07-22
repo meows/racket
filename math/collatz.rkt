@@ -8,7 +8,7 @@
 
 (fn (collatz [n 0] #:index [i 0])
     (cond [(one? n)  i]
-          [(even? n) (collatz (/ n 2) #:index (++ i))]
+          [(even? n) (collatz (* n 1/2)     #:index (++ i))]
           [else      (collatz (+ 1 (* 3 n)) #:index (++ i))]
     )
 )

@@ -40,6 +40,8 @@ x + y === 0 // → true
 
 ## Defining a function
 
+A function can be defined using the `function` keyword, like below:
+
 ``` javascript
 function same(x) {
    return x
@@ -57,8 +59,8 @@ function add1(x) {
 Another familiar example:
 
 ``` javascript
-// These don't exist in JavaScript.
-// You must learn to write it yourself.
+// Unlike Racket, these don't exist in JavaScript.
+// That's why we have to write it ourselves.
 function even(n) { return n % 2 === 0 }
 function odd(n)  { return n % 2 !== 0 }
 
@@ -75,25 +77,23 @@ add1(3)       // → 4
 add1(add1(3)) // → 5
 ```
 
-### Some familiar examples
+### A familiar example
 
 ``` javascript
 function fib(n) {
    if (n === 0) { return 0 }
    if (n === 1) { return 1 }
-
-   return fib(n - 1) + fib(n - 2)
+   else {
+      return fib(n - 1) + fib(n - 2)
+   }
 }
+```
 
-function factorial(n) {
-   if (n === 0) { return 1 }
-   
-   return n * factorial(n - 1)
-}
-
-function triangle(n) {
-   if (n === 0) { return 0 }
-
-   return n + triangle(n - 1)
-}
+``` clojure
+(define (fib n)
+   (cond [(= n 0) 0]
+         [(= n 1) 1]
+         [else (+ (fib (- n 1))
+                  (fib (- n 2)))])
+)
 ```
