@@ -30,9 +30,9 @@ This example of `for/fold` has 3 inputs inside:
 Now let's look inside the `for/fold`:
 
   1. Let there be a variable called `sum`, which we will initially set to `0`.
-  2. For every nth sequence item `n` in the naturals `0..10`, update the current
-     `sum` to be `sum + n`.
-  3. When we bump into the end of the sequence, we give back the updated `sum`.
+  2. Let us step through every item `n` in list of naturals `0..10`.
+  3. For every nth sequence item `n`, update the current `sum` to be `sum + n`.
+  4. When we bump into the end of the sequence, we give back the updated `sum`.
 
 ---
 
@@ -53,6 +53,7 @@ return whatever is the result of `for/fold`.
 Now let's look inside the `for/fold`:
 
   1. Let there be a variable called `product` initially set to `1`.
+  2. Let us step through every item `i` in list of naturals `0..n`.
   2. For every nth sequence item `i` in the naturals `1..n`, update the current
      `product` to be `product * n`.
   3. When we bump into the end of the sequence, we give back the updated
@@ -83,6 +84,8 @@ Now let's look inside the `for/fold`:
   1. Let there be a variable called `sum` and let it be initially set to `0`.
   2. Let us assign the variable `i` at every step for every nth item in `0..n`.
   3. As we step through `0..n`, let the value of the next `sum` be `sum + i`.
+  4. When we bump into the end of the list of numbers, we stop and give back the 
+     updated `sum`.
 
 ---
 

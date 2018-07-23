@@ -15,14 +15,16 @@ odd or even. If it's odd, you triple `n` and add `1`. If it's even, you divide
 `n` by `2`:
 
 The strongly educated belief, or _conjecture_, is that if you keep doing this,
-all natural inputs to Collatz will eventually reach `1`.
+all natural inputs to Collatz will eventually reach `1`. Interestingly, 
+mathematicians have little clue about why it takes any number of steps to reach
+`1` from a starting point.
 
 ## Problem
 
-Since we suspect all any input to the Collatz function to eventually reach `1`,
-it would be silly to ask you to simply write the function. So instead, we must
-write a version of the Collatz that counts the number of steps it takes to get
-to `1`.
+Since we suspect any natural input to the Collatz function to eventually reach 
+`1`, it would be silly to ask you to simply write the function. So instead, we 
+must write a more interesting version of the Collatz that counts the number of 
+steps it takes to get to `1`.
 
 This `collatz` function below takes two natural inputs, `n` and `steps`, but 
 `steps` has a default input of `0`. Complete the function so that it can tell me

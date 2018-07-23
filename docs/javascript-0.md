@@ -37,8 +37,7 @@ to contain all information, like this:
 
 ``` html
 <article>
-    Hi there, this text counts as information,
-    and everything is always contained by a pair of tags.
+    Hi there, this text counts as information.
 
     Notice that all information is "contained" by a pair of tags, in this case
     called "article".
