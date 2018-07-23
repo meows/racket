@@ -67,7 +67,32 @@ some examples of ways to create lists:
 (equal? d f)  ;; → true
 ```
 
-### `list-ref` (finding by index)
+### `list`
+
+`list` is a function which can allow you to build any kind of list, and it takes
+any number of inputs, even no input at all. You can make a list of just about
+anything, and lists can be empty.
+
+``` clojure
+(list)        ;; a list with 0 items
+(list 3)      ;; a list with 1 item
+(list 3 1)    ;; a list with 2 items
+(list (list)) ;; a list with 1 item -- another list!
+```
+
+### `length`
+
+To ask how many items are inside a list, we use `length`:
+
+``` clojure
+(length (list))            ;; → 0
+(length (list 3))          ;; → 1
+(length (list 3 3))        ;; → 2
+(length (list (list) 3 4)) ;; → 3
+(length (list 3 4 (list))) ;; → 3
+```
+
+### `list-ref` (finding by position)
 
 `list-ref` is a function that takes two inputs, `lst` and `pos`, and returns the
 value of whatever is found on list `lst` at index position `pos`. If you happen
