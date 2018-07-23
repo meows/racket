@@ -16,7 +16,8 @@ at how to create our own functions.
 
 Here are some examples of *applying* or using a function, with functions you're
 probably already familiar with. See if you can understand what they do. Notice
-that the first atom inside an expression is assumed to be a function.
+that the first atom inside an expression is assumed to be a function. Everything
+afterward is assumed to be an input for the function.
 
 ``` clojure
 ;; Addition
