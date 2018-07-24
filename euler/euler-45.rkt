@@ -31,8 +31,3 @@
             #:when (pentagonal? (hexagon n)))
            (hexagon n)
 )
-
-(for/first ([n (in-naturals)] 
-            #:when (test? (fn n)))
-           (fn n)
-)
