@@ -43,17 +43,29 @@ x + y === 0 // → true
 A function can be defined using the `function` keyword, like below:
 
 ``` javascript
+// 1. This function's name is same
+// 2. The function accepts one input, named x
+// 3. The function returns x
 function same(x) {
-   return x
+   return x  // return will give the function output
 }
 
-function add1(x) {
-   return x + 1
+// 1. This function's name is add1
+// 2. The function accepts one input, named n
+// 3. The function returns n + 1
+function add1(n) {
+   return n + 1
 }
 
-// An advanced example with a taste of what's ahead.
-[0, 1, 2, 3].map(same)  // → [0, 1, 2, 3] 
-[0, 1, 2, 3].map(add1)  // → [1, 2, 3, 4]
+```
+
+And here's now they're used:
+
+``` javascript
+same(3)       // → 3
+add1(3)       // → 4
+same(same(3)) // → 3
+add1(add1(3)) // → 5
 ```
 
 Another familiar example:
@@ -67,14 +79,6 @@ function odd(n)  { return n % 2 !== 0 }
 // Another advanced example
 [0, 1, 2, 3].filter(even) // → [0, 2] 
 [0, 1, 2, 3].filter(odd)  // → [1, 3]
-```
-
-### Using functions
-
-``` javascript
-same(3)       // → 3
-add1(3)       // → 4
-add1(add1(3)) // → 5
 ```
 
 ### A familiar example

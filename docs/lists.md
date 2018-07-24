@@ -119,7 +119,7 @@ right function to use.
 
 (first names)       ;; → "Ryan"
 (last  names)       ;; → "Patrick"
-(rest  names)       ;; returns the list in names but with the first item removed.
+(rest  names)       ;; returns the list in names but with "Ryan" removed.
 
 (list-ref names 0)  ;; → "Ryan"
 (list-ref names 1)  ;; → "Oliver"
