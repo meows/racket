@@ -24,6 +24,15 @@
     (+ (* 2 n n)
        (- n)))
 
-(for/first ([n (in-naturals 143)] #:when (= (pentagon n) (hexagon n)))
-           (triangle n)
+(fn (pentagonal? n)
+    (natural? (* 1/6 (+ 1 (sqrt (+ 1 (* 24 n)))))))
+
+(for/first ([n (in-naturals 144)] 
+            #:when (pentagonal? (hexagon n)))
+           (hexagon n)
+)
+
+(for/first ([n (in-naturals)] 
+            #:when (test? (fn n)))
+           (fn n)
 )
