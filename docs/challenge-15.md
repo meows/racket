@@ -10,7 +10,7 @@ hide_title: true
 Write a `gcd` function which can accept 2 or more naturals for input.
 
 ``` clojure
-(gcd 8 12 16 24) ;; 4
+(gcd 8 12 16 24) ;; → 4
 ```
 
 ## Extra Challenge
@@ -18,7 +18,7 @@ Write a `gcd` function which can accept 2 or more naturals for input.
 Write an `lcm` function which can accept 2 or more naturals for input.
 
 ``` clojure
-(lcm 8 12 16 24) ;; 48
+(lcm 8 12 16 24) ;; → 48
 ```
 
 ## Hint
