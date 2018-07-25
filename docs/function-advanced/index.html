@@ -124,9 +124,16 @@ we would like:</p>
 (<span class="hljs-name">avg</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span>)        <span class="hljs-comment">;; → 5</span>
 (<span class="hljs-name">avg</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span>)    <span class="hljs-comment">;; → 6</span>
 </code></pre>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">avg</span> n0 . rest)
-    (<span class="hljs-name">define</span> items (<span class="hljs-name"><span class="hljs-builtin-name">list*</span></span> n0 rest))
-    (/ (<span class="hljs-name"><span class="hljs-builtin-name">apply</span></span> + items) (<span class="hljs-name">length</span> items))
-)
+<p>First I'm going to show you one way to do it, then I'm going to explain how it
+works.</p>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">avg</span> . numbers)
+    (/ (<span class="hljs-name"><span class="hljs-builtin-name">apply</span></span> + numbers) 
+       (<span class="hljs-name">length</span> numbers)))
 </code></pre>
+<p>Observe that:</p>
+<ol>
+<li>We define a function <code>avg</code>, but in the area where we normally place
+parameters we find <code>. numbers</code>. What this does is collect all inputs from
+this point forward into a list named <code>numbers</code>.</li>
+</ol>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/function-sequence">← Over Lists</a><a class="docs-next button" href="/docs/function-higher">Making Many Functions →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#function-review">Function Review</a><ul class="toc-headings"><li><a href="#single-parameter">Single Parameter</a></li><li><a href="#multiple-parameters">Multiple Parameters</a></li><li><a href="#recursion">Recursion</a></li></ul></li><li><a href="#default-parameters">Default Parameters</a></li><li><a href="#rest-parameters">Rest Parameters</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
