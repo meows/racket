@@ -12,7 +12,9 @@
 ;; hexagonal.
 
 (fn (triangle n)
-    (* 0.5 n (+ n 1)))
+    (* 1/2 
+       n 
+       (+ n 1)))
 
 (fn (pentagon n)
     (+ (* 3/2 n n)
