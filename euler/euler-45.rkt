@@ -1,8 +1,6 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/math [sqr square]))
-(require math/number-theory)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
