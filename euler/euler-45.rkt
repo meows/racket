@@ -29,5 +29,4 @@
 
 (for/first ([n (in-naturals 144)] 
             #:when (pentagonal? (hexagon n)))
-           (hexagon n)
-)
+           (hexagon n))
