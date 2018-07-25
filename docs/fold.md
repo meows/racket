@@ -118,16 +118,16 @@ divisible by either `3` or `5`.
 
 Now let's look inside the `for/fold`:
 
-1. Let there be a variable `sum` and let it be initially set to `0`.
-2. Let us walk, step by step over the sequence `0..999`, assigning the name `n`
-   for every nth sequence item.
-3. For every step in the sequence which brings the next `n`, we use `if` and
-   `div-by-3-or-5?` to check if `n` is divisible by 3 or 5:
-   - if it's divisible, then we give back `sum + n` as the next value for `sum`.
-   - if it's not divisible, then we give back the old `sum`, thereby doing
-     nothing to it.
-4. When we've stepped through every sequence item in `0..999`, we give back the
-   updated `sum`.
+  1. Let there be a variable `sum` and let it be initially set to `0`.
+  2. Let us walk, step by step over the sequence `0..999`, assigning the name `n`
+     for every nth sequence item.
+  3. For every step in the sequence which brings the next `n`, we use `if` and
+     `div-by-3-or-5?` to check if `n` is divisible by 3 or 5:
+     - if it's divisible, then we give back `sum + n` as the next value for `sum`.
+     - if it's not divisible, then we give back the old `sum`, thereby doing
+       nothing to it.
+  4. When we've stepped through every sequence item in `0..999`, we give back the
+     updated `sum`.
 
 ---
 
@@ -161,11 +161,11 @@ First we define a function `myMap` which takes for input a function `fn` and a
 sequence `seq`. This function will return whatever is the result of `for/fold`.
 Now let's examine what happens inside `for/fold`:
 
-1. Let there be a variable called `lst`, and let it be initially set to the
-   value of an empty list `(list)`.
-2. Let us step through every item `i` in the sequence `seq`.
-3. For every `i` in `seq`, add the result of `(fn i)` to `lst`.
-4. When we're done stepping through everything, return the updated `lst`.
+  1. Let there be a variable called `lst`, and let it be initially set to the
+     value of an empty list `(list)`.
+  2. Let us step through every item `i` in the sequence `seq`.
+  3. For every `i` in `seq`, add the result of `(fn i)` to `lst`.
+  4. When we're done stepping through everything, return the updated `lst`.
 
 > Where did `fn` and `seq` come from? It came from when we defined our function
 > `myMap` and we accepted two inputs called `fn` and `seq`.
@@ -179,7 +179,7 @@ might want to check out the section on [Making Many Functions](function-higher.m
 (define (line p0 v)
     (λ (x)
        (+ p0 (* x v))
-    )
+   )
 )
 
 (myMap sqr         (range 5)) ;; → '(0 1 4 9 16)

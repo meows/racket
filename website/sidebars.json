@@ -54,7 +54,10 @@
          "challenge-15"
       ],
       "Test": [
-         "math-test"
+         "test-linear-0"
+      ],
+      "Dictionary": [
+         "glossary"
       ]
    }
 }
