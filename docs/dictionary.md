@@ -1,7 +1,8 @@
 ---
-id: Dictionary
+id: dictionary
 title: Dictionary
 sidebar_label: Dictionary
+hide_title: true
 ---
 
 # Dictionary
@@ -11,22 +12,30 @@ sidebar_label: Dictionary
 * sequence
 * parameter
 
-
 ## Mathematics
 
 * function
-* angle
-* degrees
-* radians
-* unit circle
-* pi
-
+* recursion
 * ratio
 * constant
+
+### Numbers
 
 * natural
 * integer
 * rational / quotient
 * real
 
+### Geometry
+
+* angle
+* degrees
+* radians
+* unit circle
+* pi
+
+## Physics
+
+* position
 * velocity
+* acceleration
