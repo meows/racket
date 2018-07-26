@@ -88,6 +88,8 @@ These functions consume one or more numbers and returns a number.
 `-`
 `*`
 `/`
+`add1`
+`sub1`
 `sqr`
 `sqrt`
 `expt`
@@ -96,8 +98,6 @@ These functions consume one or more numbers and returns a number.
 `lcm`
 `quotient`
 `remainder`
-`add1`
-`sub1`
 
 ### Geometry
 
