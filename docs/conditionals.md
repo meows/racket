@@ -68,7 +68,7 @@ The definition is a bit hard to understand, so let's go into some examples:
 ## `and`
 
 `and` takes a list of 0 or more boolean expressions and will evaluate to `true`
-_unless_ it encounters at least one `false` value. If `and` encounters even one
+_unless_ it encounters even one `false` value. If `and` encounters even one 
 `false`, then it will always be `false`.
 
 ``` clojure
@@ -95,7 +95,7 @@ number is both even and negative at the same time.
 ## `or`
 
 `or` takes a list of 0 or more boolean expressions and evaluates to `false`
-_unless_ it encounters at least one `true` value. If `or` encounters even one
+_unless_ it encounters even one `true` value. If `or` encounters even one
 `true`, then it will always be `true`.
 
 ``` clojure
