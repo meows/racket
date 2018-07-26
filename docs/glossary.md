@@ -103,8 +103,9 @@ These functions consume one or more numbers and returns a number.
 
 ### Geometry
 
-These functions all consume a single input in radians, and they return a real
-number representing a ratio of different side lengths on a triangle.
+These functions all consume a single input in radians, and they return a 
+decimal number representing the _approximate_ ratio of different side lengths on 
+a triangle.
 
 `sin`
 `cos`

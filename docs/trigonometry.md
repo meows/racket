@@ -63,10 +63,8 @@ climbed for 10 miles. How much was his horizontal climb?
 ``` clojure
 ;; (* 10 0.5) → 5 miles
 (define vertical-distance
-   (* 10
-      (sin (* 1/6 pi))
-   )
-)
+   (* 10 
+      (sin (* 1/6 pi))))
 ```
 
 ## `cos` Cosine
@@ -97,15 +95,13 @@ laser, how much change would I find?
 ``` clojure
 (define horizontal-distance
    (* 10
-      (cos (* 1/6 pi))
-   )
-)
+      (cos (* 1/3 pi))))
 ```
 
 ## `tan` Tangent
 
-Finally we get to tangent, which is defined as the ratio of the opposite side
-`o` to the adjacent side `a`. 
+Finally we get to tangent, which is defined as the ratio of the opposite side 
+to the adjacent side. 
 
 Let's consider the line segment below. Given this example, it can be visually
 easy to see how if we stop at any point in the line, say at `seconds(2)`,
@@ -116,11 +112,31 @@ with a new right triangle.
 We should also be able to see that no matter where you draw that triangle, the
 ratio of the vertical side to the horizontal side should always be `2:1`. Since
 the `tangent` function finds the ratio between the `vertical` side and the
-`horizontal` side, then `tangent(θ)` will tell you the velocity as a rational
-number.
+`horizontal` side, then `tangent(θ)` will tell you the "velocity".
 
-This graph below is about `63.43°` degrees, which is about `1.107 π` radians. 
+This graph below is about `63.43°` degrees, which is about `1.10714 π` radians. 
 If you try the values with the `tan` function, it should return approximately 
-`2`.
+`2`. 
+
+``` clojure
+(define vertical:horizontal
+   (tan 1.10714))
+```
 
 ![triangle](/img/test-2.png)
+
+### Example Problem
+
+Alice is trying to determing the height of a very tall rectangular building. 
+From the ground, she measures that she is 57 meters away from the building. She
+then plants a small laser in the ground, and points it to the very edge of the
+building, thereby forming a right triangle with the building side, the laser 
+path, and the ground. She measures the angle of the laser from the ground to be 
+55 degrees.
+
+Alice now believes she knows enough to approximate the height of the building.
+Why?
+
+1. `tangent(θ) = opposite / adjacent`
+2. `tangent(55) = opposite / 57`
+3. `57 * tan(55) = opposite`
