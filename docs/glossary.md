@@ -52,20 +52,21 @@ sidebar_label: Glossary
 
 ## Functions on Numbers
 
+
 ### Boolean Comparison
 
-`+`
-`-`
-`*`
-`/`
 `=`
 `<`
 `>`
 `<=`
 `>=`
 
-## Arithmetic
+### Arithmetic
 
+`+`
+`-`
+`*`
+`/`
 `sqr`
 `sqrt`
 `expt`

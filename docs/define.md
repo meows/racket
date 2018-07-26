@@ -139,7 +139,7 @@ Observe that:
    parameters or inputs to the function, which in this case is `base` and 
    `height`.
 3. The final expression you provide as input for `define` will be the return 
-   value.
+   value. In this case it's `(* 1/2 base height)`.
 
 ## Trying out what you know
 
