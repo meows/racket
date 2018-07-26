@@ -7,8 +7,6 @@ hide_title: true
 
 # Advanced Function Notation
 
-> WIP: Do not use yet.
-
 We're about to explore some advanced ways of writing functions, but before we do
 that, let's briefly review what we've learned so far.
 
