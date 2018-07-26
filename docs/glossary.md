@@ -23,7 +23,7 @@ define your own functions.
 Conditionals allow you to change what happens in your program based on any rules
 you set.
 
-[`if`](conditionals.md)
+[`if`](if.md)
 [`cond`](cond.md)
 
 ## Functions on Lists

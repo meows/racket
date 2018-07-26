@@ -14,6 +14,6 @@ either `3` or `5` removed.
 
 * [`filter`](function-sequence.md)
 * [`range`](function-sequence.md)
-* [`and`](conditionals.md)
-* [`or`](conditionals.md)
-* [`if`](conditionals.md)
+* [`and`](if.md)
+* [`or`](if.md)
+* [`if`](if.md)
