@@ -92,10 +92,9 @@ is the <em>divisor</em>.</p>
 seeing if <code>(remainder n 2)</code> is zero, in other words, whether dividing a number
 by <code>2</code> leaves no remainder, which is in fact the definition of an even number:</p>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n)
-        (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">2</span>)))
+    (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">2</span>)))
 
-(<span class="hljs-name">define</span> (<span class="hljs-name"><span class="hljs-builtin-name">odd?</span></span> n)
-        (<span class="hljs-name"><span class="hljs-builtin-name">not</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n)))
+(<span class="hljs-name">define</span> (<span class="hljs-name"><span class="hljs-builtin-name">odd?</span></span> n) (<span class="hljs-name"><span class="hljs-builtin-name">not</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n)))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="abs-absolute-value"></a><a href="#abs-absolute-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>abs</code> Absolute Value</h2>
 <p>The absolute value function <code>abs</code> takes a number and always makes it positive.</p>
