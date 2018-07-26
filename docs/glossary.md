@@ -2,21 +2,33 @@
 id: glossary
 title: Glossary
 sidebar_label: Glossary
+hide_title: true
 ---
 
-# Racket Dictionary
+# Racket Glossary
+
+Here we list all the Racket functions which we've learned or might use.
 
 ## Defining Functions and Values
 
+These allow you to save values behind variable names, and they also allow you to
+define your own functions.
+
 [`define`](define.md)
 [`lambda`](lambda.md)
+`let`
 
 ## Conditional
+
+Conditionals allow you to change what happens in your program based on any rules
+you set.
 
 [`if`](conditionals.md)
 [`cond`](cond.md)
 
 ## Functions on Lists
+
+These functions are all designed for working on lists.
 
 [`filter`](function-sequence.md)
 [`map`](function-sequence.md)
@@ -25,20 +37,25 @@ sidebar_label: Glossary
 [`first`](function-sequence.md)
 [`rest`](function-sequence.md)
 [`last`](function-sequence.md)
-[`list`](function-sequence.md)
-[`list*`](function-sequence.md)
+[`list-ref`](function-sequence.md)
 
 ### Making new lists
 
+[`list`](function-sequence.md)
+[`list*`](function-sequence.md)
 `range`
 
-## Boolean Comparison
+## Boolean Operators
+
+These functions take one or more booleans and always returns a boolean.
 
 `or`
 `and`
 `not`
 
-### Testing Types
+## Testing Types
+
+These functions can test the type of any value.
 
 `number?`
 `natural?`
@@ -52,8 +69,9 @@ sidebar_label: Glossary
 
 ## Functions on Numbers
 
-
 ### Numeric Comparison
+
+These functions consume one or more numbers and returns a boolean.
 
 `=`
 `<`
@@ -63,6 +81,8 @@ sidebar_label: Glossary
 `zero?`
 
 ### Arithmetic
+
+These functions consume one or more numbers and returns a number.
 
 `+`
 `-`
@@ -80,6 +100,9 @@ sidebar_label: Glossary
 `sub1`
 
 ### Geometry
+
+These functions all consume a single input in radians, and they return a real
+number representing a ratio of different side lengths on a triangle.
 
 `sin`
 `cos`
