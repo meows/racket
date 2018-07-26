@@ -30,36 +30,36 @@ sidebar_label: Glossary
 
 ### Making new lists
 
-* `range`
+`range`
 
-## Boolean Functions
+## Boolean Comparison
 
-* `or`
-* `and`
-* `not`
-* `zero?`
+`or`
+`and`
+`not`
 
 ### Testing Types
 
-* `number?`
-* `natural?`
-* `integer?`
-* `rational?`
-* `real?`
-* `list?`
-* `boolean?`
-* `string?`
+`number?`
+`natural?`
+`integer?`
+`rational?`
+`real?`
+`list?`
+`boolean?`
+`string?`
 
 ## Functions on Numbers
 
 
-### Boolean Comparison
+### Numeric Comparison
 
 `=`
 `<`
 `>`
 `<=`
 `>=`
+`zero?`
 
 ### Arithmetic
 
