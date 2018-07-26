@@ -39,3 +39,8 @@ Racket, the language that we're going to be using:
 Other than that, feel free to make up new names, words, or *atoms*, as you
 please. `is-this-a-prime-number?` is a valid name in Racket if you want to use
 that, although that's probably a little long.
+
+One reason we take the time to learn the word atom is so that when we're in a
+discussion, we can say that `pineapple` is one atom, and not `pine` plus 
+`apple`. We're not allowed to split it any further. In fact, the word atom came 
+from the Greek word for uncuttable, _"atomos"_.
