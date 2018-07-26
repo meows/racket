@@ -38,6 +38,7 @@ These functions are all designed for working on lists.
 [`rest`](function-sequence.md)
 [`last`](function-sequence.md)
 [`list-ref`](function-sequence.md)
+[`for/fold`](fold.md)
 
 ### Making new lists
 

@@ -71,10 +71,9 @@ by `2` leaves no remainder, which is in fact the definition of an even number:
 
 ``` clojure
 (define (even? n)
-        (zero? (remainder n 2)))
+    (zero? (remainder n 2)))
 
-(define (odd? n)
-        (not (even? n)))
+(define (odd? n) (not (even? n)))
 ```
 
 ## `abs` Absolute Value
