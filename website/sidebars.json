@@ -26,7 +26,8 @@
          "function-sequence",
          "function-advanced",
          "function-higher",
-         "fold"
+         "fold",
+         "geometry"
       ],
       "JavaScript": [
          "javascript-0",

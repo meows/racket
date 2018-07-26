@@ -100,13 +100,17 @@ These functions consume one or more numbers and returns a number.
 `lcm`
 `quotient`
 `remainder`
+`round`
 
 ### Geometry
 
-These functions all consume a single input in radians, and they return a 
-decimal number representing the _approximate_ ratio of different side lengths on 
-a triangle.
+These functions tend to work with radians, and they often give approximations.
 
 `sin`
 `cos`
 `tan`
+`asin`
+`acos`
+`atan`
+`degrees->radians`
+`radians->degrees`

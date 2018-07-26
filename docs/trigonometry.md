@@ -89,8 +89,8 @@ the ground between Jeff's original position and the new position of Jeff's
 laser, how much change would I find?
 
 1. `cosine(θ) = adjacent / hypotenuse`
-2. `cosine(π/6) = adjacent / 10`
-3. `10 * cosine(π/6) = adjacent`
+2. `cosine(π/3) = adjacent / 10`
+3. `10 * cosine(π/3) = adjacent`
 
 ``` clojure
 (define horizontal-distance
@@ -140,3 +140,10 @@ Why?
 1. `tangent(θ) = opposite / adjacent`
 2. `tangent(55) = opposite / 57`
 3. `57 * tan(55) = opposite`
+
+## Summary
+
+* `sine(θ) = opposite/hypotenuse`, which can tell you "vertical" distance
+* `cosine(θ) = adjacent/hypotenuse`, which can can tell you "horizontal" distance
+* `tangent(θ) = opposite/adjacent`, which is ratio of the vertical to 
+  horizontal, which can also be interpreted as "velocity".
