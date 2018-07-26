@@ -53,18 +53,18 @@ some examples of ways to create lists:
 (define b '(1 2 3))
 (define c (cons 1 (cons 2 (cons 3 '()))))
 
-(equal? a a)  ;; → true
-(equal? a b)  ;; → true
-(equal? a c)  ;; → true
+(equal? a a) ;; → true
+(equal? a b) ;; → true
+(equal? a c) ;; → true
 
 ;; these are all equal to '("meow" 1 2 3)
 (define d (list "meow" 1 2 3))
 (define e (append '("meow") a))
 (define f (cons "meow" a))
 
-(equal? d d)  ;; → true
-(equal? d e)  ;; → true
-(equal? d f)  ;; → true
+(equal? d d) ;; → true
+(equal? d e) ;; → true
+(equal? d f) ;; → true
 ```
 
 ### `list`

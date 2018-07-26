@@ -7,7 +7,7 @@ _coordinates_.
 
 Let's say a coordinate is a piece of information which you can represent with a
 single integer or real number. If so, you can also imagine then that a
-coordinate can be represented as a point on an integer or real number line.
+coordinate can be represented as a point on a number line.
 
 ---
 

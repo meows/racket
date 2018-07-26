@@ -66,6 +66,7 @@ These functions can test the type of any value.
 `boolean?`
 `string?`
 `procedure?`
+`equal?`
 
 ## Functions on Numbers
 
