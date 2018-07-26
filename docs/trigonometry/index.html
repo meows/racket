@@ -89,10 +89,8 @@ climbed for 10 miles. How much was his horizontal climb?</p>
 </ol>
 <pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; (* 10 0.5) → 5 miles</span>
 (<span class="hljs-name">define</span> vertical-distance
-   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span>
-      (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">6</span> pi))
-   )
-)
+   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span> 
+      (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">6</span> pi))))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="cos-cosine"></a><a href="#cos-cosine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cos</code> Cosine</h2>
 <p>While the sine of an angle can tell you the &quot;height&quot; of a triangle, the cosine
@@ -121,14 +119,12 @@ laser, how much change would I find?</p>
 <li><code>10 * cosine(π/6) = adjacent</code></li>
 </ol>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> horizontal-distance
-   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span>
-      (<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">6</span> pi))
-   )
-)
+   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span> 
+      (<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">6</span> pi))))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="tan-tangent"></a><a href="#tan-tangent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>tan</code> Tangent</h2>
 <p>Finally we get to tangent, which is defined as the ratio of the opposite side
-<code>o</code> to the adjacent side <code>a</code>.</p>
+to the adjacent side.</p>
 <p>Let's consider the line segment below. Given this example, it can be visually
 easy to see how if we stop at any point in the line, say at <code>seconds(2)</code>,
 <code>seconds(4)</code>, or <code>seconds(10)</code>, we can then draw a perfectly straight vertical
@@ -137,8 +133,7 @@ with a new right triangle.</p>
 <p>We should also be able to see that no matter where you draw that triangle, the
 ratio of the vertical side to the horizontal side should always be <code>2:1</code>. Since
 the <code>tangent</code> function finds the ratio between the <code>vertical</code> side and the
-<code>horizontal</code> side, then <code>tangent(θ)</code> will tell you the velocity as a rational
-number.</p>
+<code>horizontal</code> side, then <code>tangent(θ)</code> will tell you the &quot;velocity&quot;.</p>
 <p>This graph below is about <code>63.43°</code> degrees, which is about <code>1.107 π</code> radians.
 If you try the values with the <code>tan</code> function, it should return approximately
 <code>2</code>.</p>
