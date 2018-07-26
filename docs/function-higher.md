@@ -16,18 +16,14 @@ This `cube` function takes a number `n` and returns a number.
 
 ``` clojure
 ;; number → number
-(define (cube n) 
-    (* n n n)
-)
+(define (cube n) (* n n n))
 ```
 
 This list function `remove-odds` takes a list `lst` and returns a list.
 
-``` scheme
+``` clojure
 ;; list → list
-(define (remove-odds lst) 
-    (filter even? lst)
-)
+(define (remove-odds lst) (filter even? lst))
 ```
 
 ## Returning things we already know about
@@ -36,7 +32,7 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 
 ### Returning numbers
 
-``` scheme
+``` clojure
 ;; number → number
 (define (total-bill price)
     (+ (* price 1.0725) ;; California sales tax 
@@ -47,7 +43,7 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 
 ### Returning booleans
 
-``` scheme
+``` clojure
 ;; number → boolean
 (define (div-by-3-or-5? n)
     (or (zero? (remainder n 3))
@@ -58,7 +54,7 @@ Let's focus a bit more one the kinds of things we've learned to return so far.
 
 ### Returning strings
 
-``` racket
+``` scheme
 ;; boolean → string
 (define (say-hi? answer)
     (if (equal? answer #t)

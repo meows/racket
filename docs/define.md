@@ -120,23 +120,33 @@ Now let's use the function:
 (prism-volume 5 (+ 1 4) (+ 3 2))  ;; → 125
 ```
 
+### Another example
+
+Let's say we're asked to write a function called `triangle-area` which can tell
+us the area of a triangle based on two natural inputs, `base` and `height`.
+Here's how it would be done:
+
+``` clojure
+(define (triangle-area base height)
+        (* 1/2 base height)
+)
+```
+
+Observe that:
+
+1. `define` takes two inputs.
+2. The first expression contains the name `triangle-area`, followed by any 
+   parameters or inputs to the function, which in this case is `base` and 
+   `height`.
+3. The final expression you provide as input for `define` will be the return 
+   value.
+
 ## Trying out what you know
 
 * Define a function that can generate the sequence: `5, 3, 1, -1, -3, -5...`
 * Define a function that can generate the sequence: `0, 1, 8, 27, 64, 125...`
-* Define a function called `triangle-area` which tells me the area of a triangle
-  if you know `base` and `height`. This function will have two parameters (or
-  inputs) that the function can take.
 * What is a _variable_, and what is _variable assignment_?
 * What is a function _parameter_?
-
-Look at this example below:
-
-``` clojure
-(define (triangle-area base height)
-        (* 1/2 base height))
-```
-
 * What's the name of the above function?
 * How many parameters does this function take, and what are they?
 * What's `(triangle 10 2)`?

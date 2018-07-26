@@ -119,9 +119,21 @@ we would like:
 (avg 3 4 5 6 7 8 9)    ;; → 6
 ```
 
+First I'm going to show you one way to do it, then I'm going to explain how it
+works.
+
 ``` clojure
-(define (avg n0 . rest)
-    (define items (list* n0 rest))
-    (/ (apply + items) (length items))
+(define (avg . numbers)
+    (/ (apply + numbers) 
+       (length numbers))
 )
 ```
+
+Observe that:
+
+1. We define a function `avg`, but in the area where we normally place 
+   parameters we find `. numbers`. What this does is collect all inputs from
+   this point forward into a list named `numbers`.
+
+2. We then return the result of dividing the sum of `numbers` by the length of
+   `numbers`.
