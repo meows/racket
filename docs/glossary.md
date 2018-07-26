@@ -48,6 +48,7 @@ sidebar_label: Glossary
 `list?`
 `boolean?`
 `string?`
+`procedure?`
 
 ## Functions on Numbers
 
