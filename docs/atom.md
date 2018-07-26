@@ -42,5 +42,5 @@ that, although that's probably a little long.
 
 One reason we take the time to learn the word atom is so that when we're in a
 discussion, we can say that `pineapple` is one atom, and not `pine` plus 
-`apple`. We're not allowed to split it any further. In fact, the word atom came 
-from the Greek word for uncuttable, _"atomos"_.
+`apple`. We're not allowed to split it any further. As a trivia fact, the word 
+atom came from the Greek word for uncuttable, _"atomos"_.
