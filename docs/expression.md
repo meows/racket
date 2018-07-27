@@ -8,12 +8,24 @@ hide_title: true
 
 # `(expressions)`
 
-An expression means either:
-  1. An atom. 
-  2. A list of one or more expressions, separated by spaces and surrounded by
-     parentheses.
+An expression is a list of 1 or more atoms or sub-expressions, where the first
+item in the list must be a function, and everything that follows is considered
+an input for that function. 
 
-For example,
+An interesting point about expressions is that all of them must be eventually 
+reducible to a value. Racket is all about simplifying or "reducing" expressions
+into simpler forms, until you reach a value. It's very similar to the idea of a
+mathematical expression.
+
+> A sub-expression is an expression inside of an expression. Otherwise it's not
+> special or different versus any other expression.
+
+Here's a simple example of an expression where it's a list of only atoms and no
+sub-expression.
+
+``` clojure
+(hello i am an expression)
+```
 
 ``` clojure
 (we are all atoms surrounded by parenthesis and separated by spaces)
