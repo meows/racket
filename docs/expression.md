@@ -4,8 +4,6 @@ sidebar_label: Expression
 hide_title: true
 ---
 
-> Work in progress. Do not use yet.
-
 # `(expressions)`
 
 An expression is a list of 1 or more atoms or sub-expressions, where the first
@@ -45,19 +43,6 @@ Is this an expression?
 (() + a b c)  ;; no  - the first sub-expression must be a function
 123           ;; yes - atoms count as expressions
 true          ;; yes - atoms count as expressions
-```
-
-## Lists of expressions have Length
-
-An expression that's also a list is can be counted for the number of things 
-inside.
-
-``` clojure
-(+ 1 2 3 4 5)                            ;; 6 atoms
-(square 3)                               ;; 2 atoms
-(+ 1 2 3 4 5 (* 3 2))                    ;; 7 atoms or sub-expressions
-((strange) jungle cat (will) eat people) ;; 7 atoms or sub-expressions
-(empty? (+))                             ;; 2 atoms or sub-expressions
 ```
 
 ## Things to remember about expressions:
