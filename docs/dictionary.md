@@ -18,6 +18,8 @@ hide_title: true
 * recursion
 * ratio
 * constant
+* dimension
+* linear
 
 ### Numbers
 
