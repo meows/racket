@@ -12,24 +12,19 @@
 ;; hexagonal.
 
 (fn (triangle n)
-    (* 1/2 n (+ n 1))
-)
+    (* 1/2 n (+ n 1)))
 
 (fn (pentagon n)
     (+ (* 3/2 n n)
-       (* -1/2 n))
-)
+       (* -1/2 n)))
 
 (fn (hexagon n)
     (+ (* 2 n n)
-       (- n))
-)
+       (- n)))
 
 (fn (pentagonal? n)
-    (natural? (* 1/6 (+ 1 (sqrt (+ 1 (* 24 n))))))
-)
+    (natural? (* 1/6 (+ 1 (sqrt (+ 1 (* 24 n)))))))
 
 (for*/first ([n (in-naturals 144)] 
              [v (in-value (hexagon n))] #:when (pentagonal? v))
-            v
-)
+            v)

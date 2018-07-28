@@ -10,13 +10,13 @@ hide_title: true
 > using English letters. Theta is the 8th letter in the Greek alphabet, and it's
 > often written in the lowercase as `θ`.
 
-The function `sine` consumes an angle `θ` and will tell you the ratio of the 
+The function `sine` consumes an angle `θ` and will tell you the ratio of the
 length of the hypotenuse divided by length of the opposite side.
 
 `sine(θ) = opposite / hypotenuse`
 
-If you consider that the sine or cosine of any `θ` has to be a point on the 
-circle, and you know that sine represents the "height", that allows you predict 
+If you consider that the sine or cosine of any `θ` has to be a point on the
+circle, and you know that sine represents the "height", that allows you predict
 sine for special degrees, like:
 
 ``` clojure
@@ -28,27 +28,19 @@ sine for special degrees, like:
 (sin (* 5/2 pi)) ;; →  1
 ```
 
-function | input  | output
--------- | ------ | ------
-`sin`    | `0π`   |  0
-`sin`    | `1/2π` |  1
-`sin`    | `1π`   |  0
-`sin`    | `3/2π` | -1
-`sin`    | `2π`   |  0
-
 To predict these outputs, we need merely think about where the line would be on
-a unit circle for any given angle. 
+a unit circle for any given angle.
 
-For example, for 1/2 π radians, we might ask how far along the circle we are, 
-and to do that we merely multiply any angle in radians by 1/2, which should get 
+For example, for 1/2 π radians, we might ask how far along the circle we are,
+and to do that we merely multiply any angle in radians by 1/2, which should get
 us 1/4. That means we're a quarterway around the circle.
 
 If you can picture this in your head with the unit circle, then it should be
 easy to know that 1/2 π should give you 1, because we're at the very top of the
 unit circle, and `sin` can only tell you how high versus low you are.
 
-> A perhaps silly way to remember what the sine function does is to imagine that 
-> its abbreviation, `sin`, refers to a concept of evil behavior, and some people 
+> A perhaps silly way to remember what the sine function does is to imagine that
+> its abbreviation, `sin`, refers to a concept of evil behavior, and some people
 > believe that sin makes you lower.
 
 ### Example Problem
@@ -63,7 +55,7 @@ climbed for 10 miles. How much was his horizontal climb?
 ``` clojure
 ;; (* 10 0.5) → 5 miles
 (define vertical-distance
-   (* 10 
+   (* 10
       (sin (* 1/6 pi))))
 ```
 
@@ -84,8 +76,8 @@ function | input  | output
 
 Jeff walked up a steep slope with an average of 30° degrees in incline, and he
 climbed for 10 miles. When he got there, he looked over a cliff and he shot a
-light beam straight down to the ground. If I were to measure the difference on 
-the ground between Jeff's original position and the new position of Jeff's 
+light beam straight down to the ground. If I were to measure the difference on
+the ground between Jeff's original position and the new position of Jeff's
 laser, how much change would I find?
 
 1. `cosine(θ) = adjacent / hypotenuse`
@@ -100,12 +92,12 @@ laser, how much change would I find?
 
 ## `tan` Tangent
 
-Finally we get to tangent, which is defined as the ratio of the opposite side 
-to the adjacent side. 
+Finally we get to tangent, which is defined as the ratio of the opposite side
+to the adjacent side.
 
 Let's consider the line segment below. Given this example, it can be visually
 easy to see how if we stop at any point in the line, say at `seconds(2)`,
-`seconds(4)`, or `seconds(10)`, we can then draw a perfectly straight vertical 
+`seconds(4)`, or `seconds(10)`, we can then draw a perfectly straight vertical
 line down to make a right angle with the `seconds` axis. We should now end up
 with a new right triangle.
 
@@ -114,24 +106,24 @@ ratio of the vertical side to the horizontal side should always be `2:1`. Since
 the `tangent` function finds the ratio between the `vertical` side and the
 `horizontal` side, then `tangent(θ)` will tell you the "velocity".
 
-This graph below is about `63.43°` degrees, which is about `1.10714 π` radians. 
-If you try the values with the `tan` function, it should return approximately 
-`2`. 
+This graph below is about `63.43°` degrees, which is about `1.10714 π` radians.
+If you try the values with the `tan` function, it should return approximately
+`2`.
 
 ``` clojure
-(define vertical:horizontal
-   (tan 1.10714))
+(define vertical/horizontal
+   (tan 0.3524))
 ```
 
 ![triangle](/img/test-2.png)
 
 ### Example Problem
 
-Alice is trying to determing the height of a very tall rectangular building. 
+Alice is trying to determing the height of a very tall rectangular building.
 From the ground, she measures that she is 57 meters away from the building. She
 then plants a small laser in the ground, and points it to the very edge of the
-building, thereby forming a right triangle with the building side, the laser 
-path, and the ground. She measures the angle of the laser from the ground to be 
+building, thereby forming a right triangle with the building side, the laser
+path, and the ground. She measures the angle of the laser from the ground to be
 55 degrees.
 
 Alice now believes she knows enough to approximate the height of the building.
@@ -145,5 +137,5 @@ Why?
 
 * `sine(θ) = opposite/hypotenuse`, which can tell you "vertical" distance
 * `cosine(θ) = adjacent/hypotenuse`, which can can tell you "horizontal" distance
-* `tangent(θ) = opposite/adjacent`, which is ratio of the vertical to 
+* `tangent(θ) = opposite/adjacent`, which is ratio of the vertical to
   horizontal, which can also be interpreted as "velocity".

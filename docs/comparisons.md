@@ -32,12 +32,18 @@ equal, and then returns either `true` or `false`.
 (= 24 42)  ;; → false
 
 ;; these will return true
-(= (+ 30 15) (+ 15 30))
-(= (* 30 15) (* 15 30))
+(= (+ 30 15) 
+   (+ 15 30))
+
+(= (* 30 15) 
+   (* 15 30))
 
 ;; these will return false
-(= (- 30 15) (- 15 30))
-(= (/ 30 15) (/ 15 30))
+(= (- 30 15) 
+   (- 15 30))
+
+(= (/ 30 15)
+   (/ 15 30))
 ```
 
 Here are some examples with many inputs:
@@ -175,7 +181,7 @@ What will these expressions evaluate to?
 (or true false)
 (and true false)
 
-(or (and) (or))
+(or  (and) (or))
 (and (and) (or))
 
 (or (and true true)
