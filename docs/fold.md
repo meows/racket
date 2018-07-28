@@ -103,8 +103,7 @@ divisible by either `3` or `5`.
 ;; Finds if a number is divisible by 3 or 5, leaving no remainder.
 (define (div-by-3-or-5? n)
     (or (zero? (remainder n 3))
-        (zero? (remainder n 5))
-    )
+        (zero? (remainder n 5)))
 )
 ```
 
@@ -139,52 +138,3 @@ sequential things later on.
 
 `for/fold` is so flexible that if you wanted, you could replicate the power of
 `map` or `filter`.
-
-### `myMap`
-
-`map` is a function which consumes two inputs, a function and a list, so if we
-were to write our own `myMap`, our function should also take two inputs, a
-function `fn` and a sequence `seq`.
-
-``` scheme
-(define (myMap fn seq)
-    (for/fold ([lst (list)])    ;; current list
-              ([i seq])         ;; the sequence we're running over
-              (cons (fn i) lst) ;; the next list
-    )
-)
-```
-
-#### In Plain English
-
-First we define a function `myMap` which takes for input a function `fn` and a
-sequence `seq`. This function will return whatever is the result of `for/fold`.
-Now let's examine what happens inside `for/fold`:
-
-  1. Let there be a variable called `lst`, and let it be initially set to the
-     value of an empty list `(list)`.
-  2. Let us step through every item `i` in the sequence `seq`.
-  3. For every `i` in `seq`, add the result of `(fn i)` to `lst`.
-  4. When we're done stepping through everything, return the updated `lst`.
-
-> Where did `fn` and `seq` come from? It came from when we defined our function
-> `myMap` and we accepted two inputs called `fn` and `seq`.
-
-#### Using `myMap`
-
-If you're feeling a little rusty about the idea of returning functions, you 
-might want to check out the section on [Making Many Functions](function-higher.md).
-
-``` scheme
-(define (line p0 v)
-    (λ (x)
-       (+ p0 (* x v))
-   )
-)
-
-(myMap sqr         (range 5)) ;; → '(0 1 4 9 16)
-(myMap add1        (range 5)) ;; → '(1 2 3 4 5)
-(myMap (line 3 0)  (range 5)) ;; → '(3 3 3 3 3)
-(myMap (line -3 3) (range 5)) ;; → '(-3 0 3 6 9)
-(myMap (line 3 -3) (range 5)) ;; → '(3 0 -3 -6 -9)
-```

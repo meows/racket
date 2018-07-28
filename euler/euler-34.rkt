@@ -21,7 +21,7 @@
     (unfold-right zero?
                   (cut remainder <> base)
                   (cut quotient <> base)
-                  num ))
+                  num))
 
 (fn (digit-factorial-sum nat)
     (apply + (map factorial (N->list nat))))
