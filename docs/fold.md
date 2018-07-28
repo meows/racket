@@ -132,9 +132,6 @@ Now let's look inside the `for/fold`:
 
 ## Why use `for/fold`?
 
-`for/fold` is a tool for doing just about _anything_ you want to a sequence.
-Lists are sequential, strings are sequential, and you'll learn about more
-sequential things later on.
-
-`for/fold` is so flexible that if you wanted, you could replicate the power of
-`map` or `filter`.
+`for/fold` is a tool for doing just about anything you want to a sequence. Lists 
+are sequential, strings are sequential, and you'll learn about more sequential 
+things later on.
