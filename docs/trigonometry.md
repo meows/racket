@@ -28,16 +28,14 @@ sine for special degrees, like:
 (sin (* 5/2 pi)) ;; →  1
 ```
 
-To predict these outputs, we need merely think about where the line would be on
-a unit circle for any given angle.
+Although these values are important, you shouldn't memorize them. To predict 
+these outputs, we need merely think about where the line would intersect the
+perimeter of your unit circle.
 
-For example, for 1/2 π radians, we might ask how far along the circle we are,
-and to do that we merely multiply any angle in radians by 1/2, which should get
-us 1/4. That means we're a quarterway around the circle.
-
-If you can picture this in your head with the unit circle, then it should be
-easy to know that 1/2 π should give you 1, because we're at the very top of the
-unit circle, and `sin` can only tell you how high versus low you are.
+For the above example, if we start from 0 and rotate 1/2 π radians (90° degrees) 
+at a time, you should be able to visualize where you are on the unit circle.
+When we're at 3/2 π, that's the same as a clock hand pointing at 6 pm. Since 
+this is the unit circle with a radius of 1, that means we're at `-1` for height.
 
 > A perhaps silly way to remember what the sine function does is to imagine that
 > its abbreviation, `sin`, refers to a concept of evil behavior, and some people
@@ -64,13 +62,14 @@ climbed for 10 miles. How much was his horizontal climb?
 While the sine of an angle can tell you the "height" of a triangle, the cosine
 of an angle can tell you its "length" or horizontal distance.
 
-function | input  | output
--------- | ------ | ------
-`cos`    | `0π`   |  1
-`cos`    | `1/2π` |  0
-`cos`    | `1π`   | -1
-`cos`    | `3/2π` |  0
-`cos`    | `2π`   |  1
+``` clojure
+(cos (* 0   pi)) ;; →   1
+(cos (* 1/2 pi)) ;; →   0
+(cos (* 2/2 pi)) ;; →  -1
+(cos (* 3/2 pi)) ;; →   0
+(cos (* 4/2 pi)) ;; →   1
+(cos (* 5/2 pi)) ;; →   0
+```
 
 ### Example Problem
 
@@ -131,7 +130,7 @@ Why?
 
 1. `tangent(θ) = opposite / adjacent`
 2. `tangent(55) = opposite / 57`
-3. `57 * tan(55) = opposite`
+3. `57 * tangent(55) = opposite`
 
 ## Summary
 

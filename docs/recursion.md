@@ -156,6 +156,12 @@ pointing to our right, while the shape of Example #2 looks like a straight line?
 If you evaluated a large input like `(factorial 100)`, do you expect the shape
 to change for either example?
 
+This is one way that computer scientists or engineers count the memory 
+requirements of any strategy or program you use to solve a problem -- by looking
+at how much information you're forced to remember.
+
+All programs will have some computation and memory cost.
+
 ## A little aside about `0!`
 
 Of all the examples of factorials, the one that is probably most remarkable to
