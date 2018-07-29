@@ -11,6 +11,10 @@ hide_title: true
 
 * sequence
 * parameter
+* type
+* boolean
+* string
+* list
 
 ## Mathematics
 
@@ -21,7 +25,12 @@ hide_title: true
 * dimension
 * linear
 
-### Numbers
+### Functions
+
+* greatest common divisor (or greatest common factor)
+* least common multiple
+
+### Number Theory
 
 * natural
 * integer
@@ -41,3 +50,9 @@ hide_title: true
 * position
 * velocity
 * acceleration
+
+## Statistics
+
+* mean (average)
+* median
+* mode
