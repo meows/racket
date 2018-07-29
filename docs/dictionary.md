@@ -31,12 +31,15 @@ hide_title: true
 * least common multiple
 * absolute value
 
-### Number Theory
+### Number Sense
 
 * natural
 * integer
 * rational / quotient
 * real
+* commutative
+* transitive
+* associative
 
 ### Geometry
 

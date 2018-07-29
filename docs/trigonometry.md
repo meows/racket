@@ -35,7 +35,7 @@ perimeter of your unit circle.
 For the above example, if we start from 0 and rotate 1/2 π radians (90° degrees) 
 at a time, you should be able to visualize where you are on the unit circle.
 When we're at 3/2 π, that's the same as a clock hand pointing at 6 pm. Since 
-this is the unit circle with a radius of 1, that means we're at `-1` for height.
+this is the unit circle with a radius of 1, that means we're at -1 for height.
 
 > A perhaps silly way to remember what the sine function does is to imagine that
 > its abbreviation, `sin`, refers to a concept of evil behavior, and some people
@@ -134,7 +134,7 @@ Why?
 
 ## Summary
 
-* `sine(θ) = opposite/hypotenuse`, which can tell you "vertical" distance
-* `cosine(θ) = adjacent/hypotenuse`, which can can tell you "horizontal" distance
-* `tangent(θ) = opposite/adjacent`, which is ratio of the vertical to
+* `sine(θ) = opposite / hypotenuse`, which can tell you "vertical" distance
+* `cosine(θ) = adjacent / hypotenuse`, which can can tell you "horizontal" distance
+* `tangent(θ) = opposite / adjacent`, which is ratio of the vertical to
   horizontal, which can also be interpreted as "velocity".
