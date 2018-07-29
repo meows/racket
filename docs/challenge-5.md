@@ -14,8 +14,7 @@ The _sum of the squares_ for the naturals `1..5` is:
    (sqr 2)
    (sqr 3)
    (sqr 4)
-   (sqr 5)
-)
+   (sqr 5))
 ```
 
 The _square of the sum_ for the naturals `1..5` is:

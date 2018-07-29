@@ -62,20 +62,20 @@ is:
 ### From a Table of Values
 
 Below is a table of values containing measurements that somebody took on a
-moving car, where `seconds passed` represents how many seconds have passed from
-the start of measurement, and `meters away` represents how far the car was at
-every second of measurement.
+moving car, where `seconds` represents how many seconds have passed from the 
+start of measurement, and `meters` represents how far the car was at every 
+second of measurement.
 
-seconds passed | meters away
--------------- | -----------
-0              | 10
-1              | 17
-2              | 24
-3              | 31
-4              | 38
-5              | 45
-6              | 52
-7              | 59
+seconds | meters
+--------| ------
+0       | 10
+1       | 17
+2       | 24
+3       | 31
+4       | 38
+5       | 45
+6       | 52
+7       | 59
 
 1. If you graphed these points, what shape do you expect to see?
 
@@ -90,20 +90,20 @@ seconds passed | meters away
 ---
 
 Below is a table of values containing measurements that somebody took on a
-moving car, where `seconds passed` represents how many seconds have passed from
-the start of measurement, and `meters away` represents how far the car was at
+moving car, where `seconds` represents how many seconds have passed from
+the start of measurement, and `meters` represents how far the car was at
 every second of measurement.
 
-seconds passed | meters away
--------------- | -----------
-0              | 40
-1              | 37
-2              | 34
-3              | 31
-4              | 28
-5              | 25
-6              | 22
-7              | 19
+seconds | meters
+------- | ------
+0       | 40
+1       | 37
+2       | 34
+3       | 31
+4       | 28
+5       | 25
+6       | 22
+7       | 19
 
 1. If you graphed these points, what shape do you expect to see?
 

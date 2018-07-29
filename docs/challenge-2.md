@@ -16,4 +16,3 @@ Give a list of integers from `0..1000` but with all odd numbers removed.
 * `odd?`
 * `even?`
 * [`lambda`](lambda.md)
-
