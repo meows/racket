@@ -49,19 +49,18 @@ circle, and you know that sine represents the &quot;height&quot;, that allows yo
 sine for special degrees, like:</p>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  1</span>
-(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>   pi)) <span class="hljs-comment">;; →  0</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; → -1</span>
-(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>   pi)) <span class="hljs-comment">;; →  0</span>
+(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">4</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  1</span>
 </code></pre>
-<p>To predict these outputs, we need merely think about where the line would be on
-a unit circle for any given angle.</p>
-<p>For example, for 1/2 π radians, we might ask how far along the circle we are,
-and to do that we merely multiply any angle in radians by 1/2, which should get
-us 1/4. That means we're a quarterway around the circle.</p>
-<p>If you can picture this in your head with the unit circle, then it should be
-easy to know that 1/2 π should give you 1, because we're at the very top of the
-unit circle, and <code>sin</code> can only tell you how high versus low you are.</p>
+<p>Although these values are important, you shouldn't memorize them. To predict
+these outputs, we need merely think about where the line would intersect the
+perimeter of your unit circle.</p>
+<p>For the above example, if we start from 0 and rotate 1/2 π radians (90° degrees)
+at a time, you should be able to visualize where you are on the unit circle.
+When we're at 3/2 π, that's the same as a clock hand pointing at 6 pm. Since
+this is the unit circle with a radius of 1, that means we're at <code>-1</code> for height.</p>
 <blockquote>
 <p>A perhaps silly way to remember what the sine function does is to imagine that
 its abbreviation, <code>sin</code>, refers to a concept of evil behavior, and some people
@@ -83,18 +82,13 @@ climbed for 10 miles. How much was his horizontal climb?</p>
 <h2><a class="anchor" aria-hidden="true" id="cos-cosine"></a><a href="#cos-cosine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cos</code> Cosine</h2>
 <p>While the sine of an angle can tell you the &quot;height&quot; of a triangle, the cosine
 of an angle can tell you its &quot;length&quot; or horizontal distance.</p>
-<table>
-<thead>
-<tr><th>function</th><th>input</th><th>output</th></tr>
-</thead>
-<tbody>
-<tr><td><code>cos</code></td><td><code>0π</code></td><td>1</td></tr>
-<tr><td><code>cos</code></td><td><code>1/2π</code></td><td>0</td></tr>
-<tr><td><code>cos</code></td><td><code>1π</code></td><td>-1</td></tr>
-<tr><td><code>cos</code></td><td><code>3/2π</code></td><td>0</td></tr>
-<tr><td><code>cos</code></td><td><code>2π</code></td><td>1</td></tr>
-</tbody>
-</table>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →   1</span>
+(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →   0</span>
+(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  -1</span>
+(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →   0</span>
+(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">4</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →   1</span>
+(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →   0</span>
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="example-problem-1"></a><a href="#example-problem-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Problem</h3>
 <p>Jeff walked up a steep slope with an average of 30° degrees in incline, and he
 climbed for 10 miles. When he got there, he looked over a cliff and he shot a
@@ -141,7 +135,7 @@ Why?</p>
 <ol>
 <li><code>tangent(θ) = opposite / adjacent</code></li>
 <li><code>tangent(55) = opposite / 57</code></li>
-<li><code>57 * tan(55) = opposite</code></li>
+<li><code>57 * tangent(55) = opposite</code></li>
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="summary"></a><a href="#summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Summary</h2>
 <ul>
