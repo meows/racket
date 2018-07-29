@@ -58,6 +58,7 @@
 <url> <loc>https://rid.pw/docs/reversal</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/reversal" /> </url>
 <url> <loc>https://rid.pw/docs/sequence-linear</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence-linear" /> </url>
 <url> <loc>https://rid.pw/docs/sequence</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence" /> </url>
+<url> <loc>https://rid.pw/docs/sets</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sets" /> </url>
 <url> <loc>https://rid.pw/docs/setup</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/setup" /> </url>
 <url> <loc>https://rid.pw/docs/skills</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/skills" /> </url>
 <url> <loc>https://rid.pw/docs/terms</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/terms" /> </url>
