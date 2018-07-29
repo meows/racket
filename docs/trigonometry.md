@@ -22,9 +22,9 @@ sine for special degrees, like:
 ``` clojure
 (sin (* 0   pi)) ;; →  0
 (sin (* 1/2 pi)) ;; →  1
-(sin (* 1   pi)) ;; →  0
+(sin (* 2/2 pi)) ;; →  0
 (sin (* 3/2 pi)) ;; → -1
-(sin (* 2   pi)) ;; →  0
+(sin (* 4/2 pi)) ;; →  0
 (sin (* 5/2 pi)) ;; →  1
 ```
 
