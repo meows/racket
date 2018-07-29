@@ -70,10 +70,11 @@ seeing if `(remainder n 2)` is zero, in other words, whether dividing a number
 by `2` leaves no remainder, which is in fact the definition of an even number:
 
 ``` clojure
-(define (even? n)
-    (zero? (remainder n 2)))
+(define (even? n) 
+   (zero? (remainder n 2)))
 
-(define (odd? n) (not (even? n)))
+(define (odd? n) 
+   (not (even? n)))
 ```
 
 ## `abs` Absolute Value

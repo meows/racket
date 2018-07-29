@@ -29,6 +29,7 @@ hide_title: true
 
 * greatest common divisor (or greatest common factor)
 * least common multiple
+* absolute value
 
 ### Number Theory
 
@@ -44,6 +45,9 @@ hide_title: true
 * radians
 * unit circle
 * pi
+* sine
+* cosine
+* tangent
 
 ## Physics
 
