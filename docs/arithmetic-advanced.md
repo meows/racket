@@ -92,7 +92,7 @@ The greatest common divisor `gcd` function takes one or more numbers, and finds
 greatest common divisor or factor among them.
 
 ``` clojure
-(gcd 8 12 16)  ;; → 4
+(gcd  8 12 16) ;; → 4
 (gcd 15 18 27) ;; → 3
 ```
 
@@ -103,6 +103,6 @@ the smallest integer that's divisible by all the inputs integers. It's useful
 for finding out the smallest common denominator between two or more fractions.
 
 ``` clojure
-(lcm 8 12 16)  ;; → 48
+(lcm  8 12 16) ;; → 48
 (lcm 15 20 25) ;; → 300
 ```

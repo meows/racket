@@ -8,16 +8,17 @@ hide_title: true
 
 Before going further, you might want to familiarize yourself with the 
 [Trigonometry](trigonometry.md) section under Concepts. Most or all of the
-functions below assume your units are in radians.
+functions below assume your units are in radians, and all of these functions
+only work approximately.
 
 ## `sin` sine
 
 ``` clojure
 (sin (* 0   pi)) ;; →  0
 (sin (* 1/2 pi)) ;; →  1
-(sin (* 1   pi)) ;; →  0
+(sin (* 2/2 pi)) ;; →  0
 (sin (* 3/2 pi)) ;; → -1
-(sin (* 2   pi)) ;; →  0
+(sin (* 4/2 pi)) ;; →  0
 (sin (* 5/2 pi)) ;; →  1
 ```
 
@@ -26,16 +27,16 @@ functions below assume your units are in radians.
 ``` clojure
 (cos (* 0   pi)) ;; →  1
 (cos (* 1/2 pi)) ;; →  0
-(cos (* 1   pi)) ;; → -1
+(cos (* 2/2 pi)) ;; → -1
 (cos (* 3/2 pi)) ;; →  0
-(cos (* 2   pi)) ;; →  1
+(cos (* 4/2 pi)) ;; →  1
 (cos (* 5/2 pi)) ;; →  0
 ```
 
 ## `tan` tangent
 
 ``` clojure
-(tan (* 0 pi))   ;; →  0
+(tan (* 0   pi)) ;; →  0
 (tan (* 1/4 pi)) ;; →  1
 (tan (* 2/4 pi)) ;; →  undefined
 (tan (* 3/4 pi)) ;; → -1
@@ -77,4 +78,3 @@ Roughly translates radians into degrees.
 (radians->degrees 1.5707)     ;; → 89.9944
 (radians->degrees (* 1/2 pi)) ;; → 90
 ```
-
