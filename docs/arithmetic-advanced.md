@@ -107,3 +107,13 @@ for finding out the smallest common denominator between two or more fractions.
 (lcm  8 12 16) ;; → 48
 (lcm 15 20 25) ;; → 300
 ```
+
+## `max`
+
+`max` takes one or more numbers and returns the biggest value found among them:
+
+``` clojure
+(max 3)                ;; → 3
+(max -3 0 3 4)         ;; → 4
+(apply max (range 10)) ;; → 9
+```

@@ -110,8 +110,5 @@ These functions tend to work with radians, and they often give approximations.
 `sin`
 `cos`
 `tan`
-`asin`
-`acos`
-`atan`
 `degrees->radians`
 `radians->degrees`
