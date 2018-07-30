@@ -29,12 +29,14 @@ sets that deal with other kinds of mathematical objects, but you can actually
 have sets of just about anything, as long as you follow the rule of uniqueness
 and countability:</p>
 <p><code>{ cat, dog, banana, 4 }</code></p>
-<p>A set can even have sets inside:</p>
-<pre><code class="hljs">{ }
+<p>A set can even have sets inside; try to count how many items are in each set:</p>
+<pre><code class="hljs">{ } 
 
-{<span class="hljs-number">0</span>}
+{ <span class="hljs-number">0</span> }
 
-{<span class="hljs-number">0</span>, {<span class="hljs-number">0</span>}}
+{ <span class="hljs-number">0</span>, 
+  {<span class="hljs-number">0</span>}
+}
 
 { <span class="hljs-number">0</span>, 
   {<span class="hljs-number">0</span>}, 
@@ -47,4 +49,19 @@ and countability:</p>
   {<span class="hljs-number">0</span>, {<span class="hljs-number">0</span>}, {<span class="hljs-number">0</span>, {<span class="hljs-number">0</span>}}} 
 }
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="redefining-the-function"></a><a href="#redefining-the-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redefining the function</h2>
+<p>I've mentioned before that a function is a mathematical machine which, for every
+input, it will give back one output. We will refine that definition further. A
+function takes any item in a set and returns one thing. The input set is called
+a <strong>domain</strong>, and the output is called the <strong>codomain</strong>.</p>
+<h2><a class="anchor" aria-hidden="true" id="sets-in-racket"></a><a href="#sets-in-racket" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sets in Racket</h2>
+<p>A set in Racket is like a list except that all its members must be unique. Any
+redundant members will be removed by Racket's set.</p>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">set</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">5</span>) <span class="hljs-comment">;; → (set 1 2 3 4 5)</span>
+</code></pre>
+<p><code>set?</code>
+<code>subset?</code>
+<code>set-add</code>
+<code>set-remove</code>
+<code>set-clear</code></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#redefining-the-function">Redefining the function</a></li><li><a href="#sets-in-racket">Sets in Racket</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
