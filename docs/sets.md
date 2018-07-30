@@ -58,6 +58,20 @@ input, it will give back one output. We will refine that definition further. A
 function takes any item in a set and returns one thing. The input set is called
 a **domain**, and the output is called the **codomain**.
 
+### What about multiple inputs?
+
+I've mentioned that for every unique thing in a domain, a function returns one
+thing. But what about functions with multiple inputs? For example, a function
+which would give the volume of a rectangular prism:
+
+```
+prism(l, w, h) = l * w * h
+```
+
+One way of thinking about this is to imagine that we're still taking one thing
+and giving one thing back -- but this time `prism` consumes a single list of 
+3 real numbers and returns a single real number.
+
 ## Sets in Racket
 
 A set in Racket is like a list except that all its members must be unique. Any
