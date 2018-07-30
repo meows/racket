@@ -28,14 +28,16 @@ and countability:
 
 `{ cat, dog, banana, 4 }`
 
-A set can even have sets inside:
+A set can even have sets inside; try to count how many items are in each set:
 
 ```
-{ }
+{ } 
 
-{0}
+{ 0 }
 
-{0, {0}}
+{ 0, 
+  {0}
+}
 
 { 0, 
   {0}, 
@@ -51,3 +53,22 @@ A set can even have sets inside:
 
 ## Redefining the function
 
+I've mentioned before that a function is a mathematical machine which, for every
+input, it will give back one output. We will refine that definition further. A
+function takes any item in a set and returns one thing. The input set is called
+a **domain**, and the output is called the **codomain**.
+
+## Sets in Racket
+
+A set in Racket is like a list except that all its members must be unique. Any
+redundant members will be removed by Racket's set.
+
+``` clojure
+(set 1 2 3 3 4 5 5) ;; → (set 1 2 3 4 5)
+```
+
+`set?`
+`subset?`
+`set-add`
+`set-remove`
+`set-clear`
