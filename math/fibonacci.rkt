@@ -22,12 +22,12 @@
                           u
                           v
                           (-- count))]))
-    (loop 1 0 0 1 n))
+    (loop 1 0 0 1 n)
+)
 
 (fn (fib n)
     (cond [(zero? n) 0]
           [(one? n)  1]
           [else (+ (fib (+ n -1)) 
-                   (fib (+ n -2)))]
-    )
+                   (fib (+ n -2)))])
 )

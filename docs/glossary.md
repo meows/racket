@@ -101,6 +101,7 @@ These functions consume one or more numbers and returns a number.
 `quotient`
 `remainder`
 `round`
+`max`
 
 ### Geometry
 
