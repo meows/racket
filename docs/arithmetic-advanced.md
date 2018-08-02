@@ -64,9 +64,12 @@ returns a number `e` for which `b` to the power of `e` will equal `n`.
 (log 16 2) ;; → 4
 (log 32 2) ;; → 5
 
-(log 64 2) ;; → 6
-(log 64 4) ;; → 3
-(log 64 8) ;; → 2
+(log 64 2)  ;; → 6
+(log 64 4)  ;; → 3
+(log 64 8)  ;; → 2
+(log 64 16) ;; → 1.5
+(log 64 32) ;; → 1.2
+(log 64 64) ;; → 1
 ```
 
 ## `remainder`
