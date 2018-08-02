@@ -63,6 +63,11 @@ ratio of lengths between the opposite and adjacent side of a triangle.
 The arcsine function is also known as the inverse cosine function, and it 
 consumes a ratio to return an angle in radians.
 
+``` clojure
+;; What angle would we expect when sine(θ) = -1?
+(radians->degrees (asin -1)) ;; → -90.0
+```
+
 ## `acos` arccosine
 
 The arccosine function is also known as the inverse cosine function, and it 
@@ -78,7 +83,8 @@ consumes a ratio to return an angle in radians.
 Roughly translates degrees into radians.
 
 ``` clojure
-(degrees->radians 90) ;; → 1.5707 -- about 1/2 π
+(degrees->radians 90)                 ;; → 1.5707963267948966
+(radians->degrees 1.5707963267948966) ;; → 90.0
 ```
 
 ## `radians->degrees`
@@ -87,8 +93,7 @@ Roughly translates radians into degrees.
 
 ``` clojure
 (* 1/2 pi)                    ;; → 1.5707963267948966
-(radians->degrees (* 1/2 pi)) ;; → 90
-
 (asin 1)                      ;; → 1.5707963267948966
-(radians->degrees (asin 1))   ;; → 90
+(radians->degrees (* 1/2 pi)) ;; → 90.0
+(radians->degrees (asin 1))   ;; → 90.0
 ```

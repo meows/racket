@@ -58,6 +58,8 @@
     "dimension": "dimension",
     "Dimension": "Dimension",
     "exam": "exam",
+    "exponentiation": "Exponentiation",
+    "Exponentiation": "Exponentiation",
     "expression": "expression",
     "Expression": "Expression",
     "fold": "fold",
