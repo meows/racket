@@ -53,8 +53,8 @@ base, and (2) the second one is the exponent or power. Therefore:
 
 ## `log` Logarithm
 
-The function `log` consumes two inputs, (1) a number `n` and (2) a base `b`, and
-it returns a number `e` for which `b` to the power of `e` will equal `n`.
+The function `log` consumes two inputs, a number `n` and a base `b`, and it 
+returns a number `e` for which `b` to the power of `e` will equal `n`.
 
 ``` clojure
 (log  1 2) ;; → 0
@@ -64,9 +64,9 @@ it returns a number `e` for which `b` to the power of `e` will equal `n`.
 (log 16 2) ;; → 4
 (log 32 2) ;; → 5
 
-(log 64 2)  ;; → 6
-(log 64 4)  ;; → 3
-(log 64 8)  ;; → 2
+(log 64 2) ;; → 6
+(log 64 4) ;; → 3
+(log 64 8) ;; → 2
 ```
 
 ## `remainder`
