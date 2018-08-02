@@ -65,6 +65,8 @@ consumes a ratio to return an angle in radians.
 
 ``` clojure
 ;; What angle would we expect when sine(θ) = -1?
+(radians->degrees (asin  1)) ;; → 90.0
+(radians->degrees (asin  0)) ;; → 0
 (radians->degrees (asin -1)) ;; → -90.0
 ```
 
@@ -83,6 +85,12 @@ consumes a ratio to return an angle in radians.
 
 The arctangent function is also known as the inverse cosine function, and it 
 consumes a ratio to return an angle in radians.
+
+``` clojure
+(radians->degrees (atan  1)) ;; → 45.0
+(radians->degrees (atan  0)) ;; → 0
+(radians->degrees (atan -1)) ;; → -45.0
+```
 
 ## `degrees->radians`
 
