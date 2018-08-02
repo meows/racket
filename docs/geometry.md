@@ -13,6 +13,10 @@ only work approximately.
 
 ## `sin` sine
 
+`sin` consumes an angle in radians and returns a real which represents the ratio
+of lengths between the opposite side and hypotenuse of a triangle. It's 
+frequently used to determine the "vertical" distance.
+
 ``` clojure
 (sin (* 0   pi)) ;; →  0
 (sin (* 1/2 pi)) ;; →  1
@@ -24,6 +28,10 @@ only work approximately.
 
 ## `cos` cosine
 
+`cos` consumes an angle in radians and returns a real which represents the ratio
+of lengths between the adjacent side and hypotenuse of a triangle. It's 
+frequently used to determine the "horizontal" distance.
+
 ``` clojure
 (cos (* 0   pi)) ;; →  1
 (cos (* 1/2 pi)) ;; →  0
@@ -34,6 +42,9 @@ only work approximately.
 ```
 
 ## `tan` tangent
+
+`tan` consumes an angle in radians and returns a rational which represents the
+ratio of lengths between the opposite and adjacent side of a triangle.
 
 ``` clojure
 (tan (* 0   pi)) ;; →  0
@@ -75,6 +86,9 @@ Roughly translates degrees into radians.
 Roughly translates radians into degrees.
 
 ``` clojure
-(radians->degrees 1.5707)     ;; → 89.9944
+(* 1/2 pi)                    ;; → 1.5707963267948966
 (radians->degrees (* 1/2 pi)) ;; → 90
+
+(asin 1)                      ;; → 1.5707963267948966
+(radians->degrees (asin 1))   ;; → 90
 ```

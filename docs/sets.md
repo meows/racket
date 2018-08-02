@@ -56,7 +56,8 @@ A set can even have sets inside; try to count how many items are in each set:
 I've mentioned before that a function is a mathematical machine which, for every
 input, it will give back one output. We will refine that definition further. A
 function takes any item in a set and returns one thing. The input set is called
-a **domain**, and the output is called the **codomain**.
+a **domain**, and the set containing all your outputs is called the 
+**co-domain**.
 
 ### What about multiple inputs?
 

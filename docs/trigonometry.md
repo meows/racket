@@ -32,6 +32,8 @@ Although these values are important, you shouldn't memorize them. To predict
 these outputs, we need merely think about where the line would intersect the
 perimeter of your unit circle.
 
+![sine-cosine](https://upload.wikimedia.org/wikipedia/commons/7/71/Sine_cosine_one_period.svg)
+
 For the above example, if we start from 0 and rotate 1/2 π radians (90° degrees) 
 at a time, you should be able to visualize where you are on the unit circle.
 When we're at 3/2 π, that's the same as a clock hand pointing at 6 pm. Since 
