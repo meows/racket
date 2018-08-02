@@ -73,6 +73,12 @@ consumes a ratio to return an angle in radians.
 The arccosine function is also known as the inverse cosine function, and it 
 consumes a ratio to return an angle in radians.
 
+``` clojure
+(acos  1) ;; → 0
+(acos  0) ;; → 1.5707963267948966
+(acos -1) ;; → 3.141592653589793
+```
+
 ## `atan` arctangent
 
 The arctangent function is also known as the inverse cosine function, and it 
