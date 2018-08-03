@@ -138,12 +138,3 @@ for finding out the smallest common denominator between two or more fractions.
 (max -3 0 3 4)         ;; → 4
 (apply max (range 10)) ;; → 9
 ```
-
-## `rationalize`
-
-`rationalize` takes two inputs, a real number `n` and a rational precision `p`,
-and it finds the nearest rational within `p` distance of `n`.
-
-``` clojure
-(rationalize pi 1/20) ;; 3.1666666666666665
-```
