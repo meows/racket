@@ -19,7 +19,7 @@
 ; b   - trailing fib state tuple
 ; sum - running sum of even fibonacci numbers
 (fn (euler-2 [a 1] [b 0] #:sum [sum 0])
-    (if (< max a) 
+    (if (< max a)
         sum
         (euler-2 (+ a b) a #:sum (if (odd? a) sum (+ sum a)))))
 
