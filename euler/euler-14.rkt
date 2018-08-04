@@ -16,8 +16,8 @@
 (fn (collatz [n 0] #:index [i 0])
     (cond [(one? n) i]
           [(even? n) (collatz (/ n 2) #:index (++ i))]
-          [else (collatz (+ 1 (* 3 n)) #:index (++ i))]
-))
+          [else (collatz (+ 1 (* 3 n)) #:index (++ i))])
+)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
@@ -28,7 +28,7 @@
               (let ([steps (collatz n)])
                    (if (< best steps)
                        (values steps n)
-                       (values best seen-at)))
-))
+                       (values best seen-at))))
+)
 
 (time (euler-14))
