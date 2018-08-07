@@ -15,6 +15,7 @@ hide_title: true
 * boolean
 * string
 * list
+* assignment
 
 ## Mathematics
 
@@ -24,6 +25,7 @@ hide_title: true
 * constant
 * dimension
 * linear
+* inverse
 
 ### Functions
 
@@ -51,12 +53,17 @@ hide_title: true
 * sine
 * cosine
 * tangent
+* arcsine
+* arccosine
+* arctangent
 
 ## Physics
 
 * position
 * velocity
 * acceleration
+* momentum
+* mass
 
 ## Statistics
 
