@@ -10,10 +10,10 @@ hide_title: true
 ## `expt` Exponentiation
 
 The exponentiation function `expt` requires two inputs, (1) the first one is the
-base, and (2) the second one is the exponent or power. Therefore:
-  * `(expt 3 4)` should be interpreted as _3 to the power of 4_.
-  * `(expt 4 3)` should be interpreted as _4 to the power of 3_.
-  * `(expt 5 2)` should be interpreted as _5 to the power of 2_.
+base, and (2) the second one is the exponent. Therefore:
+  * `(expt 3 4)` should be interpreted as _3 to the exponent of 4_.
+  * `(expt 4 3)` should be interpreted as _4 to the exponent of 3_.
+  * `(expt 5 2)` should be interpreted as _5 to the exponent of 2_.
 
 ``` clojure
 (expt 1 0) ;; → (*)         → 1
@@ -22,28 +22,28 @@ base, and (2) the second one is the exponent or power. Therefore:
 (expt 4 3) ;; → (* 4 4 4)   → 64
 (expt 5 4) ;; → (* 5 5 5 5) → 625
 
-;; Exponentiation by power of 2
+;; Exponentiation by exponent of 2
 (expt 1 2) ;; → 1
 (expt 2 2) ;; → 4
 (expt 3 2) ;; → 9
 (expt 4 2) ;; → 16
 (expt 5 2) ;; → 25
 
-;; Exponentiation by power of 1/2
+;; Exponentiation by exponent of 1/2
 (expt  1 1/2) ;; → 1
 (expt  4 1/2) ;; → 2
 (expt  9 1/2) ;; → 3
 (expt 16 1/2) ;; → 4
 (expt 25 1/2) ;; → 5
 
-;; Exponentiation by power of 3
+;; Exponentiation by exponent of 3
 (expt 1 3) ;; → 1
 (expt 2 3) ;; → 8
 (expt 3 3) ;; → 27
 (expt 4 3) ;; → 64
 (expt 5 3) ;; → 125
 
-;; Exponentiation by power of 1/3
+;; Exponentiation by exponent of 1/3
 (expt   1 1/3) ;; → 1
 (expt   8 1/3) ;; → 2
 (expt  27 1/3) ;; → 3
@@ -54,7 +54,7 @@ base, and (2) the second one is the exponent or power. Therefore:
 ## `log` Logarithm
 
 The function `log` consumes two inputs, a number `n` and a base `b`, and it 
-returns a number `e` for which `b` to the power of `e` will equal `n`.
+returns a number `e` for which `b` to the exponent of `e` will equal `n`.
 
 ``` clojure
 (log  1 2) ;; → 0
@@ -70,6 +70,17 @@ returns a number `e` for which `b` to the power of `e` will equal `n`.
 (log 64 16) ;; → 1.5
 (log 64 32) ;; → 1.2
 (log 64 64) ;; → 1
+```
+
+## `quotient`
+
+The `quotient` function helps you find the quotient of a division between two
+natural numbers, where the first number is the *dividend*, and the second number
+is the *divisor*.
+
+``` clojure
+(quotient 123456789 10) ;; → 12345678
+(quotient 987654321 10) ;; → 98765432
 ```
 
 ## `remainder`

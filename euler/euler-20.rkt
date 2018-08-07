@@ -28,7 +28,6 @@
 ;; Solution
 
 (def euler-20 
-     (apply + (natural->list (factorial 100)))
-)
+     (apply + (natural->list (factorial 100))))
 
 euler-20  ;; → 648

@@ -10,13 +10,16 @@ hide_title: true
 Write a function called `digits` which consumes a natural input `n` and returns
 a list of the digits of `n`.
 
-For example, `(digits 1320)` should return the list `'(1 3 2 0)`.
+For example, `(natural->digits 1320)` should return the list `'(1 3 2 0)`.
 
 ```
-(define (digits n)
+(define (natural->digits n [digits '()])
    (...)
 )
 ```
 
-## Possible Clues
-* [`for/fold`](fold.md)
+## Clue
+
+* `append`
+* `quotient`
+* `remainder`
