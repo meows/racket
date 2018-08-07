@@ -50,7 +50,9 @@
 <url> <loc>https://rid.pw/docs/inverse</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/inverse" /> </url>
 <url> <loc>https://rid.pw/docs/javascript-0</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/javascript-0" /> </url>
 <url> <loc>https://rid.pw/docs/javascript-1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/javascript-1" /> </url>
+<url> <loc>https://rid.pw/docs/javascript-2</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/javascript-2" /> </url>
 <url> <loc>https://rid.pw/docs/lambda</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lambda" /> </url>
+<url> <loc>https://rid.pw/docs/linear-systems</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/linear-systems" /> </url>
 <url> <loc>https://rid.pw/docs/lists</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lists" /> </url>
 <url> <loc>https://rid.pw/docs/Operators</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/Operators" /> </url>
 <url> <loc>https://rid.pw/docs/racket-install</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/racket-install" /> </url>
