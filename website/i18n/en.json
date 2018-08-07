@@ -96,6 +96,8 @@
     "lists": "lists",
     "Lists": "Lists",
     "Operators": "Operators",
+    "peano": "peano",
+    "Peano": "Peano",
     "racket-install": "Installing Racket",
     "Installation": "Installation",
     "racket-intro": "Dive into Racket",

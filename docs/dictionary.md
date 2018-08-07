@@ -22,10 +22,14 @@ hide_title: true
 * function
 * recursion
 * ratio
+* proportion
 * constant
 * dimension
 * linear
 * inverse
+* commutative
+* transitive
+* associative
 
 ### Functions
 
@@ -39,9 +43,6 @@ hide_title: true
 * integer
 * rational / quotient
 * real
-* commutative
-* transitive
-* associative
 
 ### Geometry
 

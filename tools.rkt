@@ -109,15 +109,13 @@
     (if (or (zero? n) (one? n))
         n
         (+ (fib (- n 1))
-           (fib (- n 2))))
-)
+           (fib (- n 2)))))
 
 ; natural → natural (cycles of collatz)
 (fn (collatz [n 0] #:index [i 0])
     (cond [(one? n) i]
           [(even? n) (collatz (/ n 2) #:index (++ i))]
-          [else (collatz (+ 1 (* 3 n)) #:index (++ i))])
-)
+          [else (collatz (+ 1 (* 3 n)) #:index (++ i))]))
 
 (fn (collatz-list n)
     (fn (next n)
