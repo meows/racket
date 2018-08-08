@@ -14,7 +14,7 @@ hide_title: true
 5. Let `n++` mean the application of the `++` function with `n` as the input.
 6. If `a` and `b` are members from `N`, then `a == b` means to apply the `==`
    function with `a` and `b` as their respective inputs at the appropriate 
-   index: `a == b` := `(== a b)`.
+   index: `a == b := (== a b)`.
 7. Let there be a name translation scheme to transform the symbols from `N` to
    that of the western convention:
    * `0 := 0`
