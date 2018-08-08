@@ -15,10 +15,8 @@ hide_title: true
 6. If `a` and `b` are members from `N`, then `a == b` means to apply the `==`
    function with `a` and `b` as their respective inputs at the appropriate 
    index: `a == b` := `(== a b)`.
-
 7. Let there be a name translation scheme to transform the symbols from `N` to
    that of the western convention:
-
    * `0 := 0`
    * `1 := 0++`
    * `2 := (0++)++`
@@ -89,7 +87,8 @@ means `true`, and `0` means `false`.
 
 ## Observations
 
-1. Any notion of the naturals always has a metaphorical `0`.
+1. Any notion of the naturals always has a metaphorical `0`, which is privileged
+   under `++`.
 2. Any notion of the naturals also comes equipped with two operators, a binary
    equality `==` and a unary successor `++`.
 3. The relationship between one natural and any other are determined solely by
