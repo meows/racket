@@ -31,13 +31,22 @@ hide_title: true
 
 1. Let `n++` be a natural.
 2. Let `n++` never equal `0`. 
-3. If `a` and `b` are naturals, let `a++ == b++` be true only if `a == b`
+3. If `a` and `b` are naturals, let `a++ == b++` be true only if `a == b`. This
+   rule also means that every succession is unique.
 
 ## Equality `==`
 
 1. `a == a`.
 2. if `a == b` then `b == a`.
 3. if `a == b` and `b == c` then `a == c`.
+
+### Informal Definition
+
+The equality we define here is a 2-arity function on the naturals which returns 
+either `true` or `false` for every pair. Alternatively, if the reader objects to
+new symbols with deliberate cultural meaning, we might instead arbitrarily 
+assign the result of `==` to either `0` or `0++`, with a wink about how `0++`
+means `true`, and `0` means `false`.
 
 ## Unit Test
 
@@ -51,12 +60,12 @@ hide_title: true
 ### Is 3 equal to 0?
 
 1. Recall that `3 := 2++`
-2. `2++` cannot be `0` because it cannot be the successor to anything
+2. `2++` cannot be `0` because it cannot be the successor to anything.
 
 ### Is 4 equal to 1?
 
 1. Assume that `4 == 1` 
 2. Then `3++ == 0++`
-3. This means that both `1` and `4` are natural successors to either `0` or `3`.
-4. This contradicts our rule that `n++` can't equal `n`, which is another way of
-   saying that there can only be one unique successor to any `n`.
+3. Therefore `3 == 0` by our rule of how `a++ == b++` translates to `a == b`.
+4. But recall that `3 := 2++`, which implies that `2++ == 0`, which violates our
+   rule that `n++` can never equal `0`.
