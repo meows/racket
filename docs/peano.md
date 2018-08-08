@@ -31,7 +31,7 @@ hide_title: true
 
 1. Let `n++` be a natural.
 2. Let `n++` never equal `0`. 
-3. Let `a++` never equal `a`.
+3. If `a` and `b` are naturals, let `a++ == b++` be true only if `a == b`
 
 ## Equality `==`
 
@@ -44,3 +44,22 @@ hide_title: true
 
 ## Unit Test
 
+### Is 3 natural?
+
+1. 1 := 0++
+2. 2 := 1++
+3. 3 := 2++
+4. 3 is natural because it is the successor of a natural
+
+### Is 3 equal to 0?
+
+1. Recall that `3 := 2++`
+2. `2++` cannot be `0` because it cannot be the successor to anything
+
+### Is 4 equal to 1?
+
+1. Assume that `4 == 1` 
+2. Then `3++ == 0++`
+3. This means that both `1` and `4` are natural successors to either `0` or `3`.
+4. This contradicts our rule that `n++` can't equal `n`, which is another way of
+   saying that there can only be one unique successor to any `n`.
