@@ -35,21 +35,18 @@ hide_title: true
 
 ## Equality `==`
 
-1. `a == a`
-2. if `a == b` then `b == a`
-3. if `a == b` and `b == c` then `a == c`
-
-``` clojure
-```
+1. `a == a`.
+2. if `a == b` then `b == a`.
+3. if `a == b` and `b == c` then `a == c`.
 
 ## Unit Test
 
 ### Is 3 natural?
 
-1. 1 := 0++
-2. 2 := 1++
-3. 3 := 2++
-4. 3 is natural because it is the successor of a natural
+1. `1 := 0++`.
+2. `2 := 1++`.
+3. `3 := 2++`.
+4. `3` is natural because it is the successor of a natural.
 
 ### Is 3 equal to 0?
 
