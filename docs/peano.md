@@ -6,7 +6,7 @@ hide_title: true
 
 # Definitions
 
-1. Let there be a non-empty set `N` called the naturals, and let `n` be any
+1. Let there be an infinite set `N` called the naturals, and let `n` be any
    natural within `N`.
 2. Let `N` contain an element that looks like `0`.
 3. Let `N` be equipped with a unary function `++`.
@@ -27,18 +27,35 @@ hide_title: true
 
 # Axioms
 
-## Sucessor `++`
-
-1. Let `n++` be a natural.
-2. Let `n++` never equal `0`. 
-3. If `a` and `b` are naturals, let `a++ == b++` be true only if `a == b`. This
-   rule also means that every succession is unique.
-
 ## Equality `==`
+
+Equality is the most basic operator of all and often goes unmentioned. Equality
+allows us to compare different things in math and say whether they are unique,
+otherwise I wouldn't be able to ask whether `3` is different from `5`.
+Generally, it's only when things change that we can appreciate behavior, and
+`==` allows us to detect change.
 
 1. `a == a`.
 2. if `a == b` then `b == a`.
 3. if `a == b` and `b == c` then `a == c`.
+
+* The first rule allows us to say when things don't change.
+* The second rule says that order doesn't matter to `==` -- it's commutative.
+* The third rule is called `transitivity`, as if the identity of `a` was 
+  transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
+  rename things.
+
+## Sucessor `++`
+
+1. Let `n++` be a natural.
+2. Let `n++` never equal `0`. 
+3. If `a` and `b` are naturals, let `a++ == b++` be true iff `a == b`. This
+   rule also means that every succession is unique.
+
+* The first rule defines the domain and codomain of `++`.
+* The second rule constrains the range of `++` and privileges `0` under `++`.
+* The third rule ensures that every natural is unique; this stops looping number
+  systems.
 
 ### Informal Definition
 
@@ -69,3 +86,12 @@ means `true`, and `0` means `false`.
 3. Therefore `3 == 0` by our rule of how `a++ == b++` translates to `a == b`.
 4. But recall that `3 := 2++`, which implies that `2++ == 0`, which violates our
    rule that `n++` can never equal `0`.
+
+## Observations
+
+1. Any notion of the naturals always has a metaphorical `0`.
+2. Any notion of the naturals also comes equipped with two operators, a binary
+   equality `==` and a unary successor `++`.
+3. The relationship between one natural and any other are determined solely by
+   the `++` and `==` operators. That means any more advanced operator will
+   ultimately be based on `++` and `==`.
