@@ -37,7 +37,6 @@ Generally, it's only when things change that we can appreciate behavior, and
 2. if `a == b` then `b == a`.
 3. if `a == b` and `b == c` then `a == c`.
 
-* The first rule allows us to say when things don't change.
 * The second rule says that order doesn't matter to `==` -- it's commutative.
 * The third rule is called `transitivity`, as if the identity of `a` was 
   transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
@@ -58,10 +57,10 @@ Generally, it's only when things change that we can appreciate behavior, and
 ### Informal Definition
 
 The equality we define here is a 2-arity function on the naturals which returns 
-either `true` or `false` for every pair. Alternatively, if the reader objects to
-new symbols with deliberate cultural meaning, we might instead arbitrarily 
-assign the result of `==` to either `0` or `0++`, with a wink about how `0++`
-means `true`, and `0` means `false`.
+either `true` or `false` for every pair of inputs. Alternatively, if the reader 
+objects to new symbols with deliberate cultural meaning, we might instead 
+arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about 
+how `0++` means `true`, and `0` means `false`.
 
 ## Unit Test
 
@@ -92,5 +91,27 @@ means `true`, and `0` means `false`.
 2. Any notion of the naturals also comes equipped with two operators, a binary
    equality `==` and a unary successor `++`.
 3. The relationship between one natural and any other are determined solely by
-   the `++` and `==` operators. That means any more advanced operator will
-   ultimately be based on `++` and `==`.
+   the `++` and `==` operators. That means any higher order operator will
+   ultimately be reducible to `++` and `==`.
+
+``` clojure
+(require (rename-in racket/base [define fn]))
+(require (rename-in racket/base [define def]))
+
+(fn (zero f x) x)
+(fn (one f x) (f x))
+(fn (two f x) (f (f x)))
+
+(fn (next n f x)
+  (f (n (f x)))
+)
+```
+
+The Untyped Lambda Calculus encodes the concept of the naturals through repeated
+applications of a function on a value. Addition by one, or "succession", is
+encoded by an extra repeated application of a function.
+
+Interestingly, because the results are more functions, it becomes a curious
+question as to how one computes whether one function is the same as another.
+Perhaps systematic experimentation to determine that a sequence of values under
+an operator behaves like the naturals.

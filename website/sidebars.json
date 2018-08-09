@@ -27,8 +27,7 @@
          "cond",
          "function-sequence",
          "fold",
-         "geometry",
-         "peano"
+         "geometry"
       ],
       "JavaScript": [
          "javascript-0",
