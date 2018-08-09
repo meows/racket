@@ -135,3 +135,6 @@ Now let's look inside the `for/fold`:
 `for/fold` is a tool for doing just about anything you want to a sequence. Lists 
 are sequential, strings are sequential, and you'll learn about more sequential 
 things later on.
+
+## `for/fold` with multiple parameters
+

@@ -12,22 +12,19 @@
 ;; Problem 8
 
 (def raw (apply string-append (file->lines "data/euler-08.txt")))
+(fn char->number (λ~> char->integer (+ -48)))
 (def data (for/vector ([n raw]) (char->number n)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn char->number (λ~> char->integer (+ -48)))
-
 (fn (product-range start)
     (for/fold ([product 1])
               ([n (in-vector data start (+ 13 start))])
-              (* product n))
-)
+              (* product n)))
 
 (for/fold ([best 0])
-          ([n (range 0 (+ -13 (vector-length data)))])
+          ([n (range (+ -13 (vector-length data)))])
           (if (< (product-range n) best)
               best
-              (product-range n))
-)
+              (product-range n)))
