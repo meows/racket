@@ -15,9 +15,9 @@
 
 ;; Finds the number of steps it takes for a Collatz number chain to reach 1.
 (fn (collatz [n 0] #:steps [i 0])
-    (cond [(one? n) i]
-          [(even? n) (collatz (/ n 2) #:steps (++ i))]
-          [else (collatz (+ 1 (* 3 n)) #:steps (++ i))]))
+    (cond [(one? n)  i]
+          [(even? n) (collatz (/ n 2)       #:steps (++ i))]
+          [else      (collatz (+ 1 (* 3 n)) #:steps (++ i))]))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
