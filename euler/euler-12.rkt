@@ -21,11 +21,11 @@
 ;; Solve
 
 (fn (euler-12 [n 0])
-    (let* ([current (triangle n)])
-          (if (okay? current)
-              current
-              (euler-12 (++ n)))))
+    (let ([current (triangle n)])
+         (if (okay? current)
+             current
+             (euler-12 (++ n)))))
 
-(for/first ([n (in-naturals)])
-
-)
+(for/first ([n (in-naturals)] 
+            [v (in-value (triangle n))] #:when (okay? v))
+           (triangle v))
