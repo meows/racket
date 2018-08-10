@@ -23,9 +23,11 @@
                   (cut quotient <> base)
                   num))
 
+;; n → sum the digits of n!
 (fn (digit-factorial-sum nat)
     (apply + (map factorial (N->list nat))))
 
+;; Check if a number is equal to the sum of the digits of (n!).
 (fn (euler-check nat) 
     (= nat (digit-factorial-sum nat)))
 
