@@ -15,11 +15,14 @@
 
 (def raw-strings (file->lines "data/euler-99.txt"))
 
-(def tuples 
-     (~> raw-strings 
-         (map (λ (string) (string-split string  ",")) _)
-         (map (λ (strings) (map string->number strings)) _)))
+(define tuples
+    (~> raw-strings 
+        (map (λ (string)  (string-split string  ","))   _ )
+        (map (λ (strings) (map string->number strings)) _ ))
+)
 
+;; Translates every (base, exponent) pair into a unique number that preserves
+;; the orderings of power.
 (fn (log-identity base exponent) (* exponent (log base)))
 
 (for/fold ([best 0] [seen-at 0] [index 0] #:result (list best seen-at))
@@ -27,5 +30,4 @@
           (let ([log-id (log-identity (first t) (second t))])
                (if (< best log-id)
                    (values log-id (++ index) (++ index))
-                   (values best seen-at (++ index))))
-)
+                   (values best seen-at (++ index)))))
