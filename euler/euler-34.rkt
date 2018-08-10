@@ -26,8 +26,10 @@
 (fn (digit-factorial-sum nat)
     (apply + (map factorial (N->list nat))))
 
-(fn (euler-check nat) (= nat (digit-factorial-sum nat)))
+(fn (euler-check nat) 
+    (= nat (digit-factorial-sum nat)))
 
-(def euler (filter euler-check (range 5 10000000)))
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
 
-euler
+(filter euler-check (range 5 10000000))

@@ -22,7 +22,7 @@
         (map (λ (strings) (map string->number strings)) _ )))
 
 ;; Translates every (base, exponent) pair into a unique number that preserves
-;; the orderings of power.
+;; the orderings of power: log(b^e) = e * log(base).
 (fn (log-identity base exponent)
     (* exponent (log base)))
 

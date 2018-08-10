@@ -25,6 +25,9 @@
 (fn (pentagonal? n)
     (natural? (* 1/6 (+ 1 (sqrt (+ 1 (* 24 n)))))))
 
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
 (for*/first ([n (in-naturals 144)] 
              [v (in-value (hexagon n))] #:when (pentagonal? v))
             v)
