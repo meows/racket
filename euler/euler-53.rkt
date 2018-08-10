@@ -10,8 +10,7 @@
 ;; Problem 53
 
 ;; For "n choose r" problems, how many unique combinations of the naturals exist
-;; where (1) the natural is bigger than 1,000,000 and (2) n can vary between 
-;; from [0, 100].
+;; where (1) the natural is bigger than 1,000,000 and (2) n can vary [0, 100].
 
 (def valid-inputs (in-range 23 101))
 (fn ++ add1)
