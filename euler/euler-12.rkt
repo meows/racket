@@ -26,6 +26,10 @@
              current
              (euler-12 (++ n)))))
 
-(for/first ([n (in-naturals)] 
-            [v (in-value (triangle n))] #:when (okay? v))
-           (triangle v))
+(fn (test)
+    (for*/first 
+        ([n (in-naturals)]
+         [v (in-value (triangle n))] 
+         #:when (okay? v)) v))
+
+(time (euler-12))
