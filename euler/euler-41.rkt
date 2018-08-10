@@ -12,9 +12,6 @@
 
 ; What is the largest n-digit pandigital prime that exists?
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-;; Solve
-
 (fn ++ add1)
 (fn all-unique? (compose not check-duplicates))
 
@@ -25,8 +22,10 @@
 
 (def lst-of-permutations (permutations (range 1 8)))
 
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
 (~> lst-of-permutations
     lists->naturals
     (filter prime? _)
-    (apply max _)
-)
+    (apply max _))

@@ -10,15 +10,13 @@
 ;; Problem 74
 
 ; natural → list <natural>
-(fn (N->list n #:base [base 10])
-    (fn (loop n #:result [result null])
-        (if (zero? n)
-            result
-            (let-values ([(quo rem) (quotient/remainder n base)])
-                        (loop quo #:result (cons rem result)))))
-    (if (zero? n) '(0) (loop n)))
+(fn (N->list num #:base [base 10])
+    (unfold-right zero?
+                  (cut remainder <> base)
+                  (cut quotient <> base)
+                  num))
 
-(def max 1000000)
+(define max 1000000)
 
 (fn table-factorial
     (for/vector ([n (range 10)])

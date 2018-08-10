@@ -19,6 +19,9 @@
 
 (fn divisor-count (λ~> divisors length))
 
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
 (fn (euler-12 [i 0])
     (let* ([current (triangle i)] 
            [okay? (~> current divisor-count (< 500 _))])

@@ -44,4 +44,7 @@
 (def 1..99  (append 1..19 20..99))
 (def 1..999 (append 1..99 (flatten (map hundredsRange hundreds))))
 
-(time (string-length (apply string-append (cons "onethousand" (map (cut string-replace <> " " "") 1..999)))))
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
+(string-length (apply string-append (cons "onethousand" (map (cut string-replace <> " " "") 1..999))))
