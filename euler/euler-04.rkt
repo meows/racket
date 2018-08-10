@@ -14,16 +14,21 @@
 
 (fn (palindrome? n)
     (equal? (number->string n)
-            (~> n number->string string->list reverse list->string)))
+            (~> n 
+                number->string 
+                string->list 
+                reverse list->string)))
+
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
 
 (fn (euler-4)
     (for*/fold ([best 0])
-               ([i (range 100 1000)] [j (range 100 1000)])
-               (let ([candidate (* i j)])
-                    (if (and (< best candidate) (palindrome? candidate))
-                        candidate
-                        best))
-    )
-)
+               ([i (in-range 100 1000)] 
+                [j (in-range 100 1000)])
+               (let ([now (* i j)])
+                    (if (and (< best now) (palindrome? now)) 
+                        current 
+                        best))))
 
 (time (euler-4))
