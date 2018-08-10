@@ -27,9 +27,8 @@
              (euler-12 (++ n)))))
 
 (fn (test)
-    (for*/first 
-        ([n (in-naturals)]
-         [v (in-value (triangle n))] 
-         #:when (okay? v)) v))
+    (for*/first ([n (in-naturals)]
+                 [v (in-value (triangle n))]
+                 #:when (okay? v)) v))
 
 (time (euler-12))
