@@ -24,7 +24,7 @@
               (* product n)))
 
 (for/fold ([best 0])
-          ([n (range (+ -13 (vector-length data)))])
+          ([n (in-range (+ -13 (vector-length data)))])
           (if (< (product-range n) best)
               best
               (product-range n)))
