@@ -13,8 +13,9 @@
 
 (fn ++ add1)
 
-(def raw-strings (file->lines "data/euler-99.txt"))
+(define raw-strings (file->lines "data/euler-99.txt"))
 
+;; A list of 2-list of '(base exponent).
 (define tuples
     (~> raw-strings 
         (map (λ (string)  (string-split string  ","))   _ )

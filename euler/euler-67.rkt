@@ -19,8 +19,8 @@
 ;
 ; Example max sum: 23.
 
-(def raw (map (cut string-split <> " ") (file->lines "data/euler-67.txt")))
-(def data (reverse (map (curry map string->number) raw)))
+(define raw (map (cut string-split <> " ") (file->lines "data/euler-67.txt")))
+(define data (reverse (map (curry map string->number) raw)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
@@ -29,6 +29,7 @@
     (for/list ([i before] [j (rest before)] [k now])
               (+ (max i j) k)))
 
-(fn (euler) (foldl next-line (first data) (rest data)))
+(fn (euler) 
+    (foldl next-line (first data) (rest data)))
 
 (time (euler))
