@@ -3,8 +3,6 @@
 (require (rename-in racket/base [define fn]))
 (require math/number-theory)
 (require threading)
-(fn square sqr)
-(fn (half x) (/ x 2))
 (fn ++ add1)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -13,19 +11,21 @@
 
 ; What's the first triangle number with over 500 divisors?
 
-(fn (triangle n) 
-    (* 1/2 (+ n (square n)))
-)
+(fn (triangle n)
+    (* 1/2 (+ n (* n n))))
 
-(fn divisor-count (λ~> divisors length))
+(fn (okay? n)
+    (~> n divisors length (< 500 _)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (euler-12 [i 0])
-    (let* ([current (triangle i)] 
-           [okay? (~> current divisor-count (< 500 _))])
-          (if okay? current (~> i ++ euler-12)))
-)
+(fn (euler-12 [n 0])
+    (let* ([current (triangle n)])
+          (if (okay? current)
+              current
+              (euler-12 (++ n)))))
 
-(euler-12)
+(for/first ([n (in-naturals)])
+
+)
