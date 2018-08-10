@@ -9,6 +9,9 @@
 ;; Project Euler
 ;; Problem 42
 
+;; Find the first four consecutive integers that each have four distinct prime 
+;; factors.
+
 (fn ++ add1)
 
 (fn (four-distinct-factors? n) 
@@ -17,10 +20,8 @@
 (fn (list-full? lst) (equal? 4 (length lst)))
 
 (fn (euler)
-    (fn (loop #:index [i 100] #:state [state empty])
-        (cond [(list-full? state) state]
-              [(four-distinct-factors? i) (loop #:index (++ i) #:state (cons i state))]
-              [else (loop #:index (++ i) #:state empty)]))
-    (loop #:index 100))
+    (for/fold ([lst '()])
+              ([n (in-naturals 100)] #:break (list-full? lst))
+              (if (four-distinct-factors? n) (cons n lst) null)))
 
 (time (euler))  ;; → '(134046 134045 134044 134043)
