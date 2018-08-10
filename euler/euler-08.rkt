@@ -26,6 +26,4 @@
 (for/fold ([best 0])
           ([n (in-range (+ -13 (vector-length data)))])
           (let ([current (product-range n)])
-               (if (< current best)
-                   best
-                   current)))
+               (if (< current best) best current)))
