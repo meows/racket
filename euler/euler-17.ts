@@ -43,4 +43,8 @@ const from100to999 = hundreds.reduce(
 )
 
 const from1to1000 = [...from1to99, ...from100to999, thousands[0]]
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Solve
+
 const euler_17 = from1to1000.map(str => str.replace(/\s/g, ''))

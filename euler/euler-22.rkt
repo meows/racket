@@ -21,10 +21,10 @@
                [n (in-range 1 27)])
               (values (symbol->string l) n)))
 
-(fn letters->naturals 
+(fn letters->naturals
     (curry map (curry hash-ref uid)))
 
-(fn (word->letters word) 
+(fn (word->letters word)
     (map string (string->list word)))
 
 (fn name->value
@@ -38,11 +38,11 @@
 
 (define names
     (sort (filter (cut unequal? <> ",")
-                  (string-split data "\"")) 
+                  (string-split data "\""))
           string<?))
 
 (define euler
     (for/fold ([i 1] [sum 0] #:result sum)
               ([n names])
-              (values (++ i) 
+              (values (++ i)
                       (+ sum (* i (name->value n))))))
