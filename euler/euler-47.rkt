@@ -20,6 +20,9 @@
 (fn (list-full? lst) 
     (= 4 (length lst)))
 
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
 (fn (euler)
     (for/fold ([lst '()])
               ([n (in-naturals 100)] #:break (list-full? lst))
