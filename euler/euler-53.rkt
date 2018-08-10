@@ -9,19 +9,20 @@
 ;; Project Euler
 ;; Problem 53
 
-(def valid-inputs (range 23 101))
+;; For "n choose r" problems, how many unique combinations of the naturals exist
+;; where (1) the natural is bigger than 1,000,000 and (2) n can vary between 
+;; from [0, 100].
+
+(def valid-inputs (in-range 23 101))
 (fn ++ add1)
 (fn (big? n) (< 1000000 n))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(def euler
-     (for*/fold
-         ([i 0])
-         ([n valid-inputs] [r (range 1 n)])
-         (cond [(big? (binomial n r)) (++ i)]
-               [else i]))
-)
+(fn (euler)
+    (for*/fold ([ways 0])
+               ([n valid-inputs] [r (in-range 1 n)])
+               (if (big? (binomial n r)) (++ ways) ways)))
 
-(time euler)  ;; → 4075
+(time (euler))  ;; → 4075
