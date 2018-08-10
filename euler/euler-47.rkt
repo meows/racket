@@ -15,9 +15,10 @@
 (fn ++ add1)
 
 (fn (four-distinct-factors? n) 
-    (~> n factorize length (equal? 4)))
+    (~> n factorize length (= 4)))
 
-(fn (list-full? lst) (equal? 4 (length lst)))
+(fn (list-full? lst) 
+    (= 4 (length lst)))
 
 (fn (euler)
     (for/fold ([lst '()])
