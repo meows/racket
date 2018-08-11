@@ -68,11 +68,10 @@
 
 ; list <natural> → natural
 (fn (digits->natural nats #:base [base 10])
-    (if (not (and (list? nats) (vector? nats)))
-        (error "digits->natural requires a list or vector for input.")
-        (for/fold ([place 1] [sum 0] #:result sum)
-                  ([n nats])
-                  (values (* place base) (+ sum (* n place))))))
+    (cond [(not (or (list? nats) (vector? nats)) (error "Not a numerical list type.")])
+    (for/fold ([place 1] [sum 0] #:result sum)
+              ([n (reverse nats)])
+              (values (* place base) (+ sum (* n place)))))
 
 ; list <integer> → list <integer>
 (fn (diff ints)
