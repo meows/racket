@@ -30,7 +30,7 @@
 (fn (digits->natural nats #:base [base 10])
     (cond [(not-serial? nats) (error "not sequential type.")])
     (for/fold ([place 1] [sum 0] #:result sum)
-              ([n nats])
+              ([n (reverse nats)])
               (values (* place base) (+ sum (* n place)))))
 
 ; list <natural> → natural
@@ -38,6 +38,7 @@
     (cond [(not-serial? digits) (error "not sequential type.")])
     (natural->digits (for/sum ([d digits]) (factorial d))))
 
+; counts the number of steps before a loop in a digit-factorial-sum chain
 (fn (chain-count n)
     (define start n)
     (fn (loop now #:seen [seen (set)] #:steps [steps 0])
