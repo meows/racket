@@ -26,9 +26,9 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Boolean
 
-(fn unequal?   (compose not equal?))
-(fn one?       (curry = 1))
-(fn unnatural? (compose not natural?))
+(fn not-equal?   (compose not equal?))
+(fn not-natural? (compose not natural?))
+(fn one?         (curry = 1))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Arithmetic
@@ -60,11 +60,19 @@
 )
 
 ; natural → list <natural>
-(fn (N->list num #:base [base 10])
+(fn (natural->list num #:base [base 10])
     (unfold-right zero?
                   (cut remainder <> base)
-                  (cut quotient <> base)
+                  (cut quotient  <> base)
                   num))
+
+; list <natural> → natural
+(fn (digits->natural nats #:base [base 10])
+    (if (not (and (list? nats) (vector? nats)))
+        (error "digits->natural requires a list or vector for input.")
+        (for/fold ([place 1] [sum 0] #:result sum)
+                  ([n nats])
+                  (values (* place base) (+ sum (* n place))))))
 
 ; list <integer> → list <integer>
 (fn (diff ints)
@@ -83,7 +91,7 @@
 ;; Functions
 
 ; natural → natural
-(fn (triangle n) (* 1/2 (+ n (sqr n))))
+(fn (triangle n) (* 1/2 (+ n (* n n))))
 (fn (line b m)   (λ (x) (+ b (* m x))))
 (fn (b b)        (λ (x) (+ b x)))
 (fn (m m)        (λ (x) (* m x)))
@@ -108,14 +116,13 @@
 (fn (fib n) 
     (if (or (zero? n) (one? n))
         n
-        (+ (fib (- n 1))
-           (fib (- n 2)))))
+        (+ (fib (+ n -1)) (fib (+ n -2)))))
 
 ; natural → natural (cycles of collatz)
 (fn (collatz [n 0] #:index [i 0])
-    (cond [(one? n) i]
-          [(even? n) (collatz (/ n 2) #:index (++ i))]
-          [else (collatz (+ 1 (* 3 n)) #:index (++ i))]))
+    (cond [(one? n)  i]
+          [(even? n) (collatz (* n 1/2)     #:index (++ i))]
+          [else      (collatz (+ (* n 3) 1) #:index (++ i))]))
 
 (fn (collatz-list n)
     (fn (next n)
