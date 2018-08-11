@@ -44,7 +44,9 @@
     (fn (loop now #:seen [seen (set)] #:steps [steps 0])
         (if (set-member? seen now)
             steps
-            (loop (next-chain now) #:seen (set-add seen now) #:steps (++ steps))))
+            (loop (next-chain now) 
+                  #:seen (set-add seen now) 
+                  #:steps (++ steps))))
     (loop start)
 )
 
@@ -55,5 +57,5 @@
 (for/fold ([sum 0])
           ([n (in-range 1000 max)])
           (if (= 60 (chain-count (natural->digits n))) 
-              (++ sum) 
+              (++ sum)
               sum))

@@ -62,13 +62,13 @@
 ; natural → list <natural>
 (fn (natural->list num #:base [base 10])
     (unfold-right zero?
-                  (cut remainder <> base)
-                  (cut quotient  <> base)
+                  mod10
+                  div10
                   num))
 
 ; list <natural> → natural
 (fn (digits->natural nats #:base [base 10])
-    (cond [(not (or (list? nats) (vector? nats)) (error "Not a numerical list type.")])
+    (cond [(not (or (list? nats) (vector? nats))) (error "Not a numerical list type.")])
     (for/fold ([place 1] [sum 0] #:result sum)
               ([n (reverse nats)])
               (values (* place base) (+ sum (* n place)))))
