@@ -11,8 +11,6 @@
 ;; Project Euler
 ;; Problem 74
 
-(define ++ add1)
-(define -- sub1)
 (define max 1000001)
 
 ; unfortunately Racket considers a number to be sequential
