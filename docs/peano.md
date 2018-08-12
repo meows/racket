@@ -6,8 +6,7 @@ hide_title: true
 
 # Definitions
 
-1. Let there be an infinite set `N` called the naturals, and let `n` be any
-   natural within `N`.
+1. Let there be an infinite set `N` called the naturals.
 2. Let `N` contain an element that looks like `0`.
 3. Let `N` be equipped with a unary function `++`.
 4. Let `N` be equipped with a binary function `==`.
@@ -97,6 +96,16 @@ consistency is what matters, not that we name something `0` or `false`.
    rule that `n++` can never equal `0`.
 5. Even if we began at `6 == 2` or higher, the `(a++ == b++) := (a == b)` rule
    allows us to walk backward until we find a natural.
+
+### `(0++)++ == ((0++)++)++`?
+
+Because of the rule that `a++ == b++ := a == b`,
+
+0. `(0++)++ == ((0++)++)++`
+1. `0++ == (0++)++`
+2. `0 == 0++`
+
+We have violated the rule that says nothing can be the successor to zero.
 
 ## Observations
 
