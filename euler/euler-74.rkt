@@ -25,13 +25,6 @@
                   nat))
 
 ; list <natural> → natural
-(fn (digits->natural nats #:base [base 10])
-    (cond [(not-serial? nats) (error "not sequential type.")])
-    (for/fold ([place 1] [sum 0] #:result sum)
-              ([n (reverse nats)])
-              (values (* place base) (+ sum (* n place)))))
-
-; list <natural> → natural
 (fn (next-chain digits)
     (cond [(not-serial? digits) (error "not sequential type.")])
     (natural->digits (for/sum ([d digits]) (factorial d))))
@@ -40,11 +33,10 @@
 (fn (chain-count n)
     (define start n)
     (fn (loop now #:seen [seen (set)] #:steps [steps 0])
-        (if (set-member? seen now)
-            steps
-            (loop (next-chain now) 
-                  #:seen (set-add seen now) 
-                  #:steps (++ steps))))
+        (cond [(set-member? seen now) steps)]
+              [else (loop (next-chain now) 
+                          #:seen (set-add seen now) 
+                          #:steps (++ steps)))
     (loop start)
 )
 
@@ -54,6 +46,5 @@
 ; Increment sum whenever we encounter (= 60 (chain-count n)).
 (for/fold ([sum 0])
           ([n (in-range 1000 max)])
-          (if (= 60 (chain-count (natural->digits n))) 
-              (++ sum)
-              sum))
+          (cond [(= 60 (chain-count (natural->digits n))) (++ sum)]
+                [else sum]))
