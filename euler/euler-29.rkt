@@ -19,7 +19,6 @@
 
 (for*/fold ([e-uniques (set)] [l-uniques (set)] 
             #:result (values (set-count e-uniques) (set-count l-uniques)))
-           ([b (in-range 2 101)]
-            [e (in-range 2 101)])
+           ([b (in-range 2 101)] [e (in-range 2 101)])
            (values (set-add e-uniques (expt b e))     ;; correct answer
                    (set-add l-uniques (log-id b e)))) ;; logs are imprecise for identity
