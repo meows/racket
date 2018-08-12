@@ -17,7 +17,7 @@ points and connect them, they would look like a straight line.
 
 These sequences can be defined by:
 
-f(x) = a*x + b
+`f(x) = a*x + b`
 
 Where `f` is the function that can give the sequence, `x` is the natural input
 that we expect, `a` is the velocity, and `b` is the starting position of the
