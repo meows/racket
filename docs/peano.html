@@ -12,19 +12,45 @@
             {"zIndex":100}
           )
         });
-        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="definitions"></a><a href="#definitions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Definitions</h1>
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Getting Warmer</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul><li class="navListItem"><a class="navItem" href="/docs/challenge-1">Challenge #1</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-2">Challenge #2</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-3">Challenge #3</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-4">Challenge #4</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-5">Challenge #5</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Warmer</h3><ul><li class="navListItem"><a class="navItem" href="/docs/challenge-6">Challenge #6</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-7">Challenge #7</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-8">Challenge #8</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-9">Challenge #9</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-10">Challenge #10</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-11">Challenge #11</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-12">Challenge #12</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-13">Challenge #13</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-14">Challenge #14</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-15">Challenge #15</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/peano">Peano</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test</h3><ul><li class="navListItem"><a class="navItem" href="/docs/test-linear-0">Linear Sequences</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/dictionary">Dictionary</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="definitions"></a><a href="#definitions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Definitions</h1>
 <ol>
-<li>Let there be an infinite set <code>N</code> called the naturals, and let <code>n</code> be any
-natural within <code>N</code>.</li>
-<li>Let <code>N</code> contain an element that looks like <code>0</code>.</li>
-<li>Let <code>N</code> be equipped with a unary function <code>++</code>.</li>
-<li>Let <code>N</code> be equipped with a binary function <code>==</code>.</li>
-<li>Let <code>n++</code> mean the application of the <code>++</code> function with <code>n</code> as the input.</li>
-<li>If <code>a</code> and <code>b</code> are members from <code>N</code>, then <code>a == b</code> means to apply the <code>==</code>
-function with <code>a</code> and <code>b</code> as their respective inputs at the appropriate
-index: <code>a == b := (== a b)</code>.</li>
-<li>Let there be a name translation scheme to transform the symbols from <code>N</code> to
-that of the western convention:
+<li><p>Let there be an infinite set <code>N</code> called the naturals.</p></li>
+<li><p>Let <code>N</code> contain an element that looks like <code>0</code>.</p></li>
+<li><p>Let <code>N</code> be equipped with a unary function <code>++</code>.</p></li>
+<li><p>Let <code>N</code> be equipped with a binary function <code>==</code>.</p></li>
+<li><p>Let <code>n++</code> mean the application of the <code>++</code> function with <code>n</code> as the input.</p></li>
+<li><p>If <code>a</code> and <code>b</code> are members from <code>N</code>, then <code>a == b</code> means to apply the <code>==</code>
+function with <code>a</code> and <code>b</code> as ordered inputs.</p></li>
+<li><p>Let there be a name translation scheme to transform the symbols from <code>N</code> to
+that of the western convention. These translations are merely for
+convenience, as we have only formally defined <code>0</code>, <code>++</code>, and <code>==</code>.</p>
+<p>The parentheses aren't operationally important and aren't meant to suggest an
+order of operation. They're just part of the notation for functions to
+typographically indicate the input, in the sense that <code>(n)++</code> means <code>++(n)</code>,
+or <code>f(x)</code> means <code>(x)f</code>.</p>
 <ul>
 <li><code>0 := 0</code></li>
 <li><code>1 := 0++</code></li>
@@ -33,6 +59,10 @@ that of the western convention:
 <li><code>4 := (((0++)++)++)++</code></li>
 </ul></li>
 </ol>
+<blockquote>
+<p>Note that <code>:=</code> means to rename; the notation is used as to not overload the
+the equality operator.</p>
+</blockquote>
 <h1><a class="anchor" aria-hidden="true" id="axioms"></a><a href="#axioms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Axioms</h1>
 <h2><a class="anchor" aria-hidden="true" id="equality"></a><a href="#equality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Equality <code>==</code></h2>
 <p>Equality is the most basic operator of all and often goes unmentioned. Equality
@@ -61,15 +91,17 @@ rule also means that every succession is unique.</li>
 <ul>
 <li>The first rule defines the domain and codomain of <code>++</code>.</li>
 <li>The second rule constrains the range of <code>++</code> and privileges <code>0</code> under <code>++</code>.</li>
-<li>The third rule ensures that every natural is unique; this stops looping number
-systems.</li>
+<li>The third rule ensures that every natural is unique, which also stops looping
+number systems (such as degrees to measure angles where <code>0 == 360</code>).</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="informal-definition"></a><a href="#informal-definition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Informal Definition</h3>
 <p>The equality we define here is a 2-arity function on the naturals which returns
-either <code>true</code> or <code>false</code> for every pair. Alternatively, if the reader objects to
-new symbols with deliberate cultural meaning, we might instead arbitrarily
-assign the result of <code>==</code> to either <code>0</code> or <code>0++</code>, with a wink about how <code>0++</code>
-means <code>true</code>, and <code>0</code> means <code>false</code>.</p>
+either <code>true</code> or <code>false</code> for every pair of inputs. Alternatively, if the reader
+objects to new symbols with deliberate cultural meaning, we might instead
+arbitrarily assign the result of <code>==</code> to either <code>0</code> or <code>0++</code>, with a wink about
+how <code>0++</code> means <code>true</code>, and <code>0</code> means <code>false</code>.</p>
+<p>That we can map many mathematical expressions into categories differentiated on
+consistency is what matters, not that we name something <code>0</code> or <code>false</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="unit-test"></a><a href="#unit-test" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unit Test</h2>
 <h3><a class="anchor" aria-hidden="true" id="is-3-natural"></a><a href="#is-3-natural" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is 3 natural?</h3>
 <ol>
@@ -90,7 +122,17 @@ means <code>true</code>, and <code>0</code> means <code>false</code>.</p>
 <li>Therefore <code>3 == 0</code> by our rule of how <code>a++ == b++</code> translates to <code>a == b</code>.</li>
 <li>But recall that <code>3 := 2++</code>, which implies that <code>2++ == 0</code>, which violates our
 rule that <code>n++</code> can never equal <code>0</code>.</li>
+<li>Even if we began at <code>6 == 2</code> or higher, the <code>(a++ == b++) := (a == b)</code> rule
+allows us to walk backward until we find a natural.</li>
 </ol>
+<h3><a class="anchor" aria-hidden="true" id="0-0"></a><a href="#0-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>(0++)++ == ((0++)++)++</code>?</h3>
+<p>Because of the rule that <code>a++ == b++ := a == b</code>,</p>
+<ol>
+<li><code>(0++)++ == ((0++)++)++</code></li>
+<li><code>0++ == (0++)++</code></li>
+<li><code>0 == 0++</code></li>
+</ol>
+<p>We have violated the rule that says nothing can be the successor to zero.</p>
 <h2><a class="anchor" aria-hidden="true" id="observations"></a><a href="#observations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h2>
 <ol>
 <li>Any notion of the naturals always has a metaphorical <code>0</code>, which is privileged
@@ -98,7 +140,25 @@ under <code>++</code>.</li>
 <li>Any notion of the naturals also comes equipped with two operators, a binary
 equality <code>==</code> and a unary successor <code>++</code>.</li>
 <li>The relationship between one natural and any other are determined solely by
-the <code>++</code> and <code>==</code> operators. That means any more advanced operator will
-ultimately be based on <code>++</code> and <code>==</code>.</li>
+the <code>++</code> and <code>==</code> operators. That means any higher order operator will
+ultimately be reducible to <code>++</code> and <code>==</code>.</li>
 </ol>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#equality">Equality <code>==</code></a></li><li><a href="#sucessor">Sucessor <code>++</code></a><ul class="toc-headings"><li><a href="#informal-definition">Informal Definition</a></li></ul></li><li><a href="#unit-test">Unit Test</a><ul class="toc-headings"><li><a href="#is-3-natural">Is 3 natural?</a></li><li><a href="#is-3-equal-to-0">Is 3 equal to 0?</a></li><li><a href="#is-4-equal-to-1">Is 4 equal to 1?</a></li></ul></li><li><a href="#observations">Observations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define fn]))
+(<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define def]))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name">zero</span> f x) x)
+(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name">one</span> f x) (<span class="hljs-name">f</span> x))
+(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name">two</span> f x) (<span class="hljs-name">f</span> (<span class="hljs-name">f</span> x)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">next</span></span> n f x)
+  (<span class="hljs-name">f</span> (<span class="hljs-name">n</span> (<span class="hljs-name">f</span> x)))
+)
+</code></pre>
+<p>The Untyped Lambda Calculus encodes the concept of the naturals through repeated
+applications of a function on a value. Addition by one, or &quot;succession&quot;, is
+encoded by an extra repeated application of a function.</p>
+<p>Interestingly, because the results are more functions, it becomes a curious
+question as to how one computes whether one function is the same as another.
+Perhaps systematic experimentation to determine that a sequence of values under
+an operator behaves like the naturals.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/challenge-15">← Challenge #15</a><a class="docs-next button" href="/docs/test-linear-0">Linear Sequences →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#equality">Equality <code>==</code></a></li><li><a href="#sucessor">Sucessor <code>++</code></a><ul class="toc-headings"><li><a href="#informal-definition">Informal Definition</a></li></ul></li><li><a href="#unit-test">Unit Test</a><ul class="toc-headings"><li><a href="#is-3-natural">Is 3 natural?</a></li><li><a href="#is-3-equal-to-0">Is 3 equal to 0?</a></li><li><a href="#is-4-equal-to-1">Is 4 equal to 1?</a></li><li><a href="#0-0"><code>(0++)++ == ((0++)++)++</code>?</a></li></ul></li><li><a href="#observations">Observations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
