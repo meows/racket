@@ -8,5 +8,17 @@
 ;; Project Euler
 ;; Problem 11
 
-(def source "data/euler-11.txt")
-(def input (map string->number (map (λ (str) (string-split str " ")) (file->lines source))))
+(define source "data/euler-11.txt")
+(define raw (map (λ (str) (string-split str " "))
+                 (file->lines source)))
+
+; (for/fold ([state '()])
+;           ([i (in-range 2 100)] [j (in-range 1 100)])
+;           (cons (list i j) state)
+; )
+
+(define lines
+   (map (λ (line) (map string->number line)) 
+        raw))
+
+lines

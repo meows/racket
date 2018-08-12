@@ -15,4 +15,3 @@
 ; to compute a number to the exponent of k.
 ;
 ; Find the sum of all m(k) for k in 1..200
-
