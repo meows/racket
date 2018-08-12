@@ -11,8 +11,8 @@
 ;; Project Euler
 ;; Problem 122
 
-; Let m(k) be a function that that finds the minimum number of multiplications 
-; to compute n to the power of k.
+; Let m(k) be a function that that finds the minimum number of multiplications
+; to compute a number to the exponent of k.
 ;
 ; Find the sum of all m(k) for k in 1..200
 

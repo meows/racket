@@ -20,6 +20,6 @@ For example, `(natural->digits 1320)` should return the list `'(1 3 2 0)`.
 
 ## Clue
 
-* `append`
+* `cons`
 * [`quotient`](arithmetic-advanced.md)
 * [`remainder`](arithmetic-advanced.md)
