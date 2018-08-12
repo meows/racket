@@ -53,7 +53,8 @@
          "challenge-12",
          "challenge-13",
          "challenge-14",
-         "challenge-15"
+         "challenge-15",
+         "peano"
       ],
       "Test": [
          "test-linear-0"

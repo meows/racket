@@ -54,8 +54,8 @@ Generally, it's only when things change that we can appreciate behavior, and
 
 1. Let `n++` be a natural.
 2. Let `n++` never equal `0`.
-3. If `a` and `b` are naturals, let `a++ == b++` be true iff `a == b`. This
-   rule also means that every succession is unique.
+3. If `a` and `b` are naturals, let `a++ == b++` iff `a == b`. This rule also 
+   means that every `n++` is unique.
 
 * The first rule defines the domain and codomain of `++`.
 * The second rule constrains the range of `++` and privileges `0` under `++`.
@@ -85,7 +85,8 @@ consistency is what matters, not that we name something `0` or `false`.
 ### Is 3 equal to 0?
 
 1. Recall that `3 := 2++`
-2. `2++` cannot be `0` because it cannot be the successor to anything.
+2. That would imply `2++ == 0`, which violates our rule that `n++` cannot be 
+   `0`.
 
 ### Is 4 equal to 1?
 
@@ -114,32 +115,14 @@ We have violated the rule that says nothing can be the successor to zero.
 2. Any notion of the naturals also comes equipped with two operators, a binary
    equality `==` and a unary successor `++`.
 3. The relationship between one natural and any other are determined solely by
-   the `++` and `==` operators. That means any higher order operator will
-   ultimately be reducible to `++` and `==`.
-4. Note that usage of 1, 2, 3 and so on is just commentary on a cultural way of 
-   writing things. It's part of the definitions, but not the axioms. We've only
-   formally defined `0`, `++`, and `==`.
+   the `++` and `==` operators. Therefore, if I have a bunch of things that look
+   natural:
 
-   (0++)++ == 0++
+   `{ A, B, C, D, ... }`
 
-``` clojure
-(require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
+   That still doesn't make them natural. There's no function that tells me how
+   to get from one letter to another. That is to say, this is just a bag of
+   unique letters with no relationship to each other. They could just as well be
+   arranged as:
 
-(fn (zero f x) x)
-(fn (one f x) (f x))
-(fn (two f x) (f (f x)))
-
-(fn (next n f x)
-  (f (n (f x)))
-)
-```
-
-The Untyped Lambda Calculus encodes the concept of the naturals through repeated
-applications of a function on a value. Addition by one, or "succession", is
-encoded by an extra repeated application of a function.
-
-Interestingly, because the results are more functions, it becomes a curious
-question as to how one computes whether one function is the same as another.
-Perhaps systematic experimentation to determine that a sequence of values under
-an operator behaves like the naturals.
+   `{ B, A, C, D, ... }`
