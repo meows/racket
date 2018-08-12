@@ -45,8 +45,8 @@ Generally, it's only when things change that we can appreciate behavior, and
 2. if `a == b` then `b == a`.
 3. if `a == b` and `b == c` then `a == c`.
 
-* The second rule says that order doesn't matter to `==` -- it's commutative.
-* The third rule is called `transitivity`, as if the identity of `a` was 
+* The second rule says that order doesn't matter to `==` -- it's _commutative_.
+* The third rule is called transitivity, as if the identity of `a` was 
   transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
   rename things.
 
