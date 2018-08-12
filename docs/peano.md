@@ -13,15 +13,24 @@ hide_title: true
 4. Let `N` be equipped with a binary function `==`.
 5. Let `n++` mean the application of the `++` function with `n` as the input.
 6. If `a` and `b` are members from `N`, then `a == b` means to apply the `==`
-   function with `a` and `b` as their respective inputs at the appropriate 
-   index: `a == b := (== a b)`.
+   function with `a` and `b` as ordered inputs.
 7. Let there be a name translation scheme to transform the symbols from `N` to
-   that of the western convention:
+   that of the western convention. These translations are merely for 
+   convenience, as we have only formally defined `0`, `++`, and `==`.
+   
+   The parentheses aren't operationally important and aren't meant to suggest an 
+   order of operation. They're just part of the notation for functions to 
+   typographically indicate the input, in the sense that `(n)++` means `++(n)`,
+   or `f(x)` means `(x)f`.
+
    * `0 := 0`
    * `1 := 0++`
    * `2 := (0++)++`
    * `3 := ((0++)++)++`
    * `4 := (((0++)++)++)++`
+
+> Note that `:=` means to rename; the notation is used as to not overload the
+> the equality operator.
 
 # Axioms
 
@@ -45,14 +54,14 @@ Generally, it's only when things change that we can appreciate behavior, and
 ## Sucessor `++`
 
 1. Let `n++` be a natural.
-2. Let `n++` never equal `0`. 
+2. Let `n++` never equal `0`.
 3. If `a` and `b` are naturals, let `a++ == b++` be true iff `a == b`. This
    rule also means that every succession is unique.
 
 * The first rule defines the domain and codomain of `++`.
 * The second rule constrains the range of `++` and privileges `0` under `++`.
-* The third rule ensures that every natural is unique; this stops looping number
-  systems.
+* The third rule ensures that every natural is unique, which also stops looping 
+  number systems (such as degrees to measure angles where `0 == 360`).
 
 ### Informal Definition
 
@@ -61,6 +70,9 @@ either `true` or `false` for every pair of inputs. Alternatively, if the reader
 objects to new symbols with deliberate cultural meaning, we might instead 
 arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about 
 how `0++` means `true`, and `0` means `false`.
+
+That we can map many mathematical expressions into categories differentiated on 
+consistency is what matters, not that we name something `0` or `false`.
 
 ## Unit Test
 
@@ -83,6 +95,8 @@ how `0++` means `true`, and `0` means `false`.
 3. Therefore `3 == 0` by our rule of how `a++ == b++` translates to `a == b`.
 4. But recall that `3 := 2++`, which implies that `2++ == 0`, which violates our
    rule that `n++` can never equal `0`.
+5. Even if we began at `6 == 2` or higher, the `(a++ == b++) := (a == b)` rule
+   allows us to walk backward until we find a natural.
 
 ## Observations
 
@@ -93,6 +107,11 @@ how `0++` means `true`, and `0` means `false`.
 3. The relationship between one natural and any other are determined solely by
    the `++` and `==` operators. That means any higher order operator will
    ultimately be reducible to `++` and `==`.
+4. Note that usage of 1, 2, 3 and so on is just commentary on a cultural way of 
+   writing things. It's part of the definitions, but not the axioms. We've only
+   formally defined `0`, `++`, and `==`.
+
+   (0++)++ == 0++
 
 ``` clojure
 (require (rename-in racket/base [define fn]))
