@@ -85,8 +85,8 @@ rename things.</li>
 <ol>
 <li>Let <code>n++</code> be a natural.</li>
 <li>Let <code>n++</code> never equal <code>0</code>.</li>
-<li>If <code>a</code> and <code>b</code> are naturals, let <code>a++ == b++</code> be true iff <code>a == b</code>. This
-rule also means that every succession is unique.</li>
+<li>If <code>a</code> and <code>b</code> are naturals, let <code>a++ == b++</code> iff <code>a == b</code>. This rule also
+means that every <code>n++</code> is unique.</li>
 </ol>
 <ul>
 <li>The first rule defines the domain and codomain of <code>++</code>.</li>
@@ -113,7 +113,8 @@ consistency is what matters, not that we name something <code>0</code> or <code>
 <h3><a class="anchor" aria-hidden="true" id="is-3-equal-to-0"></a><a href="#is-3-equal-to-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is 3 equal to 0?</h3>
 <ol>
 <li>Recall that <code>3 := 2++</code></li>
-<li><code>2++</code> cannot be <code>0</code> because it cannot be the successor to anything.</li>
+<li>That would imply <code>2++ == 0</code>, which violates our rule that <code>n++</code> cannot be
+<code>0</code>.</li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="is-4-equal-to-1"></a><a href="#is-4-equal-to-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is 4 equal to 1?</h3>
 <ol>
@@ -135,30 +136,18 @@ allows us to walk backward until we find a natural.</li>
 <p>We have violated the rule that says nothing can be the successor to zero.</p>
 <h2><a class="anchor" aria-hidden="true" id="observations"></a><a href="#observations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h2>
 <ol>
-<li>Any notion of the naturals always has a metaphorical <code>0</code>, which is privileged
-under <code>++</code>.</li>
-<li>Any notion of the naturals also comes equipped with two operators, a binary
-equality <code>==</code> and a unary successor <code>++</code>.</li>
-<li>The relationship between one natural and any other are determined solely by
-the <code>++</code> and <code>==</code> operators. That means any higher order operator will
-ultimately be reducible to <code>++</code> and <code>==</code>.</li>
+<li><p>Any notion of the naturals always has a metaphorical <code>0</code>, which is privileged
+under <code>++</code>.</p></li>
+<li><p>Any notion of the naturals also comes equipped with two operators, a binary
+equality <code>==</code> and a unary successor <code>++</code>.</p></li>
+<li><p>The relationship between one natural and any other are determined solely by
+the <code>++</code> and <code>==</code> operators. Therefore, if I have a bunch of things that look
+natural:</p>
+<p><code>{ A, B, C, D, ... }</code></p>
+<p>That still doesn't make them natural. There's no function that tells me how
+to get from one letter to another. That is to say, this is just a bag of
+unique letters with no relationship to each other. They could just as well be
+arranged as:</p>
+<p><code>{ B, A, C, D, ... }</code></p></li>
 </ol>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define fn]))
-(<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define def]))
-
-(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name">zero</span> f x) x)
-(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name">one</span> f x) (<span class="hljs-name">f</span> x))
-(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name">two</span> f x) (<span class="hljs-name">f</span> (<span class="hljs-name">f</span> x)))
-
-(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">next</span></span> n f x)
-  (<span class="hljs-name">f</span> (<span class="hljs-name">n</span> (<span class="hljs-name">f</span> x)))
-)
-</code></pre>
-<p>The Untyped Lambda Calculus encodes the concept of the naturals through repeated
-applications of a function on a value. Addition by one, or &quot;succession&quot;, is
-encoded by an extra repeated application of a function.</p>
-<p>Interestingly, because the results are more functions, it becomes a curious
-question as to how one computes whether one function is the same as another.
-Perhaps systematic experimentation to determine that a sequence of values under
-an operator behaves like the naturals.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/challenge-15">← Challenge #15</a><a class="docs-next button" href="/docs/test-linear-0">Linear Sequences →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#equality">Equality <code>==</code></a></li><li><a href="#sucessor">Sucessor <code>++</code></a><ul class="toc-headings"><li><a href="#informal-definition">Informal Definition</a></li></ul></li><li><a href="#unit-test">Unit Test</a><ul class="toc-headings"><li><a href="#is-3-natural">Is 3 natural?</a></li><li><a href="#is-3-equal-to-0">Is 3 equal to 0?</a></li><li><a href="#is-4-equal-to-1">Is 4 equal to 1?</a></li><li><a href="#0-0"><code>(0++)++ == ((0++)++)++</code>?</a></li></ul></li><li><a href="#observations">Observations</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
