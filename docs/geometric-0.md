@@ -49,13 +49,20 @@ another easy pattern we might be able to take advantage of?
 If we look carefully, we can see that except for the first item, every member in
 this sequence is the double of the previous number.
 
-* `f(0) = 2`
+* `f(0) = 3`
 * `f(n) = f(n - 1) * 2`
+* 3, 6, 12, 24, 48, 96... 
 
 ### Observations
 
 1. The first sequence item `f(0)` is `2`.
-2. All other sequence items are defined by doubling the previous sequence item.
+2. All other sequence items are defined by tripling the previous sequence item.
 3. A delta of the sequence reveals an identical sequence.
-4. The velocity is changing and it gets faster over time.  Therefore it is
+4. The velocity is changing and it gets faster over time. Therefore it is
    accelerating. The only time velocity doesn't change is when it's at 0.
+
+Therefore, for any function `f` which generates a geometric sequence, we need
+only two pieces of information to determine the value at any point of the 
+sequence, (1) an initial value `a` and (2) the common ratio `r`:
+
+* `f(n) = a * (r**n)`
