@@ -2,8 +2,8 @@
 
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
-(require math/number-theory)
 (require (only-in srfi/1 unfold-right unfold))
+(require math/number-theory)
 (require threading)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
