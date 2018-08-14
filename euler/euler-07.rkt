@@ -16,7 +16,6 @@
 (fn (euler-7 [max 10001])
     (for/fold ([seen 0] [current 0] #:result current)
               ([n (in-naturals)] #:when (prime? n) #:break (= seen max))
-              (values (++ seen) n)
-))
+              (values (++ seen) n)))
 
 (time (euler-7))

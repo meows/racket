@@ -21,9 +21,9 @@
 ;; Solve
 
 (fn (euler-12 [n 0])
-    (let ([current (triangle n)])
-         (if (okay? current)
-             current
+    (let ([t (triangle n)])
+         (if (okay? t)
+             t
              (euler-12 (++ n)))))
 
 (fn (test)
