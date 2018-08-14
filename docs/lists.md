@@ -92,9 +92,9 @@ To ask how many items are inside a list, we use `length`:
 (length (list 3 4 (list))) ;; → 3
 ```
 
-### `list-ref` (finding by position)
+### `sequence-ref` (finding by position)
 
-`list-ref` is a function that takes two inputs, `lst` and `pos`, and returns the
+`sequence-ref` is a function that takes two inputs, `lst` and `pos`, and returns the
 value of whatever is found on list `lst` at index position `pos`. If you happen
 to know the index number of the item you're looking for, then `list-ref` is the
 right function to use.
@@ -121,11 +121,11 @@ right function to use.
 (last  names)       ;; → "Patrick"
 (rest  names)       ;; returns the list in names but with "Ryan" removed.
 
-(list-ref names 0)  ;; → "Ryan"
-(list-ref names 1)  ;; → "Oliver"
-(list-ref names 2)  ;; → "Norman"
-(list-ref names 20) ;; → "Roy"
-(list-ref names 21) ;; → "Joseph"
-(list-ref names 22) ;; → "Patrick"
-(list-ref names 23) ;; → Error: index too large for list!
+(sequence-ref names 0)  ;; → "Ryan"
+(sequence-ref names 1)  ;; → "Oliver"
+(sequence-ref names 2)  ;; → "Norman"
+(sequence-ref names 20) ;; → "Roy"
+(sequence-ref names 21) ;; → "Joseph"
+(sequence-ref names 22) ;; → "Patrick"
+(sequence-ref names 23) ;; → Error: index too large for list!
 ```

@@ -28,3 +28,9 @@ and functions.
 (++ 1) ;; → 2
 (++ 2) ;; → 3
 ```
+
+## Naming with `let`
+
+``` clojure
+
+```

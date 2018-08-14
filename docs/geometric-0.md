@@ -66,3 +66,20 @@ only two pieces of information to determine the value at any point of the
 sequence, (1) an initial value `a` and (2) the common ratio `r`:
 
 * `f(n) = a * (r**n)`
+
+## Sample Word Problems
+
+Bob is given an initial weekly allowance of $10, which is to increase by 5% for
+every week he successfully completes his chores. After the first week, Bob 
+expects the allowance for the following week to be `10 * 1.05`, or `$10.50`.
+
+Write a function called `allowance` which consumes an natural number week `w` to
+return the amount of allowance expected given `w`.
+
+``` clojure
+(define (allowance w)
+   (...)
+)
+
+(allowance 10) ;; → 16.28894626777442
+```

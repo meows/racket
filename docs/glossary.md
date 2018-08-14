@@ -37,13 +37,13 @@ These functions are all designed for working on lists.
 [`first`](function-sequence.md)
 [`rest`](function-sequence.md)
 [`last`](function-sequence.md)
-[`list-ref`](function-sequence.md)
+[`sequence-ref`](function-sequence.md)
 [`for/fold`](fold.md)
+`cons`
 
 ### Making new lists
 
 [`list`](function-sequence.md)
-[`list*`](function-sequence.md)
 `range`
 
 ## Boolean Operators
@@ -100,6 +100,7 @@ These functions consume one or more numbers and returns a number.
 `lcm`
 `quotient`
 `remainder`
+`modulo`
 `round`
 `max`
 
@@ -107,8 +108,11 @@ These functions consume one or more numbers and returns a number.
 
 These functions tend to work with radians, and they often give approximations.
 
-`sin`
-`cos`
-`tan`
-`degrees->radians`
-`radians->degrees`
+[`sin`](geometry.md)
+[`cos`](geometry.md)
+[`tan`](geometry.md)
+[`asin`](geometry.md)
+[`acos`](geometry.md)
+[`atan`](geometry.md)
+[`degrees->radians`](geometry.md)
+[`radians->degrees`](geometry.md)

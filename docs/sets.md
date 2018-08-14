@@ -84,6 +84,7 @@ redundant members will be removed by Racket's set.
 
 `set?`
 `subset?`
+`set-member?`
 `set-add`
 `set-remove`
 `set-clear`
