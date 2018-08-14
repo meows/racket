@@ -1,7 +1,6 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/math [sqr square]))
 (require math/number-theory)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -13,6 +12,6 @@
 
 (fn (grid n)
     (/ (factorial (* n 2))
-       (square (factorial n))))
+       (sqr (factorial n))))
 
 (time (grid 20))  ;; → 137846528820

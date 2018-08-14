@@ -44,5 +44,4 @@
 (define euler
     (for/fold ([i 1] [sum 0] #:result sum)
               ([n names])
-              (values (++ i)
-                      (+ sum (* i (name->value n))))))
+              (values (++ i) (+ sum (* i (name->value n))))))

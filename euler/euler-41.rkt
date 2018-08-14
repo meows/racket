@@ -12,20 +12,17 @@
 
 ; What is the largest n-digit pandigital prime that exists?
 
-(fn ++ add1)
-(fn all-unique? (compose not check-duplicates))
-
-(fn (lists->naturals lst-of-digits)
-    (map (λ~> (map number->string _) string-append* string->number)
-         lst-of-digits))
-         ;;; (λ (digits) (string->number (string-append* (map number->string digits))))
-
-(def lst-of-permutations (permutations (range 1 8)))
+(fn (digits->natural nums)
+    (~> (map number->string nums) 
+        string-append* 
+        string->number))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(~> lst-of-permutations
-    lists->naturals
-    (filter prime? _)
-    (apply max _))
+(for*/fold ([best 0])
+           ([i (in-range 9 1 -1)] 
+            [p (in-permutations (range 1 i))])
+            (let ([n (digits->natural p)])
+                 (cond [(and (< best n) (prime? n)) n] 
+                       [else best])))

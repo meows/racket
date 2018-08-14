@@ -73,6 +73,12 @@
               ([n (reverse nats)])
               (values (* place base) (+ sum (* n place)))))
 
+; list <natural> → natural
+(fn (digits->number nums)
+    (~> (map number->string nums) 
+        string-append* 
+        string->number))
+
 ; list <integer> → list <integer>
 (fn (diff ints)
     (for/list ([s ints] [s++ (rest ints)])
