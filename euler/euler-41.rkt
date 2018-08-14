@@ -21,8 +21,8 @@
 ;; Solve
 
 (for*/fold ([best 0])
-           ([i (in-range 9 1 -1)] 
+           ([i (in-range 9 5 -1)] 
             [p (in-permutations (range 1 i))])
-            (let ([n (digits->natural p)])
-                 (cond [(and (< best n) (prime? n)) n] 
-                       [else best])))
+           (let ([n (digits->natural p)])
+                (cond [(and (< best n) (prime? n)) n] 
+                      [else best])))
