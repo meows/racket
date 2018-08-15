@@ -42,10 +42,11 @@ Generally, it's only when things change that we can appreciate behavior, and
 `==` allows us to detect change.
 
 1. `a == a`.
-2. if `a == b` then `b == a`.
-3. if `a == b` and `b == c` then `a == c`.
+2. If `a == b` then `b == a`.
+3. If `a == b` and `b == c` then `a == c`.
 
-* The second rule says that order doesn't matter to `==` -- it's _commutative_.
+* The second rule says that the order of inoputs don't matter to `==` -- it's 
+  _commutative_.
 * The third rule is called transitivity, as if the identity of `a` was 
   transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
   rename things.
@@ -71,7 +72,8 @@ arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about
 how `0++` means `true`, and `0` means `false`.
 
 That we can map many mathematical expressions into categories differentiated on 
-consistency is what matters, not that we name something `0` or `false`.
+consistency (to our rules) is what matters, not that we name something `0` or 
+`false`.
 
 ## Unit Test
 
@@ -86,8 +88,7 @@ consistency is what matters, not that we name something `0` or `false`.
 ### Is 3 equal to 0?
 
 1. Recall that `3 := 2++`
-2. That would imply `2++ == 0`, which violates our rule that `n++` cannot be 
-   `0`.
+2. That would imply `2++ == 0`, which violates our rule that `n++` cannot be `0`.
 
 ### Is 4 equal to 1?
 
@@ -103,9 +104,9 @@ consistency is what matters, not that we name something `0` or `false`.
 
 Because of the rule that `a++ == b++ := a == b`,
 
-0. `(0++)++ == ((0++)++)++`
-1. `0++ == (0++)++`
-2. `0 == 0++`
+1. `(0++)++ == ((0++)++)++`
+2. `0++ == (0++)++`
+3. `0 == 0++`
 
 And now we have violated the rule that says nothing can be the successor to 
 zero.
@@ -114,8 +115,10 @@ zero.
 
 1. Any notion of the naturals always has a metaphorical `0`, which is privileged
    under `++`.
+
 2. Any notion of the naturals also comes equipped with two operators, a binary
    equality `==` and a unary successor `++`.
+
 3. The relationship between one natural and any other are determined solely by
    the `++` and `==` operators. Therefore, if I have a bunch of things that look
    natural:
@@ -128,3 +131,9 @@ zero.
    arranged as:
 
    `{ B, A, C, D, ... }`
+
+## Addition
+
+1. Let `+` be a binary function on the naturals to the naturals.
+2. If `m` is a natural, let `0 + m := m`.
+3. If `n` and `m` are naturals, then `(n++) + m := (n + m)++`.
