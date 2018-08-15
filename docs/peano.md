@@ -77,10 +77,11 @@ consistency is what matters, not that we name something `0` or `false`.
 
 ### Is 3 natural?
 
-1. `1 := 0++`.
-2. `2 := 1++`.
-3. `3 := 2++`.
-4. `3` is natural because it is the successor of a natural.
+1. `0 := 0`
+2. `1 := 0++`.
+3. `2 := 1++`.
+4. `3 := 2++`.
+5. `3` is natural because it is the successor of a natural.
 
 ### Is 3 equal to 0?
 
@@ -106,7 +107,8 @@ Because of the rule that `a++ == b++ := a == b`,
 1. `0++ == (0++)++`
 2. `0 == 0++`
 
-We have violated the rule that says nothing can be the successor to zero.
+And now we have violated the rule that says nothing can be the successor to 
+zero.
 
 ## Observations
 

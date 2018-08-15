@@ -72,3 +72,14 @@ The logarithm operator is for asking for the middle value:
 (log 4 2)
 (log 5 2)
 ```
+
+## A Sample Problem
+
+Let's revisit an old word problem. 
+
+Bob is given an initial weekly allowance of $10, which is to increase by 5% for
+every week he successfully completes his chores. After the first week, Bob 
+expects the allowance for the following week to be `10 * 1.05`, or `$10.50`.
+
+After how many weeks would Bob have to wait to expect an allowance of at least
+$30?
