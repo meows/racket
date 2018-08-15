@@ -92,8 +92,7 @@ consistency to our rules is what matters, not that we name something `0` or
 
 1. Let's test whether `3 == 0`.
 2. Recall that `3 := 2++`
-3. That would imply `2++ == 0`, which violates the rule that `n++` can never be 
-   `0`.
+3. That would imply `2++ == 0`, which violates the rule that `n++` can never be `0`.
 
 ### Is 4 equal to 1?
 
@@ -136,6 +135,9 @@ zero.
    arranged as:
 
    `{ B, A, C, D, ... }`
+
+   And one could not object to any ordering or usage of these symbols. Without
+   behavior, all you have are a bag of symbols.
 
 ## Final Definition
 
