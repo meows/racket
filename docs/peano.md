@@ -78,7 +78,7 @@ That we can map many mathematical expressions into categories differentiated on
 consistency to our rules is what matters, not that we name something `0` or 
 `false`.
 
-## Unit Test
+## Tests on Succession
 
 ### Is 3 natural?
 
@@ -147,5 +147,44 @@ the naturals be the smallest set which implements all these rules.
 ## Addition
 
 1. Let `+` be a binary function on the naturals to the naturals.
-2. If `m` is a natural, let `0 + m := m`.
+2. If `m` is a natural, let `0 + m == m`.
 3. If `n` and `m` are naturals, then `(n++) + m := (n + m)++`.
+
+### Commutativity of addition
+
+By implication we also have `m + 0 == m`, and then `n + m == m + n`. Why?
+
+1. `m + 0 == 0` The hypothesis.
+2. `0 + 0 == 0` The base case.
+
+## Tests on Addition
+
+Is this enough information on `+` to define all `n + m`?
+
+### What's 1 + 0?
+
+1. Due to our rule that `0 + m == m`, `1 + 0` can be rewritten as `1`, which is
+   a natural.
+
+### What's 1 + 1?
+
+1. `0++ + 1 == (0 + 1)++`
+2. `1++ == 2`
+
+### What's 1 + 2?
+
+1. `0++ + 2 == (0 + 2)++`
+2. `2++ == 3`
+
+### What's 2 + 2?
+
+1. `1++ + 2`
+2. `(1 + 2)++`
+3. `(0++ + 2)++`
+4. `((0 + 2)++)++`
+5. `(2++)++ := 4`
+
+1. `(0++)++ + (0++)++`
+2. `(0++ + (0++)++)++`
+3. `((0 + (0++)++)++)++`
+4. `(((0++)++)++)++ := 4`
