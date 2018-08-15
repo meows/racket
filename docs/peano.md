@@ -51,17 +51,20 @@ Generally, it's only when things change that we can appreciate behavior, and
   transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
   rename things.
 
+> Informally, let `!=` mean anything which doesn't follow our rule for `==`.
+> `0 == 0++` wouldn't follow our rules above, so we'd write it as `0 != 0++`.
+
 ## Sucessor `++`
 
 1. Let `n++` be a natural.
 2. Let `n++` never equal `0`.
 3. If `a` and `b` are naturals, let `a++ == b++` iff `a == b`. This rule also 
    means that every `n++` is unique.
-
-* The first rule defines the domain and codomain of `++`.
+ 
+* The first rule defines the domain and codomain of `++` to the naturals.
 * The second rule constrains the range of `++` and privileges `0` under `++`.
 * The third rule ensures that every natural is unique, which also stops looping 
-  number systems (such as degrees to measure angles where `0 == 360`).
+  number systems.
 
 ### Informal Definition
 
@@ -72,7 +75,7 @@ arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about
 how `0++` means `true`, and `0` means `false`.
 
 That we can map many mathematical expressions into categories differentiated on 
-consistency (to our rules) is what matters, not that we name something `0` or 
+consistency to our rules is what matters, not that we name something `0` or 
 `false`.
 
 ## Unit Test
@@ -87,14 +90,16 @@ consistency (to our rules) is what matters, not that we name something `0` or
 
 ### Is 3 equal to 0?
 
-1. Recall that `3 := 2++`
-2. That would imply `2++ == 0`, which violates our rule that `n++` cannot be `0`.
+1. Let's test whether `3 == 0`.
+2. Recall that `3 := 2++`
+3. That would imply `2++ == 0`, which violates the rule that `n++` can never be 
+   `0`.
 
 ### Is 4 equal to 1?
 
-1. Assume that `4 == 1` 
-2. Then `3++ == 0++`
-3. Therefore `3 == 0` by our rule of how `a++ == b++` translates to `a == b`.
+1. Let's test the assumption that `4 == 1`.
+2. Recall `4 := 3++` and `1 := 0++`, and therefore `3++ == 0++`.
+4. Then `3 == 0 := 3++ == 0++` by our rule of how `a++ == b++` translates to `a == b`.
 4. But recall that `3 := 2++`, which implies that `2++ == 0`, which violates our
    rule that `n++` can never equal `0`.
 5. Even if we began at `6 == 2` or higher, the `(a++ == b++) := (a == b)` rule
@@ -131,6 +136,11 @@ zero.
    arranged as:
 
    `{ B, A, C, D, ... }`
+
+## Final Definition
+
+Now that we have defined an infinite set `N`, a natural `0`, `++` and `==`, let
+the naturals be the smallest set which implements all these rules.
 
 ## Addition
 
