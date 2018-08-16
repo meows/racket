@@ -45,6 +45,7 @@ Generally, it's only when things change that we can appreciate behavior, and
 2. If `a == b` then `b == a`.
 3. If `a == b` and `b == c` then `a == c`.
 
+* The first rule allows us to ask whether `a` is the same as `a`.
 * The second rule says that the order of inoputs don't matter to `==` -- it's 
   _commutative_.
 * The third rule is called transitivity, as if the identity of `a` was 
@@ -147,15 +148,36 @@ the naturals be the smallest set which implements all these rules.
 ## Addition
 
 1. Let `+` be a binary function on the naturals to the naturals.
-2. If `m` is a natural, let `0 + m == m`.
-3. If `n` and `m` are naturals, then `(n++) + m := (n + m)++`.
+2. If `n` is a natural, let `0 + n == n`.
+3. If `n` and `m` are naturals, let `n++ + m := (n + m)++`.
 
-### Commutativity of addition
+### Commutativity of `(+ 0 n)`
 
-By implication we also have `m + 0 == m`, and then `n + m == m + n`. Why?
+By implication we also have `n + 0 == n`, and then `n + m == m + n`. Why?
 
-1. `m + 0 == 0` The hypothesis.
-2. `0 + 0 == 0` The base case.
+1. We want to see if for every natural `n` that `n + 0 == n`.
+2. `0 + 0 == 0` The base case is given to us from `0 + n == n`
+3. `n++ + 0 == (n + 0)++` The induction step.
+4. `n++ + 0 == n++` We see that `n + 0 == n` gives us a stable translation 
+   scheme for all naturals.
+
+### Commutativity of `(+ a b)`
+
+We want to see if `a + b == b + a` has a translation for every natural, and that
+it doesn't violate any rule. That would imply that: `a + b++ == (a + b)++`.
+This hypothesis together with the rule of addition would form a bigger theory:
+
+0. `a++ + b++ == (a + b++)++ == (a++ + b)++`?
+
+1. `0 + a++ == (0 + a)++` Base case.
+
+   But `0 + a++ == a++` and `0 + a == a`. And thus we have `a++ == a++` for the
+   base case.
+
+2. `a + b++ == (a + b)++`?
+
+3. `a++ + b++ == (a++ + b)++`?
+4. `(a + b++)++ == (a++ + b)++`?
 
 ## Tests on Addition
 
