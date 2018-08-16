@@ -153,13 +153,16 @@ the naturals be the smallest set which implements all these rules.
 
 ### Commutativity of `(+ 0 n)`
 
-By implication we also have `n + 0 == n`, and then `n + m == m + n`. Why?
+By implication we also have `n + 0 == n`. Why?
 
 1. We want to see if for every natural `n` that `n + 0 == n`.
 2. `0 + 0 == 0` The base case is given to us from `0 + n == n`
 3. `n++ + 0 == (n + 0)++` by the definition of addition.
 4. `(n + 0)++ == n++`.
 5. `(n + 0) == n` because of the rule that `a++ == b++ := a == b`.
+
+We now know that `n + 0 == n` is implied by the definition of succession, 
+addition and equality.
 
 ### Commutativity of `(+ a b)`
 
