@@ -157,9 +157,9 @@ By implication we also have `n + 0 == n`, and then `n + m == m + n`. Why?
 
 1. We want to see if for every natural `n` that `n + 0 == n`.
 2. `0 + 0 == 0` The base case is given to us from `0 + n == n`
-3. `n++ + 0 == (n + 0)++` The induction step.
-4. `n++ + 0 == n++` We see that `n + 0 == n` gives us a stable translation 
-   scheme for all naturals.
+3. `n++ + 0 == (n + 0)++` by the definition of addition.
+4. `(n + 0)++ == n++`.
+5. `(n + 0) == n` because of the rule that `a++ == b++ := a == b`.
 
 ### Commutativity of `(+ a b)`
 
@@ -169,7 +169,7 @@ This hypothesis together with the rule of addition would form a bigger theory:
 
 0. `a++ + b++ == (a + b++)++ == (a++ + b)++`?
 
-1. `0 + a++ == (0 + a)++` Base case.
+1. `0 + a++ == (0 + a)++` We're testing this mechanism first.
 
    But `0 + a++ == a++` and `0 + a == a`. And thus we have `a++ == a++` for the
    base case.
