@@ -63,7 +63,7 @@ all know, the dog will get very angry. Now that we know about values and how we
 organize or group them into types, let's read about some of the types that 
 Racket has provided for us:
 
-## Numbers
+### Numbers
 
 All numbers in Racket are _real_ numbers, meaning they can be any kind of
 decimal number you want, with the limitation that your computer can run out of
@@ -91,7 +91,7 @@ Here are some examples of numbers:
 > choose a different repesentation, such as reduced fraction, mixed fraction, or
 > decimal.
 
-## Strings
+### Strings
 
 A string is a sequence of any valid symbols in your language, but surrounded by
 a pair of quotation marks, like `"hello .==.-. there"`. One common use of
@@ -118,7 +118,7 @@ Here are examples of strings:
 (string? g) ;; → false -- this is a boolean.
 ```
 
-## Booleans
+### Booleans
 
 A boolean is value that can only be either `true` or `false`. Racket also allows
 you to write it as `#t` or `#f`.

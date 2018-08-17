@@ -16,7 +16,7 @@ hide_title: true
 7. Let there be a name translation scheme to transform the symbols from `N` to
    that of the western convention. These translations are merely for 
    convenience, as we have only formally defined `0`, `++`, and `==`.
-   
+
    The parentheses aren't operationally important and aren't meant to suggest an 
    order of operation. They're just part of the notation for functions to 
    typographically indicate the input, in the sense that `(n)++` means `++(n)`,
