@@ -151,15 +151,15 @@ the naturals be the smallest set which implements all these rules.
 2. If `n` is a natural, let `0 + n == n`.
 3. If `n` and `m` are naturals, let `n++ + m := (n + m)++`.
 
-### Commutativity of `(+ 0 n)`
+### Commutativity of `+` around `0`
 
-By implication we also have `n + 0 == n`. Why?
+By implication we also have `n + 0 == n`. Why? We want to see if for every 
+natural `n` that `n + 0 == n`:
 
-1. We want to see if for every natural `n` that `n + 0 == n`.
-2. `0 + 0 == 0` The base case is given to us from `0 + n == n`
-3. `n++ + 0 == (n + 0)++` by the definition of addition.
-4. `(n + 0)++ == n++`.
-5. `(n + 0) == n` because of the rule that `a++ == b++ := a == b`.
+1. `0 + 0 == 0` The base case is given to us from `0 + n == n`
+2. `n++ + 0 == n++` The induction step.
+3. `(n + 0)++ == n++` Definition of addition.
+4. `n + 0 == n` because of the rule that `a++ == b++ := a == b`.
 
 We now know that `n + 0 == n` is implied by the definition of succession, 
 addition and equality.
@@ -170,17 +170,17 @@ We want to see if `a + b == b + a` has a translation for every natural, and that
 it doesn't violate any rule. That would imply that: `a + b++ == (a + b)++`.
 This hypothesis together with the rule of addition would form a bigger theory:
 
-0. `a++ + b++ == (a + b++)++ == (a++ + b)++`?
+* `n++ + m++ == (n + m++)++ == (n++ + m)++`?
 
-1. `0 + a++ == (0 + a)++` We're testing this mechanism first.
+* `0 + m++ == m++ + 0 == (m + 0)++` The base case is proven for us due to 
+  `n + 0 == 0 + n`, which has been shown above.
 
-   But `0 + a++ == a++` and `0 + a == a`. And thus we have `a++ == a++` for the
-   base case.
+* `n + m++ == (n + m)++` The next step the prove. This allows us to simplify
+  addition of any two naturals by re-allocating the `++`.
 
-2. `a + b++ == (a + b)++`?
-
-3. `a++ + b++ == (a++ + b)++`?
-4. `(a + b++)++ == (a++ + b)++`?
+0. `n++ + m++ == m++ + n++`
+1. `(n + m++)++ == (m + n++)++`
+2. `n + m++ == m + n++`
 
 ## Tests on Addition
 
@@ -213,3 +213,14 @@ Is this enough information on `+` to define all `n + m`?
 2. `(0++ + (0++)++)++`
 3. `((0 + (0++)++)++)++`
 4. `(((0++)++)++)++ := 4`
+
+## Multiplication
+
+1. Let `0 * m := 0`
+2. Let `n++ * m := (n * m) + m`
+
+### `2 * 3`
+
+`1 * 3 == (1++ * 3) + 3`
+`0++ * 3 == (0 * 3) + 3 + 3`
+`2 * 3 == 0 + 3 + 3`
