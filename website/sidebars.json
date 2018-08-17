@@ -27,7 +27,8 @@
          "cond",
          "function-sequence",
          "fold",
-         "geometry"
+         "geometry",
+         "exponentiation"
       ],
       "JavaScript": [
          "javascript-0",

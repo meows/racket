@@ -77,9 +77,39 @@ The logarithm operator is for asking for the middle value:
 
 Let's revisit an old word problem. 
 
-Bob is given an initial weekly allowance of $10, which is to increase by 5% for
-every week he successfully completes his chores. After the first week, Bob 
+Bob is given an initial weekly allowance of `$10`, which is to increase by `5%` 
+for every week he successfully completes his chores. After the first week, Bob 
 expects the allowance for the following week to be `10 * 1.05`, or `$10.50`.
 
 After how many weeks would Bob have to wait to expect an allowance of at least
-$30?
+`$30`?
+
+### Observations
+
+``` clojure
+(define initial 10) ;; unit dollars
+(define rate 21/20) ;; percentage as a rational
+
+;; weeks → allowance in dollars
+(define (weeks->dollars weeks)
+   (* initial 
+      (expt rate weeks)))
+
+(weeks->dollars 0) ;; → 10
+(weeks->dollars 1) ;; → 10.5
+(weeks->dollars 2) ;; → 9261/800 → 11.57625
+```
+
+If these a 3-list of `(base exponent power)`, when will we reach at least `$30`?
+Trying this manually by hand is very slow, so how might the log function help us
+find the answer?
+
+``` clojure
+(1.05 0 1)
+(1.05 1 1.05)
+(1.05 2 1.1025)
+(1.05 3 1.157625)
+(1.05 4 1.21550625)
+(1.05 5 1.2762815625)
+(1.05 6 1.340095640625)
+```
