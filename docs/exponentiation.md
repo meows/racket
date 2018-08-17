@@ -113,3 +113,8 @@ find the answer?
 (1.05 5 1.2762815625)
 (1.05 6 1.340095640625)
 ```
+
+Since we're going to multiply our `(expt rate weeks)` term by the initial value 
+of `$10`, the `power` that we require to scale `$10` to `$30` would be about 
+`3`. So we want to know what exponent to the base `1.05` could possibly result
+in a power of `3`.
