@@ -53,12 +53,17 @@ Generally, it's only when things change that we can appreciate behavior, and
 <li>If <code>a == b</code> and <code>b == c</code> then <code>a == c</code>.</li>
 </ol>
 <ul>
+<li>The first rule allows us to ask whether <code>a</code> is the same as <code>a</code>.</li>
 <li>The second rule says that the order of inoputs don't matter to <code>==</code> -- it's
 <em>commutative</em>.</li>
 <li>The third rule is called transitivity, as if the identity of <code>a</code> was
 transferred to <code>b</code>, and then to <code>c</code>. In a sense it turns <code>==</code> into a way to
 rename things.</li>
 </ul>
+<blockquote>
+<p>Informally, let <code>!=</code> mean anything which doesn't follow our rule for <code>==</code>.
+<code>0 == 0++</code> wouldn't follow our rules above, so we'd write it as <code>0 != 0++</code>.</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="sucessor"></a><a href="#sucessor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sucessor <code>++</code></h2>
 <ol>
 <li>Let <code>n++</code> be a natural.</li>
@@ -67,10 +72,10 @@ rename things.</li>
 means that every <code>n++</code> is unique.</li>
 </ol>
 <ul>
-<li>The first rule defines the domain and codomain of <code>++</code>.</li>
+<li>The first rule defines the domain and codomain of <code>++</code> to the naturals.</li>
 <li>The second rule constrains the range of <code>++</code> and privileges <code>0</code> under <code>++</code>.</li>
 <li>The third rule ensures that every natural is unique, which also stops looping
-number systems (such as degrees to measure angles where <code>0 == 360</code>).</li>
+number systems.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="informal-definition"></a><a href="#informal-definition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Informal Definition</h3>
 <p>The equality we define here is a 2-arity function on the naturals which returns
@@ -79,9 +84,9 @@ objects to new symbols with deliberate cultural meaning, we might instead
 arbitrarily assign the result of <code>==</code> to either <code>0</code> or <code>0++</code>, with a wink about
 how <code>0++</code> means <code>true</code>, and <code>0</code> means <code>false</code>.</p>
 <p>That we can map many mathematical expressions into categories differentiated on
-consistency (to our rules) is what matters, not that we name something <code>0</code> or
+consistency to our rules is what matters, not that we name something <code>0</code> or
 <code>false</code>.</p>
-<h2><a class="anchor" aria-hidden="true" id="unit-test"></a><a href="#unit-test" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unit Test</h2>
+<h2><a class="anchor" aria-hidden="true" id="tests-on-succession"></a><a href="#tests-on-succession" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tests on Succession</h2>
 <h3><a class="anchor" aria-hidden="true" id="is-3-natural"></a><a href="#is-3-natural" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is 3 natural?</h3>
 <ol>
 <li><code>0 := 0</code></li>
@@ -92,8 +97,9 @@ consistency (to our rules) is what matters, not that we name something <code>0</
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="is-3-equal-to-0"></a><a href="#is-3-equal-to-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is 3 equal to 0?</h3>
 <ol>
+<li>Let's test whether <code>3 == 0</code>.</li>
 <li>Recall that <code>3 := 2++</code></li>
-<li>That would imply <code>2++ == 0</code>, which violates our rule that <code>n++</code> cannot be <code>0</code>.</li>
+<li>That would imply <code>2++ == 0</code>, which violates the rule that <code>n++</code> can never be <code>0</code>.</li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="is-4-equal-to-1"></a><a href="#is-4-equal-to-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is 4 equal to 1?</h3>
 <ol>
@@ -128,7 +134,9 @@ natural:</p>
 to get from one letter to another. That is to say, this is just a bag of
 unique letters with no relationship to each other. They could just as well be
 arranged as:</p>
-<p><code>{ B, A, C, D, ... }</code></p></li>
+<p><code>{ B, A, C, D, ... }</code></p>
+<p>And one could not object to any ordering or usage of these symbols. Without
+behavior, all you have are a bag of symbols.</p></li>
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="final-definition"></a><a href="#final-definition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Final Definition</h2>
 <p>Now that we have defined an infinite set <code>N</code>, a natural <code>0</code>, <code>++</code> and <code>==</code>, let
@@ -136,7 +144,72 @@ the naturals be the smallest set which implements all these rules.</p>
 <h2><a class="anchor" aria-hidden="true" id="addition"></a><a href="#addition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addition</h2>
 <ol>
 <li>Let <code>+</code> be a binary function on the naturals to the naturals.</li>
-<li>If <code>m</code> is a natural, let <code>0 + m := m</code>.</li>
-<li>If <code>n</code> and <code>m</code> are naturals, then <code>(n++) + m := (n + m)++</code>.</li>
+<li>If <code>n</code> is a natural, let <code>0 + n == n</code>.</li>
+<li>If <code>n</code> and <code>m</code> are naturals, let <code>n++ + m := (n + m)++</code>.</li>
 </ol>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#equality">Equality <code>==</code></a></li><li><a href="#sucessor">Sucessor <code>++</code></a><ul class="toc-headings"><li><a href="#informal-definition">Informal Definition</a></li></ul></li><li><a href="#unit-test">Unit Test</a><ul class="toc-headings"><li><a href="#is-3-natural">Is 3 natural?</a></li><li><a href="#is-3-equal-to-0">Is 3 equal to 0?</a></li><li><a href="#is-4-equal-to-1">Is 4 equal to 1?</a></li><li><a href="#0-0"><code>(0++)++ == ((0++)++)++</code>?</a></li></ul></li><li><a href="#observations">Observations</a></li><li><a href="#final-definition">Final Definition</a></li><li><a href="#addition">Addition</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<h3><a class="anchor" aria-hidden="true" id="commutativity-of-around-0"></a><a href="#commutativity-of-around-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commutativity of <code>+</code> around <code>0</code></h3>
+<p>By implication we also have <code>n + 0 == n</code>. Why? We want to see if for every
+natural <code>n</code> that <code>n + 0 == n</code>:</p>
+<ol>
+<li><code>0 + 0 == 0</code> The base case is given to us from <code>0 + n == n</code></li>
+<li><code>n++ + 0 == n++</code> The induction step.</li>
+<li><code>(n + 0)++ == n++</code> Definition of addition.</li>
+<li><code>n + 0 == n</code> because of the rule that <code>a++ == b++ := a == b</code>.</li>
+</ol>
+<p>We now know that <code>n + 0 == n</code> is implied by the definition of succession,
+addition and equality.</p>
+<h3><a class="anchor" aria-hidden="true" id="commutativity-of-a-b"></a><a href="#commutativity-of-a-b" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commutativity of <code>(+ a b)</code></h3>
+<p>We want to see if <code>a + b == b + a</code> has a translation for every natural, and that
+it doesn't violate any rule. That would imply that: <code>a + b++ == (a + b)++</code>.
+This hypothesis together with the rule of addition would form a bigger theory:</p>
+<ul>
+<li><p><code>n++ + m++ == (n + m++)++ == (n++ + m)++</code>?</p></li>
+<li><p><code>0 + m++ == m++ + 0 == (m + 0)++</code> The base case is proven for us due to
+<code>n + 0 == 0 + n</code>, which has been shown above.</p></li>
+<li><p><code>n + m++ == (n + m)++</code> The next step the prove. This allows us to simplify
+addition of any two naturals by re-allocating the <code>++</code>.</p></li>
+</ul>
+<ol>
+<li><code>n++ + m++ == m++ + n++</code></li>
+<li><code>(n + m++)++ == (m + n++)++</code></li>
+<li><code>n + m++ == m + n++</code></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="tests-on-addition"></a><a href="#tests-on-addition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tests on Addition</h2>
+<p>Is this enough information on <code>+</code> to define all <code>n + m</code>?</p>
+<h3><a class="anchor" aria-hidden="true" id="what-s-1-0"></a><a href="#what-s-1-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What's 1 + 0?</h3>
+<ol>
+<li>Due to our rule that <code>0 + m == m</code>, <code>1 + 0</code> can be rewritten as <code>1</code>, which is
+a natural.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="what-s-1-1"></a><a href="#what-s-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What's 1 + 1?</h3>
+<ol>
+<li><code>0++ + 1 == (0 + 1)++</code></li>
+<li><code>1++ == 2</code></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="what-s-1-2"></a><a href="#what-s-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What's 1 + 2?</h3>
+<ol>
+<li><code>0++ + 2 == (0 + 2)++</code></li>
+<li><code>2++ == 3</code></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="what-s-2-2"></a><a href="#what-s-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What's 2 + 2?</h3>
+<ol>
+<li><p><code>1++ + 2</code></p></li>
+<li><p><code>(1 + 2)++</code></p></li>
+<li><p><code>(0++ + 2)++</code></p></li>
+<li><p><code>((0 + 2)++)++</code></p></li>
+<li><p><code>(2++)++ := 4</code></p></li>
+<li><p><code>(0++)++ + (0++)++</code></p></li>
+<li><p><code>(0++ + (0++)++)++</code></p></li>
+<li><p><code>((0 + (0++)++)++)++</code></p></li>
+<li><p><code>(((0++)++)++)++ := 4</code></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="multiplication"></a><a href="#multiplication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiplication</h2>
+<ol>
+<li>Let <code>0 * m := 0</code></li>
+<li>Let <code>n++ * m := (n * m) + m</code></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="2-3"></a><a href="#2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>2 * 3</code></h3>
+<p><code>1 * 3 == (1++ * 3) + 3</code>
+<code>0++ * 3 == (0 * 3) + 3 + 3</code>
+<code>2 * 3 == 0 + 3 + 3</code></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#equality">Equality <code>==</code></a></li><li><a href="#sucessor">Sucessor <code>++</code></a><ul class="toc-headings"><li><a href="#informal-definition">Informal Definition</a></li></ul></li><li><a href="#tests-on-succession">Tests on Succession</a><ul class="toc-headings"><li><a href="#is-3-natural">Is 3 natural?</a></li><li><a href="#is-3-equal-to-0">Is 3 equal to 0?</a></li><li><a href="#is-4-equal-to-1">Is 4 equal to 1?</a></li><li><a href="#0-0"><code>(0++)++ == ((0++)++)++</code>?</a></li></ul></li><li><a href="#observations">Observations</a></li><li><a href="#final-definition">Final Definition</a></li><li><a href="#addition">Addition</a><ul class="toc-headings"><li><a href="#commutativity-of-around-0">Commutativity of <code>+</code> around <code>0</code></a></li><li><a href="#commutativity-of-a-b">Commutativity of <code>(+ a b)</code></a></li></ul></li><li><a href="#tests-on-addition">Tests on Addition</a><ul class="toc-headings"><li><a href="#what-s-1-0">What's 1 + 0?</a></li><li><a href="#what-s-1-1">What's 1 + 1?</a></li><li><a href="#what-s-1-2">What's 1 + 2?</a></li><li><a href="#what-s-2-2">What's 2 + 2?</a></li></ul></li><li><a href="#multiplication">Multiplication</a><ul class="toc-headings"><li><a href="#2-3"><code>2 * 3</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
