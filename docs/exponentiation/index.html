@@ -100,13 +100,14 @@ expects the allowance for the following week to be <code>10 * 1.05</code>, or <c
 
 <span class="hljs-comment">;; weeks → allowance in dollars</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">weeks-&gt;dollars</span> weeks)
-   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> initial (<span class="hljs-name">expt</span> rate weeks))
+   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> initial 
+      (<span class="hljs-name">expt</span> rate weeks)))
 
 (<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">1</span>) <span class="hljs-comment">;; → 10.5</span>
 (<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 9261/800 → 11.57625</span>
 </code></pre>
-<p>If these a 3-list of <code>(base exponent power)</code>, when will we reach at least $30?
+<p>If these a 3-list of <code>(base exponent power)</code>, when will we reach at least <code>$30</code>?
 Trying this manually by hand is very slow, so how might the log function help us
 find the answer?</p>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-number">1.05</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
@@ -117,4 +118,8 @@ find the answer?</p>
 (<span class="hljs-number">1.05</span> <span class="hljs-number">5</span> <span class="hljs-number">1.2762815625</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">6</span> <span class="hljs-number">1.340095640625</span>)
 </code></pre>
+<p>Since we're going to multiply our <code>(expt rate weeks)</code> term by the initial value
+of <code>$10</code>, the <code>power</code> that we require to scale <code>$10</code> to <code>$30</code> would be about
+<code>3</code>. So we want to know what exponent to the base <code>1.05</code> could possibly result
+in a power of <code>3</code>.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geometry">← geometry</a><a class="docs-next button" href="/docs/javascript-0">javascript-0 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-sample-problem">A Sample Problem</a><ul class="toc-headings"><li><a href="#observations">Observations</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
