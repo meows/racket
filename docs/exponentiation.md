@@ -84,7 +84,7 @@ expects the allowance for the following week to be `10 * 1.05`, or `$10.50`.
 After how many weeks would Bob have to wait to expect an allowance of at least
 `$30`?
 
-### Observations
+### Solving with `log`
 
 ``` clojure
 (define initial 10) ;; unit dollars
@@ -128,3 +128,22 @@ We can simply look for a power of `3` when the base is `1.05`:
 Since our allowance is only raised weekly, and not inbetween, we simply round up
 to the next week to get `23` weeks. The allowance after `23` weeks should be 
 about `$30.715`.
+
+But (!). Let's not ignore the fact that we rounded up. When you perform
+
+``` clojure
+(map weeks->dollars (range 20))
+```
+
+you'll find a large list of values inbetween the whole numbered weeks. Are the
+numbers inbetween meaningless? For the shallow coincidence of our word problem, 
+yes, because the word problem states we get paid weekly and not in days or 
+seconds inbetween.
+
+But most of real life does happen in the "days and seconds" inbetween. If you
+were taking daily measurements on the growth of a bacteria colony, perhaps you
+notice a pattern which is well described by a function for a geometric sequence.
+
+It would be silly to imagine that the bacteria simply stop growing inbetween the
+24 hour periods of measurement, and as soon as you step into the door to 
+measure, they do all their growth in that instant.
