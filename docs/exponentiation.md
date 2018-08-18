@@ -5,7 +5,7 @@ title: Exponentiation
 hide_title: true
 ---
 
-# Exponentiation
+# Geometric Sequences
 
 We have previously defined exponentiation as a way of repeated multiplication.
 For example:
@@ -100,9 +100,13 @@ After how many weeks would Bob have to wait to expect an allowance of at least
 (weeks->dollars 2) ;; → 9261/800 → 11.57625
 ```
 
-If these a 3-list of `(base exponent power)`, when will we reach at least `$30`?
-Trying this manually by hand is very slow, so how might the log function help us
-find the answer?
+Since we're going to multiply the `(expt rate weeks)` term by the initial value 
+of `$10`, the `power` that we require to scale our initial `$10` to `$30` would 
+be about `3`.
+
+If these are 3-lists of `(base exponent power)`, when will we reach at least 
+`3`? Trying this manually by hand is very slow, so how might the `log` function 
+help us find the answer?
 
 ``` clojure
 (1.05 0 1)
@@ -114,7 +118,13 @@ find the answer?
 (1.05 6 1.340095640625)
 ```
 
-Since we're going to multiply our `(expt rate weeks)` term by the initial value 
-of `$10`, the `power` that we require to scale `$10` to `$30` would be about 
-`3`. So we want to know what exponent to the base `1.05` could possibly result
-in a power of `3`.
+We can simply look for a power of `3` when the base is `1.05`:
+
+``` clojure
+(log 3 1.05)        ;; → 22.517
+(weeks->dollars 23) ;; → 30.715
+```
+
+Since our allowance is only raised weekly, and not inbetween, we simply round up
+to the next week to get `23` weeks. The allowance after `23` weeks should be 
+about `$30.715`.

@@ -59,7 +59,8 @@ this sequence is the double of the previous number.
 2. All other sequence items are defined by tripling the previous sequence item.
 3. A delta of the sequence reveals an identical sequence.
 4. The velocity is changing and it gets faster over time. Therefore it is
-   accelerating. The only time velocity doesn't change is when it's at 0.
+   accelerating. The only time velocity doesn't change is when it's at `0`. That
+   means whatever you're watching isn't moving relative to you.
 
 Therefore, for any function `f` which generates a geometric sequence, we need
 only two pieces of information to determine the value at any point of the 
@@ -69,8 +70,8 @@ sequence, (1) an initial value `a` and (2) the common ratio `r`:
 
 ## Sample Word Problems
 
-Bob is given an initial weekly allowance of $10, which is to increase by 5% for
-every week he successfully completes his chores. After the first week, Bob 
+Bob is given an initial weekly allowance of `$10`, which is to increase by `5%` 
+for every week he successfully completes his chores. After the first week, Bob 
 expects the allowance for the following week to be `10 * 1.05`, or `$10.50`.
 
 Write a function called `allowance` which consumes an natural number week `w` to
