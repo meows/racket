@@ -146,4 +146,5 @@ notice a pattern which is well described by a function for a geometric sequence.
 
 It would be silly to imagine that the bacteria simply stop growing inbetween the
 24 hour periods of measurement, and as soon as you step into the door to 
-measure, they do all their growth in that instant.
+measure, they do all their growth in that instant. Much of everyday life works 
+"gradually".

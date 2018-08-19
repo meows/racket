@@ -6,7 +6,7 @@ hide_title: true
 
 # Definitions
 
-1. Let there be an infinite set `N` called the naturals.
+1. Let there be a set `N` called the naturals.
 2. Let `N` contain an element that looks like `0`.
 3. Let `N` be equipped with a unary function `++`.
 4. Let `N` be equipped with a binary function `==`.
@@ -46,7 +46,7 @@ Generally, it's only when things change that we can appreciate behavior, and
 3. If `a == b` and `b == c` then `a == c`.
 
 * The first rule allows us to ask whether `a` is the same as `a`.
-* The second rule says that the order of inoputs don't matter to `==` -- it's 
+* The second rule says that the order of inputs don't matter to `==` -- it's 
   _commutative_.
 * The third rule is called transitivity, as if the identity of `a` was 
   transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
