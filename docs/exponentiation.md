@@ -177,13 +177,15 @@ This sequence is exactly like the powers of _powers of 2_ listed above, except
 now the initial number starts with `2`, so the function should look like
 `f(n) = 2 * 2^n`, or :
 
-``` scheme
+``` racket
 (define (geometric initial ratio)
    (λ (cycles) 
       (* initial
          (expt ratio cycles))))
 
+(map (geometric 1 2) (range 8)) ;; → '(1 2 4 8 16 32 64 128)
 (map (geometric 2 2) (range 8)) ;; → '(2 4 8 16 32 64 128 256)
+(map (geometric 4 2) (range 8)) ;; → '(4 8 16 32 64 128 256 512)
 ```
 
 ### One more observation.
