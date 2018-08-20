@@ -46,18 +46,23 @@ back the original `x`.
 ## Exponentiation
 
 ``` clojure
+(define (power x)  
+   (λ (n) 
+      (expt x n)))
 
-(define (cube x) (expt x 3))
-(define (power x) (λ (n) (expt x n)))
-(define (root r) (λ (x) (expt x (/ 1 r))))
+(define (root r)   
+   (λ (x)
+      (round (expt x (/ 1 r)))))
+
+(define (cube x)   (expt x 3))
 (define (log2 pow) (log pow 2))
 (define (log3 pow) (log pow 3))
 
-(define nats     (range 6))            ;; → '(0 1 2 3 4 5)
-(define squares  (map sqr nats))       ;; → '(0 1 4 9 16 25)
+(define nats     (range 6))            ;; → '(0 1 2  3  4   5)
+(define squares  (map sqr nats))       ;; → '(0 1 4  9 16  25)
 (define cubes    (map cube nats))      ;; → '(0 1 8 27 64 125)
-(define powers-2 (map (power 2) nats)) ;; → '(1 2 4 8 16 32)
-(define powers-3 (map (power 3) nats)) ;; → '(0 1 3 9 27 81 243)
+(define powers-2 (map (power 2) nats)) ;; → '(1 2 4  8 16  32)
+(define powers-3 (map (power 3) nats)) ;; → '(1 3 9 27 81 243)
 
 (map (root 2) squares) ;; → '(0 1 2 3 4 5)
 (map (root 3) cubes)   ;; → '(0 1 2 3 4 5)
@@ -72,10 +77,9 @@ back the original `x`.
 ## Geometry
 
 ``` clojure
-(define angles 
-   (map (λ (r) (* pi r))
-        '(0 1/2 2/2 3/2 4/2)))
+(define angles-90 (map degrees->radians '(0 90 180 270 360)))
+(define angles-45 (map degrees->radians '(0 45 90 135 180 225 270 315 360)))
 
-(map sin angles)
-(map cos angles)
+(map sin angles) ;; → 
+(map cos angles) ;; →
 ```
