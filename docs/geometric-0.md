@@ -1,3 +1,10 @@
+---
+id: geometric-0
+title: Geometric Sequences
+hide_title: true
+sidebar_label: Geometric Sequences
+---
+
 # Geometric Sequences
 
 > WIP: Don't use yet!
