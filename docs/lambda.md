@@ -17,11 +17,13 @@ look really closely.
 
 ## Examples
 
-Here's an example of `lambda` in action:
+Here's an example of `lambda` in action, where we first define a variable named 
+`div10`, but its defined value isn't an ordinary value, it's a `lambda`:
 
 ``` clojure
 ;; Example 1
-(define div10 (lambda (x) (/ x 10)))
+(define div10 
+   (lambda (x) (* x 1/10)))
 
 (div10 100) ;; → 10
 (div10 20)  ;; → 2
@@ -32,7 +34,8 @@ learned before:
 
 ``` clojure
 ;; Example 2
-(define (div10 x) (/ x 10))
+(define (div10 x) 
+   (* x 1/10))
 
 (div10 100) ;; → 10
 (div10 20)  ;; → 2
@@ -44,10 +47,11 @@ example, and to Racket the two examples do exactly the same thing.
 Just to get used to how `lambda` works, here's a familiar example with multiple
 inputs or _parameters_, length `l`, width `w`, and height `h`:
 
-``` clojure
+``` scheme
 ;; Example A
 (define prism-volume
-        (lambda (l w h) (* l w h))
+   (lambda (l w h) 
+      (* l w h))
 
 (prism-volume 3 5 8) ;; → 120
 ```
@@ -57,7 +61,7 @@ Which would be complete identical to the familiar way of doing it:
 ``` clojure
 ;; Example B
 (define (prism-volume l w h)
-        (* l w h))
+   (* l w h))
 
 (prism-volume 3 5 8) ;; → 120
 ```
@@ -102,8 +106,8 @@ either one.
 
 ``` racket
 (define prism-volume
-        (λ (l w h)
-           (* l w h)))
+   (λ (l w h)
+      (* l w h)))
 
 (filter (λ (x) (< 3 x)) 
         (range 6))

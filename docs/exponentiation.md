@@ -148,3 +148,28 @@ It would be silly to imagine that the bacteria simply stop growing inbetween the
 24 hour periods of measurement, and as soon as you step into the door to 
 measure, they do all their growth in that instant. Much of everyday life works 
 "gradually".
+
+## Another Problem
+
+Observe the sequence below:
+
+`1, 2, 4, 8, 16, 32, 64...`
+
+...which would appear to be a sequence of _the powers of 2_. If you wanted to
+find the _nth_ number of the sequence, then the function would look like
+`f(n) = 1 * 2^n` where `^` means exponentiation, or:
+
+``` clojure
+(define (power-2 n)
+   (* 1 (expt 2 n)))
+
+(map power-2 (range 6)) ;; → '(1 2 4 8 16 32)
+```
+
+> It's a bit silly to multiply by 1, but that's just a visual placeholder for 
+> the problem we're about to see next.
+
+Now let's evaluate how to think about a similar sequence:
+
+`2, 4, 8, 16, 32, 64`
+
