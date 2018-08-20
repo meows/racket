@@ -44,9 +44,11 @@ lower-cased, which is how it's often written.</p>
 function, and it's actually the picture logo of the language you're using if you
 look really closely.</p>
 <h2><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
-<p>Here's an example of <code>lambda</code> in action:</p>
+<p>Here's an example of <code>lambda</code> in action, where we first define a variable named
+<code>div10</code>, but its defined value isn't an ordinary value, it's a <code>lambda</code>:</p>
 <pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example 1</span>
-(<span class="hljs-name">define</span> div10 (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (/ x <span class="hljs-number">10</span>)))
+(<span class="hljs-name">define</span> div10 
+   (<span class="hljs-name">lambda</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x <span class="hljs-number">1</span>/<span class="hljs-number">10</span>)))
 
 (<span class="hljs-name">div10</span> <span class="hljs-number">100</span>) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">div10</span> <span class="hljs-number">20</span>)  <span class="hljs-comment">;; → 2</span>
@@ -54,7 +56,8 @@ look really closely.</p>
 <p>You've probably noticed that you could do the exact same thing with the way you
 learned before:</p>
 <pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example 2</span>
-(<span class="hljs-name">define</span> (<span class="hljs-name">div10</span> x) (/ x <span class="hljs-number">10</span>))
+(<span class="hljs-name">define</span> (<span class="hljs-name">div10</span> x) 
+   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x <span class="hljs-number">1</span>/<span class="hljs-number">10</span>))
 
 (<span class="hljs-name">div10</span> <span class="hljs-number">100</span>) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">div10</span> <span class="hljs-number">20</span>)  <span class="hljs-comment">;; → 2</span>
@@ -63,16 +66,17 @@ learned before:</p>
 example, and to Racket the two examples do exactly the same thing.</p>
 <p>Just to get used to how <code>lambda</code> works, here's a familiar example with multiple
 inputs or <em>parameters</em>, length <code>l</code>, width <code>w</code>, and height <code>h</code>:</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example A</span>
-(<span class="hljs-name">define</span> prism-volume
-        (<span class="hljs-name">lambda</span> (<span class="hljs-name">l</span> w h) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
+<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; Example A</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> prism-volume
+   (<span class="hljs-name"><span class="hljs-builtin-name">lambda</span></span> (l w h) 
+      (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
 
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">8</span>) <span class="hljs-comment">;; → 120</span>
 </code></pre>
 <p>Which would be complete identical to the familiar way of doing it:</p>
 <pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example B</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h)
-        (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
+   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
 
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">8</span>) <span class="hljs-comment">;; → 120</span>
 </code></pre>
@@ -105,8 +109,8 @@ creators of your language also have a special love for it, I will note that
 <code>lambda</code> and <code>λ</code> mean the same thing in Racket and so you're allowed to use
 either one.</p>
 <pre><code class="hljs css languages- racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> prism-volume
-        (<span class="hljs-name">λ</span> (<span class="hljs-name">l</span> w h)
-           (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h)))
+   (<span class="hljs-name">λ</span> (<span class="hljs-name">l</span> w h)
+      (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h)))
 
 (<span class="hljs-name">filter</span> (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">3</span> x)) 
         (<span class="hljs-name">range</span> <span class="hljs-number">6</span>))

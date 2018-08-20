@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Exponentiation · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Exponentiation"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Exponentiation · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="# Exponentiation"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Exponentiation · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Geometric Sequences"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Exponentiation · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="# Geometric Sequences"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -35,7 +35,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="exponentiation"></a><a href="#exponentiation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exponentiation</h1>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="geometric-sequences"></a><a href="#geometric-sequences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Geometric Sequences</h1>
 <p>We have previously defined exponentiation as a way of repeated multiplication.
 For example:</p>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>)       <span class="hljs-comment">;; 2^0 → 1</span>
@@ -94,7 +94,7 @@ for every week he successfully completes his chores. After the first week, Bob
 expects the allowance for the following week to be <code>10 * 1.05</code>, or <code>$10.50</code>.</p>
 <p>After how many weeks would Bob have to wait to expect an allowance of at least
 <code>$30</code>?</p>
-<h3><a class="anchor" aria-hidden="true" id="observations"></a><a href="#observations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Observations</h3>
+<h3><a class="anchor" aria-hidden="true" id="solving-with-log"></a><a href="#solving-with-log" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solving with <code>log</code></h3>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> initial <span class="hljs-number">10</span>) <span class="hljs-comment">;; unit dollars</span>
 (<span class="hljs-name">define</span> rate <span class="hljs-number">21</span>/<span class="hljs-number">20</span>) <span class="hljs-comment">;; percentage as a rational</span>
 
@@ -107,9 +107,12 @@ expects the allowance for the following week to be <code>10 * 1.05</code>, or <c
 (<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">1</span>) <span class="hljs-comment">;; → 10.5</span>
 (<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 9261/800 → 11.57625</span>
 </code></pre>
-<p>If these a 3-list of <code>(base exponent power)</code>, when will we reach at least <code>$30</code>?
-Trying this manually by hand is very slow, so how might the log function help us
-find the answer?</p>
+<p>Since we're going to multiply the <code>(expt rate weeks)</code> term by the initial value
+of <code>$10</code>, the <code>power</code> that we require to scale our initial <code>$10</code> to <code>$30</code> would
+be about <code>3</code>.</p>
+<p>If these are 3-lists of <code>(base exponent power)</code>, when will we reach at least
+<code>3</code>? Trying this manually by hand is very slow, so how might the <code>log</code> function
+help us find the answer?</p>
 <pre><code class="hljs css languages- clojure">(<span class="hljs-number">1.05</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">1</span> <span class="hljs-number">1.05</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">2</span> <span class="hljs-number">1.1025</span>)
@@ -118,8 +121,42 @@ find the answer?</p>
 (<span class="hljs-number">1.05</span> <span class="hljs-number">5</span> <span class="hljs-number">1.2762815625</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">6</span> <span class="hljs-number">1.340095640625</span>)
 </code></pre>
-<p>Since we're going to multiply our <code>(expt rate weeks)</code> term by the initial value
-of <code>$10</code>, the <code>power</code> that we require to scale <code>$10</code> to <code>$30</code> would be about
-<code>3</code>. So we want to know what exponent to the base <code>1.05</code> could possibly result
-in a power of <code>3</code>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geometry">← geometry</a><a class="docs-next button" href="/docs/javascript-0">javascript-0 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-sample-problem">A Sample Problem</a><ul class="toc-headings"><li><a href="#observations">Observations</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+<p>We can simply look for a power of <code>3</code> when the base is <code>1.05</code>:</p>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">log</span> <span class="hljs-number">3</span> <span class="hljs-number">1.05</span>)        <span class="hljs-comment">;; → 22.517</span>
+(<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">23</span>) <span class="hljs-comment">;; → 30.715</span>
+</code></pre>
+<p>Since our allowance is only raised weekly, and not inbetween, we simply round up
+to the next week to get <code>23</code> weeks. The allowance after <code>23</code> weeks should be
+about <code>$30.715</code>.</p>
+<p>But (!). Let's not ignore the fact that we rounded up. When you perform</p>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> weeks-&gt;dollars (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">20</span>))
+</code></pre>
+<p>you'll find a large list of values inbetween the whole numbered weeks. Are the
+numbers inbetween meaningless? For the shallow coincidence of our word problem,
+yes, because the word problem states we get paid weekly and not in days or
+seconds inbetween.</p>
+<p>But most of real life does happen in the &quot;days and seconds&quot; inbetween. If you
+were taking daily measurements on the growth of a bacteria colony, perhaps you
+notice a pattern which is well described by a function for a geometric sequence.</p>
+<p>It would be silly to imagine that the bacteria simply stop growing inbetween the
+24 hour periods of measurement, and as soon as you step into the door to
+measure, they do all their growth in that instant. Much of everyday life works
+&quot;gradually&quot;.</p>
+<h2><a class="anchor" aria-hidden="true" id="another-problem"></a><a href="#another-problem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Another Problem</h2>
+<p>Observe the sequence below:</p>
+<p><code>1, 2, 4, 8, 16, 32, 64...</code></p>
+<p>...which would appear to be a sequence of <em>the powers of 2</em>. If you wanted to
+find the <em>nth</em> number of the sequence, then the function would look like
+<code>f(n) = 1 * 2^n</code> where <code>^</code> means exponentiation, or:</p>
+<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">power-2</span> n)
+   (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span> (<span class="hljs-name">expt</span> <span class="hljs-number">2</span> n)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> power-2 (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(1 2 4 8 16 32)</span>
+</code></pre>
+<blockquote>
+<p>It's a bit silly to multiply by 1, but that's just a visual placeholder for
+the problem we're about to see next.</p>
+</blockquote>
+<p>Now let's evaluate how to think about a similar sequence:</p>
+<p><code>2, 4, 8, 16, 32, 64</code></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geometry">← geometry</a><a class="docs-next button" href="/docs/javascript-0">javascript-0 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-sample-problem">A Sample Problem</a><ul class="toc-headings"><li><a href="#solving-with-log">Solving with <code>log</code></a></li></ul></li><li><a href="#another-problem">Another Problem</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
