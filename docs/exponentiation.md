@@ -171,5 +171,23 @@ find the _nth_ number of the sequence, then the function would look like
 
 Now let's evaluate how to think about a similar sequence:
 
-`2, 4, 8, 16, 32, 64`
+`2, 4, 8, 16, 32, 64...`
 
+This sequence is exactly like the powers of _powers of 2_ listed above, except
+now the initial number starts with `2`, so the function should look like
+`f(n) = 2 * 2^n`, or :
+
+``` scheme
+(define (geometric initial ratio)
+   (λ (cycles) 
+      (* initial
+         (expt ratio cycles))))
+
+(map (geometric 2 2) (range 8)) ;; → '(2 4 8 16 32 64 128 256)
+```
+
+### One more observation.
+
+Whenever you identify that you only need a subsequence, such as this case where
+we know we're one off in the positive direction, then we could similarly find:
+`f(n) = 2^(n + 1)`. But this is the same as `f(n) = 2^n * 2^1`.
