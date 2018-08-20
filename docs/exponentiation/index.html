@@ -162,7 +162,7 @@ the problem we're about to see next.</p>
 <p>This sequence is exactly like the powers of <em>powers of 2</em> listed above, except
 now the initial number starts with <code>2</code>, so the function should look like
 <code>f(n) = 2 * 2^n</code>, or :</p>
-<pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">geometric</span> initial ratio)
+<pre><code class="hljs css languages- racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">geometric</span> initial ratio)
    (<span class="hljs-name">λ</span> (<span class="hljs-name">cycles</span>) 
       (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> initial
          (<span class="hljs-name"><span class="hljs-builtin-name">expt</span></span> ratio cycles))))
