@@ -76,11 +76,11 @@ back the original <code>x</code>.</p>
 (<span class="hljs-name">define</span> (<span class="hljs-name">log2</span> pow) (<span class="hljs-name">log</span> pow <span class="hljs-number">2</span>))
 (<span class="hljs-name">define</span> (<span class="hljs-name">log3</span> pow) (<span class="hljs-name">log</span> pow <span class="hljs-number">3</span>))
 
-(<span class="hljs-name">define</span> nats     (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))            <span class="hljs-comment">;; → '(0 1 2 3 4 5)</span>
-(<span class="hljs-name">define</span> squares  (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> sqr nats))       <span class="hljs-comment">;; → '(0 1 4 9 16 25)</span>
+(<span class="hljs-name">define</span> nats     (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>))            <span class="hljs-comment">;; → '(0 1 2  3  4   5)</span>
+(<span class="hljs-name">define</span> squares  (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> sqr nats))       <span class="hljs-comment">;; → '(0 1 4  9 16  25)</span>
 (<span class="hljs-name">define</span> cubes    (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> cube nats))      <span class="hljs-comment">;; → '(0 1 8 27 64 125)</span>
-(<span class="hljs-name">define</span> powers-2 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">power</span> <span class="hljs-number">2</span>) nats)) <span class="hljs-comment">;; → '(1 2 4 8 16 32)</span>
-(<span class="hljs-name">define</span> powers-3 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">power</span> <span class="hljs-number">3</span>) nats)) <span class="hljs-comment">;; → '(0 1 3 9 27 81 243)</span>
+(<span class="hljs-name">define</span> powers-2 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">power</span> <span class="hljs-number">2</span>) nats)) <span class="hljs-comment">;; → '(1 2 4  8 16  32)</span>
+(<span class="hljs-name">define</span> powers-3 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">power</span> <span class="hljs-number">3</span>) nats)) <span class="hljs-comment">;; → '(1 3 9 27 81 243)</span>
 
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">root</span> <span class="hljs-number">2</span>) squares) <span class="hljs-comment">;; → '(0 1 2 3 4 5)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">root</span> <span class="hljs-number">3</span>) cubes)   <span class="hljs-comment">;; → '(0 1 2 3 4 5)</span>
