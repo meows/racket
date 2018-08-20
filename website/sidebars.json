@@ -28,7 +28,8 @@
          "function-sequence",
          "fold",
          "geometry",
-         "exponentiation"
+         "exponentiation",
+         "inverse"
       ],
       "JavaScript": [
          "javascript-0",

@@ -5,6 +5,8 @@ hide_title: true
 sidebar_label: Undoing what you did
 ---
 
+> WIP: Don't use yet.
+
 # Undoing what you did
 
 If I had an unknown integer `n`, and I added 3 to it to get a new number 
@@ -44,11 +46,36 @@ back the original `x`.
 ## Exponentiation
 
 ``` clojure
-(define (λa x) (* x x))
-(define (λb x) (* x x x))
-(define (λc x) (expt x 1/2))
-(define (λc x) (expt x 1/3))
+
 (define (cube x) (expt x 3))
-(define squares (map sqr naturals)) ;; → '(0 1 4 9 16 25 36 49 64 81)
-(define cubes (map cube naturals))  ;; → '(0 1 8 27 64 125 216 343 512 729)
+(define (power x) (λ (n) (expt x n)))
+(define (root r) (λ (x) (expt x (/ 1 r))))
+(define (log2 pow) (log pow 2))
+(define (log3 pow) (log pow 3))
+
+(define nats     (range 6))            ;; → '(0 1 2 3 4 5)
+(define squares  (map sqr nats))       ;; → '(0 1 4 9 16 25)
+(define cubes    (map cube nats))      ;; → '(0 1 8 27 64 125)
+(define powers-2 (map (power 2) nats)) ;; → '(1 2 4 8 16 32)
+(define powers-3 (map (power 3) nats)) ;; → '(0 1 3 9 27 81 243)
+
+(map (root 2) squares) ;; → '(0 1 2 3 4 5)
+(map (root 3) cubes)   ;; → '(0 1 2 3 4 5)
+(map log2 powers-2)    ;; → '(0 1.0 2.0 3.0 4.0 5.0)
+```
+
+> The result of these `root` functions might not be precise. Racket is only
+> perfect when using rationals with `+`, `-`, `*`, or `/`. There are 
+> mathematical reasons for this, and almost all languages cannot assure 
+> reliability for even the most basic math operations.
+
+## Geometry
+
+``` clojure
+(define angles 
+   (map (λ (r) (* pi r))
+        '(0 1/2 2/2 3/2 4/2)))
+
+(map sin angles)
+(map cos angles)
 ```
