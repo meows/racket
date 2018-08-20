@@ -14,11 +14,11 @@ another, which can be counted by the natural numbers.
 
 We have seen sequences before like these:
 
-  * 0, 1, 2, 3, 4, 5...
-  * 2, 3, 4, 5, 6, 7...
-  * 0, 2, 4, 6, 8, 10...
-  * 10, 20, 30, 40, 50, 60...
-  * 30, 20, 10, 0, -10, -20...
+  * `0, 1, 2, 3, 4, 5...`
+  * `2, 3, 4, 5, 6, 7...`
+  * `0, 2, 4, 6, 8, 10...`
+  * `10, 20, 30, 40, 50, 60...`
+  * `30, 20, 10, 0, -10, -20...`
 
 These sequence all have something in common in that their *velocity* never 
 changes. We call these *linear* sequences because if we were to graph these
@@ -62,18 +62,9 @@ this sequence is the double of the previous number.
 * `f(0) = 4`
 * `f(n) = f(n - 1) * 2`
 
-### Observations
-
-1. The first sequence item `f(0)` is `2`.
-2. All other sequence items are defined by tripling the previous sequence item.
-3. A delta of the sequence reveals an identical sequence.
-4. The velocity is changing and it gets faster over time. Therefore it is
-   accelerating. The only time velocity doesn't change is when it's at `0`. That
-   means whatever you're watching isn't moving relative to you.
-
-Therefore, for any function `f` which generates a geometric sequence, we need
-only two pieces of information to determine the value at any point of the 
-sequence, (1) an initial value `a` and (2) the common ratio `r`:
+For any function `f` which generates a geometric sequence, we need only two 
+pieces of information to determine the value at any point of the sequence, 
+(1) an initial value `a` and (2) the common ratio `r`:
 
 * `f(n) = a * r^n`
 
@@ -83,8 +74,8 @@ sequence, (1) an initial value `a` and (2) the common ratio `r`:
 
 Bob heard that if he invested his money into some kind of investment account,
 that the amount of money in his account would grow by 3% anually. Bob is 
-thinking of investing between `$10,000`. Assuming that Bob doesn't disturb his
-account after his initial investment...
+thinking of investing `$10,000`. Assuming that Bob doesn't disturb his account 
+after his initial investment:
 
 ``` clojure
 (define ($ years)
