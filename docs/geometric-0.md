@@ -1,5 +1,7 @@
 # Geometric Sequences
 
+> WIP: Don't use yet!
+
 Recall that a [sequence](sequence.md) is a list of "things" in order, one after 
 another, which can be counted by the natural numbers.
 

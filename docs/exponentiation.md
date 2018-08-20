@@ -129,6 +129,8 @@ Since our allowance is only raised weekly, and not inbetween, we simply round up
 to the next week to get `23` weeks. The allowance after `23` weeks should be 
 about `$30.715`.
 
+### The values inbetween
+
 But (!). Let's not ignore the fact that we rounded up. When you perform
 
 ``` clojure
@@ -166,6 +168,8 @@ find the _nth_ number of the sequence, then the function would look like
 (map power-2 (range 6)) ;; → '(1 2 4 8 16 32)
 ```
 
+## A Twist
+
 Now let's evaluate how to think about a similar sequence:
 
 `2, 4, 8, 16, 32, 64...`
@@ -180,12 +184,12 @@ now the initial number starts with `2`, so the function should look like
       (* initial
          (expt ratio cycles))))
 
-(map (geometric 1 2) (range 8)) ;; → '(1 2 4 8 16 32 64 128)
-(map (geometric 2 2) (range 8)) ;; → '(2 4 8 16 32 64 128 256)
+(map (geometric 1 2) (range 8)) ;; → '(1 2  4  8 16  32  64 128)
+(map (geometric 2 2) (range 8)) ;; → '(2 4  8 16 32  64 128 256)
 (map (geometric 4 2) (range 8)) ;; → '(4 8 16 32 64 128 256 512)
 ```
 
-### One more observation.
+### One more observation
 
 Whenever you identify that you only need a subsequence, such as this case where
 we know we're one off in the positive direction, then we could similarly find:
