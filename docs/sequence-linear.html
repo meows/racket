@@ -60,10 +60,8 @@ look like:</p>
 <span class="hljs-comment">; v  -- velocity of linear sequence</span>
 <span class="hljs-comment">; n  -- the nth sequence item desired</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">line</span> p0 v)
-    (<span class="hljs-name">λ</span> (<span class="hljs-name">n</span>) 
-       (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n v))
-    )
-)
+   (<span class="hljs-name">λ</span> (<span class="hljs-name">n</span>) 
+      (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> p0 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n v))))
 
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>) (<span class="hljs-name">range</span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(2 5 8 11 14 17)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>) (<span class="hljs-name">range</span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(3 5 7 9 11 13)</span>
