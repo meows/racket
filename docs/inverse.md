@@ -18,11 +18,13 @@ For addition, no matter what we add to a number, we can always add another
 number to reverse what we just did. Two different numbers which add together to 
 equal `0` are called additive inverses because they cancel their effects out.
 
-``` clojure
-(define (add11 x) (+ x 11))
-(define (add12 x) (+ x 12))
-(define (sub13 x) (+ x -13))
-(define (sub14 x) (- x 14))
+``` scheme
+(define (move n) 
+   (λ (x) 
+      (+ x n)))
+
+(define naturals (range 10))         ;; → '(0 1 2 3 4 5 6 7 8 9)
+(define go3 (map (move 3) naturals)) ;; → '(3 4 5 6 7 8 9 10 11 12)
 ```
 
 ## Multiplication and Division
@@ -45,4 +47,7 @@ back the original `x`.
 (define (λb x) (* x x x))
 (define (λc x) (expt x 1/2))
 (define (λc x) (expt x 1/3))
+(define (cube x) (expt x 3))
+(define squares (map sqr naturals)) ;; → '(0 1 4 9 16 25 36 49 64 81)
+(define cubes (map cube naturals))  ;; → '(0 1 8 27 64 125 216 343 512 729)
 ```

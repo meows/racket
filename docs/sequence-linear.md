@@ -33,10 +33,8 @@ look like:
 ; v  -- velocity of linear sequence
 ; n  -- the nth sequence item desired
 (define (line p0 v)
-    (λ (n) 
-       (+ p0 (* n v))
-    )
-)
+   (λ (n) 
+      (+ p0 (* n v))))
 
 (map (line 2 3) (range 6)) ;; → '(2 5 8 11 14 17)
 (map (line 3 2) (range 6)) ;; → '(3 5 7 9 11 13)

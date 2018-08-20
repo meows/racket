@@ -166,9 +166,6 @@ find the _nth_ number of the sequence, then the function would look like
 (map power-2 (range 6)) ;; → '(1 2 4 8 16 32)
 ```
 
-> It's a bit silly to multiply by 1, but that's just a visual placeholder for 
-> the problem we're about to see next.
-
 Now let's evaluate how to think about a similar sequence:
 
 `2, 4, 8, 16, 32, 64...`
@@ -177,7 +174,7 @@ This sequence is exactly like the powers of _powers of 2_ listed above, except
 now the initial number starts with `2`, so the function should look like
 `f(n) = 2 * 2^n`, or :
 
-``` racket
+``` scheme
 (define (geometric initial ratio)
    (λ (cycles) 
       (* initial
