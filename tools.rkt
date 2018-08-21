@@ -88,6 +88,10 @@
 (fn (differ nats)
     (unfold-right (cut all zero? <>) identity diff nats))
 
+(fn (rdiff nats)
+    (for/list ([n nats] [n++ (rest nats)])
+              (/ n++ n)))
+
 (fn nth sequence-ref)
 
 (fn all-unique? (compose not check-duplicates))
@@ -96,10 +100,11 @@
 ;; Functions
 
 ; natural → natural
-(fn (triangle n) (* 1/2 (+ n (* n n))))
-(fn (line b m)   (λ (x) (+ b (* m x))))
-(fn (b b)        (λ (x) (+ b x)))
-(fn (m m)        (λ (x) (* m x)))
+(fn (geometric i r) (λ (n) (* i (expt r n))))
+(fn (triangle n)    (* 1/2 (+ n (* n n))))
+(fn (line b m)      (λ (x) (+ b (* m x))))
+(fn (b b)           (λ (x) (+ b x)))
+(fn (m m)           (λ (x) (* m x)))
 
 ; function → list <any> (outputs)
 (fn (series fn/1 #:min [min 0] #:max [max 21])
@@ -147,12 +152,12 @@
            #:min [min -20]
            #:max [max 20]
            . fns)
-    (def plot-input
-         (list* (axes)
-                (if grid? (tick-grid) empty)
-                (function fn/1 #:width 1.3)
-                (function identity #:style 'dot #:width 1.3 #:color 'gray)
-                (map (curry function #:color 'blue #:width 1.3) fns)))
+    (define plot-input
+        (list* (axes)
+               (if grid? (tick-grid) empty)
+               (function fn/1 #:width 1.3)
+               (function identity #:style 'dot #:width 1.3 #:color 'gray)
+               (map (curry function #:color 'blue #:width 1.3) fns)))
     (plot plot-input
           #:x-min min
           #:x-max max
@@ -188,8 +193,7 @@
                #:c [c 0])
     (λ (x) (+ (* a x x) 
               (* b x) 
-              c))
-)
+              c)))
 
 (fn (cubic #:a [a 1]
            #:b [b 0]
@@ -198,11 +202,9 @@
     (λ (x) (+ (* a x x x)
               (* b x x)
               (* c x)
-              d))
-)
+              d)))
 
 (fn (physics-quad a v [p 0])
     (λ (t) (+ (* 1/2 a t t)
               (* v t)
-              p))
-)
+              p)))
