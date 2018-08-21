@@ -1,11 +1,11 @@
 ---
-id: exponentiation
-sidebar_label: Exponentiation
-title: Exponentiation
+id: logarithm
+sidebar_label: Logarithm
+title: Logarithm
 hide_title: true
 ---
 
-# Geometric Sequences
+# Logarithms
 
 We have previously defined exponentiation as a way of repeated multiplication.
 For example:

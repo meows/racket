@@ -30,4 +30,13 @@
 
 (fn (euler) (foldl next-line (first data) (rest data)))
 
+
 (time (euler))
+
+;; in progress
+#|
+(for/fold ([before (first data)])
+          ([now (rest data)])
+          (next-line now)
+)
+|#

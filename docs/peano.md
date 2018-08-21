@@ -170,10 +170,8 @@ We want to see if `a + b == b + a` has a translation for every natural, and that
 it doesn't violate any rule. That would imply that: `a + b++ == (a + b)++`.
 This hypothesis together with the rule of addition would form a bigger theory:
 
-* `n++ + m++ == (n + m++)++ == (n++ + m)++`?
-
-* `0 + m++ == m++ + 0 == (m + 0)++` The base case is proven for us due to 
-  `n + 0 == 0 + n`, which has been shown above.
+0. `n++ + m++ == (n + m++)++ == (n++ + m)++`?
+1. `0 + m++ == m++ + 0 == (m + 0)++` Reiteration of the commutativity of `+ and 0`.
 
 * `n + m++ == (n + m)++` The next step the prove. This allows us to simplify
   addition of any two naturals by re-allocating the `++`.

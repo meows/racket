@@ -49,8 +49,9 @@ delta of a sequence.
 
 ## A difficult sequence to delta
 
-*    `S: 4, 8, 16, 32, 64, 128...`
-* `Δ(S): 4, 8, 16, 32, 64, 128...`
+  * `S: 4, 8, 16, 32, 64, 128...`
+  * `Δ(S): 4, 8, 16, 32, 64, 128...`
+  * `Δ(Δ(S)): 4, 8, 16, 32, 64, 128...`
 
 This sequence is curious in that an attempt to delta it would produce another
 identical sequence, making the technique useless! If that's true, is there
@@ -59,21 +60,21 @@ another easy pattern we might be able to take advantage of?
 If we look carefully, we can see that except for the first item, every member in
 this sequence is the double of the previous number.
 
-* `f(0) = 4`
-* `f(n) = f(n - 1) * 2`
+  * `f(0) = 4`
+  * `f(n) = f(n - 1) * 2`
 
 For any function `f` which generates a geometric sequence, we need only two 
 pieces of information to determine the value at any point of the sequence, 
 (1) an initial value `a` and (2) the common ratio `r`:
 
-* `f(n) = a * r^n`
+`f(n) = a * r^n`
 
 > Assume that `^` means the exponentiation operator.
 
 ## Sample Word Problem
 
 Bob heard that if he invested his money into some kind of investment account,
-that the amount of money in his account would grow by 3% anually. Bob is 
+then the amount of money in his account would grow by 3% anually. Bob is 
 thinking of investing `$10,000`. Assuming that Bob doesn't disturb his account 
 after his initial investment:
 
@@ -83,21 +84,21 @@ after his initial investment:
       (expt 1.03 years)))
 ```
 
-* How much money (to the nearest cent) will the account have in 20 years?
+**Q:** How much money (to the nearest cent) will the account have in 20 years?
 
 ``` clojure
 ($ 20) ; → $18,061.11
 ```
 
-* How many years will it take for Bob to at least double his investment?
+**Q:** How many years will it take for Bob to at least double his investment?
 
 ``` clojure
 ; We're asking how long it will take for f(n) = 1.03^n to reach f(n) = 2.
 (log 2 1.03) ; → 23.44977 -- at least 24 years
 ```
 
-* If Bob had invested `$20,000` instead as his initial investment, would that
-  change the amount of time it takes for his money to double?
+**Q:** If Bob had invested `$20,000` instead as his initial investment, would that
+change the amount of time it takes for his money to double?
 
 ``` clojure
 ; It takes the same number of cycles to grow 1.03 into 2.

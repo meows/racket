@@ -13,6 +13,7 @@
          "sequence-linear",
          "velocity",
          "trigonometry",
+         "logarithm",
          "geometric-0"
       ],
       "Language Guide": [
@@ -29,7 +30,6 @@
          "function-sequence",
          "fold",
          "geometry",
-         "exponentiation",
          "inverse"
       ],
       "JavaScript": [
