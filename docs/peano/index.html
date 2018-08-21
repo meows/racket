@@ -162,12 +162,13 @@ addition and equality.</p>
 <p>We want to see if <code>a + b == b + a</code> has a translation for every natural, and that
 it doesn't violate any rule. That would imply that: <code>a + b++ == (a + b)++</code>.
 This hypothesis together with the rule of addition would form a bigger theory:</p>
+<ol>
+<li><code>n++ + m++ == (n + m++)++ == (n++ + m)++</code>?</li>
+<li><code>0 + m++ == m++ + 0 == (m + 0)++</code> Reiteration of the commutativity of <code>+ and 0</code>.</li>
+</ol>
 <ul>
-<li><p><code>n++ + m++ == (n + m++)++ == (n++ + m)++</code>?</p></li>
-<li><p><code>0 + m++ == m++ + 0 == (m + 0)++</code> The base case is proven for us due to
-<code>n + 0 == 0 + n</code>, which has been shown above.</p></li>
-<li><p><code>n + m++ == (n + m)++</code> The next step the prove. This allows us to simplify
-addition of any two naturals by re-allocating the <code>++</code>.</p></li>
+<li><code>n + m++ == (n + m)++</code> The next step the prove. This allows us to simplify
+addition of any two naturals by re-allocating the <code>++</code>.</li>
 </ul>
 <ol>
 <li><code>n++ + m++ == m++ + n++</code></li>
