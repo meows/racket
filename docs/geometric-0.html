@@ -104,14 +104,14 @@ after his initial investment:</p>
    (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10000</span> 
       (<span class="hljs-name">expt</span> <span class="hljs-number">1.03</span> years)))
 </code></pre>
-<p>How much money (to the nearest cent) will the account have in 20 years?</p>
+<p><strong>Q:</strong> How much money (to the nearest cent) will the account have in 20 years?</p>
 <pre><code class="hljs css languages- clojure">($ <span class="hljs-number">20</span>) <span class="hljs-comment">; → $18,061.11</span>
 </code></pre>
-<p>How many years will it take for Bob to at least double his investment?</p>
+<p><strong>Q:</strong> How many years will it take for Bob to at least double his investment?</p>
 <pre><code class="hljs css languages- clojure"><span class="hljs-comment">; We're asking how long it will take for f(n) = 1.03^n to reach f(n) = 2.</span>
 (<span class="hljs-name">log</span> <span class="hljs-number">2</span> <span class="hljs-number">1.03</span>) <span class="hljs-comment">; → 23.44977 -- at least 24 years</span>
 </code></pre>
-<p>If Bob had invested <code>$20,000</code> instead as his initial investment, would that
+<p><strong>Q:</strong> If Bob had invested <code>$20,000</code> instead as his initial investment, would that
 change the amount of time it takes for his money to double?</p>
 <pre><code class="hljs css languages- clojure"><span class="hljs-comment">; It takes the same number of cycles to grow 1.03 into 2.</span>
 (<span class="hljs-name">log</span> <span class="hljs-number">2</span> <span class="hljs-number">1.03</span>) <span class="hljs-comment">; → 23.44977 -- at least 24 years</span>
