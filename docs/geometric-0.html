@@ -76,6 +76,7 @@ delta of a sequence.</p>
 <ul>
 <li><code>S: 4, 8, 16, 32, 64, 128...</code></li>
 <li><code>Δ(S): 4, 8, 16, 32, 64, 128...</code></li>
+<li><code>Δ(Δ(S)): 4, 8, 16, 32, 64, 128...</code></li>
 </ul>
 <p>This sequence is curious in that an attempt to delta it would produce another
 identical sequence, making the technique useless! If that's true, is there
@@ -89,9 +90,7 @@ this sequence is the double of the previous number.</p>
 <p>For any function <code>f</code> which generates a geometric sequence, we need only two
 pieces of information to determine the value at any point of the sequence,
 (1) an initial value <code>a</code> and (2) the common ratio <code>r</code>:</p>
-<ul>
-<li><code>f(n) = a * r^n</code></li>
-</ul>
+<p><code>f(n) = a * r^n</code></p>
 <blockquote>
 <p>Assume that <code>^</code> means the exponentiation operator.</p>
 </blockquote>
