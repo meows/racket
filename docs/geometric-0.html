@@ -83,14 +83,11 @@ identical sequence, making the technique useless! If that's true, is there
 another easy pattern we might be able to take advantage of?</p>
 <p>If we look carefully, we can see that except for the first item, every member in
 this sequence is the double of the previous number.</p>
-<ul>
-<li><code>f(0) = 4</code></li>
-<li><code>f(n) = f(n - 1) * 2</code></li>
-</ul>
+<p><code>f(n) = 4 * 2^n</code></p>
 <p>For any function <code>f</code> which generates a geometric sequence, we need only two
 pieces of information to determine the value at any point of the sequence,
-(1) an initial value <code>a</code> and (2) the common ratio <code>r</code>:</p>
-<p><code>f(n) = a * r^n</code></p>
+(1) an initial value <code>i</code> and (2) the common ratio <code>r</code>:</p>
+<p><code>f(n) = i * r^n</code></p>
 <blockquote>
 <p>Assume that <code>^</code> means the exponentiation operator.</p>
 </blockquote>
