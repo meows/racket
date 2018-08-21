@@ -50,8 +50,8 @@ delta of a sequence.
 ## A difficult sequence to delta
 
   * `S: 4, 8, 16, 32, 64, 128...`
-  * `Δ(S): 4, 8, 16, 32, 64, 128...`
-  * `Δ(Δ(S)): 4, 8, 16, 32, 64, 128...`
+  * `ΔS: 4, 8, 16, 32, 64, 128...`
+  * `Δ(ΔS): 4, 8, 16, 32, 64, 128...`
 
 This sequence is curious in that an attempt to delta it would produce another
 identical sequence, making the technique useless! If that's true, is there
@@ -60,14 +60,13 @@ another easy pattern we might be able to take advantage of?
 If we look carefully, we can see that except for the first item, every member in
 this sequence is the double of the previous number.
 
-  * `f(0) = 4`
-  * `f(n) = f(n - 1) * 2`
+`f(n) = 4 * 2^n`
 
 For any function `f` which generates a geometric sequence, we need only two 
 pieces of information to determine the value at any point of the sequence, 
-(1) an initial value `a` and (2) the common ratio `r`:
+(1) an initial value `i` and (2) the common ratio `r`:
 
-`f(n) = a * r^n`
+`f(n) = i * r^n`
 
 > Assume that `^` means the exponentiation operator.
 
