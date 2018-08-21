@@ -3,7 +3,7 @@
 (require math/number-theory)
 (require threading)
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
+(require (only-in srfi/26 cut))
 
 (fn sum (curry apply +))
 (fn ++ add1)
@@ -37,11 +37,10 @@
 ;; Solve
 
 (define names
-    (sort (filter (cut unequal? <> ",")
-                  (string-split data "\""))
+    (sort (filter (cut unequal? <> ",") (string-split data "\""))
           string<?))
 
 (define euler
-    (for/fold ([i 1] [sum 0] #:result sum)
-              ([n names])
-              (values (++ i) (+ sum (* i (name->value n))))))
+    (for/fold ([sum 0])
+              ([n names] [i (in-naturals 1)])
+              (+ sum (* i (name->value n)))))
