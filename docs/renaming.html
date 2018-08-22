@@ -78,10 +78,13 @@ default.</p>
 (<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define fn]))
 (<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define def]))
 
-(<span class="hljs-name">fn</span> (<span class="hljs-name">add2</span> x) (<span class="hljs-name">+</span> x <span class="hljs-number">2</span>))
+(<span class="hljs-name">fn</span> (<span class="hljs-name">add2</span> x) 
+    (<span class="hljs-name">+</span> x <span class="hljs-number">2</span>))
+
 (<span class="hljs-name">def</span> age <span class="hljs-number">10</span>)
 
-(<span class="hljs-name">add2</span> age) <span class="hljs-comment">;; → 12</span>
+(<span class="hljs-name">+</span> age age) <span class="hljs-comment">;; → 20</span>
+(<span class="hljs-name">add2</span> age)  <span class="hljs-comment">;; → 12</span>
 
 (<span class="hljs-name">fn</span> ++ add1)
 (<span class="hljs-name">fn</span> -- sub1)
