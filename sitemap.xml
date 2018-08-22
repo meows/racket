@@ -60,7 +60,7 @@
 <url> <loc>https://rid.pw/docs/racket-install</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/racket-install" /> </url>
 <url> <loc>https://rid.pw/docs/racket-intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/racket-intro" /> </url>
 <url> <loc>https://rid.pw/docs/recursion</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/recursion" /> </url>
-<url> <loc>https://rid.pw/docs/Renaming</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/Renaming" /> </url>
+<url> <loc>https://rid.pw/docs/renaming</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/renaming" /> </url>
 <url> <loc>https://rid.pw/docs/sequence-linear</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence-linear" /> </url>
 <url> <loc>https://rid.pw/docs/sequence</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence" /> </url>
 <url> <loc>https://rid.pw/docs/sets</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sets" /> </url>
