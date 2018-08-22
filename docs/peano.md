@@ -133,14 +133,13 @@ addition and equality.
 We want to see if `a + b = b + a` is correct for every natural and doesn't 
 violate any of our rules. We have already identified `n + 0 = 0 + n`.
 
-  * `n + m++ = (n + m)++`?
-  0. `n + m = m + n`?
-  1. `n++ + 0 = 0 + n++`
-  2. `n++ + m++ = m++ + n++`
-  3. `(n + m++)++ = (m + n++)++`
-  4. `n + m++ = m + n++`
-  5. `(n + m)++ = (m + n)++`
-  6. `n + m = m + n`
+  0. `0 + m++ = (0 + m)++`
+  1. `m++ = m++`
+
+  0. `n + m++ = (n + m)++`
+  1. `n++ + m++ = (n++ + m)++`
+  2. `(n + m++)++ = ((n + m)++)++`
+  3. `n + m++ = (n + m)++`
 
 This means that accepting `n + m++ = (n + m)++` implies `n + m = m + n`.
 
