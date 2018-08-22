@@ -53,7 +53,7 @@ base, and (2) the second one is the exponent. Therefore:
 
 ## `log` Logarithm
 
-The function `log` consumes two inputs, a number `n` and a base `b`, and it 
+The function `log` consumes two inputs, a number `n` and a base `b`, and it
 returns a number `e` for which `b` to the exponent of `e` will equal `n`.
 
 ``` clojure
@@ -85,8 +85,8 @@ is the *divisor*.
 
 ## `remainder`
 
-The `remainder` function helps you find the remainder of a division between two 
-natural numbers, where the first number is the *dividend*, and the second number 
+The `remainder` function helps you find the remainder of a division between two
+natural numbers, where the first number is the *dividend*, and the second number
 is the *divisor*.
 
 ``` clojure
@@ -98,14 +98,14 @@ is the *divisor*.
 ```
 
 Some people use the `remainder` function to find whether a number `n` is even by
-seeing if `(remainder n 2)` is zero, in other words, whether dividing a number 
+seeing if `(remainder n 2)` is zero, in other words, whether dividing a number
 by `2` leaves no remainder, which is in fact the definition of an even number:
 
 ``` clojure
-(define (even? n) 
+(define (even? n)
    (zero? (remainder n 2)))
 
-(define (odd? n) 
+(define (odd? n)
    (not (even? n)))
 ```
 
