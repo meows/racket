@@ -73,10 +73,13 @@ means it's included in Racket without you having to do anything. After all, we
 didn't have to (<code>require define</code>) to begin using it. It was just included by
 default.</p>
 <p>But even those things we are allowed to change, as we will see with <code>define</code>:</p>
-<pre><code class="hljs css languages- racket">#lang racket
+<pre><code class="hljs">#lang racket
 
 (<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define fn]))
 (<span class="hljs-name">require</span> (<span class="hljs-name">rename-in</span> racket/base [define def]))
+
+<span class="hljs-comment">;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+<span class="hljs-comment">;; Example #1</span>
 
 (<span class="hljs-name">fn</span> (<span class="hljs-name">add2</span> x) 
     (<span class="hljs-name">+</span> x <span class="hljs-number">2</span>))
@@ -85,6 +88,9 @@ default.</p>
 
 (<span class="hljs-name">+</span> age age) <span class="hljs-comment">;; → 20</span>
 (<span class="hljs-name">add2</span> age)  <span class="hljs-comment">;; → 12</span>
+
+<span class="hljs-comment">;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+<span class="hljs-comment">;; Example #2</span>
 
 (<span class="hljs-name">fn</span> ++ add1)
 (<span class="hljs-name">fn</span> -- sub1)
