@@ -9,13 +9,13 @@ hide_title: true
 1. Let there be a set `N` called the naturals.
 2. Let `N` contain an element that looks like `0`.
 3. Let `N` be equipped with a unary function `++`.
-4. Let `N` be equipped with a binary function `==`.
+4. Let `N` be equipped with a binary function `=`.
 5. Let `n++` mean the application of the `++` function with `n` as the input.
-6. If `a` and `b` are members from `N`, then `a == b` means to apply the `==`
+6. If `a` and `b` are members from `N`, then `a = b` means to apply the `=`
    function with `a` and `b` as ordered inputs.
 7. Let there be a name translation scheme to transform the symbols from `N` to
    that of the western convention. These translations are merely for
-   convenience, as we have only formally defined `0`, `++`, and `==`.
+   convenience, as we have only formally defined `0`, `++`, and `=`.
 
    The parentheses aren't operationally important and aren't meant to suggest an
    order of operation. They're just part of the notation for functions to
@@ -33,33 +33,33 @@ hide_title: true
 
 # Axioms
 
-## Equality `==`
+## Equality `=`
 
 Equality is the most basic operator of all and often goes unmentioned. Equality
 allows us to compare different things in math and say whether they are unique,
 otherwise I wouldn't be able to ask whether `3` is different from `5`.
 Generally, it's only when things change that we can appreciate behavior, and
-`==` allows us to detect change.
+`=` allows us to detect change.
 
-1. `a == a`.
-2. If `a == b` then `b == a`.
-3. If `a == b` and `b == c` then `a == c`.
+1. `a = a`.
+2. If `a = b` then `b = a`.
+3. If `a = b` and `b = c` then `a = c`.
 
 * The first rule allows us to ask whether `a` is the same as `a`.
-* The second rule says that the order of inputs don't matter to `==` -- it's
+* The second rule says that the order of inputs don't matter to `=` -- it's
   _commutative_.
 * The third rule is called transitivity, as if the identity of `a` was
-  transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
+  transferred to `b`, and then to `c`. In a sense it turns `=` into a way to
   rename things.
 
-> Informally, let `!=` mean anything which doesn't follow our rule for `==`.
-> `0 == 0++` wouldn't follow our rules above, so we'd write it as `0 != 0++`.
+> Informally, let `!=` mean anything which doesn't follow our rule for `=`.
+> `0 = 0++` wouldn't follow our rules above, so we'd write it as `0 != 0++`.
 
 ## Sucessor `++`
 
 1. Let `n++` be a natural.
 2. Let `n++` never equal `0`.
-3. If `a` and `b` are naturals, let `a++ == b++` iff `a == b`. This rule also
+3. If `a` and `b` are naturals, let `a++ = b++` iff `a = b`. This rule also
    means that every `n++` is unique.
 
 * The first rule defines the domain and codomain of `++` to the naturals.
@@ -72,7 +72,7 @@ Generally, it's only when things change that we can appreciate behavior, and
 The equality we define here is a 2-arity function on the naturals which returns
 either `true` or `false` for every pair of inputs. Alternatively, if the reader
 objects to new symbols with deliberate cultural meaning, we might instead
-arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about
+arbitrarily assign the result of `=` to either `0` or `0++`, with a wink about
 how `0++` means `true`, and `0` means `false`.
 
 That we can map many mathematical expressions into categories differentiated on
@@ -85,10 +85,10 @@ consistency to our rules is what matters, not that we name something `0` or
    under `++`.
 
 2. Any notion of the naturals also comes equipped with two operators, a binary
-   equality `==` and a unary successor `++`.
+   equality `=` and a unary successor `++`.
 
 3. The relationship between one natural and any other are determined solely by
-   the `++` and `==` operators. Therefore, if I have a bunch of things that look
+   the `++` and `=` operators. Therefore, if I have a bunch of things that look
    natural:
 
    `{ A, B, C, D, ... }`
@@ -105,7 +105,7 @@ consistency to our rules is what matters, not that we name something `0` or
 
 ## Final Definition
 
-Now that we have defined an infinite set `N`, a natural `0`, `++` and `==`, let
+Now that we have defined an infinite set `N`, a natural `0`, `++` and `=`, let
 the naturals be the smallest set which implements all these rules.
 
 ## Addition
@@ -117,31 +117,32 @@ Addition is defined as a renaming rule derived from `++`.
 
 ### Commutativity of `+` around `0`
 
-By implication we also have `n + 0 == n`. Why? We want to see if for every
-natural `n` that `n + 0 == n`:
+By implication we also have `n + 0 = n`. Why? We want to see if for every
+natural `n` that `n + 0 = n`:
 
-  1. `0 + 0 == 0`
-  2. `n++ + 0 == n++`
-  3. `(n + 0)++ == n++`
-  4. `n + 0 == n`
+  1. `0 + 0 = 0`
+  2. `n++ + 0 = n++`
+  3. `(n + 0)++ = n++`
+  4. `n + 0 = n`
 
-We now know that `n + 0 == n` is implied by the definition of succession,
+We now know that `n + 0 = n` is implied by the definition of succession,
 addition and equality.
 
 ### Commutativity of `(+ a b)`
 
-We want to see if `a + b == b + a` is correct for every natural and doesn't 
-violate any of our rules. We have already identified the case with `0` in either
-position.
+We want to see if `a + b = b + a` is correct for every natural and doesn't 
+violate any of our rules. We have already identified `n + 0 = 0 + n`.
 
-  * `n + m++ == (n + m)++`?
-  0. `n + m == m + n`?
-  1. `n++ + 0 == 0 + n++`
-  2. `n++ + m++ == m++ + n++`
-  3. `(n + m++)++ == (m + n++)++`
-  4. `n + m++ == m + n++`
-  5. `(n + m)++ == (m + n)++`
-  6. `n + m == m + n`
+  * `n + m++ = (n + m)++`?
+  0. `n + m = m + n`?
+  1. `n++ + 0 = 0 + n++`
+  2. `n++ + m++ = m++ + n++`
+  3. `(n + m++)++ = (m + n++)++`
+  4. `n + m++ = m + n++`
+  5. `(n + m)++ = (m + n)++`
+  6. `n + m = m + n`
+
+This means that accepting `n + m++ = (n + m)++` implies `n + m = m + n`.
 
 ## Multiplication
 
