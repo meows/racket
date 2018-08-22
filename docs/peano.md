@@ -14,11 +14,11 @@ hide_title: true
 6. If `a` and `b` are members from `N`, then `a == b` means to apply the `==`
    function with `a` and `b` as ordered inputs.
 7. Let there be a name translation scheme to transform the symbols from `N` to
-   that of the western convention. These translations are merely for 
+   that of the western convention. These translations are merely for
    convenience, as we have only formally defined `0`, `++`, and `==`.
 
-   The parentheses aren't operationally important and aren't meant to suggest an 
-   order of operation. They're just part of the notation for functions to 
+   The parentheses aren't operationally important and aren't meant to suggest an
+   order of operation. They're just part of the notation for functions to
    typographically indicate the input, in the sense that `(n)++` means `++(n)`,
    or `f(x)` means `(x)f`.
 
@@ -46,9 +46,9 @@ Generally, it's only when things change that we can appreciate behavior, and
 3. If `a == b` and `b == c` then `a == c`.
 
 * The first rule allows us to ask whether `a` is the same as `a`.
-* The second rule says that the order of inputs don't matter to `==` -- it's 
+* The second rule says that the order of inputs don't matter to `==` -- it's
   _commutative_.
-* The third rule is called transitivity, as if the identity of `a` was 
+* The third rule is called transitivity, as if the identity of `a` was
   transferred to `b`, and then to `c`. In a sense it turns `==` into a way to
   rename things.
 
@@ -59,62 +59,25 @@ Generally, it's only when things change that we can appreciate behavior, and
 
 1. Let `n++` be a natural.
 2. Let `n++` never equal `0`.
-3. If `a` and `b` are naturals, let `a++ == b++` iff `a == b`. This rule also 
+3. If `a` and `b` are naturals, let `a++ == b++` iff `a == b`. This rule also
    means that every `n++` is unique.
- 
+
 * The first rule defines the domain and codomain of `++` to the naturals.
 * The second rule constrains the range of `++` and privileges `0` under `++`.
-* The third rule ensures that every natural is unique, which also stops looping 
+* The third rule ensures that every natural is unique, which also stops looping
   number systems.
 
 ### Informal Definition
 
-The equality we define here is a 2-arity function on the naturals which returns 
-either `true` or `false` for every pair of inputs. Alternatively, if the reader 
-objects to new symbols with deliberate cultural meaning, we might instead 
-arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about 
+The equality we define here is a 2-arity function on the naturals which returns
+either `true` or `false` for every pair of inputs. Alternatively, if the reader
+objects to new symbols with deliberate cultural meaning, we might instead
+arbitrarily assign the result of `==` to either `0` or `0++`, with a wink about
 how `0++` means `true`, and `0` means `false`.
 
-That we can map many mathematical expressions into categories differentiated on 
-consistency to our rules is what matters, not that we name something `0` or 
+That we can map many mathematical expressions into categories differentiated on
+consistency to our rules is what matters, not that we name something `0` or
 `false`.
-
-## Tests on Succession
-
-### Is 3 natural?
-
-1. `0 := 0`
-2. `1 := 0++`.
-3. `2 := 1++`.
-4. `3 := 2++`.
-5. `3` is natural because it is the successor of a natural.
-
-### Is 3 equal to 0?
-
-1. Let's test whether `3 == 0`.
-2. Recall that `3 := 2++`
-3. That would imply `2++ == 0`, which violates the rule that `n++` can never be `0`.
-
-### Is 4 equal to 1?
-
-1. Let's test the assumption that `4 == 1`.
-2. Recall `4 := 3++` and `1 := 0++`, and therefore `3++ == 0++`.
-4. Then `3 == 0 := 3++ == 0++` by our rule of how `a++ == b++` translates to `a == b`.
-4. But recall that `3 := 2++`, which implies that `2++ == 0`, which violates our
-   rule that `n++` can never equal `0`.
-5. Even if we began at `6 == 2` or higher, the `(a++ == b++) := (a == b)` rule
-   allows us to walk backward until we find a natural.
-
-### `(0++)++ == ((0++)++)++`?
-
-Because of the rule that `a++ == b++ := a == b`,
-
-1. `(0++)++ == ((0++)++)++`
-2. `0++ == (0++)++`
-3. `0 == 0++`
-
-And now we have violated the rule that says nothing can be the successor to 
-zero.
 
 ## Observations
 
@@ -147,77 +110,40 @@ the naturals be the smallest set which implements all these rules.
 
 ## Addition
 
-1. Let `+` be a binary function on the naturals to the naturals.
-2. If `n` is a natural, let `0 + n == n`.
-3. If `n` and `m` are naturals, let `n++ + m := (n + m)++`.
+Addition is defined as a renaming rule derived from `++`.
+
+  * `0 + n := n`
+  * `n++ + m := (n + m)++`
 
 ### Commutativity of `+` around `0`
 
-By implication we also have `n + 0 == n`. Why? We want to see if for every 
+By implication we also have `n + 0 == n`. Why? We want to see if for every
 natural `n` that `n + 0 == n`:
 
-1. `0 + 0 == 0` The base case is given to us from `0 + n == n`
-2. `n++ + 0 == n++` The induction step.
-3. `(n + 0)++ == n++` Definition of addition.
-4. `n + 0 == n` because of the rule that `a++ == b++ := a == b`.
+  1. `0 + 0 == 0`
+  2. `n++ + 0 == n++`
+  3. `(n + 0)++ == n++`
+  4. `n + 0 == n`
 
-We now know that `n + 0 == n` is implied by the definition of succession, 
+We now know that `n + 0 == n` is implied by the definition of succession,
 addition and equality.
 
 ### Commutativity of `(+ a b)`
 
-We want to see if `a + b == b + a` has a translation for every natural, and that
-it doesn't violate any rule. That would imply that: `a + b++ == (a + b)++`.
-This hypothesis together with the rule of addition would form a bigger theory:
+We want to see if `a + b == b + a` is correct for every natural and doesn't 
+violate any of our rules. We have already identified the case with `0` in either
+position.
 
-0. `n++ + m++ == (n + m++)++ == (n++ + m)++`?
-1. `0 + m++ == m++ + 0 == (m + 0)++` Reiteration of the commutativity of `+ and 0`.
-
-* `n + m++ == (n + m)++` The next step the prove. This allows us to simplify
-  addition of any two naturals by re-allocating the `++`.
-
-0. `n++ + m++ == m++ + n++`
-1. `(n + m++)++ == (m + n++)++`
-2. `n + m++ == m + n++`
-
-## Tests on Addition
-
-Is this enough information on `+` to define all `n + m`?
-
-### What's 1 + 0?
-
-1. Due to our rule that `0 + m == m`, `1 + 0` can be rewritten as `1`, which is
-   a natural.
-
-### What's 1 + 1?
-
-1. `0++ + 1 == (0 + 1)++`
-2. `1++ == 2`
-
-### What's 1 + 2?
-
-1. `0++ + 2 == (0 + 2)++`
-2. `2++ == 3`
-
-### What's 2 + 2?
-
-1. `1++ + 2`
-2. `(1 + 2)++`
-3. `(0++ + 2)++`
-4. `((0 + 2)++)++`
-5. `(2++)++ := 4`
-
-1. `(0++)++ + (0++)++`
-2. `(0++ + (0++)++)++`
-3. `((0 + (0++)++)++)++`
-4. `(((0++)++)++)++ := 4`
+  * `n + m++ == (n + m)++`?
+  0. `n + m == m + n`?
+  1. `n++ + 0 == 0 + n++`
+  2. `n++ + m++ == m++ + n++`
+  3. `(n + m++)++ == (m + n++)++`
+  4. `n + m++ == m + n++`
+  5. `(n + m)++ == (m + n)++`
+  6. `n + m == m + n`
 
 ## Multiplication
 
-1. Let `0 * m := 0`
-2. Let `n++ * m := (n * m) + m`
-
-### `2 * 3`
-
-1. `(0++)++ * 3 == (0++ * 3) + 3`
-2. `(0++ * 3) + 3 == (0 * 3) + 3 + 3`
+  * `0 * m := 0`
+  * `n++ * m := (n * m) + m`

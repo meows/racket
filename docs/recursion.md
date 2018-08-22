@@ -78,9 +78,7 @@ Assume that our `factorial` function will receive a natural number `n` for input
 (define (factorial n)
     (if (zero? n)
         1
-        (* n (factorial (- n 1)))
-    )
-)
+        (* n (factorial (- n 1)))))
 ```
 
 If the "steps" for `(factorial 5)` were written out:
@@ -124,14 +122,12 @@ square brackets and paired with `1`. This is called a default input, and just
 means that whenever you don't give anything for `p`, then `1` will be secretly
 given to your function in place of `p`.
 
-``` racket
+``` clojure
 ;; Example #2
 (define (factorial n [p 1])
     (if (zero? n)
         p
-        (factorial (- n 1) (* n p))
-    )
-)
+        (factorial (- n 1) (* n p))))
 ```
 
 If the "steps" for `(factorial 5)` were written out:
