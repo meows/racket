@@ -20,11 +20,11 @@
 ;; Solve
 
 (fn (euler-4)
-(for*/fold ([best 0])
-           ([i (in-range 100 1000)] [j (in-range 100 1000)])
-           (let ([now (* i j)])
-                (if (and (< best now) (palindrome? now))
-                    current
-                    best))))
+    (for*/fold ([best 0])
+               ([i (in-range 100 1000)] [j (in-range 100 1000)])
+               (let ([now (* i j)])
+                    (if (and (< best now) (palindrome? now))
+                        current
+                        best))))
 
 (time (euler-4))

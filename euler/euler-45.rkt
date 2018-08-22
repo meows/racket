@@ -8,7 +8,7 @@
 
 ;; Given that (triangle 285) === (pentagon 165) === (hexagon 143) === 40755.
 ;;
-;; Find the next triangle number after 40755 that's both pentagonal and 
+;; Find the next triangle number after 40755 that's both pentagonal and
 ;; hexagonal.
 
 (fn (triangle n)
@@ -28,6 +28,6 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(for*/first ([n (in-naturals 144)] 
-             [v (in-value (hexagon n))] 
+(for*/first ([n (in-naturals 144)]
+             [v (in-value (hexagon n))]
              #:when (pentagonal? v)) v)

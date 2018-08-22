@@ -16,22 +16,20 @@
 (define ref matrix-ref)
 
 (define lines
-    (vector*->matrix
-        (for/vector ([line (file->lines file)])
-                    (for/vector ([e (string-split line " ")])
-                                (string->number e)))))
+   (vector*->matrix
+      (for/vector ([line (file->lines file)])
+                  (for/vector ([e (string-split line " ")])
+                  (string->number e)))))
 
 (for*/fold ([best 0])
            ([x (in-range 17)] [y (in-range 20)])
            (let ([p (for/product ([n (in-range 4)]) (ref lines (+ x n) y))])
-                (if (< p best) best p))
-)
+                (if (< p best) best p)))
 
 (for*/fold ([best 0])
            ([x (in-range 20)] [y (in-range 17)])
            (let ([p (for/product ([n (in-range 4)]) (ref lines x (+ y n)))])
-                (if (< p best) best p))
-)
+                (if (< p best) best p)))
 
 (define (+diagonal x0 y0)
     (if (or (< 17 x0) (< 17 y0))

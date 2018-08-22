@@ -8,7 +8,7 @@ sidebar_label: Renaming
 # Rename anything
 
 In Racket you're allowed to rename anything, even the way you `define` variables
-and functions. 
+and functions.
 
 ``` clojure
 #lang racket
@@ -31,6 +31,38 @@ and functions.
 
 ## Naming with `let`
 
-``` clojure
+`let` allows you to refer to a value by a name within its "body".
 
+``` clojure
+(let ([power (expt 13 4)])
+     (if (< power 1000)
+         power
+         (log power 13)))
 ```
+
+`let` takes two inputs:
+   1. a sub-expression consisting of name-value pairs, informally called the "head";
+   2. an expression that will be the result of `let`, informally called the "body".
+
+In this case we have a sub-expression with only one name-value pair,
+
+``` clojure
+([power (expt 13 4)])
+```
+
+And for the final expression which will be evaluated as the result of `let`, we
+have:
+
+``` clojure
+(if (< power 1000)
+    power
+    (log power 13))
+```
+
+Notice that we're allowed to refer to `power`, which is a name that was just
+newly created by the "head" of the `let` function.
+
+Also, when we do things like `(expt 13 4)`, we're running a computation, where
+a computation means using a function to do something. No computation is free,
+and in the above example, by storing the value of `(expt 13 4)` behind the name
+`power`, we're getting some efficiency by avoiding recomputation.

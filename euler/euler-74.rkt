@@ -13,8 +13,10 @@
 
 (define max 1000001)
 
+(fn ++ add1)
+
 ; unfortunately Racket considers a number to be sequential
-(fn (not-serial? x) 
+(fn (not-serial? x)
     (not (or (list? x) (vector? x))))
 
 ; natural → list <natural>
@@ -31,13 +33,13 @@
 
 ; counts the number of steps before a loop in a digit-factorial-sum chain
 (fn (chain-count n)
-    (define start n)
     (fn (loop now #:seen [seen (set)] #:steps [steps 0])
-        (cond [(set-member? seen now) steps)]
-              [else (loop (next-chain now) 
-                          #:seen (set-add seen now) 
-                          #:steps (++ steps)))
-    (loop start)
+        (if (set-member? seen now)
+            steps
+            (loop (next-chain now)
+                  #:seen (set-add seen now)
+                  #:steps (++ steps))))
+    (loop n)
 )
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
