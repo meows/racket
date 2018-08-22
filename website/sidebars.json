@@ -30,7 +30,8 @@
          "function-sequence",
          "fold",
          "geometry",
-         "inverse"
+         "inverse",
+         "renaming"
       ],
       "JavaScript": [
          "javascript-0",

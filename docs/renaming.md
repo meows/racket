@@ -1,33 +1,13 @@
 ---
-id: Renaming
+id: renaming
 title: Renaming
 hide_title: true
 sidebar_label: Renaming
 ---
 
-# Rename anything
+> WIP: Don't use yet.
 
-In Racket you're allowed to rename anything, even the way you `define` variables
-and functions.
-
-``` clojure
-#lang racket
-
-(require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
-
-(fn (add2 x) (+ x 2))
-(def age 10)
-(add2 age) ;; → 12
-
-(fn ++ add1)
-(fn -- sub1)
-
-(-- 3) ;; → 2
-(-- 2) ;; → 1
-(++ 1) ;; → 2
-(++ 2) ;; → 3
-```
+# Renaming
 
 ## Naming with `let`
 
@@ -66,3 +46,42 @@ Also, when we do things like `(expt 13 4)`, we're running a computation, where
 a computation means using a function to do something. No computation is free,
 and in the above example, by storing the value of `(expt 13 4)` behind the name
 `power`, we're getting some efficiency by avoiding recomputation.
+
+## Renaming with `require`
+
+It may seem a little extreme, but everything in Racket can be renamed. `+` and
+`*`, `if`, or even `define`, which is part of the core or "base" of Racket. That
+means it's included in Racket without you having to do anything. After all, we
+didn't have to (`require define`) to begin using it. It was just included by
+default.
+
+But even those things we are allowed to change, as we will see with `define`:
+
+```
+#lang racket
+
+(require (rename-in racket/base [define fn]))
+(require (rename-in racket/base [define def]))
+
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Example #1
+
+(fn (add2 x) 
+    (+ x 2))
+
+(def age 10)
+
+(+ age age) ;; → 20
+(add2 age)  ;; → 12
+
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Example #2
+
+(fn ++ add1)
+(fn -- sub1)
+
+(-- 3) ;; → 2
+(-- 2) ;; → 1
+(++ 1) ;; → 2
+(++ 2) ;; → 3
+```
