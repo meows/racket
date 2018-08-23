@@ -20,7 +20,7 @@
         (factorial (-- n) #:product (* n p))))
 
 ; natural → list <digits>
-(fn (N->list num [base 10])
+(fn (natural->digits num [base 10])
     (unfold-right zero?
                   (cut remainder <> base)
                   (cut quotient <> base)
@@ -31,7 +31,7 @@
 
 (define euler-20 
     (~> (factorial 100) 
-        natural->list 
+        natural->digits 
         numbers->sum))
 
 euler-20  ;; → 648
