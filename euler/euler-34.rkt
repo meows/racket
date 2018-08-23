@@ -37,5 +37,4 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(for/sum ([n (in-range 144 max)] 
-          #:when (okay? n)) n)
+(for/sum ([n (in-range 145 max)] #:when (okay? n)) n)
