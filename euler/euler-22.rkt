@@ -1,13 +1,8 @@
 #lang racket
 
-(require math/number-theory)
 (require threading)
 (require (rename-in racket/base [define fn]))
 (require (only-in srfi/26 cut))
-
-(fn sum (curry apply +))
-(fn ++ add1)
-(fn unequal? (compose not equal?))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
@@ -15,6 +10,10 @@
 
 (define source "data/euler-22.txt")
 (define data (file->string source))
+
+(fn sum (curry apply +))
+(fn ++ add1)
+(fn unequal? (compose not equal?))
 
 (define uid
     (for/hash ([l '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
@@ -33,14 +32,15 @@
          letters->naturals
          sum))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-;; Solve
-
 (define names
     (sort (filter (cut unequal? <> ",") (string-split data "\""))
           string<?))
 
-(define euler
-    (for/fold ([sum 0])
-              ([n names] [i (in-naturals 1)])
-              (+ sum (* i (name->value n)))))
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
+(fn (euler)
+    (for/sum ([n names] [i (in-naturals 1)])
+             (* i (name->value n))))
+    
+(euler)
