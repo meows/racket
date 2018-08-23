@@ -11,16 +11,18 @@
 ;; Project Euler
 ;; Problem 8
 
-(define RAW  (apply string-append (file->lines "data/euler-08.txt")))
-(define DATA (for/vector ([n RAW]) (~> n char->integer (- 48))))
+(define raw  (apply string-append (file->lines "data/euler-08.txt")))
+(define data (for/vector ([n raw]) (~> n char->integer (- 48))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
 (fn (product-range start)
-    (for/product ([n (in-vector DATA start (+ start 13))]) n))
+    (for/product ([n (in-vector data start (+ start 13))]) n)
+)
 
 (for/fold ([best 0])
-          ([n (in-range (+ -13 (vector-length DATA)))])
-          (let ([current (product-range n)])
-               (if (< current best) best current)))
+          ([n (in-range (+ -13 (vector-length data)))])
+          (let ([c (product-range n)])
+               (if (< c best) best c))
+)
