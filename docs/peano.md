@@ -115,35 +115,40 @@ Addition is defined as a renaming rule derived from `++`.
   * `0 + n := n`
   * `n++ + m := (n + m)++`
 
-### Commutativity of `+` around `0`
+### Implication of `n + 0 = n`
 
-By implication we also have `n + 0 = n`. Why? We want to see if for every
-natural `n` that `n + 0 = n`:
+The implications of `n + 0 = n` are consistent.
 
-  1. `0 + 0 = 0`
-  2. `n++ + 0 = n++`
-  3. `(n + 0)++ = n++`
-  4. `n + 0 = n`
+  1. `0 + 0 = 0` Base case given by definition of addition.
+  2. `n++ + 0 = n++` Hypothesis.
+  3. `(n + 0)++ = n++` Definition of addition.
+  4. `n++ = n++` Consistency of hypothesis verified.
 
-We now know that `n + 0 = n` is implied by the definition of succession,
-addition and equality.
+### Implications of `n + m++ = (n + m)++`
 
-### Commutativity of `(+ a b)`
+  0. `0 + m++ = (0 + m)++` Base hypothesis.
+  1. `m++ = m++` The implications are consistent.
 
-We want to see if `a + b = b + a` is correct for every natural and doesn't 
-violate any of our rules. We have already identified `n + 0 = 0 + n`.
-
-  0. `0 + m++ = (0 + m)++`
-  1. `m++ = m++`
-
-  0. `n + m++ = (n + m)++`
-  1. `n++ + m++ = (n++ + m)++`
-  2. `(n + m++)++ = ((n + m)++)++`
-  3. `n + m++ = (n + m)++`
-
-This means that accepting `n + m++ = (n + m)++` implies `n + m = m + n`.
+  0. `n + m++ = (n + m)++` Inductive hypothesis.
+  1. `n++ + m++ = (n++ + m)++` Next step.
+  2. `(n + m++)++ = ((n + m)++)++` Definition of addition.
+  3. `((n + m)++)++ = ((n + m)++)++` Replacement by inductive hypothesis shows
+     the implications are consistent.
 
 ## Multiplication
 
-  * `0 * m := 0`
+  * `0 * n := 0`
   * `n++ * m := (n * m) + m`
+
+### `0 * n = n * 0`
+
+  1. `n++ * 0 = n * 0`
+  2. `(n * 0) + 0 = n * 0`
+  3. `n * 0 = n * 0`
+
+This proves that all `n * 0` problems are equivalent, and since `0 * 0 = 0`, 
+then `n++ * 0 = n * 0 = 0`.
+
+### n++ * m++ = m++ * n++
+
+(n * m++) + m = (m * n++) + n
