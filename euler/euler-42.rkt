@@ -13,30 +13,35 @@
 (define source "data/euler-42.txt")
 (define input  (file->list source))
 
-(define uid 
+(fn sum (curry apply +))
+(fn ++ add1)
+
+(define uid
     (for/hash ([letter '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
                [natural (in-range 1 27)])
               (values (symbol->string letter) natural)))
 
-(fn (letters->naturals letters)
-    (map (cut hash-ref uid <>) letters))
+(fn (letters->naturals letters) (map (cut hash-ref uid <>) letters))
+(fn (word->letters word) (map string (string->list word)))
 
-(fn (word->letters word) 
-    (map string (string->list word)))
-
-(fn sum (curry apply +))
-
-(fn transform 
+(fn word->natural
     (λ~> string-downcase 
          word->letters 
          letters->naturals 
          sum))
+
+(fn triangle-word? (λ~> word->natural triangle-number?))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
 (fn (euler-42 words)
     (count triangle-number? 
-           (map transform words)))
+           (map word->natural words)))
 
-(time (euler-42 input))  ;; → 162
+(fn (alt words) 
+    (for/fold ([count 0]) 
+              ([w words] #:when (triangle-word? w)) 
+              (++ count)))
+
+(time (alt input))  ;; → 162
