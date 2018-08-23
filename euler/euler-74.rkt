@@ -14,12 +14,12 @@
 ; How many naturals under a million would take exactly 60 steps before looping
 ; as the start of a digit-factorial-chain?
 
-; pre-defined problem max
+; Defined problem roof.
 (define max 1000000)
 
 (fn ++ add1)
 
-; unfortunately Racket considers a number to be sequential
+; Unfortunately Racket considers a number to be sequential.
 (fn (not-serial? x)
     (not (or (list? x) (vector? x))))
 
@@ -35,7 +35,7 @@
     (cond [(not-serial? digits) (error "not sequential type.")])
     (natural->digits (for/sum ([d digits]) (factorial d))))
 
-; counts the number steps before looping in a digit-factorial-sum chain
+; Counts the number steps before looping in a digit-factorial-sum chain.
 (fn (chain-count n)
     (fn (loop now #:seen [seen (set)] #:steps [steps 0])
         (if (set-member? seen now)
@@ -49,6 +49,6 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-; sum all n in range iff n takes 60 steps to loop in a digit-factorial-sum chain
+; Sum all n in range iff n takes 60 steps to loop in a digit-factorial-sum chain.
 (for/sum ([n (in-range 1000 max)]
           #:when (= 60 (~> n natural->digits chain-count))) n)
