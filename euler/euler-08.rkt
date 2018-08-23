@@ -18,11 +18,9 @@
 ;; Solve
 
 (fn (product-range start)
-    (for/product ([n (in-vector data start (+ start 13))]) n)
-)
+    (for/product ([n (in-vector data start (+ start 13))]) n))
 
 (for/fold ([best 0])
           ([n (in-range (+ -13 (vector-length data)))])
-          (let ([c (product-range n)])
-               (if (< c best) best c))
-)
+          (let ([now (product-range n)])
+               (if (< p best) best now)))
