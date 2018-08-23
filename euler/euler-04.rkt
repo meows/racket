@@ -16,15 +16,22 @@
                 reverse 
                 list->string)))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-;; Solve
-
 (fn (euler-4)
     (for*/fold ([best 0])
                ([i (in-range 100 1000)] [j (in-range 100 1000)])
                (let ([now (* i j)])
-                    (if (and (< best now) (palindrome? now))
-                        current
+                    (if (and (< best now) (palindrome? now)) 
+                        now 
                         best))))
 
-(time (euler-4))
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; Solve
+
+(fn (euler)
+    (for*/fold ([best 0])
+               ([i (in-range 100 1000)] 
+                [j (in-range 100 1000)] 
+                [now (in-value (* i j))]
+                #:when (and (< best now) (palindrome? now))) now))
+
+(time (euler))
