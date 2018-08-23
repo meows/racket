@@ -25,10 +25,11 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (next-line now before)
-    (for/list ([i before] [j (rest before)] [k now])
+; Expects two lines, <now> and <before>,
+(fn (next-line now++ now)
+    (for/list ([i now] [j (rest now)] [k now++])
               (+ (max i j) k)))
 
-(for/fold ([before (first data)])
-          ([now (rest data)])
-          (next-line now before))
+(for/fold ([now (first data)])
+          ([now++ (rest data)])
+          (next-line now++ now))
