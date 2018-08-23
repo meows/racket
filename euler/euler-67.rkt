@@ -26,10 +26,10 @@
 ;; Solve
 
 ; Expects two lines, <now> and <before>,
-(fn (next-line now++ now)
+(fn (next-line now now++)
     (for/list ([i now] [j (rest now)] [k now++])
               (+ (max i j) k)))
 
 (for/fold ([now (first data)])
           ([now++ (rest data)])
-          (next-line now++ now))
+          (next-line now now++))
