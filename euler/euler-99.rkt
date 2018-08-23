@@ -1,16 +1,11 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
-(require (only-in srfi/1 unfold-right unfold))
-(require math/number-theory)
 (require threading)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
 ;; Problem 99
-
-(fn ++ add1)
 
 ;; Raw data from file split as lines.
 (define raw-strings (file->lines "data/euler-99.txt"))
