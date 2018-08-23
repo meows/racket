@@ -11,7 +11,7 @@
 (define raw-strings (file->lines "data/euler-99.txt"))
 
 ;; A list of 2-list of '(base exponent).
-(define tuples
+(define tuples-2
     (~> raw-strings
         (map (λ (string)  (string-split string  ","))   _ )
         (map (λ (strings) (map string->number strings)) _ )))
@@ -24,10 +24,10 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-;; Finds the greatest value for (log-identity base exponent) from the sequence
-;; of <tuples> defined above.
+;; Finds the greatest value for (log-identity base exponent) from the list of 
+;; base-exponent pairs defined above in <tuples-2>.
 (for/fold ([best 0] [seen-at 0] #:result (list best seen-at))
-          ([t tuples] [index (in-naturals 1)])
+          ([t tuples-2] [index (in-naturals 1)])
           (let ([now (log-identity (first t) (second t))])
                (if (< best now)
                    (values now index)
