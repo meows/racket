@@ -1,15 +1,15 @@
 #lang racket
 
+(require math/number-theory)
+(require threading)
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
+(require srfi/26)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 1
+;; Problem 23
 
-;; Give the sum of all integers between 1 to 1000 that's divisible by either 3 
-;; or 5.
+; Find the sum of all positive integers which cannot be written as the sum of
+; two abundant numbers.
 
-(for/sum ([n (in-range 1000)]
-          #:when (or (zero? (modulo x 3)) 
-                     (zero? (modulo x 5))) n))
