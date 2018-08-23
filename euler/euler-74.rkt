@@ -48,5 +48,8 @@
 ; Increment sum whenever we encounter (= 60 (chain-count n)).
 (for/fold ([sum 0])
           ([n (in-range 1000 max)])
-          (cond [(= 60 (chain-count (natural->digits n))) (++ sum)]
+          (cond [(= 60 (~> n natural->digits chain-count)) (++ sum)]
                 [else sum]))
+
+(for/sum ([n (in-range 1000 max)]
+          #:when (= 60 (~> n natural->digits chain-count))) n)

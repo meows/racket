@@ -23,11 +23,11 @@
 ;; Solve
 
 (fn (euler-14 #:max [max 1000000])
-    (for/fold ([best 0] [seen-at 0] #:result seen-at)
-              ([n (in-range 1 (++ max))] #:break (< max n))
-              (let ([steps (collatz n)])
-                   (if (< best steps)
-                       (values steps n)
-                       (values best seen-at)))))
+    (for*/fold ([best 0] [seen-at 0] #:result seen-at)
+               ([n (in-range 1 (++ max))] 
+                [steps (in-value (collatz n))]
+                #:break (< max n)
+                #:when (< best steps)) 
+               (values steps n)))
 
 (time (euler-14))
