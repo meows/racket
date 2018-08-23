@@ -11,7 +11,11 @@
 ;; Project Euler
 ;; Problem 74
 
-(define max 1000001)
+; How many naturals under a million would take exactly 60 steps before looping
+; as the start of a digit-factorial-chain?
+
+; pre-defined problem max
+(define max 1000000)
 
 (fn ++ add1)
 
@@ -45,11 +49,6 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-; Increment sum whenever we encounter (= 60 (chain-count n)).
-(for/fold ([sum 0])
-          ([n (in-range 1000 max)])
-          (cond [(= 60 (~> n natural->digits chain-count)) (++ sum)]
-                [else sum]))
-
+; sum all n in range iff n takes 60 steps to loop in a digit-factorial chain
 (for/sum ([n (in-range 1000 max)]
           #:when (= 60 (~> n natural->digits chain-count))) n)
