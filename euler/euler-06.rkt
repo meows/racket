@@ -12,11 +12,11 @@
 ; Find the difference between the sum of the squares of the first one hundred 
 ; natural numbers and the square of the sum.
 
-(def square sqr)
-(def square-of-sum (square (apply + (range 1 101))))
-(def sum-of-squares (apply + (map square (range 1 101))))
+(define square-of-sum  (sqr (for/sum ([n (in-range 1 101)]) n)))
+(define sum-of-squares (for/sum ([n (in-range 1 101)]) (sqr n)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(def euler-06 (- square-of-sum sum-of-squares))
+(- square-of-sum 
+   sum-of-squares)
