@@ -40,8 +40,7 @@
            (map word->natural words)))
 
 (fn (alt words) 
-    (for/fold ([count 0]) 
-              ([w words] #:when (triangle-word? w)) 
-              (++ count)))
+    (for/sum ([w words] 
+              #:when (triangle-word? w)) 1))
 
 (time (alt input))  ;; → 162

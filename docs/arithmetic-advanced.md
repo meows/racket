@@ -53,8 +53,9 @@ base, and (2) the second one is the exponent. Therefore:
 
 ## `log` Logarithm
 
-The function `log` consumes two inputs, a number `n` and a base `b`, and it
-returns a number `e` for which `b` to the exponent of `e` will equal `n`.
+The function `log` consumes two inputs, a `power` and a `base`, and it
+returns an exponent `e` for which the `base` exponentiated by `e` will equal the
+`power`.
 
 ``` clojure
 (log  1 2) ;; → 0

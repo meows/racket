@@ -32,7 +32,7 @@
 ;; Finds the greatest value for (log-identity base exponent) from the sequence
 ;; of <tuples> defined above.
 (for/fold ([best 0] [seen-at 0] [index 0] #:result (list best seen-at))
-          ([t tuples])
+          ([t tuples] [i (in-naturals)])
           (let ([log-id (log-identity (first t) (second t))])
                (if (< best log-id)
                    (values log-id (++ index) (++ index))

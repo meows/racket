@@ -30,6 +30,9 @@ hide_title: true
 * commutative
 * transitive
 * associative
+* base
+* power
+* exponent
 
 ### Functions
 
