@@ -19,7 +19,8 @@
 
 (fn ++ add1)
 
-; Unfortunately Racket considers a number to be sequential.
+; Unfortunately Racket considers a number to be sequential, and this confuses
+; our numeric functions on lists.
 (fn (not-serial? x)
     (not (or (list? x) (vector? x))))
 

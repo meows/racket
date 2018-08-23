@@ -1,10 +1,9 @@
 #lang racket
 
+(require (rename-in racket/base [define fn]))
+(require (only-in srfi/26 cut))
 (require math/number-theory)
 (require threading)
-(require (only-in srfi/26 cut))
-(require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
@@ -14,15 +13,14 @@
 (define input  (file->list source))
 
 (fn sum (curry apply +))
-(fn ++ add1)
 
 (define uid
     (for/hash ([letter '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
                [natural (in-range 1 27)])
               (values (symbol->string letter) natural)))
 
-(fn (letters->naturals letters) (map (cut hash-ref uid <>) letters))
 (fn (word->letters word) (map string (string->list word)))
+(fn (letters->naturals letters) (map (cut hash-ref uid <>) letters))
 
 (fn word->natural
     (λ~> string-downcase 
@@ -40,7 +38,6 @@
            (map word->natural words)))
 
 (fn (alt words) 
-    (for/sum ([w words] 
-              #:when (triangle-word? w)) 1))
+    (for/sum ([w words] #:when (triangle-word? w)) 1))
 
 (time (alt input))  ;; → 162

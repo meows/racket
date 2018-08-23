@@ -11,6 +11,10 @@
 (define source "data/euler-22.txt")
 (define data (file->string source))
 
+(define names
+    (sort (filter (cut unequal? <> ",") (string-split data "\""))
+          string<?))
+
 (fn sum (curry apply +))
 (fn ++ add1)
 (fn unequal? (compose not equal?))
@@ -32,9 +36,6 @@
          letters->naturals
          sum))
 
-(define names
-    (sort (filter (cut unequal? <> ",") (string-split data "\""))
-          string<?))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
