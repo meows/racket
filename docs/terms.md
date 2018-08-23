@@ -33,8 +33,7 @@ exactly three parameters.
 
 ``` clojure
 (define (prism-volume l w h)
-        (* l w h)
-)
+    (* l w h))
 ```
 
 Reference: [`define`](define.md)
