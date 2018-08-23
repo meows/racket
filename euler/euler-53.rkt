@@ -24,4 +24,8 @@
                ([n valid-inputs] [r (in-range 1 n)])
                (if (big? (binomial n r)) (++ ways) ways)))
 
-(time (euler))  ;; → 4075
+(fn (alt)
+    (for*/sum ([n valid-inputs] [r (in-range 1 n)]
+               #:when (big? (binomial n r))) 1))
+
+(time (alt))
