@@ -1,9 +1,9 @@
 #lang racket
 
-(require math/number-theory)
-(require threading)
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
+(require math/number-theory)
+(require threading)
 (require srfi/26)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
