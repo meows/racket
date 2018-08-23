@@ -35,7 +35,7 @@
     (cond [(not-serial? digits) (error "not sequential type.")])
     (natural->digits (for/sum ([d digits]) (factorial d))))
 
-; counts the number of steps before a loop in a digit-factorial-sum chain
+; counts the number steps before looping in a digit-factorial-sum chain
 (fn (chain-count n)
     (fn (loop now #:seen [seen (set)] #:steps [steps 0])
         (if (set-member? seen now)
@@ -49,6 +49,6 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-; sum all n in range iff n takes 60 steps to loop in a digit-factorial chain
+; sum all n in range iff n takes 60 steps to loop in a digit-factorial-sum chain
 (for/sum ([n (in-range 1000 max)]
           #:when (= 60 (~> n natural->digits chain-count))) n)
