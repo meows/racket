@@ -1,10 +1,7 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
 (require math/number-theory)
-(require (only-in srfi/26 cut))
-(require (only-in srfi/1 unfold-right unfold))
 (require threading)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -23,4 +20,4 @@
 (for/fold ([best 0])
           ([n (in-range (+ -13 (vector-length data)))])
           (let ([now (product-range n)])
-               (if (< p best) best now)))
+               (if (< now best) best now)))
