@@ -40,4 +40,4 @@
 (fn (alt words) 
     (for/sum ([w words] #:when (triangle-word? w)) 1))
 
-(time (alt input))  ;; → 162
+(time (alt input)) ;; → 162
