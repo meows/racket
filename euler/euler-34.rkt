@@ -17,7 +17,7 @@
 ; their digits.
 
 ; natural → list <natural>
-(fn (N->list num [base 10])
+(fn (natural->digits num [base 10])
     (unfold-right zero?
                   (cut remainder <> base)
                   (cut quotient <> base)
@@ -25,13 +25,17 @@
 
 ;; n → sum the digits of n!
 (fn (digit-factorial-sum nat)
-    (apply + (map factorial (N->list nat))))
+    (for/sum ([n (natural->digits nat)]) (factorial n)))
 
 ;; Check if a number is equal to the sum of the digits of (n!).
-(fn (euler-check nat) 
+(fn (okay? nat) 
     (= nat (digit-factorial-sum nat)))
+
+;; 9! * 7 is the natural max of the problem.
+(define max (* 7 (factorial 9)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(filter euler-check (range 5 10000000))
+(for/sum ([n (in-range 144 max)] 
+          #:when (okay? n)) n)

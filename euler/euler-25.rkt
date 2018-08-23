@@ -1,7 +1,6 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
 (require math/number-theory)
 (require threading)
 
