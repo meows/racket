@@ -1,7 +1,6 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require math/number-theory)
 (require threading)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -15,14 +14,6 @@
                 string->list 
                 reverse 
                 list->string)))
-
-(fn (euler-4)
-    (for*/fold ([best 0])
-               ([i (in-range 100 1000)] [j (in-range 100 1000)])
-               (let ([now (* i j)])
-                    (if (and (< best now) (palindrome? now)) 
-                        now 
-                        best))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
