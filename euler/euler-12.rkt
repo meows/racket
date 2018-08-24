@@ -20,8 +20,6 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-;; p -- position
-;; v -- velocity
 (fn (euler [p 0] [v 1])
     (if (okay? p)
         p
@@ -33,7 +31,7 @@
                  #:when (okay? v)) v))
 
 (fn (alt)
-    (for/fold ([now 0] [velocity 1] #:result now)
-              ([n (in-naturals)] #:break (okay? now))
-              (values (+ now velocity) 
-                      (++ velocity))))
+    (for/fold ([p 0] [v 1] #:result now)
+              ([n (in-naturals)] #:break (okay? p))
+              (values (+ p v) 
+                      (++ v))))
