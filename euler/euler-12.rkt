@@ -20,10 +20,10 @@
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (euler [p 0] [v 1])
-    (if (okay? p)
-        p
-        (euler (+ p v) (++ v))))
+(fn (euler [s 0] [v 1])
+    (if (okay? s)
+        s
+        (euler (+ s v) (++ v))))
 
 (fn (test)
     (for*/first ([n (in-naturals)]
@@ -31,7 +31,7 @@
                  #:when (okay? v)) v))
 
 (fn (alt)
-    (for/fold ([p 0] [v 1] #:result now)
-              ([n (in-naturals)] #:break (okay? p))
-              (values (+ p v) 
+    (for/fold ([s 0] [v 1] #:result now)
+              ([n (in-naturals)] #:break (okay? s))
+              (values (+ s v)
                       (++ v))))
