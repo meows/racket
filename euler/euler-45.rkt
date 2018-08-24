@@ -21,5 +21,5 @@
 ;; Solve
 
 (for*/first ([n (in-naturals 144)]
-             [h (in-value (hexagon n))]
-             #:when (pentagonal? h)) h)
+             [v (in-value (hexagon n))]
+             #:when (pentagonal? v)) v)
