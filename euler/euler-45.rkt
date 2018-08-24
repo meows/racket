@@ -11,9 +11,8 @@
 ;; Find the next triangle number after 40755 that's both pentagonal and
 ;; hexagonal.
 
-(fn (hexagon n)
-    (+ (* 2 n n)
-       (- n)))
+(fn (hexagon n) 
+    (+ (* 2 n n) (- n)))
 
 (fn (pentagonal? n)
     (natural? (* 1/6 (+ 1 (sqrt (+ 1 (* 24 n)))))))
