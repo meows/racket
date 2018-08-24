@@ -25,13 +25,15 @@
         s
         (euler (+ s v) (++ v))))
 
-(fn (test)
+(fn (alt-0)
     (for*/first ([n (in-naturals)]
                  [v (in-value (triangle n))]
                  #:when (okay? v)) v))
 
-(fn (alt)
+(fn (alt-1)
     (for/fold ([s 0] [v 1] #:result now)
               ([n (in-naturals)] #:break (okay? s))
               (values (+ s v)
                       (++ v))))
+
+(time (euler))
