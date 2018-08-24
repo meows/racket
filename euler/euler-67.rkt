@@ -3,7 +3,6 @@
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
 (require (only-in srfi/26 cut))
-(require racket/trace)
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
@@ -19,17 +18,13 @@
 ;
 ; Example max sum: 23.
 
-(define raw (map (cut string-split <> " ") (file->lines "data/euler-67.txt")))
+(define raw  (map (cut string-split <> " ") (file->lines "data/euler-67.txt")))
 (define data (reverse (map (curry map string->number) raw)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-; Expects two lines, <now> and <before>,
-(fn (next-line now now++)
-    (for/list ([i now] [j (rest now)] [k now++])
-              (+ (max i j) k)))
-
 (for/fold ([now (first data)])
           ([now++ (rest data)])
-          (next-line now now++))
+          (for/list ([i now] [j (rest now)] [k now++])
+                    (+ (max i j) k)))
