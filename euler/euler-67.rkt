@@ -24,6 +24,6 @@
 ;; Solve
 
 (for/fold ([now   (first rows)])
-          ([now++ (rest  rows)])
+          ([now++ (rest rows)])
           (for/list ([i now] [j (rest now)] [k now++])
                     (+ (max i j) k)))
