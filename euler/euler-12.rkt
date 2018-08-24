@@ -31,7 +31,7 @@
                  #:when (okay? v)) v))
 
 (fn (alt-1)
-    (for/fold ([s 0] [v 1] #:result now)
+    (for/fold ([s 0] [v 1] #:result s)
               ([n (in-naturals)] #:break (okay? s))
               (values (+ s v)
                       (++ v))))
