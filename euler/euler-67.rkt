@@ -1,7 +1,6 @@
 #lang racket
 
 (require (rename-in racket/base [define fn]))
-(require (rename-in racket/base [define def]))
 (require (only-in srfi/26 cut))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -19,12 +18,12 @@
 ; Example max sum: 23.
 
 (define raw  (map (cut string-split <> " ") (file->lines "data/euler-67.txt")))
-(define data (reverse (map (curry map string->number) raw)))
+(define rows (reverse (map (curry map string->number) raw)))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(for/fold ([now (first data)])
-          ([now++ (rest data)])
+(for/fold ([now   (first rows)])
+          ([now++ (rest  rows)])
           (for/list ([i now] [j (rest now)] [k now++])
                     (+ (max i j) k)))
