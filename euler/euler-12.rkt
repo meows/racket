@@ -15,20 +15,25 @@
     (* 1/2 (+ n (* n n))))
 
 (fn (okay? n)
-    (~> n divisors length (< 500 _)))
+    (~> n divisors length (< 500 _ )))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (euler-12 [n 0])
-    (let ([t (triangle n)])
-         (if (okay? t)
-             t
-             (euler-12 (++ n)))))
+;; p -- position
+;; v -- velocity
+(fn (euler [p 0] [v 1])
+    (if (okay? p)
+        p
+        (euler (+ p v) (++ v))))
 
 (fn (test)
     (for*/first ([n (in-naturals)]
                  [v (in-value (triangle n))]
                  #:when (okay? v)) v))
 
-(time (euler-12))
+(fn (alt)
+    (for/fold ([now 0] [velocity 1] #:result now)
+              ([n (in-naturals)] #:break (okay? now))
+              (values (+ now velocity) 
+                      (++ velocity))))
