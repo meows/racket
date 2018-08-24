@@ -17,9 +17,11 @@ const isPentagon = (x: number) => Number.isSafeInteger((Math.sqrt(24*x + 1) + 1)
 
 function euler_45(start = 144) {
    let i = start
-   
+   let now
+
    while (true) {
-      if (isPentagon(hexagon(i))) return hexagon(i)
+      now = hexagon(i)
+      if (isPentagon(now)) return now
       else i++
    }
 }
