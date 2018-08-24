@@ -27,8 +27,8 @@
 ;; Finds the greatest value for (log-identity base exponent) from the list of 
 ;; base-exponent pairs defined above in <2-tuples>.
 (for/fold ([best 0] [seen-at 0] #:result (list best seen-at))
-          ([t 2-tuples] [index (in-naturals 1)])
+          ([t 2-tuples] [n (in-naturals 1)])
           (let ([now (log-identity (first t) (second t))])
                (if (< best now)
-                   (values now index)
+                   (values now n)
                    (values best seen-at))))
