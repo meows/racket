@@ -101,10 +101,20 @@
 
 ; natural → natural
 (fn (geometric i r) (λ (n) (* i (expt r n))))
-(fn (triangle n)    (* 1/2 (+ n (* n n))))
 (fn (line b m)      (λ (x) (+ b (* m x))))
 (fn (b b)           (λ (x) (+ b x)))
 (fn (m m)           (λ (x) (* m x)))
+
+(fn (triangle n) 
+    (* 1/2 (+ n (* n n))))
+
+(fn (pentagon n)
+    (+ (* 3/2 n n)
+       (* -1/2 n)))
+
+(fn (hexagon n)
+    (+ (* 2 n n)
+       (- n)))
 
 ; function → list <any> (outputs)
 (fn (series fn/1 #:min [min 0] #:max [max 21])
