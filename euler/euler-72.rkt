@@ -14,7 +14,7 @@
 ; problem max.
 
 (fn (euler [max 1000001]) 
-    (for/sum ([n (in-range 2 max)]) 
+    (for/sum ([n (in-range 2 max)])
              (totient n)))
 
 (time (euler))

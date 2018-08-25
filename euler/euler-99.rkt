@@ -14,7 +14,9 @@
 (define 2-tuples
     (~> raw-strings
         (map (λ (string)  (string-split string  ","))   _ )
-        (map (λ (strings) (map string->number strings)) _ )))
+        (map (λ (strings) (map string->number strings)) _ )
+        in-list
+))
 
 ;; Translates every (base, exponent) pair into a unique number that preserves
 ;; the orderings of power: log(b^e) = e * log(base).
@@ -26,9 +28,7 @@
 
 ;; Finds the greatest value for (log-identity base exponent) from the list of 
 ;; base-exponent pairs defined above in <2-tuples>.
-(for/fold ([best 0] [seen-at 0] #:result (list best seen-at))
-          ([t 2-tuples] [n (in-naturals 1)])
-          (let ([now (log-identity (first t) (second t))])
-               (if (< best now)
-                   (values now n)
-                   (values best seen-at))))
+(for*/fold ([best 0] [seen-at 0] #:result (list best seen-at))
+           ([(t index) (in-parallel 2-tuples (in-naturals 1))]
+            [now (in-value (log-identity (first t) (second t)))]
+            #:when (< best now)) (values now index))
