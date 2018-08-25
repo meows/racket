@@ -30,7 +30,7 @@
 ;; Solution
 
 (define euler-20 
-    (~> (factorial 100) 
+    (~> (factorial 100)
         natural->digits 
         numbers->sum))
 

@@ -9,18 +9,22 @@
 ;; Project Euler
 ;; Problem 42
 
-(define source "data/euler-42.txt")
-(define input  (file->list source))
+(define file "data/euler-42.txt")
+(define input (file->list file))
 
 (fn sum (curry apply +))
 
 (define uid
-    (for/hash ([letter '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
-               [natural (in-range 1 27)])
-              (values (symbol->string letter) natural)))
+    (for/hash 
+        ([letter (in-list '(a b c d e f g h i j k l m n o p q r s t u v w x y z))]
+         [natural (in-range 1 27)])
+        (values (symbol->string letter) natural)))
 
-(fn (word->letters word) (map string (string->list word)))
-(fn (letters->naturals letters) (map (cut hash-ref uid <>) letters))
+(fn (word->letters word) 
+    (map string (string->list word)))
+
+(fn (letters->naturals letters) 
+    (map (cut hash-ref uid <>) letters))
 
 (fn word->natural
     (λ~> string-downcase 

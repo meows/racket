@@ -27,7 +27,6 @@
                ([n (in-range 1 (++ max))] 
                 [steps (in-value (collatz n))]
                 #:break (< max n)
-                #:when (< best steps))
-               (values steps n)))
+                #:when (< best steps)) (values steps n)))
 
 (time (euler-14))

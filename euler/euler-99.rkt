@@ -10,13 +10,12 @@
 ;; Raw data from file split as lines.
 (define raw-strings (file->lines "data/euler-99.txt"))
 
-;; A list of 2-list of '(base exponent).
+;; A sequence of 2-list of '(base exponent).
 (define 2-tuples
     (~> raw-strings
         (map (λ (string)  (string-split string  ","))   _ )
         (map (λ (strings) (map string->number strings)) _ )
-        in-list
-))
+        in-list))
 
 ;; Translates every (base, exponent) pair into a unique number that preserves
 ;; the orderings of power: log(b^e) = e * log(base).
