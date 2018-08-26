@@ -30,9 +30,10 @@
                  [v (in-value (triangle n))]
                  #:when (okay? v)) v))
 
+;; TEST
 (fn (alt-1)
     (for/fold ([s 0])
               ([v (in-naturals 1)] #:break (okay? s))
               (+ s v)))
 
-(time (euler))
+(time (alt-1))
