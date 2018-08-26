@@ -11,7 +11,7 @@
 ; Find the sum of the digits in the number 100!
 
 (fn -- sub1)
-(fn numbers->sum (curry apply +))
+(fn sum (curry apply +))
 
 ; finds the nth factorial
 (fn (factorial n #:product [p 1])
@@ -32,6 +32,6 @@
 (define euler-20 
     (~> (factorial 100)
         natural->digits 
-        numbers->sum))
+        sum))
 
 euler-20  ;; → 648
