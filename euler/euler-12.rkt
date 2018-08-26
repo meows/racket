@@ -31,8 +31,8 @@
                  #:when (okay? v)) v))
 
 (fn (alt-1)
-    (for/fold ([s 0] [v 1] #:result s)
-              ([n (in-naturals)] #:break (okay? s))
-              (values (+ s v) (++ v))))
+    (for/fold ([s 0])
+              ([v (in-naturals 1)] #:break (okay? s))
+              (+ s v)))
 
 (time (euler))

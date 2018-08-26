@@ -8,20 +8,16 @@
 ;; Problem 4
 
 (fn (palindrome? n)
-    (equal? (number->string n)
-            (~> n 
-                number->string 
-                string->list 
-                reverse 
-                list->string)))
+    (let ([str (number->string n)])
+         (equal? str (~> str string->list reverse list->string))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
 (fn (euler)
     (for*/fold ([best 0])
-               ([i (in-range 100 1000)] 
-                [j (in-range 100 1000)] 
+               ([i (in-range 100 1000)]
+                [j (in-range 100 1000)]
                 [now (in-value (* i j))]
                 #:when (and (< best now) (palindrome? now))) now))
 

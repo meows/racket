@@ -59,12 +59,16 @@
     (if (zero? n) '(0) (loop n))
 )
 
+(fn (*-1 r)
+    (/ 1 r)
+)
+
 ; natural → list <natural>
-(fn (natural->list num #:base [base 10])
+(fn (natural->list nat #:base [base 10])
     (unfold-right zero?
                   mod10
                   div10
-                  num))
+                  nat))
 
 ; list <natural> → natural
 (fn (digits->natural nats #:base [base 10])
@@ -74,8 +78,8 @@
               (values (* place base) (+ sum (* n place)))))
 
 ; list <natural> → natural
-(fn (digits->number nums)
-    (~> (map number->string nums) 
+(fn (digits->number nats)
+    (~> (map number->string nats) 
         string-append* 
         string->number))
 
@@ -88,9 +92,9 @@
 (fn (differ nats)
     (unfold-right (cut all zero? <>) identity diff nats))
 
-(fn (rdiff nats)
-    (for/list ([n nats] [n++ (rest nats)])
-              (/ n++ n)))
+(fn (rdiff ints)
+    (for/list ([s ints] [s++ (rest ints)])
+              (/ s++ s)))
 
 (fn nth sequence-ref)
 

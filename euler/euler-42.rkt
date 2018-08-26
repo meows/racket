@@ -10,13 +10,13 @@
 ;; Problem 42
 
 (define file "data/euler-42.txt")
-(define input (file->list file))
+(define $words (in-list (file->list file)))
 
 (fn sum (curry apply +))
 
 (define uid
     (for/hash 
-        ([letter (in-list '(a b c d e f g h i j k l m n o p q r s t u v w x y z))]
+        ([letter '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
          [natural (in-range 1 27)])
         (values (symbol->string letter) natural)))
 
@@ -44,4 +44,4 @@
 (fn (alt words) 
     (for/sum ([w words] #:when (triangle-word? w)) 1))
 
-(time (alt input)) ;; → 162
+(time (alt $words)) ;; → 162
