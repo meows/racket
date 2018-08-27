@@ -24,4 +24,17 @@
         (euler-2 s++ (+ s s++) 
                  #:sum (if (odd? s++) sum (+ sum s++)))))
 
+(define (alt)
+    (for/fold ([s 0] [s++ 1] [sum 0] #:result sum)
+              ([n (in-naturals)] #:break (< max s++))
+              (values s++
+                      (+ s s++)
+                      (if (odd? s++) sum (+ sum s++)))))
+
 (time (euler-2))
+(time (euler-2))
+(time (euler-2))
+(time (euler-2))
+(time (alt))
+(time (alt))
+(time (alt))
