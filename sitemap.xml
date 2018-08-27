@@ -34,7 +34,6 @@
 <url> <loc>https://rid.pw/docs/dictionary</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/dictionary" /> </url>
 <url> <loc>https://rid.pw/docs/dimension</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/dimension" /> </url>
 <url> <loc>https://rid.pw/docs/exam</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/exam" /> </url>
-<url> <loc>https://rid.pw/docs/logarithm</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/logarithm" /> </url>
 <url> <loc>https://rid.pw/docs/expression</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/expression" /> </url>
 <url> <loc>https://rid.pw/docs/fold</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/fold" /> </url>
 <url> <loc>https://rid.pw/docs/function-advanced</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/function-advanced" /> </url>
@@ -55,6 +54,7 @@
 <url> <loc>https://rid.pw/docs/lambda</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lambda" /> </url>
 <url> <loc>https://rid.pw/docs/linear-systems</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/linear-systems" /> </url>
 <url> <loc>https://rid.pw/docs/lists</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lists" /> </url>
+<url> <loc>https://rid.pw/docs/logarithm</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/logarithm" /> </url>
 <url> <loc>https://rid.pw/docs/Operators</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/Operators" /> </url>
 <url> <loc>https://rid.pw/docs/peano</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/peano" /> </url>
 <url> <loc>https://rid.pw/docs/racket-install</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/racket-install" /> </url>
