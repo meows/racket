@@ -9,12 +9,12 @@ const isEven = x => x % 2 === 0
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // Solve
 
-const euler = (s = 0, sn = 1, sum = 0) => 
+const euler_02 = (s = 0, sn = 1, sum = 0) => 
    (4000000 < sn) 
       ? sum 
-      : euler(
+      : euler_02(
          sn, 
          s + sn, 
          isEven(sn) ? sum + sn : sum)
 
-euler()
+euler_02()

@@ -5,7 +5,7 @@
 // Give the sum of all integers between 1 to 1000 that's divisible by either 3 
 // or 5.
 
-function euler(max = 1000) {
+function euler_01(max = 1000) {
    let sum = 0
 
    while (max--) {
@@ -16,3 +16,5 @@ function euler(max = 1000) {
 
    return sum
 }
+
+euler_01()
