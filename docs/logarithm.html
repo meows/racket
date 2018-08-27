@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -28,6 +28,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -38,17 +42,17 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="logarithms"></a><a href="#logarithms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logarithms</h1>
 <p>We have previously defined exponentiation as a way of repeated multiplication.
 For example:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>)       <span class="hljs-comment">;; 2^0 → 1</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>)       <span class="hljs-comment">;; 2^0 → 1</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>)     <span class="hljs-comment">;; 2^1 → 2</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span> <span class="hljs-number">2</span>)   <span class="hljs-comment">;; 2^2 → 4</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; 2^3 → 8</span>
 </code></pre>
 <p>For whole numbers this may be a fine definition. But that points to a question
 of what do we do when we see:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">expt</span> <span class="hljs-number">4</span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">expt</span> <span class="hljs-number">4</span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span>)
 </code></pre>
 <p>To answer this, I'll write exponents a different way, as a list of three numbers:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
 (<span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>)
 (<span class="hljs-number">2</span> <span class="hljs-number">2</span> <span class="hljs-number">4</span>)
 (<span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">8</span>)
@@ -57,7 +61,7 @@ of what do we do when we see:</p>
 </code></pre>
 <p>We can imagine that the exponentiation operator is like asking for the final
 value of this length-3 list:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-number">2</span> <span class="hljs-number">0</span> _)
+<pre><code class="hljs css language-clojure">(<span class="hljs-number">2</span> <span class="hljs-number">0</span> _)
 (<span class="hljs-number">2</span> <span class="hljs-number">1</span> _)
 (<span class="hljs-number">2</span> <span class="hljs-number">2</span> _)
 (<span class="hljs-number">2</span> <span class="hljs-number">3</span> _)
@@ -72,7 +76,7 @@ value of this length-3 list:</p>
 (<span class="hljs-name">expt</span> <span class="hljs-number">2</span> <span class="hljs-number">5</span>)
 </code></pre>
 <p>The logarithm operator is for asking for the middle value:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-number">2</span> _ <span class="hljs-number">1</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-number">2</span> _ <span class="hljs-number">1</span>)
 (<span class="hljs-number">2</span> _ <span class="hljs-number">2</span>)
 (<span class="hljs-number">2</span> _ <span class="hljs-number">4</span>)
 (<span class="hljs-number">2</span> _ <span class="hljs-number">8</span>)
@@ -95,7 +99,7 @@ expects the allowance for the following week to be <code>10 * 1.05</code>, or <c
 <p>After how many weeks would Bob have to wait to expect an allowance of at least
 <code>$30</code>?</p>
 <h3><a class="anchor" aria-hidden="true" id="solving-with-log"></a><a href="#solving-with-log" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solving with <code>log</code></h3>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> initial <span class="hljs-number">10</span>) <span class="hljs-comment">;; unit dollars</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> initial <span class="hljs-number">10</span>) <span class="hljs-comment">;; unit dollars</span>
 (<span class="hljs-name">define</span> rate <span class="hljs-number">21</span>/<span class="hljs-number">20</span>) <span class="hljs-comment">;; percentage as a rational</span>
 
 <span class="hljs-comment">;; weeks → allowance in dollars</span>
@@ -113,7 +117,7 @@ be about <code>3</code>.</p>
 <p>If these are 3-lists of <code>(base exponent power)</code>, when will we reach at least
 <code>3</code>? Trying this manually by hand is very slow, so how might the <code>log</code> function
 help us find the answer?</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-number">1.05</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-number">1.05</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">1</span> <span class="hljs-number">1.05</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">2</span> <span class="hljs-number">1.1025</span>)
 (<span class="hljs-number">1.05</span> <span class="hljs-number">3</span> <span class="hljs-number">1.157625</span>)
@@ -122,7 +126,7 @@ help us find the answer?</p>
 (<span class="hljs-number">1.05</span> <span class="hljs-number">6</span> <span class="hljs-number">1.340095640625</span>)
 </code></pre>
 <p>We can simply look for a power of <code>3</code> when the base is <code>1.05</code>:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">log</span> <span class="hljs-number">3</span> <span class="hljs-number">1.05</span>)        <span class="hljs-comment">;; → 22.517</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">log</span> <span class="hljs-number">3</span> <span class="hljs-number">1.05</span>)        <span class="hljs-comment">;; → 22.517</span>
 (<span class="hljs-name">weeks-&gt;dollars</span> <span class="hljs-number">23</span>) <span class="hljs-comment">;; → 30.715</span>
 </code></pre>
 <p>Since our allowance is only raised weekly, and not inbetween, we simply round up
@@ -130,7 +134,7 @@ to the next week to get <code>23</code> weeks. The allowance after <code>23</cod
 about <code>$30.715</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="the-values-inbetween"></a><a href="#the-values-inbetween" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The values inbetween</h3>
 <p>But (!). Let's not ignore the fact that we rounded up. When you perform</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> weeks-&gt;dollars (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">20</span>))
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> weeks-&gt;dollars (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">20</span>))
 </code></pre>
 <p>you'll find a large list of values inbetween the whole numbered weeks. Are the
 numbers inbetween meaningless? For the shallow coincidence of our word problem,
@@ -149,7 +153,7 @@ measure, they do all their growth in that instant. Much of everyday life works
 <p>...which would appear to be a sequence of <em>the powers of 2</em>. If you wanted to
 find the <em>nth</em> number of the sequence, then the function would look like
 <code>f(n) = 1 * 2^n</code> where <code>^</code> means exponentiation, or:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">power-2</span> n)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">power-2</span> n)
    (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span> (<span class="hljs-name">expt</span> <span class="hljs-number">2</span> n)))
 
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> power-2 (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">6</span>)) <span class="hljs-comment">;; → '(1 2 4 8 16 32)</span>
@@ -160,7 +164,7 @@ find the <em>nth</em> number of the sequence, then the function would look like
 <p>This sequence is exactly like the powers of <em>powers of 2</em> listed above, except
 now the initial number starts with <code>2</code>, so the function should look like
 <code>f(n) = 2 * 2^n</code>, or :</p>
-<pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">geometric</span> initial ratio)
+<pre><code class="hljs css language-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">geometric</span> initial ratio)
    (<span class="hljs-name">λ</span> (<span class="hljs-name">cycles</span>) 
       (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> initial
          (<span class="hljs-name"><span class="hljs-builtin-name">expt</span></span> ratio cycles))))

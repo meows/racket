@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -27,6 +27,10 @@
               function createToggler(togglerSelector, targetSelector, className) {
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
 
                 toggler.onclick = function(event) {
                   event.preventDefault();
@@ -101,14 +105,14 @@ how it looks when we write it in Racket.</p>
 <li>If <code>n</code> is zero, then we return <code>1</code></li>
 <li>If <code>n</code> is anything else, then we return <code>(* n (factorial (- n 1)))</code></li>
 </ul>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example #1</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; Example #1</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
         <span class="hljs-number">1</span>
         (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))))
 </code></pre>
 <p>If the &quot;steps&quot; for <code>(factorial 5)</code> were written out:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span>)
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> (<span class="hljs-name">factorial</span> <span class="hljs-number">4</span>))
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">4</span> (<span class="hljs-name">factorial</span> <span class="hljs-number">3</span>)))
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">5</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">4</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span> (<span class="hljs-name">factorial</span> <span class="hljs-number">2</span>))))
@@ -141,14 +145,14 @@ that now it takes two inputs, <code>n</code> and <code>p</code>. Also notice tha
 square brackets and paired with <code>1</code>. This is called a default input, and just
 means that whenever you don't give anything for <code>p</code>, then <code>1</code> will be secretly
 given to your function in place of <code>p</code>.</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example #2</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; Example #2</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">factorial</span> n [p <span class="hljs-number">1</span>])
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
         p
         (<span class="hljs-name">factorial</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n p))))
 </code></pre>
 <p>If the &quot;steps&quot; for <code>(factorial 5)</code> were written out:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span> <span class="hljs-number">1</span>) <span class="hljs-comment">; 1 is given as a default input</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">factorial</span> <span class="hljs-number">5</span> <span class="hljs-number">1</span>) <span class="hljs-comment">; 1 is given as a default input</span>
 (<span class="hljs-name">factorial</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)
 (<span class="hljs-name">factorial</span> <span class="hljs-number">3</span> <span class="hljs-number">20</span>)
 (<span class="hljs-name">factorial</span> <span class="hljs-number">2</span> <span class="hljs-number">60</span>)
@@ -177,7 +181,7 @@ to multiply by one.</p>
 with all the <em>positive</em> naturals equal to or lesser than <code>n</code>, and you chose <code>0</code>,
 then in a way that's like saying you want by multiply by nothing <code>(*)</code>.
 Similarly, anything to the power of <code>0</code> is also <code>1</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span>)         <span class="hljs-comment">;; →  0</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">+</span></span>)         <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>)         <span class="hljs-comment">;; →  1</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span>))     <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span>))     <span class="hljs-comment">;; →  1</span>

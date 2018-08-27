@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -21,7 +21,7 @@ messy paper of first names. They're not even in alphabetical order:</p>
 </code></pre>
 <p>If I asked you to store these disorganized names on the computer using Racket,
 how might you do so? Would you store every single name in a variable?</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> a <span class="hljs-string">"Ryan"</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> a <span class="hljs-string">"Ryan"</span>)
 (<span class="hljs-name">define</span> b <span class="hljs-string">"Oliver"</span>)
 (<span class="hljs-name">define</span> c <span class="hljs-string">"Norman"</span>)
 (<span class="hljs-name">define</span> d <span class="hljs-string">"Lee"</span>)
@@ -35,13 +35,13 @@ your computer has to have enough memory).</p>
 <p>Previously in Racket, whenever you had a sequence of things in parentheses,
 which we called <a href="/docs/expression"><em>expressions</em></a>, Racket would assume that the
 first atom is a function and that the rest of the items were inputs. Like this:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span> <span class="hljs-number">10</span> <span class="hljs-number">10</span> <span class="hljs-number">0</span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span> <span class="hljs-number">10</span> <span class="hljs-number">10</span> <span class="hljs-number">0</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="lists"></a><a href="#lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lists</h2>
 <p>A list is a way for you to store zero to <code>n</code> things as a sequence, which you can
 later access by knowing its sequential position, or <em>index</em> number. Here are
 some examples of ways to create lists:</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; these are all equal to '(1 2 3)</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; these are all equal to '(1 2 3)</span>
 (<span class="hljs-name">define</span> a (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>))
 (<span class="hljs-name">define</span> b '(<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>))
 (<span class="hljs-name">define</span> c (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> <span class="hljs-number">1</span> (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> <span class="hljs-number">2</span> (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> <span class="hljs-number">3</span> '()))))
@@ -63,14 +63,14 @@ some examples of ways to create lists:</p>
 <p><code>list</code> is a function which can allow you to build any kind of list, and it takes
 any number of inputs, even no input at all. You can make a list of just about
 anything, and lists can be empty.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)        <span class="hljs-comment">;; a list with 0 items</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)        <span class="hljs-comment">;; a list with 0 items</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">3</span>)      <span class="hljs-comment">;; a list with 1 item</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">3</span> <span class="hljs-number">1</span>)    <span class="hljs-comment">;; a list with 2 items</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>)) <span class="hljs-comment">;; a list with 1 item -- another list!</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="length"></a><a href="#length" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>length</code></h3>
 <p>To ask how many items are inside a list, we use <code>length</code>:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">length</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>))            <span class="hljs-comment">;; → 0</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">length</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>))            <span class="hljs-comment">;; → 0</span>
 (<span class="hljs-name">length</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">3</span>))          <span class="hljs-comment">;; → 1</span>
 (<span class="hljs-name">length</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-number">3</span> <span class="hljs-number">3</span>))        <span class="hljs-comment">;; → 2</span>
 (<span class="hljs-name">length</span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span>) <span class="hljs-number">3</span> <span class="hljs-number">4</span>)) <span class="hljs-comment">;; → 3</span>
@@ -91,7 +91,7 @@ right function to use.</p>
 <tr><td>► Return</td><td>the value found on <code>lst</code> at <code>pos</code></td></tr>
 </tbody>
 </table>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> names 
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> names 
    (<span class="hljs-name"><span class="hljs-builtin-name">list</span></span> <span class="hljs-string">"Ryan"</span> <span class="hljs-string">"Oliver"</span> <span class="hljs-string">"Norman"</span> <span class="hljs-string">"Lee"</span> <span class="hljs-string">"Iris"</span> <span class="hljs-string">"George"</span> <span class="hljs-string">"Ellen"</span> <span class="hljs-string">"Bob"</span> <span class="hljs-string">"Dennis"</span> 
       <span class="hljs-string">"Allen"</span> <span class="hljs-string">"Charity"</span> <span class="hljs-string">"Irene"</span> <span class="hljs-string">"Jonathan"</span> <span class="hljs-string">"Calvin"</span> <span class="hljs-string">"Alice"</span> <span class="hljs-string">"Frank"</span> <span class="hljs-string">"Henry"</span> 
       <span class="hljs-string">"Jen"</span> <span class="hljs-string">"Mike"</span> <span class="hljs-string">"Patricia"</span> <span class="hljs-string">"Roy"</span> <span class="hljs-string">"Joseph"</span> <span class="hljs-string">"Patrick"</span>

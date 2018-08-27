@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -28,6 +28,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -41,17 +45,17 @@ output. We've also learned that in math, we are required to specify what is the
 <em>type</em> of the input and output. As it happens, that's true in programming as
 well.</p>
 <p>This <code>cube</code> function takes a number <code>n</code> and returns a number.</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; number → number</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; number → number</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">cube</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n n n))
 </code></pre>
 <p>This list function <code>remove-odds</code> takes a list <code>lst</code> and returns a list.</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; list → list</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; list → list</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">remove-odds</span> lst) (<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> even? lst))
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="returning-things-we-already-know-about"></a><a href="#returning-things-we-already-know-about" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returning things we already know about</h2>
 <p>Let's focus a bit more one the kinds of things we've learned to return so far.</p>
 <h3><a class="anchor" aria-hidden="true" id="returning-numbers"></a><a href="#returning-numbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returning numbers</h3>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; number → number</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; number → number</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">total-bill</span> price)
     (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> price <span class="hljs-number">1.0725</span>) <span class="hljs-comment">;; California sales tax </span>
        (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> price <span class="hljs-number">1.15</span>)   <span class="hljs-comment">;; common tip amount</span>
@@ -59,7 +63,7 @@ well.</p>
 )
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="returning-booleans"></a><a href="#returning-booleans" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returning booleans</h3>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; number → boolean</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; number → boolean</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">div-by-3-or-5?</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">3</span>))
         (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">5</span>))
@@ -67,7 +71,7 @@ well.</p>
 )
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="returning-strings"></a><a href="#returning-strings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returning strings</h3>
-<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; boolean → string</span>
+<pre><code class="hljs css language-scheme"><span class="hljs-comment">;; boolean → string</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">say-hi?</span> answer)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">equal?</span></span> answer <span class="hljs-literal">#t</span>)
         <span class="hljs-string">"Hi!"</span>
@@ -82,19 +86,19 @@ well.</p>
 <p>Now let's try returning something we haven't done before, which is a whole new
 function that we can later use.</p>
 <p>This function <code>move</code> takes a natural input <code>amount</code> and returns a function.</p>
-<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; number → function (number → number)</span>
+<pre><code class="hljs css language-scheme"><span class="hljs-comment">;; number → function (number → number)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">move</span> amount) 
     (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x amount))
 )
 </code></pre>
 <p>This function <code>scale</code> takes a natural input <code>amount</code> and returns a function.</p>
-<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; number → function (number → number)</span>
+<pre><code class="hljs css language-scheme"><span class="hljs-comment">;; number → function (number → number)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">scale</span> amount) 
     (<span class="hljs-name">λ</span> (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x amount))
 )
 </code></pre>
 <p>Let's see how we might use functions <code>move</code> and <code>scale</code>:</p>
-<pre><code class="hljs css languages- clojure">((<span class="hljs-name">move</span>  <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 10</span>
+<pre><code class="hljs css language-clojure">((<span class="hljs-name">move</span>  <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 10</span>
 ((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) <span class="hljs-number">5</span>)             <span class="hljs-comment">;; → 25</span>
 ((<span class="hljs-name">move</span>  <span class="hljs-number">5</span>) ((<span class="hljs-name">move</span>  <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 12</span>
 ((<span class="hljs-name">scale</span> <span class="hljs-number">5</span>) ((<span class="hljs-name">scale</span> <span class="hljs-number">4</span>) <span class="hljs-number">3</span>)) <span class="hljs-comment">;; → 60</span>
@@ -116,13 +120,13 @@ function that we can later use.</p>
 <p>Write a function called <code>line</code> which takes two natural inputs, a velocity <code>v</code>
 and a starting position <code>p0</code>, and returns a new function which can generate a
 linear sequence based the velocity and starting position of my choice.</p>
-<pre><code class="hljs css languages- scheme"><span class="hljs-comment">;; (number number) → function (number → number)</span>
+<pre><code class="hljs css language-scheme"><span class="hljs-comment">;; (number number) → function (number → number)</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">line</span> p0 v)
     (<span class="hljs-name">λ</span> ...)
 )
 </code></pre>
 <p>For example, this is how I would like to use your <code>line</code> function:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span>  <span class="hljs-number">7</span> <span class="hljs-number">-1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → 7, 6, 5, 4, 3</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span>  <span class="hljs-number">7</span> <span class="hljs-number">-1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → 7, 6, 5, 4, 3</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span>  <span class="hljs-number">7</span>  <span class="hljs-number">1</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → 7, 8, 9, 10, 11</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">-4</span>  <span class="hljs-number">2</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → -4, -2, 0, 2, 4</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (<span class="hljs-name">line</span> <span class="hljs-number">-4</span> <span class="hljs-number">-2</span>) (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">5</span>)) <span class="hljs-comment">;; → -4, -6, -8, -10, -12</span>

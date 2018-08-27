@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -28,6 +28,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -44,7 +48,7 @@ base, and (2) the second one is the exponent. Therefore:</p>
 <li><code>(expt 4 3)</code> should be interpreted as <em>base 4 to the exponent of 3</em>.</li>
 <li><code>(expt 5 2)</code> should be interpreted as <em>base 5 to the exponent of 2</em>.</li>
 </ul>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">expt</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → (*)         → 1</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">expt</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>) <span class="hljs-comment">;; → (*)         → 1</span>
 (<span class="hljs-name">expt</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>) <span class="hljs-comment">;; → (* 2)       → 2</span>
 (<span class="hljs-name">expt</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → (* 3 3)     → 9</span>
 (<span class="hljs-name">expt</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span>) <span class="hljs-comment">;; → (* 4 4 4)   → 64</span>
@@ -82,7 +86,7 @@ base, and (2) the second one is the exponent. Therefore:</p>
 <p>The function <code>log</code> consumes two inputs, a <code>power</code> and a <code>base</code>, and it
 returns an exponent <code>e</code> for which the <code>base</code> exponentiated by <code>e</code> will equal the
 <code>power</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">log</span>  <span class="hljs-number">1</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 0</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">log</span>  <span class="hljs-number">1</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 0</span>
 (<span class="hljs-name">log</span>  <span class="hljs-number">2</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 1</span>
 (<span class="hljs-name">log</span>  <span class="hljs-number">4</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 2</span>
 (<span class="hljs-name">log</span>  <span class="hljs-number">8</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 3</span>
@@ -100,14 +104,14 @@ returns an exponent <code>e</code> for which the <code>base</code> exponentiated
 <p>The <code>quotient</code> function helps you find the quotient of a division between two
 natural numbers, where the first number is the <em>dividend</em>, and the second number
 is the <em>divisor</em>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">quotient</span> <span class="hljs-number">123456789</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → 12345678</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">quotient</span> <span class="hljs-number">123456789</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → 12345678</span>
 (<span class="hljs-name">quotient</span> <span class="hljs-number">987654321</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → 98765432</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="remainder"></a><a href="#remainder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>remainder</code></h2>
 <p>The <code>remainder</code> function helps you find the remainder of a division between two
 natural numbers, where the first number is the <em>dividend</em>, and the second number
 is the <em>divisor</em>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">remainder</span> <span class="hljs-number">10</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 0</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">remainder</span> <span class="hljs-number">10</span> <span class="hljs-number">2</span>) <span class="hljs-comment">;; → 0</span>
 (<span class="hljs-name">remainder</span> <span class="hljs-number">2</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → 2</span>
 (<span class="hljs-name">remainder</span> <span class="hljs-number">80</span> <span class="hljs-number">3</span>) <span class="hljs-comment">;; → 2</span>
 (<span class="hljs-name">remainder</span> <span class="hljs-number">81</span> <span class="hljs-number">3</span>) <span class="hljs-comment">;; → 0</span>
@@ -116,7 +120,7 @@ is the <em>divisor</em>.</p>
 <p>Some people use the <code>remainder</code> function to find whether a number <code>n</code> is even by
 seeing if <code>(remainder n 2)</code> is zero, in other words, whether dividing a number
 by <code>2</code> leaves no remainder, which is in fact the definition of an even number:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n)
    (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">2</span>)))
 
 (<span class="hljs-name">define</span> (<span class="hljs-name"><span class="hljs-builtin-name">odd?</span></span> n)
@@ -124,26 +128,26 @@ by <code>2</code> leaves no remainder, which is in fact the definition of an eve
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="abs-absolute-value"></a><a href="#abs-absolute-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>abs</code> Absolute Value</h2>
 <p>The absolute value function <code>abs</code> takes a number and always makes it positive.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">abs</span> <span class="hljs-number">-10</span>)       <span class="hljs-comment">;; → 10</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">abs</span> <span class="hljs-number">-10</span>)       <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">abs</span>  <span class="hljs-number">10</span>)       <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">abs</span> (<span class="hljs-name">abs</span> <span class="hljs-number">-10</span>)) <span class="hljs-comment">;; → 10</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="gcd-greatest-common-divisor"></a><a href="#gcd-greatest-common-divisor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>gcd</code> Greatest Common Divisor</h2>
 <p>The greatest common divisor <code>gcd</code> function takes one or more numbers, and finds
 greatest common divisor or factor among them.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">gcd</span>  <span class="hljs-number">8</span> <span class="hljs-number">12</span> <span class="hljs-number">16</span>) <span class="hljs-comment">;; → 4</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">gcd</span>  <span class="hljs-number">8</span> <span class="hljs-number">12</span> <span class="hljs-number">16</span>) <span class="hljs-comment">;; → 4</span>
 (<span class="hljs-name">gcd</span> <span class="hljs-number">15</span> <span class="hljs-number">18</span> <span class="hljs-number">27</span>) <span class="hljs-comment">;; → 3</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="lcm-least-common-multiple"></a><a href="#lcm-least-common-multiple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>lcm</code> Least Common Multiple</h2>
 <p>The least common multiple <code>lcm</code> function takes one or more integers, and finds
 the smallest integer that's divisible by all the inputs integers. It's useful
 for finding out the smallest common denominator between two or more fractions.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">lcm</span>  <span class="hljs-number">8</span> <span class="hljs-number">12</span> <span class="hljs-number">16</span>) <span class="hljs-comment">;; → 48</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">lcm</span>  <span class="hljs-number">8</span> <span class="hljs-number">12</span> <span class="hljs-number">16</span>) <span class="hljs-comment">;; → 48</span>
 (<span class="hljs-name">lcm</span> <span class="hljs-number">15</span> <span class="hljs-number">20</span> <span class="hljs-number">25</span>) <span class="hljs-comment">;; → 300</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="max"></a><a href="#max" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>max</code></h2>
 <p><code>max</code> takes one or more numbers and returns the biggest value found among them:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">max</span></span> <span class="hljs-number">3</span>)                <span class="hljs-comment">;; → 3</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">max</span></span> <span class="hljs-number">3</span>)                <span class="hljs-comment">;; → 3</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">max</span></span> <span class="hljs-number">-3</span> <span class="hljs-number">0</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>)         <span class="hljs-comment">;; → 4</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">apply</span></span> max (<span class="hljs-name"><span class="hljs-builtin-name">range</span></span> <span class="hljs-number">10</span>)) <span class="hljs-comment">;; → 9</span>
 </code></pre>

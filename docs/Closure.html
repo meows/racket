@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -18,14 +18,14 @@ numbers including <code>0</code>. If we have two naturals, <code>n1</code> and <
 together like <code>(+ n1 n2)</code>, is there a possibility that the answer will ever
 <em>not</em> be a natural?</p>
 <p>No matter how big or small <code>n1</code> and <code>n2</code>?</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">add</span> n1 n2) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n1 n2))
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">add</span> n1 n2) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n1 n2))
 
 (<span class="hljs-name">natural?</span> (<span class="hljs-name">add</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>))     <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name">natural?</span> (<span class="hljs-name">add</span> <span class="hljs-number">123</span> <span class="hljs-number">456</span>)) <span class="hljs-comment">;; → true</span>
 </code></pre>
 <p>What about subtraction? Is there a combination of <code>n1</code> and <code>n2</code> that's ever not
 natural?</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">subtract</span> n1 n2) (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n1 n2))
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">subtract</span> n1 n2) (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n1 n2))
 
 (<span class="hljs-name">natural?</span> (<span class="hljs-name">subtract</span> <span class="hljs-number">5</span> <span class="hljs-number">10</span>)) <span class="hljs-comment">;; → false</span>
 </code></pre>

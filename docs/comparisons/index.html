@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -27,6 +27,10 @@
               function createToggler(togglerSelector, targetSelector, className) {
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
 
                 toggler.onclick = function(event) {
                   event.preventDefault();
@@ -50,7 +54,7 @@ the Boolean section on <a href="/docs/values">values and types</a> before procee
 <h3><a class="anchor" aria-hidden="true" id="equal"></a><a href="#equal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>=</code> Equal</h3>
 <p>In Racket, <code>=</code> is a function which takes two (or more) numbers, sees if they are
 equal, and then returns either <code>true</code> or <code>false</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">42</span> <span class="hljs-number">42</span>)  <span class="hljs-comment">;; → true</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">42</span> <span class="hljs-number">42</span>)  <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">24</span> <span class="hljs-number">42</span>)  <span class="hljs-comment">;; → false</span>
 
 <span class="hljs-comment">;; these will return true</span>
@@ -68,7 +72,7 @@ equal, and then returns either <code>true</code> or <code>false</code>.</p>
    (/ <span class="hljs-number">15</span> <span class="hljs-number">30</span>))
 </code></pre>
 <p>Here are some examples with many inputs:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)  <span class="hljs-comment">;; → true</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)  <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>)  <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)  <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)  <span class="hljs-comment">;; → false</span>
@@ -79,7 +83,7 @@ smaller than the <em>second</em> number, and then returns either <code>true</cod
 interesting thing you might note is that when you compare multiple numbers, you
 can easily tell the result by visually checking the order.</p>
 <p>There's actually no difference between comparing order and size.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → false</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)     <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&lt;</span></span> <span class="hljs-number">15</span> <span class="hljs-number">30</span>)   <span class="hljs-comment">;; → true</span>
@@ -90,7 +94,7 @@ can easily tell the result by visually checking the order.</p>
 <h3><a class="anchor" aria-hidden="true" id="greater-than"></a><a href="#greater-than" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&gt;</code> Greater-than</h3>
 <p>The greater-than operator <code>&gt;</code> takes two numbers and sees if the <em>first</em> number
 is greater than the <em>second</em> number, and then returns <code>true</code> or <code>false</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&gt;</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → false</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&gt;</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&gt;</span></span> <span class="hljs-number">1</span> <span class="hljs-number">0</span>)     <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&gt;</span></span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&gt;</span></span> <span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>) <span class="hljs-comment">;; → true</span>
@@ -100,13 +104,13 @@ is greater than the <em>second</em> number, and then returns <code>true</code> o
 <p>The lesser-than or equal-to operator <code>&lt;=</code> takes two numbers, sees if the <em>first</em>
 number is smaller-than <strong>or</strong> equal to the <em>second</em> one, and then returns <code>true</code>
 or <code>false</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">10</span>)     <span class="hljs-comment">;; → true</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">10</span>)     <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> <span class="hljs-number">10</span> <span class="hljs-number">1</span>)     <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&lt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">2</span>)  <span class="hljs-comment">;; → true</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="greater-than-or-equal-to"></a><a href="#greater-than-or-equal-to" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&gt;=</code> Greater-than or equal to</h3>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">10</span>)  <span class="hljs-comment">;; → false</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">10</span>)  <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> <span class="hljs-number">10</span> <span class="hljs-number">1</span>)  <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)   <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">&gt;=</span></span> <span class="hljs-number">10</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → true</span>
@@ -118,7 +122,7 @@ They're often used to check if there's a single <code>true</code> or <code>false
 <p><code>and</code> takes a list of 0 or more boolean expressions and will evaluate to <code>true</code>
 <em>unless</em> it encounters even one <code>false</code> value. If <code>and</code> encounters even one
 <code>false</code>, then it will always be <code>false</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)                   <span class="hljs-comment">;; → true</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)                   <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
@@ -127,7 +131,7 @@ They're often used to check if there's a single <code>true</code> or <code>false
 <p>One good use of <code>and</code> is when you have multiple rules or conditions that you
 need to be all <code>true</code> at the same time. In the example below, we check if a
 number is both even and negative at the same time.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">even-and-negative?</span> n)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">even-and-negative?</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">even?</span></span> n) 
          (<span class="hljs-name">negative?</span> n)))
 
@@ -138,7 +142,7 @@ number is both even and negative at the same time.</p>
 <p><code>or</code> takes a list of 0 or more boolean expressions and evaluates to <code>false</code>
 <em>unless</em> it encounters even one <code>true</code> value. If <code>or</code> encounters even one
 <code>true</code>, then it will always be <code>true</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>)                   <span class="hljs-comment">;; → false</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>)                   <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → false</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span> <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → true</span>
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span>  <span class="hljs-literal">true</span>  <span class="hljs-literal">false</span>) <span class="hljs-comment">;; → true</span>
@@ -147,7 +151,7 @@ number is both even and negative at the same time.</p>
 <p>A good place to use <code>or</code> is when you only need to know if any one of your rules
 or conditions is <code>true</code>. In the example below, we check if a number <code>n</code> is
 divisible by <code>2</code>, <code>7</code>, or <code>9</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">div-by-2-7-9?</span> n)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">div-by-2-7-9?</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">2</span>))
         (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">7</span>))
         (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> (<span class="hljs-name">remainder</span> n <span class="hljs-number">9</span>))))
@@ -158,7 +162,7 @@ divisible by <code>2</code>, <code>7</code>, or <code>9</code>.</p>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="a-quick-review"></a><a href="#a-quick-review" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A quick review</h2>
 <p>What will these expressions evaluate to?</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">or</span></span>)
 (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span>)
 
 (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> <span class="hljs-literal">true</span> <span class="hljs-literal">false</span>)

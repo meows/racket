@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -27,6 +27,10 @@
               function createToggler(togglerSelector, targetSelector, className) {
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
 
                 toggler.onclick = function(event) {
                   event.preventDefault();
@@ -96,24 +100,24 @@ pieces of information to determine the value at any point of the sequence,
 then the amount of money in his account would grow by <code>3%</code> anually. Bob is
 thinking of investing <code>$10,000</code>. Assuming that Bob doesn't disturb his account
 after his initial investment:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> ($ years)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> ($ years)
    (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10000</span>
       (<span class="hljs-name">expt</span> <span class="hljs-number">1.03</span> years)))
 </code></pre>
 <p><strong>Q:</strong> How much money (to the nearest cent) will the account have in 20 years?</p>
-<pre><code class="hljs css languages- clojure">($ <span class="hljs-number">20</span>) <span class="hljs-comment">; → $18,061.11</span>
+<pre><code class="hljs css language-clojure">($ <span class="hljs-number">20</span>) <span class="hljs-comment">; → $18,061.11</span>
 </code></pre>
 <p><strong>Q:</strong> How many years will it take for Bob to at least double his investment?</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">; We're asking how long it will take for f(n) = 1.03^n to reach f(n) = 2.</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">; We're asking how long it will take for f(n) = 1.03^n to reach f(n) = 2.</span>
 (<span class="hljs-name">log</span> <span class="hljs-number">2</span> <span class="hljs-number">1.03</span>) <span class="hljs-comment">; → 23.44977 -- at least 24 years</span>
 </code></pre>
 <p><strong>Q:</strong> If Bob had invested $20,000 instead as his initial investment, would that
 change the amount of time it takes for his money to double?</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">; It takes the same number of cycles to grow 1.03 into 2.</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">; It takes the same number of cycles to grow 1.03 into 2.</span>
 (<span class="hljs-name">log</span> <span class="hljs-number">2</span> <span class="hljs-number">1.03</span>) <span class="hljs-comment">; → 23.44977 -- at least 24 years</span>
 </code></pre>
 <p><strong>Q:</strong> If Bob had invested $20,000 instead as his initial investment, how much
 would he have after 20 years?</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">20000</span> (<span class="hljs-name">expt</span> <span class="hljs-number">1.03</span> <span class="hljs-number">20</span>)) <span class="hljs-comment">;; → $36,122.22</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">20000</span> (<span class="hljs-name">expt</span> <span class="hljs-number">1.03</span> <span class="hljs-number">20</span>)) <span class="hljs-comment">;; → $36,122.22</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/logarithm">← Logarithm</a><a class="docs-next button" href="/docs/racket-intro">Dive into Racket →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-difficult-sequence-to-delta">A difficult sequence to delta</a></li><li><a href="#sample-word-problem">Sample Word Problem</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>

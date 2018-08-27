@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -27,6 +27,10 @@
               function createToggler(togglerSelector, targetSelector, className) {
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
 
                 toggler.onclick = function(event) {
                   event.preventDefault();
@@ -50,7 +54,7 @@ very exhausting.</p>
 number or value -- it refers to the place where you can put values. A variable
 is just a name for a place.</p>
 <p>Let's look at some examples below:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> a <span class="hljs-number">5</span>)       <span class="hljs-comment">;; → 5</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> a <span class="hljs-number">5</span>)       <span class="hljs-comment">;; → 5</span>
 (<span class="hljs-name">define</span> b (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a a)) <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">define</span> c (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> a b)) <span class="hljs-comment">;; → 15</span>
 
@@ -73,7 +77,7 @@ practice writing kindly for others.</p>
 taxes. To the computer they are the same, but to a human, the first example
 looks like you're multiplying random numbers together. If you didn't have extra
 explanation, would you guess why someone is multiplying <code>a</code> and <code>b</code>?</p>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Example #1</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; Example #1</span>
 (<span class="hljs-name">define</span> a <span class="hljs-number">1.0725</span>)
 (<span class="hljs-name">define</span> b <span class="hljs-number">4.99</span>)
 (<span class="hljs-name">define</span> total (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> a b))
@@ -98,7 +102,7 @@ function, and <code>n</code> is the name of the input.</li>
 <li><code>(- n 1)</code> is the body of the function; whatever this evaluates to is the
 final value of the function.</li>
 </ul>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; Why might this be named before?</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; Why might this be named before?</span>
 (<span class="hljs-name">define</span> (<span class="hljs-name">before</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))
 
 <span class="hljs-comment">;; Why might this be named after?</span>
@@ -118,11 +122,11 @@ a rectangular prism requires exactly three inputs, no more and no less.</p>
 <p>I'm going to use the same rules from above for defining a function, but instead
 this time I'm going to adapt the rule to work with 3 inputs or <em>parameters</em>, and
 I'm going to use extra long names for everything just for show.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h)
         (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
 </code></pre>
 <p>Now let's use the function:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)  <span class="hljs-comment">;; → 60</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>)  <span class="hljs-comment">;; → 60</span>
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">5</span>)  <span class="hljs-comment">;; → 10</span>
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span> <span class="hljs-number">3</span>)  <span class="hljs-comment">;; → 27</span>
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">5</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> <span class="hljs-number">1</span> <span class="hljs-number">4</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>))  <span class="hljs-comment">;; → 125</span>
@@ -131,7 +135,7 @@ I'm going to use extra long names for everything just for show.</p>
 <p>Let's say we're asked to write a function called <code>triangle-area</code> which can tell
 us the area of a triangle based on two natural inputs, <code>base</code> and <code>height</code>.
 Here's how it would be done:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">triangle-area</span> base height)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">triangle-area</span> base height)
         (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> base height)
 )
 </code></pre>

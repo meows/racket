@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -28,6 +28,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -47,7 +51,7 @@ length of the hypotenuse divided by length of the opposite side.</p>
 <p>If you consider that the sine or cosine of any <code>θ</code> has to be a point on the
 circle, and you know that sine represents the &quot;height&quot;, that allows you predict
 sine for special degrees, like:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →  0</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  1</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  0</span>
 (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; → -1</span>
@@ -75,7 +79,7 @@ climbed for 10 miles. How much was his horizontal climb?</p>
 <li><code>sine(π/6) = opposite / 10</code></li>
 <li><code>10 * sine(π/6) = opposite</code></li>
 </ol>
-<pre><code class="hljs css languages- clojure"><span class="hljs-comment">;; (* 10 0.5) → 5 miles</span>
+<pre><code class="hljs css language-clojure"><span class="hljs-comment">;; (* 10 0.5) → 5 miles</span>
 (<span class="hljs-name">define</span> vertical-distance
    (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span>
       (<span class="hljs-name">sin</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">6</span> pi))))
@@ -83,7 +87,7 @@ climbed for 10 miles. How much was his horizontal climb?</p>
 <h2><a class="anchor" aria-hidden="true" id="cos-cosine"></a><a href="#cos-cosine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>cos</code> Cosine</h2>
 <p>While the sine of an angle can tell you the &quot;height&quot; of a triangle, the cosine
 of an angle can tell you its &quot;length&quot; or horizontal distance.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →   1</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">0</span>   pi)) <span class="hljs-comment">;; →   1</span>
 (<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →   0</span>
 (<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">2</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →  -1</span>
 (<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">3</span>/<span class="hljs-number">2</span> pi)) <span class="hljs-comment">;; →   0</span>
@@ -101,7 +105,7 @@ laser, how much change would I find?</p>
 <li><code>cosine(π/3) = adjacent / 10</code></li>
 <li><code>10 * cosine(π/3) = adjacent</code></li>
 </ol>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> horizontal-distance
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> horizontal-distance
    (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">10</span>
       (<span class="hljs-name">cos</span> (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">3</span> pi))))
 </code></pre>
@@ -120,7 +124,7 @@ the <code>tangent</code> function finds the ratio between the <code>vertical</co
 <p>This graph below is about <code>63.43°</code> degrees, which is about <code>1.10714 π</code> radians.
 If you try the values with the <code>tan</code> function, it should return approximately
 <code>2</code>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> vertical/horizontal
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> vertical/horizontal
    (<span class="hljs-name">tan</span> <span class="hljs-number">0.3524</span>))
 </code></pre>
 <p><img src="/img/test-2.png" alt="triangle"></p>

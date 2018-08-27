@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -28,6 +28,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -39,7 +43,7 @@
 <h2><a class="anchor" aria-hidden="true" id="defining-a-variable"></a><a href="#defining-a-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a variable</h2>
 <h3><a class="anchor" aria-hidden="true" id="let"></a><a href="#let" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>let</code></h3>
 <p><code>let</code> allows you to save information behind a variable name.</p>
-<pre><code class="hljs css languages- javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">10</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">10</span>
 <span class="hljs-keyword">let</span> y = -x
 
 x + y === <span class="hljs-number">0</span>  <span class="hljs-comment">// → true</span>
@@ -53,7 +57,7 @@ x + y === <span class="hljs-number">0</span>  <span class="hljs-comment">// → 
 <p><code>const</code> also allows you to define a constant, which means a variable that never
 changes. Once you assign a value with <code>const</code>, your program will encounter an
 error if you try to reassign another value to your constant.</p>
-<pre><code class="hljs css languages- javascript"><span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> x = <span class="hljs-number">10</span>
 <span class="hljs-keyword">const</span> y = -x
 
 x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → true</span>
@@ -62,7 +66,7 @@ x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → t
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="defining-a-function"></a><a href="#defining-a-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a function</h2>
 <p>A function can be defined using the <code>function</code> keyword, like below:</p>
-<pre><code class="hljs css languages- javascript"><span class="hljs-comment">// 1. This function's name is same</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// 1. This function's name is same</span>
 <span class="hljs-comment">// 2. The function accepts one input, named x</span>
 <span class="hljs-comment">// 3. The function returns x</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">same</span>(<span class="hljs-params">x</span>) </span>{
@@ -78,13 +82,13 @@ x + y === <span class="hljs-number">0</span> <span class="hljs-comment">// → t
 
 </code></pre>
 <p>And here's now they're used:</p>
-<pre><code class="hljs css languages- javascript">same(<span class="hljs-number">3</span>)       <span class="hljs-comment">// → 3</span>
+<pre><code class="hljs css language-javascript">same(<span class="hljs-number">3</span>)       <span class="hljs-comment">// → 3</span>
 add1(<span class="hljs-number">3</span>)       <span class="hljs-comment">// → 4</span>
 same(same(<span class="hljs-number">3</span>)) <span class="hljs-comment">// → 3</span>
 add1(add1(<span class="hljs-number">3</span>)) <span class="hljs-comment">// → 5</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="multiple-parameters-inputs"></a><a href="#multiple-parameters-inputs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple parameters (inputs)</h3>
-<pre><code class="hljs css languages- javascript"><span class="hljs-comment">// finds the volume of a rectangular prism</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// finds the volume of a rectangular prism</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rectangular_prism</span>(<span class="hljs-params">l, w, h</span>) </span>{
    <span class="hljs-keyword">return</span> l * w * h
 }
@@ -101,7 +105,7 @@ prism_volume(<span class="hljs-number">3</span>, <span class="hljs-number">4</sp
 math, where functions must <em>always</em> return one thing for every input)</li>
 </ul>
 <p>Another familiar example:</p>
-<pre><code class="hljs css languages- javascript"><span class="hljs-comment">// Unlike Racket, these don't exist in JavaScript.</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// Unlike Racket, these don't exist in JavaScript.</span>
 <span class="hljs-comment">// That's why we have to write it ourselves.</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">even</span>(<span class="hljs-params">n</span>) </span>{ <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> }
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">odd</span>(<span class="hljs-params">n</span>)  </span>{ <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span> }
@@ -111,7 +115,7 @@ math, where functions must <em>always</em> return one thing for every input)</li
 [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].filter(odd)  <span class="hljs-comment">// → [1, 3]</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="a-familiar-example"></a><a href="#a-familiar-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A familiar example</h3>
-<pre><code class="hljs css languages- javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fib</span>(<span class="hljs-params">n</span>) </span>{
+<pre><code class="hljs css language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fib</span>(<span class="hljs-params">n</span>) </span>{
    <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
    <span class="hljs-keyword">if</span> (n === <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
    <span class="hljs-keyword">else</span> {
@@ -119,7 +123,7 @@ math, where functions must <em>always</em> return one thing for every input)</li
    }
 }
 </code></pre>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">fib</span> n)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">fib</span> n)
    (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">0</span>) <span class="hljs-number">0</span>]
          [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">1</span>) <span class="hljs-number">1</span>]
          [else (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">fib</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))

@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -27,6 +27,10 @@
               function createToggler(togglerSelector, targetSelector, className) {
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
 
                 toggler.onclick = function(event) {
                   event.preventDefault();
@@ -60,7 +64,7 @@ information delivered as:</p>
 <h3><a class="anchor" aria-hidden="true" id="html-contains-with-tags"></a><a href="#html-contains-with-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML contains with tags</h3>
 <p>All information on a website is contained in HTML, and HTML uses pairs of tags
 to contain all information, like this:</p>
-<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
     Hi there, this text counts as information.
 
     Notice that all information is "contained" by a pair of tags, in this case
@@ -70,7 +74,7 @@ to contain all information, like this:</p>
 <p>I'm going to show you a very long sample of HTML, but I think you'll somehow
 find it familiar. Don't worry if you don't understand everything, because we're
 just looking at it to get a feeling for it.</p>
-<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -122,7 +126,7 @@ has nothing to do with HTML, as HTML is only responsible for containing all the
 information on your website between enlosing brackets.</p>
 <p>I won't be showing you too much CSS for now, but here's a little bit just to see
 how it looks like:</p>
-<pre><code class="hljs css languages- css"><span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">h1</span> {
+<pre><code class="hljs css language-css"><span class="hljs-selector-tag">article</span> <span class="hljs-selector-tag">h1</span> {
     <span class="hljs-attribute">font</span>: sans-serif;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.3em</span>;
 }
@@ -142,7 +146,7 @@ with another <code>h1</code> tag inside of it.</p>
 <p>In our case, there's only one situation where we can find an <code>article</code> tag with
 another <code>h1</code> tag inside of it, and so these are the only parts of HTML that our
 browser will visually change using our CSS rules.</p>
-<pre><code class="hljs css languages- html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Introduction to JavaScript<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>JavaScript is one of the world's most popular languages, and it's
         what allows companies like Google to make interesting websites like
@@ -164,7 +168,7 @@ website, and it can also save things on your computer (with permission).</p>
 <p>Here's a sample bit of JavaScript which we aren't expected to understand yet,
 but I think you might be able to guess bits and pieces of how things work just
 by looking:</p>
-<pre><code class="hljs css languages- javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fibonacci</span>(<span class="hljs-params">n</span>) </span>{
+<pre><code class="hljs css language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fibonacci</span>(<span class="hljs-params">n</span>) </span>{
     <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
     <span class="hljs-keyword">if</span> (n === <span class="hljs-number">1</span>) { <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> }
     <span class="hljs-keyword">else</span> {
@@ -175,7 +179,7 @@ by looking:</p>
 fibonacci(<span class="hljs-number">10</span>) <span class="hljs-comment">// → 55</span>
 </code></pre>
 <p>Which should be familiar to us from our prior challenge problems:</p>
-<pre><code class="hljs css languages- scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">fibonacci</span> n)
+<pre><code class="hljs css language-scheme">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">fibonacci</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">cond</span></span> [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">0</span>) <span class="hljs-number">0</span>]
           [(<span class="hljs-name"><span class="hljs-builtin-name">=</span></span> n <span class="hljs-number">1</span>) <span class="hljs-number">1</span>]
           [<span class="hljs-name"><span class="hljs-builtin-name">else</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> (<span class="hljs-name">fibonacci</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>))

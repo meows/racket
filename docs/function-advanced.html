@@ -7,7 +7,7 @@
               ga('create', 'UA-119533557-1', 'auto');
               ga('send', 'pageview');
             </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -28,6 +28,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -42,7 +46,7 @@ that, let's briefly review what we've learned so far.</p>
 <h3><a class="anchor" aria-hidden="true" id="single-parameter"></a><a href="#single-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Single Parameter</h3>
 <p>By now we should be quite familiar with how to define a function which takes in
 a single input or <em>parameter</em>.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">half</span> x) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> x))
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">half</span> x) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> x))
 (<span class="hljs-name">define</span> (<span class="hljs-name">cube</span> x) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> x x x))
 
 (<span class="hljs-name">half</span> <span class="hljs-number">10</span>) <span class="hljs-comment">;; → (* 1/2 10)   → 5</span>
@@ -53,13 +57,13 @@ a single input or <em>parameter</em>.</p>
 or <em>parameters</em>, such as the <code>prism-volume</code> function below, which can find the
 volume of any 3-dimensional rectangular prism given length <code>l</code>, width <code>w</code>, and
 height <code>h</code>:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">prism-volume</span> l w h)
     (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h))
 
 (<span class="hljs-name">prism-volume</span> <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">7</span>) <span class="hljs-comment">;; → (* 3 5 7) → 105</span>
 </code></pre>
 <p>Which we know to be a shorthand for either:</p>
-<pre><code class="hljs css languages- racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> prism-volume
+<pre><code class="hljs css language-racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> prism-volume
     (<span class="hljs-name"><span class="hljs-builtin-name">lambda</span></span> (l w h) 
             (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> l w h)))
 
@@ -70,7 +74,7 @@ height <code>h</code>:</p>
 <h3><a class="anchor" aria-hidden="true" id="recursion"></a><a href="#recursion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recursion</h3>
 <p>And we should be familiar with the fact that you're allowed to define part of a
 function using itself.</p>
-<pre><code class="hljs css languages- racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n)
+<pre><code class="hljs css language-racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n)
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
         <span class="hljs-number">1</span>
         (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n)))))
@@ -87,7 +91,7 @@ function using itself.</p>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="default-parameters"></a><a href="#default-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Default Parameters</h2>
 <p>A default parameter provides an input if you don't provide one.</p>
-<pre><code class="hljs css languages- racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n [<span class="hljs-name">result</span> <span class="hljs-number">1</span>])
+<pre><code class="hljs css language-racket">(<span class="hljs-name"><span class="hljs-builtin-name">define</span></span> (<span class="hljs-name">factorial</span> n [<span class="hljs-name">result</span> <span class="hljs-number">1</span>])
     (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
         result
         (<span class="hljs-name">factorial</span> (<span class="hljs-name">sub1</span> n) (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> n result))))
@@ -113,7 +117,7 @@ divided by the length of the list.</p>
 someone plans to give us, and we wouldn't want to force people to always give us
 a specific amount of inputs, because that would be too limiting. In other words,
 we would like:</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">avg</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">-1</span> <span class="hljs-number">-2</span> <span class="hljs-number">-3</span>) <span class="hljs-comment">;; → 0 </span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">avg</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">-1</span> <span class="hljs-number">-2</span> <span class="hljs-number">-3</span>) <span class="hljs-comment">;; → 0 </span>
 (<span class="hljs-name">avg</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">-1</span>)       <span class="hljs-comment">;; → 1</span>
 (<span class="hljs-name">avg</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>)            <span class="hljs-comment">;; → 2</span>
 (<span class="hljs-name">avg</span> <span class="hljs-number">3</span>)                <span class="hljs-comment">;; → 3</span>
@@ -123,7 +127,7 @@ we would like:</p>
 </code></pre>
 <p>First I'm going to show you one way to do it, then I'm going to explain how it
 works.</p>
-<pre><code class="hljs css languages- clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">avg</span> . numbers)
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">avg</span> . numbers)
     (/ (<span class="hljs-name"><span class="hljs-builtin-name">apply</span></span> + numbers) 
        (<span class="hljs-name">length</span> numbers))
 )
