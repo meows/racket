@@ -95,6 +95,7 @@ These functions consume one or more numbers and returns a number.
 `sqr`
 `sqrt`
 `expt`
+`log`
 `abs`
 `gcd`
 `lcm`

@@ -20,7 +20,7 @@ For addition, no matter what we add to a number, we can always add another
 number to reverse what we just did. Two different numbers which add together to
 equal `0` are called additive inverses because they cancel their effects out.
 
-``` scheme
+``` clojure
 (define (move n)
    (λ (x)
       (+ x n)))
