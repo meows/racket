@@ -32,9 +32,3 @@
                       (if (odd? s++) sum (+ sum s++)))))
 
 (time (euler-2))
-(time (euler-2))
-(time (euler-2))
-(time (euler-2))
-(time (alt))
-(time (alt))
-(time (alt))
