@@ -25,9 +25,9 @@ equal `0` are called additive inverses because they cancel their effects out.
    (λ (x)
       (+ x n)))
 
-(define naturals (range 10))          ;; → '(0 1 2 3 4 5 6 7 8 9)
-(define go+3 (map (move 3) naturals)) ;; → '(3 4 5 6 7 8 9 10 11 12)
-(define go-3 (map (move -3) go+3))    ;; → '(0 1 2 3 4 5 6 7 8 9)
+(define 1..6     (range 6))            ;; → '(0 1 2 3 4 5)
+(define +3       (map (move  3) 1..6)) ;; → '(3 4 5 6 7 8)
+(define +3-undo  (map (move -3) +3))   ;; → '(0 1 2 3 4 5)
 ```
 
 ## Multiplication and Division
