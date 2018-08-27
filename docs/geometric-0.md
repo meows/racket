@@ -73,13 +73,13 @@ pieces of information to determine the value at any point of the sequence,
 ## Sample Word Problem
 
 Bob heard that if he invested his money into some kind of investment account,
-then the amount of money in his account would grow by 3% anually. Bob is 
+then the amount of money in his account would grow by `3%` anually. Bob is 
 thinking of investing `$10,000`. Assuming that Bob doesn't disturb his account 
 after his initial investment:
 
 ``` clojure
 (define ($ years)
-   (* 10000 
+   (* 10000
       (expt 1.03 years)))
 ```
 
@@ -96,10 +96,17 @@ after his initial investment:
 (log 2 1.03) ; → 23.44977 -- at least 24 years
 ```
 
-**Q:** If Bob had invested `$20,000` instead as his initial investment, would that
+**Q:** If Bob had invested $20,000 instead as his initial investment, would that
 change the amount of time it takes for his money to double?
 
 ``` clojure
 ; It takes the same number of cycles to grow 1.03 into 2.
 (log 2 1.03) ; → 23.44977 -- at least 24 years
+```
+
+**Q:** If Bob had invested $20,000 instead as his initial investment, how much 
+would he have after 20 years?
+
+``` clojure
+(* 20000 (expt 1.03 20)) ;; → $36,122.22
 ```
