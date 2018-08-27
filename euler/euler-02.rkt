@@ -15,12 +15,13 @@
 
 (def max 4000000)
 
-; a   - leading fib state tuple
-; b   - trailing fib state tuple
+; s   - trailing fib state tuple
+; s++ - leading fib state tuple
 ; sum - running sum of even fibonacci numbers
-(fn (euler-2 [a 1] [b 0] #:sum [sum 0])
-    (if (< max a)
+(fn (euler-2 [s 0] [s++ 1] #:sum [sum 0])
+    (if (< max s++)
         sum
-        (euler-2 (+ a b) a #:sum (if (odd? a) sum (+ sum a)))))
+        (euler-2 s++ (+ s s++) 
+                 #:sum (if (odd? s++) sum (+ sum s++)))))
 
 (time (euler-2))
