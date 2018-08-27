@@ -9,48 +9,56 @@ sidebar_label: Undoing what you did
 
 # Undoing what you did
 
-If I had an unknown integer `n`, and I added 3 to it to get a new number 
+If I had an unknown integer `n`, and I added 3 to it to get a new number
 `(+ n 3)`, could you reverse what I did and get back your original number?
 
 You would probably add -3 (or subtract 3) to the expression: `(+ (+ n 3) -3)`.
 
 ## Addition and Subtraction
 
-For addition, no matter what we add to a number, we can always add another 
-number to reverse what we just did. Two different numbers which add together to 
+For addition, no matter what we add to a number, we can always add another
+number to reverse what we just did. Two different numbers which add together to
 equal `0` are called additive inverses because they cancel their effects out.
 
 ``` scheme
-(define (move n) 
-   (λ (x) 
+(define (move n)
+   (λ (x)
       (+ x n)))
 
-(define naturals (range 10))           ;; → '(0 1 2 3 4 5 6 7 8 9)
-(define go+3 (map (move 3) naturals))  ;; → '(3 4 5 6 7 8 9 10 11 12)
-(define go-3 (map (move -3) naturals)) ;; → '(0 1 2 3 4 5 6 7 8 9)
+(define naturals (range 10))          ;; → '(0 1 2 3 4 5 6 7 8 9)
+(define go+3 (map (move 3) naturals)) ;; → '(3 4 5 6 7 8 9 10 11 12)
+(define go-3 (map (move -3) go+3))    ;; → '(0 1 2 3 4 5 6 7 8 9)
 ```
 
 ## Multiplication and Division
 
-For multiplication, no matter how we multiply a number `x` by a factor `y`, we 
-can always multiply the expression by the inverse of `y`, that is `1/y`, to get
-back the original `x`.
+For multiplication, no matter how we multiply a number `x` by a factor `y`, we
+can always multiply the expression by the multiplicative inverse of `y`, that is
+`1/y`, to get back the original `x`.
+
+Below we have a function `scale` which consumes a number `m` and returns a new
+function.
 
 ``` clojure
-(define (λa x) (* 13 x))
-(define (λb x) (* 3/5 x))
-(define (λc x) (/ x 3))
-(define (λd x) (/ 4 x))
+(define (scale m)
+   (λ (x) (* m x)))
+
+(define *3      (map (scale 3) (range 5))) ;; → '(0 3 6 9 12)
+(define *3-undo (map (scale 1/3) *3))      ;; → '(0 1 2 3 4)
+
+;; Perhaps not surprising, but we cannot undo multiplication by zero.
+(define *0      (map (scale 0) (range 5))) ;; → '(0 0 0 0 0)
+(define *0-undo (map (scale 1/0) *0))      ;; → Error: Division by zero is undefined.
 ```
 
 ## Exponentiation
 
 ``` clojure
-(define (power x)  
-   (λ (n) 
+(define (power x)
+   (λ (n)
       (expt x n)))
 
-(define (root r)   
+(define (root r)
    (λ (x)
       (round (expt x (/ 1 r)))))
 
@@ -70,8 +78,8 @@ back the original `x`.
 ```
 
 > The result of these `root` functions might not be precise. Racket is only
-> perfect when using rationals with `+`, `-`, `*`, or `/`. There are 
-> mathematical reasons for this, and almost all languages cannot assure 
+> perfect when using rationals with `+`, `-`, `*`, or `/`. There are
+> mathematical reasons for this, and almost all languages cannot assure
 > reliability for even the most basic math operations.
 
 ## Geometry
@@ -80,6 +88,6 @@ back the original `x`.
 (define angles-90 (map degrees->radians '(0 90 180 270 360)))
 (define angles-45 (map degrees->radians '(0 45 90 135 180 225 270 315 360)))
 
-(map sin angles) ;; → 
+(map sin angles) ;; →
 (map cos angles) ;; →
 ```

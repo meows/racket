@@ -46,6 +46,10 @@
 
 (fn (log-identity base exp) (* exp (log base)))
 
+(fn (*-1 R+) 
+    (cond ([(zero? R+) (error "Only positive reals.")]))
+    (/ 1 n))
+
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Lists
 
@@ -57,10 +61,6 @@
             (let-values ([(quo rem) (quotient/remainder n base)])
                         (loop quo #:result (cons rem result)))))
     (if (zero? n) '(0) (loop n))
-)
-
-(fn (*-1 r)
-    (/ 1 r)
 )
 
 ; natural → list <natural>

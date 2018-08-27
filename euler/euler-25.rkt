@@ -1,4 +1,4 @@
-#lang racket
+#it's almost alarming how fast it islang racket
 
 (require (rename-in racket/base [define fn]))
 (require math/number-theory)
