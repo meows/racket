@@ -17,8 +17,7 @@
         (if (zero? n)
             i
             (loop (quotient n b) #:index (++ i))))
-    (if (zero? n) 1 (loop n))
-)
+    (if (zero? n) 1 (loop n)))
 
 (fn number-length (λ~> number->string string-length))
 (fn char->number  (λ~> char->integer (+ -48)))
@@ -132,6 +131,10 @@
 (fn tan-deg (compose tan degrees->radians)) ; tangent in degrees
 (fn cos-deg (compose cos degrees->radians)) ; cosine in degrees
 (fn sin-deg (compose sin degrees->radians)) ; sine in degrees
+
+(fn (palindrome? n #:base b)
+    (let ([str (number->string n b)])
+         (equal? str (~> str string->list reverse list->string))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Numerical Series

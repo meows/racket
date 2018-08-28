@@ -5,22 +5,21 @@
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 4
+;; Problem 36
 
-;; Find the largest palindrome made from the product of two 3-digit numbers.
+;; Find the sum of all numbers, less than one million, which are palindromic in 
+;; base 10 and base 2.
 
-(fn (palindrome? n #:base b)
-    (let ([str (number->string n b)])
-         (equal? str (~> str string->list reverse list->string))))
+(define max 1000001)
+
+(fn (double-palindrome? n)
+    (let ([str2 (number->string n 2)] 
+          [str10 (number->string n 10)])
+         (and (equal? str2 (~> str2 string->list reverse list->string))
+              (equal? str10 (~> str10 string->list reverse list->string)))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Solve
 
-(fn (euler)
-    (for*/fold ([best 0])
-               ([i (in-range 100 1000)]
-                [j (in-range 100 1000)]
-                [now (in-value (* i j))]
-                #:when (and (< best now) (palindrome? now))) now))
-
-(time (euler))
+(for/sum ([n (in-range max)] 
+          #:when (double-palindrome? n)) n)

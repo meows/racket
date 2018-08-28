@@ -7,16 +7,24 @@
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Project Euler
-;; Problem 24
+;; Problem 26
 
-index: [ 0 1 2 3 4 5 6 7 8 9 ]
-value: [ 0 1 2 3 4 5 6 7 8 9 ]
+(define max 1001)
 
-positions:
+(fn (natural->list nat #:base [base 10])
+    (unfold-right zero?
+                  (cut modulo <> 10)
+                  (cut quotient <> 10)
+                  nat))
 
-lead   == 0
-lead++ == 1
-tail   == 9
-pivot  == (i:8 v:8)
+(fn (cycle-count nat)
 
-What is the next ordered permutation?
+)
+
+(fn (euler n) 
+    (/ 1 n))
+
+(for/fold ([best 0] [seen (set)])
+          ([d (in-range 2 max)])
+
+)
