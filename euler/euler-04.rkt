@@ -7,6 +7,8 @@
 ;; Project Euler
 ;; Problem 4
 
+;; Find the largest palindrome made from the product of two 3-digit numbers.
+
 (fn (palindrome? n)
     (let ([str (number->string n)])
          (equal? str (~> str string->list reverse list->string))))
