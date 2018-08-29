@@ -54,6 +54,7 @@
 <url> <loc>https://rid.pw/docs/lambda</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lambda" /> </url>
 <url> <loc>https://rid.pw/docs/linear-systems</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/linear-systems" /> </url>
 <url> <loc>https://rid.pw/docs/lists</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/lists" /> </url>
+<url> <loc>https://rid.pw/docs/logarithm-natural</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/logarithm-natural" /> </url>
 <url> <loc>https://rid.pw/docs/logarithm</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/logarithm" /> </url>
 <url> <loc>https://rid.pw/docs/Operators</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/Operators" /> </url>
 <url> <loc>https://rid.pw/docs/peano</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/peano" /> </url>
