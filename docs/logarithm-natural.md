@@ -65,5 +65,5 @@ next gets smaller. How about if the values for `e` get very large?
 ```
 
 It would appear that for very large `n`, the function `e(n)` gets closer and
-closer to a number around `2.7182`, except the number goes on forever because
-like `π`, it is an irrational real number.
+closer to a number around `2.7182`, except the written representation of the 
+number goes on forever because like `π`, it is an irrational real number.
