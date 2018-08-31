@@ -47,7 +47,7 @@
 expressed as</p>
 <p><code>e(n) = (1 + (1 / n)) ^ n</code>, and in Racket it looks like:</p>
 <pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">e</span> n)
-    (<span class="hljs-name">expt</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> <span class="hljs-number">1</span> (/ <span class="hljs-number">1</span> n)) n))
+   (<span class="hljs-name">expt</span> (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> <span class="hljs-number">1</span> (/ <span class="hljs-number">1</span> n)) n))
 </code></pre>
 <p>Let's look at some outputs of <code>e</code> and see if we can formulate any predictions
 about future values:</p>
@@ -59,11 +59,11 @@ about future values:</p>
 (<span class="hljs-name">e</span> <span class="hljs-number">10</span>)  <span class="hljs-comment">;; → 2.5937424601</span>
 (<span class="hljs-name">e</span> <span class="hljs-number">100</span>) <span class="hljs-comment">;; → 2.70481382942</span>
 </code></pre>
-<p>It would appear that we're getting closer and closer to a number. If we took the
-delta of the first 10 numbers of <code>e(n)</code>:</p>
+<p>It would appear that we're always increasing but also rapidly slowing down. If
+we took the delta of the first 10 numbers of <code>e(n)</code>:</p>
 <table>
 <thead>
-<tr><th>n</th><th>e(n)</th><th>Δ1</th></tr>
+<tr><th>n</th><th>e(n)</th><th>Δ</th></tr>
 </thead>
 <tbody>
 <tr><td>0</td><td>2</td><td>0.25</td></tr>
@@ -79,7 +79,9 @@ delta of the first 10 numbers of <code>e(n)</code>:</p>
 </tbody>
 </table>
 <p>We can see that as <code>e(n)</code> gets bigger, the difference from one number to the
-next gets smaller. How about if the values for <code>e</code> get very large?</p>
+next gets smaller, which confirms our intuition. A natural question to ask is
+whether the velocity of the series ever reaches <code>0</code>.</p>
+<p>Let's look at what happens when values for <code>e(n)</code> get very large:</p>
 <pre><code class="hljs css language-clojure">(<span class="hljs-name">e</span> <span class="hljs-number">10000</span>)  <span class="hljs-comment">;; → 2.7181459268 </span>
 (<span class="hljs-name">e</span> <span class="hljs-number">20000</span>)  <span class="hljs-comment">;; → 2.7182138745</span>
 (<span class="hljs-name">e</span> <span class="hljs-number">30000</span>)  <span class="hljs-comment">;; → 2.7182365251</span>
@@ -92,6 +94,6 @@ next gets smaller. How about if the values for <code>e</code> get very large?</p
 (<span class="hljs-name">e</span> <span class="hljs-number">100000</span>) <span class="hljs-comment">;; → 2.7182682372</span>
 </code></pre>
 <p>It would appear that for very large <code>n</code>, the function <code>e(n)</code> gets closer and
-closer to a number around <code>2.7182</code>, except the number goes on forever because
-like <code>π</code>, it is an irrational real number.</p>
+closer to a number around <code>2.7182</code>, except the written representation of the
+number goes on forever because like <code>π</code>, it is an irrational real number.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geometric-0">← Geometric Sequences</a><a class="docs-next button" href="/docs/racket-intro">Dive into Racket →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
