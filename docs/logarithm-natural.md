@@ -16,7 +16,7 @@ expressed as
 
 ``` clojure
 (define (e n)
-    (expt (+ 1 (/ 1 n)) n))
+   (expt (+ 1 (/ 1 n)) n))
 ```
 
 Let's look at some outputs of `e` and see if we can formulate any predictions
@@ -32,8 +32,8 @@ about future values:
 (e 100) ;; → 2.70481382942
 ```
 
-It would appear that we're getting closer and closer to a number. If we took the
-delta of the first 10 numbers of `e(n)`:
+It would appear that we're always increasing but also rapidly slowing down. If 
+we took the delta of the first 10 numbers of `e(n)`:
 
 n | e(n)         | Δ          
 - | ------------ | ------------
@@ -49,7 +49,10 @@ n | e(n)         | Δ
 9 | 2.5937424601 | 0.0104565518
 
 We can see that as `e(n)` gets bigger, the difference from one number to the
-next gets smaller. How about if the values for `e` get very large?
+next gets smaller, which confirms our intuition. A natural question to ask is
+whether the velocity of the series ever reaches `0`. 
+
+Let's look at what happens when values for `e(n)` get very large: 
 
 ``` clojure
 (e 10000)  ;; → 2.7181459268 
