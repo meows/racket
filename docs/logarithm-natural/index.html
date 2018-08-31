@@ -63,31 +63,35 @@ about future values:</p>
 delta of the first 10 numbers of <code>e(n)</code>:</p>
 <table>
 <thead>
-<tr><th>n</th><th>e(n)</th><th>Δ</th></tr>
+<tr><th>n</th><th>e(n)</th><th>Δ1</th></tr>
 </thead>
 <tbody>
-<tr><td>0</td><td>2.0000000000</td><td>0.2500000000</td></tr>
-<tr><td>1</td><td>2.2500000000</td><td>0.1203703704</td></tr>
+<tr><td>0</td><td>2</td><td>0.25</td></tr>
+<tr><td>1</td><td>2.25</td><td>0.1203703704</td></tr>
 <tr><td>2</td><td>2.3703703704</td><td>0.0710358796</td></tr>
-<tr><td>3</td><td>2.4414062500</td><td>0.0469137500</td></tr>
-<tr><td>4</td><td>2.4883200000</td><td>0.0333063717</td></tr>
+<tr><td>3</td><td>2.44140625</td><td>0.04691375</td></tr>
+<tr><td>4</td><td>2.48832</td><td>0.0333063717</td></tr>
 <tr><td>5</td><td>2.5216263717</td><td>0.0248733253</td></tr>
-<tr><td>6</td><td>2.5464996970</td><td>0.0192848169</td></tr>
-<tr><td>7</td><td>2.5657845140</td><td>0.0153902778</td></tr>
+<tr><td>6</td><td>2.546499697</td><td>0.0192848169</td></tr>
+<tr><td>7</td><td>2.565784514</td><td>0.0153902778</td></tr>
 <tr><td>8</td><td>2.5811747917</td><td>0.0125676684</td></tr>
 <tr><td>9</td><td>2.5937424601</td><td>0.0104565518</td></tr>
 </tbody>
 </table>
 <p>We can see that as <code>e(n)</code> gets bigger, the difference from one number to the
 next gets smaller. How about if the values for <code>e</code> get very large?</p>
-<pre><code class="hljs css language-clojure">(<span class="hljs-name">e</span> <span class="hljs-number">100</span>)    <span class="hljs-comment">;; → 2.70481382942</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">200</span>)    <span class="hljs-comment">;; → 2.7115122929</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">300</span>)    <span class="hljs-comment">;; → 2.71376515794</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">1000</span>)   <span class="hljs-comment">;; → 2.71692393223</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">10000</span>)  <span class="hljs-comment">;; → 2.7181459268</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">20000</span>)  <span class="hljs-comment">;; → 2.718213874527</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">50000</span>)  <span class="hljs-comment">;; → 2.718254641391</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">100000</span>) <span class="hljs-comment">;; → 2.718268237174</span>
-(<span class="hljs-name">e</span> <span class="hljs-number">200000</span>) <span class="hljs-comment">;; → 2.718275032785</span>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">e</span> <span class="hljs-number">10000</span>)  <span class="hljs-comment">;; → 2.7181459268 </span>
+(<span class="hljs-name">e</span> <span class="hljs-number">20000</span>)  <span class="hljs-comment">;; → 2.7182138745</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">30000</span>)  <span class="hljs-comment">;; → 2.7182365251</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">40000</span>)  <span class="hljs-comment">;; → 2.7182478507</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">50000</span>)  <span class="hljs-comment">;; → 2.7182546461</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">60000</span>)  <span class="hljs-comment">;; → 2.7182591765</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">70000</span>)  <span class="hljs-comment">;; → 2.7182624124</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">80000</span>)  <span class="hljs-comment">;; → 2.7182648394</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">90000</span>)  <span class="hljs-comment">;; → 2.7182667270</span>
+(<span class="hljs-name">e</span> <span class="hljs-number">100000</span>) <span class="hljs-comment">;; → 2.7182682372</span>
 </code></pre>
+<p>It would appear that for very large <code>n</code>, the function <code>e(n)</code> gets closer and
+closer to a number around <code>2.7182</code>, except the number goes on forever because
+like <code>π</code>, it is an irrational real number.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/geometric-0">← Geometric Sequences</a><a class="docs-next button" href="/docs/racket-intro">Dive into Racket →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
