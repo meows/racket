@@ -52,13 +52,18 @@ We can see that as `e(n)` gets bigger, the difference from one number to the
 next gets smaller. How about if the values for `e` get very large?
 
 ``` clojure
-(e 100)    ;; → 2.70481382942
-(e 200)    ;; → 2.7115122929
-(e 300)    ;; → 2.71376515794
-(e 1000)   ;; → 2.71692393223
-(e 10000)  ;; → 2.7181459268
-(e 20000)  ;; → 2.718213874527
-(e 50000)  ;; → 2.718254641391
-(e 100000) ;; → 2.718268237174
-(e 200000) ;; → 2.718275032785
+(e 10000)  ;; → 2.7181459268 
+(e 20000)  ;; → 2.7182138745
+(e 30000)  ;; → 2.7182365251
+(e 40000)  ;; → 2.7182478507
+(e 50000)  ;; → 2.7182546461
+(e 60000)  ;; → 2.7182591765
+(e 70000)  ;; → 2.7182624124
+(e 80000)  ;; → 2.7182648394
+(e 90000)  ;; → 2.7182667270
+(e 100000) ;; → 2.7182682372
 ```
+
+It would appear that for very large `n`, the function `e(n)` gets closer and
+closer to a number around `2.7182`, except the number goes on forever because
+like `π`, it is an irrational real number.
