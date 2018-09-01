@@ -41,7 +41,6 @@
 <url> <loc>https://rid.pw/docs/function-intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/function-intro" /> </url>
 <url> <loc>https://rid.pw/docs/function-sequence</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/function-sequence" /> </url>
 <url> <loc>https://rid.pw/docs/function-very-advanced</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/function-very-advanced" /> </url>
-<url> <loc>https://rid.pw/docs/geometric-0</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/geometric-0" /> </url>
 <url> <loc>https://rid.pw/docs/geometry</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/geometry" /> </url>
 <url> <loc>https://rid.pw/docs/glossary</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/glossary" /> </url>
 <url> <loc>https://rid.pw/docs/graphing</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/graphing" /> </url>
@@ -62,6 +61,9 @@
 <url> <loc>https://rid.pw/docs/racket-intro</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/racket-intro" /> </url>
 <url> <loc>https://rid.pw/docs/recursion</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/recursion" /> </url>
 <url> <loc>https://rid.pw/docs/renaming</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/renaming" /> </url>
+<url> <loc>https://rid.pw/docs/sequence-geometric-0</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence-geometric-0" /> </url>
+<url> <loc>https://rid.pw/docs/sequence-geometric-1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence-geometric-1" /> </url>
+<url> <loc>https://rid.pw/docs/sequence-linear-1</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence-linear-1" /> </url>
 <url> <loc>https://rid.pw/docs/sequence-linear</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence-linear" /> </url>
 <url> <loc>https://rid.pw/docs/sequence</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sequence" /> </url>
 <url> <loc>https://rid.pw/docs/sets</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://rid.pw/docs/sets" /> </url>
