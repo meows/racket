@@ -85,7 +85,7 @@ that all have the same value, where <code>n</code> is the number of terms we wan
 In this case we have <code>5 x 6 = 30</code>, but since this is double what we started
 with, we take the half of <code>30</code> to get <code>15</code>.</p>
 <p>If we generalized this into a formula:</p>
-<p><code>sumLinear(si, sF, terms) = 1/2 * terms * (si + sF)</code></p>
+<p><code>sumLinear(si, sF, terms) ↦ 1/2 * terms * (si + sF)</code></p>
 <p>Or in Racket:</p>
 <pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">sum-linear</span> si sF terms)
    (<span class="hljs-name"><span class="hljs-builtin-name">*</span></span> <span class="hljs-number">1</span>/<span class="hljs-number">2</span> terms (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> si sF)))
@@ -98,10 +98,10 @@ with, we take the half of <code>30</code> to get <code>15</code>.</p>
 <p>First we need to determine how many terms are in the sequence. We use the
 function:</p>
 <ol>
-<li><code>f(n) = an + b</code></li>
-<li><code>f(n) = 2n + 3 = 23</code></li>
-<li><code>f(n) = 2n = 20</code></li>
-<li><code>f(10) = 23</code></li>
+<li><code>f(n) ↦ an + b</code></li>
+<li><code>f(n) ↦ 2n + 3 = 23</code></li>
+<li><code>f(n) ↦ 2n = 20</code></li>
+<li><code>f(10) ↦ 23</code></li>
 </ol>
 <p>We can now conclude that there are <code>11</code> items in this sequence, because we
 started counting from <code>f(0)</code> and <code>f(10)</code> was the last item of the sequence.</p>
@@ -118,17 +118,17 @@ terms is <code>143</code>.</p>
 <p>First we need to determine how many terms are in the sequence. We use the
 function:</p>
 <ol>
-<li><code>f(n) = an + b</code></li>
-<li><code>f(n) = -3n + 27 = -30</code></li>
-<li><code>f(n) = -3n = -57</code></li>
-<li><code>f(n) = n = 57/3 = 19</code></li>
-<li><code>f(19) = -30</code></li>
+<li><code>f(n) ↦ an + b</code></li>
+<li><code>f(n) ↦ -3n + 27 = -30</code></li>
+<li><code>f(n) ↦ -3n = -57</code></li>
+<li><code>f(n) ↦ n = 57/3 = 19</code></li>
+<li><code>f(19) ↦ -30</code></li>
 </ol>
 <p>We can now conclude that there are <code>20</code> items in this sequence, because we
 started counting from <code>f(0)</code> and <code>f(19)</code> was the last item of the sequence.</p>
 <pre><code class="hljs css language-clojure"><span class="hljs-comment">; 1/2 * 20 * (+ -30 27)</span>
 (<span class="hljs-name">sum-linear</span> <span class="hljs-number">27</span> <span class="hljs-number">-30</span> <span class="hljs-number">20</span>) <span class="hljs-comment">;; → -30</span>
 </code></pre>
-<p>Therefore, the sum of the linear sequence <code>f(n) = -3x + 27</code> for the first <code>20</code>
+<p>Therefore, the sum of the linear sequence <code>f(n) ↦ -3x + 27</code> for the first <code>20</code>
 terms is <code>-30</code>.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/logarithm-natural">← Natural Log</a><a class="docs-next button" href="/docs/racket-intro">Dive into Racket →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#the-sum-of-a-linear-sequence">The Sum of a Linear Sequence</a><ul class="toc-headings"><li><a href="#observations">Observations</a></li></ul></li><li><a href="#example-problem-1">Example Problem #1</a></li><li><a href="#example-problem-2">Example Problem #2</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
