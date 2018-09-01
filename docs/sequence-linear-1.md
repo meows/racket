@@ -9,7 +9,7 @@ sidebar_label: Linear Series
 
 Sometimes people use the term sequence and series the same way. Some people even
 say that when you turn things into a sequence, that you're _serializing_ it. But
-if we wanted to be very precise, when mathematicians say **series** they mean
+if we wanted to be very precise, when mathematicians say **series**, they mean
 the sum of a sequence.
 
 Before we have looked at sequences like these:
