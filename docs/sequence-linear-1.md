@@ -115,5 +115,9 @@ We can now conclude that there are `20` items in this sequence, because we
 started counting from `f(0)` and `f(19)` was the last item of the sequence.
 
 ``` clojure
+; 1/2 * 20 * (+ -30 27)
 (sum-linear 27 -30 20) ;; → -30
 ```
+
+Therefore, the sum of the lienar sequence `f(n) = -3x + 27` for the first `20`
+terms is `-30`.
