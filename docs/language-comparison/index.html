@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>language-comparison · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; WIP: Don&#x27;t use!"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="language-comparison · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="&gt; WIP: Don&#x27;t use!"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-119533557-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>JavaScript</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul><li class="navListItem"><a class="navItem" href="/docs/intro">A Journey</a></li><li class="navListItem"><a class="navItem" href="/docs/sequence">Sequences</a></li><li class="navListItem"><a class="navItem" href="/docs/alphabet">Alphabet</a></li><li class="navListItem"><a class="navItem" href="/docs/atom">Atom</a></li><li class="navListItem"><a class="navItem" href="/docs/expression">Expression</a></li><li class="navListItem"><a class="navItem" href="/docs/values">Values</a></li><li class="navListItem"><a class="navItem" href="/docs/recursion">Recursion</a></li><li class="navListItem"><a class="navItem" href="/docs/circles">Circles</a></li><li class="navListItem"><a class="navItem" href="/docs/angle">Angles</a></li><li class="navListItem"><a class="navItem" href="/docs/sequence-linear">Linear Sequences</a></li><li class="navListItem"><a class="navItem" href="/docs/velocity">Velocity</a></li><li class="navListItem"><a class="navItem" href="/docs/trigonometry">Trigonometry</a></li><li class="navListItem"><a class="navItem" href="/docs/logarithm">Logarithm</a></li><li class="navListItem"><a class="navItem" href="/docs/sequence-geometric-0">Geometric Sequences</a></li><li class="navListItem"><a class="navItem" href="/docs/logarithm-natural">Natural Log</a></li><li class="navListItem"><a class="navItem" href="/docs/sequence-linear-1">Linear Series</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Language Guide</h3><ul><li class="navListItem"><a class="navItem" href="/docs/racket-intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/function-intro">Using Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/arithmetic-advanced">Advanced Arithmetic</a></li><li class="navListItem"><a class="navItem" href="/docs/define">define</a></li><li class="navListItem"><a class="navItem" href="/docs/lambda">lambda</a></li><li class="navListItem"><a class="navItem" href="/docs/function-higher">Making Many Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/function-advanced">Advanced Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/comparisons">Comparisons</a></li><li class="navListItem"><a class="navItem" href="/docs/if">if</a></li><li class="navListItem"><a class="navItem" href="/docs/cond">cond</a></li><li class="navListItem"><a class="navItem" href="/docs/function-sequence">Functions on Lists</a></li><li class="navListItem"><a class="navItem" href="/docs/fold">fold</a></li><li class="navListItem"><a class="navItem" href="/docs/geometry">geometry</a></li><li class="navListItem"><a class="navItem" href="/docs/inverse">Undoing what you did</a></li><li class="navListItem"><a class="navItem" href="/docs/renaming">Renaming</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">JavaScript</h3><ul><li class="navListItem"><a class="navItem" href="/docs/javascript-0">JavaScript 0</a></li><li class="navListItem"><a class="navItem" href="/docs/javascript-1">JavaScript 1</a></li><li class="navListItem"><a class="navItem" href="/docs/javascript-2">JavaScript Math</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/language-comparison">Racket ⟷ JavaScript</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"></header><article><div><span><blockquote>
+<p>WIP: Don't use!</p>
+</blockquote>
+<h1><a class="anchor" aria-hidden="true" id="racket-javascript"></a><a href="#racket-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Racket ⟷ JavaScript</h1>
+<h2><a class="anchor" aria-hidden="true" id="defining-a-value"></a><a href="#defining-a-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a Value</h2>
+<h4><a class="anchor" aria-hidden="true" id="racket"></a><a href="#racket" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Racket</h4>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> a <span class="hljs-number">23</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="javascript"></a><a href="#javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> a = <span class="hljs-number">23</span>
+<span class="hljs-keyword">let</span>   b = <span class="hljs-number">24</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="defining-a-function"></a><a href="#defining-a-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a Function</h2>
+<h4><a class="anchor" aria-hidden="true" id="racket-1"></a><a href="#racket-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Racket</h4>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">triangle</span> n)
+   (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">zero?</span></span> n)
+       <span class="hljs-number">0</span>
+       (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> n (<span class="hljs-name">triangle</span> (<span class="hljs-name"><span class="hljs-builtin-name">-</span></span> n <span class="hljs-number">1</span>)))))
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="javascript-1"></a><a href="#javascript-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">triangle</span>(<span class="hljs-params">n</span>) </span>{
+   <span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+   }
+   <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> n + triangle(n<span class="hljs-number">-1</span>)
+   }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="using-a-function"></a><a href="#using-a-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a Function</h3>
+<h4><a class="anchor" aria-hidden="true" id="racket-2"></a><a href="#racket-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Racket</h4>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">triangle</span> <span class="hljs-number">5</span>) <span class="hljs-comment">;; → 15</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="javascript-2"></a><a href="#javascript-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h4>
+<pre><code class="hljs css language-javascript">triangle(<span class="hljs-number">5</span>) <span class="hljs-comment">// → 15</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="lambda"></a><a href="#lambda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lambda</h3>
+<p>Both Racket and JavaScript provide convenient ways for quickly creating
+functions. Sometimes these are known as unnamed functions because we aren't
+required to give them a name, although we could if we choose.</p>
+<h4><a class="anchor" aria-hidden="true" id="racket-3"></a><a href="#racket-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Racket</h4>
+<pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> nums '(<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span>))
+(<span class="hljs-name">define</span> add2 (λ (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x <span class="hljs-number">2</span>)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> (λ (<span class="hljs-name">x</span>) (<span class="hljs-name"><span class="hljs-builtin-name">+</span></span> x <span class="hljs-number">2</span>)) nums) <span class="hljs-comment">;; → '(2 3 4 5 6)</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">map</span></span> add2 nums)            <span class="hljs-comment">;; → '(2 3 4 5 6)</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="javascript-3"></a><a href="#javascript-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JavaScript</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> nums = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+<span class="hljs-keyword">const</span> add2 = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x + <span class="hljs-number">2</span>
+
+nums.map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x + <span class="hljs-number">2</span>) <span class="hljs-comment">// → [2, 3, 4, 5, 6]</span>
+nums.map(add2)       <span class="hljs-comment">// → [2, 3, 4, 5, 6]</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="mathematical-functions"></a><a href="#mathematical-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mathematical Functions</h2>
+<p>Racket has no association operator because it only has one way to read things.
+The first thing in an expression is a function, and everything after are the
+inputs. In some ways it's more elegant than the normal way of writing algebra
+because you don't have to care about order of operations.</p>
+<h3><a class="anchor" aria-hidden="true" id="numeric-functions"></a><a href="#numeric-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numeric Functions</h3>
+<table>
+<thead>
+<tr><th>Racket</th><th>JavaScript</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td><code>()</code></td><td>Association</td></tr>
+<tr><td><code>+</code></td><td><code>+</code></td><td>Addition</td></tr>
+<tr><td><code>-</code></td><td><code>-</code></td><td>Subtraction</td></tr>
+<tr><td><code>*</code></td><td><code>*</code></td><td>Multiplication</td></tr>
+<tr><td><code>/</code></td><td><code>/</code></td><td>Division</td></tr>
+<tr><td><code>expt</code></td><td><code>**</code></td><td>Exponentiation</td></tr>
+<tr><td><code>log</code></td><td></td><td>Logarithm</td></tr>
+<tr><td><code>abs</code></td><td><code>Math.abs</code></td><td>Absolute value</td></tr>
+<tr><td><code>max</code></td><td><code>Math.max</code></td><td>Maximum value</td></tr>
+<tr><td><code>min</code></td><td><code>Math.min</code></td><td>Minimum value</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="numeric-comparison"></a><a href="#numeric-comparison" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numeric Comparison</h3>
+<table>
+<thead>
+<tr><th>Racket</th><th>JavaScript</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>=</code></td><td><code>===</code></td><td>Equality</td></tr>
+<tr><td></td><td><code>!==</code></td><td>Inequality</td></tr>
+<tr><td><code>&lt;</code></td><td><code>&lt;</code></td><td>Less-than</td></tr>
+<tr><td><code>&gt;</code></td><td><code>&gt;</code></td><td>Greater-than</td></tr>
+<tr><td><code>&lt;=</code></td><td><code>&lt;=</code></td><td>Less-than or equal to</td></tr>
+<tr><td><code>&gt;=</code></td><td><code>&gt;=</code></td><td>Greater-than or equal to</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="geometry"></a><a href="#geometry" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Geometry</h3>
+<table>
+<thead>
+<tr><th>Racket</th><th>JavaScript</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>sin</code></td><td><code>Math.sin</code></td><td>sine</td></tr>
+<tr><td><code>cos</code></td><td><code>Math.cos</code></td><td>cosine</td></tr>
+<tr><td><code>tan</code></td><td><code>Math.tan</code></td><td>tangent</td></tr>
+<tr><td><code>pi</code></td><td><code>Math.PI</code></td><td>pi</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="functions-on-sequences"></a><a href="#functions-on-sequences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions on Sequences</h2>
+<table>
+<thead>
+<tr><th>Description</th><th>Racket</th><th>JavaScript</th></tr>
+</thead>
+<tbody>
+<tr><td>map</td><td><code>map</code></td><td><code>map</code></td></tr>
+<tr><td>filter</td><td><code>filter</code></td><td><code>filter</code></td></tr>
+<tr><td>reduce</td><td><code>for/fold</code></td><td><code>reduce</code></td></tr>
+<tr><td>range</td><td><code>range</code></td><td></td></tr>
+<tr><td>length</td><td><code>length</code></td><td><code>length</code></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="boolean-functions"></a><a href="#boolean-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean Functions</h2>
+<table>
+<thead>
+<tr><th>Racket</th><th>JavaScript</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>and</code></td><td><code>&amp;&amp;</code></td><td>and</td></tr>
+<tr><td><code>or</code></td><td><code>‖</code></td><td>or</td></tr>
+<tr><td><code>not</code></td><td><code>!</code></td><td>not</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="conditionals"></a><a href="#conditionals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditionals</h2>
+<p><code>if</code></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/javascript-2">← javascript-2</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#defining-a-value">Defining a Value</a></li><li><a href="#defining-a-function">Defining a Function</a><ul class="toc-headings"><li><a href="#using-a-function">Using a Function</a></li><li><a href="#lambda">Lambda</a></li></ul></li><li><a href="#mathematical-functions">Mathematical Functions</a><ul class="toc-headings"><li><a href="#numeric-functions">Numeric Functions</a></li><li><a href="#numeric-comparison">Numeric Comparison</a></li><li><a href="#geometry">Geometry</a></li></ul></li><li><a href="#functions-on-sequences">Functions on Sequences</a></li><li><a href="#boolean-functions">Boolean Functions</a></li><li><a href="#conditionals">Conditionals</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
