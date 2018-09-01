@@ -100,7 +100,7 @@ starting from `f(0)` is `143`.
 
 Find the sum of this linear sequence:
 
- * 27, 24, 21, 18, ..., -30
+ * `27, 24, 21, 18, ..., -30`
 
 First we need to determine how many terms are in the sequence. We use the 
 function:
