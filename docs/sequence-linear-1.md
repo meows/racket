@@ -93,8 +93,8 @@ started counting from `f(0)` and `f(10)` was the last item of the sequence.
 (sum-linear 3 23 11) ;; → 143
 ```
 
-Therefore, the sum of of the linear sequence `f(n) = 2n + 3` for `11` terms 
-starting from `f(0)` is `143`.
+Therefore, the sum of the linear sequence `f(n) = 2n + 3` for the first `11` 
+terms is `143`.
 
 ## Example Problem #2
 
