@@ -85,6 +85,9 @@ that all have the same value, where <code>n</code> is the number of terms we wan
 In this case we have <code>5 x 6 = 30</code>, but since this is double what we started
 with, we take the half of <code>30</code> to get <code>15</code>.</p>
 <p>If we generalized this into a formula:</p>
+<blockquote>
+<p>I will be using <code>↦</code> for functions for visual clarity, so as not to overuse <code>=</code>.</p>
+</blockquote>
 <p><code>sumLinear(si, sF, terms) ↦ 1/2 * terms * (si + sF)</code></p>
 <p>Or in Racket:</p>
 <pre><code class="hljs css language-clojure">(<span class="hljs-name">define</span> (<span class="hljs-name">sum-linear</span> si sF terms)
