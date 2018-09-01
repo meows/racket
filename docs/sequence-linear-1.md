@@ -61,7 +61,9 @@ with, we take the half of `30` to get `15`.
 
 If we generalized this into a formula:
 
-`sumLinear(si, sF, terms) = 1/2 * terms * (si + sF)`
+> I will be using `↦` for functions for visual clarity, so as not to overuse `=`.
+
+`sumLinear(si, sF, terms) ↦ 1/2 * terms * (si + sF)`
 
 Or in Racket:
 
@@ -79,10 +81,10 @@ Find the sum of this linear sequence:
 First we need to determine how many terms are in the sequence. We use the 
 function:
 
- 0. `f(n) = an + b`
- 1. `f(n) = 2n + 3 = 23`
- 2. `f(n) = 2n = 20`
- 3. `f(10) = 23`
+ 0. `f(n) ↦ an + b`
+ 1. `f(n) ↦ 2n + 3 = 23`
+ 2. `f(n) ↦ 2n = 20`
+ 3. `f(10) ↦ 23`
 
 We can now conclude that there are `11` items in this sequence, because we 
 started counting from `f(0)` and `f(10)` was the last item of the sequence.
@@ -92,7 +94,7 @@ started counting from `f(0)` and `f(10)` was the last item of the sequence.
 (sum-linear 3 23 11) ;; → 143
 ```
 
-Therefore, the sum of the linear sequence `f(n) = 2n + 3` for the first `11` 
+Therefore, the sum of the linear sequence `f(n) ↦ 2n + 3` for the first `11` 
 terms is `143`.
 
 ## Example Problem #2
@@ -104,11 +106,11 @@ Find the sum of this linear sequence:
 First we need to determine how many terms are in the sequence. We use the 
 function:
 
-  0. `f(n) = an + b`
-  1. `f(n) = -3n + 27 = -30`
-  2. `f(n) = -3n = -57`
-  3. `f(n) = n = 57/3 = 19`
-  4. `f(19) = -30`
+  0. `f(n) ↦ an + b`
+  1. `f(n) ↦ -3n + 27 = -30`
+  2. `f(n) ↦ -3n = -57`
+  3. `f(n) ↦ n = 57/3 = 19`
+  4. `f(19) ↦ -30`
 
 We can now conclude that there are `20` items in this sequence, because we 
 started counting from `f(0)` and `f(19)` was the last item of the sequence.
@@ -118,5 +120,5 @@ started counting from `f(0)` and `f(19)` was the last item of the sequence.
 (sum-linear 27 -30 20) ;; → -30
 ```
 
-Therefore, the sum of the linear sequence `f(n) = -3x + 27` for the first `20`
+Therefore, the sum of the linear sequence `f(n) ↦ -3x + 27` for the first `20`
 terms is `-30`.
