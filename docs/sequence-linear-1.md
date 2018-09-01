@@ -70,13 +70,14 @@ Or in Racket:
    (* 1/2 terms (+ si sF)))
 ```
 
-## Example Problem
+## Example Problem #1
 
-Find the sum of the linear sequence:
+Find the sum of this linear sequence:
 
  * `3, 5, 7, 9, ..., 23`
 
-First we need to determine how many terms are in the sequence. We use function:
+First we need to determine how many terms are in the sequence. We use the 
+function:
 
  0. `f(n) = an + b`
  1. `f(n) = 2n + 3`
@@ -84,12 +85,35 @@ First we need to determine how many terms are in the sequence. We use function:
  3. `f(n) = 2n = 20`
  4. `f(10) = 20`
 
-There are `11` items in this sequence since we started counting from `0`.
+We can now conclude that there are `11` items in this sequence, because we 
+started counting from `f(0)` and `f(10)` was the last item of the sequence.
 
 ``` clojure
-; 1/2 * 11 * (+ 3 23) = 143
+; 1/2 * 11 * (+ 3 23)
 (sum-linear 3 23 11) ;; → 143
 ```
 
 Therefore, the sum of of the linear sequence `f(n) = 2n + 3` for `11` terms 
 starting from `f(0)` is `143`.
+
+## Example Problem #2
+
+Find the sum of this linear sequence:
+
+ * 27, 24, 21, 18, ..., -30
+
+First we need to determine how many terms are in the sequence. We use the 
+function:
+
+  0. `f(n) = an + b`
+  1. `f(n) = -3n + 27 = -30`
+  2. `f(n) = -3n = -57`
+  3. `f(n) = n = 57/3`
+  4. `f(19) = -30`
+
+We can now conclude that there are `20` items in this sequence, because we 
+started counting from `f(0)` and `f(19)` was the last item of the sequence.
+
+``` clojure
+(sum-linear 27 -30 20) ;; → -30
+```
