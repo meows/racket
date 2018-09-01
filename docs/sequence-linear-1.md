@@ -61,7 +61,7 @@ with, we take the half of `30` to get `15`.
 
 If we generalized this into a formula:
 
-> I will be using `↦` for functions for visual clarity, so as not to overuse `=`.
+> I will be using `↦` on functions for visual clarity, so as not to overuse `=`.
 
 `sumLinear(si, sF, terms) ↦ 1/2 * terms * (si + sF)`
 
