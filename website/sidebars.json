@@ -14,8 +14,9 @@
          "velocity",
          "trigonometry",
          "logarithm",
-         "geometric-0",
-         "logarithm-natural"
+         "sequence-geometric-0",
+         "logarithm-natural",
+         "sequence-linear-1"
       ],
       "Language Guide": [
          "racket-intro",

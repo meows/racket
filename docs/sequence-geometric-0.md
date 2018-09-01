@@ -1,5 +1,5 @@
 ---
-id: geometric-0
+id: sequence-geometric-0
 title: Geometric Sequences
 hide_title: true
 sidebar_label: Geometric Sequences
