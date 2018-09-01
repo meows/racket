@@ -40,6 +40,6 @@ But how might we find the sum of a geometric series?
 
 (define (geometric-sum initial ratio terms)
    (* initial 
-      (- 1 (expt ratio terms)) 
+      (+ (expt ratio terms) -1) 
       (/ 1 (- 1 r))))
 ```
