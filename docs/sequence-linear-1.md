@@ -78,8 +78,7 @@ Find the sum of this linear sequence:
 
  * `3, 5, 7, 9, ..., 23`
 
-First we need to determine how many terms are in the sequence. We use the 
-function:
+First we need to determine how many terms are in the sequence.
 
  0. `f(n) ↦ an + b`
  1. `f(n) ↦ 2n + 3 = 23`
@@ -104,8 +103,7 @@ Find the sum of this linear sequence:
 
  * `27, 24, 21, 18, ..., -30`
 
-First we need to determine how many terms are in the sequence. We use the 
-function:
+First we need to determine how many terms are in the sequence.
 
   0. `f(n) ↦ an + b`
   1. `f(n) ↦ -3n + 27 = -30`
