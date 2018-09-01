@@ -144,6 +144,9 @@ length      | `length`   | `length`
 | Racket | JavaScript | Description
 | ------ | ---------- | -----------
 | `and`  | `&&`       | and
-| `or`   | `||`       | or
+| `or`   | `‖`        | or
 | `not`  | `!`        | not
 
+## Conditionals
+
+`if`
