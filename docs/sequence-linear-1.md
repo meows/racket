@@ -84,7 +84,8 @@ function:
  0. `f(n) ↦ an + b`
  1. `f(n) ↦ 2n + 3 = 23`
  2. `f(n) ↦ 2n = 20`
- 3. `f(10) ↦ 23`
+ 3. `f(n) ↦ n = 10`
+ 4. `f(10) ↦ 23`
 
 We can now conclude that there are `11` items in this sequence, because we 
 started counting from `f(0)` and `f(10)` was the last item of the sequence.
@@ -109,7 +110,7 @@ function:
   0. `f(n) ↦ an + b`
   1. `f(n) ↦ -3n + 27 = -30`
   2. `f(n) ↦ -3n = -57`
-  3. `f(n) ↦ n = 57/3 = 19`
+  3. `f(n) ↦ n = 19`
   4. `f(19) ↦ -30`
 
 We can now conclude that there are `20` items in this sequence, because we 
