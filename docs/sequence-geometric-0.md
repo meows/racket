@@ -7,8 +7,6 @@ sidebar_label: Geometric Sequences
 
 # Geometric Sequences
 
-> WIP: Don't use yet!
-
 Recall that a [sequence](sequence.md) is a bunch of "things" in order, one after 
 another, which can be counted by the natural numbers.
 
@@ -86,14 +84,14 @@ after his initial investment:
 **Q:** How much money (to the nearest cent) will the account have in 20 years?
 
 ``` clojure
-($ 20) ; → $18,061.11
+($ 20) ;; → $18,061.11
 ```
 
 **Q:** How many years will it take for Bob to at least double his investment?
 
 ``` clojure
 ; We're asking how long it will take for f(n) = 1.03^n to reach f(n) = 2.
-(log 2 1.03) ; → 23.44977 -- at least 24 years
+(log 2 1.03) ;; → 23.44977 -- at least 24 years
 ```
 
 **Q:** If Bob had invested $20,000 instead as his initial investment, would that
@@ -101,7 +99,7 @@ change the amount of time it takes for his money to double?
 
 ``` clojure
 ; It takes the same number of cycles to grow 1.03 into 2.
-(log 2 1.03) ; → 23.44977 -- at least 24 years
+(log 2 1.03) ;; → 23.44977 -- at least 24 years
 ```
 
 **Q:** If Bob had invested $20,000 instead as his initial investment, how much 
