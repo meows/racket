@@ -136,7 +136,7 @@
          (equal? str (~> str string->list reverse list->string))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-;; Numerical Series
+;; Numerical Sequences
 
 ; natural → natural (nth fibonacci number)
 (fn (fib n) 
@@ -155,8 +155,7 @@
         (if (even? n) 
             (* 1/2 n)
             (+ 1 (* 3 n))))
-    (unfold one? identity next n list)
-)
+    (unfold one? identity next n list))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Graphing

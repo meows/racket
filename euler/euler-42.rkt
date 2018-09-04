@@ -14,22 +14,21 @@
 
 (fn sum (curry apply +))
 
-(define uid
-    (for/hash 
-        ([letter '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
-         [natural (in-range 1 27)])
-        (values (symbol->string letter) natural)))
+(define uid 
+    (for/hash ([s '(a b c d e f g h i j k l m n o p q r s t u v w x y z)]
+               [i (in-range 1 27)])
+        (values (symbol->string s) i)))
 
-(fn (word->letters word) 
+(fn (word->letters word)
     (map string (string->list word)))
 
-(fn (letters->naturals letters) 
+(fn (letters->naturals letters)
     (map (cut hash-ref uid <>) letters))
 
 (fn word->natural
-    (λ~> string-downcase 
-         word->letters 
-         letters->naturals 
+    (λ~> string-downcase
+         word->letters
+         letters->naturals
          sum))
 
 (fn triangle-word? (λ~> word->natural triangle-number?))
@@ -38,10 +37,10 @@
 ;; Solve
 
 (fn (euler-42 words)
-    (count triangle-number? 
+    (count triangle-number?
            (map word->natural words)))
 
-(fn (alt words) 
+(fn (alt words)
     (for/sum ([w words] #:when (triangle-word? w)) 1))
 
 (time (alt $words)) ;; → 162
