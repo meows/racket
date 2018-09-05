@@ -25,7 +25,7 @@ A function for any linear sequence can be defined with just two facts:
    1. A starting value for the position `p`.
    2. A velocity `v`.
 
-In math, it might be written like: `f(x) = vx + p`, while In Racket, it would 
+In math, it might be written like: `f(x) = vx + p`, while In Racket, it would
 look like:
 
 ``` scheme
@@ -33,7 +33,7 @@ look like:
 ; v  -- velocity of linear sequence
 ; n  -- the nth sequence item desired
 (define (line p0 v)
-   (λ (n) 
+   (λ (n)
       (+ p0 (* n v))))
 
 (map (line 2 3) (range 6)) ;; → '(2 5 8 11 14 17)
@@ -48,10 +48,10 @@ look like:
 
 ## Differentiating
 
-We have seen before that one way to get information on a number sequence `s` is 
-to subtract every value of `s(n)` with `s(n-1)`. If the difference converges 
-right away to a number, then that is the velocity of the sequence. If it doesn't 
-converge right away, then the function isn't linear, meaning that its velocity 
+We have seen before that one way to get information on a number sequence `s` is
+to subtract every value of `s(n)` with `s(n-1)`. If the difference converges
+right away to a number, then that is the velocity of the sequence. If it doesn't
+converge right away, then the function isn't linear, meaning that its velocity
 changes.
 
 Getting a new sequence by finding the difference between the current number and
@@ -76,8 +76,8 @@ n | value | formula   | Δ0
 > `Δn` is used to indicate a delta of a sequence. Since we can delta a sequence
 > more than once, I label them `Δ0, Δ1, Δ2...`.
 
-This sequence of squared numbers converges eventually but not right away, so we 
-can conclude that its velocity is changing. The sequence is therefore 
+This sequence of squared numbers converges eventually but not right away, so we
+can conclude that its velocity is changing. The sequence is therefore
 non-linear.
 
 n | value | formula   | Δ0    | Δ1
@@ -93,8 +93,8 @@ n | value | formula   | Δ0    | Δ1
 8 |  64   | `n9 - n8` | 17    | `...`
 9 |  81   | `...`     | `...` | `...`
 
-This sequence of cubed numbers converges eventually but not right away, so we 
-can conclude that its velocity is changing. The sequence is therefore 
+This sequence of cubed numbers converges eventually but not right away, so we
+can conclude that its velocity is changing. The sequence is therefore
 non-linear.
 
 n | value | formula   | Δ0    | Δ1    | Δ2
@@ -116,15 +116,15 @@ n | value | formula   | Δ0    | Δ1    | Δ2
 ## Review Questions
 
 **Q**. What's a linear sequence?
-- A sequence of numbers where the velocity of the sequence never changes. In 
-  other words, if the difference from one number in the sequence to the next is 
+- A sequence of numbers where the velocity of the sequence never changes. In
+  other words, if the difference from one number in the sequence to the next is
   always the same.
 
 **Q**. What two things do we need to know to define a function for _any_ linear sequence?
 - (1) starting position and (2) velocity.
 
 **Q**. What is delta or `Δ`?
-- It's a symbol that often stands for a function or operation that gets the 
+- It's a symbol that often stands for a function or operation that gets the
   difference or "delta" of a numeric sequence.
 
 **Q**. If your sequence is finite, why can't you repeatedly delta it forever?

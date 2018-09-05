@@ -12,6 +12,7 @@ sidebar_label: Geometric Series
 We have previously tackled sequences such as:
 
  * `1, 2, 4, 8, 16, 32, 64...`
+ * `1, -2, 4, -8, 16, -32, 64...`
  * `2, 4, 8, 16, 32, 64, 128...`
  * `4, 12, 36, 108, 324, 972, 2916...`
 
@@ -25,12 +26,22 @@ common ratio consecutive values.
    (λ (n) 
       (* start (expt ratio n))))
 
-(map (geometric 1 2) (range 7)) ;; → '(1  2  4   8  16  32   64)
-(map (geometric 2 2) (range 7)) ;; → '(2  4  8  16  32  64  128)
-(map (geometric 4 3) (range 7)) ;; → '(4 12 36 108 324 972 2916)
+(map (geometric  1 2) (range 7)) ;; → '(1   2  4    8  16   32   64)
+(map (geometric -1 2) (range 7)) ;; → '(1  -2  4   -8  16  -32   64)
+(map (geometric  2 2) (range 7)) ;; → '(2   4  8   16  32   64  128)
+(map (geometric  4 3) (range 7)) ;; → '(4  12 36  108 324  972 2916)
 ```
+But how might we find the sum of a geometric series? If we imagined that the
+following problem represented the start of the summation of a geometric sequence,
 
-But how might we find the sum of a geometric series?
+``` clojure
+(+ (* start (expt ratio 0))
+   (* start (expt ratio 1))
+   (* start (expt ratio 2))
+   (* start (expt ratio n))
+)
+
+```
 
 ``` clojure
 (define (geometric-sum initial ratio terms)

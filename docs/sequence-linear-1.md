@@ -57,7 +57,7 @@ the sequence.
 By pairing a sequence with its reverse image, we can get `n` many additive pairs
 that all have the same value, where `n` is the number of terms we wanted to add.
 In this case we have `5 x 6 = 30`, but since this is double what we started
-with, we take the half of `30` to get `15`.
+with, we then take the half of `30` to get `15`.
 
 If we generalized this into a formula:
 
