@@ -32,13 +32,15 @@ common ratio consecutive values.
 (map (geometric  4 3) (range 7)) ;; → '(4  12 36  108 324  972 2916)
 ```
 But how might we find the sum of a geometric series? If we imagined that the
-following problem represented the start of the summation of a geometric sequence,
+following problem represented the start of the summation of a geometric sequence:
+
+* `(s0 * r^0) + (s0 * r^1) + (s0 * r^2) + (s0 * r^3)... (s0 * r^n)`
 
 ``` clojure
-(+ (* start (expt ratio 0))
-   (* start (expt ratio 1))
-   (* start (expt ratio 2))
-   (* start (expt ratio n))
+(+ (* s0 (expt ratio 0))
+   (* s0 (expt ratio 1))
+   (* s0 (expt ratio 2))
+   (* s0 (expt ratio n))
 )
 
 ```

@@ -6,14 +6,14 @@ hide_title: true
 
 # Definitions
 
-1. Let there be a set `N` called the naturals.
-2. Let `N` contain an element that looks like `0`.
-3. Let `N` be equipped with a unary function `++`.
-4. Let `N` be equipped with a binary function `=`.
+1. Let there be a set `ℕ` called the naturals.
+2. Let `0 ∈ ℕ`.
+3. Let `ℕ` be equipped with a unary function `++`.
+4. Let `ℕ` be equipped with a binary function `=`.
 5. Let `n++` mean the application of the `++` function with `n` as the input.
-6. If `a` and `b` are members from `N`, then `a = b` means to apply the `=`
+6. If `a` and `b` are members from `ℕ`, then `a = b` means to apply the `=`
    function with `a` and `b` as ordered inputs.
-7. Let there be a name translation scheme to transform the symbols from `N` to
+7. Let there be a name translation scheme to transform the symbols from `ℕ` to
    that of the western convention. These translations are merely for
    convenience, as we have only formally defined `0`, `++`, and `=`.
 
@@ -105,7 +105,7 @@ consistency to our rules is what matters, not that we name something `0` or
 
 ## Final Definition
 
-Now that we have defined an infinite set `N`, a natural `0`, `++` and `=`, let
+Now that we have defined an infinite set `ℕ`, a natural `0`, `++` and `=`, let
 the naturals be the smallest set which implements all these rules.
 
 ## Addition
