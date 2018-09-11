@@ -54,7 +54,22 @@ construct.
 There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains 
 over a ring in closure under division with exception of `0`.
 
+## Equality
+
+  * ℚ(a, b) == ℚ(c, d) iff ad = bc
+
+## Addition
+
   * ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)
-  * ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)
+
+## Additive Negation
+
   * -ℚ(a, b) == ℚ(-a, b)
+ 
+## Multiplication
+
+  * ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)
+
+## Multiplicative Inverse
+
   * ℚ(a, b)**-1 == ℚ(b, a)
