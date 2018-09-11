@@ -27,34 +27,34 @@ Addition `+` is represented as another way to write `S`.
 
 # Integers (ℤ)
 
-There is an Integer ring (ℤ, +, *) where { a, b, x, y } ∈ ℕ. A ring is almost a
+There is an Integer ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. A ring is almost a
 field except that its not *necessarily* closed under division. For the aesthetic
 of concise word choice, I will generally try to pick the minimally powerful 
 construct.
 
 ## Equality
 
-  * ℤ(a, b) == ℤ(x, y) iff a + x == b + y
+  * ℤ(a, b) == ℤ(c, d) iff a + c == b + d
 
 ## Addition
 
-  * ℤ(a, b) + ℤ(x, y) := ℤ(a+x, b+y)`
+  * ℤ(a, b) + ℤ(c, d) := ℤ(a+c, b+d)`
 
 ## Negation
 
   * -ℤ(a, b) := ℤ(b, a)
-  * ℤ(a, b) - ℤ(x, y) := ℤ(a, b) + -ℤ(x, y)
+  * ℤ(a, b) - ℤ(c, d) := ℤ(a, b) + -ℤ(c, d)
 
 ## Multiplication
 
-  * ℤ(a, b) * ℤ(x, y) := ℤ(ax + by, ay + bx)
+  * ℤ(a, b) * ℤ(c, d) := ℤ(ac + bd, ad + bc)
 
 # Rationals (ℚ)
 
-There is a Rational field (ℚ, +, *) where { a, b, x, y } ∈ ℚ. A field gains 
+There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℚ. A field gains 
 over a ring in closure under division with exception of `0`.
 
-  * ℚ(a, b) + ℚ(x, y) := ℚ(ay + bx, by)
-  * ℚ(a, b) * ℚ(x, y) := ℚ(ax, by)
+  * ℚ(a, b) + ℚ(c, d) := ℚ(ad + bc, bd)
+  * ℚ(a, b) * ℚ(c, d) := ℚ(ac, bd)
   * -ℚ(a, b) := ℚ(-a, b)
   * ℚ(a, b)**-1 := ℚ(b, a)
