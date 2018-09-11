@@ -38,23 +38,23 @@ construct.
 
 ## Addition
 
-  * ℤ(a, b) + ℤ(c, d) := ℤ(a + c, b + d)
+  * ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)
 
 ## Negation
 
-  * -ℤ(a, b) := ℤ(b, a)
-  * ℤ(a, b) - ℤ(c, d) := ℤ(a, b) + -ℤ(c, d)
+  * -ℤ(a, b) == ℤ(b, a)
+  * ℤ(a, b) - ℤ(c, d) == ℤ(a, b) + -ℤ(c, d)
 
 ## Multiplication
 
-  * ℤ(a, b) * ℤ(c, d) := ℤ(ac + bd, ad + bc)
+  * ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)
 
 # Rationals (ℚ)
 
 There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains 
 over a ring in closure under division with exception of `0`.
 
-  * ℚ(a, b) + ℚ(c, d) := ℚ(ad + bc, bd)
-  * ℚ(a, b) * ℚ(c, d) := ℚ(ac, bd)
-  * -ℚ(a, b) := ℚ(-a, b)
-  * ℚ(a, b)**-1 := ℚ(b, a)
+  * ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)
+  * ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)
+  * -ℚ(a, b) == ℚ(-a, b)
+  * ℚ(a, b)**-1 == ℚ(b, a)
