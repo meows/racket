@@ -39,13 +39,13 @@ the naturals, whereas they are closed under the integers.
 
 An integer is a 2-tuple of naturals: `ℤ(a, b)`.
 
-0. `ℤ(a, b) = ℤ(x, y)` iff `a + y = b + x`.
+0. `ℤ(a1, a2) = ℤ(b1, b2)` iff `a1 + b1 = a2 + b2`.
 
 ### Addition
 
 Let `(ℤ, +)` form a group, which we will define now.
 
-0. `ℤ(a, b) + ℤ(x, y) := ℤ(a + x, b + y)`
+0. `ℤ(a1, a2) + ℤ(b1, b2) := ℤ(a1 + b1, a2 + b2)`
 
 ### Multiplication
 
