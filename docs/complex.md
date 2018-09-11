@@ -40,7 +40,7 @@ construct.
 
   * ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)
 
-## Negation
+## Additive Inverse
 
   * -ℤ(a, b) == ℤ(b, a)
   * ℤ(a, b) - ℤ(c, d) == ℤ(a, b) + -ℤ(c, d)
@@ -62,7 +62,7 @@ over a ring in closure under division with exception of `0`.
 
   * ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)
 
-## Additive Negation
+## Additive Inverse
 
   * -ℚ(a, b) == ℚ(-a, b)
  
