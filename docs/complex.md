@@ -51,7 +51,7 @@ construct.
 
 # Rationals (ℚ)
 
-There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℚ. A field gains 
+There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains 
 over a ring in closure under division with exception of `0`.
 
   * ℚ(a, b) + ℚ(c, d) := ℚ(ad + bc, bd)
