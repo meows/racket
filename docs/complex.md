@@ -38,7 +38,7 @@ construct.
 
 ## Addition
 
-  * ℤ(a, b) + ℤ(c, d) := ℤ(a+c, b+d)
+  * ℤ(a, b) + ℤ(c, d) := ℤ(a + c, b + d)
 
 ## Negation
 
