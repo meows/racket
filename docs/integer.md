@@ -1,64 +1,64 @@
-# From the Naturals to the Integers
+# Naturals (ℕ)
 
-## The Naturals
-
-There is a triple which forms a group: `(ℕ, 0, ++)`, which we will define with 
-5 rules:
+There is a natural group `(ℕ, 0, S)`.
 
 1. `0 ∈ ℕ`
-2. `n++ ∈ ℕ`
-3. `n++ ≠ 0`
-4. `a++ = b++ := a = b`
-5. Let `ℕ` be the smallest set which follows all the above rules.
+2. `S(n) ∈ ℕ`
+3. `S(n) ≠ 0`
+4. `S(a) == S(b)` iff `a == b`
+5. Let `P` be a boolean function on the naturals. If `P(0)` and `P(S(n))`, then 
+   `P(n)`.
 
-Another curious restatement of this rule follows: Let `p`, short for predicate, 
-be a boolean function which determines the property of `ℕ` as true or false. 
-If `p(n)` is such that `p(0)` is true, and `p(n++)` is a truth which depends on
-`p(0)`, then `p` is true for all `n`.
+   Another restatement of this is: Let `ℕ` be the smallest set which obeys all
+   the above 4 rules. Both of these seemingly different restatements of the same
+   rule serve to exclude anything extra from what we've defined for our set. 
+   They also make sure that an inductive proof can cover the entire set.
 
-This restatement of the last rule is curious because it sounds little like its
-alternative. But they serve the same effect in that they include `0` in the set,
-and they exclude anything else that isn't supposed to be natural, such as a
-fraction.
+## Addition
 
-### Addition
+Addition `+` is represented as a recursion on `S`.
 
-1. `0 + n := n`
-2. `n++ + m := (n + m)++`
+  * `0 + m == m`
+  * `S(n) + m == S(n + m)`
 
-### Multiplication
+## Multiplication
 
-1. `0 * n := 0`
-2. `n++ * m := (n * m) + m`
+Multiplication is represented as a recursion on `+`.
 
-## The Integers
+  * `0 * m == 0`
+  * `S(n) * m == (n * m) + m`
 
-The most notable difference between the naturals and the integers would be their
-relationship to subtraction, which is a useful but not closed operation under
-the naturals, whereas they are closed under the integers.
+## Exponentiation
 
-An integer is a 2-tuple of naturals: `ℤ(a, b)`.
+Notably exponentiation is closed under the naturals, but not under the integers.
 
-0. `ℤ(a+, a-) = ℤ(b+, b-)` iff `a+ + b+ = a- + b-`.
+  * `m^0 = 1`
+  * `m^S(n) = m^n * n`
 
-### Addition
+# Integers (ℤ)
 
-Let `(ℤ, +)` form a group, which we will define now.
+There is an integer commutative ring `(ℤ, +, *)`. An integer can be constructed 
+as pairs of naturals of the form `ℤ(a, b)` where `{a, b} ∈ ℕ`.
 
-0. `ℤ(a+, a-) + ℤ(b+, b-) := ℤ(a+ + b+, a- + b-)`.
+## Equality
 
-### Multiplication
+Equality of the integers is defined by equality of the naturals.
 
-Let `(ℤ, *)` form a group, which we will define now.
+  * `ℤ(a, b) == ℤ(c, d)` iff `a + d == b + c`
 
-0. `ℤ(a, b) * ℤ(x, y) := ℤ(ax + by, ay + bx)`
+## Addition
 
-### Negation
+Addition can be viewed as a dot-sum of two tuples.
 
-0. `-ℤ(a, b) := ℤ(b, a)`
+  * `ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)`
 
-The unary negation simply reverses the `ℤ` 2-tuple.
+## Additive Inverse
 
-### Subtraction
+  * `-ℤ(a, b) == ℤ(b, a)`
+  * `ℤ(a, b) - ℤ(c, d) == ℤ(a, b) + -ℤ(c, d)`
 
-0. `ℤ(a, b) - ℤ(x, y) := ℤ(a, b) + -ℤ(x, y) := ℤ(a + y, b + x)`
+## Multiplication
+
+Multiplication is a dot-product of two tuples.
+
+  * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
