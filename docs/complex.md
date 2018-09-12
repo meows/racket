@@ -74,53 +74,53 @@ integers of the form `ℚ(a, b)` where `{a, b} ∈ ℤ` and `b ≠ 0`.
 
 ## Equality
 
-  * ℚ(a, b) == ℚ(c, d) iff ad = bc
+  * `ℚ(a, b) == ℚ(c, d) iff ad = bc`
 
 ## Addition
 
-  * ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)
+  * `ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)`
 
 ## Additive Inverse
 
-  * -ℚ(a, b) == ℚ(-a, b)
+  * `-ℚ(a, b) == ℚ(-a, b)`
 
 ## Multiplication
 
-  * ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)
+  * `ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)`
 
 ## Multiplicative Inverse
 
-  * ℚ(a, b)^-1 == ℚ(b, a)
+  * `ℚ(a, b)^-1 == ℚ(b, a)`
 
 ## Division
 
-  * ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1
-  * ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)
+  * `ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1`
+  * `ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)`
 
 ### Division by 1
 
 These behave exactly like the integers, and thus we can define a mapping between
 a subset of the rationals and the integers.
 
-  * ℚ(a, 1) + ℚ(b, 1) == ℚ(a + b, 1)
-  * ℚ(a, 1) * ℚ(b, 1) == ℚ(a * b, 1)
-  * -ℚ(a, 1) == ℚ(-a, 1)
+  * `ℚ(a, 1) + ℚ(b, 1) == ℚ(a + b, 1)`
+  * `ℚ(a, 1) * ℚ(b, 1) == ℚ(a * b, 1)`
+  * `-ℚ(a, 1) == ℚ(-a, 1)`
 
-Rational | Integer
--------- | -------
-ℚ(-2, 1) | -2
-ℚ(-1, 1) | -1
-ℚ(0, 1)  |  0
-ℚ(1, 1)  |  1
-ℚ(2, 1)  |  2
+ Rational   | Integer
+ ---------- | -------
+ `ℚ(-2, 1)` | -2
+ `ℚ(-1, 1)` | -1
+ `ℚ(0, 1)`  |  0
+ `ℚ(1, 1)`  |  1
+ `ℚ(2, 1)`  |  2
 
 ### Division by 0
 
 The domain limitation on `ℚ(a, b)` where `b ≠ 0` is implied the below two 
 identities:
 
-  * c * 0 == 0
-  * ℚ(a, b) * ℚ(b, 1) == ℚ(ab, b)
+  * `c * 0 == 0`
+  * `ℚ(a, b) * ℚ(b, 1) == ℚ(ab, b)`
 
 Since multiplying by `0` destroys information, we'll never get back `a` even
 though we know that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`. Thus we know that
@@ -128,4 +128,4 @@ no integer solution can be consistent with the two identities listed above.
 
 ## Exponentiation
 
-  * ℚ(a, b)^n == ℚ(a^n, b^n)
+  * `ℚ(a, b)^n == ℚ(a^n, b^n)`
