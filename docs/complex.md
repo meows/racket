@@ -27,10 +27,7 @@ Addition `+` is represented as another way to write `S`.
 
 # Integers (ℤ)
 
-There is an Integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. A ring 
-is almost a field except that its not *necessarily* closed under division. For 
-the aesthetic of concise word choice, I will generally try to pick the minimally 
-powerful construct.
+There is an Integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ.
 
 ## Equality
 
