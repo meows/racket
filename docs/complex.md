@@ -52,7 +52,7 @@ Equality of the integers is defined by equality of the naturals under addition.
 
 ## Addition
 
-Addition can be viewed as a cross-product of two ℤ tuples.
+Addition can be viewed as a dot-sum of two tuples.
 
   * ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)
 
@@ -63,7 +63,7 @@ Addition can be viewed as a cross-product of two ℤ tuples.
 
 ## Multiplication
 
-Multiplication is a dot-product of two vectors.
+Multiplication is a dot-product of two tuples.
 
   * ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)
 
@@ -99,9 +99,6 @@ previous identities.
 
 ## Division
 
-We define rational division as multiplication of one rational by the
-multiplicative inverse of another rational.
-
   * ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1
   * ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)
 
@@ -113,6 +110,14 @@ a subset of the rationals and the integers.
   * ℚ(a, 1) + ℚ(b, 1) == ℚ(a + b, 1)
   * ℚ(a, 1) * ℚ(b, 1) == ℚ(a * b, 1)
   * -ℚ(a, 1) == ℚ(-a, 1)
+
+Rational | Integer
+-------- | -------
+ℚ(-2, 1) | -2
+ℚ(-1, 1) | -1
+ℚ( 0, 1) |  0
+ℚ( 1, 1) |  1
+ℚ( 2, 1) |  2
 
 ### Division by 0
 
@@ -127,3 +132,7 @@ though we know that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`.
 ## Exponentiation
 
   * ℚ(a, b)^n == ℚ(a^n, b^n)
+
+## Brief Experimental Verification
+
+Is ℚ(0, 1) + ℚ(1, 1) == ℚ(1, 1)?
