@@ -35,9 +35,9 @@ as pairs of naturals of the form `ℤ(a, b)` where `{a, b} ∈ ℕ`.
 
 ## Equality
 
-Equality of the integers is defined by equality of the naturals under addition.
+Equality of the integers is defined by equality of the naturals.
 
-  * `ℤ(a, b) == ℤ(c, d) iff a + d == b + c`
+  * `ℤ(a, b) == ℤ(c, d)` iff `a + d == b + c`
 
 ## Addition
 
