@@ -15,7 +15,7 @@ There is a natural group `(ℕ, 0, S)`.
 
    Otherwise, people might propose that your system is underdescribed:
 
-   1. Let us test the theory that `{ π } ∈ ℕ`.
+   1. Let us test the theory that `π ∈ ℕ`.
    2. By implication of Axiom 2, `π++` is also natural.
    4. `0++ ==? π++` Let us evaluate a hypothesis.
    5. `0 ==? π` We use Axiom 4 to rewrite the string. One can also think of this
