@@ -11,9 +11,7 @@ There is a Natural group (ℕ, 0, S).
 
    Another restatement of this is: Let `ℕ` be the smallest set which obeys all
    the above 4 rules. Both of these seemingly different restatements of the same
-   rule serve to exclude anything extra from what we've defined for our set, and
-   they also establish the closure of induction, since now we know any item in
-   our set is reachable by induction.
+   rule serve to exclude anything extra from what we've defined for our set.
 
    Otherwise, people might propose that your system is underdescribed:
 
@@ -21,7 +19,9 @@ There is a Natural group (ℕ, 0, S).
    2. π++ is natural.
    3. (π++)++ is also natural.
 
-   But since π is never reachable from `0` with `S`, 
+   We now have a problem because `π` is not reachable from `0` with `S`; so to
+   protect induction, we need a way to exclude elements which can't be 
+   accessed from `0` from `S`.
 
 ## Addition
 
