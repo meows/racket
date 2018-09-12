@@ -42,7 +42,7 @@ Multiplication is represented as a recursion on `+`.
 # Integers (ℤ)
 
 There is an integer commutative ring `(ℤ, +, *)`. An integer can be constructed 
-as pairs of naturals of the form `ℤ(a, b)` where `{ a, b } ∈ ℕ`.
+as pairs of naturals of the form `ℤ(a, b)` where `{a, b} ∈ ℕ`.
 
 ## Equality
 
@@ -70,7 +70,7 @@ Multiplication is a dot-product of two tuples.
 # Rationals (ℚ)
 
 There is a rational field `(ℚ, +, *)`. A rational can be constructed as pairs of 
-integers of the form `ℚ(a, b)`, where `{ a, b } ∈ ℤ` and `b ≠ 0`.
+integers of the form `ℚ(a, b)`, where `{a, b} ∈ ℤ` and `b ≠ 0`.
 
 ## Equality
 
