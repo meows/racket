@@ -46,6 +46,8 @@ up-front as though it were its own related but distinct category.
 
 ## Equality
 
+Equality of the integers is defined by equality of the naturals under addition.
+
   * ℤ(a, b) == ℤ(c, d) iff a + d == b + c
 
 ## Addition
