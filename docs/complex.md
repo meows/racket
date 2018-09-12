@@ -15,12 +15,14 @@ There is a Natural group (ℕ, 0, S).
 
    Otherwise, people might propose that your system is underdescribed:
 
-   1. { π } ∈ ℕ
-   2. π++ is natural.
-   3. (π++)++ is also natural.
+   1. Let us test the theory that `{ π } ∈ ℕ`.
+   2. By implication of Axiom 2, `π++` is also natural.
+   4. `0++ ==? π++` Let us evaluate a hypothesis.
+   5. `0 ==? π` We use Axiom 4 to rewrite the string. One can also think of this
+      as virtual subtraction. We have now arrived to a contradiction.
 
    We now have a problem because `π` is not reachable from `0` with `S`; so to
-   protect induction, we need a way to exclude elements which can't be 
+   protect induction, we need a way to exclude elements which can't be
    accessed from `0` from `S`.
 
 ## Addition
@@ -40,7 +42,7 @@ Multiplication is represented as a recursion on `+`.
 # Integers (ℤ)
 
 There is an integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
-integer can be constructed as pairs of naturals of the form ℤ(a, b). 
+integer can be constructed as pairs of naturals of the form ℤ(a, b).
 Commutativity isn't required for a ring, but is important enough to specify
 up-front as though it were its own related but distinct category.
 
@@ -66,11 +68,11 @@ Equality of the integers is defined by equality of the naturals under addition.
 # Rationals (ℚ)
 
 There is a rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains
-over a ring with commutativity and closure under division with exception of 0. A 
-rational can be constructed as pairs of integers of the form ℚ(a, b), where 
+over a ring with commutativity and closure under division with exception of 0. A
+rational can be constructed as pairs of integers of the form ℚ(a, b), where
 b ≠ 0.
 
-The final restriction in the function's domain is implied or constrained by 
+The final restriction in the function's domain is implied or constrained by
 previous identities.
 
 ## Equality
