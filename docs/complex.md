@@ -28,6 +28,13 @@ Multiplication is represented as a recursion on `+`.
   * `0 * m == 0`
   * `S(n) * m == (n * m) + m`
 
+## Exponentiation
+
+Notably exponentiation is closed under the naturals, but not under the integers.
+
+  * `m^0 = 1`
+  * `m^S(n) = m^n * n`
+
 # Integers (ℤ)
 
 There is an integer commutative ring `(ℤ, +, *)`. An integer can be constructed 
