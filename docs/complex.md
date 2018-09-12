@@ -63,6 +63,8 @@ Equality of the integers is defined by equality of the naturals under addition.
 
 ## Multiplication
 
+Multiplication is a dot-product of two vectors.
+
   * ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)
 
 # Rationals (ℚ)
@@ -102,6 +104,27 @@ multiplicative inverse of another rational.
 
   * ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1
   * ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)
+
+### Division by 1
+
+These behave exactly like the integers, and thus we can define a mapping between
+a subset of the rationals and the integers.
+
+ℚ(a, 1) + ℚ(b, 1) == ℚ(a + b, 1)
+ℚ(a, 1) * ℚ(b, 1) == ℚ(a * b, 1)
+-ℚ(a, 1) == ℚ(-a, 1)
+
+### Division by 0
+
+We don't have a consistent way to define division by `0` because we define 
+division as merely multiplication with a twist. But when that involves 
+multiplying by `0`, then we cannot have both rules hold below:
+
+  * c * 0 == 0
+  * ℚ(a, b) * ℚ(b, 1) == ℚ(ab, b)
+
+Since multiplying by `0` destroys information, we'll never get back `a` even
+though we know that `ℚ(ab, b) == ℚ(a, 1)`.
 
 ## Exponentiation
 
