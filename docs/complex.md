@@ -27,7 +27,8 @@ Addition `+` is represented as another way to write `S`.
 
 # Integers (ℤ)
 
-There is an Integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ.
+There is an Integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
+integer can be constructed as pairs of naturals of the form ℤ(a, b).
 
 ## Equality
 
@@ -49,7 +50,8 @@ There is an Integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ.
 # Rationals (ℚ)
 
 There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains 
-over a ring in closure under division with exception of `0`.
+over a ring in closure under division with exception of `0`. A rational can be
+constructed as pairs of integers of the form ℚ(a, b), where b ≠ 0.
 
 ## Equality
 
@@ -73,6 +75,10 @@ over a ring in closure under division with exception of `0`.
 
 ## Division
 
+We define rational division as multiplication of one rational by the 
+multiplicative inverse of another rational.
+
+  * ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1
   * ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)
 
 ## Exponentiation
