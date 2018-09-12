@@ -35,10 +35,14 @@ Notably exponentiation is closed under the naturals, but not under the integers.
   * `m^0 = 1`
   * `m^S(n) = m^n * n`
 
+--------------------------------------------------------------------------------
+
 # Integers (ℤ)
 
 There is an integer commutative ring `(ℤ, +, *)`. An integer can be constructed 
-as pairs of naturals of the form `ℤ(a, b)` where `{a, b} ∈ ℕ`.
+as pairs of naturals of the form `ℤ(a, b)` where `{a, b} ∈ ℕ`. This encoding of
+the integers relies on two distinct natural dimensions, and the degree to which
+one of these dimensions exceeds the other.
 
 ## Equality
 
@@ -54,6 +58,9 @@ Addition can be viewed as a dot-sum of two tuples.
 
 ## Additive Inverse
 
+This is a notable extension over the naturals because now `+` becomes an 
+invertible function.
+
   * `-ℤ(a, b) == ℤ(b, a)`
   * `ℤ(a, b) - ℤ(c, d) == ℤ(a, b) + -ℤ(c, d)`
 
@@ -62,6 +69,8 @@ Addition can be viewed as a dot-sum of two tuples.
 Multiplication is a dot-product of two tuples.
 
   * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
+
+--------------------------------------------------------------------------------
 
 # Rationals (ℚ)
 
