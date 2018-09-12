@@ -1,6 +1,6 @@
 # Naturals (ℕ)
 
-There is a natural group (ℕ, 0, S).
+There is a natural group `(ℕ, 0, S)`.
 
 1. 0 ∈ ℕ
 2. S(n) ∈ ℕ
@@ -41,7 +41,7 @@ Multiplication is represented as a recursion on `+`.
 
 # Integers (ℤ)
 
-There is an integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
+There is an integer commutative ring `(ℤ, +, *)` where `{ a, b, c, d } ∈ ℕ`. An
 integer can be constructed as pairs of naturals of the form ℤ(a, b).
 
 ## Equality
@@ -69,10 +69,10 @@ Multiplication is a dot-product of two tuples.
 
 # Rationals (ℚ)
 
-There is a rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains
-over a ring with commutativity and closure under division with exception of 0. A
-rational can be constructed as pairs of integers of the form ℚ(a, b), where
-b ≠ 0.
+There is a rational field `(ℚ, +, *)` where `{ a, b, c, d } ∈ ℤ`. A field gains
+over a ring with commutativity and closure under division with exception of `0`. 
+A rational can be constructed as pairs of integers of the form `ℚ(a, b)`, where
+`b ≠ 0`.
 
 The final restriction in the function's domain is implied or constrained by
 previous identities.
