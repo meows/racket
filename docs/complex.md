@@ -79,9 +79,14 @@ integers of the form `ℚ(a, b)` where `{a, b} ∈ ℤ` and `b ≠ 0`.
 
 ## Equality
 
+Two rationals are equal if their pseudo cross-combination integer parts are 
+equal.
+
   * `ℚ(a, b) == ℚ(c, d) iff ad = bc`
 
 ## Addition
+
+Addition can be viewed as a cross-product.
 
   * `ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)`
 
@@ -91,6 +96,8 @@ integers of the form `ℚ(a, b)` where `{a, b} ∈ ℤ` and `b ≠ 0`.
 
 ## Multiplication
 
+Multiplication can be viewed as a pseudo dot-combination.
+
   * `ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)`
 
 ## Multiplicative Inverse
@@ -98,6 +105,8 @@ integers of the form `ℚ(a, b)` where `{a, b} ∈ ℤ` and `b ≠ 0`.
   * `ℚ(a, b)^-1 == ℚ(b, a)`
 
 ## Division
+
+Division can be viewed as a pseudo cross-combination.
 
   * `ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1`
   * `ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)`
