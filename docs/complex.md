@@ -161,3 +161,10 @@ no integer solution can be consistent with the two identities listed above.
 ## Exponentiation
 
   * `ℚ(a, b)^n == ℚ(a^n, b^n)`
+  * `ℚ(a, b)^-n == ℚ(1, ℚ(a, b)^n)`
+
+### Identities
+
+  * `ℚ(a, b)^x * ℚ(a, b)^y == ℚ(a, b)^(m + n)`
+  * `(ℚ(a, b)^x)^y == ℚ(a, b)^(xy)`
+  * `ℚ(a, b)^x * ℚ(c, d)^x == ℚ(ac, bd)^x`
