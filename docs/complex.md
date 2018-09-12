@@ -1,13 +1,13 @@
 # Naturals (ℕ)
 
-There is a Natural group (ℕ, 0, S).
+There is a natural group (ℕ, 0, S).
 
 1. 0 ∈ ℕ
 2. S(n) ∈ ℕ
 3. S(n) ≠ 0
 4. S(a) == S(b) iff a == b
-5. Let `P` be a boolean function on the naturals. If `P(0)` and `P(S(n))`, then
-   `P(n)` for all `n`.
+5. Let `P` be a boolean function on the naturals. If `P(0)` and `P(S(n))`, then 
+   `P(n)`.
 
    Another restatement of this is: Let `ℕ` be the smallest set which obeys all
    the above 4 rules. Both of these seemingly different restatements of the same
@@ -43,8 +43,6 @@ Multiplication is represented as a recursion on `+`.
 
 There is an integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
 integer can be constructed as pairs of naturals of the form ℤ(a, b).
-Commutativity isn't required for a ring, but is important enough to specify
-up-front as though it were its own related but distinct category.
 
 ## Equality
 
@@ -53,6 +51,8 @@ Equality of the integers is defined by equality of the naturals under addition.
   * ℤ(a, b) == ℤ(c, d) iff a + d == b + c
 
 ## Addition
+
+Addition can be viewed as a cross-product of two ℤ tuples.
 
   * ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)
 
