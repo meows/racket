@@ -17,13 +17,12 @@ There is a natural group `(ℕ, 0, S)`.
 
    1. Let us test the theory that `π ∈ ℕ`.
    2. By implication of Axiom 2, `π++` is also natural.
-   4. `0++ ==? π++` Let us evaluate a hypothesis.
-   5. `0 ==? π` We use Axiom 4 to rewrite the string. One can also think of this
-      as virtual subtraction. We have now arrived to a contradiction.
+   3. `0++ == π++`? Let us evaluate a hypothesis.
+   4. `0 == π` We use Axiom 4 to rewrite the string.
 
    We now have a problem because `π` is not reachable from `0` with `S`; so to
-   protect induction, we need a way to exclude elements which can't be
-   accessed from `0` from `S`.
+   protect induction, we need a way to exclude elements which can't be accessed 
+   from `0` with `S`.
 
 ## Addition
 
