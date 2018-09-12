@@ -28,7 +28,9 @@ Addition `+` is represented as another way to write `S`.
 # Integers (ℤ)
 
 There is an integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
-integer can be constructed as pairs of naturals of the form ℤ(a, b).
+integer can be constructed as pairs of naturals of the form ℤ(a, b). 
+Commutativity isn't required for a ring, but is important enough to specify
+up-front as though it were its own related but distinct category.
 
 ## Equality
 
@@ -50,9 +52,12 @@ integer can be constructed as pairs of naturals of the form ℤ(a, b).
 # Rationals (ℚ)
 
 There is a rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains
-over a ring in closure under division with exception of 0 and commutativity. A 
+over a ring with commutativity and closure under division with exception of 0. A 
 rational can be constructed as pairs of integers of the form ℚ(a, b), where 
 b ≠ 0.
+
+The final restriction in the function's domain is implied or constrained by 
+previous identities.
 
 ## Equality
 
