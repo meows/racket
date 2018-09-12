@@ -9,8 +9,8 @@ There is a Natural group (ℕ, 0, S).
 5. Let `P` be a boolean function on the naturals. If `P(0)` and `P(S(n))`, then
    `P(n)` for all `n`.
 
-   Another restatement of this is: Let `ℕ` be the smallest set which obeys all 
-   the above 4 rules. Both of these seemingly different restatements of the same 
+   Another restatement of this is: Let `ℕ` be the smallest set which obeys all
+   the above 4 rules. Both of these seemingly different restatements of the same
    rule serve to exclude anything extra from what we've defined for our set.
 
 ## Addition
@@ -27,7 +27,7 @@ Addition `+` is represented as another way to write `S`.
 
 # Integers (ℤ)
 
-There is an Integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
+There is an integer commutative ring (ℤ, +, *) where { a, b, c, d } ∈ ℕ. An
 integer can be constructed as pairs of naturals of the form ℤ(a, b).
 
 ## Equality
@@ -49,9 +49,10 @@ integer can be constructed as pairs of naturals of the form ℤ(a, b).
 
 # Rationals (ℚ)
 
-There is a Rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains 
-over a ring in closure under division with exception of `0`. A rational can be
-constructed as pairs of integers of the form ℚ(a, b), where b ≠ 0.
+There is a rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains
+over a ring in closure under division with exception of `0` and commutativity. 
+A rational can be constructed as pairs of integers of the form ℚ(a, b), where 
+b ≠ 0.
 
 ## Equality
 
@@ -64,7 +65,7 @@ constructed as pairs of integers of the form ℚ(a, b), where b ≠ 0.
 ## Additive Inverse
 
   * -ℚ(a, b) == ℚ(-a, b)
- 
+
 ## Multiplication
 
   * ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)
@@ -75,7 +76,7 @@ constructed as pairs of integers of the form ℚ(a, b), where b ≠ 0.
 
 ## Division
 
-We define rational division as multiplication of one rational by the 
+We define rational division as multiplication of one rational by the
 multiplicative inverse of another rational.
 
   * ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1
