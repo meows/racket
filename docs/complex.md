@@ -2,10 +2,10 @@
 
 There is a natural group `(ℕ, 0, S)`.
 
-1. 0 ∈ ℕ
-2. S(n) ∈ ℕ
-3. S(n) ≠ 0
-4. S(a) == S(b) iff a == b
+1. `0 ∈ ℕ`
+2. `S(n) ∈ ℕ`
+3. `S(n) ≠ 0`
+4. `S(a) == S(b)` iff `a == b`
 5. Let `P` be a boolean function on the naturals. If `P(0)` and `P(S(n))`, then 
    `P(n)`.
 
@@ -29,15 +29,15 @@ There is a natural group `(ℕ, 0, S)`.
 
 Addition `+` is represented as a recursion on `S`.
 
-  * 0 + m == m
-  * S(n) + m == S(n + m)
+  * `0 + m == m`
+  * `S(n) + m == S(n + m)`
 
 ## Multiplication
 
 Multiplication is represented as a recursion on `+`.
 
-  * 0 * m == 0
-  * S(n) * m == (n * m) + m
+  * `0 * m == 0`
+  * `S(n) * m == (n * m) + m`
 
 # Integers (ℤ)
 
@@ -48,24 +48,24 @@ as pairs of naturals of the form `ℤ(a, b)` where `{a, b} ∈ ℕ`.
 
 Equality of the integers is defined by equality of the naturals under addition.
 
-  * ℤ(a, b) == ℤ(c, d) iff a + d == b + c
+  * `ℤ(a, b) == ℤ(c, d) iff a + d == b + c`
 
 ## Addition
 
 Addition can be viewed as a dot-sum of two tuples.
 
-  * ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)
+  * `ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)`
 
 ## Additive Inverse
 
-  * -ℤ(a, b) == ℤ(b, a)
-  * ℤ(a, b) - ℤ(c, d) == ℤ(a, b) + -ℤ(c, d)
+  * `-ℤ(a, b) == ℤ(b, a)`
+  * `ℤ(a, b) - ℤ(c, d) == ℤ(a, b) + -ℤ(c, d)`
 
 ## Multiplication
 
 Multiplication is a dot-product of two tuples.
 
-  * ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)
+  * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
 
 # Rationals (ℚ)
 
