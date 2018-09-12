@@ -70,6 +70,24 @@ Multiplication is a dot-product of two tuples.
 
   * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
 
+## Summary of * and +
+
+### Addition `+`
+
+  * `x + y == y + x` Commutativity of `+`.
+  * `(x + y) + z == x + (y + z)` Associativity of `+`.
+  * `x + 0 == 0 + x == x` Fixed point for `+`.
+  * `x + (-x) == (-x) + x == 0` Commutativity with additive inverse.
+
+### Multiplication `*`
+
+  * `xy == yx` Commutativity of `*`.
+  * `(xy)z == x(yz)` Associativity of `*`.
+  * `x1 == 1x == x` Fixed point for `*`.
+
+  * `x(y + z) == xy + xz` Distributive property -- relates `*` with `+`.
+  * `(y + z)x == yx + zx` Distributive property -- relates `*` with `+`.
+
 --------------------------------------------------------------------------------
 
 # Rationals (ℚ)
