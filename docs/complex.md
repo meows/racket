@@ -41,8 +41,8 @@ Multiplication is represented as a recursion on `+`.
 
 # Integers (ℤ)
 
-There is an integer commutative ring `(ℤ, +, *)` where `{ a, b, c, d } ∈ ℕ`. An
-integer can be constructed as pairs of naturals of the form ℤ(a, b).
+There is an integer commutative ring `(ℤ, +, *)`. An integer can be constructed 
+as pairs of naturals of the form `ℤ(a, b)` where `{ a, b } ∈ ℕ`.
 
 ## Equality
 
@@ -69,13 +69,8 @@ Multiplication is a dot-product of two tuples.
 
 # Rationals (ℚ)
 
-There is a rational field `(ℚ, +, *)` where `{ a, b, c, d } ∈ ℤ`. A field gains
-over a ring with commutativity and closure under division with exception of `0`. 
-A rational can be constructed as pairs of integers of the form `ℚ(a, b)`, where
-`b ≠ 0`.
-
-The final restriction in the function's domain is implied or constrained by
-previous identities.
+There is a rational field `(ℚ, +, *)`. A rational can be constructed as pairs of 
+integers of the form `ℚ(a, b)`, where `{ a, b } ∈ ℤ` and `b ≠ 0`.
 
 ## Equality
 
@@ -121,18 +116,16 @@ Rational | Integer
 
 ### Division by 0
 
-The limitation that `ℚ(a, b)` where `b ≠ 0` is implied the below two identities:
+The domain limitation on `ℚ(a, b)` where `b ≠ 0` is implied the below two 
+identities:
 
   * c * 0 == 0
   * ℚ(a, b) * ℚ(b, 1) == ℚ(ab, b)
 
 Since multiplying by `0` destroys information, we'll never get back `a` even
-though we know that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`.
+though we know that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`. Thus we know that
+no integer solution can be consistent with the two identities listed above.
 
 ## Exponentiation
 
   * ℚ(a, b)^n == ℚ(a^n, b^n)
-
-## Brief Experimental Verification
-
-Is ℚ(0, 1) + ℚ(1, 1) == ℚ(1, 1)?
