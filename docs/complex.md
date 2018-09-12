@@ -72,13 +72,12 @@ over a ring in closure under division with exception of `0`.
 
 ## Multiplicative Inverse
 
-This is the first time we can have a closed definition of a multiplicative 
-inverse. We couldn't with ℕ because then we'd have to define what it means to
-find an integer that can satisfy something like: `5 * x = 1`, where `x ∈ ℤ`.
-
-  * ℚ(a, b)**-1 == ℚ(b, a)
+  * ℚ(a, b)^-1 == ℚ(b, a)
 
 ## Division
 
-  * ℚ(ℚ(a, b), ℚ(c, d)) == ℚ(ℚ(a, d), ℚ(b, c))
+  * ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)
 
+## Exponentiation
+
+  * ℚ(a, b)^n == ℚ(a^n, b^n)
