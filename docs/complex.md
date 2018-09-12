@@ -11,16 +11,28 @@ There is a Natural group (ℕ, 0, S).
 
    Another restatement of this is: Let `ℕ` be the smallest set which obeys all
    the above 4 rules. Both of these seemingly different restatements of the same
-   rule serve to exclude anything extra from what we've defined for our set.
+   rule serve to exclude anything extra from what we've defined for our set, and
+   they also establish the closure of induction, since now we know any item in
+   our set is reachable by induction.
+
+   Otherwise, people might propose that your system is underdescribed:
+
+   1. { α } ∈ ℕ
+   2. α++ is natural.
+   3. (α++)++ is also natural.
+
+   But since α is never reachable from `0` with `S`, then 
 
 ## Addition
 
-Addition `+` is represented as another way to write `S`.
+Addition `+` is represented as a recursion on `S`.
 
   * 0 + m == m
   * S(n) + m == S(n + m)
 
 ## Multiplication
+
+Multiplication is represented as a recursion on `+`.
 
   * 0 * m == 0
   * S(n) * m == (n * m) + m
