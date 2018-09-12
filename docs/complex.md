@@ -32,7 +32,7 @@ integer can be constructed as pairs of naturals of the form ℤ(a, b).
 
 ## Equality
 
-  * ℤ(a, b) == ℤ(c, d) iff a + c == b + d
+  * ℤ(a, b) == ℤ(c, d) iff a + d == b + c
 
 ## Addition
 
