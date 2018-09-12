@@ -11,18 +11,8 @@ There is a natural group `(ℕ, 0, S)`.
 
    Another restatement of this is: Let `ℕ` be the smallest set which obeys all
    the above 4 rules. Both of these seemingly different restatements of the same
-   rule serve to exclude anything extra from what we've defined for our set.
-
-   Otherwise, people might propose that your system is underdescribed:
-
-   1. Let us test the theory that `π ∈ ℕ`.
-   2. By implication of Axiom 2, `π++` is also natural.
-   3. `0++ == π++`? Let us evaluate a hypothesis.
-   4. `0 == π` We use Axiom 4 to rewrite the string.
-
-   We now have a problem because `π` is not reachable from `0` with `S`; so to
-   protect induction, we need a way to exclude elements which can't be accessed 
-   from `0` with `S`.
+   rule serve to exclude anything extra from what we've defined for our set. 
+   They also make sure that an inductive proof can cover the entire set.
 
 ## Addition
 
