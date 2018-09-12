@@ -110,9 +110,9 @@ multiplicative inverse of another rational.
 These behave exactly like the integers, and thus we can define a mapping between
 a subset of the rationals and the integers.
 
-ℚ(a, 1) + ℚ(b, 1) == ℚ(a + b, 1)
-ℚ(a, 1) * ℚ(b, 1) == ℚ(a * b, 1)
--ℚ(a, 1) == ℚ(-a, 1)
+* ℚ(a, 1) + ℚ(b, 1) == ℚ(a + b, 1)
+* ℚ(a, 1) * ℚ(b, 1) == ℚ(a * b, 1)
+* -ℚ(a, 1) == ℚ(-a, 1)
 
 ### Division by 0
 
