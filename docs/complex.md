@@ -17,11 +17,11 @@ There is a Natural group (ℕ, 0, S).
 
    Otherwise, people might propose that your system is underdescribed:
 
-   1. { α } ∈ ℕ
-   2. α++ is natural.
-   3. (α++)++ is also natural.
+   1. { π } ∈ ℕ
+   2. π++ is natural.
+   3. (π++)++ is also natural.
 
-   But since α is never reachable from `0` with `S`, then 
+   But since π is never reachable from `0` with `S`, 
 
 ## Addition
 
