@@ -50,8 +50,8 @@ integer can be constructed as pairs of naturals of the form ℤ(a, b).
 # Rationals (ℚ)
 
 There is a rational field (ℚ, +, *) where { a, b, c, d } ∈ ℤ. A field gains
-over a ring in closure under division with exception of `0` and commutativity. 
-A rational can be constructed as pairs of integers of the form ℚ(a, b), where 
+over a ring in closure under division with exception of 0 and commutativity. A 
+rational can be constructed as pairs of integers of the form ℚ(a, b), where 
 b ≠ 0.
 
 ## Equality
