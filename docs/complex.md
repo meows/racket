@@ -29,7 +29,7 @@ There is a natural group `(ℕ, 0, S)`.
   * `m^0 = 1`
   * `m^S(n) = m^n * n`
 
-――――――――――――――――――――――――――――――――――――――――
+――――――――――――――――――――
 
 # Integers (ℤ)
 
@@ -82,7 +82,7 @@ invertible function.
   * `x(y + z) == xy + xz` Distributive property ― relates `*` with `+`.
   * `(y + z)x == yx + zx` Distributive property ― relates `*` with `+`.
 
-――――――――――――――――――――――――――――――――――――――――
+――――――――――――――――――――
 
 # Rationals (ℚ)
 
@@ -158,11 +158,12 @@ no integer solution can be consistent with the two identities listed above.
   * `(ℚ(a, b)^x)^y == ℚ(a, b)^(xy)`
   * `ℚ(a, b)^x * ℚ(c, d)^x == ℚ(ac, bd)^x`
 
-* a――b == c――d iff ad == bc
-* a――b + c――d == (a + c)――(b + d)
-* -(a――b) == b――a
-* a――b - c――d == a――b + -(c――d)
-* a――b * c――d == (ac + bd)――(ad + bc)
 
-* a//b == c//d iff ad//bc
-* a//b + c//d == (ad + bc)//bc
+## Alternative Notation
+  * `a―b == c―d iff ad == bc`
+  * `a―b + c―d == (a + c)―(b + d)`
+  * `-(a―b) == b―a`
+  * `a―b - c―d == a―b + -(c―d)`
+  * `a―b * c―d == (ac + bd)―(ad + bc)`
+  * `a//b == c//d iff ad//bc`
+  * `a//b + c//d == (ad + bc)//bc`
