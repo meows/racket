@@ -16,26 +16,20 @@ There is a natural group `(ℕ, 0, S)`.
 
 ## Addition
 
-Addition `+` is represented as a recursion on `S`.
-
   * `0 + m == m`
   * `S(n) + m == S(n + m)`
 
 ## Multiplication
-
-Multiplication is represented as a recursion on `+`.
 
   * `0 * m == 0`
   * `S(n) * m == (n * m) + m`
 
 ## Exponentiation
 
-Notably exponentiation is closed under the naturals, but not under the integers.
-
   * `m^0 = 1`
   * `m^S(n) = m^n * n`
 
---------------------------------------------------------------------------------
+――――――――――――――――――――――――――――――――――――――――
 
 # Integers (ℤ)
 
@@ -52,7 +46,7 @@ Equality of the integers is defined by equality of the naturals.
 
 ## Addition
 
-Addition can be viewed as a dot-sum of two tuples.
+Addition can be viewed as a dot-combination of two tuples.
 
   * `ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)`
 
@@ -66,7 +60,7 @@ invertible function.
 
 ## Multiplication
 
-Multiplication is a dot-product of two tuples.
+`ℤ * ℤ` can be interpreted as `Z([a b] · [c d], [a b] × [c d])`.
 
   * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
 
@@ -85,26 +79,23 @@ Multiplication is a dot-product of two tuples.
   * `(xy)z == x(yz)` Associativity of `*`.
   * `x1 == 1x == x` Fixed point for `*`.
 
-  * `x(y + z) == xy + xz` Distributive property -- relates `*` with `+`.
-  * `(y + z)x == yx + zx` Distributive property -- relates `*` with `+`.
+  * `x(y + z) == xy + xz` Distributive property ― relates `*` with `+`.
+  * `(y + z)x == yx + zx` Distributive property ― relates `*` with `+`.
 
---------------------------------------------------------------------------------
+――――――――――――――――――――――――――――――――――――――――
 
 # Rationals (ℚ)
 
 There is a rational field `(ℚ, +, *)`. A rational can be constructed as pairs of 
-integers of the form `ℚ(a, b)` where `{a, b} ∈ ℤ` and `b ≠ 0`.
+integers of the form `ℚ(a, b)` where `{ a, b } ∈ ℤ` and `b ≠ 0`.
 
 ## Equality
-
-Two rationals are equal if their pseudo cross-combination integer parts are 
-equal.
 
   * `ℚ(a, b) == ℚ(c, d) iff ad = bc`
 
 ## Addition
 
-Addition can be viewed as a cross-product.
+Addition between ℚ-tuples can be viewed as: [a b] + [c d] == ([a b] × [c d], bd).
 
   * `ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)`
 
@@ -114,8 +105,6 @@ Addition can be viewed as a cross-product.
 
 ## Multiplication
 
-Multiplication can be viewed as a pseudo dot-combination.
-
   * `ℚ(a, b) * ℚ(c, d) == ℚ(ac, bd)`
 
 ## Multiplicative Inverse
@@ -124,7 +113,7 @@ Multiplication can be viewed as a pseudo dot-combination.
 
 ## Division
 
-Division can be viewed as a pseudo cross-combination.
+Division of Q(a b) and Q(c d) can be viewed as Q()
 
   * `ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1`
   * `ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)`
@@ -148,7 +137,7 @@ a subset of the rationals and the integers.
 
 ### Division by 0
 
-The domain limitation on `ℚ(a, b)` where `b ≠ 0` is implied the below two 
+The domain limitation on `ℚ(a, b)` where `b ≠ 0` is implied by the below two 
 identities:
 
   * `c * 0 == 0`
@@ -168,3 +157,12 @@ no integer solution can be consistent with the two identities listed above.
   * `ℚ(a, b)^x * ℚ(a, b)^y == ℚ(a, b)^(m + n)`
   * `(ℚ(a, b)^x)^y == ℚ(a, b)^(xy)`
   * `ℚ(a, b)^x * ℚ(c, d)^x == ℚ(ac, bd)^x`
+
+* a――b == c――d iff ad == bc
+* a――b + c――d == (a + c)――(b + d)
+* -(a――b) == b――a
+* a――b - c――d == a――b + -(c――d)
+* a――b * c――d == (ac + bd)――(ad + bc)
+
+* a//b == c//d iff ad//bc
+* a//b + c//d == (ad + bc)//bc
