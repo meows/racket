@@ -37,7 +37,12 @@ There is a natural group `(ℕ, 0, S)`.
 ## Positivity
 
 1. Definition: a natural number is said to be positive if it's not `0`. 
-2. Proven: Addition involving any positive number results in another positive number.
+2. Lemma: Addition involving any positive number results in another positive 
+   number. This follows from `0 + S(n) = S(n)`, which is a rewriting of the 
+   definition of addition. We know from Axiom 3 that `S(n) ≠ 0`.
+
+   Therefore `positive?(0 + S(n)) == false`.
+
 3. Every positive natural has a unique predecessor.
 
 --------------------------------------------------------------------------------
