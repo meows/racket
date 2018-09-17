@@ -37,13 +37,13 @@ There is a natural group `(ℕ, 0, S)`.
 ## Positivity
 
 1. Definition: a natural number is said to be positive if it's not `0`. 
-2. Lemma: Addition involving any positive number results in another positive 
-   number. This follows from `0 + S(n) = S(n)`, which is a rewriting of the 
+2. Lemma: _Addition involving any positive number results in another positive 
+   number_. This follows from `0 + S(n) = S(n)`, which is a rewriting of the 
    definition of addition. We know from Axiom 3 that `S(n) ≠ 0`.
 
    Therefore `positive?(0 + S(n)) == false`.
 
-3. Every positive natural has a unique predecessor.
+3. Lemma: Every positive natural has a unique predecessor.
 
 --------------------------------------------------------------------------------
 
@@ -77,11 +77,6 @@ invertible function.
 `ℤ * ℤ` can be interpreted as `Z([a b] · [c d], [a b] × [c d])`.
 
   * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
-
-## Trichotomy of the Integers
-
-An integer is either `0`, `positive`, or `negative`. The order operator maps an
-integer to one of these values.
 
 --------------------------------------------------------------------------------
 
@@ -168,3 +163,7 @@ no integer solution can be consistent with the two identities listed above.
 
   * `a//b == c//d iff ad//bc`
   * `a//b + c//d == (ad + bc)//bc`
+
+
+## Commentary on Approach
+
