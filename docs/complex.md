@@ -46,8 +46,6 @@ Equality of the integers is defined by equality of the naturals.
 
 ## Addition
 
-Addition can be viewed as a dot-combination of two tuples.
-
   * `ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)`
 
 ## Additive Inverse
@@ -70,17 +68,17 @@ invertible function.
 
   * `x + y == y + x` Commutativity of `+`.
   * `(x + y) + z == x + (y + z)` Associativity of `+`.
-  * `x + 0 == 0 + x == x` Fixed point for `+`.
+  * `x + 0 == 0 + x == x` Identity element for `+`.
   * `x + (-x) == (-x) + x == 0` Commutativity with additive inverse.
 
 ### Multiplication `*`
 
   * `xy == yx` Commutativity of `*`.
   * `(xy)z == x(yz)` Associativity of `*`.
-  * `x1 == 1x == x` Fixed point for `*`.
+  * `x1 == 1x == x` Identity element for `*`.
 
   * `x(y + z) == xy + xz` Distributive property ― relates `*` with `+`.
-  * `(y + z)x == yx + zx` Distributive property ― relates `*` with `+`.
+  * `(y + z)x == yx + zx` Distribution is commutative.
 
 ――――――――――――――――――――
 
