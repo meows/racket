@@ -19,6 +19,11 @@ There is a natural group `(ℕ, 0, S)`.
   * `0 + m == m`
   * `S(n) + m == S(n + m)`
 
+### Exercise
+
+  * Show that `m + 0 = m`, or that `+` is commutative around `0`.
+  * Show that `n + S(m) == S(n + m)`, or that `+` is fully commutative.
+
 ## Multiplication
 
   * `0 * m == 0`
@@ -31,7 +36,9 @@ There is a natural group `(ℕ, 0, S)`.
 
 ## Positivity
 
-A natural number is said to be positive if it's not `0`.
+1. Definition: a natural number is said to be positive if it's not `0`. 
+2. Proven: Addition involving any positive number results in another positive number.
+3. Every positive natural has a unique predecessor.
 
 --------------------------------------------------------------------------------
 
