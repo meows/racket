@@ -29,6 +29,15 @@ There is a natural group `(ℕ, 0, S)`.
   * `m^0 = 1`
   * `m^S(n) = m^n * n`
 
+## Trichotomy of Order
+
+For `{ a, b } ∈ ℕ`, the order operator maps two naturals into a trichotomy of
+states -- equal, bigger-than, or lesser-than.
+
+* `a = b`
+* `a < b`
+* `a > b`
+
 ――――――――――――――――――――
 
 # Integers (ℤ)
