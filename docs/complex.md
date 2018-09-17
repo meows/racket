@@ -29,16 +29,11 @@ There is a natural group `(ℕ, 0, S)`.
   * `m^0 = 1`
   * `m^S(n) = m^n * n`
 
-## Trichotomy of Order
+## Positivity
 
-For `{ a, b } ∈ ℕ`, the order operator maps two naturals into a trichotomy of
-states -- equal, bigger-than, or lesser-than.
+A natural number is said to be positive if it's not `0`.
 
-* `a = b`
-* `a < b`
-* `a > b`
-
-――――――――――――――――――――
+--------------------------------------------------------------------------------
 
 # Integers (ℤ)
 
@@ -76,7 +71,7 @@ invertible function.
 An integer is either `0`, `positive`, or `negative`. The order operator maps an
 integer to one of these values.
 
-――――――――――――――――――――
+--------------------------------------------------------------------------------
 
 # Rationals (ℚ)
 
@@ -153,10 +148,11 @@ no integer solution can be consistent with the two identities listed above.
   * `ℚ(a, b)^x * ℚ(c, d)^x == ℚ(ac, bd)^x`
 
 ## Alternative Notation
-  * `a―b == c―d iff ad == bc`
-  * `a―b + c―d == (a + c)―(b + d)`
-  * `-(a―b) == b―a`
-  * `a―b - c―d == a―b + -(c―d)`
-  * `a―b * c―d == (ac + bd)―(ad + bc)`
+  * `a━━b == c━━d iff a + d == b + c`
+  * `a━━b + c━━d == (a + c)━━(b + d)`
+  * `-(a━━b) == b━━a`
+  * `a━━b - c━━d == a━━b + -(c━━d)`
+  * `a━━b * c━━d == (ac + bd)━━(ad + bc)`
+
   * `a//b == c//d iff ad//bc`
   * `a//b + c//d == (ad + bc)//bc`
