@@ -62,23 +62,10 @@ invertible function.
 
   * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
 
-## Summary of * and +
+## Trichotomy of the Integers
 
-### Addition `+`
-
-  * `x + y == y + x` Commutativity of `+`.
-  * `(x + y) + z == x + (y + z)` Associativity of `+`.
-  * `x + 0 == 0 + x == x` Identity element for `+`.
-  * `x + (-x) == (-x) + x == 0` Commutativity with additive inverse.
-
-### Multiplication `*`
-
-  * `xy == yx` Commutativity of `*`.
-  * `(xy)z == x(yz)` Associativity of `*`.
-  * `x1 == 1x == x` Identity element for `*`.
-
-  * `x(y + z) == xy + xz` Distributive property ― relates `*` with `+`.
-  * `(y + z)x == yx + zx` Distribution is commutative.
+An integer is either `0`, `positive`, or `negative`. The order operator maps an
+integer to one of these values.
 
 ――――――――――――――――――――
 
@@ -155,7 +142,6 @@ no integer solution can be consistent with the two identities listed above.
   * `ℚ(a, b)^x * ℚ(a, b)^y == ℚ(a, b)^(m + n)`
   * `(ℚ(a, b)^x)^y == ℚ(a, b)^(xy)`
   * `ℚ(a, b)^x * ℚ(c, d)^x == ℚ(ac, bd)^x`
-
 
 ## Alternative Notation
   * `a―b == c―d iff ad == bc`
