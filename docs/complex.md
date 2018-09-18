@@ -164,6 +164,7 @@ statements listed above.
   * `ℚ(a, b)^x * ℚ(c, d)^x == ℚ(ac, bd)^x`
 
 ## Alternative Notation
+
   * `a━━b == c━━d iff a + d == b + c`
   * `a━━b + c━━d == (a + c)━━(b + d)`
   * `-(a━━b) == b━━a`
@@ -173,6 +174,20 @@ statements listed above.
   * `a//b == c//d iff ad//bc`
   * `a//b + c//d == (ad + bc)//bc`
 
-
 ## Commentary on Approach
 
+Speaking informally, we might say that additive inverses are what make integers
+more powerful over naturals. We might also say that multiplicative inverses are
+what make the rationals more powerful over the integers.
+
+Furthermore, `ℤ + ℤ` and `ℚ * ℚ` are similar because they are both 
+same-with-same dimension operations:
+
+  * `ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)`
+  * `ℚ(a, b) * ℚ(c, d) == ℚ(a * c, b * d)`
+
+`ℤ * ℤ` and `ℚ + ℚ` are also similar because they are both 
+different-with-different dimension operations:
+
+  * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
+  * `ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)`
