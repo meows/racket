@@ -21,7 +21,14 @@ There is a natural group `(ℕ, 0, S)`.
 
 ### Exercise
 
-  * Show that `m + 0 = m`, or that `+` is commutative around `0`.
+  * Show that `m + 0 == m`, or that `+` is commutative around `0`.
+
+  1. The base case is given by the definition: `0 + 0 = 0`.
+  2. Now we evaluate the hypothesis `n++ + 0 == n++`.
+  3. `(n + 0)++ == n++` Term rewriting by the definition of addition.
+  4. Axiom 4 allows us to evaluate an alternative proposition:
+     - `(n + 0)++ == n++ iff n + 0 == n`.
+
   * Show that `n + S(m) == S(n + m)`, or that `+` is fully commutative.
 
 ## Multiplication
@@ -38,10 +45,13 @@ There is a natural group `(ℕ, 0, S)`.
 
 1. Definition: a natural number is said to be positive if it's not `0`. 
 2. Lemma: _Addition involving any positive number results in another positive 
-   number_. This follows from `0 + S(n) = S(n)`, which is a rewriting of the 
-   definition of addition. We know from Axiom 3 that `S(n) ≠ 0`.
+   number_. We call the definition of addition `0 + S(n) = S(n)`, and also 
+   Axiom 3 such that `S(n) ≠ 0`. We also recall the 5th Axiom which makes sure
+   that aside from `0` and the positives, we have no other naturals.
 
-   Therefore `positive?(0 + S(n)) == false`.
+   Therefore, with these accumulation of axioms and definitions, merely 
+   establishing the commutativity of `+` with `0` is enough to justify that any 
+   positive natural can be written in the form of `S(n)`.
 
 3. Lemma: Every positive natural has a unique predecessor.
 
