@@ -66,6 +66,9 @@ Equality of the integers is defined by equality of the naturals.
 
 ## Addition
 
+Addition can be thought of as an operation that combines same-with-same 
+dimensions.
+
   * `ℤ(a, b) + ℤ(c, d) == ℤ(a + c, b + d)`
 
 ## Additive Inverse
@@ -113,7 +116,8 @@ Addition between ℚ-tuples can be viewed as: [a b] + [c d] == ([a b] × [c d], 
 
 ## Division
 
-Division of Q(a b) and Q(c d) can be viewed as Q()
+Division of two rationals can be described as a different-with-different
+dimension operation.
 
   * `ℚ(a, b) / ℚ(c, d) == ℚ(a, b) * ℚ(c, d)^-1`
   * `ℚ(a, b) / ℚ(c, d) == ℚ(ad, bc)`
@@ -137,15 +141,16 @@ a subset of the rationals and the integers.
 
 ### Division by 0
 
-The domain limitation on `ℚ(a, b)` where `b ≠ 0` is implied by the below two 
-identities:
+The domain limitation on `ℚ(a, b)` where `b ≠ 0` is implied by the two 
+statements below:
 
   * `c * 0 == 0`
   * `ℚ(a, b) * ℚ(b, 1) == ℚ(ab, b)`
 
 Since multiplying by `0` destroys information, we'll never get back `a` even
 though we know that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`. Thus we know that
-no integer solution can be consistent with the two identities listed above.
+no integer solution can be simultaneously consistent with both of the two 
+statements listed above.
 
 ## Exponentiation
 
