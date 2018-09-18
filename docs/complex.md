@@ -45,14 +45,8 @@ There is a natural group `(ℕ, 0, S)`.
 
 1. Definition: a natural number is said to be positive if it's not `0`. 
 2. Lemma: _Addition involving any positive number results in another positive 
-   number_. We call the definition of addition `0 + S(n) = S(n)`, and also 
-   Axiom 3 such that `S(n) ≠ 0`. We also recall the 5th Axiom which makes sure
-   that aside from `0` and the positives, we have no other naturals.
-
-   Therefore, with these accumulation of axioms and definitions, merely 
-   establishing the commutativity of `+` with `0` is enough to justify that any 
-   positive natural can be written in the form of `S(n)`.
-
+   number_. One way to establish this claim is to show that any non-zero natural
+   can be represented in the form `S(n)`.
 3. Lemma: Every positive natural has a unique predecessor.
 
 --------------------------------------------------------------------------------
