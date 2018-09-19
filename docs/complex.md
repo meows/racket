@@ -187,7 +187,10 @@ same-with-same dimension operations:
   * `ℚ(a, b) * ℚ(c, d) == ℚ(a * c, b * d)`
 
 `ℤ * ℤ` and `ℚ + ℚ` are also similar because they are both 
-different-with-different dimension operations:
+different-with-different dimension operations resembling distribution.
+
+  * `(a + b) * (c + d) == (ac + ad + bc + bd)`
 
   * `ℤ(a, b) * ℤ(c, d) == ℤ(ac + bd, ad + bc)`
   * `ℚ(a, b) + ℚ(c, d) == ℚ(ad + bc, bd)`
+
