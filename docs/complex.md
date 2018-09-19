@@ -147,10 +147,8 @@ statements below:
   * `c * 0 == 0`
   * `ℚ(a, b) * ℚ(b, 1) == ℚ(ab, b)`
 
-Since multiplying by `0` destroys information, we'll never get back `a` even
-though we know that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`. Thus we know that
-no integer solution can be simultaneously consistent with both of the two 
-statements listed above.
+We can see that `ℚ(ab, b) == ℚ(a, 1)` because `ab == ba`. What this means is if
+`b == 0` then the result will always be `0`.
 
 ## Exponentiation
 
@@ -173,6 +171,9 @@ statements listed above.
 
   * `a//b == c//d iff ad//bc`
   * `a//b + c//d == (ad + bc)//bc`
+  * `a//b * c//d == ac//bd`
+  * `-(a//b) == (-a//b)`
+  * `(a//b)^n == a^n//b^n`
 
 ## Commentary on Approach
 
