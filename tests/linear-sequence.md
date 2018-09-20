@@ -4,7 +4,7 @@
 
 Given this function $f$, describe the role of the constants $a$ and $b$.
 
-$f(n) = an + b$
+   $f(n) = an + b$
 
 1. If you were to graph this function, what would happen as $a$ became smaller 
    or larger?
@@ -20,13 +20,18 @@ $f(n) = an + b$
 
 ## Applied
 
-1. Write a generating function for each sequence below.
+1. Use $f$ to generate a new linear sequence of 5 values using starting from 
+   $f(0)$:
+
+   $f(n) = -\frac{1}{3}n + -4$
+
+2. Write a generating function for each linear sequence below:
 
    * $-13, -10, -7, -4, -1, 2...$
    * $3, 7, 11, 15, 19, 23...$
    * $23, 19, 15, 11, 7, 3...$
 
-2. Write a function called $linearSum$ which can determine the sum of a finite 
+3. Write a function called $linearSum$ which can determine the sum of a finite 
    linear series $S$ given three inputs: (1) the first sequence item $S_0$, (2) 
    the last sequence item $S_F$, and (3) the number of sequence items $S_n$.
    Also provide an informal explanation for how you defined the function.

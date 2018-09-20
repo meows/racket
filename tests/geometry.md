@@ -8,15 +8,15 @@
 
 ### Trigonometry
 
-1. Define $sine$ as a ratio.
-2. Define $cosine$ as a ratio.
-3. Define $tangent$ as a ratio.
+1. Define $sine$ as a ratio of sides on a triangle.
+2. Define $cosine$ as a ratio of sides on a triangle.
+3. Define $tangent$ as a ratio of sides on a triangle.
 
 ## Abstract Mastery
 
-$sin(x)^2 + cos(x)^2$
+1. $sin(θ)^2 + cos(θ)^2 =$
 
-$\dfrac{sin(x)}{cos(x)}$ 
+2. $\dfrac{sin(θ)}{cos(θ)} =$
 
 ## Word Problems
 
