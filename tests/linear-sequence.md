@@ -2,26 +2,26 @@
 
 ## Abstract
 
-Given this function $f$, describe the role of the constants $a$ and $b$.
+1. Given this function $f$, describe the role of the constants $a$ and $b$ in
+   terms of velocity and position on a linear sequence.
 
    $f(n) = an + b$
 
-1. If you were to graph this function, what would happen as $a$ became smaller 
+2. If you were to graph this function, what would happen as $a$ became smaller 
    or larger?
-2. If you were to graph this function, what would happen as $b$ became smaller
+3. If you were to graph this function, what would happen as $b$ became smaller
    or larger?
-3. What would happen to the graph if I multiplied all the results of $f$ by 
+4. What would happen to the graph if I multiplied all the results of $f$ by 
    $-1$?
-4. What should I change to move the graph up or down and side to side?
-5. If we are graphing the inputs and outputs of a function onto a 2-dimensional 
+5. What should I change to move the graph up or down and side to side?
+6. If we are graphing the inputs and outputs of a function onto a 2-dimensional 
    graph, where the horizontal axis represented the inputs, and the vertical 
    axis represented the outputs, what sort of graph would we never expect to 
    see, and why?
 
 ## Applied
 
-1. Use $f$ to generate a new linear sequence of 5 values using starting from 
-   $f(0)$:
+1. Use $f$ to generate a new linear sequence of 5 values starting from $f(0)$:
 
    $f(n) = -\frac{1}{3}n + -4$
 

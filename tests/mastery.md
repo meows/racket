@@ -1,20 +1,28 @@
 # Levels of Student Mastery
 
-## Free Exposition
+## Mathematical Narration
 
-The ability to offer exposition of their knowledge on a domain with minimal
-guidance.
+* Communication
 
-## Answer a question without hints
+  The student is interested in the mental model of the listener, and makes sure
+  that their internal mathematical machinery is precisely communicated.
 
-The student is able to show their competency on questions without hints.
+* Free Exposition
 
-## Answer a question with hinting
+  The ability to offer exposition of their knowledge on a domain with minimal
+  guidance.
 
-## Fail to answer a question with hints
+* Answer a question without hints
 
-## Fail to answer a question without hints
+  The student is able to show their competency on questions without hints, but
+  still requires framework or guidance to narrate their knowledge.
 
-## Motivational Failure
+* Answer a question with hinting
+* Fail to answer a question with hints
+* Fail to answer a question without hints
+* Motivational Failure
 
-The student is dispirited by error or distracted by anxiety.
+  The student is dispirited by error or distracted by anxiety, and thus 
+  measurement is noisy.
+
+## 

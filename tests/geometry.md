@@ -2,21 +2,39 @@
 
 ## Terminology
 
-1. Define a circle.
+1. Define a _circle_.
 2. Define $π$ as a ratio.
-3. Define the unit circle.
+3. Define the _unit circle_.
+4. Give a definition for _angle_.
 
 ### Trigonometry
 
-1. Define $sine$ as a ratio of sides on a triangle.
-2. Define $cosine$ as a ratio of sides on a triangle.
-3. Define $tangent$ as a ratio of sides on a triangle.
+Define the following functions as a ratio of sides on a right triangle:
+
+1. $sine =$
+2. $cosine =$.
+3. $tangent =$.
 
 ## Abstract Mastery
 
 1. $sin(θ)^2 + cos(θ)^2 =$
 
 2. $\dfrac{sin(θ)}{cos(θ)} =$
+
+## Rote Practice
+
+Fill in the missing entries for the `Degree` and `Turns` columns, where a single
+turn means to go around the circle once, and a half-turn means to go halfway
+around a circle.
+
+Radian          | Degree | Turns
+------          | ------ | -----------
+$2π$            |        |
+$π$             |        |
+$\frac{1}{2} π$ |        |
+$\frac{1}{4} π$ |        |
+$\frac{1}{6} π$ |        |
+$\frac{1}{8} π$ |        |
 
 ## Word Problems
 
