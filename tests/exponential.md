@@ -61,5 +61,7 @@ Find the powers to the expressions below.
 Give an informal explanation for how you would simplify these expressions:
 
  * $a^x * a^y$
+
  * $\dfrac{a^x}{a^y}$
+
  * $(a^x)^y$
