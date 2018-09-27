@@ -12,8 +12,8 @@
 Define the following functions as a ratio of sides on a right triangle:
 
 1. $sine =$
-2. $cosine =$.
-3. $tangent =$.
+2. $cosine =$
+3. $tangent =$
 
 ## Abstract Mastery
 
@@ -23,18 +23,28 @@ Define the following functions as a ratio of sides on a right triangle:
 
 ## Rote Practice
 
-Fill in the missing entries for the `Degree` and `Turns` columns, where a single
-turn means to go around the circle once, and a half-turn means to go halfway
-around a circle.
+Fill in the missing entries for the `Degrees` and `Turns` columns, where a 
+single turn means to go around the circle once, and a half-turn means to go 
+halfway around a circle.
 
-Radian          | Degree | Turns
-------          | ------ | -----------
-$2π$            |        |
-$π$             |        |
-$\frac{1}{2} π$ |        |
-$\frac{1}{4} π$ |        |
-$\frac{1}{6} π$ |        |
-$\frac{1}{8} π$ |        |
+Radians         | Degrees | Turns
+-------         | ------- | -----
+$2π$            |         |
+$π$             |         |
+$\frac{1}{2} π$ |         |
+$\frac{1}{4} π$ |         |
+$\frac{1}{6} π$ |         |
+$\frac{1}{8} π$ |         |
+
+Try to predict what value would come out:
+
+> Recall that a 30-60-90 degree triangle has a peculiar ratio of sides.
+
+$tan(\frac{1}{4} π) =$
+
+$sin(\frac{1}{6} π) =$
+
+$cos(\frac{2}{6} π) =$
 
 ## Word Problems
 

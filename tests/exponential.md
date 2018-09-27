@@ -4,6 +4,8 @@
 
 1. Given the expression: $a^b = x$, identify the (1) base, (2) exponent, and (3) power.
 
+2. What's a multiplicative inverse?
+
 ## Abstract Mastery
 
 1. $a^x + a^y$
@@ -26,9 +28,11 @@
 
 10. $(a^x)^\frac{1}{x}$
 
-11. $\dfrac{a^{-b}}{x^{-y}}$
+11. $(a^\frac{1}{x})^x$
 
-12. $\dfrac{a^6 * b^3}{a^4 * b ^ 5}$
+12. $\dfrac{a^{-b}}{x^{-y}}$
+
+13. $\dfrac{a^6 * b^3}{a^4 * b ^ 5}$
 
 ## Concrete Mastery
 
