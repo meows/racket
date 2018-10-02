@@ -23,7 +23,7 @@
 
 1. Use $f$ to generate a new linear sequence of 5 values starting from $f(0)$:
 
-   $f(n) = -\frac{1}{3}n + -4$
+   $f(n) = -\frac{n}{3} + -4$
 
 2. Write a generating function for each linear sequence below:
 

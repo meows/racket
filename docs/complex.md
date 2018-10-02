@@ -7,10 +7,8 @@ There is a natural group $(ℕ, 0, S)$.
 3. $S(n) ≠ 0$
 4. $S(a) = S(b)$ *iff* $a = b$
 5. Let $P$ be a boolean function on the naturals. If $P(0)$ and $P(S(n))$, then 
-   $P(n)$.  Another restatement of this is: Let $ℕ$ be the smallest set which obeys all
-   the above 4 rules. Both of these seemingly different restatements of the same
-   rule serve to exclude anything extra from what we've defined for our set. 
-   They also make sure that an inductive proof can cover the entire set.
+   $P(n)$. Another restatement of this is: Let $ℕ$ be the smallest set which 
+   obeys all the above 4 rules.
 
 ## Addition
 
@@ -47,28 +45,28 @@ as pairs of naturals of the form $Z(a, b)$ where $\{a, b\} ∈ ℕ$.
 Equality of the integers is defined by equality of the naturals in a 
 comparison of different-with-different combinations.
 
-  * $Z(a, b) = Z(c, d)$ _iff_ $a + d = b + c$
+  * $Z(a, b) := Z(c, d)$ _iff_ $a + d = b + c$
 
 ## Addition
 
 Addition can be thought of as an operation that combines same-with-same 
 dimensions.
 
-  * $Z(a, b) + Z(c, d) = Z(a + c, b + d)$
+  * $Z(a, b) + Z(c, d) := Z(a + c, b + d)$
 
 ## Additive Inverse
 
 This is a notable extension over the naturals because now $+$ becomes an 
 invertible function.
 
-  * $-Z(a, b) = Z(b, a)$
-  * $Z(a, b) - Z(c, d) = Z(a, b) + -Z(c, d)$
+  * $-Z(a, b) := Z(b, a)$
+  * $Z(a, b) - Z(c, d) := Z(a, b) + -Z(c, d)$
 
 ## Multiplication
 
 $Z_A * Z_B$ can be interpreted as $Z(Z_A · Z_B, Z_A × Z_B)$.
 
-  * $Z(a, b) * Z(c, d) = Z(a c + b d, a d + b c)$
+  * $Z(a, b) * Z(c, d) := Z(a c + b d, a d + b c)$
 
 --------------------------------------------------------------------------------
 
@@ -146,20 +144,6 @@ $b = 0$ then the result will always be $0$.
   * $(Q(a, b)^x)^y = Q(a, b)^{xy}$
   * $Q(a, b)^x * Q(c, d)^x = Q(ac, bd)^x$
 
-## Alternative Notation
-
-  * $a―b = c―d$ _iff_ $a + d = b + c$
-  * $a―b + c―d = (a + c)―(b + d)$
-  * $-(a―b) = b―a$
-  * $a―b - c―d = a―b + -(c―d)$
-  * $a―b * c―d = (ac + bd)―(ad + bc)$
-
-  * $a//b = c//d$ _iff_ $ad//bc$
-  * $a//b + c//d = (ad + bc)//bc$
-  * $(a//b) * (c//d) = ac//bd$
-  * $-(a//b) = (-a//b)$
-  * $(a//b)^n = a^n // b^n$
-
 ## Commentary on Approach
 
 Speaking informally, we might say that additive inverses are what make integers
@@ -187,8 +171,5 @@ expressed in the form $C(a, b)$ such that $\{ a, b \} ∈ ℝ$.
 
 ## Addition
 
-Addition of the complexes can be viewed as a dot-combination with $+$.
-
   * $C(a, b) + C(c, d) = C(a + c, b + d)$
   * $C(a, b) * C(c, d) = C(ac - bd, ad + bc)$
-  * $(x + y) * z = zx + yz$

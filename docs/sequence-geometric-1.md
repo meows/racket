@@ -31,28 +31,33 @@ common ratio consecutive values.
 (map (geometric  2 2) (range 7)) ;; → '(2   4  8   16  32   64  128)
 (map (geometric  4 3) (range 7)) ;; → '(4  12 36  108 324  972 2916)
 ```
+
 But how might we find the sum of a geometric series? If we imagined that the
 following problem represented the start of the summation of a geometric sequence:
 
-* `(s0 * r^0) + (s0 * r^1) + (s0 * r^2) + (s0 * r^3)... (s0 * r^n)`
+### Finite
 
-``` clojure
-(+ (* s0 (expt ratio 0))
-   (* s0 (expt ratio 1))
-   (* s0 (expt ratio 2))
-   (* s0 (expt ratio n))
-)
+In the finite version, subtracting the sums of the two sequences leaves us with
+two terms. Some discussions of the formula will have $r^n$ instead of 
+$r^{n + 1}$ because they choose their concept of natural to exclude $0$ for 
+beauty, but I see that as a mediocre motivation compared to the pedagogical
+value of communication on a difficult subject.
 
-```
+$$S = ar^0 + ar^1 + ar^2 + ar^3 + ... + ar^n$$
 
-``` clojure
-(define (geometric-sum initial ratio terms)
-   (* initial 
-      (/ (- 1 (expt ratio terms)) 
-         (- 1 r))))
+$$S * r = ar^1 + ar^2 + ar^3 + ar^4 + ... + ar^{n + 1}$$
 
-(define (geometric-sum initial ratio terms)
-   (* initial 
-      (+ (expt ratio terms) -1) 
-      (/ 1 (- 1 r))))
-```
+$$S - Sr = ar^0 - ar^{n + 1}$$
+
+$$S(1 - r) = a(1 - r^{n + 1})$$
+
+$$S = \dfrac{a(1 - r^{n + 1})}{1 - r}$$
+
+### Infinite
+
+* $S = ar^0 + ar^1 + ar^2 + ar^3 + ... + ar^n$
+* $S * r = ar^1 + ar^2 + ar^3 + ar^4 + ... + ar^{n + 1}$
+* $S - Sr = ar^0$
+* $S(1 - r) = a$
+
+* $S = \dfrac{a}{1 - r}$

@@ -14,12 +14,8 @@ Use `define` and save:
 1. Define a function called `triangle-area` which can tell you the area of a 
    triangle based on two natural inputs, `base` and `height`.
 
-2. Given this function definition in math:
+2. Given this function $f$ on any natural $n$:
+   * $f(0) = 5$
+   * $f(n) = f(n-1) * 2$
 
-```
-f(0) = 5
-f(n) = f(n-1) * 2
-```
-
-Rewrite it twice, once as a recursive function, another time as an exponential
-function which generates a geometric sequence from the naturals.
+Rewrite this as a Racket function.

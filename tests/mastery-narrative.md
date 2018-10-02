@@ -5,7 +5,8 @@
 * Communication
 
   The student is interested in the mental model of the listener, and makes sure
-  that their internal mathematical machinery is precisely communicated.
+  that their internal mathematical machinery is precisely communicated. The
+  student expects to be understood and effectively works toward the goal.
 
 * Free Exposition
 
@@ -24,5 +25,3 @@
 
   The student is dispirited by error or distracted by anxiety, and thus 
   measurement is noisy.
-
-
