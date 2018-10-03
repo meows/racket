@@ -8,37 +8,45 @@
 
 ## Abstract Mastery
 
+Simplify the following expressions when possible:
+
 1. $a^x + a^y$
 
-2. $a^x * a^y$
+2. $a^x - a^y$
 
-3. $\dfrac{a^x}{a^y}$
+3. $a^x * a^y$
 
-4. $(a^x)^y$
+4. $\dfrac{a^x}{a^y}$
 
-5. $a^1$
+5. $(a^x)^y$
 
-6. $a^0$
+6. $a^1$
 
-7. $a^{-1}$
+7. $a^0$
 
-8. $a^{-2}$
+8. $a^{-1}$
 
-9. $a^x * a^{-x}$
+9. $a^{-2}$
 
-10. $(a^x)^\frac{1}{x}$
+10. $a^{\frac{1}{3}}$
 
-11. $(a^\frac{1}{x})^x$
+11. $a^{-\frac{1}{3}}$
 
-12. $\dfrac{a^{-b}}{x^{-y}}$
+12. $a^x * a^{-x}$
 
-13. $\dfrac{a^6 * b^3}{a^4 * b^5}$
+13. $(a^x)^\frac{1}{x}$
 
-14. $\dfrac{a^{-4} * b^3 * c^{- \frac{1}{3}}}{a^3 * b^{-5} * c^3}$
+14. $(a^\frac{1}{x})^x$
+
+15. $\dfrac{a^{-b}}{x^{-y}}$
+
+16. $\dfrac{a^6 * b^3}{a^4 * b^5}$
+
+17. $\dfrac{a^{-4} * b^3 * c^{- \frac{1}{3}}}{a^3 * b^{-5} * c^3}$
 
 ## Concrete Mastery
 
-Find the powers to the expressions below.
+Simplify the following expressions when possible:
 
 1. $0^0$
 
@@ -46,32 +54,26 @@ Find the powers to the expressions below.
 
 3. $1^0$
 
-4. $4^{2.5}$
+4. $-1^{119}$
 
-5. $8^{\frac{2}{3}}$
+5. $3.28594190 * 10^{8}$
 
-6. $16^{0}$
+6. $4^{2.5}$
 
-7. $16^\frac{1}{2}$
+7. $8^{\frac{2}{3}}$
 
-8.  $16^\frac{1}{4}$
+8. $16^{0}$
 
-9. $16^\frac{3}{4}$
+9. $16^\frac{1}{2}$
 
-10. $16^{-2}$
+10. $16^\frac{1}{4}$
 
-11. $16^{-\frac{1}{2}}$
+11. $16^\frac{3}{4}$
 
-12. $(16^4 * 16^{-4})^{-4}$
+12. $16^{-2}$
 
-13. $\dfrac{17^4 * 17^{-9} * 13^3 * 13^{-2}}{17^{-6} * 13^{0}}$
+13. $16^{-\frac{1}{2}}$
 
-## Narrative Mastery
+14. $(16^4 * 16^{-4})^{-4}$
 
-Give an informal explanation for how you would simplify these expressions:
-
- * $a^x * a^y$
-
- * $\dfrac{a^x}{a^y}$
-
- * $(a^x)^y$
+15. $\dfrac{5^2 * 5^{-5} * 2^3 * 2^{-2}}{5^{-3} * 2^{0}}$
