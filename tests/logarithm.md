@@ -2,6 +2,8 @@
 
 ## Terminology
 
+1. In the expression $a^b = x$
+
 1. What's a logarithm?
 
   * $log(base, power) = exponent$
