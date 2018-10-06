@@ -38,7 +38,7 @@ Simplify the following expressions when possible:
 
 14. $(a^\frac{1}{x})^x$
 
-15. $\dfrac{a^{-b}}{x^{-y}}$
+15. $\dfrac{a^{-x}}{b^{-y}}$
 
 16. $\dfrac{a^6 * b^3}{a^4 * b^5}$
 
