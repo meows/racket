@@ -37,3 +37,6 @@
    Also provide an informal explanation for how you defined the function.
 
    $linearSum(S_0, S_F, S_n) =$
+
+## Graph
+

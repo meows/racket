@@ -44,15 +44,15 @@ is no rational answer.
 
 * $(\dfrac{a}{b})^n := \dfrac{a^n}{b^n}$
 
-* $(\dfrac{a}{b})^{-1} := \dfrac{b}{a}$
+* $(\dfrac{a}{b})^{-n} := (\dfrac{b}{a})^n$
 
 ## Identities
 
 Based on the above rules we can now list some important properties of the
 rationals. Let's say that $\{ x, y, z \} ∈ ℚ$:
 
-Property | Description
--------- | -----------
+Property                    | Description
+--------                    | -----------
 $x + y = y + x$             | $+$ is commutative
 $(x + y) + z = x + (y + z)$ | $+$ is associative
 $0 + x = x$                 | $+$ has an identity element
