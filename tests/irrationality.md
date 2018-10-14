@@ -16,4 +16,4 @@ We write $x$ in the form of a fraction, where $\{ a, b \} ∈ ℕ^+$:
 3. $a^2 = 2b^2$
 
 Here we can infer that $a^2$ must be an even number, because it's equal to a
-natural multiplied by 2.
+natural multiplied by 2. For now let us say that $z := a^2$.
