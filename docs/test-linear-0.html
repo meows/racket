@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Linear Sequences · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Working with Functions on Linear Sequences"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Linear Sequences · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="# Working with Functions on Linear Sequences"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Linear Sequences · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;working-with-functions-on-linear-sequences&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#working-with-functions-on-linear-sequences&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Working with Functions on Linear Sequences&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Linear Sequences · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;working-with-functions-on-linear-sequences&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#working-with-functions-on-linear-sequences&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Working with Functions on Linear Sequences&lt;/h1&gt;
+"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -12,7 +14,7 @@
             {"zIndex":100}
           )
         });
-        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Test</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul><li class="navListItem"><a class="navItem" href="/docs/challenge-1">Challenge #1</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-2">Challenge #2</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-3">Challenge #3</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-4">Challenge #4</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-5">Challenge #5</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Warmer</h3><ul><li class="navListItem"><a class="navItem" href="/docs/challenge-6">Challenge #6</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-7">Challenge #7</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-8">Challenge #8</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-9">Challenge #9</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-10">Challenge #10</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-11">Challenge #11</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-12">Challenge #12</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-13">Challenge #13</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-14">Challenge #14</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-15">Challenge #15</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/test-linear-0">Linear Sequences</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/dictionary">Dictionary</a></li></ul></div></div></section></div><script>
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Test</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul><li class="navListItem"><a class="navItem" href="/docs/challenge-1">Challenge #1</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-2">Challenge #2</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-3">Challenge #3</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-4">Challenge #4</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-5">Challenge #5</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Warmer</h3><ul><li class="navListItem"><a class="navItem" href="/docs/challenge-6">Challenge #6</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-7">Challenge #7</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-8">Challenge #8</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-9">Challenge #9</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-10">Challenge #10</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-11">Challenge #11</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-12">Challenge #12</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-13">Challenge #13</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-14">Challenge #14</a></li><li class="navListItem"><a class="navItem" href="/docs/challenge-15">Challenge #15</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/test-linear-0">Linear Sequences</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/dictionary">Dictionary</a></li></ul></div></div></section></div><script>
             document.addEventListener('DOMContentLoaded', function() {
               createToggler('#navToggler', '#docsNav', 'docsSliderActive');
               createToggler('#tocToggler', 'body', 'tocActive');
@@ -45,55 +47,55 @@ calculator is highly encouraged to avoid tedious work, as the student should've
 already been tested on basic arithmetic and order of operations.</p>
 <h2><a class="anchor" aria-hidden="true" id="applied-questions"></a><a href="#applied-questions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Applied Questions</h2>
 <h3><a class="anchor" aria-hidden="true" id="concrete-values"></a><a href="#concrete-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Concrete Values</h3>
-<p>There's a function <code>f</code> which accepts for input a natural <code>n</code>, and its definition
-is <code>f(n) = -10n + 5</code>.</p>
+<p>There's a function $f$ which accepts for input a natural $n$, and its definition
+is $f(n) = -10n + 5$.</p>
 <ul>
-<li>List the values of this function from <code>f(0)</code> to <code>f(5)</code>.</li>
+<li>List the values of this function from $f(0)$ to $f(5)$.</li>
 <li>Does this sequence have a constant or changing velocity?</li>
-<li>What is <code>f(100)</code>?</li>
+<li>What is $f(100)$?</li>
 <li>If I were to graph this function, how would you describe the shape?</li>
 </ul>
 <hr>
-<p>There's a function <code>f</code> which accepts for input a natural <code>x</code>, and its definition
-is <code>f(x) = x/2 - 4</code>.</p>
+<p>There's a function $f$ which accepts for input a natural $x$, and its definition
+is $f(x) = x/2 - 4$.</p>
 <ul>
-<li>List the values of this function from <code>f(0)</code> to <code>f(5)</code>.</li>
+<li>List the values of this function from $f(0)$ to $f(5)$.</li>
 <li>Does this sequence have a constant or changing velocity?</li>
-<li>What is <code>f(100)</code>?</li>
+<li>What is $f(100)$?</li>
 <li>If I were to graph this function, how would you describe the shape?</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="recursive"></a><a href="#recursive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recursive</h3>
-<p>There's a function <code>f</code> which accepts for input a natural <code>n</code>, and its definition
+<p>There's a function $f$ which accepts for input a natural $n$, and its definition
 is:</p>
 <ol>
-<li><code>f(0) = 4</code></li>
-<li><code>f(n) = f(n-1) + 3</code></li>
+<li>$f(0) = 4$</li>
+<li>$f(n) = f(n-1) + 3$</li>
 </ol>
 <ul>
-<li>List the values of this function from <code>f(0)</code> to <code>f(5)</code>.</li>
-<li>What is <code>f(100)</code>?</li>
+<li>List the values of this function from $f(0)$ to $f(5)$.</li>
+<li>What is $f(100)$?</li>
 <li>Does this sequence have a constant or changing velocity?</li>
 <li>Could you rewrite the function in a non-recursive way?</li>
-<li>Graph the values of this function from <code>f(0)</code> to <code>f(5)</code>.</li>
+<li>Graph the values of this function from $f(0)$ to $f(5)$.</li>
 </ul>
 <hr>
-<p>There's a function <code>f</code> which accepts for input a natural <code>n</code>, and its definition
+<p>There's a function $f$ which accepts for input a natural $n$, and its definition
 is:</p>
 <ol>
-<li><code>f(0) = 0</code></li>
-<li><code>f(n) = f(n-1) + 2n + -1</code></li>
+<li>$f(0) = 0$</li>
+<li>$f(n) = f(n-1) + 2n + -1$</li>
 </ol>
 <ul>
-<li>List the values of this function from <code>f(0)</code> to <code>f(5)</code>.</li>
-<li>What is <code>f(100)</code>?</li>
+<li>List the values of this function from $f(0)$ to $f(5)$.</li>
+<li>What is $f(100)$?</li>
 <li>Does this sequence have a constant or changing velocity?</li>
 <li>Could you rewrite this function in a non-recursive way?</li>
-<li>Graph the values of this function from <code>f(0)</code> to <code>f(5)</code>.</li>
+<li>Graph the values of this function from $f(0)$ to $f(5)$.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="from-a-table-of-values"></a><a href="#from-a-table-of-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>From a Table of Values</h3>
 <p>Below is a table of values containing measurements that somebody took on a
-moving car, where <code>seconds</code> represents how many seconds have passed from the
-start of measurement, and <code>meters</code> represents how far the car was at every
+moving car, where $seconds$ represents how many seconds have passed from the
+start of measurement, and $meters$ represents how far the car was at every
 second of measurement.</p>
 <table>
 <thead>
@@ -115,13 +117,13 @@ second of measurement.</p>
 <li><p>How far was the car from when we first started measuring?</p></li>
 <li><p>Do the sequence of values for the car's distance have a constant or changing
 velocity?</p></li>
-<li><p>Write a function called <code>meters</code> which could generate the same sequence of
-values as the table, and let it take <code>s</code> seconds for input.</p></li>
+<li><p>Write a function called $meters$ which could generate the same sequence of
+values as the table, and let it take $s$ seconds for input.</p></li>
 </ol>
 <hr>
 <p>Below is a table of values containing measurements that somebody took on a
-moving car, where <code>seconds</code> represents how many seconds have passed from
-the start of measurement, and <code>meters</code> represents how far the car was at
+moving car, where $seconds$ represents how many seconds have passed from
+the start of measurement, and $meters$ represents how far the car was at
 every second of measurement.</p>
 <table>
 <thead>
@@ -143,49 +145,49 @@ every second of measurement.</p>
 <li><p>How far was the car from when we first started measuring?</p></li>
 <li><p>Do the sequence of values for the car's distance have a constant or changing
 velocity?</p></li>
-<li><p>Write a function called <code>meters</code> which could generate the same sequence of
-values as the table, and let it take <code>s</code> seconds for input.</p></li>
+<li><p>Write a function called $meters$ which could generate the same sequence of
+values as the table, and let it take $s$ seconds for input.</p></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="from-a-graph"></a><a href="#from-a-graph" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>From a Graph</h3>
 <p>Below is a graph of values containing measurements that somebody took on a
-moving car, where <code>seconds</code> represents the time passed since we started
-measuring, and <code>meters</code> represents the distance the car traveled based on the
+moving car, where $seconds$ represents the time passed since we started
+measuring, and $meters$ represents the distance the car traveled based on the
 time.</p>
-<p>Write a function called <code>meters</code> to represent this graph, and let it take a
-natural input <code>s</code> for seconds.</p>
+<p>Write a function called $meters$ to represent this graph, and let it take a
+natural input $s$ for seconds.</p>
 <p><img src="/img/test-2.png" alt="test-2.png"></p>
 <hr>
 <p>Below is a graph of values containing measurements that somebody took on a
-moving car, where <code>seconds</code> represents the time passed since we started
-measuring, and <code>meters</code> represents the distance the car traveled based on the
+moving car, where $seconds$ represents the time passed since we started
+measuring, and $meters$ represents the distance the car traveled based on the
 time.</p>
-<p>Write a function called <code>meters</code> to represent this graph, and let it take a
-natural input <code>s</code> for seconds.</p>
+<p>Write a function called $meters$ to represent this graph, and let it take a
+natural input $s$ for seconds.</p>
 <p><img src="/img/test-1.png" alt="test-1.png"></p>
 <hr>
 <p>Below is a graph of values containing measurements that somebody took on a
-moving cat, where <code>seconds</code> represents the time passed since we started
-measuring, and <code>meters</code> represents the distance the cat traveled based on the
+moving cat, where $seconds$ represents the time passed since we started
+measuring, and $meters$ represents the distance the cat traveled based on the
 time.</p>
-<p>Write a function called <code>meters</code> to represent this graph, and let it take a
-natural input <code>s</code> for seconds.</p>
+<p>Write a function called $meters$ to represent this graph, and let it take a
+natural input $s$ for seconds.</p>
 <p><img src="/img/test-3.png" alt="test-1.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="abstract-mastery"></a><a href="#abstract-mastery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Abstract Mastery</h2>
 <blockquote>
 <p>A <strong>constant</strong> means a value which doesn't change, as opposed to a variable.</p>
 </blockquote>
-<p>There is a function <code>f</code> which accepts any natural input <code>n</code>, and its definition
-is <code>f(n) = an + b</code>, where <code>a</code> and <code>b</code> are constants that I've hidden from you.</p>
+<p>There is a function $f$ which accepts any natural input $n$, and its definition
+is $f(n) = an + b$, where $a$ and $b$ are constants that I've hidden from you.</p>
 <ol>
 <li><p>If you were to graph this function, what would it look like?</p></li>
-<li><p>What would happen to the graph as I make <code>a</code> bigger or smaller? What happens
-when <code>a</code> is positive vs negative?</p></li>
-<li><p>If I were to create a sequence of numbers from <code>f</code> starting from <code>f(0)</code>, what
-do you expect to happen as you make <code>a</code> bigger or smaller? What happens when
-<code>a</code> is negative?</p></li>
-<li><p>What would happen to the graph as I make <code>b</code> bigger or smaller?</p></li>
-<li><p>If I were to create a sequence of numbers from <code>f</code> starting from <code>f(0)</code>, what
-do you expect to happen as you make <code>b</code> bigger or smaller?</p></li>
+<li><p>What would happen to the graph as I make $a$ bigger or smaller? What happens
+when $a$ is positive vs negative?</p></li>
+<li><p>If I were to create a sequence of numbers from $f$ starting from $f(0)$, what
+do you expect to happen as you make $a$ bigger or smaller? What happens when
+$a$ is negative?</p></li>
+<li><p>What would happen to the graph as I make $b$ bigger or smaller?</p></li>
+<li><p>If I were to create a sequence of numbers from $f$ starting from $f(0)$, what
+do you expect to happen as you make $b$ bigger or smaller?</p></li>
 <li><p>If I wanted to keep the velocity of the graph the same, but move it down 5
 units, how would I do so?</p></li>
 </ol>
@@ -194,4 +196,4 @@ units, how would I do so?</p></li>
 inputs, and the veritcal axis represents the outputs. Would you ever expect a
 vertical line? How would you interpret that?</p>
 <p>How might ratio and velocity be related?</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/challenge-15">← Challenge #15</a><a class="docs-next button" href="/docs/glossary">Glossary →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#applied-questions">Applied Questions</a><ul class="toc-headings"><li><a href="#concrete-values">Concrete Values</a></li><li><a href="#recursive">Recursive</a></li><li><a href="#from-a-table-of-values">From a Table of Values</a></li><li><a href="#from-a-graph">From a Graph</a></li></ul></li><li><a href="#abstract-mastery">Abstract Mastery</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/challenge-15"><span class="arrow-prev">← </span><span>Challenge #15</span></a><a class="docs-next button" href="/docs/glossary"><span>Glossary</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#applied-questions">Applied Questions</a><ul class="toc-headings"><li><a href="#concrete-values">Concrete Values</a></li><li><a href="#recursive">Recursive</a></li><li><a href="#from-a-table-of-values">From a Table of Values</a></li><li><a href="#from-a-graph">From a Graph</a></li></ul></li><li><a href="#abstract-mastery">Abstract Mastery</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>

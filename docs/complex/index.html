@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>complex · Racket Companion</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;naturals-ℕ&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#naturals-ℕ&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Naturals (ℕ)&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="complex · Racket Companion"/><meta property="og:type" content="website"/><meta property="og:url" content="https://rid.pw/index.html"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;naturals-ℕ&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#naturals-ℕ&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Naturals (ℕ)&lt;/h1&gt;
+"/><meta property="og:image" content="https://rid.pw/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://rid.pw/img/docusaurus.png"/><meta name="robots" content="noindex"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://rid.pw/blog/atom.xml" title="Racket Companion Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://rid.pw/blog/feed.xml" title="Racket Companion Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-119533557-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/docusaurus.svg" alt="Racket Companion"/><h2 class="headerTitleWithLogo">Racket Companion</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/intro" target="_self">Guide</a></li><li class=""><a href="/docs/challenge-1" target="_self">Exercises</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">complex</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="naturals-ℕ"></a><a href="#naturals-ℕ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Naturals (ℕ)</h1>
+<p>There is a natural group $(ℕ, 0, S)$.</p>
+<ol>
+<li>$0 ∈ ℕ$</li>
+<li>$S(n) ∈ ℕ$</li>
+<li>$S(n) ≠ 0$</li>
+<li>$S(a) = S(b)$ <em>iff</em> $a = b$</li>
+<li>Let $P$ be a boolean function on the naturals. If $P(0)$ and $P(S(n))$, then
+$P(n)$. Another restatement of this is: Let $ℕ$ be the smallest set which
+obeys all the above 4 rules.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="addition"></a><a href="#addition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addition</h2>
+<ul>
+<li>$0 + m := m$</li>
+<li>$S(n) + m := (n + m)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="multiplication"></a><a href="#multiplication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiplication</h2>
+<ul>
+<li>$0 * m := 0$</li>
+<li>$S(n) * m := (n * m) + m$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="exponentiation"></a><a href="#exponentiation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exponentiation</h2>
+<ul>
+<li>$m^0 := 1$</li>
+<li>$m^{S(n)} := m^n * m$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="positivity"></a><a href="#positivity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Positivity</h2>
+<ol>
+<li>Definition: a natural number is said to be positive if it's not $0$.</li>
+<li>Lemma: <em>Addition involving any positive number results in another positive
+number</em>. One way to establish this claim is to show that any non-zero natural
+can be represented in the form $S(n)$.</li>
+<li>Lemma: Every positive natural has a unique predecessor.</li>
+</ol>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="integers-ℤ"></a><a href="#integers-ℤ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integers (ℤ)</h1>
+<p>There is an integer commutative ring $(ℤ, +, *)$. An integer can be constructed
+as pairs of naturals of the form $Z(a, b)$ where ${a, b} ∈ ℕ$.</p>
+<h2><a class="anchor" aria-hidden="true" id="equality"></a><a href="#equality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Equality</h2>
+<p>Equality of the integers is defined by equality of the naturals in a
+comparison of different-with-different combinations.</p>
+<ul>
+<li>$Z(a, b) := Z(c, d)$ <em>iff</em> $a + d = b + c$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="addition-1"></a><a href="#addition-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addition</h2>
+<p>Addition can be thought of as an operation that combines same-with-same
+dimensions.</p>
+<ul>
+<li>$Z(a, b) + Z(c, d) := Z(a + c, b + d)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="additive-inverse"></a><a href="#additive-inverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additive Inverse</h2>
+<p>This is a notable extension over the naturals because now $+$ becomes an
+invertible function.</p>
+<ul>
+<li>$-Z(a, b) := Z(b, a)$</li>
+<li>$Z(a, b) - Z(c, d) := Z(a, b) + -Z(c, d)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="multiplication-1"></a><a href="#multiplication-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiplication</h2>
+<p>$Z_A * Z_B$ can be interpreted as $Z(Z_A · Z_B, Z_A × Z_B)$.</p>
+<ul>
+<li>$Z(a, b) * Z(c, d) := Z(a c + b d, a d + b c)$</li>
+</ul>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="rationals-ℚ"></a><a href="#rationals-ℚ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rationals (ℚ)</h1>
+<p>There is a rational field $(ℚ, +, *)$. A rational can be constructed as pairs of
+integers of the form $Q(a, b)$ where ${ a, b } ∈ ℤ$ and $b ≠ 0$.</p>
+<h2><a class="anchor" aria-hidden="true" id="equality-1"></a><a href="#equality-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Equality</h2>
+<ul>
+<li>$Q(a, b) = Q(c, d)$ <em>iff</em> $ad = bc$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="addition-2"></a><a href="#addition-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addition</h2>
+<p>Addition between ℚ-tuples can be viewed as: [a b] + [c d] = ([a b] × [c d], bd).</p>
+<ul>
+<li>$Q(a, b) + Q(c, d) = Q(ad + bc, bd)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="additive-inverse-1"></a><a href="#additive-inverse-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additive Inverse</h2>
+<ul>
+<li>$-Q(a, b) = Q(-a, b)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="multiplication-2"></a><a href="#multiplication-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiplication</h2>
+<ul>
+<li>$Q(a, b) * Q(c, d) = Q(ac, bd)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="multiplicative-inverse"></a><a href="#multiplicative-inverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiplicative Inverse</h2>
+<ul>
+<li>$Q(a, b)^{-1} = Q(b, a)$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="division"></a><a href="#division" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Division</h2>
+<p>Division of two rationals can be described as a different-with-different
+dimension operation.</p>
+<ul>
+<li>$Q(a, b) / Q(c, d) = Q(a, b) * Q(c, d)^{-1}$</li>
+<li>$Q(a, b) / Q(c, d) = Q(ad, bc)$</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="division-by-1"></a><a href="#division-by-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Division by 1</h3>
+<p>These behave exactly like the integers, and thus we can define a mapping between
+a subset of the rationals and the integers.</p>
+<ul>
+<li>$Q(a, 1) + Q(b, 1) = Q(a + b, 1)$</li>
+<li>$Q(a, 1) * Q(b, 1) = Q(a * b, 1)$</li>
+<li>$-Q(a, 1) = Q(-a, 1)$</li>
+</ul>
+<table>
+<thead>
+<tr><th>Rational</th><th>Integer</th></tr>
+</thead>
+<tbody>
+<tr><td>$Q(-2, 1)$</td><td>$-2$</td></tr>
+<tr><td>$Q(-1, 1)$</td><td>$-1$</td></tr>
+<tr><td>$Q(0, 1)$</td><td>$0$</td></tr>
+<tr><td>$Q(1, 1)$</td><td>$1$</td></tr>
+<tr><td>$Q(2, 1)$</td><td>$2$</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="division-by-0"></a><a href="#division-by-0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Division by 0</h3>
+<p>The domain limitation on $Q(a, b)$ where $b ≠ 0$ is implied by the two
+statements below:</p>
+<ul>
+<li>$c * 0 = 0$</li>
+<li>$Q(a, b) * Q(b, 1) = Q(ab, b)$</li>
+</ul>
+<p>We can see that $Q(ab, b) = Q(a, 1)$ because $ab = ba$. What this means is if
+$b = 0$ then the result will always be $0$.</p>
+<h2><a class="anchor" aria-hidden="true" id="exponentiation-1"></a><a href="#exponentiation-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exponentiation</h2>
+<ul>
+<li>$Q(a, b)^n = Q(a^n, b^n)$</li>
+<li>$Q(a, b)^{-1} = Q(b, a)$</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="identities"></a><a href="#identities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identities</h3>
+<ul>
+<li>$Q(a, b)^x * Q(a, b)^y = Q(a, b)^{x + y}$</li>
+<li>$(Q(a, b)^x)^y = Q(a, b)^{xy}$</li>
+<li>$Q(a, b)^x * Q(c, d)^x = Q(ac, bd)^x$</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="commentary-on-approach"></a><a href="#commentary-on-approach" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Commentary on Approach</h2>
+<p>Speaking informally, we might say that additive inverses are what make integers
+more powerful over naturals. We might also say that multiplicative inverses are
+what make the rationals more powerful over the integers.</p>
+<p>Furthermore, $ℤ + ℤ$ and $ℚ * ℚ$ are similar because they are both
+same-with-same dimension operations:</p>
+<ul>
+<li>$Z(a, b) + Z(c, d) = Z(a + c, b + d)$</li>
+<li>$Q(a, b) * Q(c, d) = Q(a * c, b * d)$</li>
+<li>$C(a, b) + C(c, d) = C(a + c, b + d)$</li>
+</ul>
+<p>$ℤ * ℤ$ and $ℚ + ℚ$ are also similar because they are both
+different-with-different dimension operations resembling distribution.</p>
+<ul>
+<li>$(a + b) * (c + d) = (ac + bd + ad + bc)$</li>
+<li>$Z(a, b) * Z(c, d) = Z(ac + bd, ad + bc)$</li>
+<li>$Q(a, b) + Q(c, d) = Q(ad + bc, bd)$</li>
+</ul>
+<hr>
+<p>There's a triple which forms a field $(ℂ, +, *)$ where a member of $ℂ$ is
+expressed in the form $C(a, b)$ such that ${ a, b } ∈ ℝ$.</p>
+<h2><a class="anchor" aria-hidden="true" id="addition-3"></a><a href="#addition-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Addition</h2>
+<ul>
+<li>$C(a, b) + C(c, d) = C(a + c, b + d)$</li>
+<li>$C(a, b) * C(c, d) = C(ac - bd, ad + bc)$</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#addition">Addition</a></li><li><a href="#multiplication">Multiplication</a></li><li><a href="#exponentiation">Exponentiation</a></li><li><a href="#positivity">Positivity</a></li><li><a href="#equality">Equality</a></li><li><a href="#addition-1">Addition</a></li><li><a href="#additive-inverse">Additive Inverse</a></li><li><a href="#multiplication-1">Multiplication</a></li><li><a href="#equality-1">Equality</a></li><li><a href="#addition-2">Addition</a></li><li><a href="#additive-inverse-1">Additive Inverse</a></li><li><a href="#multiplication-2">Multiplication</a></li><li><a href="#multiplicative-inverse">Multiplicative Inverse</a></li><li><a href="#division">Division</a><ul class="toc-headings"><li><a href="#division-by-1">Division by 1</a></li><li><a href="#division-by-0">Division by 0</a></li></ul></li><li><a href="#exponentiation-1">Exponentiation</a><ul class="toc-headings"><li><a href="#identities">Identities</a></li></ul></li><li><a href="#commentary-on-approach">Commentary on Approach</a></li><li><a href="#addition-3">Addition</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Racket Companion" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://docs.racket-lang.org/guide/">Racket Official Guide</a><a href="https://docs.racket-lang.org/reference/">Racket Official Reference</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://racket-slack.herokuapp.com/">Racket Slack</a><a href="http://stackoverflow.com/questions/tagged/racket" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Sir Meow Meow</section></footer></div></body></html>
