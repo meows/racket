@@ -2,18 +2,58 @@
 
 There is a natural group $(ℕ, 0, S)$.
 
-1. $0 ∈ ℕ$
-2. $S(n) ∈ ℕ$
-3. $S(n) ≠ 0$
-4. $S(a) = S(b)$ *iff* $a = b$
-5. Let $P$ be a boolean function on the naturals. If $P(0)$ and $P(S(n))$, then 
-   $P(n)$. Another restatement of this is: Let $ℕ$ be the smallest set which 
-   obeys all the above 4 rules.
+  * $0 ∈ ℕ$
+  * $S(n) ∈ ℕ$
+  * $S(n) ≠ 0$
+  * $S(a) = S(b)$ := $a = b$
+  * Let $P$ be a boolean function on the naturals; then: 
+  
+    $$P(0) ∧ P(S(n)) := P(n)$$ 
+  
+    Another restatement of this is: Let $ℕ$ be the smallest set which obeys all the above 4 rules.
 
 ## Addition
 
   * $0 + m := m$
   * $S(n) + m := (n + m)$
+
+### Field Property: Commutativity of Addition
+
+#### Lemma: Commutativity of $+$ with $\{ 0, n \}$.
+
+  $$n + 0 \stackrel{?}{=} n$$
+
+First we find the base case which is given to us by the definition of addition:
+
+  $$0 + 0 \stackrel{?}{=} 0$$
+
+  $$0 = 0$$
+
+And then we find the next case:
+
+  $$S(n) + 0 \stackrel{?}{=} S(n)$$
+  $$S(n) + 0 = S(n + 0)$$
+  $$S(n) + 0 = S(n)$$
+
+We have now confirmed the lemma:
+
+  $$0 + n = n + 0 = n$$
+
+#### Lemma: $n + S(m) = S(n + m)$
+
+  $$n + S(m) \stackrel{?}{=} S(n + m)$$
+  $$0 + S(n) \stackrel{?}{=} S(0 + n)$$
+  $$S(n) = S(n)$$
+  $$S(n) + S(m) \stackrel{?}{=} S(S(n) + m)$$
+  $$S(n + S(m)) = S(S(n + m))$$
+
+#### Field Property: Commutativity of $+$ with $\{ a, b \}$.
+
+Finally we look at:
+
+  $$S(a) + S(b) \stackrel{?}{=} S(b) + S(a)$$
+  $$S(a + S(b)) = S(b + S(a))$$
+  $$a + S(b) = b + S(a)$$
 
 ## Multiplication
 
@@ -24,14 +64,6 @@ There is a natural group $(ℕ, 0, S)$.
 
   * $m^0 := 1$
   * $m^{S(n)} := m^n * m$
-
-## Positivity
-
-1. Definition: a natural number is said to be positive if it's not $0$. 
-2. Lemma: _Addition involving any positive number results in another positive 
-   number_. One way to establish this claim is to show that any non-zero natural
-   can be represented in the form $S(n)$.
-3. Lemma: Every positive natural has a unique predecessor.
 
 --------------------------------------------------------------------------------
 

@@ -20,10 +20,11 @@
   to the next always stays the same. Another way of saying this is that the
   velocity never changes.
 
-  Any linear sequence can be described by a function $f$ with just two pieces of
-  information: a (1) velocity $a$ (2) and a starting position $b$. 
+* Any linear sequence can be described by a function $f(n)$ where $n ∈ ℕ$ with 
+  just two pieces of information: a (1) velocity $a$ (2) and a starting position 
+  $b$:
 
-  $f(n) = an + b$ where $n ∈ ℕ$.
+  $f(n) = an + b$.
 
 ### Linear Series
 

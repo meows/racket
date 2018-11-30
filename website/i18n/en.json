@@ -4,151 +4,332 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "A little look into programming.",
-    "alphabet": "Alphabet",
-    "Alphabet": "Alphabet",
-    "velocity": "Velocity",
-    "Velocity": "Velocity",
-    "arithmetic-advanced": "Advanced Arithmetic",
-    "Advanced Arithmetic": "Advanced Arithmetic",
-    "atom": "atom",
-    "Atom": "Atom",
-    "challenge-1": "Challenge #1",
-    "Challenge #1": "Challenge #1",
-    "challenge-10": "Challenge #10",
-    "Challenge #10": "Challenge #10",
-    "challenge-11": "Challenge #11",
-    "Challenge #11": "Challenge #11",
-    "challenge-12": "Challenge #12",
-    "Challenge #12": "Challenge #12",
-    "challenge-13": "Challenge #13",
-    "Challenge #13": "Challenge #13",
-    "challenge-14": "Challenge #14",
-    "Challenge #14": "Challenge #14",
-    "challenge-15": "Challenge #15",
-    "Challenge #15": "Challenge #15",
-    "challenge-16": "Challenge #16",
-    "Challenge #16": "Challenge #16",
-    "challenge-2": "Challenge #2",
-    "Challenge #2": "Challenge #2",
-    "challenge-3": "Challenge #3",
-    "Challenge #3": "Challenge #3",
-    "challenge-4": "Challenge #4",
-    "Challenge #4": "Challenge #4",
-    "challenge-5": "Challenge #5",
-    "Challenge #5": "Challenge #5",
-    "challenge-6": "Challenge #6",
-    "Challenge #6": "Challenge #6",
-    "challenge-7": "Challenge #7",
-    "Challenge #7": "Challenge #7",
-    "challenge-8": "Challenge #8",
-    "Challenge #8": "Challenge #8",
-    "challenge-9": "Challenge #9",
-    "Challenge #9": "Challenge #9",
-    "circles": "Circles",
-    "Circles": "Circles",
-    "angle": "Angles",
-    "Angles": "Angles",
-    "Closure": "Closure",
-    "comparisons": "comparisons",
-    "Comparisons": "Comparisons",
-    "cond": "cond",
-    "data-structure-0": "data-structure",
-    "Data Structures": "Data Structures",
-    "define": "define",
-    "dictionary": "Dictionary",
-    "Dictionary": "Dictionary",
-    "dimension": "dimension",
-    "Dimension": "Dimension",
-    "exam": "exam",
-    "expression": "expression",
-    "Expression": "Expression",
-    "fold": "fold",
-    "function-advanced": "Advanced Functions",
-    "Advanced Functions": "Advanced Functions",
-    "function-higher": "Making Many Functions",
-    "Making Many Functions": "Making Many Functions",
-    "function-intro": "Using Functions",
-    "Using Functions": "Using Functions",
-    "function-sequence": "Over Lists",
-    "Functions on Lists": "Functions on Lists",
-    "function-very-advanced": "Very Advanced",
-    "Functions Advanced": "Functions Advanced",
-    "geometry": "geometry",
-    "glossary": "Glossary",
-    "Glossary": "Glossary",
-    "graphing": "Graphing",
-    "Graphing": "Graphing",
-    "if": "if",
-    "intro": "intro",
-    "A Journey": "A Journey",
-    "inverse": "inverse",
-    "Undoing what you did": "Undoing what you did",
-    "javascript-0": "javascript-0",
-    "JavaScript 0": "JavaScript 0",
-    "javascript-1": "javascript-1",
-    "JavaScript 1": "JavaScript 1",
-    "javascript-2": "javascript-2",
-    "JavaScript Math": "JavaScript Math",
-    "lambda": "lambda",
-    "language-comparison": "language-comparison",
-    "Racket ⟷ JavaScript": "Racket ⟷ JavaScript",
-    "linear-systems": "Systems of Equations",
-    "Systems of Equations": "Systems of Equations",
-    "lists": "lists",
-    "Lists": "Lists",
-    "logarithm-natural": "Natural Log",
-    "Natural Log": "Natural Log",
-    "logarithm": "Logarithm",
-    "Logarithm": "Logarithm",
-    "Operators": "Operators",
-    "peano": "peano",
-    "Peano": "Peano",
-    "racket-install": "Installing Racket",
-    "Installation": "Installation",
-    "racket-intro": "Dive into Racket",
-    "Intro": "Intro",
-    "recursion": "recursion",
-    "Recursion": "Recursion",
-    "renaming": "Renaming",
-    "Renaming": "Renaming",
-    "sequence-geometric-0": "Geometric Sequences",
-    "Geometric Sequences": "Geometric Sequences",
-    "sequence-geometric-1": "Geometric Series",
-    "Geometric Series": "Geometric Series",
-    "sequence-linear-1": "Linear Series",
-    "Linear Series": "Linear Series",
-    "sequence-linear": "Linear Sequences",
-    "Linear Sequences": "Linear Sequences",
-    "sequence": "sequence",
-    "Sequences": "Sequences",
-    "sets": "sets",
-    "Sets": "Sets",
-    "setup": "setup",
-    "Installation & Setup": "Installation & Setup",
-    "skills": "skills",
-    "terms": "terms",
-    "test-linear-0": "Linear Sequences",
-    "test-trig-1": "Trigonometry Test",
-    "Trignometric Functions": "Trignometric Functions",
-    "test-trig": "Trigonometry Test",
-    "vocab-test": "Math Terms",
-    "Vocabulary Terms": "Vocabulary Terms",
-    "trigonometry": "trigonometry",
-    "Trigonometry": "Trigonometry",
-    "values": "Values",
-    "Values": "Values",
-    "websites-0": "About the Web",
-    "About the Web": "About the Web",
-    "Guide": "Guide",
-    "Exercises": "Exercises",
-    "Blog": "Blog",
-    "Concepts": "Concepts",
-    "Language Guide": "Language Guide",
-    "JavaScript": "JavaScript",
-    "Getting Started": "Getting Started",
-    "Getting Warmer": "Getting Warmer",
-    "Test": "Test",
-    "Reference": "Reference"
+    "docs": {
+      "alphabet": {
+        "title": "Alphabet",
+        "sidebar_label": "Alphabet"
+      },
+      "velocity": {
+        "title": "Velocity",
+        "sidebar_label": "Velocity"
+      },
+      "arithmetic-advanced": {
+        "title": "Advanced Arithmetic",
+        "sidebar_label": "Advanced Arithmetic"
+      },
+      "atom": {
+        "title": "atom",
+        "sidebar_label": "Atom"
+      },
+      "challenge-1": {
+        "title": "Challenge #1",
+        "sidebar_label": "Challenge #1"
+      },
+      "challenge-10": {
+        "title": "Challenge #10",
+        "sidebar_label": "Challenge #10"
+      },
+      "challenge-11": {
+        "title": "Challenge #11",
+        "sidebar_label": "Challenge #11"
+      },
+      "challenge-12": {
+        "title": "Challenge #12",
+        "sidebar_label": "Challenge #12"
+      },
+      "challenge-13": {
+        "title": "Challenge #13",
+        "sidebar_label": "Challenge #13"
+      },
+      "challenge-14": {
+        "title": "Challenge #14",
+        "sidebar_label": "Challenge #14"
+      },
+      "challenge-15": {
+        "title": "Challenge #15",
+        "sidebar_label": "Challenge #15"
+      },
+      "challenge-16": {
+        "title": "Challenge #16",
+        "sidebar_label": "Challenge #16"
+      },
+      "challenge-2": {
+        "title": "Challenge #2",
+        "sidebar_label": "Challenge #2"
+      },
+      "challenge-3": {
+        "title": "Challenge #3",
+        "sidebar_label": "Challenge #3"
+      },
+      "challenge-4": {
+        "title": "Challenge #4",
+        "sidebar_label": "Challenge #4"
+      },
+      "challenge-5": {
+        "title": "Challenge #5",
+        "sidebar_label": "Challenge #5"
+      },
+      "challenge-6": {
+        "title": "Challenge #6",
+        "sidebar_label": "Challenge #6"
+      },
+      "challenge-7": {
+        "title": "Challenge #7",
+        "sidebar_label": "Challenge #7"
+      },
+      "challenge-8": {
+        "title": "Challenge #8",
+        "sidebar_label": "Challenge #8"
+      },
+      "challenge-9": {
+        "title": "Challenge #9",
+        "sidebar_label": "Challenge #9"
+      },
+      "circles": {
+        "title": "Circles",
+        "sidebar_label": "Circles"
+      },
+      "angle": {
+        "title": "Angles",
+        "sidebar_label": "Angles"
+      },
+      "Closure": {
+        "title": "Closure",
+        "sidebar_label": "Closure"
+      },
+      "comparisons": {
+        "title": "comparisons",
+        "sidebar_label": "Comparisons"
+      },
+      "complex": {
+        "title": "complex"
+      },
+      "cond": {
+        "title": "cond",
+        "sidebar_label": "cond"
+      },
+      "data-structure-0": {
+        "title": "data-structure",
+        "sidebar_label": "Data Structures"
+      },
+      "define": {
+        "title": "define",
+        "sidebar_label": "define"
+      },
+      "dictionary": {
+        "title": "Dictionary",
+        "sidebar_label": "Dictionary"
+      },
+      "dimension": {
+        "title": "dimension",
+        "sidebar_label": "Dimension"
+      },
+      "exam": {
+        "title": "exam",
+        "sidebar_label": "exam"
+      },
+      "expression": {
+        "title": "expression",
+        "sidebar_label": "Expression"
+      },
+      "fold": {
+        "title": "fold",
+        "sidebar_label": "fold"
+      },
+      "function-advanced": {
+        "title": "Advanced Functions",
+        "sidebar_label": "Advanced Functions"
+      },
+      "function-higher": {
+        "title": "Making Many Functions",
+        "sidebar_label": "Making Many Functions"
+      },
+      "function-intro": {
+        "title": "Using Functions",
+        "sidebar_label": "Using Functions"
+      },
+      "function-sequence": {
+        "title": "Over Lists",
+        "sidebar_label": "Functions on Lists"
+      },
+      "function-very-advanced": {
+        "title": "Very Advanced",
+        "sidebar_label": "Functions Advanced"
+      },
+      "geometry": {
+        "title": "geometry",
+        "sidebar_label": "geometry"
+      },
+      "glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
+      },
+      "graphing": {
+        "title": "Graphing",
+        "sidebar_label": "Graphing"
+      },
+      "if": {
+        "title": "if",
+        "sidebar_label": "if"
+      },
+      "integer": {
+        "title": "integer"
+      },
+      "intro": {
+        "title": "intro",
+        "sidebar_label": "A Journey"
+      },
+      "inverse": {
+        "title": "inverse",
+        "sidebar_label": "Undoing what you did"
+      },
+      "javascript-0": {
+        "title": "javascript-0",
+        "sidebar_label": "JavaScript 0"
+      },
+      "javascript-1": {
+        "title": "javascript-1",
+        "sidebar_label": "JavaScript 1"
+      },
+      "javascript-2": {
+        "title": "javascript-2",
+        "sidebar_label": "JavaScript Math"
+      },
+      "lambda": {
+        "title": "lambda",
+        "sidebar_label": "lambda"
+      },
+      "language-comparison": {
+        "title": "language-comparison",
+        "sidebar_label": "Racket ⟷ JavaScript"
+      },
+      "linear-systems": {
+        "title": "Systems of Equations",
+        "sidebar_label": "Systems of Equations"
+      },
+      "lists": {
+        "title": "lists",
+        "sidebar_label": "Lists"
+      },
+      "logarithm-natural": {
+        "title": "Natural Log",
+        "sidebar_label": "Natural Log"
+      },
+      "logarithm": {
+        "title": "Logarithm",
+        "sidebar_label": "Logarithm"
+      },
+      "Operators": {
+        "title": "Operators",
+        "sidebar_label": "Operators"
+      },
+      "pathway": {
+        "title": "pathway"
+      },
+      "peano": {
+        "title": "peano",
+        "sidebar_label": "Peano"
+      },
+      "racket-install": {
+        "title": "Installing Racket",
+        "sidebar_label": "Installation"
+      },
+      "racket-intro": {
+        "title": "Dive into Racket",
+        "sidebar_label": "Intro"
+      },
+      "rationals": {
+        "title": "rationals"
+      },
+      "recursion": {
+        "title": "recursion",
+        "sidebar_label": "Recursion"
+      },
+      "renaming": {
+        "title": "Renaming",
+        "sidebar_label": "Renaming"
+      },
+      "sequence-geometric-0": {
+        "title": "Geometric Sequences",
+        "sidebar_label": "Geometric Sequences"
+      },
+      "sequence-geometric-1": {
+        "title": "Geometric Series",
+        "sidebar_label": "Geometric Series"
+      },
+      "sequence-infinite": {
+        "title": "sequence-infinite"
+      },
+      "sequence-linear-1": {
+        "title": "Linear Series",
+        "sidebar_label": "Linear Series"
+      },
+      "sequence-linear": {
+        "title": "Linear Sequences",
+        "sidebar_label": "Linear Sequences"
+      },
+      "sequence": {
+        "title": "sequence",
+        "sidebar_label": "Sequences"
+      },
+      "sets": {
+        "title": "sets",
+        "sidebar_label": "Sets"
+      },
+      "setup": {
+        "title": "setup",
+        "sidebar_label": "Installation & Setup"
+      },
+      "skills": {
+        "title": "skills"
+      },
+      "terms": {
+        "title": "terms",
+        "sidebar_label": "terms"
+      },
+      "test-linear-0": {
+        "title": "Linear Sequences",
+        "sidebar_label": "Linear Sequences"
+      },
+      "test-trig-1": {
+        "title": "Trigonometry Test",
+        "sidebar_label": "Trignometric Functions"
+      },
+      "test-trig": {
+        "title": "Trigonometry Test",
+        "sidebar_label": "Trignometric Functions"
+      },
+      "vocab-test": {
+        "title": "Math Terms",
+        "sidebar_label": "Vocabulary Terms"
+      },
+      "trigonometry": {
+        "title": "trigonometry",
+        "sidebar_label": "Trigonometry"
+      },
+      "values": {
+        "title": "Values",
+        "sidebar_label": "Values"
+      },
+      "websites-0": {
+        "title": "About the Web",
+        "sidebar_label": "About the Web"
+      }
+    },
+    "links": {
+      "Guide": "Guide",
+      "Exercises": "Exercises",
+      "Blog": "Blog"
+    },
+    "categories": {
+      "Concepts": "Concepts",
+      "Language Guide": "Language Guide",
+      "JavaScript": "JavaScript",
+      "Getting Started": "Getting Started",
+      "Getting Warmer": "Getting Warmer",
+      "Test": "Test",
+      "Reference": "Reference"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

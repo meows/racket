@@ -12,9 +12,9 @@
 Define the following functions as a ratio of sides on a right triangle, where 
 $θ$ is a non-right angle on that triangle.
 
-1. $sine(θ) =$
-2. $cosine(θ) =$
-3. $tangent(θ) =$
+1. $sin(θ) =$
+2. $cos(θ) =$
+3. $tan(θ) =$
 
 ## Abstract Mastery
 
