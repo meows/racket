@@ -37,7 +37,4 @@
         (for/fold ([best 0])
                   ([x (in-range x0 17)] [y (in-range y0 17)])
                   (let ([p (for/product ([n (in-range 4)]) (ref lines (+ x n) (+ y n)))])
-                       (if (< p best) best p))
-        )
-    )
-)
+                       (if (< p best) best p)))))
