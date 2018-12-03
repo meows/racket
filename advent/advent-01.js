@@ -10,7 +10,7 @@ const integers = raw.split('\n').map(Number)
 
 const max = integers.length
 
-const index = (current, vector) => (current + vector) % max
+const index = current => current % max
 const sum = (a, b) => a + b
 
 // -----------------------------------------------------------------------------
@@ -18,13 +18,19 @@ const sum = (a, b) => a + b
 
 const advent_01_a = integers.reduce(sum, 0)
 
-function advent_02_b() {
+const advent_01_b = function() {
    let sum = 0
-   let uniques = new Set([0])
+   let uniques = new Set()
 
    for (let i=0; true; i++) {
-      if (uniques.has(sum + integers[index(i)])) {
-         return sum
-      }
+      const next = sum + integers[index(i)]
+      uniques.add(sum)
+
+      if (uniques.has(next)) return next
+
+      sum = next
    }
-}
+}()
+
+console.log(`advent(1, A) ↦ ${advent_01_a}.`)
+console.log(`advent(1, b) ↦ ${advent_01_b}.`)
