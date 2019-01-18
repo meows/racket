@@ -24,11 +24,11 @@ points and connect them, they would look like a straight line.
 
 Linear sequences can be defined by:
 
-`f(x) = a*x + b`
+`f(n) = an + b`
 
-Where `f` is the function that can give the sequence, `x` is the natural input
-that we expect, `a` controls the velocity, and `b` controls the starting 
-position of the sequence.
+Where `f` is the function that can give the sequence, `n` is the natural input
+that we expect, `a` controls the velocity, and `b` controls the starting value 
+of the sequence.
 
 We have also seen sequences like:
 
