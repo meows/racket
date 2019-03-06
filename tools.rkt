@@ -176,6 +176,7 @@
           #:width 600
           #:height 600))
 
+; for making labeled charts
 (fn (g fn/1
        #:grid? [grid? true]
        #:min   [min -20]
