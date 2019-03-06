@@ -199,17 +199,20 @@
 
 ; quadratic :: (R, R, R) → (x → ax^2 + bx + c)
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
-    (λ (x) (+ (* a x x)
-              (* b x)
-              c)))
+    (λ (x) 
+       (+ c 
+          (* a x x) 
+          (* b x))))
 
 (fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
-    (λ (x) (+ (* a x x x)
-              (* b x x)
-              (* c x)
-              d)))
+    (λ (x) 
+       (+ d
+          (* a x x x) 
+          (* b x x) 
+          (* c x))))
 
-(fn (physics-quad a v [p 0])
-    (λ (t) (+ (* 1/2 a t t)
-              (* v t)
-              p)))
+(fn (physics-quad lst)
+    (λ (t) 
+       (+ p
+          (* 1/2 a t t)
+          (* v t))))
