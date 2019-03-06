@@ -58,15 +58,11 @@
             result
             (let-values ([(quo rem) (quotient/remainder n base)])
                         (loop quo #:result (cons rem result)))))
-    (if (zero? n) '(0) (loop n))
-)
+    (if (zero? n) '(0) (loop n)))
 
 ; natural → list <natural>
 (fn (natural->list nat #:base [base 10])
-    (unfold-right zero?
-                  mod10
-                  div10
-                  nat))
+    (unfold-right zero? mod10 div10 nat))
 
 ; list <natural> → natural
 (fn (digits->natural nats #:base [base 10])
@@ -164,8 +160,8 @@
 ; also accepts optional input for visual grid background
 (fn (graph fn/1
            #:grid? [grid? true]
-           #:min [min -20]
-           #:max [max 20]
+           #:min [min -40]
+           #:max [max 40]
            . fns)
     (define plot-input
         (list* (axes)
@@ -179,8 +175,7 @@
           #:y-min min
           #:y-max max
           #:width 600
-          #:height 600)
-)
+          #:height 600))
 
 (fn (g fn/1
        #:grid? [grid? true]
@@ -203,17 +198,12 @@
           #:y-label "meters"))
 
 ; quadratic :: (a b c) → ((x) → ax^2 + bx + c)
-(fn (quadratic #:a [a 1] 
-               #:b [b 0] 
-               #:c [c 0])
+(fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
     (λ (x) (+ (* a x x) 
               (* b x) 
               c)))
 
-(fn (cubic #:a [a 1]
-           #:b [b 0]
-           #:c [c 0]
-           #:d [d 0])
+(fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
     (λ (x) (+ (* a x x x)
               (* b x x)
               (* c x)

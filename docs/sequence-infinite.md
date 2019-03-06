@@ -13,7 +13,7 @@ Notes:
   3. $\infty$ is the stopping point for the sequence. In this case there's no 
      stopping point.
 
-A series is a process which sums a sequence, like this:
+A series is an algorithm which sums a sequence, like this:
 
 $$ \sum (2^{-n})_{n=1}^{\infty} = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + ...$$
 
@@ -32,6 +32,5 @@ Which we can then use to build a new sequence $S$:
 We can see that as $S_n$ gets higher, we seem to get closer and closer to $1$.
 To that end we question whether a sufficiently huge $S_n$ would ever reach $1$, 
 and if so, then we ask whether it ever crosses $1$. If $S_n$ never crosses $1$,
-then we can say that $1$ is its _limit_.
-
-
+then we can say that $1$ is its upper **limit**, like a ceiling it can't rise 
+above.

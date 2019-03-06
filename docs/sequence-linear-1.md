@@ -73,9 +73,9 @@ $$sumLinear(s_0, s_F, terms) ↦ \dfrac{1}{2} * terms * (s_0 + s_F)$$
 
 Or in Racket:
 
-``` clojure
+``` racket
 (define (sum-linear si sF terms)
-   (* 1/2 terms (+ si sF)))
+        (* 1/2 terms (+ si sF)))
 ```
 
 ## Example Problem #1

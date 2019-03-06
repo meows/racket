@@ -6,10 +6,10 @@ There is a natural group $(ℕ, 0, S)$.
   * $S(n) ∈ ℕ$
   * $S(n) ≠ 0$
   * $S(a) = S(b)$ := $a = b$
-  * Let $P$ be a boolean function on the naturals; then: 
-  
-    $$P(0) ∧ P(S(n)) := P(n)$$ 
-  
+  * Let $P$ be a boolean function on the naturals; then:
+
+    $$P(0) ∧ P(S(n)) := P(n)$$
+
     Another restatement of this is: Let $ℕ$ be the smallest set which obeys all the above 4 rules.
 
 ## Addition
@@ -69,26 +69,26 @@ Finally we look at:
 
 # Integers (ℤ)
 
-There is an integer commutative ring $(ℤ, +, *)$. An integer can be constructed 
+There is an integer commutative ring $(ℤ, +, *)$. An integer can be constructed
 as pairs of naturals of the form $Z(a, b)$ where $\{a, b\} ∈ ℕ$.
 
 ## Equality
 
-Equality of the integers is defined by equality of the naturals in a 
+Equality of the integers is defined by equality of the naturals in a
 comparison of different-with-different combinations.
 
   * $Z(a, b) := Z(c, d)$ _iff_ $a + d = b + c$
 
 ## Addition
 
-Addition can be thought of as an operation that combines same-with-same 
+Addition can be thought of as an operation that combines same-with-same
 dimensions.
 
   * $Z(a, b) + Z(c, d) := Z(a + c, b + d)$
 
 ## Additive Inverse
 
-This is a notable extension over the naturals because now $+$ becomes an 
+This is a notable extension over the naturals because now $+$ becomes an
 invertible function.
 
   * $-Z(a, b) := Z(b, a)$
@@ -104,7 +104,7 @@ $Z_A * Z_B$ can be interpreted as $Z(Z_A · Z_B, Z_A × Z_B)$.
 
 # Rationals (ℚ)
 
-There is a rational field $(ℚ, +, *)$. A rational can be constructed as pairs of 
+There is a rational field $(ℚ, +, *)$. A rational can be constructed as pairs of
 integers of the form $Q(a, b)$ where $\{ a, b \} ∈ ℤ$ and $b ≠ 0$.
 
 ## Equality
@@ -156,7 +156,7 @@ a subset of the rationals and the integers.
 
 ### Division by 0
 
-The domain limitation on $Q(a, b)$ where $b ≠ 0$ is implied by the two 
+The domain limitation on $Q(a, b)$ where $b ≠ 0$ is implied by the two
 statements below:
 
   * $c * 0 = 0$
@@ -182,14 +182,14 @@ Speaking informally, we might say that additive inverses are what make integers
 more powerful over naturals. We might also say that multiplicative inverses are
 what make the rationals more powerful over the integers.
 
-Furthermore, $ℤ + ℤ$ and $ℚ * ℚ$ are similar because they are both 
+Furthermore, $ℤ + ℤ$ and $ℚ * ℚ$ are similar because they are both
 same-with-same dimension operations:
 
   * $Z(a, b) + Z(c, d) = Z(a + c, b + d)$
   * $Q(a, b) * Q(c, d) = Q(a * c, b * d)$
   * $C(a, b) + C(c, d) = C(a + c, b + d)$
 
-$ℤ * ℤ$ and $ℚ + ℚ$ are also similar because they are both 
+$ℤ * ℤ$ and $ℚ + ℚ$ are also similar because they are both
 different-with-different dimension operations resembling distribution.
 
   * $(a + b) * (c + d) = (ac + bd + ad + bc)$
@@ -198,7 +198,7 @@ different-with-different dimension operations resembling distribution.
 
 --------------------------------------------------------------------------------
 
-There's a triple which forms a field $(ℂ, +, *)$ where a member of $ℂ$ is 
+There's a triple which forms a field $(ℂ, +, *)$ where a member of $ℂ$ is
 expressed in the form $C(a, b)$ such that $\{ a, b \} ∈ ℝ$.
 
 ## Addition
