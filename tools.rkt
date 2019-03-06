@@ -8,7 +8,7 @@
 (require threading)
 (require plot)
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Numerical
 
 ; natural → natural (length of number)
@@ -22,14 +22,14 @@
 (fn number-length (λ~> number->string string-length))
 (fn char->number  (λ~> char->integer (+ -48)))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Boolean
 
 (fn not-equal?   (compose not equal?))
 (fn not-natural? (compose not natural?))
 (fn one?         (curry = 1))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Arithmetic
 
 (fn -- sub1)
@@ -48,7 +48,7 @@
 (fn (*-1 R+)
     (/ 1 R+))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Lists
 
 ; natural → list <natural>
@@ -94,7 +94,7 @@
 
 (fn all-unique? (compose not check-duplicates))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Functions
 
 ; natural → natural
@@ -131,7 +131,7 @@
     (let ([str (number->string n b)])
          (equal? str (~> str string->list reverse list->string))))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Numerical Sequences
 
 ; natural → natural (nth fibonacci number)
@@ -153,7 +153,7 @@
             (+ 1 (* 3 n))))
     (unfold one? identity next n list))
 
-;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Graphing
 
 ; graphs any function and compares it to f(x) = x
