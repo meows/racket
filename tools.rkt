@@ -230,8 +230,7 @@
     (let* ([scale (/ 1 (* 2 a))]
            [Vx    (* -1 b scale)]
            [Vy    ((quad a b c) Vx)]
-           [D     (- (* b b) (* 4 a c))]
-           [rootD (sqrt D)]
-           [delta (* rootD scale)])
-          (values (list Vx Vy) (+ Vx delta) (- Vx delta)))
+           [Det   (- (* b b) (* 4 a c))]
+           [Δ     (* (sqrt Det) scale)])
+          (values (list Vx Vy) (+ Vx Δ) (- Vx Δ)))
 )
