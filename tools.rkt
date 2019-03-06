@@ -223,4 +223,6 @@
            [Vy    ((quad a b c) Vx)]
            [Det   (+ (* b b) (* -4 a c))]
            [Δ     (* (sqrt Det) scale)])
-          (values (list Vx Vy) (+ Vx Δ) (+ Vx (- Δ)))))
+          (values (list Vx Vy) 
+                  (+ Vx Δ) 
+                  (- Vx Δ))))
