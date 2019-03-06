@@ -45,7 +45,7 @@
 
 (fn (log-identity base exp) (* exp (log base)))
 
-(fn (*-1 R+) 
+(fn (*-1 R+)
     (/ 1 R+))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -73,8 +73,8 @@
 
 ; list <natural> → natural
 (fn (digits->number nats)
-    (~> (map number->string nats) 
-        string-append* 
+    (~> (map number->string nats)
+        string-append*
         string->number))
 
 ; list <integer> → list <integer>
@@ -103,7 +103,7 @@
 (fn (b b)           (λ (x) (+ b x)))
 (fn (m m)           (λ (x) (* m x)))
 
-(fn (triangle n) 
+(fn (triangle n)
     (* 1/2 (+ n (* n n))))
 
 (fn (pentagon n)
@@ -135,7 +135,7 @@
 ;; Numerical Sequences
 
 ; natural → natural (nth fibonacci number)
-(fn (fib n) 
+(fn (fib n)
     (if (or (zero? n) (one? n))
         n
         (+ (fib (+ n -1)) (fib (+ n -2)))))
@@ -148,7 +148,7 @@
 
 (fn (collatz-list n)
     (fn (next n)
-        (if (even? n) 
+        (if (even? n)
             (* 1/2 n)
             (+ 1 (* 3 n))))
     (unfold one? identity next n list))
@@ -198,8 +198,8 @@
 
 ; quadratic :: (R, R, R) → (x → ax^2 + bx + c)
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
-    (λ (x) (+ (* a x x) 
-              (* b x) 
+    (λ (x) (+ (* a x x)
+              (* b x)
               c)))
 
 (fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
