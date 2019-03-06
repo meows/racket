@@ -157,7 +157,6 @@
 ;; Graphing
 
 ; graphs any function and compares it to f(x) = x
-; also accepts optional input for visual grid background
 (fn (graph fn/1
            #:grid? [grid? true]
            #:min [min -40]
@@ -197,7 +196,7 @@
           #:x-label "seconds"
           #:y-label "meters"))
 
-; quadratic :: (a b c) → ((x) → ax^2 + bx + c)
+; quadratic :: (R, R, R) → (x → ax^2 + bx + c)
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
     (λ (x) (+ (* a x x) 
               (* b x) 
