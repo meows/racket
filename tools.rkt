@@ -129,8 +129,7 @@
 
 (fn (palindrome? n #:base [b 10])
     (let ([str (number->string n b)])
-         (equal? str (~> str string->list reverse list->string)))
-)
+         (equal? str (~> str string->list reverse list->string))))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Numerical Sequences
@@ -139,23 +138,20 @@
 (fn (fib n)
     (if (or (zero? n) (one? n))
         n
-        (+ (fib (+ n -1)) (fib (+ n -2))))
-)
+        (+ (fib (+ n -1)) (fib (+ n -2)))))
 
 ; natural → natural (cycles of collatz)
 (fn (collatz [n 0] #:index [i 0])
     (cond [(one? n)  i]
           [(even? n) (collatz (* n 1/2)     #:index (++ i))]
-          [else      (collatz (+ (* n 3) 1) #:index (++ i))])
-)
+          [else      (collatz (+ (* n 3) 1) #:index (++ i))]))
 
 (fn (collatz-list n)
     (fn (next n)
         (if (even? n)
             (* 1/2 n)
             (+ 1 (* 3 n))))
-    (unfold one? identity next n list)
-)
+    (unfold one? identity next n list))
 
 ;; ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ;; Graphing
@@ -178,8 +174,7 @@
           #:y-min min
           #:y-max max
           #:width 600
-          #:height 600)
-)
+          #:height 600))
 
 ; for making labeled charts
 (fn (g fn/1
@@ -200,37 +195,32 @@
           #:width  600
           #:height 600
           #:x-label "seconds"
-          #:y-label "meters")
-)
+          #:y-label "meters"))
 
 ; quadratic :: (R, R, R) → (x → ax^2 + bx + c)
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
     (λ (x) 
        (+ c 
           (* a x x) 
-          (* b x)))
-)
+          (* b x))))
 
 (fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
     (λ (x) 
        (+ d
           (* a x x x) 
           (* b x x) 
-          (* c x)))
-)
+          (* c x))))
 
 (fn (quad a b c)
     (λ (x)
        (+ c
           (* a x x)
-          (* b x)))
-)
+          (* b x))))
 
 (fn (solve a b c)
     (let* ([scale (/ 1 (* 2 a))]
            [Vx    (* -1 b scale)]
            [Vy    ((quad a b c) Vx)]
-           [Det   (- (* b b) (* 4 a c))]
+           [Det   (+ (* b b) (* -4 a c))]
            [Δ     (* (sqrt Det) scale)])
-          (values (list Vx Vy) (+ Vx Δ) (- Vx Δ)))
-)
+          (values (list Vx Vy) (+ Vx Δ) (+ Vx (- Δ)))))
