@@ -1,4 +1,4 @@
-#lang racket
+#lang at-exp racket
 
 (require (rename-in racket/base [define fn]))
 (require (rename-in racket/base [define def]))
@@ -199,16 +199,16 @@
 
 ; quadratic :: (R, R, R) → (x → ax^2 + bx + c)
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
-    (λ (x) 
-       (+ c 
-          (* a x x) 
+    (λ (x)
+       (+ c
+          (* a x x)
           (* b x))))
 
 (fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
-    (λ (x) 
+    (λ (x)
        (+ d
-          (* a x x x) 
-          (* b x x) 
+          (* a x x x)
+          (* b x x)
           (* c x))))
 
 (fn (quad a b c)
@@ -218,11 +218,12 @@
           (* b x))))
 
 (fn (solve a b c)
-    (let* ([scale (/ 1 (* 2 a))]
-           [Vx    (* -1 b scale)]
-           [Vy    ((quad a b c) Vx)]
+    (let* ([scale (/ 1 (* -2 a))]
+           [Vx    (* b scale)]
+           [Vy    (+ c (* b b 1/2 scale))]
            [Det   (+ (* b b) (* -4 a c))]
-           [Δ     (* (sqrt Det) scale)])
-          (values (list Vx Vy) 
-                  (+ Vx Δ) 
-                  (- Vx Δ))))
+           [Δ     (* (sqrt Det) -1 scale)]
+           [local (if (positive? a) "smallest" "biggest")])
+          (values (displayln @~a{The vertex is the @local value.})
+                  (list Vx Vy)
+                  (list (+ Vx Δ) (- Vx Δ)))))
