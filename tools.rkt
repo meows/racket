@@ -218,12 +218,12 @@
           (* b x))))
 
 (fn (solve a b c)
-    (let* ([scale (/ 1 (* -2 a))]
-           [Vx    (* b scale)]
-           [Vy    (+ c (* b b 1/2 scale))]
-           [Det   (+ (* b b) (* -4 a c))]
-           [Δ     (* (sqrt Det) -1 scale)]
-           [local (if (positive? a) "smallest" "biggest")])
-          (values (displayln @~a{The vertex is the @local value.})
+    (let* ([scale  (/ 1 (* -2 a))]
+           [Vx     (* b scale)]
+           [Vy     (+ c (* b b 1/2 scale))]
+           [Det    (+ (* b b) (* -4 a c))]
+           [Δ      (* (sqrt Det) -1 scale)]
+           [MinMax (if (positive? a) "smallest" "biggest")])
+          (values (displayln @~a{The vertex is the @MinMax value.})
                   (list Vx Vy)
                   (list (+ Vx Δ) (- Vx Δ)))))
