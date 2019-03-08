@@ -100,8 +100,6 @@
 ; natural → natural
 (fn (geometric i r) (λ (n) (* i (expt r n))))
 (fn (line b m)      (λ (x) (+ b (* m x))))
-(fn (b b)           (λ (x) (+ b x)))
-(fn (m m)           (λ (x) (* m x)))
 
 (fn (triangle n)
     (* 1/2 (+ n (* n n))))
@@ -227,3 +225,10 @@
           (values (displayln @~a{The vertex is the @MinMax value.})
                   (list Vx Vy)
                   (list (+ Vx Δ) (- Vx Δ)))))
+
+(g (apply quad (map (curry * 4) '(2 -4 -8))) 
+   (apply quad (map (curry * 2) '(2 -4 0)))
+
+   #:min -100
+   #:max 100
+)
