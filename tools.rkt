@@ -1,9 +1,8 @@
 #lang at-exp racket
 
 (require (rename-in racket/base [define fn])
-         (rename-in racket/base [define def]))
-
-(require (only-in srfi/1 unfold-right unfold)
+         (rename-in racket/base [define def])
+         (only-in srfi/1 unfold-right unfold)
          (only-in srfi/26 cut)
          math/number-theory
          threading
