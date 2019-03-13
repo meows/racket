@@ -174,26 +174,6 @@
           #:width 600
           #:height 600))
 
-; for making labeled charts
-(fn (g fn/1
-       #:grid? [grid? true]
-       #:min   [min -20]
-       #:max   [max 20]
-       . fns)
-    (def plot-input
-         (list* (axes)
-                (if grid? (tick-grid) empty)
-                (function fn/1 #:width 1.3)
-                (map (curry function #:color 'blue #:width 1.3) fns)))
-    (plot plot-input
-          #:x-min  min
-          #:x-max  max
-          #:y-min  min
-          #:y-max  max
-          #:width  600
-          #:height 600
-          #:x-label "seconds"
-          #:y-label "meters"))
 
 ; quadratic :: (R, R, R) → (x → ax^2 + bx + c)
 (fn (quadratic #:a [a 1] #:b [b 0] #:c [c 0])
@@ -219,16 +199,39 @@
     (let* ([scale  (/ 1 (* -2 a))]
            [Vx     (* b scale)]
            [Vy     (+ c (* b b 1/2 scale))]
-           [Det    (+ (* b b) (* -4 a c))]
-           [Δ      (* (sqrt Det) -1 scale)]
+           [Δ      (* scale (sqrt (+ (* b b) (* -4 a c))))]
            [MinMax (if (positive? a) "smallest" "biggest")])
           (values (displayln @~a{The vertex is the @MinMax value.})
                   (list Vx Vy)
                   (list (+ Vx Δ) (- Vx Δ)))))
 
-(g (apply quad (map (curry * 4) '(2 -4 -8))) 
-   (apply quad (map (curry * 2) '(2 -4 0)))
+; for making labeled charts
 
-   #:min -100
-   #:max 100
+
+(parameterize ([plot-x-ticks (linear-ticks #:number 14)]
+               [plot-y-ticks (linear-ticks #:number 14)])
+    (plot (list (axes #:x-ticks? true #:y-ticks? true)
+                (tick-grid)
+                (point-label (vector 0 3))
+                (point-label (vector 0 6))
+                (point-label (vector 0 9))
+                (point-label (vector 1 0)) ; root 1
+                (point-label (vector 3 0)) ; root 2
+                (point-label (vector 2 -1))
+                (point-label (vector 2 -2))
+                (point-label (vector 2 -3))
+                (function (apply quad (map (curry * 1) '(1 -4 3))) #:width 1.4 #:color 'red   #:label "f(x) = 1x² - 4x + 3")
+                (function (apply quad (map (curry * 2) '(1 -4 3))) #:width 1.4 #:color 'blue  #:label "g(x) = 2x² - 8x + 6")
+                (function (apply quad (map (curry * 3) '(1 -4 3))) #:width 1.4 #:color 'brown #:label "h(x) = 3x² - 12x + 9")
+          )
+          #:x-min  -4
+          #:x-max  8
+          #:y-min  -4
+          #:y-max  10
+          #:width  700
+          #:height 700
+          #:x-label "input"
+          #:y-label "output"
+          #:legend-anchor 'top-right
+    )
 )
