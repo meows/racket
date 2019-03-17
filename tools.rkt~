@@ -182,7 +182,7 @@
           (* a x x)
           (* b x))))
 
-(fn (cubic [a 1] [b 0] [c 0] [d 0])
+(fn (cubic #:a [a 1] #:b [b 0] #:c [c 0] #:d [d 0])
     (λ (x)
        (+ d
           (* a x x x)
@@ -196,66 +196,73 @@
           (* b x))))
 
 (fn (solve a b c)
-    (let* ([F  (/ 1 (* -2 a))]
-           [D  (+ (* b b) (* -4 a c))]
-           [Δ  (* F (sqrt D))]
-           [Vx (* b F)]
-           [Vy (* D F 1/2)]
+    (let* ([scale  (/ 1 (* -2 a))]
+           [Vx     (* b scale)]
+           [Vy     (+ c (* b b 1/2 scale))]
+           [Δ      (* scale (sqrt (+ (* b b) (* -4 a c))))]
            [MinMax (if (positive? a) "smallest" "biggest")])
-          (values (displayln @~a{The vertex is the @MinMax value:})
+          (values (displayln @~a{The vertex is the @MinMax value.})
                   (list Vx Vy)
                   (list (+ Vx Δ) (- Vx Δ)))))
 
 ; for making labeled charts
 
 
-; (parameterize ([plot-x-ticks (linear-ticks #:number 14)]
-;                [plot-y-ticks (linear-ticks #:number 14)])
-;     (plot (list (axes #:x-ticks? true #:y-ticks? true)
-;                 (tick-grid)
-;                 (point-label (vector 0 3))
-;                 (point-label (vector 0 6))
-;                 (point-label (vector 0 9))
-;                 (point-label (vector 1 0)) ; root 1
-;                 (point-label (vector 3 0)) ; root 2
-;                 (point-label (vector 2 -1))
-;                 (point-label (vector 2 -2))
-;                 (point-label (vector 2 -3))
-;                 (function (apply quad (map (curry * 1) '(1 -4 3))) #:width 1.4 #:color 'red   #:label "f(x) = 1(x² - 4x + 3)")
-;                 (function (apply quad (map (curry * 2) '(1 -4 3))) #:width 1.4 #:color 'blue  #:label "g(x) = 2(x² - 4x + 3)")
-;                 (function (apply quad (map (curry * 3) '(1 -4 3))) #:width 1.4 #:color 'brown #:label "h(x) = 3(x² - 4x + 3)")
-;           )
+(parameterize ([plot-x-ticks (linear-ticks #:number 14)]
+               [plot-y-ticks (linear-ticks #:number 14)])
+    (plot (list (axes #:x-ticks? true #:y-ticks? true)
+                (tick-grid)
+                (point-label (vector 0 3))
+                (point-label (vector 0 6))
+                (point-label (vector 0 9))
+                (point-label (vector 1 0)) ; root 1
+                (point-label (vector 3 0)) ; root 2
+                (point-label (vector 2 -1))
+                (point-label (vector 2 -2))
+                (point-label (vector 2 -3))
+                (function (apply quad (map (curry * 1) '(1 -4 3))) #:width 1.4 #:color 'red   #:label "f(x) = 1(x² - 4x + 3)")
+                (function (apply quad (map (curry * 2) '(1 -4 3))) #:width 1.4 #:color 'blue  #:label "g(x) = 2(x² - 4x + 3)")
+                (function (apply quad (map (curry * 3) '(1 -4 3))) #:width 1.4 #:color 'brown #:label "h(x) = 3(x² - 4x + 3)")
+          )
 
-;           #:x-min  -4
-;           #:x-max  8
-;           #:y-min  -4
-;           #:y-max  10
-;           #:width  700
-;           #:height 700
-;           #:x-label "input"
-;           #:y-label "output"
-;           #:legend-anchor 'top-right
-;     )
-; )
+          #:x-min  -4
+          #:x-max  8
+          #:y-min  -4
+          #:y-max  10
+          #:width  700
+          #:height 700
+          #:x-label "input"
+          #:y-label "output"
+          #:legend-anchor 'top-right
+    )
+)
 
-;;; (parameterize ([plot-x-ticks (linear-ticks #:number 10)]
-;;;         ;        [plot-y-ticks (linear-ticks #:number 10)]
-;;;                )
-;;;     (plot (list (axes #:x-ticks? true #:y-ticks? true)
-;;;                 (tick-grid)
-;;;                 (function (apply cubic (append (map (curry + 0) '(1 -12 44)) '(-48))) #:width 1.4 #:color 'red #:label "f(x*0.5)")
-;;;                 (function (apply cubic (append (map (curry + -1) '(1 -12 44)) '(-48))) #:width 1.4 #:color 'blue #:label "f(x*0.5)")
-;;;           )
+(parameterize ([plot-x-ticks (linear-ticks #:number 14)]
+               [plot-y-ticks (linear-ticks #:number 14)])
+    (plot (list (axes #:x-ticks? true #:y-ticks? true)
+                (tick-grid)
+                ;;; (point-label (vector 0 3))
+                ;;; (point-label (vector 0 6))
+                ;;; (point-label (vector 0 9))
+                ;;; (point-label (vector 1 0)) ; root 1
+                ;;; (point-label (vector 3 0)) ; root 2
+                ;;; (point-label (vector 2 -1))
+                ;;; (point-label (vector 1 -1))
+                ;;; (point-label (vector 2/3 -1))
+                (function (quad 2 -8 6)   #:width 1.4 #:color 'red   #:label "f(x) = 2x² - 8x + 6")
+                (function (quad 4 -16 6)  #:width 1.4 #:color 'blue  #:label "g(x) = 2(2x)² - 8(2x) + 6")
+                (function (quad 6 -24 6)  #:width 1.4 #:color 'brown #:label "h(x) = 2(3x)² - 8(3x) + 6")
+                (function (quad 16 -64 6) #:width 1.4 #:color 'green #:label "h(x) = 2(8x)² - 8(8x) + 6")
+          )
 
-;;;           #:x-min -20
-;;;           #:x-max 20
-
-;;;           #:y-min -200
-;;;           #:y-max 200
-;;;           #:width 700
-;;;           #:height 700
-;;;           #:x-label "input"
-;;;           #:y-label "output"
-;;;           #:legend-anchor 'top-right
-;;;     )
-;;; )
+          #:x-min  -20
+          #:x-max  20
+          #:y-min  -20
+          #:y-max  20
+          #:width  700
+          #:height 700
+          #:x-label "input"
+          #:y-label "output"
+          #:legend-anchor 'top-right
+    )
+)
