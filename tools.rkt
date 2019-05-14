@@ -202,12 +202,9 @@
            [Vx (* b F)]
            [Vy (* D F 1/2)]
            [MinMax (if (positive? a) "smallest" "biggest")])
-          (values (displayln @~a{The vertex is the @MinMax value:})
+          (values (displayln @~a{The vertex is the @MinMax value at:})
                   (list Vx Vy)
                   (list (+ Vx Δ) (- Vx Δ)))))
-
-; for making labeled charts
-
 
 ; (parameterize ([plot-x-ticks (linear-ticks #:number 14)]
 ;                [plot-y-ticks (linear-ticks #:number 14)])
