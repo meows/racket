@@ -6,10 +6,11 @@ There is a natural group with three objects $(ℕ, 0, S)$, defined by these 5 Ax
   2. $S(n) ∈ ℕ$
   3. $S(n)$ ≠ $0$
   4. $S(a) = S(b) := a = b$
-  5. Let $P: ℕ → \{0, 1\}$ be a boolean function on $ℕ$; then $P(0) ∧ P(S(n)) := P(n)$.
+  5. Let $P$ be a boolean function on $ℕ$. Then $P(0) ∧ P(S(n)) := P(n)$.
 
-> Another restatement of Axiom 5 is for $ℕ$ to be the smallest set obeying Axioms 1
-> to 4.
+> Any natural can be reached or constructed from either the initial element $0$ or by 
+> demonstrating the successive (inductive) case. In other words, we have a system 
+> which allows us to compute truths which are true for all naturals.
 
 ## 1. Addition ($ℕ + ℕ$)
 
