@@ -16,7 +16,7 @@ There is a natural group with three objects $(ℕ, 0, S)$, defined by these 5 Ax
 
   $$n + m = \begin{cases}
     0 + m    = m \\
-    S(n) + m = (n + m) \\
+    S(n) + m = S(n + m) \\
   \end{cases}$$
 
 ## 2. Multiplication ($ℕ * ℕ$)
